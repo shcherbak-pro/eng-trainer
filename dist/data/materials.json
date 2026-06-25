@@ -1,0 +1,4824 @@
+{
+  "phrases": [
+    {
+      "category": "Start answer",
+      "phrase": "I would start by saying that …",
+      "example": "I would start by saying that AI is a useful tool, but it should not replace human judgment.",
+      "translation": "Я б почав з того, що AI — корисний інструмент, але він не повинен замінювати людське судження.",
+      "level": "B2",
+      "tag": "assessment",
+      "id": "phrase-001"
+    },
+    {
+      "category": "Start answer",
+      "phrase": "Let me start by saying that …",
+      "example": "Let me start by saying that good teamwork is not only about technical skills.",
+      "translation": "Дозвольте почати з того, що хороша командна робота — це не лише про технічні навички.",
+      "level": "B2",
+      "tag": "assessment",
+      "id": "phrase-002"
+    },
+    {
+      "category": "Start answer",
+      "phrase": "The first thing I’d say is that …",
+      "example": "The first thing I’d say is that AI works best when people give clear instructions.",
+      "translation": "Перше, що я б сказав: AI працює найкраще, коли люди дають чіткі інструкції.",
+      "level": "B2",
+      "tag": "assessment",
+      "id": "phrase-003"
+    },
+    {
+      "category": "Start answer",
+      "phrase": "Before going into details, I’d say that …",
+      "example": "Before going into details, I’d say that the estimate depends on the scope of the task.",
+      "translation": "Перед тим як переходити до деталей, я б сказав, що оцінка залежить від обсягу задачі.",
+      "level": "B2",
+      "tag": "assessment",
+      "id": "phrase-004"
+    },
+    {
+      "category": "Start answer",
+      "phrase": "From my perspective, …",
+      "example": "From my perspective, AI is useful as long as people use it responsibly.",
+      "translation": "З моєї точки зору, AI корисний, якщо люди використовують його відповідально.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-005"
+    },
+    {
+      "category": "Start answer",
+      "phrase": "In my experience, …",
+      "example": "In my experience, clear communication helps avoid many problems with clients.",
+      "translation": "З мого досвіду, чітка комунікація допомагає уникнути багатьох проблем із клієнтами.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-006"
+    },
+    {
+      "category": "Structure",
+      "phrase": "First of all, …",
+      "example": "First of all, we need to understand the root cause of the problem.",
+      "translation": "Перш за все, нам потрібно зрозуміти першопричину проблеми.",
+      "level": "B1+",
+      "tag": "connector",
+      "id": "phrase-007"
+    },
+    {
+      "category": "Structure",
+      "phrase": "On top of that, …",
+      "example": "AI can automate routine tasks. On top of that, it can support decision-making.",
+      "translation": "AI може автоматизувати рутинні задачі. Крім того, він може підтримувати прийняття рішень.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-008"
+    },
+    {
+      "category": "Structure",
+      "phrase": "In addition, …",
+      "example": "In addition, regular updates make clients feel more confident.",
+      "translation": "Крім того, регулярні апдейти допомагають клієнтам почуватися впевненіше.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-009"
+    },
+    {
+      "category": "Structure",
+      "phrase": "Another important point is that …",
+      "example": "Another important point is that the team should stay aligned.",
+      "translation": "Ще один важливий момент у тому, що команда має залишатися узгодженою.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-010"
+    },
+    {
+      "category": "Structure",
+      "phrase": "What matters most is …",
+      "example": "What matters most is clear communication and realistic expectations.",
+      "translation": "Найважливіше — це чітка комунікація та реалістичні очікування.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-011"
+    },
+    {
+      "category": "Contrast",
+      "phrase": "On the one hand, … On the other hand, …",
+      "example": "On the one hand, AI can improve productivity. On the other hand, it can make people too dependent on technology.",
+      "translation": "З одного боку, AI може покращити продуктивність. З іншого боку, він може зробити людей занадто залежними від технологій.",
+      "level": "B2",
+      "tag": "contrast",
+      "id": "phrase-012"
+    },
+    {
+      "category": "Contrast",
+      "phrase": "That being said, …",
+      "example": "AI is a powerful tool. That being said, we should always check its output.",
+      "translation": "AI — потужний інструмент. Але при цьому ми завжди повинні перевіряти його результати.",
+      "level": "B2",
+      "tag": "contrast",
+      "id": "phrase-013"
+    },
+    {
+      "category": "Contrast",
+      "phrase": "At the same time, …",
+      "example": "We should listen to the client. At the same time, we need to be realistic about deadlines.",
+      "translation": "Ми повинні слухати клієнта. Водночас нам потрібно бути реалістичними щодо дедлайнів.",
+      "level": "B2",
+      "tag": "contrast",
+      "id": "phrase-014"
+    },
+    {
+      "category": "Contrast",
+      "phrase": "On the flip side, …",
+      "example": "Remote work gives people flexibility. On the flip side, communication can become more difficult.",
+      "translation": "Віддалена робота дає людям гнучкість. З іншого боку, комунікація може стати складнішою.",
+      "level": "B2",
+      "tag": "contrast",
+      "id": "phrase-015"
+    },
+    {
+      "category": "Contrast",
+      "phrase": "While …, …",
+      "example": "While AI can improve productivity, it cannot fully replace human judgment.",
+      "translation": "Хоча AI може покращити продуктивність, він не може повністю замінити людське судження.",
+      "level": "B2",
+      "tag": "contrast",
+      "id": "phrase-016"
+    },
+    {
+      "category": "Contrast",
+      "phrase": "Although …, …",
+      "example": "Although the client was difficult, we managed to build a good relationship.",
+      "translation": "Хоча клієнт був складним, нам вдалося побудувати хороші відносини.",
+      "level": "B2",
+      "tag": "contrast",
+      "id": "phrase-017"
+    },
+    {
+      "category": "Ending",
+      "phrase": "Overall, …",
+      "example": "Overall, I believe AI is useful as long as people use it responsibly.",
+      "translation": "Загалом, я вважаю, що AI корисний, якщо люди використовують його відповідально.",
+      "level": "B2",
+      "tag": "conclusion",
+      "id": "phrase-018"
+    },
+    {
+      "category": "Ending",
+      "phrase": "In the long run, …",
+      "example": "In the long run, good communication helps build trust with clients.",
+      "translation": "У довгостроковій перспективі хороша комунікація допомагає будувати довіру з клієнтами.",
+      "level": "B2",
+      "tag": "conclusion",
+      "id": "phrase-019"
+    },
+    {
+      "category": "Ending",
+      "phrase": "So, the key takeaway is that …",
+      "example": "So, the key takeaway is that AI should support people, not replace them.",
+      "translation": "Отже, головний висновок у тому, що AI має підтримувати людей, а не замінювати їх.",
+      "level": "B2",
+      "tag": "conclusion",
+      "id": "phrase-020"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "under the hood",
+      "example": "Under the hood, the tool analyzes the codebase and suggests improvements.",
+      "translation": "“Під капотом” інструмент аналізує кодову базу і пропонує покращення.",
+      "level": "B2",
+      "tag": "AI",
+      "id": "phrase-021"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "dig into",
+      "example": "We need to dig into the issue before making any changes.",
+      "translation": "Нам потрібно глибше розібратися з проблемою перед тим, як робити зміни.",
+      "level": "B2",
+      "tag": "phrasal verb",
+      "id": "phrase-022"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "verify the results",
+      "example": "I always verify the results before using AI output.",
+      "translation": "Я завжди перевіряю результати перед тим, як використовувати AI-відповідь.",
+      "level": "B2",
+      "tag": "AI",
+      "id": "phrase-023"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "introduce a bug",
+      "example": "Poorly reviewed AI changes can introduce a bug.",
+      "translation": "Погано перевірені AI-зміни можуть внести баг.",
+      "level": "B2",
+      "tag": "AI",
+      "id": "phrase-024"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "explicit permission",
+      "example": "AI should not change important files without explicit permission.",
+      "translation": "AI не повинен змінювати важливі файли без явного дозволу.",
+      "level": "B2",
+      "tag": "AI",
+      "id": "phrase-025"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "bridge the gap",
+      "example": "AI can bridge the gap between technical and non-technical people.",
+      "translation": "AI може закрити розрив між технічними і нетехнічними людьми.",
+      "level": "B2",
+      "tag": "AI",
+      "id": "phrase-026"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "work best when …",
+      "example": "AI tools work best when people give clear instructions.",
+      "translation": "AI-інструменти працюють найкраще, коли люди дають чіткі інструкції.",
+      "level": "B2",
+      "tag": "AI",
+      "id": "phrase-027"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "combine automation with human review",
+      "example": "I prefer to combine automation with human review.",
+      "translation": "Я віддаю перевагу поєднанню автоматизації з людською перевіркою.",
+      "level": "B2",
+      "tag": "AI",
+      "id": "phrase-028"
+    },
+    {
+      "category": "AI / Coding tools",
+      "phrase": "set out to do",
+      "example": "We need to check whether the result does what the prompt set out to do.",
+      "translation": "Нам потрібно перевірити, чи результат виконує те, що prompt мав на меті.",
+      "level": "B2",
+      "tag": "AI",
+      "id": "phrase-029"
+    },
+    {
+      "category": "Lack / Not enough",
+      "phrase": "a lack of …",
+      "example": "A lack of communication can lead to misunderstandings.",
+      "translation": "Брак комунікації може призвести до непорозумінь.",
+      "level": "B2",
+      "tag": "problem",
+      "id": "phrase-030"
+    },
+    {
+      "category": "Lack / Not enough",
+      "phrase": "lack clarity",
+      "example": "The requirements lacked clarity, so we had to ask follow-up questions.",
+      "translation": "Вимогам бракувало ясності, тому нам довелося поставити додаткові питання.",
+      "level": "B2",
+      "tag": "problem",
+      "id": "phrase-031"
+    },
+    {
+      "category": "Lack / Not enough",
+      "phrase": "not enough context",
+      "example": "AI may give a poor answer if it doesn’t have enough context.",
+      "translation": "AI може дати погану відповідь, якщо в нього недостатньо контексту.",
+      "level": "B1+",
+      "tag": "problem",
+      "id": "phrase-032"
+    },
+    {
+      "category": "Lack / Not enough",
+      "phrase": "insufficient testing",
+      "example": "Insufficient testing may introduce bugs into production.",
+      "translation": "Недостатнє тестування може внести баги в продакшен.",
+      "level": "B2",
+      "tag": "problem",
+      "id": "phrase-033"
+    },
+    {
+      "category": "Lack / Not enough",
+      "phrase": "limited resources",
+      "example": "With limited resources, it is important to prioritize.",
+      "translation": "З обмеженими ресурсами важливо правильно розставляти пріоритети.",
+      "level": "B2",
+      "tag": "problem",
+      "id": "phrase-034"
+    },
+    {
+      "category": "Lack / Not enough",
+      "phrase": "missing details",
+      "example": "We had to ask the client about the missing details.",
+      "translation": "Нам довелося запитати клієнта про відсутні деталі.",
+      "level": "B1+",
+      "tag": "problem",
+      "id": "phrase-035"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "take less time",
+      "example": "The task will take less time if we already have a similar implementation.",
+      "translation": "Задача займе менше часу, якщо в нас уже є схожа реалізація.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-036"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "take longer",
+      "example": "The task may take longer if we run into technical issues.",
+      "translation": "Задача може зайняти більше часу, якщо ми зіткнемося з технічними проблемами.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-037"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "speed up",
+      "example": "Clear documentation can speed up the development process.",
+      "translation": "Чітка документація може пришвидшити процес розробки.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-038"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "slow down",
+      "example": "Unclear requirements can slow down the whole team.",
+      "translation": "Нечіткі вимоги можуть сповільнити всю команду.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-039"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "straightforward",
+      "example": "If the logic is already in place, the task should be straightforward.",
+      "translation": "Якщо логіка вже є, задача має бути доволі простою.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-040"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "make it harder",
+      "example": "Missing context makes it harder to choose the right solution.",
+      "translation": "Відсутній контекст ускладнює вибір правильного рішення.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-041"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "ambiguous",
+      "example": "This requirement is ambiguous and can be interpreted in different ways.",
+      "translation": "Ця вимога неоднозначна і може бути інтерпретована по-різному.",
+      "level": "B2",
+      "tag": "clarity",
+      "id": "phrase-042"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "vague",
+      "example": "The description is too vague to estimate the task accurately.",
+      "translation": "Опис занадто розмитий, щоб точно оцінити задачу.",
+      "level": "B2",
+      "tag": "clarity",
+      "id": "phrase-043"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "well-defined",
+      "example": "If the task is well-defined, the team can move forward faster.",
+      "translation": "Якщо задача добре визначена, команда може рухатися далі швидше.",
+      "level": "B2",
+      "tag": "clarity",
+      "id": "phrase-044"
+    },
+    {
+      "category": "Speed / Difficulty / Clarity",
+      "phrase": "The more …, the easier …",
+      "example": "The more context we have, the easier it is to make the right decision.",
+      "translation": "Чим більше контексту ми маємо, тим легше прийняти правильне рішення.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-045"
+    },
+    {
+      "category": "Time estimates",
+      "phrase": "It should take around …",
+      "example": "It should take around one day to implement.",
+      "translation": "Це має зайняти приблизно один день на реалізацію.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-046"
+    },
+    {
+      "category": "Time estimates",
+      "phrase": "I would estimate it at …",
+      "example": "I would estimate it at two working days.",
+      "translation": "Я б оцінив це у два робочі дні.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-047"
+    },
+    {
+      "category": "Time estimates",
+      "phrase": "rough estimate",
+      "example": "As a rough estimate, it should take around two days.",
+      "translation": "Як приблизна оцінка, це має зайняти близько двох днів.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-048"
+    },
+    {
+      "category": "Time estimates",
+      "phrase": "more accurate estimate",
+      "example": "I can give a more accurate estimate after looking into the details.",
+      "translation": "Я зможу дати точнішу оцінку після того, як розберуся з деталями.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-049"
+    },
+    {
+      "category": "Time estimates",
+      "phrase": "If nothing unexpected comes up, …",
+      "example": "If nothing unexpected comes up, we can finish it by tomorrow.",
+      "translation": "Якщо не виникне нічого неочікуваного, ми можемо завершити це до завтра.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-050"
+    },
+    {
+      "category": "Time estimates",
+      "phrase": "Assuming that …",
+      "example": "Assuming that the requirements are final, it should take two days.",
+      "translation": "За умови, що вимоги фінальні, це має зайняти два дні.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-051"
+    },
+    {
+      "category": "Time estimates",
+      "phrase": "At first glance, …",
+      "example": "At first glance, this UI task looks straightforward.",
+      "translation": "На перший погляд, ця UI-задача виглядає простою.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-052"
+    },
+    {
+      "category": "Time estimates",
+      "phrase": "It depends on …",
+      "example": "It depends on whether we need to update the backend as well.",
+      "translation": "Це залежить від того, чи нам також потрібно оновлювати backend.",
+      "level": "B2",
+      "tag": "estimation",
+      "id": "phrase-053"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "Let’s get started.",
+      "example": "Let’s get started. We have a few topics to discuss today.",
+      "translation": "Давайте почнемо. У нас є кілька тем для обговорення сьогодні.",
+      "level": "B1+",
+      "tag": "meeting",
+      "id": "phrase-054"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "Today, I’d like to cover …",
+      "example": "Today, I’d like to cover the current status, blockers, and next steps.",
+      "translation": "Сьогодні я хотів би покрити поточний статус, блокери та наступні кроки.",
+      "level": "B2",
+      "tag": "meeting",
+      "id": "phrase-055"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "You’re breaking up.",
+      "example": "Sorry, you’re breaking up a little. Could you repeat that?",
+      "translation": "Вибач, ти трохи перериваєшся. Можеш повторити?",
+      "level": "B1+",
+      "tag": "meeting",
+      "id": "phrase-056"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "I’m having connectivity issues.",
+      "example": "Sorry, I’m having some connectivity issues.",
+      "translation": "Вибачте, у мене проблеми зі з’єднанням.",
+      "level": "B1+",
+      "tag": "meeting",
+      "id": "phrase-057"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "I’ll share my screen.",
+      "example": "I’ll share my screen so you can see the issue.",
+      "translation": "Я пошерю екран, щоб ви могли побачити проблему.",
+      "level": "B1+",
+      "tag": "meeting",
+      "id": "phrase-058"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "I’ll walk you through it.",
+      "example": "I’ll walk you through the main changes.",
+      "translation": "Я проведу вас через основні зміни / поясню по кроках.",
+      "level": "B2",
+      "tag": "meeting",
+      "id": "phrase-059"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "Where are we with …?",
+      "example": "Where are we with the implementation?",
+      "translation": "На якому ми етапі з реалізацією?",
+      "level": "B1+",
+      "tag": "meeting",
+      "id": "phrase-060"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "We are looking into it.",
+      "example": "We are looking into it and will share an update later today.",
+      "translation": "Ми розбираємося з цим і поділимося апдейтом пізніше сьогодні.",
+      "level": "B2",
+      "tag": "meeting",
+      "id": "phrase-061"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "Let me make sure I understood correctly.",
+      "example": "Let me make sure I understood correctly: we need to change only the UI, right?",
+      "translation": "Дай переконатися, що я правильно зрозумів: нам потрібно змінити тільки UI, так?",
+      "level": "B2",
+      "tag": "meeting",
+      "id": "phrase-062"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "Let’s get back to the main topic.",
+      "example": "Let’s get back to the main topic and discuss the blockers.",
+      "translation": "Давайте повернемося до основної теми і обговоримо блокери.",
+      "level": "B2",
+      "tag": "meeting",
+      "id": "phrase-063"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "I’ll follow up with a summary.",
+      "example": "I’ll follow up with a summary after the meeting.",
+      "translation": "Я зроблю follow-up з підсумком після зустрічі.",
+      "level": "B2",
+      "tag": "meeting",
+      "id": "phrase-064"
+    },
+    {
+      "category": "Online meetings",
+      "phrase": "Let’s wrap up.",
+      "example": "Let’s wrap up for today.",
+      "translation": "Давайте на сьогодні завершувати.",
+      "level": "B1+",
+      "tag": "meeting",
+      "id": "phrase-065"
+    },
+    {
+      "category": "Compare / Difference",
+      "phrase": "What’s the difference between X and Y?",
+      "example": "What’s the difference between remote work and office work?",
+      "translation": "Яка різниця між віддаленою роботою та роботою в офісі?",
+      "level": "B1+",
+      "tag": "question",
+      "id": "phrase-066"
+    },
+    {
+      "category": "Compare / Difference",
+      "phrase": "How would you compare X and Y?",
+      "example": "How would you compare working alone and working in a team?",
+      "translation": "Як би ти порівняв роботу самостійно та роботу в команді?",
+      "level": "B2",
+      "tag": "question",
+      "id": "phrase-067"
+    },
+    {
+      "category": "Compare / Difference",
+      "phrase": "The main difference is that …",
+      "example": "The main difference is that remote work gives more flexibility.",
+      "translation": "Головна різниця в тому, що віддалена робота дає більше гнучкості.",
+      "level": "B2",
+      "tag": "answer",
+      "id": "phrase-068"
+    },
+    {
+      "category": "Compare / Difference",
+      "phrase": "X is more …, while Y is more …",
+      "example": "Remote work is more flexible, while office work is more social.",
+      "translation": "Remote work більш гнучкий, тоді як office work більш соціальний.",
+      "level": "B2",
+      "tag": "answer",
+      "id": "phrase-069"
+    },
+    {
+      "category": "Compare / Difference",
+      "phrase": "Unlike X, Y …",
+      "example": "Unlike AI, humans can understand emotional context better.",
+      "translation": "На відміну від AI, люди краще розуміють емоційний контекст.",
+      "level": "B2",
+      "tag": "answer",
+      "id": "phrase-070"
+    },
+    {
+      "category": "Compare / Difference",
+      "phrase": "I would choose X if …, but Y if …",
+      "example": "I would choose a quick fix if the issue is urgent, but a long-term solution if we have enough time.",
+      "translation": "Я б обрав quick fix, якщо проблема термінова, але long-term solution, якщо в нас достатньо часу.",
+      "level": "B2",
+      "tag": "answer",
+      "id": "phrase-071"
+    },
+    {
+      "category": "Conduct vs Carry out",
+      "phrase": "conduct research",
+      "example": "We need to conduct research before choosing the solution.",
+      "translation": "Нам потрібно провести дослідження перед вибором рішення.",
+      "level": "B2",
+      "tag": "collocation",
+      "id": "phrase-072"
+    },
+    {
+      "category": "Conduct vs Carry out",
+      "phrase": "conduct a survey",
+      "example": "The company conducted a survey to collect customer feedback.",
+      "translation": "Компанія провела опитування, щоб зібрати відгуки клієнтів.",
+      "level": "B2",
+      "tag": "collocation",
+      "id": "phrase-073"
+    },
+    {
+      "category": "Conduct vs Carry out",
+      "phrase": "carry out a task",
+      "example": "We need to carry out this task by the end of the day.",
+      "translation": "Нам потрібно виконати цю задачу до кінця дня.",
+      "level": "B2",
+      "tag": "collocation",
+      "id": "phrase-074"
+    },
+    {
+      "category": "Conduct vs Carry out",
+      "phrase": "carry out a test",
+      "example": "We carried out several tests before the release.",
+      "translation": "Ми провели кілька тестів перед релізом.",
+      "level": "B2",
+      "tag": "collocation",
+      "id": "phrase-075"
+    },
+    {
+      "category": "Conduct vs Carry out",
+      "phrase": "carry out an analysis",
+      "example": "The team carried out an analysis and found the root cause.",
+      "translation": "Команда провела аналіз і знайшла першопричину.",
+      "level": "B2",
+      "tag": "collocation",
+      "id": "phrase-076"
+    },
+    {
+      "category": "Modals",
+      "phrase": "may have + V3",
+      "example": "The client may have missed the update.",
+      "translation": "Клієнт, можливо, пропустив апдейт.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-077"
+    },
+    {
+      "category": "Modals",
+      "phrase": "might have + V3",
+      "example": "The issue might have happened because of missing context.",
+      "translation": "Проблема могла статися через відсутній контекст.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-078"
+    },
+    {
+      "category": "Modals",
+      "phrase": "will have + V3",
+      "example": "We will have completed the task by Friday.",
+      "translation": "Ми завершимо задачу до п’ятниці.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-079"
+    },
+    {
+      "category": "Conjunctions",
+      "phrase": "unless",
+      "example": "The project may fall behind schedule unless the team communicates regularly.",
+      "translation": "Проєкт може відстати від графіка, якщо команда не буде регулярно комунікувати.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-080"
+    },
+    {
+      "category": "Conjunctions",
+      "phrase": "provided that",
+      "example": "Remote work can be effective, provided that the team has clear processes.",
+      "translation": "Віддалена робота може бути ефективною за умови, що в команди є чіткі процеси.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-081"
+    },
+    {
+      "category": "Conjunctions",
+      "phrase": "so that",
+      "example": "We set up regular meetings so that everyone stays aligned.",
+      "translation": "Ми налаштували регулярні зустрічі, щоб усі залишалися узгодженими.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-082"
+    },
+    {
+      "category": "Conjunctions",
+      "phrase": "whereas",
+      "example": "AI is good at automation, whereas people are better at judgment and empathy.",
+      "translation": "AI добре справляється з автоматизацією, тоді як люди кращі в судженні та емпатії.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-083"
+    },
+    {
+      "category": "Conjunctions",
+      "phrase": "consequently",
+      "example": "He worked hard; consequently, he improved his speaking skills.",
+      "translation": "Він наполегливо працював; як наслідок, він покращив навички говоріння.",
+      "level": "B2",
+      "tag": "grammar",
+      "id": "phrase-084"
+    },
+    {
+      "category": "Otherwise",
+      "phrase": "Otherwise, …",
+      "example": "We should verify the results. Otherwise, we may introduce a bug.",
+      "translation": "Нам слід перевірити результати. Інакше ми можемо внести баг.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-085"
+    },
+    {
+      "category": "Otherwise",
+      "phrase": "If we don’t, …",
+      "example": "We need to communicate clearly. If we don’t, we may run into misunderstandings.",
+      "translation": "Нам потрібно чітко комунікувати. Якщо ми цього не зробимо, ми можемо зіткнутися з непорозуміннями.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-086"
+    },
+    {
+      "category": "Otherwise",
+      "phrase": "Without proper …, …",
+      "example": "Without proper review, AI-generated code may introduce bugs.",
+      "translation": "Без належної перевірки AI-згенерований код може внести баги.",
+      "level": "B2",
+      "tag": "connector",
+      "id": "phrase-087"
+    },
+    {
+      "category": "Informal phrases",
+      "phrase": "Here we go.",
+      "example": "Here we go. Let me explain the main idea.",
+      "translation": "Ну що, починаємо. Дозвольте пояснити головну ідею.",
+      "level": "B1+",
+      "tag": "informal",
+      "id": "phrase-088"
+    },
+    {
+      "category": "Informal phrases",
+      "phrase": "There we go.",
+      "example": "There we go. The issue is fixed now.",
+      "translation": "Ось так. Тепер проблему виправлено.",
+      "level": "B1+",
+      "tag": "informal",
+      "id": "phrase-089"
+    }
+  ],
+  "patterns": [
+    {
+      "title": "PREP — opinion answers",
+      "formula": "Point → Reason → Example → Point again",
+      "use": "AI, teamwork, remote work, career, hobbies",
+      "example": "From my perspective, AI is useful at work. First of all, it saves time on routine tasks. For example, it can summarize information or help with ideas. Overall, AI should support people, not replace them.",
+      "translation": "З моєї точки зору, AI корисний на роботі. Перш за все, він економить час на рутинних задачах. Наприклад, він може підсумовувати інформацію або допомагати з ідеями. Загалом, AI має підтримувати людей, а не замінювати їх."
+    },
+    {
+      "title": "STAR — experience answers",
+      "formula": "Situation → Task → Action → Result",
+      "use": "difficult client, conflict, solved a problem, worked under pressure",
+      "example": "We had unclear requirements from the client. My task was to clarify expectations. I set up a call and followed up with a written summary. As a result, the team moved forward without misunderstanding.",
+      "translation": "У нас були нечіткі вимоги від клієнта. Моєю задачею було уточнити очікування. Я організував дзвінок і зробив follow-up письмовим підсумком. Як результат, команда рухалася далі без непорозумінь."
+    },
+    {
+      "title": "Problem → Action → Result",
+      "formula": "We ran into a problem → We looked into it → We came up with a solution → We moved forward",
+      "use": "problem-solving, bugs, blockers, unclear requirements",
+      "example": "We ran into a problem with the API response. We looked into the logs and found the root cause. Then we came up with a workaround and moved forward.",
+      "translation": "Ми зіткнулися з проблемою з API-відповіддю. Ми розібралися з логами і знайшли першопричину. Потім ми придумали обхідне рішення і рушили далі."
+    },
+    {
+      "title": "Balanced opinion",
+      "formula": "From my perspective → On the one hand → On the other hand → That being said → Overall",
+      "use": "AI risks, remote work, speed vs quality, automation",
+      "example": "From my perspective, AI tools are very helpful. On the one hand, they can speed up routine tasks. On the other hand, they can make mistakes. That being said, they are valuable if people verify the results. Overall, AI works best with human review.",
+      "translation": "З моєї точки зору, AI-інструменти дуже корисні. З одного боку, вони можуть пришвидшити рутинні задачі. З іншого боку, вони можуть помилятися. Але при цьому вони цінні, якщо люди перевіряють результати. Загалом, AI найкраще працює з людською перевіркою."
+    },
+    {
+      "title": "Estimation answer",
+      "formula": "At first glance → It depends on → It should take → It may take longer if",
+      "use": "task estimates, timelines, client questions",
+      "example": "At first glance, this task looks straightforward. It depends on whether we need backend changes. If not, it should take around one day. It may take longer if we run into unexpected issues.",
+      "translation": "На перший погляд, ця задача виглядає простою. Це залежить від того, чи потрібні зміни на backend. Якщо ні, це має зайняти приблизно один день. Це може зайняти більше часу, якщо ми зіткнемося з неочікуваними проблемами."
+    },
+    {
+      "title": "Compare two things",
+      "formula": "The main difference is → X is more … while Y is more … → I would choose X if … but Y if … → Overall",
+      "use": "remote vs office, speed vs quality, AI vs human expertise",
+      "example": "The main difference between a quick fix and a long-term solution is stability. A quick fix is faster, while a long-term solution is more reliable. I would choose a quick fix if the issue is urgent, but a long-term solution if we have enough time.",
+      "translation": "Головна різниця між quick fix і long-term solution — це стабільність. Quick fix швидший, тоді як long-term solution надійніший. Я б обрав quick fix, якщо проблема термінова, але long-term solution, якщо в нас достатньо часу."
+    }
+  ],
+  "answers": [
+    {
+      "topic": "AI at work",
+      "question": "How can AI help people at work?",
+      "answer": "I would start by saying that AI can be very useful at work. First of all, it can save time by automating routine tasks. On top of that, it can help people come up with ideas faster and explore information more efficiently. That being said, AI can make mistakes, so we should always verify the results. Overall, I think AI should support people, not replace them.",
+      "translation": "Я б почав з того, що AI може бути дуже корисним на роботі. Перш за все, він може економити час, автоматизуючи рутинні задачі. Крім того, він може допомагати людям швидше придумувати ідеї та ефективніше досліджувати інформацію. Але при цьому AI може помилятися, тому ми завжди повинні перевіряти результати. Загалом, я думаю, що AI має підтримувати людей, а не замінювати їх."
+    },
+    {
+      "topic": "AI coding tools",
+      "question": "How can AI coding tools help developers?",
+      "answer": "From my perspective, AI coding tools can be very useful for developers. First of all, they can help explore the codebase, explain what is happening under the hood, and suggest possible improvements. On top of that, they can save time on routine tasks, especially when a developer needs to dig into a problem quickly. That being said, I would not auto-accept every change. AI can make mistakes or even introduce a bug, so it is important to verify the results and combine automation with human review.",
+      "translation": "З моєї точки зору, AI-інструменти для кодування можуть бути дуже корисними для розробників. Перш за все, вони можуть допомогти дослідити кодову базу, пояснити, що відбувається “під капотом”, і запропонувати можливі покращення. Крім того, вони можуть економити час на рутинних задачах, особливо коли розробнику потрібно швидко розібратися з проблемою. Але при цьому я б не приймав кожну зміну автоматично. AI може помилятися або навіть внести баг, тому важливо перевіряти результати і поєднувати автоматизацію з людською перевіркою."
+    },
+    {
+      "topic": "Teamwork",
+      "question": "What makes a good team?",
+      "answer": "Let me start by saying that a good team is not only about technical skills. What matters most is clear communication, trust, and responsibility. If the team communicates regularly, it is easier to stay aligned and avoid misunderstandings. On top of that, supportive teammates can help each other when someone runs into a problem. Overall, I think teamwork works best when people respect each other and focus on the solution.",
+      "translation": "Дозвольте почати з того, що хороша команда — це не лише про технічні навички. Найважливіше — це чітка комунікація, довіра і відповідальність. Якщо команда регулярно комунікує, легше залишатися узгодженими і уникати непорозумінь. Крім того, підтримуючі teammates можуть допомагати одне одному, коли хтось стикається з проблемою. Загалом, я думаю, що командна робота найкраще працює, коли люди поважають одне одного і фокусуються на рішенні."
+    },
+    {
+      "topic": "Difficult clients",
+      "question": "How do you deal with difficult clients?",
+      "answer": "I would start by saying that difficult clients are often difficult because expectations are not clear. In this situation, I try to stay calm and ask specific questions. First of all, I clarify what the client actually needs. Then I point out what we can realistically do and follow up with a written summary. That being said, I try to give the client the benefit of the doubt. Overall, clear communication is the best way to reduce tension.",
+      "translation": "Я б почав з того, що складні клієнти часто складні тому, що очікування нечіткі. У такій ситуації я намагаюся залишатися спокійним і ставити конкретні питання. Перш за все, я уточнюю, що саме потрібно клієнту. Потім я вказую, що ми реально можемо зробити, і роблю follow-up письмовим підсумком. Але при цьому я намагаюся давати клієнту кредит довіри. Загалом, чітка комунікація — найкращий спосіб знизити напругу."
+    },
+    {
+      "topic": "Problem-solving",
+      "question": "What do you do when you run into a problem?",
+      "answer": "When we run into a problem, I think it is important not to panic. First of all, we need to look into the issue and understand the root cause. After that, we can come up with a practical solution and decide who is responsible for each step. If the deadline is tight, I would prioritize the most important tasks. Overall, a calm and structured approach usually works best.",
+      "translation": "Коли ми стикаємося з проблемою, я думаю, важливо не панікувати. Перш за все, нам потрібно розібратися з проблемою і зрозуміти першопричину. Після цього ми можемо придумати практичне рішення і вирішити, хто відповідає за кожен крок. Якщо дедлайн tight, я б пріоритезував найважливіші задачі. Загалом, спокійний і структурований підхід зазвичай працює найкраще."
+    },
+    {
+      "topic": "Online meetings",
+      "question": "How do you usually handle online meetings?",
+      "answer": "Let me start by saying that online meetings should be structured and focused. At the beginning, I like to clarify the main goal and agenda. During the meeting, I try to ask questions if something is unclear and make sure everyone stays aligned. If we run into technical issues, for example if someone is breaking up, I ask them to repeat or reconnect. At the end, I usually summarize the next steps and follow up with meeting notes.",
+      "translation": "Дозвольте почати з того, що онлайн-зустрічі мають бути структурованими і сфокусованими. На початку я люблю уточнити головну мету і agenda. Під час зустрічі я намагаюся ставити питання, якщо щось неясно, і переконатися, що всі залишаються узгодженими. Якщо ми стикаємося з технічними проблемами, наприклад якщо когось погано чути, я прошу повторити або перепідключитися. Наприкінці я зазвичай підсумовую наступні кроки і роблю follow-up з нотатками зустрічі."
+    }
+  ],
+  "drills": [
+    "How can AI help people at work?",
+    "What are the risks of using AI coding tools?",
+    "Tell me about a time you solved a difficult problem.",
+    "How do you deal with difficult clients?",
+    "What makes a good team?",
+    "What makes a good team leader?",
+    "How would you compare remote work and office work?",
+    "What is more important: speed or quality?",
+    "How do you estimate a task?",
+    "What do you do when requirements are unclear?",
+    "How do you handle online meetings?",
+    "What do you do if you run into a blocker?",
+    "Can AI replace developers?",
+    "What are the pros and cons of automation?",
+    "Describe your ideal colleague."
+  ],
+  "meta": {
+    "title": "English Assessment Trainer",
+    "subtitle": "B1+ → B2 Speaking Playbook",
+    "version": "2.0-json-index",
+    "language": "uk/en",
+    "updated": "2026-06-25",
+    "goal": "Clear structure + safe vocabulary + controlled grammar + confident pronunciation",
+    "updatedFeature": "Word Index + Reverse Practice"
+  },
+  "blocks": [
+    {
+      "id": "start-answer",
+      "title": "Start Answer Phrases",
+      "category": "Start answer",
+      "type": "phraseCategory",
+      "description": "Початок відповіді: фрази для м’якого і впевненого старту speaking answer.",
+      "icon": "record_voice_over",
+      "tag": "assessment",
+      "itemsCount": 6,
+      "priority": 1
+    },
+    {
+      "id": "structure",
+      "title": "Structure & Add Ideas",
+      "category": "Structure",
+      "type": "phraseCategory",
+      "description": "Фрази для структури відповіді: first of all, on top of that, what matters most.",
+      "icon": "account_tree",
+      "tag": "connector",
+      "itemsCount": 5,
+      "priority": 2
+    },
+    {
+      "id": "contrast",
+      "title": "Contrast Phrases",
+      "category": "Contrast",
+      "type": "phraseCategory",
+      "description": "Фрази для балансу думок: on the one hand, that being said, although, while.",
+      "icon": "compare_arrows",
+      "tag": "contrast",
+      "itemsCount": 6,
+      "priority": 3
+    },
+    {
+      "id": "ending",
+      "title": "Ending / Conclusion",
+      "category": "Ending",
+      "type": "phraseCategory",
+      "description": "Фрази для завершення відповіді: overall, in the long run, key takeaway.",
+      "icon": "flag",
+      "tag": "conclusion",
+      "itemsCount": 3,
+      "priority": 4
+    },
+    {
+      "id": "ai-coding-tools",
+      "title": "AI / Coding Tools",
+      "category": "AI / Coding tools",
+      "type": "phraseCategory",
+      "description": "Vocabulary для AI tools, coding assistants, code review, prompts and context.",
+      "icon": "smart_toy",
+      "tag": "AI",
+      "itemsCount": 9,
+      "priority": 5
+    },
+    {
+      "id": "lack-not-enough",
+      "title": "Lack / Not Enough",
+      "category": "Lack / Not enough",
+      "type": "phraseCategory",
+      "description": "Як говорити про брак часу, контексту, ресурсів, ясності.",
+      "icon": "report_problem",
+      "tag": "problem",
+      "itemsCount": 6,
+      "priority": 6
+    },
+    {
+      "id": "speed-difficulty-clarity",
+      "title": "Speed, Difficulty & Clarity",
+      "category": "Speed / Difficulty / Clarity",
+      "type": "phraseCategory",
+      "description": "Швидше/повільніше, легше/важче, чіткіше/нечіткіше.",
+      "icon": "speed",
+      "tag": "estimation",
+      "itemsCount": 10,
+      "priority": 7
+    },
+    {
+      "id": "time-estimates",
+      "title": "Time Estimates",
+      "category": "Time estimates",
+      "type": "phraseCategory",
+      "description": "Як оцінювати час виконання задач: rough estimate, take longer, depends on.",
+      "icon": "schedule",
+      "tag": "estimation",
+      "itemsCount": 8,
+      "priority": 8
+    },
+    {
+      "id": "online-meetings",
+      "title": "Online Meetings",
+      "category": "Online meetings",
+      "type": "phraseCategory",
+      "description": "Фрази для онлайн-мітингів: agenda, screen sharing, blockers, next steps.",
+      "icon": "groups",
+      "tag": "meeting",
+      "itemsCount": 12,
+      "priority": 9
+    },
+    {
+      "id": "compare-difference",
+      "title": "Compare / Difference",
+      "category": "Compare / Difference",
+      "type": "phraseCategory",
+      "description": "Питання і відповіді про різницю між речами: X vs Y, pros and cons.",
+      "icon": "difference",
+      "tag": "comparison",
+      "itemsCount": 6,
+      "priority": 10
+    },
+    {
+      "id": "conduct-vs-carry-out",
+      "title": "Conduct vs Carry out",
+      "category": "Conduct vs Carry out",
+      "type": "phraseCategory",
+      "description": "Різниця між conduct і carry out у work-style speaking.",
+      "icon": "rule",
+      "tag": "vocabulary",
+      "itemsCount": 5,
+      "priority": 11
+    },
+    {
+      "id": "modals",
+      "title": "Modals: May/Might/Will Have + V3",
+      "category": "Modals",
+      "type": "phraseCategory",
+      "description": "May have, might have, will have + V3 з прикладами для assessment.",
+      "icon": "psychology",
+      "tag": "grammar",
+      "itemsCount": 3,
+      "priority": 12
+    },
+    {
+      "id": "conjunctions",
+      "title": "Conjunctions",
+      "category": "Conjunctions",
+      "type": "phraseCategory",
+      "description": "Although, because, while, unless, provided that, whereas, consequently.",
+      "icon": "link",
+      "tag": "grammar",
+      "itemsCount": 5,
+      "priority": 13
+    },
+    {
+      "id": "otherwise",
+      "title": "Otherwise & Alternatives",
+      "category": "Otherwise",
+      "type": "phraseCategory",
+      "description": "Otherwise, if not, without that, without proper review.",
+      "icon": "alt_route",
+      "tag": "connector",
+      "itemsCount": 3,
+      "priority": 14
+    },
+    {
+      "id": "informal-phrases",
+      "title": "Informal Phrases",
+      "category": "Informal phrases",
+      "type": "phraseCategory",
+      "description": "Here we go / There we go та живі spoken фрази.",
+      "icon": "chat",
+      "tag": "spoken",
+      "itemsCount": 2,
+      "priority": 15
+    },
+    {
+      "id": "answer-patterns",
+      "title": "Answer Patterns",
+      "type": "patterns",
+      "description": "PREP, STAR, Balanced Opinion, Problem → Action → Result and other speaking frameworks.",
+      "icon": "schema",
+      "tag": "framework",
+      "itemsCount": 6,
+      "priority": 100
+    },
+    {
+      "id": "ready-answers",
+      "title": "Ready-Made Answers",
+      "type": "answers",
+      "description": "Готові assessment-style answers для AI, teamwork, difficult clients, problem-solving and online meetings.",
+      "icon": "article",
+      "tag": "speaking",
+      "itemsCount": 6,
+      "priority": 101
+    },
+    {
+      "id": "practice-mode",
+      "title": "Practice Mode",
+      "type": "practice",
+      "description": "Random speaking prompts and random phrase practice for active recall.",
+      "icon": "shuffle",
+      "tag": "drill",
+      "itemsCount": 15,
+      "priority": 102
+    },
+    {
+      "id": "word-index",
+      "title": "Word Index",
+      "description": "Алфавітний індекс слів і фраз. Натисни на фразу, щоб побачити переклад, pronunciation і 2 приклади застосування.",
+      "type": "wordIndex",
+      "tag": "index",
+      "icon": "record_voice_over",
+      "itemsCount": 89,
+      "priority": 2.5
+    },
+    {
+      "id": "reverse-practice",
+      "title": "Reverse Practice",
+      "description": "Зворотня вправа: бачиш український переклад і згадуєш англійську фразу або приклад.",
+      "type": "reversePractice",
+      "tag": "practice",
+      "icon": "quiz",
+      "itemsCount": 89,
+      "priority": 2.6
+    },
+    {
+      "id": "irregular-verbs-100",
+      "title": "100 Irregular Verbs",
+      "type": "irregularVerbs",
+      "description": "100 popular irregular verbs grouped by usage context: 3 forms, Ukrainian translation, IPA transcription, and 2 examples.",
+      "icon": "format_list_numbered",
+      "tag": "grammar",
+      "itemsCount": 100,
+      "priority": 2.7
+    }
+  ],
+  "wordIndex": [
+    {
+      "id": "word-phrase-001",
+      "sourcePhraseId": "phrase-001",
+      "term": "I would start by saying that …",
+      "category": "Start answer",
+      "level": "B2",
+      "tag": "assessment",
+      "meaning": "Я б почав з того, що…",
+      "pronunciation": "I would start by saying that",
+      "examples": [
+        {
+          "en": "I would start by saying that AI is a useful tool, but it should not replace human judgment.",
+          "ua": "Я б почав з того, що AI — корисний інструмент, але він не повинен замінювати людське судження."
+        },
+        {
+          "en": "I would start by saying that communication is the key factor in teamwork.",
+          "ua": "Я б почав з того, що комунікація — ключовий фактор у командній роботі."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-002",
+      "sourcePhraseId": "phrase-002",
+      "term": "Let me start by saying that …",
+      "category": "Start answer",
+      "level": "B2",
+      "tag": "assessment",
+      "meaning": "Дозвольте почати з того, що…",
+      "pronunciation": "Let me start by saying that",
+      "examples": [
+        {
+          "en": "Let me start by saying that good teamwork is not only about technical skills.",
+          "ua": "Дозвольте почати з того, що хороша командна робота — це не лише про технічні навички."
+        },
+        {
+          "en": "Let me start by saying that AI should support people, not replace them.",
+          "ua": "Дозвольте почати з того, що AI має підтримувати людей, а не замінювати їх."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-003",
+      "sourcePhraseId": "phrase-003",
+      "term": "The first thing I’d say is that …",
+      "category": "Start answer",
+      "level": "B2",
+      "tag": "assessment",
+      "meaning": "Перше, що я б сказав, це…",
+      "pronunciation": "The first thing I’d say is that",
+      "examples": [
+        {
+          "en": "The first thing I’d say is that AI works best when people give clear instructions.",
+          "ua": "Перше, що я б сказав: AI працює найкраще, коли люди дають чіткі інструкції."
+        },
+        {
+          "en": "The first thing I’d say is that we need more context before making a decision.",
+          "ua": "Перше, що я б сказав: нам потрібно більше контексту перед прийняттям рішення."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-004",
+      "sourcePhraseId": "phrase-004",
+      "term": "Before going into details, I’d say that …",
+      "category": "Start answer",
+      "level": "B2",
+      "tag": "assessment",
+      "meaning": "Перед тим як перейти до деталей, я б сказав, що…",
+      "pronunciation": "Before going into details, I’d say that",
+      "examples": [
+        {
+          "en": "Before going into details, I’d say that the estimate depends on the scope of the task.",
+          "ua": "Перед тим як переходити до деталей, я б сказав, що оцінка залежить від обсягу задачі."
+        },
+        {
+          "en": "Before going into details, I’d say that the task looks straightforward.",
+          "ua": "Перед тим як переходити до деталей, я б сказав, що задача виглядає доволі простою."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-005",
+      "sourcePhraseId": "phrase-005",
+      "term": "From my perspective, …",
+      "category": "Start answer",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "З моєї точки зору…",
+      "pronunciation": "from my per-SPEC-tive",
+      "examples": [
+        {
+          "en": "From my perspective, AI is useful as long as people use it responsibly.",
+          "ua": "З моєї точки зору, AI корисний, якщо люди використовують його відповідально."
+        },
+        {
+          "en": "From my perspective, difficult clients often need clearer expectations.",
+          "ua": "З моєї точки зору, складним клієнтам часто потрібні чіткіші очікування."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-006",
+      "sourcePhraseId": "phrase-006",
+      "term": "In my experience, …",
+      "category": "Start answer",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "З мого досвіду…",
+      "pronunciation": "in my ex-PE-ri-ence",
+      "examples": [
+        {
+          "en": "In my experience, clear communication helps avoid many problems with clients.",
+          "ua": "З мого досвіду, чітка комунікація допомагає уникнути багатьох проблем із клієнтами."
+        },
+        {
+          "en": "In my experience, regular updates help clients feel more confident.",
+          "ua": "З мого досвіду, регулярні апдейти допомагають клієнтам почуватися впевненіше."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-007",
+      "sourcePhraseId": "phrase-007",
+      "term": "First of all, …",
+      "category": "Structure",
+      "level": "B1+",
+      "tag": "connector",
+      "meaning": "Перш за все…",
+      "pronunciation": "First of all,",
+      "examples": [
+        {
+          "en": "First of all, we need to understand the root cause of the problem.",
+          "ua": "Перш за все, нам потрібно зрозуміти першопричину проблеми."
+        },
+        {
+          "en": "First of all, we should clarify the requirements.",
+          "ua": "Перш за все, нам слід уточнити вимоги."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-008",
+      "sourcePhraseId": "phrase-008",
+      "term": "On top of that, …",
+      "category": "Structure",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "Крім того / До того ж…",
+      "pronunciation": "on TOP of THAT",
+      "examples": [
+        {
+          "en": "AI can automate routine tasks. On top of that, it can support decision-making.",
+          "ua": "AI може автоматизувати рутинні задачі. Крім того, він може підтримувати прийняття рішень."
+        },
+        {
+          "en": "On top of that, regular feedback helps the team stay aligned.",
+          "ua": "Крім того, регулярний feedback допомагає команді залишатися узгодженою."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-009",
+      "sourcePhraseId": "phrase-009",
+      "term": "In addition, …",
+      "category": "Structure",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "Крім того…",
+      "pronunciation": "In addition,",
+      "examples": [
+        {
+          "en": "In addition, regular updates make clients feel more confident.",
+          "ua": "Крім того, регулярні апдейти допомагають клієнтам почуватися впевненіше."
+        },
+        {
+          "en": "In addition, we need to test the solution before release.",
+          "ua": "Крім того, нам потрібно протестувати рішення перед релізом."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-010",
+      "sourcePhraseId": "phrase-010",
+      "term": "Another important point is that …",
+      "category": "Structure",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "Ще один важливий момент у тому, що…",
+      "pronunciation": "Another important point is that",
+      "examples": [
+        {
+          "en": "Another important point is that the team should stay aligned.",
+          "ua": "Ще один важливий момент у тому, що команда має залишатися узгодженою."
+        },
+        {
+          "en": "Another important point is that the client should receive regular updates.",
+          "ua": "Ще один важливий момент у тому, що клієнт має отримувати регулярні апдейти."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-011",
+      "sourcePhraseId": "phrase-011",
+      "term": "What matters most is …",
+      "category": "Structure",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "Найважливіше — це…",
+      "pronunciation": "What matters most is",
+      "examples": [
+        {
+          "en": "What matters most is clear communication and realistic expectations.",
+          "ua": "Найважливіше — це чітка комунікація та реалістичні очікування."
+        },
+        {
+          "en": "What matters most is staying calm and focusing on the solution.",
+          "ua": "Найважливіше — залишатися спокійним і фокусуватися на рішенні."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-012",
+      "sourcePhraseId": "phrase-012",
+      "term": "On the one hand, … On the other hand, …",
+      "category": "Contrast",
+      "level": "B2",
+      "tag": "contrast",
+      "meaning": "З одного боку… з іншого боку…",
+      "pronunciation": "On the one hand,  On the other hand,",
+      "examples": [
+        {
+          "en": "On the one hand, AI can improve productivity. On the other hand, it can make people too dependent on technology.",
+          "ua": "З одного боку, AI може покращити продуктивність. З іншого боку, він може зробити людей занадто залежними від технологій."
+        },
+        {
+          "en": "On the one hand, AI saves time. On the other hand, it can make mistakes.",
+          "ua": "З одного боку, AI економить час. З іншого боку, він може помилятися."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-013",
+      "sourcePhraseId": "phrase-013",
+      "term": "That being said, …",
+      "category": "Contrast",
+      "level": "B2",
+      "tag": "contrast",
+      "meaning": "Але при цьому / Водночас…",
+      "pronunciation": "THAT being SAID",
+      "examples": [
+        {
+          "en": "AI is a powerful tool. That being said, we should always check its output.",
+          "ua": "AI — потужний інструмент. Але при цьому ми завжди повинні перевіряти його результати."
+        },
+        {
+          "en": "The task looks simple. That being said, we still need to verify the edge cases.",
+          "ua": "Задача виглядає простою. Але при цьому нам все одно потрібно перевірити edge cases."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-014",
+      "sourcePhraseId": "phrase-014",
+      "term": "At the same time, …",
+      "category": "Contrast",
+      "level": "B2",
+      "tag": "contrast",
+      "meaning": "Водночас…",
+      "pronunciation": "at the SAME TIME",
+      "examples": [
+        {
+          "en": "We should listen to the client. At the same time, we need to be realistic about deadlines.",
+          "ua": "Ми повинні слухати клієнта. Водночас нам потрібно бути реалістичними щодо дедлайнів."
+        },
+        {
+          "en": "We should move fast. At the same time, we should not ignore quality.",
+          "ua": "Нам слід рухатися швидко. Водночас ми не повинні ігнорувати якість."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-015",
+      "sourcePhraseId": "phrase-015",
+      "term": "On the flip side, …",
+      "category": "Contrast",
+      "level": "B2",
+      "tag": "contrast",
+      "meaning": "З іншого боку / Мінус у тому, що…",
+      "pronunciation": "On the flip side,",
+      "examples": [
+        {
+          "en": "Remote work gives people flexibility. On the flip side, communication can become more difficult.",
+          "ua": "Віддалена робота дає людям гнучкість. З іншого боку, комунікація може стати складнішою."
+        },
+        {
+          "en": "Remote work is flexible. On the flip side, communication can become harder.",
+          "ua": "Віддалена робота гнучка. З іншого боку, комунікація може стати складнішою."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-016",
+      "sourcePhraseId": "phrase-016",
+      "term": "While …, …",
+      "category": "Contrast",
+      "level": "B2",
+      "tag": "contrast",
+      "meaning": "Хоча / тоді як…",
+      "pronunciation": "While ,",
+      "examples": [
+        {
+          "en": "While AI can improve productivity, it cannot fully replace human judgment.",
+          "ua": "Хоча AI може покращити продуктивність, він не може повністю замінити людське судження."
+        },
+        {
+          "en": "While AI is useful, human review is still important.",
+          "ua": "Хоча AI корисний, людська перевірка все ще важлива."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-017",
+      "sourcePhraseId": "phrase-017",
+      "term": "Although …, …",
+      "category": "Contrast",
+      "level": "B2",
+      "tag": "contrast",
+      "meaning": "Хоча…",
+      "pronunciation": "Although ,",
+      "examples": [
+        {
+          "en": "Although the client was difficult, we managed to build a good relationship.",
+          "ua": "Хоча клієнт був складним, нам вдалося побудувати хороші відносини."
+        },
+        {
+          "en": "Although the deadline was tight, we managed to stay on track.",
+          "ua": "Хоча дедлайн був стислий, нам вдалося залишитися в графіку."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-018",
+      "sourcePhraseId": "phrase-018",
+      "term": "Overall, …",
+      "category": "Ending",
+      "level": "B2",
+      "tag": "conclusion",
+      "meaning": "Загалом…",
+      "pronunciation": "O-ver-ALL",
+      "examples": [
+        {
+          "en": "Overall, I believe AI is useful as long as people use it responsibly.",
+          "ua": "Загалом, я вважаю, що AI корисний, якщо люди використовують його відповідально."
+        },
+        {
+          "en": "Overall, I think this approach is practical and safe.",
+          "ua": "Загалом, я думаю, що цей підхід практичний і безпечний."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-019",
+      "sourcePhraseId": "phrase-019",
+      "term": "In the long run, …",
+      "category": "Ending",
+      "level": "B2",
+      "tag": "conclusion",
+      "meaning": "У довгостроковій перспективі…",
+      "pronunciation": "In the long run,",
+      "examples": [
+        {
+          "en": "In the long run, good communication helps build trust with clients.",
+          "ua": "У довгостроковій перспективі хороша комунікація допомагає будувати довіру з клієнтами."
+        },
+        {
+          "en": "In the long run, clear communication helps build trust.",
+          "ua": "У довгостроковій перспективі чітка комунікація допомагає будувати довіру."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-020",
+      "sourcePhraseId": "phrase-020",
+      "term": "So, the key takeaway is that …",
+      "category": "Ending",
+      "level": "B2",
+      "tag": "conclusion",
+      "meaning": "Отже, головний висновок у тому, що…",
+      "pronunciation": "So, the key takeaway is that",
+      "examples": [
+        {
+          "en": "So, the key takeaway is that AI should support people, not replace them.",
+          "ua": "Отже, головний висновок у тому, що AI має підтримувати людей, а не замінювати їх."
+        },
+        {
+          "en": "So, the key takeaway is that AI should be used responsibly.",
+          "ua": "Отже, головний висновок у тому, що AI потрібно використовувати відповідально."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-021",
+      "sourcePhraseId": "phrase-021",
+      "term": "under the hood",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "AI",
+      "meaning": "під капотом / всередині системи",
+      "pronunciation": "UN-der the HOOD",
+      "examples": [
+        {
+          "en": "Under the hood, the tool analyzes the codebase and suggests improvements.",
+          "ua": "“Під капотом” інструмент аналізує кодову базу і пропонує покращення."
+        },
+        {
+          "en": "Under the hood, the application loads training materials from a JSON file.",
+          "ua": "Під капотом застосунок завантажує навчальні матеріали з JSON-файлу."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-022",
+      "sourcePhraseId": "phrase-022",
+      "term": "dig into",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "phrasal verb",
+      "meaning": "глибше розібратися / дослідити",
+      "pronunciation": "DIG IN-to",
+      "examples": [
+        {
+          "en": "We need to dig into the issue before making any changes.",
+          "ua": "Нам потрібно глибше розібратися з проблемою перед тим, як робити зміни."
+        },
+        {
+          "en": "I need to dig into the logs before I can explain the issue.",
+          "ua": "Мені потрібно глибше розібратися з логами, перш ніж я зможу пояснити проблему."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-023",
+      "sourcePhraseId": "phrase-023",
+      "term": "verify the results",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "AI",
+      "meaning": "перевірити результати",
+      "pronunciation": "VE-ri-fy the re-SULTS",
+      "examples": [
+        {
+          "en": "I always verify the results before using AI output.",
+          "ua": "Я завжди перевіряю результати перед тим, як використовувати AI-відповідь."
+        },
+        {
+          "en": "Before accepting AI suggestions, I always verify the results.",
+          "ua": "Перед прийняттям AI-рекомендацій я завжди перевіряю результати."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-024",
+      "sourcePhraseId": "phrase-024",
+      "term": "introduce a bug",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "AI",
+      "meaning": "внести баг / спричинити помилку",
+      "pronunciation": "in-tro-DUCE a BUG",
+      "examples": [
+        {
+          "en": "Poorly reviewed AI changes can introduce a bug.",
+          "ua": "Погано перевірені AI-зміни можуть внести баг."
+        },
+        {
+          "en": "A small change can introduce a bug if it is not tested properly.",
+          "ua": "Невелика зміна може внести баг, якщо її належно не протестувати."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-025",
+      "sourcePhraseId": "phrase-025",
+      "term": "explicit permission",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "AI",
+      "meaning": "явний дозвіл",
+      "pronunciation": "ex-PLI-cit per-MIS-sion",
+      "examples": [
+        {
+          "en": "AI should not change important files without explicit permission.",
+          "ua": "AI не повинен змінювати важливі файли без явного дозволу."
+        },
+        {
+          "en": "The tool should ask for explicit permission before changing important files.",
+          "ua": "Інструмент має запитувати явний дозвіл перед зміною важливих файлів."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-026",
+      "sourcePhraseId": "phrase-026",
+      "term": "bridge the gap",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "AI",
+      "meaning": "закрити розрив / поєднати дві сторони",
+      "pronunciation": "BRIDGE the GAP",
+      "examples": [
+        {
+          "en": "AI can bridge the gap between technical and non-technical people.",
+          "ua": "AI може закрити розрив між технічними і нетехнічними людьми."
+        },
+        {
+          "en": "Good documentation can bridge the gap between developers and business users.",
+          "ua": "Хороша документація може закрити розрив між розробниками й бізнес-користувачами."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-027",
+      "sourcePhraseId": "phrase-027",
+      "term": "work best when …",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "AI",
+      "meaning": "працює найкраще, коли…",
+      "pronunciation": "work BEST when",
+      "examples": [
+        {
+          "en": "AI tools work best when people give clear instructions.",
+          "ua": "AI-інструменти працюють найкраще, коли люди дають чіткі інструкції."
+        },
+        {
+          "en": "Teams work best when everyone understands the goal.",
+          "ua": "Команди працюють найкраще, коли всі розуміють ціль."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-028",
+      "sourcePhraseId": "phrase-028",
+      "term": "combine automation with human review",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "AI",
+      "meaning": "поєднати автоматизацію з людською перевіркою",
+      "pronunciation": "com-BINE au-to-MA-tion with HU-man re-VIEW",
+      "examples": [
+        {
+          "en": "I prefer to combine automation with human review.",
+          "ua": "Я віддаю перевагу поєднанню автоматизації з людською перевіркою."
+        },
+        {
+          "en": "We should combine automation with human review to reduce risks.",
+          "ua": "Нам слід поєднувати автоматизацію з людською перевіркою, щоб зменшити ризики."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-029",
+      "sourcePhraseId": "phrase-029",
+      "term": "set out to do",
+      "category": "AI / Coding tools",
+      "level": "B2",
+      "tag": "AI",
+      "meaning": "мати на меті зробити / прагнути зробити",
+      "pronunciation": "set OUT to DO",
+      "examples": [
+        {
+          "en": "We need to check whether the result does what the prompt set out to do.",
+          "ua": "Нам потрібно перевірити, чи результат виконує те, що prompt мав на меті."
+        },
+        {
+          "en": "The solution does exactly what it set out to do.",
+          "ua": "Рішення робить саме те, що мало на меті."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-030",
+      "sourcePhraseId": "phrase-030",
+      "term": "a lack of …",
+      "category": "Lack / Not enough",
+      "level": "B2",
+      "tag": "problem",
+      "meaning": "брак / нестача чогось",
+      "pronunciation": "a LACK of",
+      "examples": [
+        {
+          "en": "A lack of communication can lead to misunderstandings.",
+          "ua": "Брак комунікації може призвести до непорозумінь."
+        },
+        {
+          "en": "A lack of trust can make teamwork much harder.",
+          "ua": "Брак довіри може значно ускладнити командну роботу."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-031",
+      "sourcePhraseId": "phrase-031",
+      "term": "lack clarity",
+      "category": "Lack / Not enough",
+      "level": "B2",
+      "tag": "problem",
+      "meaning": "бракувати ясності",
+      "pronunciation": "lack clarity",
+      "examples": [
+        {
+          "en": "The requirements lacked clarity, so we had to ask follow-up questions.",
+          "ua": "Вимогам бракувало ясності, тому нам довелося поставити додаткові питання."
+        },
+        {
+          "en": "If the task lacks clarity, we should ask follow-up questions.",
+          "ua": "Якщо задачі бракує ясності, нам слід поставити додаткові питання."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-032",
+      "sourcePhraseId": "phrase-032",
+      "term": "not enough context",
+      "category": "Lack / Not enough",
+      "level": "B1+",
+      "tag": "problem",
+      "meaning": "недостатньо контексту",
+      "pronunciation": "not enough context",
+      "examples": [
+        {
+          "en": "AI may give a poor answer if it doesn’t have enough context.",
+          "ua": "AI може дати погану відповідь, якщо в нього недостатньо контексту."
+        },
+        {
+          "en": "There is not enough context to estimate the task accurately.",
+          "ua": "Недостатньо контексту, щоб точно оцінити задачу."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-033",
+      "sourcePhraseId": "phrase-033",
+      "term": "insufficient testing",
+      "category": "Lack / Not enough",
+      "level": "B2",
+      "tag": "problem",
+      "meaning": "недостатнє тестування",
+      "pronunciation": "in-suf-FI-cient TES-ting",
+      "examples": [
+        {
+          "en": "Insufficient testing may introduce bugs into production.",
+          "ua": "Недостатнє тестування може внести баги в продакшен."
+        },
+        {
+          "en": "Insufficient testing may lead to production issues.",
+          "ua": "Недостатнє тестування може призвести до проблем у продакшені."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-034",
+      "sourcePhraseId": "phrase-034",
+      "term": "limited resources",
+      "category": "Lack / Not enough",
+      "level": "B2",
+      "tag": "problem",
+      "meaning": "обмежені ресурси",
+      "pronunciation": "LI-mi-ted re-SOUR-ces",
+      "examples": [
+        {
+          "en": "With limited resources, it is important to prioritize.",
+          "ua": "З обмеженими ресурсами важливо правильно розставляти пріоритети."
+        },
+        {
+          "en": "With limited resources, prioritization becomes essential.",
+          "ua": "З обмеженими ресурсами пріоритезація стає необхідною."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-035",
+      "sourcePhraseId": "phrase-035",
+      "term": "missing details",
+      "category": "Lack / Not enough",
+      "level": "B1+",
+      "tag": "problem",
+      "meaning": "відсутні деталі",
+      "pronunciation": "missing details",
+      "examples": [
+        {
+          "en": "We had to ask the client about the missing details.",
+          "ua": "Нам довелося запитати клієнта про відсутні деталі."
+        },
+        {
+          "en": "The missing details made the estimate less reliable.",
+          "ua": "Відсутні деталі зробили оцінку менш надійною."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-036",
+      "sourcePhraseId": "phrase-036",
+      "term": "take less time",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "займати менше часу",
+      "pronunciation": "take LESS TIME",
+      "examples": [
+        {
+          "en": "The task will take less time if we already have a similar implementation.",
+          "ua": "Задача займе менше часу, якщо в нас уже є схожа реалізація."
+        },
+        {
+          "en": "The task will take less time if we reuse the existing logic.",
+          "ua": "Задача займе менше часу, якщо ми повторно використаємо існуючу логіку."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-037",
+      "sourcePhraseId": "phrase-037",
+      "term": "take longer",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "займати більше часу / тривати довше",
+      "pronunciation": "take LON-ger",
+      "examples": [
+        {
+          "en": "The task may take longer if we run into technical issues.",
+          "ua": "Задача може зайняти більше часу, якщо ми зіткнемося з технічними проблемами."
+        },
+        {
+          "en": "It may take longer if we need to support several user roles.",
+          "ua": "Це може зайняти більше часу, якщо нам потрібно підтримати кілька ролей користувачів."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-038",
+      "sourcePhraseId": "phrase-038",
+      "term": "speed up",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "пришвидшити",
+      "pronunciation": "SPEED UP",
+      "examples": [
+        {
+          "en": "Clear documentation can speed up the development process.",
+          "ua": "Чітка документація може пришвидшити процес розробки."
+        },
+        {
+          "en": "AI can speed up routine coding tasks.",
+          "ua": "AI може пришвидшити рутинні задачі з кодування."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-039",
+      "sourcePhraseId": "phrase-039",
+      "term": "slow down",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "сповільнити",
+      "pronunciation": "SLOW DOWN",
+      "examples": [
+        {
+          "en": "Unclear requirements can slow down the whole team.",
+          "ua": "Нечіткі вимоги можуть сповільнити всю команду."
+        },
+        {
+          "en": "Unclear requirements can slow down the implementation.",
+          "ua": "Нечіткі вимоги можуть сповільнити реалізацію."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-040",
+      "sourcePhraseId": "phrase-040",
+      "term": "straightforward",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "доволі простий / зрозумілий",
+      "pronunciation": "straight-FOR-ward",
+      "examples": [
+        {
+          "en": "If the logic is already in place, the task should be straightforward.",
+          "ua": "Якщо логіка вже є, задача має бути доволі простою."
+        },
+        {
+          "en": "The UI change should be straightforward if the component already exists.",
+          "ua": "UI-зміна має бути доволі простою, якщо компонент уже існує."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-041",
+      "sourcePhraseId": "phrase-041",
+      "term": "make it harder",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "ускладнювати це",
+      "pronunciation": "make it harder",
+      "examples": [
+        {
+          "en": "Missing context makes it harder to choose the right solution.",
+          "ua": "Відсутній контекст ускладнює вибір правильного рішення."
+        },
+        {
+          "en": "Missing context can make it harder to choose the right approach.",
+          "ua": "Відсутній контекст може ускладнити вибір правильного підходу."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-042",
+      "sourcePhraseId": "phrase-042",
+      "term": "ambiguous",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "clarity",
+      "meaning": "неоднозначний",
+      "pronunciation": "am-BI-gu-ous",
+      "examples": [
+        {
+          "en": "This requirement is ambiguous and can be interpreted in different ways.",
+          "ua": "Ця вимога неоднозначна і може бути інтерпретована по-різному."
+        },
+        {
+          "en": "This requirement is ambiguous, so we should clarify it first.",
+          "ua": "Ця вимога неоднозначна, тому нам слід спочатку її уточнити."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-043",
+      "sourcePhraseId": "phrase-043",
+      "term": "vague",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "clarity",
+      "meaning": "розмитий / нечіткий",
+      "pronunciation": "VAYG",
+      "examples": [
+        {
+          "en": "The description is too vague to estimate the task accurately.",
+          "ua": "Опис занадто розмитий, щоб точно оцінити задачу."
+        },
+        {
+          "en": "The description is too vague to estimate the task.",
+          "ua": "Опис занадто розмитий, щоб оцінити задачу."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-044",
+      "sourcePhraseId": "phrase-044",
+      "term": "well-defined",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "clarity",
+      "meaning": "чітко визначений",
+      "pronunciation": "well de-FINED",
+      "examples": [
+        {
+          "en": "If the task is well-defined, the team can move forward faster.",
+          "ua": "Якщо задача добре визначена, команда може рухатися далі швидше."
+        },
+        {
+          "en": "If the task is well-defined, the team can move faster.",
+          "ua": "Якщо задача чітко визначена, команда може рухатися швидше."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-045",
+      "sourcePhraseId": "phrase-045",
+      "term": "The more …, the easier …",
+      "category": "Speed / Difficulty / Clarity",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "Чим більше…, тим легше…",
+      "pronunciation": "The more , the easier",
+      "examples": [
+        {
+          "en": "The more context we have, the easier it is to make the right decision.",
+          "ua": "Чим більше контексту ми маємо, тим легше прийняти правильне рішення."
+        },
+        {
+          "en": "The more context we have, the easier it is to make the right decision.",
+          "ua": "Чим більше контексту ми маємо, тим легше прийняти правильне рішення."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-046",
+      "sourcePhraseId": "phrase-046",
+      "term": "It should take around …",
+      "category": "Time estimates",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "Це має зайняти приблизно…",
+      "pronunciation": "it should take a-ROUND",
+      "examples": [
+        {
+          "en": "It should take around one day to implement.",
+          "ua": "Це має зайняти приблизно один день на реалізацію."
+        },
+        {
+          "en": "It should take around two hours if nothing unexpected comes up.",
+          "ua": "Це має зайняти приблизно дві години, якщо не виникне нічого неочікуваного."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-047",
+      "sourcePhraseId": "phrase-047",
+      "term": "I would estimate it at …",
+      "category": "Time estimates",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "Я б оцінив це у…",
+      "pronunciation": "I would ES-ti-mate it at",
+      "examples": [
+        {
+          "en": "I would estimate it at two working days.",
+          "ua": "Я б оцінив це у два робочі дні."
+        },
+        {
+          "en": "I would estimate it at around one working day.",
+          "ua": "Я б оцінив це приблизно в один робочий день."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-048",
+      "sourcePhraseId": "phrase-048",
+      "term": "rough estimate",
+      "category": "Time estimates",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "приблизна оцінка",
+      "pronunciation": "ROUGH ES-ti-mate",
+      "examples": [
+        {
+          "en": "As a rough estimate, it should take around two days.",
+          "ua": "Як приблизна оцінка, це має зайняти близько двох днів."
+        },
+        {
+          "en": "As a rough estimate, this task may take two days.",
+          "ua": "Як приблизна оцінка, ця задача може зайняти два дні."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-049",
+      "sourcePhraseId": "phrase-049",
+      "term": "more accurate estimate",
+      "category": "Time estimates",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "точніша оцінка",
+      "pronunciation": "more AC-cu-rate ES-ti-mate",
+      "examples": [
+        {
+          "en": "I can give a more accurate estimate after looking into the details.",
+          "ua": "Я зможу дати точнішу оцінку після того, як розберуся з деталями."
+        },
+        {
+          "en": "I can give a more accurate estimate after looking into the details.",
+          "ua": "Я зможу дати точнішу оцінку після того, як розберуся з деталями."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-050",
+      "sourcePhraseId": "phrase-050",
+      "term": "If nothing unexpected comes up, …",
+      "category": "Time estimates",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "Якщо не виникне нічого неочікуваного…",
+      "pronunciation": "If nothing unexpected comes up,",
+      "examples": [
+        {
+          "en": "If nothing unexpected comes up, we can finish it by tomorrow.",
+          "ua": "Якщо не виникне нічого неочікуваного, ми можемо завершити це до завтра."
+        },
+        {
+          "en": "If nothing unexpected comes up, we can finish it by Friday.",
+          "ua": "Якщо не виникне нічого неочікуваного, ми можемо завершити це до п’ятниці."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-051",
+      "sourcePhraseId": "phrase-051",
+      "term": "Assuming that …",
+      "category": "Time estimates",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "За умови, що…",
+      "pronunciation": "Assuming that",
+      "examples": [
+        {
+          "en": "Assuming that the requirements are final, it should take two days.",
+          "ua": "За умови, що вимоги фінальні, це має зайняти два дні."
+        },
+        {
+          "en": "Assuming that the requirements are final, it should take one day.",
+          "ua": "За умови, що вимоги фінальні, це має зайняти один день."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-052",
+      "sourcePhraseId": "phrase-052",
+      "term": "At first glance, …",
+      "category": "Time estimates",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "На перший погляд…",
+      "pronunciation": "at FIRST GLANCE",
+      "examples": [
+        {
+          "en": "At first glance, this UI task looks straightforward.",
+          "ua": "На перший погляд, ця UI-задача виглядає простою."
+        },
+        {
+          "en": "At first glance, this issue looks easy to fix.",
+          "ua": "На перший погляд, цю проблему легко виправити."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-053",
+      "sourcePhraseId": "phrase-053",
+      "term": "It depends on …",
+      "category": "Time estimates",
+      "level": "B2",
+      "tag": "estimation",
+      "meaning": "Це залежить від…",
+      "pronunciation": "it de-PENDS on",
+      "examples": [
+        {
+          "en": "It depends on whether we need to update the backend as well.",
+          "ua": "Це залежить від того, чи нам також потрібно оновлювати backend."
+        },
+        {
+          "en": "It depends on how many edge cases we need to support.",
+          "ua": "Це залежить від того, скільки edge cases нам потрібно підтримати."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-054",
+      "sourcePhraseId": "phrase-054",
+      "term": "Let’s get started.",
+      "category": "Online meetings",
+      "level": "B1+",
+      "tag": "meeting",
+      "meaning": "Давайте почнемо.",
+      "pronunciation": "let's get STAR-ted",
+      "examples": [
+        {
+          "en": "Let’s get started. We have a few topics to discuss today.",
+          "ua": "Давайте почнемо. У нас є кілька тем для обговорення сьогодні."
+        },
+        {
+          "en": "Let’s get started and go through the agenda.",
+          "ua": "Давайте почнемо і пройдемося по порядку денному."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-055",
+      "sourcePhraseId": "phrase-055",
+      "term": "Today, I’d like to cover …",
+      "category": "Online meetings",
+      "level": "B2",
+      "tag": "meeting",
+      "meaning": "Сьогодні я хотів би покрити / обговорити…",
+      "pronunciation": "to-DAY, I’d LIKE to CO-ver",
+      "examples": [
+        {
+          "en": "Today, I’d like to cover the current status, blockers, and next steps.",
+          "ua": "Сьогодні я хотів би покрити поточний статус, блокери та наступні кроки."
+        },
+        {
+          "en": "Today, I’d like to cover progress, blockers, and next steps.",
+          "ua": "Сьогодні я хотів би обговорити прогрес, блокери та наступні кроки."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-056",
+      "sourcePhraseId": "phrase-056",
+      "term": "You’re breaking up.",
+      "category": "Online meetings",
+      "level": "B1+",
+      "tag": "meeting",
+      "meaning": "Тебе погано чути / зв’язок переривається.",
+      "pronunciation": "you're BREAK-ing UP",
+      "examples": [
+        {
+          "en": "Sorry, you’re breaking up a little. Could you repeat that?",
+          "ua": "Вибач, ти трохи перериваєшся. Можеш повторити?"
+        },
+        {
+          "en": "Sorry, you’re breaking up. Could you repeat that?",
+          "ua": "Вибач, тебе погано чути. Можеш повторити?"
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-057",
+      "sourcePhraseId": "phrase-057",
+      "term": "I’m having connectivity issues.",
+      "category": "Online meetings",
+      "level": "B1+",
+      "tag": "meeting",
+      "meaning": "У мене проблеми зі з’єднанням.",
+      "pronunciation": "I'm HAV-ing con-nec-TI-vi-ty IS-sues",
+      "examples": [
+        {
+          "en": "Sorry, I’m having some connectivity issues.",
+          "ua": "Вибачте, у мене проблеми зі з’єднанням."
+        },
+        {
+          "en": "I’m having connectivity issues, so I may reconnect.",
+          "ua": "У мене проблеми зі з’єднанням, тому я можу перепідключитися."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-058",
+      "sourcePhraseId": "phrase-058",
+      "term": "I’ll share my screen.",
+      "category": "Online meetings",
+      "level": "B1+",
+      "tag": "meeting",
+      "meaning": "Я пошерю екран.",
+      "pronunciation": "I'll SHARE my SCREEN",
+      "examples": [
+        {
+          "en": "I’ll share my screen so you can see the issue.",
+          "ua": "Я пошерю екран, щоб ви могли побачити проблему."
+        },
+        {
+          "en": "I’ll share my screen and show you the issue.",
+          "ua": "Я пошерю екран і покажу вам проблему."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-059",
+      "sourcePhraseId": "phrase-059",
+      "term": "I’ll walk you through it.",
+      "category": "Online meetings",
+      "level": "B2",
+      "tag": "meeting",
+      "meaning": "Я поясню це по кроках / проведу вас через це.",
+      "pronunciation": "I'll WALK you THROUGH it",
+      "examples": [
+        {
+          "en": "I’ll walk you through the main changes.",
+          "ua": "Я проведу вас через основні зміни / поясню по кроках."
+        },
+        {
+          "en": "I’ll walk you through the main changes step by step.",
+          "ua": "Я проведу вас через основні зміни крок за кроком."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-060",
+      "sourcePhraseId": "phrase-060",
+      "term": "Where are we with …?",
+      "category": "Online meetings",
+      "level": "B1+",
+      "tag": "meeting",
+      "meaning": "На якому ми етапі з…?",
+      "pronunciation": "WHERE are we WITH",
+      "examples": [
+        {
+          "en": "Where are we with the implementation?",
+          "ua": "На якому ми етапі з реалізацією?"
+        },
+        {
+          "en": "Where are we with the testing?",
+          "ua": "На якому ми етапі з тестуванням?"
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-061",
+      "sourcePhraseId": "phrase-061",
+      "term": "We are looking into it.",
+      "category": "Online meetings",
+      "level": "B2",
+      "tag": "meeting",
+      "meaning": "Ми розбираємося з цим.",
+      "pronunciation": "we are LOOK-ing IN-to it",
+      "examples": [
+        {
+          "en": "We are looking into it and will share an update later today.",
+          "ua": "Ми розбираємося з цим і поділимося апдейтом пізніше сьогодні."
+        },
+        {
+          "en": "We are looking into it and will share an update later today.",
+          "ua": "Ми розбираємося з цим і поділимося апдейтом пізніше сьогодні."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-062",
+      "sourcePhraseId": "phrase-062",
+      "term": "Let me make sure I understood correctly.",
+      "category": "Online meetings",
+      "level": "B2",
+      "tag": "meeting",
+      "meaning": "Дайте переконатися, що я правильно зрозумів.",
+      "pronunciation": "let me make SURE I un-der-STOOD cor-RECT-ly",
+      "examples": [
+        {
+          "en": "Let me make sure I understood correctly: we need to change only the UI, right?",
+          "ua": "Дай переконатися, що я правильно зрозумів: нам потрібно змінити тільки UI, так?"
+        },
+        {
+          "en": "Let me make sure I understood correctly: we only need to change the UI, right?",
+          "ua": "Дайте переконатися, що я правильно зрозумів: нам потрібно змінити тільки UI, так?"
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-063",
+      "sourcePhraseId": "phrase-063",
+      "term": "Let’s get back to the main topic.",
+      "category": "Online meetings",
+      "level": "B2",
+      "tag": "meeting",
+      "meaning": "Давайте повернемося до основної теми.",
+      "pronunciation": "let's get BACK to the MAIN TO-pic",
+      "examples": [
+        {
+          "en": "Let’s get back to the main topic and discuss the blockers.",
+          "ua": "Давайте повернемося до основної теми і обговоримо блокери."
+        },
+        {
+          "en": "Let’s get back to the main topic and agree on the next steps.",
+          "ua": "Давайте повернемося до основної теми й узгодимо наступні кроки."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-064",
+      "sourcePhraseId": "phrase-064",
+      "term": "I’ll follow up with a summary.",
+      "category": "Online meetings",
+      "level": "B2",
+      "tag": "meeting",
+      "meaning": "Я зроблю follow-up з підсумком.",
+      "pronunciation": "I'll FOL-low UP with a SUM-ma-ry",
+      "examples": [
+        {
+          "en": "I’ll follow up with a summary after the meeting.",
+          "ua": "Я зроблю follow-up з підсумком після зустрічі."
+        },
+        {
+          "en": "I’ll follow up with a summary and action items after the call.",
+          "ua": "Я зроблю follow-up з підсумком і action items після дзвінка."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-065",
+      "sourcePhraseId": "phrase-065",
+      "term": "Let’s wrap up.",
+      "category": "Online meetings",
+      "level": "B1+",
+      "tag": "meeting",
+      "meaning": "Давайте завершувати.",
+      "pronunciation": "let's WRAP UP",
+      "examples": [
+        {
+          "en": "Let’s wrap up for today.",
+          "ua": "Давайте на сьогодні завершувати."
+        },
+        {
+          "en": "Let’s wrap up and continue this discussion tomorrow.",
+          "ua": "Давайте завершимо і продовжимо це обговорення завтра."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-066",
+      "sourcePhraseId": "phrase-066",
+      "term": "What’s the difference between X and Y?",
+      "category": "Compare / Difference",
+      "level": "B1+",
+      "tag": "question",
+      "meaning": "Яка різниця між X і Y?",
+      "pronunciation": "What’s the difference between X and Y?",
+      "examples": [
+        {
+          "en": "What’s the difference between remote work and office work?",
+          "ua": "Яка різниця між віддаленою роботою та роботою в офісі?"
+        },
+        {
+          "en": "What’s the difference between a quick fix and a long-term solution?",
+          "ua": "Яка різниця між quick fix і довгостроковим рішенням?"
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-067",
+      "sourcePhraseId": "phrase-067",
+      "term": "How would you compare X and Y?",
+      "category": "Compare / Difference",
+      "level": "B2",
+      "tag": "question",
+      "meaning": "Як би ти порівняв X і Y?",
+      "pronunciation": "How would you compare X and Y?",
+      "examples": [
+        {
+          "en": "How would you compare working alone and working in a team?",
+          "ua": "Як би ти порівняв роботу самостійно та роботу в команді?"
+        },
+        {
+          "en": "How would you compare manual testing and automated testing?",
+          "ua": "Як би ти порівняв ручне й автоматизоване тестування?"
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-068",
+      "sourcePhraseId": "phrase-068",
+      "term": "The main difference is that …",
+      "category": "Compare / Difference",
+      "level": "B2",
+      "tag": "answer",
+      "meaning": "Головна різниця в тому, що…",
+      "pronunciation": "The main difference is that",
+      "examples": [
+        {
+          "en": "The main difference is that remote work gives more flexibility.",
+          "ua": "Головна різниця в тому, що віддалена робота дає більше гнучкості."
+        },
+        {
+          "en": "The main difference is that automated testing is faster in the long run.",
+          "ua": "Головна різниця в тому, що автоматизоване тестування швидше у довгостроковій перспективі."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-069",
+      "sourcePhraseId": "phrase-069",
+      "term": "X is more …, while Y is more …",
+      "category": "Compare / Difference",
+      "level": "B2",
+      "tag": "answer",
+      "meaning": "X більш…, тоді як Y більш…",
+      "pronunciation": "X is more , while Y is more",
+      "examples": [
+        {
+          "en": "Remote work is more flexible, while office work is more social.",
+          "ua": "Remote work більш гнучкий, тоді як office work більш соціальний."
+        },
+        {
+          "en": "Remote work is more flexible, while office work is more social.",
+          "ua": "Віддалена робота більш гнучка, тоді як офісна робота більш соціальна."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-070",
+      "sourcePhraseId": "phrase-070",
+      "term": "Unlike X, Y …",
+      "category": "Compare / Difference",
+      "level": "B2",
+      "tag": "answer",
+      "meaning": "На відміну від X, Y…",
+      "pronunciation": "Unlike X, Y",
+      "examples": [
+        {
+          "en": "Unlike AI, humans can understand emotional context better.",
+          "ua": "На відміну від AI, люди краще розуміють емоційний контекст."
+        },
+        {
+          "en": "Unlike AI, humans can understand emotional context better.",
+          "ua": "На відміну від AI, люди краще розуміють емоційний контекст."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-071",
+      "sourcePhraseId": "phrase-071",
+      "term": "I would choose X if …, but Y if …",
+      "category": "Compare / Difference",
+      "level": "B2",
+      "tag": "answer",
+      "meaning": "Я б обрав X, якщо…, але Y, якщо…",
+      "pronunciation": "I would choose X if , but Y if",
+      "examples": [
+        {
+          "en": "I would choose a quick fix if the issue is urgent, but a long-term solution if we have enough time.",
+          "ua": "Я б обрав quick fix, якщо проблема термінова, але long-term solution, якщо в нас достатньо часу."
+        },
+        {
+          "en": "I would choose a quick fix if the issue is urgent, but a long-term solution if we have time.",
+          "ua": "Я б обрав quick fix, якщо проблема термінова, але довгострокове рішення, якщо в нас є час."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-072",
+      "sourcePhraseId": "phrase-072",
+      "term": "conduct research",
+      "category": "Conduct vs Carry out",
+      "level": "B2",
+      "tag": "collocation",
+      "meaning": "проводити дослідження",
+      "pronunciation": "con-DUCT re-SEARCH",
+      "examples": [
+        {
+          "en": "We need to conduct research before choosing the solution.",
+          "ua": "Нам потрібно провести дослідження перед вибором рішення."
+        },
+        {
+          "en": "We conducted research before choosing the final approach.",
+          "ua": "Ми провели дослідження перед вибором фінального підходу."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-073",
+      "sourcePhraseId": "phrase-073",
+      "term": "conduct a survey",
+      "category": "Conduct vs Carry out",
+      "level": "B2",
+      "tag": "collocation",
+      "meaning": "проводити опитування",
+      "pronunciation": "conduct a survey",
+      "examples": [
+        {
+          "en": "The company conducted a survey to collect customer feedback.",
+          "ua": "Компанія провела опитування, щоб зібрати відгуки клієнтів."
+        },
+        {
+          "en": "The team conducted a survey to collect user feedback.",
+          "ua": "Команда провела опитування, щоб зібрати відгуки користувачів."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-074",
+      "sourcePhraseId": "phrase-074",
+      "term": "carry out a task",
+      "category": "Conduct vs Carry out",
+      "level": "B2",
+      "tag": "collocation",
+      "meaning": "виконати задачу",
+      "pronunciation": "CARRY OUT a TASK",
+      "examples": [
+        {
+          "en": "We need to carry out this task by the end of the day.",
+          "ua": "Нам потрібно виконати цю задачу до кінця дня."
+        },
+        {
+          "en": "We carried out the task successfully and updated the documentation.",
+          "ua": "Ми успішно виконали задачу й оновили документацію."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-075",
+      "sourcePhraseId": "phrase-075",
+      "term": "carry out a test",
+      "category": "Conduct vs Carry out",
+      "level": "B2",
+      "tag": "collocation",
+      "meaning": "провести тест",
+      "pronunciation": "carry out a test",
+      "examples": [
+        {
+          "en": "We carried out several tests before the release.",
+          "ua": "Ми провели кілька тестів перед релізом."
+        },
+        {
+          "en": "We carried out a test before moving the change to production.",
+          "ua": "Ми провели тест перед перенесенням зміни в продакшен."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-076",
+      "sourcePhraseId": "phrase-076",
+      "term": "carry out an analysis",
+      "category": "Conduct vs Carry out",
+      "level": "B2",
+      "tag": "collocation",
+      "meaning": "провести аналіз",
+      "pronunciation": "carry out an analysis",
+      "examples": [
+        {
+          "en": "The team carried out an analysis and found the root cause.",
+          "ua": "Команда провела аналіз і знайшла першопричину."
+        },
+        {
+          "en": "We carried out an analysis and found the root cause.",
+          "ua": "Ми провели аналіз і знайшли першопричину."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-077",
+      "sourcePhraseId": "phrase-077",
+      "term": "may have + V3",
+      "category": "Modals",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "можливо сталося в минулому; ймовірність вища",
+      "pronunciation": "MAY have plus V three",
+      "examples": [
+        {
+          "en": "The client may have missed the update.",
+          "ua": "Клієнт, можливо, пропустив апдейт."
+        },
+        {
+          "en": "The client may have misunderstood the original requirement.",
+          "ua": "Клієнт, можливо, неправильно зрозумів початкову вимогу."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-078",
+      "sourcePhraseId": "phrase-078",
+      "term": "might have + V3",
+      "category": "Modals",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "можливо сталося в минулому; ймовірність нижча",
+      "pronunciation": "MIGHT have plus V three",
+      "examples": [
+        {
+          "en": "The issue might have happened because of missing context.",
+          "ua": "Проблема могла статися через відсутній контекст."
+        },
+        {
+          "en": "The issue might have happened because of missing configuration.",
+          "ua": "Проблема могла статися через відсутню конфігурацію."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-079",
+      "sourcePhraseId": "phrase-079",
+      "term": "will have + V3",
+      "category": "Modals",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "дія буде завершена до певного моменту в майбутньому",
+      "pronunciation": "WILL have plus V three",
+      "examples": [
+        {
+          "en": "We will have completed the task by Friday.",
+          "ua": "Ми завершимо задачу до п’ятниці."
+        },
+        {
+          "en": "We will have finished the implementation by the end of the week.",
+          "ua": "Ми завершимо реалізацію до кінця тижня."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-080",
+      "sourcePhraseId": "phrase-080",
+      "term": "unless",
+      "category": "Conjunctions",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "якщо не",
+      "pronunciation": "unless",
+      "examples": [
+        {
+          "en": "The project may fall behind schedule unless the team communicates regularly.",
+          "ua": "Проєкт може відстати від графіка, якщо команда не буде регулярно комунікувати."
+        },
+        {
+          "en": "The project may fall behind schedule unless we clarify the requirements.",
+          "ua": "Проєкт може відстати від графіка, якщо ми не уточнимо вимоги."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-081",
+      "sourcePhraseId": "phrase-081",
+      "term": "provided that",
+      "category": "Conjunctions",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "за умови, що",
+      "pronunciation": "pro-VI-ded THAT",
+      "examples": [
+        {
+          "en": "Remote work can be effective, provided that the team has clear processes.",
+          "ua": "Віддалена робота може бути ефективною за умови, що в команди є чіткі процеси."
+        },
+        {
+          "en": "AI tools can be helpful provided that people verify the results.",
+          "ua": "AI-інструменти можуть бути корисними за умови, що люди перевіряють результати."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-082",
+      "sourcePhraseId": "phrase-082",
+      "term": "so that",
+      "category": "Conjunctions",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "щоб / для того щоб",
+      "pronunciation": "so that",
+      "examples": [
+        {
+          "en": "We set up regular meetings so that everyone stays aligned.",
+          "ua": "Ми налаштували регулярні зустрічі, щоб усі залишалися узгодженими."
+        },
+        {
+          "en": "I asked follow-up questions so that I could understand the client’s expectations.",
+          "ua": "Я поставив додаткові питання, щоб зрозуміти очікування клієнта."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-083",
+      "sourcePhraseId": "phrase-083",
+      "term": "whereas",
+      "category": "Conjunctions",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "тоді як / у той час як",
+      "pronunciation": "where-AS",
+      "examples": [
+        {
+          "en": "AI is good at automation, whereas people are better at judgment and empathy.",
+          "ua": "AI добре справляється з автоматизацією, тоді як люди кращі в судженні та емпатії."
+        },
+        {
+          "en": "AI is good at automation, whereas people are better at judgment.",
+          "ua": "AI добре справляється з автоматизацією, тоді як люди краще приймають рішення."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-084",
+      "sourcePhraseId": "phrase-084",
+      "term": "consequently",
+      "category": "Conjunctions",
+      "level": "B2",
+      "tag": "grammar",
+      "meaning": "відповідно / як наслідок",
+      "pronunciation": "CON-se-quent-ly",
+      "examples": [
+        {
+          "en": "He worked hard; consequently, he improved his speaking skills.",
+          "ua": "Він наполегливо працював; як наслідок, він покращив навички говоріння."
+        },
+        {
+          "en": "The requirements were unclear; consequently, the estimate was not reliable.",
+          "ua": "Вимоги були нечіткі; відповідно, оцінка була ненадійною."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-085",
+      "sourcePhraseId": "phrase-085",
+      "term": "Otherwise, …",
+      "category": "Otherwise",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "Інакше…",
+      "pronunciation": "O-ther-wise",
+      "examples": [
+        {
+          "en": "We should verify the results. Otherwise, we may introduce a bug.",
+          "ua": "Нам слід перевірити результати. Інакше ми можемо внести баг."
+        },
+        {
+          "en": "We should verify the results. Otherwise, we may introduce a bug.",
+          "ua": "Нам слід перевірити результати. Інакше ми можемо внести баг."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-086",
+      "sourcePhraseId": "phrase-086",
+      "term": "If we don’t, …",
+      "category": "Otherwise",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "Якщо ми цього не зробимо…",
+      "pronunciation": "If we don’t,",
+      "examples": [
+        {
+          "en": "We need to communicate clearly. If we don’t, we may run into misunderstandings.",
+          "ua": "Нам потрібно чітко комунікувати. Якщо ми цього не зробимо, ми можемо зіткнутися з непорозуміннями."
+        },
+        {
+          "en": "We need to clarify the requirements. If we don’t, we may build the wrong solution.",
+          "ua": "Нам потрібно уточнити вимоги. Якщо ми цього не зробимо, ми можемо побудувати неправильне рішення."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-087",
+      "sourcePhraseId": "phrase-087",
+      "term": "Without proper …, …",
+      "category": "Otherwise",
+      "level": "B2",
+      "tag": "connector",
+      "meaning": "Без належного…",
+      "pronunciation": "Without proper ,",
+      "examples": [
+        {
+          "en": "Without proper review, AI-generated code may introduce bugs.",
+          "ua": "Без належної перевірки AI-згенерований код може внести баги."
+        },
+        {
+          "en": "Without proper testing, the release can become risky.",
+          "ua": "Без належного тестування реліз може стати ризикованим."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-088",
+      "sourcePhraseId": "phrase-088",
+      "term": "Here we go.",
+      "category": "Informal phrases",
+      "level": "B1+",
+      "tag": "informal",
+      "meaning": "Ну що, починаємо / поїхали.",
+      "pronunciation": "HERE we GO",
+      "examples": [
+        {
+          "en": "Here we go. Let me explain the main idea.",
+          "ua": "Ну що, починаємо. Дозвольте пояснити головну ідею."
+        },
+        {
+          "en": "Here we go. Let me explain the main idea.",
+          "ua": "Ну що, починаємо. Дозвольте пояснити головну думку."
+        }
+      ]
+    },
+    {
+      "id": "word-phrase-089",
+      "sourcePhraseId": "phrase-089",
+      "term": "There we go.",
+      "category": "Informal phrases",
+      "level": "B1+",
+      "tag": "informal",
+      "meaning": "Ось так / готово / вийшло.",
+      "pronunciation": "THERE we GO",
+      "examples": [
+        {
+          "en": "There we go. The issue is fixed now.",
+          "ua": "Ось так. Тепер проблему виправлено."
+        },
+        {
+          "en": "There we go. The task is completed.",
+          "ua": "Ось так. Задачу завершено."
+        }
+      ]
+    }
+  ],
+  "irregularVerbs": [
+    {
+      "id": "iv-001-be",
+      "group": "Core state & experience",
+      "base": "be",
+      "pastSimple": "was/were",
+      "pastParticiple": "been",
+      "translation": "бути",
+      "transcription": "be /biː/ — was/were /wəz, wɜːr/ — been /bɪn/",
+      "examples": [
+        {
+          "en": "I try to be clear during online meetings.",
+          "ua": "Я намагаюся бути чітким під час онлайн-зустрічей."
+        },
+        {
+          "en": "The requirements were unclear at first, but we have been able to clarify them.",
+          "ua": "Спочатку вимоги були нечіткими, але ми змогли їх уточнити."
+        }
+      ]
+    },
+    {
+      "id": "iv-002-have",
+      "group": "Core state & experience",
+      "base": "have",
+      "pastSimple": "had",
+      "pastParticiple": "had",
+      "translation": "мати",
+      "transcription": "have /hæv/ — had /hæd/ — had /hæd/",
+      "examples": [
+        {
+          "en": "I have enough context to estimate the task.",
+          "ua": "У мене є достатньо контексту, щоб оцінити задачу."
+        },
+        {
+          "en": "We had a short call and have had several updates since then.",
+          "ua": "У нас був короткий дзвінок, і з того часу ми мали кілька апдейтів."
+        }
+      ]
+    },
+    {
+      "id": "iv-003-do",
+      "group": "Core state & experience",
+      "base": "do",
+      "pastSimple": "did",
+      "pastParticiple": "done",
+      "translation": "робити, виконувати",
+      "transcription": "do /duː/ — did /dɪd/ — done /dʌn/",
+      "examples": [
+        {
+          "en": "We need to do a quick check before the release.",
+          "ua": "Нам потрібно зробити швидку перевірку перед релізом."
+        },
+        {
+          "en": "We did the analysis yesterday, and the main part has been done.",
+          "ua": "Ми зробили аналіз учора, і основну частину вже виконано."
+        }
+      ]
+    },
+    {
+      "id": "iv-004-make",
+      "group": "Core state & experience",
+      "base": "make",
+      "pastSimple": "made",
+      "pastParticiple": "made",
+      "translation": "робити, створювати, приймати рішення",
+      "transcription": "make /meɪk/ — made /meɪd/ — made /meɪd/",
+      "examples": [
+        {
+          "en": "We need to make a decision based on the current information.",
+          "ua": "Нам потрібно прийняти рішення на основі поточної інформації."
+        },
+        {
+          "en": "The team made a workaround, and we have made good progress.",
+          "ua": "Команда зробила обхідне рішення, і ми досягли хорошого прогресу."
+        }
+      ]
+    },
+    {
+      "id": "iv-005-get",
+      "group": "Core state & experience",
+      "base": "get",
+      "pastSimple": "got",
+      "pastParticiple": "got/gotten",
+      "translation": "отримувати, ставати",
+      "transcription": "get /ɡet/ — got /ɡɑːt/ — got/gotten /ɡɑːt, ˈɡɑːtən/",
+      "examples": [
+        {
+          "en": "I try to get feedback as early as possible.",
+          "ua": "Я намагаюся отримати фідбек якомога раніше."
+        },
+        {
+          "en": "We got useful comments from the client, and we have gotten more context.",
+          "ua": "Ми отримали корисні коментарі від клієнта і отримали більше контексту."
+        }
+      ]
+    },
+    {
+      "id": "iv-006-become",
+      "group": "Core state & experience",
+      "base": "become",
+      "pastSimple": "became",
+      "pastParticiple": "become",
+      "translation": "ставати",
+      "transcription": "become /bɪˈkʌm/ — became /bɪˈkeɪm/ — become /bɪˈkʌm/",
+      "examples": [
+        {
+          "en": "The task can become more complicated if the requirements change.",
+          "ua": "Задача може стати складнішою, якщо вимоги зміняться."
+        },
+        {
+          "en": "The issue became clearer after we looked into the logs.",
+          "ua": "Проблема стала чіткішою після того, як ми розібралися з логами."
+        }
+      ]
+    },
+    {
+      "id": "iv-007-feel",
+      "group": "Core state & experience",
+      "base": "feel",
+      "pastSimple": "felt",
+      "pastParticiple": "felt",
+      "translation": "відчувати",
+      "transcription": "feel /fiːl/ — felt /felt/ — felt /felt/",
+      "examples": [
+        {
+          "en": "I feel more confident when I use clear speaking patterns.",
+          "ua": "Я почуваюся впевненіше, коли використовую чіткі мовні патерни."
+        },
+        {
+          "en": "The client felt better after we explained the next steps.",
+          "ua": "Клієнт почувався краще після того, як ми пояснили наступні кроки."
+        }
+      ]
+    },
+    {
+      "id": "iv-008-mean",
+      "group": "Core state & experience",
+      "base": "mean",
+      "pastSimple": "meant",
+      "pastParticiple": "meant",
+      "translation": "означати, мати на увазі",
+      "transcription": "mean /miːn/ — meant /ment/ — meant /ment/",
+      "examples": [
+        {
+          "en": "Could you clarify what you mean by “urgent”?",
+          "ua": "Можеш уточнити, що ти маєш на увазі під “терміново”?"
+        },
+        {
+          "en": "The client meant a different workflow, so we clarified it.",
+          "ua": "Клієнт мав на увазі інший workflow, тому ми це уточнили."
+        }
+      ]
+    },
+    {
+      "id": "iv-009-know",
+      "group": "Core state & experience",
+      "base": "know",
+      "pastSimple": "knew",
+      "pastParticiple": "known",
+      "translation": "знати",
+      "transcription": "know /noʊ/ — knew /nuː/ — known /noʊn/",
+      "examples": [
+        {
+          "en": "I know the main risks, but I need more details.",
+          "ua": "Я знаю основні ризики, але мені потрібно більше деталей."
+        },
+        {
+          "en": "We knew the deadline was tight, and the risk was known from the beginning.",
+          "ua": "Ми знали, що дедлайн був стислим, і ризик був відомий з початку."
+        }
+      ]
+    },
+    {
+      "id": "iv-010-think",
+      "group": "Core state & experience",
+      "base": "think",
+      "pastSimple": "thought",
+      "pastParticiple": "thought",
+      "translation": "думати, вважати",
+      "transcription": "think /θɪŋk/ — thought /θɔːt/ — thought /θɔːt/",
+      "examples": [
+        {
+          "en": "I think AI should support people, not replace them.",
+          "ua": "Я вважаю, що AI має підтримувати людей, а не замінювати їх."
+        },
+        {
+          "en": "We thought the task was simple, but it required more testing.",
+          "ua": "Ми думали, що задача проста, але вона потребувала більше тестування."
+        }
+      ]
+    },
+    {
+      "id": "iv-011-understand",
+      "group": "Core state & experience",
+      "base": "understand",
+      "pastSimple": "understood",
+      "pastParticiple": "understood",
+      "translation": "розуміти",
+      "transcription": "understand /ˌʌndərˈstænd/ — understood /ˌʌndərˈstʊd/ — understood /ˌʌndərˈstʊd/",
+      "examples": [
+        {
+          "en": "I need to understand the root cause before making changes.",
+          "ua": "Мені потрібно зрозуміти першопричину перед тим, як робити зміни."
+        },
+        {
+          "en": "We understood the issue after the client gave us an example.",
+          "ua": "Ми зрозуміли проблему після того, як клієнт дав нам приклад."
+        }
+      ]
+    },
+    {
+      "id": "iv-012-say",
+      "group": "Communication & meetings",
+      "base": "say",
+      "pastSimple": "said",
+      "pastParticiple": "said",
+      "translation": "казати",
+      "transcription": "say /seɪ/ — said /sed/ — said /sed/",
+      "examples": [
+        {
+          "en": "I would start by saying that communication is essential.",
+          "ua": "Я б почав з того, що комунікація є необхідною."
+        },
+        {
+          "en": "The client said the timeline was too optimistic.",
+          "ua": "Клієнт сказав, що таймлайн був занадто оптимістичним."
+        }
+      ]
+    },
+    {
+      "id": "iv-013-tell",
+      "group": "Communication & meetings",
+      "base": "tell",
+      "pastSimple": "told",
+      "pastParticiple": "told",
+      "translation": "розповідати, казати комусь",
+      "transcription": "tell /tel/ — told /toʊld/ — told /toʊld/",
+      "examples": [
+        {
+          "en": "I try to tell the client about risks as early as possible.",
+          "ua": "Я намагаюся повідомляти клієнта про ризики якомога раніше."
+        },
+        {
+          "en": "We told the team about the blocker during the meeting.",
+          "ua": "Ми повідомили команду про блокер під час зустрічі."
+        }
+      ]
+    },
+    {
+      "id": "iv-014-speak",
+      "group": "Communication & meetings",
+      "base": "speak",
+      "pastSimple": "spoke",
+      "pastParticiple": "spoken",
+      "translation": "говорити",
+      "transcription": "speak /spiːk/ — spoke /spoʊk/ — spoken /ˈspoʊkən/",
+      "examples": [
+        {
+          "en": "I want to speak more clearly during the assessment.",
+          "ua": "Я хочу говорити чіткіше під час асесменту."
+        },
+        {
+          "en": "We spoke with the client, and the key points have been spoken through.",
+          "ua": "Ми поговорили з клієнтом, і ключові моменти були проговорені."
+        }
+      ]
+    },
+    {
+      "id": "iv-015-hear",
+      "group": "Communication & meetings",
+      "base": "hear",
+      "pastSimple": "heard",
+      "pastParticiple": "heard",
+      "translation": "чути",
+      "transcription": "hear /hɪr/ — heard /hɜːrd/ — heard /hɜːrd/",
+      "examples": [
+        {
+          "en": "Can you hear me clearly?",
+          "ua": "Мене добре чути?"
+        },
+        {
+          "en": "I heard the question, but I need a second to think.",
+          "ua": "Я почув питання, але мені потрібна секунда, щоб подумати."
+        }
+      ]
+    },
+    {
+      "id": "iv-016-read",
+      "group": "Communication & meetings",
+      "base": "read",
+      "pastSimple": "read",
+      "pastParticiple": "read",
+      "translation": "читати",
+      "transcription": "read /riːd/ — read /red/ — read /red/",
+      "examples": [
+        {
+          "en": "I need to read the requirements before estimation.",
+          "ua": "Мені потрібно прочитати вимоги перед оцінкою."
+        },
+        {
+          "en": "I read the document yesterday and have read the comments as well.",
+          "ua": "Я прочитав документ учора і також прочитав коментарі."
+        }
+      ]
+    },
+    {
+      "id": "iv-017-write",
+      "group": "Communication & meetings",
+      "base": "write",
+      "pastSimple": "wrote",
+      "pastParticiple": "written",
+      "translation": "писати",
+      "transcription": "write /raɪt/ — wrote /roʊt/ — written /ˈrɪtən/",
+      "examples": [
+        {
+          "en": "I usually write a short summary after the meeting.",
+          "ua": "Я зазвичай пишу короткий підсумок після зустрічі."
+        },
+        {
+          "en": "I wrote the meeting notes, and the action items have been written clearly.",
+          "ua": "Я написав нотатки зустрічі, і action items були написані чітко."
+        }
+      ]
+    },
+    {
+      "id": "iv-018-send",
+      "group": "Communication & meetings",
+      "base": "send",
+      "pastSimple": "sent",
+      "pastParticiple": "sent",
+      "translation": "надсилати",
+      "transcription": "send /send/ — sent /sent/ — sent /sent/",
+      "examples": [
+        {
+          "en": "I will send the summary after the call.",
+          "ua": "Я надішлю підсумок після дзвінка."
+        },
+        {
+          "en": "We sent the update in the morning and have sent the final version now.",
+          "ua": "Ми надіслали апдейт вранці і зараз надіслали фінальну версію."
+        }
+      ]
+    },
+    {
+      "id": "iv-019-show",
+      "group": "Communication & meetings",
+      "base": "show",
+      "pastSimple": "showed",
+      "pastParticiple": "shown",
+      "translation": "показувати",
+      "transcription": "show /ʃoʊ/ — showed /ʃoʊd/ — shown /ʃoʊn/",
+      "examples": [
+        {
+          "en": "Let me show you the issue on my screen.",
+          "ua": "Дозвольте показати проблему на моєму екрані."
+        },
+        {
+          "en": "The demo showed the main problem, and the results have shown the same behavior.",
+          "ua": "Демо показало основну проблему, і результати показали таку саму поведінку."
+        }
+      ]
+    },
+    {
+      "id": "iv-020-see",
+      "group": "Communication & meetings",
+      "base": "see",
+      "pastSimple": "saw",
+      "pastParticiple": "seen",
+      "translation": "бачити, розуміти",
+      "transcription": "see /siː/ — saw /sɔː/ — seen /siːn/",
+      "examples": [
+        {
+          "en": "I can see your screen now.",
+          "ua": "Зараз я бачу твій екран."
+        },
+        {
+          "en": "We saw the issue during the demo, and similar behavior has been seen before.",
+          "ua": "Ми побачили проблему під час демо, і схожу поведінку вже бачили раніше."
+        }
+      ]
+    },
+    {
+      "id": "iv-021-meet",
+      "group": "Communication & meetings",
+      "base": "meet",
+      "pastSimple": "met",
+      "pastParticiple": "met",
+      "translation": "зустрічатися, відповідати вимогам",
+      "transcription": "meet /miːt/ — met /met/ — met /met/",
+      "examples": [
+        {
+          "en": "We need to meet the deadline without reducing quality.",
+          "ua": "Нам потрібно вкластися в дедлайн без зниження якості."
+        },
+        {
+          "en": "We met with the client and have met the main requirement.",
+          "ua": "Ми зустрілися з клієнтом і виконали основну вимогу."
+        }
+      ]
+    },
+    {
+      "id": "iv-022-hold",
+      "group": "Communication & meetings",
+      "base": "hold",
+      "pastSimple": "held",
+      "pastParticiple": "held",
+      "translation": "проводити, тримати",
+      "transcription": "hold /hoʊld/ — held /held/ — held /held/",
+      "examples": [
+        {
+          "en": "We can hold a short meeting to align on priorities.",
+          "ua": "Ми можемо провести коротку зустріч, щоб узгодити пріоритети."
+        },
+        {
+          "en": "The team held a quick sync and has held the discussion open for follow-up.",
+          "ua": "Команда провела короткий sync і залишила обговорення відкритим для follow-up."
+        }
+      ]
+    },
+    {
+      "id": "iv-023-ring",
+      "group": "Communication & meetings",
+      "base": "ring",
+      "pastSimple": "rang",
+      "pastParticiple": "rung",
+      "translation": "дзвонити, дзвеніти",
+      "transcription": "ring /rɪŋ/ — rang /ræŋ/ — rung /rʌŋ/",
+      "examples": [
+        {
+          "en": "I usually ring the client only when the issue is urgent.",
+          "ua": "Я зазвичай телефоную клієнту тільки коли проблема термінова."
+        },
+        {
+          "en": "The phone rang during the meeting, but I kept speaking.",
+          "ua": "Телефон задзвонив під час зустрічі, але я продовжив говорити."
+        }
+      ]
+    },
+    {
+      "id": "iv-024-build",
+      "group": "Work, tasks & delivery",
+      "base": "build",
+      "pastSimple": "built",
+      "pastParticiple": "built",
+      "translation": "будувати, створювати",
+      "transcription": "build /bɪld/ — built /bɪlt/ — built /bɪlt/",
+      "examples": [
+        {
+          "en": "We need to build a solution that is easy to maintain.",
+          "ua": "Нам потрібно створити рішення, яке легко підтримувати."
+        },
+        {
+          "en": "The team built a prototype and has built confidence in the approach.",
+          "ua": "Команда створила прототип і здобула впевненість у підході."
+        }
+      ]
+    },
+    {
+      "id": "iv-025-choose",
+      "group": "Work, tasks & delivery",
+      "base": "choose",
+      "pastSimple": "chose",
+      "pastParticiple": "chosen",
+      "translation": "обирати",
+      "transcription": "choose /tʃuːz/ — chose /tʃoʊz/ — chosen /ˈtʃoʊzən/",
+      "examples": [
+        {
+          "en": "We need to choose the most reliable approach.",
+          "ua": "Нам потрібно обрати найбільш надійний підхід."
+        },
+        {
+          "en": "We chose the safer option, and the final approach has been chosen.",
+          "ua": "Ми обрали безпечніший варіант, і фінальний підхід був обраний."
+        }
+      ]
+    },
+    {
+      "id": "iv-026-deal",
+      "group": "Work, tasks & delivery",
+      "base": "deal",
+      "pastSimple": "dealt",
+      "pastParticiple": "dealt",
+      "translation": "мати справу, вирішувати",
+      "transcription": "deal /diːl/ — dealt /delt/ — dealt /delt/",
+      "examples": [
+        {
+          "en": "I often deal with client requests and technical issues.",
+          "ua": "Я часто маю справу з клієнтськими запитами та технічними проблемами."
+        },
+        {
+          "en": "We dealt with the blocker and moved forward.",
+          "ua": "Ми розібралися з блокером і рушили далі."
+        }
+      ]
+    },
+    {
+      "id": "iv-027-find",
+      "group": "Work, tasks & delivery",
+      "base": "find",
+      "pastSimple": "found",
+      "pastParticiple": "found",
+      "translation": "знаходити",
+      "transcription": "find /faɪnd/ — found /faʊnd/ — found /faʊnd/",
+      "examples": [
+        {
+          "en": "We need to find the root cause before changing the code.",
+          "ua": "Нам потрібно знайти першопричину перед зміною коду."
+        },
+        {
+          "en": "We found the issue in the API response.",
+          "ua": "Ми знайшли проблему в API-відповіді."
+        }
+      ]
+    },
+    {
+      "id": "iv-028-keep",
+      "group": "Work, tasks & delivery",
+      "base": "keep",
+      "pastSimple": "kept",
+      "pastParticiple": "kept",
+      "translation": "тримати, зберігати",
+      "transcription": "keep /kiːp/ — kept /kept/ — kept /kept/",
+      "examples": [
+        {
+          "en": "Regular updates help keep the team aligned.",
+          "ua": "Регулярні апдейти допомагають тримати команду узгодженою."
+        },
+        {
+          "en": "We kept the client updated during the investigation.",
+          "ua": "Ми тримали клієнта в курсі під час розслідування."
+        }
+      ]
+    },
+    {
+      "id": "iv-029-lead",
+      "group": "Work, tasks & delivery",
+      "base": "lead",
+      "pastSimple": "led",
+      "pastParticiple": "led",
+      "translation": "вести, керувати",
+      "transcription": "lead /liːd/ — led /led/ — led /led/",
+      "examples": [
+        {
+          "en": "A good team lead should lead by example.",
+          "ua": "Хороший тімлід має вести власним прикладом."
+        },
+        {
+          "en": "The discussion led to a better solution.",
+          "ua": "Обговорення привело до кращого рішення."
+        }
+      ]
+    },
+    {
+      "id": "iv-030-leave",
+      "group": "Work, tasks & delivery",
+      "base": "leave",
+      "pastSimple": "left",
+      "pastParticiple": "left",
+      "translation": "залишати, покидати",
+      "transcription": "leave /liːv/ — left /left/ — left /left/",
+      "examples": [
+        {
+          "en": "I will leave a comment with the main risks.",
+          "ua": "Я залишу коментар з основними ризиками."
+        },
+        {
+          "en": "The client left feedback, and we have left a note in the ticket.",
+          "ua": "Клієнт залишив фідбек, і ми залишили нотатку в тікеті."
+        }
+      ]
+    },
+    {
+      "id": "iv-031-let",
+      "group": "Work, tasks & delivery",
+      "base": "let",
+      "pastSimple": "let",
+      "pastParticiple": "let",
+      "translation": "дозволяти, повідомляти",
+      "transcription": "let /let/ — let /let/ — let /let/",
+      "examples": [
+        {
+          "en": "Please let me know if there are any blockers.",
+          "ua": "Будь ласка, дай мені знати, якщо є блокери."
+        },
+        {
+          "en": "We let the client know about the delay.",
+          "ua": "Ми повідомили клієнта про затримку."
+        }
+      ]
+    },
+    {
+      "id": "iv-032-put",
+      "group": "Work, tasks & delivery",
+      "base": "put",
+      "pastSimple": "put",
+      "pastParticiple": "put",
+      "translation": "класти, ставити",
+      "transcription": "put /pʊt/ — put /pʊt/ — put /pʊt/",
+      "examples": [
+        {
+          "en": "We should put the main risks into the summary.",
+          "ua": "Нам слід додати основні ризики в підсумок."
+        },
+        {
+          "en": "We put the task on hold until the requirements are clear.",
+          "ua": "Ми поставили задачу на паузу, поки вимоги не будуть чіткими."
+        }
+      ]
+    },
+    {
+      "id": "iv-033-set",
+      "group": "Work, tasks & delivery",
+      "base": "set",
+      "pastSimple": "set",
+      "pastParticiple": "set",
+      "translation": "встановлювати, налаштовувати",
+      "transcription": "set /set/ — set /set/ — set /set/",
+      "examples": [
+        {
+          "en": "We need to set a realistic deadline.",
+          "ua": "Нам потрібно встановити реалістичний дедлайн."
+        },
+        {
+          "en": "We set up a meeting and have set clear expectations.",
+          "ua": "Ми організували зустріч і встановили чіткі очікування."
+        }
+      ]
+    },
+    {
+      "id": "iv-034-take",
+      "group": "Work, tasks & delivery",
+      "base": "take",
+      "pastSimple": "took",
+      "pastParticiple": "taken",
+      "translation": "брати, займати час",
+      "transcription": "take /teɪk/ — took /tʊk/ — taken /ˈteɪkən/",
+      "examples": [
+        {
+          "en": "This task may take longer if the requirements are unclear.",
+          "ua": "Ця задача може зайняти більше часу, якщо вимоги нечіткі."
+        },
+        {
+          "en": "It took two days, and the final decision has been taken.",
+          "ua": "Це зайняло два дні, і фінальне рішення було прийнято."
+        }
+      ]
+    },
+    {
+      "id": "iv-035-teach",
+      "group": "Work, tasks & delivery",
+      "base": "teach",
+      "pastSimple": "taught",
+      "pastParticiple": "taught",
+      "translation": "навчати",
+      "transcription": "teach /tiːtʃ/ — taught /tɔːt/ — taught /tɔːt/",
+      "examples": [
+        {
+          "en": "Senior developers can teach juniors how to avoid common mistakes.",
+          "ua": "Senior-розробники можуть навчати junior-ів уникати типових помилок."
+        },
+        {
+          "en": "My mentor taught me to clarify requirements early.",
+          "ua": "Мій ментор навчив мене уточнювати вимоги рано."
+        }
+      ]
+    },
+    {
+      "id": "iv-036-give",
+      "group": "Work, tasks & delivery",
+      "base": "give",
+      "pastSimple": "gave",
+      "pastParticiple": "given",
+      "translation": "давати",
+      "transcription": "give /ɡɪv/ — gave /ɡeɪv/ — given /ˈɡɪvən/",
+      "examples": [
+        {
+          "en": "I try to give clear updates during meetings.",
+          "ua": "Я намагаюся давати чіткі апдейти під час зустрічей."
+        },
+        {
+          "en": "The client gave us useful feedback, and more details have been given.",
+          "ua": "Клієнт дав нам корисний фідбек, і було надано більше деталей."
+        }
+      ]
+    },
+    {
+      "id": "iv-037-run",
+      "group": "Work, tasks & delivery",
+      "base": "run",
+      "pastSimple": "ran",
+      "pastParticiple": "run",
+      "translation": "бігти, запускати, керувати",
+      "transcription": "run /rʌn/ — ran /ræn/ — run /rʌn/",
+      "examples": [
+        {
+          "en": "We need to run tests before the release.",
+          "ua": "Нам потрібно запустити тести перед релізом."
+        },
+        {
+          "en": "We ran into a problem, but the tests have run successfully now.",
+          "ua": "Ми зіткнулися з проблемою, але зараз тести пройшли успішно."
+        }
+      ]
+    },
+    {
+      "id": "iv-038-go",
+      "group": "Movement & process flow",
+      "base": "go",
+      "pastSimple": "went",
+      "pastParticiple": "gone",
+      "translation": "йти, рухатися",
+      "transcription": "go /ɡoʊ/ — went /went/ — gone /ɡɔːn/",
+      "examples": [
+        {
+          "en": "Let’s go through the agenda one by one.",
+          "ua": "Давайте пройдемося по порядку денному пункт за пунктом."
+        },
+        {
+          "en": "The project went well, but some time has gone into testing.",
+          "ua": "Проєкт пройшов добре, але частина часу пішла на тестування."
+        }
+      ]
+    },
+    {
+      "id": "iv-039-come",
+      "group": "Movement & process flow",
+      "base": "come",
+      "pastSimple": "came",
+      "pastParticiple": "come",
+      "translation": "приходити, приходити до ідеї",
+      "transcription": "come /kʌm/ — came /keɪm/ — come /kʌm/",
+      "examples": [
+        {
+          "en": "We need to come up with a practical solution.",
+          "ua": "Нам потрібно придумати практичне рішення."
+        },
+        {
+          "en": "The idea came from the team discussion.",
+          "ua": "Ідея прийшла з командного обговорення."
+        }
+      ]
+    },
+    {
+      "id": "iv-040-bring",
+      "group": "Movement & process flow",
+      "base": "bring",
+      "pastSimple": "brought",
+      "pastParticiple": "brought",
+      "translation": "приносити, піднімати тему",
+      "transcription": "bring /brɪŋ/ — brought /brɔːt/ — brought /brɔːt/",
+      "examples": [
+        {
+          "en": "I want to bring up one risk before we move on.",
+          "ua": "Я хочу підняти один ризик перед тим, як ми підемо далі."
+        },
+        {
+          "en": "The discussion brought more clarity to the task.",
+          "ua": "Обговорення внесло більше ясності в задачу."
+        }
+      ]
+    },
+    {
+      "id": "iv-041-catch",
+      "group": "Movement & process flow",
+      "base": "catch",
+      "pastSimple": "caught",
+      "pastParticiple": "caught",
+      "translation": "ловити, помічати",
+      "transcription": "catch /kætʃ/ — caught /kɔːt/ — caught /kɔːt/",
+      "examples": [
+        {
+          "en": "Code review helps catch mistakes early.",
+          "ua": "Code review допомагає рано помічати помилки."
+        },
+        {
+          "en": "We caught the bug before production.",
+          "ua": "Ми зловили баг до продакшену."
+        }
+      ]
+    },
+    {
+      "id": "iv-042-drive",
+      "group": "Movement & process flow",
+      "base": "drive",
+      "pastSimple": "drove",
+      "pastParticiple": "driven",
+      "translation": "керувати, рухати вперед",
+      "transcription": "drive /draɪv/ — drove /droʊv/ — driven /ˈdrɪvən/",
+      "examples": [
+        {
+          "en": "Clear ownership can drive the project forward.",
+          "ua": "Чітка відповідальність може рухати проєкт уперед."
+        },
+        {
+          "en": "The client’s feedback drove several changes in the design.",
+          "ua": "Фідбек клієнта спричинив кілька змін у дизайні."
+        }
+      ]
+    },
+    {
+      "id": "iv-043-fly",
+      "group": "Movement & process flow",
+      "base": "fly",
+      "pastSimple": "flew",
+      "pastParticiple": "flown",
+      "translation": "летіти",
+      "transcription": "fly /flaɪ/ — flew /fluː/ — flown /floʊn/",
+      "examples": [
+        {
+          "en": "Sometimes people fly to meet important clients in person.",
+          "ua": "Іноді люди летять, щоб зустрітися з важливими клієнтами особисто."
+        },
+        {
+          "en": "He flew to the workshop last month.",
+          "ua": "Він летів на воркшоп минулого місяця."
+        }
+      ]
+    },
+    {
+      "id": "iv-044-ride",
+      "group": "Movement & process flow",
+      "base": "ride",
+      "pastSimple": "rode",
+      "pastParticiple": "ridden",
+      "translation": "їхати верхи/на транспорті",
+      "transcription": "ride /raɪd/ — rode /roʊd/ — ridden /ˈrɪdən/",
+      "examples": [
+        {
+          "en": "I usually ride a bike to clear my mind after work.",
+          "ua": "Я зазвичай їжджу на велосипеді, щоб очистити голову після роботи."
+        },
+        {
+          "en": "I rode to the office when the weather was good.",
+          "ua": "Я їздив в офіс, коли погода була хороша."
+        }
+      ]
+    },
+    {
+      "id": "iv-045-rise",
+      "group": "Movement & process flow",
+      "base": "rise",
+      "pastSimple": "rose",
+      "pastParticiple": "risen",
+      "translation": "підніматися, зростати",
+      "transcription": "rise /raɪz/ — rose /roʊz/ — risen /ˈrɪzən/",
+      "examples": [
+        {
+          "en": "Risk can rise if we skip testing.",
+          "ua": "Ризик може зрости, якщо ми пропустимо тестування."
+        },
+        {
+          "en": "The number of issues rose after the release.",
+          "ua": "Кількість проблем зросла після релізу."
+        }
+      ]
+    },
+    {
+      "id": "iv-046-sit",
+      "group": "Movement & process flow",
+      "base": "sit",
+      "pastSimple": "sat",
+      "pastParticiple": "sat",
+      "translation": "сидіти",
+      "transcription": "sit /sɪt/ — sat /sæt/ — sat /sæt/",
+      "examples": [
+        {
+          "en": "I prefer to sit close to the screen during online calls.",
+          "ua": "Я віддаю перевагу сидіти близько до екрану під час онлайн-дзвінків."
+        },
+        {
+          "en": "We sat together and discussed the root cause.",
+          "ua": "Ми сіли разом і обговорили першопричину."
+        }
+      ]
+    },
+    {
+      "id": "iv-047-stand",
+      "group": "Movement & process flow",
+      "base": "stand",
+      "pastSimple": "stood",
+      "pastParticiple": "stood",
+      "translation": "стояти, відстоювати",
+      "transcription": "stand /stænd/ — stood /stʊd/ — stood /stʊd/",
+      "examples": [
+        {
+          "en": "It is important to stand up for your principles.",
+          "ua": "Важливо відстоювати свої принципи."
+        },
+        {
+          "en": "The team stood by the decision because it was safer.",
+          "ua": "Команда підтримала рішення, тому що воно було безпечнішим."
+        }
+      ]
+    },
+    {
+      "id": "iv-048-throw",
+      "group": "Movement & process flow",
+      "base": "throw",
+      "pastSimple": "threw",
+      "pastParticiple": "thrown",
+      "translation": "кидати, викидати",
+      "transcription": "throw /θroʊ/ — threw /θruː/ — thrown /θroʊn/",
+      "examples": [
+        {
+          "en": "We should not throw away useful feedback.",
+          "ua": "Нам не слід відкидати корисний фідбек."
+        },
+        {
+          "en": "The exception threw an error during testing.",
+          "ua": "Виняток викинув помилку під час тестування."
+        }
+      ]
+    },
+    {
+      "id": "iv-049-slide",
+      "group": "Movement & process flow",
+      "base": "slide",
+      "pastSimple": "slid",
+      "pastParticiple": "slid",
+      "translation": "ковзати, зміщуватися",
+      "transcription": "slide /slaɪd/ — slid /slɪd/ — slid /slɪd/",
+      "examples": [
+        {
+          "en": "The timeline can slide if we add more scope.",
+          "ua": "Таймлайн може зсунутися, якщо ми додамо більше scope."
+        },
+        {
+          "en": "The deadline slid by one week because of missing details.",
+          "ua": "Дедлайн зсунувся на тиждень через відсутні деталі."
+        }
+      ]
+    },
+    {
+      "id": "iv-050-swim",
+      "group": "Movement & process flow",
+      "base": "swim",
+      "pastSimple": "swam",
+      "pastParticiple": "swum",
+      "translation": "плавати",
+      "transcription": "swim /swɪm/ — swam /swæm/ — swum /swʌm/",
+      "examples": [
+        {
+          "en": "I sometimes swim to switch off after work.",
+          "ua": "Я іноді плаваю, щоб відключитися після роботи."
+        },
+        {
+          "en": "I swam twice last week to reduce stress.",
+          "ua": "Минулого тижня я плавав двічі, щоб зменшити стрес."
+        }
+      ]
+    },
+    {
+      "id": "iv-051-buy",
+      "group": "Money, resources & ownership",
+      "base": "buy",
+      "pastSimple": "bought",
+      "pastParticiple": "bought",
+      "translation": "купувати",
+      "transcription": "buy /baɪ/ — bought /bɔːt/ — bought /bɔːt/",
+      "examples": [
+        {
+          "en": "The company may buy a tool if it improves productivity.",
+          "ua": "Компанія може купити інструмент, якщо він покращує продуктивність."
+        },
+        {
+          "en": "We bought time by delivering a temporary workaround.",
+          "ua": "Ми виграли час, доставивши тимчасове обхідне рішення."
+        }
+      ]
+    },
+    {
+      "id": "iv-052-cost",
+      "group": "Money, resources & ownership",
+      "base": "cost",
+      "pastSimple": "cost",
+      "pastParticiple": "cost",
+      "translation": "коштувати",
+      "transcription": "cost /kɔːst/ — cost /kɔːst/ — cost /kɔːst/",
+      "examples": [
+        {
+          "en": "This approach may cost more time in the long run.",
+          "ua": "Цей підхід може коштувати більше часу у довгостроковій перспективі."
+        },
+        {
+          "en": "The delay cost us one extra day.",
+          "ua": "Затримка коштувала нам одного додаткового дня."
+        }
+      ]
+    },
+    {
+      "id": "iv-053-sell",
+      "group": "Money, resources & ownership",
+      "base": "sell",
+      "pastSimple": "sold",
+      "pastParticiple": "sold",
+      "translation": "продавати, переконувати",
+      "transcription": "sell /sel/ — sold /soʊld/ — sold /soʊld/",
+      "examples": [
+        {
+          "en": "A good presentation can sell the idea to stakeholders.",
+          "ua": "Хороша презентація може переконати стейкхолдерів у цій ідеї."
+        },
+        {
+          "en": "The team sold the approach by explaining the benefits clearly.",
+          "ua": "Команда переконала в підході, чітко пояснивши переваги."
+        }
+      ]
+    },
+    {
+      "id": "iv-054-spend",
+      "group": "Money, resources & ownership",
+      "base": "spend",
+      "pastSimple": "spent",
+      "pastParticiple": "spent",
+      "translation": "витрачати, проводити час",
+      "transcription": "spend /spend/ — spent /spent/ — spent /spent/",
+      "examples": [
+        {
+          "en": "We should spend more time on testing.",
+          "ua": "Нам слід витратити більше часу на тестування."
+        },
+        {
+          "en": "We spent two hours looking into the issue.",
+          "ua": "Ми витратили дві години, розбираючись з проблемою."
+        }
+      ]
+    },
+    {
+      "id": "iv-055-lend",
+      "group": "Money, resources & ownership",
+      "base": "lend",
+      "pastSimple": "lent",
+      "pastParticiple": "lent",
+      "translation": "позичати, надавати підтримку",
+      "transcription": "lend /lend/ — lent /lent/ — lent /lent/",
+      "examples": [
+        {
+          "en": "Senior teammates can lend support when the task is unclear.",
+          "ua": "Senior teammates можуть надати підтримку, коли задача нечітка."
+        },
+        {
+          "en": "My colleague lent me a hand with the investigation.",
+          "ua": "Мій колега допоміг мені з розслідуванням."
+        }
+      ]
+    },
+    {
+      "id": "iv-056-pay",
+      "group": "Money, resources & ownership",
+      "base": "pay",
+      "pastSimple": "paid",
+      "pastParticiple": "paid",
+      "translation": "платити, звертати увагу",
+      "transcription": "pay /peɪ/ — paid /peɪd/ — paid /peɪd/",
+      "examples": [
+        {
+          "en": "We need to pay attention to edge cases.",
+          "ua": "Нам потрібно звернути увагу на edge cases."
+        },
+        {
+          "en": "We paid more attention to testing after the incident.",
+          "ua": "Після інциденту ми приділили більше уваги тестуванню."
+        }
+      ]
+    },
+    {
+      "id": "iv-057-feed",
+      "group": "Money, resources & ownership",
+      "base": "feed",
+      "pastSimple": "fed",
+      "pastParticiple": "fed",
+      "translation": "годувати, подавати дані",
+      "transcription": "feed /fiːd/ — fed /fed/ — fed /fed/",
+      "examples": [
+        {
+          "en": "We should feed AI tools with enough context.",
+          "ua": "Ми повинні подавати AI-інструментам достатньо контексту."
+        },
+        {
+          "en": "The system fed the model with outdated data.",
+          "ua": "Система подала моделі застарілі дані."
+        }
+      ]
+    },
+    {
+      "id": "iv-058-bear",
+      "group": "Money, resources & ownership",
+      "base": "bear",
+      "pastSimple": "bore",
+      "pastParticiple": "borne",
+      "translation": "нести, витримувати",
+      "transcription": "bear /ber/ — bore /bɔːr/ — borne /bɔːrn/",
+      "examples": [
+        {
+          "en": "The team should bear responsibility for the final decision.",
+          "ua": "Команда має нести відповідальність за фінальне рішення."
+        },
+        {
+          "en": "The client bore the extra cost after the scope changed.",
+          "ua": "Клієнт поніс додаткові витрати після зміни scope."
+        }
+      ]
+    },
+    {
+      "id": "iv-059-break",
+      "group": "Problems, risk & change",
+      "base": "break",
+      "pastSimple": "broke",
+      "pastParticiple": "broken",
+      "translation": "ламати, порушувати",
+      "transcription": "break /breɪk/ — broke /broʊk/ — broken /ˈbroʊkən/",
+      "examples": [
+        {
+          "en": "A small change can break existing functionality.",
+          "ua": "Маленька зміна може зламати існуючу функціональність."
+        },
+        {
+          "en": "The build broke yesterday, but it has been fixed now.",
+          "ua": "Білд зламався вчора, але зараз його виправлено."
+        }
+      ]
+    },
+    {
+      "id": "iv-060-fall",
+      "group": "Problems, risk & change",
+      "base": "fall",
+      "pastSimple": "fell",
+      "pastParticiple": "fallen",
+      "translation": "падати, відставати",
+      "transcription": "fall /fɔːl/ — fell /fel/ — fallen /ˈfɔːlən/",
+      "examples": [
+        {
+          "en": "The project may fall behind schedule without regular updates.",
+          "ua": "Проєкт може відстати від графіка без регулярних апдейтів."
+        },
+        {
+          "en": "We fell behind schedule, but we have not fallen too far.",
+          "ua": "Ми відстали від графіка, але не надто сильно."
+        }
+      ]
+    },
+    {
+      "id": "iv-061-forget",
+      "group": "Problems, risk & change",
+      "base": "forget",
+      "pastSimple": "forgot",
+      "pastParticiple": "forgotten",
+      "translation": "забувати",
+      "transcription": "forget /fərˈɡet/ — forgot /fərˈɡɑːt/ — forgotten /fərˈɡɑːtən/",
+      "examples": [
+        {
+          "en": "It is easy to forget small details under pressure.",
+          "ua": "Легко забути дрібні деталі під тиском."
+        },
+        {
+          "en": "We forgot to update the documentation, but it has not been forgotten now.",
+          "ua": "Ми забули оновити документацію, але зараз про це не забуто."
+        }
+      ]
+    },
+    {
+      "id": "iv-062-hide",
+      "group": "Problems, risk & change",
+      "base": "hide",
+      "pastSimple": "hid",
+      "pastParticiple": "hidden",
+      "translation": "ховати",
+      "transcription": "hide /haɪd/ — hid /hɪd/ — hidden /ˈhɪdən/",
+      "examples": [
+        {
+          "en": "We should not hide risks from the client.",
+          "ua": "Нам не слід приховувати ризики від клієнта."
+        },
+        {
+          "en": "The bug hid in an edge case and remained hidden during testing.",
+          "ua": "Баг сховався в edge case і залишався прихованим під час тестування."
+        }
+      ]
+    },
+    {
+      "id": "iv-063-hit",
+      "group": "Problems, risk & change",
+      "base": "hit",
+      "pastSimple": "hit",
+      "pastParticiple": "hit",
+      "translation": "вдарити, зіткнутися",
+      "transcription": "hit /hɪt/ — hit /hɪt/ — hit /hɪt/",
+      "examples": [
+        {
+          "en": "We may hit a blocker if the API is not ready.",
+          "ua": "Ми можемо зіткнутися з блокером, якщо API не готовий."
+        },
+        {
+          "en": "We hit a small issue during testing.",
+          "ua": "Ми зіткнулися з невеликою проблемою під час тестування."
+        }
+      ]
+    },
+    {
+      "id": "iv-064-lose",
+      "group": "Problems, risk & change",
+      "base": "lose",
+      "pastSimple": "lost",
+      "pastParticiple": "lost",
+      "translation": "втрачати",
+      "transcription": "lose /luːz/ — lost /lɔːst/ — lost /lɔːst/",
+      "examples": [
+        {
+          "en": "If we do not communicate clearly, we may lose context.",
+          "ua": "Якщо ми не будемо чітко комунікувати, ми можемо втратити контекст."
+        },
+        {
+          "en": "The team lost time because the requirements were unclear.",
+          "ua": "Команда втратила час, тому що вимоги були нечіткими."
+        }
+      ]
+    },
+    {
+      "id": "iv-065-mistake",
+      "group": "Problems, risk & change",
+      "base": "mistake",
+      "pastSimple": "mistook",
+      "pastParticiple": "mistaken",
+      "translation": "помилятися, приймати одне за інше",
+      "transcription": "mistake /mɪˈsteɪk/ — mistook /mɪˈstʊk/ — mistaken /mɪˈsteɪkən/",
+      "examples": [
+        {
+          "en": "People may mistake a quick fix for a long-term solution.",
+          "ua": "Люди можуть помилково прийняти quick fix за довгострокове рішення."
+        },
+        {
+          "en": "I mistook the old requirement for the latest one.",
+          "ua": "Я помилково прийняв стару вимогу за останню."
+        }
+      ]
+    },
+    {
+      "id": "iv-066-overcome",
+      "group": "Problems, risk & change",
+      "base": "overcome",
+      "pastSimple": "overcame",
+      "pastParticiple": "overcome",
+      "translation": "подолати",
+      "transcription": "overcome /ˌoʊvərˈkʌm/ — overcame /ˌoʊvərˈkeɪm/ — overcome /ˌoʊvərˈkʌm/",
+      "examples": [
+        {
+          "en": "A team can overcome difficulties if people stay aligned.",
+          "ua": "Команда може подолати труднощі, якщо люди залишаються узгодженими."
+        },
+        {
+          "en": "We overcame the blocker by simplifying the solution.",
+          "ua": "Ми подолали блокер, спростивши рішення."
+        }
+      ]
+    },
+    {
+      "id": "iv-067-quit",
+      "group": "Problems, risk & change",
+      "base": "quit",
+      "pastSimple": "quit",
+      "pastParticiple": "quit",
+      "translation": "покидати, припиняти",
+      "transcription": "quit /kwɪt/ — quit /kwɪt/ — quit /kwɪt/",
+      "examples": [
+        {
+          "en": "We should not quit when the task becomes challenging.",
+          "ua": "Нам не слід здаватися, коли задача стає складною."
+        },
+        {
+          "en": "The process quit unexpectedly during the test.",
+          "ua": "Процес несподівано завершився під час тесту."
+        }
+      ]
+    },
+    {
+      "id": "iv-068-seek",
+      "group": "Problems, risk & change",
+      "base": "seek",
+      "pastSimple": "sought",
+      "pastParticiple": "sought",
+      "translation": "шукати",
+      "transcription": "seek /siːk/ — sought /sɔːt/ — sought /sɔːt/",
+      "examples": [
+        {
+          "en": "I seek feedback to improve my communication skills.",
+          "ua": "Я шукаю фідбек, щоб покращити свої комунікаційні навички."
+        },
+        {
+          "en": "We sought clarification before starting the implementation.",
+          "ua": "Ми шукали уточнення перед початком реалізації."
+        }
+      ]
+    },
+    {
+      "id": "iv-069-shake",
+      "group": "Problems, risk & change",
+      "base": "shake",
+      "pastSimple": "shook",
+      "pastParticiple": "shaken",
+      "translation": "трясти, похитнути",
+      "transcription": "shake /ʃeɪk/ — shook /ʃʊk/ — shaken /ˈʃeɪkən/",
+      "examples": [
+        {
+          "en": "Unexpected changes can shake the team’s confidence.",
+          "ua": "Неочікувані зміни можуть похитнути впевненість команди."
+        },
+        {
+          "en": "The incident shook client trust, so we followed up quickly.",
+          "ua": "Інцидент похитнув довіру клієнта, тому ми швидко зробили follow-up."
+        }
+      ]
+    },
+    {
+      "id": "iv-070-sink",
+      "group": "Problems, risk & change",
+      "base": "sink",
+      "pastSimple": "sank",
+      "pastParticiple": "sunk",
+      "translation": "тонути, провалюватися",
+      "transcription": "sink /sɪŋk/ — sank /sæŋk/ — sunk /sʌŋk/",
+      "examples": [
+        {
+          "en": "A project can sink if risks are ignored.",
+          "ua": "Проєкт може провалитися, якщо ризики ігноруються."
+        },
+        {
+          "en": "The old approach sank because it was too complex.",
+          "ua": "Старий підхід провалився, тому що був занадто складним."
+        }
+      ]
+    },
+    {
+      "id": "iv-071-split",
+      "group": "Problems, risk & change",
+      "base": "split",
+      "pastSimple": "split",
+      "pastParticiple": "split",
+      "translation": "розділяти",
+      "transcription": "split /splɪt/ — split /splɪt/ — split /splɪt/",
+      "examples": [
+        {
+          "en": "We can split the task into smaller parts.",
+          "ua": "Ми можемо розділити задачу на менші частини."
+        },
+        {
+          "en": "We split the work between two developers.",
+          "ua": "Ми розділили роботу між двома розробниками."
+        }
+      ]
+    },
+    {
+      "id": "iv-072-spread",
+      "group": "Problems, risk & change",
+      "base": "spread",
+      "pastSimple": "spread",
+      "pastParticiple": "spread",
+      "translation": "поширювати",
+      "transcription": "spread /spred/ — spread /spred/ — spread /spred/",
+      "examples": [
+        {
+          "en": "Bad communication can spread confusion across the team.",
+          "ua": "Погана комунікація може поширити плутанину в команді."
+        },
+        {
+          "en": "The issue spread to another module after the update.",
+          "ua": "Проблема поширилася на інший модуль після оновлення."
+        }
+      ]
+    },
+    {
+      "id": "iv-073-strike",
+      "group": "Problems, risk & change",
+      "base": "strike",
+      "pastSimple": "struck",
+      "pastParticiple": "struck",
+      "translation": "вражати, ударяти, виникати",
+      "transcription": "strike /straɪk/ — struck /strʌk/ — struck /strʌk/",
+      "examples": [
+        {
+          "en": "The idea may strike us during the discussion.",
+          "ua": "Ідея може прийти до нас під час обговорення."
+        },
+        {
+          "en": "It struck me that we needed more context.",
+          "ua": "Мені спало на думку, що нам потрібно більше контексту."
+        }
+      ]
+    },
+    {
+      "id": "iv-074-tear",
+      "group": "Problems, risk & change",
+      "base": "tear",
+      "pastSimple": "tore",
+      "pastParticiple": "torn",
+      "translation": "рвати, розривати",
+      "transcription": "tear /ter/ — tore /tɔːr/ — torn /tɔːrn/",
+      "examples": [
+        {
+          "en": "Constant context switching can tear attention away from deep work.",
+          "ua": "Постійне перемикання контексту може відривати увагу від глибокої роботи."
+        },
+        {
+          "en": "The old process was torn apart during the review.",
+          "ua": "Старий процес був розібраний на частини під час рев’ю."
+        }
+      ]
+    },
+    {
+      "id": "iv-075-begin",
+      "group": "Time, progress & change",
+      "base": "begin",
+      "pastSimple": "began",
+      "pastParticiple": "begun",
+      "translation": "починати",
+      "transcription": "begin /bɪˈɡɪn/ — began /bɪˈɡæn/ — begun /bɪˈɡʌn/",
+      "examples": [
+        {
+          "en": "I would begin by clarifying the requirements.",
+          "ua": "Я б почав з уточнення вимог."
+        },
+        {
+          "en": "We began testing yesterday, and the review has begun as well.",
+          "ua": "Ми почали тестування вчора, і рев’ю також почалося."
+        }
+      ]
+    },
+    {
+      "id": "iv-076-grow",
+      "group": "Time, progress & change",
+      "base": "grow",
+      "pastSimple": "grew",
+      "pastParticiple": "grown",
+      "translation": "рости, розвиватися",
+      "transcription": "grow /ɡroʊ/ — grew /ɡruː/ — grown /ɡroʊn/",
+      "examples": [
+        {
+          "en": "I want to grow professionally and improve my English.",
+          "ua": "Я хочу професійно розвиватися і покращувати англійську."
+        },
+        {
+          "en": "The team grew stronger after solving several difficult problems.",
+          "ua": "Команда стала сильнішою після вирішення кількох складних проблем."
+        }
+      ]
+    },
+    {
+      "id": "iv-077-win",
+      "group": "Time, progress & change",
+      "base": "win",
+      "pastSimple": "won",
+      "pastParticiple": "won",
+      "translation": "вигравати, здобувати",
+      "transcription": "win /wɪn/ — won /wʌn/ — won /wʌn/",
+      "examples": [
+        {
+          "en": "Clear communication can win client trust.",
+          "ua": "Чітка комунікація може здобути довіру клієнта."
+        },
+        {
+          "en": "We won the client’s confidence by being transparent.",
+          "ua": "Ми здобули довіру клієнта завдяки прозорості."
+        }
+      ]
+    },
+    {
+      "id": "iv-078-wear",
+      "group": "Time, progress & change",
+      "base": "wear",
+      "pastSimple": "wore",
+      "pastParticiple": "worn",
+      "translation": "носити",
+      "transcription": "wear /wer/ — wore /wɔːr/ — worn /wɔːrn/",
+      "examples": [
+        {
+          "en": "I try to wear comfortable clothes when I work from home.",
+          "ua": "Я намагаюся носити зручний одяг, коли працюю з дому."
+        },
+        {
+          "en": "He wore a headset during the call, so the sound was clearer.",
+          "ua": "Він був у гарнітурі під час дзвінка, тому звук був чіткішим."
+        }
+      ]
+    },
+    {
+      "id": "iv-079-wake",
+      "group": "Time, progress & change",
+      "base": "wake",
+      "pastSimple": "woke",
+      "pastParticiple": "woken",
+      "translation": "прокидатися, пробуджувати",
+      "transcription": "wake /weɪk/ — woke /woʊk/ — woken /ˈwoʊkən/",
+      "examples": [
+        {
+          "en": "I usually wake up early before important meetings.",
+          "ua": "Я зазвичай прокидаюся рано перед важливими зустрічами."
+        },
+        {
+          "en": "The issue woke the team up to the need for better testing.",
+          "ua": "Ця проблема змусила команду усвідомити потребу в кращому тестуванні."
+        }
+      ]
+    },
+    {
+      "id": "iv-080-freeze",
+      "group": "Time, progress & change",
+      "base": "freeze",
+      "pastSimple": "froze",
+      "pastParticiple": "frozen",
+      "translation": "замерзати, зависати",
+      "transcription": "freeze /friːz/ — froze /froʊz/ — frozen /ˈfroʊzən/",
+      "examples": [
+        {
+          "en": "The app may freeze if it runs out of memory.",
+          "ua": "Додаток може зависнути, якщо йому не вистачить пам’яті."
+        },
+        {
+          "en": "The screen froze during the demo.",
+          "ua": "Екран завис під час демо."
+        }
+      ]
+    },
+    {
+      "id": "iv-081-light",
+      "group": "Time, progress & change",
+      "base": "light",
+      "pastSimple": "lit",
+      "pastParticiple": "lit",
+      "translation": "запалювати, освітлювати",
+      "transcription": "light /laɪt/ — lit /lɪt/ — lit /lɪt/",
+      "examples": [
+        {
+          "en": "A clear example can light up the whole idea.",
+          "ua": "Чіткий приклад може прояснити всю ідею."
+        },
+        {
+          "en": "The explanation lit up the problem for the team.",
+          "ua": "Пояснення прояснило проблему для команди."
+        }
+      ]
+    },
+    {
+      "id": "iv-082-shut",
+      "group": "Time, progress & change",
+      "base": "shut",
+      "pastSimple": "shut",
+      "pastParticiple": "shut",
+      "translation": "закривати, вимикати",
+      "transcription": "shut /ʃʌt/ — shut /ʃʌt/ — shut /ʃʌt/",
+      "examples": [
+        {
+          "en": "I shut down distractions when I need deep focus.",
+          "ua": "Я вимикаю відволікання, коли мені потрібен глибокий фокус."
+        },
+        {
+          "en": "The system shut down unexpectedly during testing.",
+          "ua": "Система несподівано вимкнулася під час тестування."
+        }
+      ]
+    },
+    {
+      "id": "iv-083-cut",
+      "group": "Everyday actions & physical context",
+      "base": "cut",
+      "pastSimple": "cut",
+      "pastParticiple": "cut",
+      "translation": "різати, скорочувати",
+      "transcription": "cut /kʌt/ — cut /kʌt/ — cut /kʌt/",
+      "examples": [
+        {
+          "en": "We can cut unnecessary steps from the process.",
+          "ua": "Ми можемо скоротити зайві кроки в процесі."
+        },
+        {
+          "en": "The team cut the scope to meet the deadline.",
+          "ua": "Команда скоротила scope, щоб вкластися в дедлайн."
+        }
+      ]
+    },
+    {
+      "id": "iv-084-draw",
+      "group": "Everyday actions & physical context",
+      "base": "draw",
+      "pastSimple": "drew",
+      "pastParticiple": "drawn",
+      "translation": "малювати, робити висновок",
+      "transcription": "draw /drɔː/ — drew /druː/ — drawn /drɔːn/",
+      "examples": [
+        {
+          "en": "We can draw a conclusion after the analysis.",
+          "ua": "Ми можемо зробити висновок після аналізу."
+        },
+        {
+          "en": "The diagram drew attention to the main issue.",
+          "ua": "Діаграма привернула увагу до основної проблеми."
+        }
+      ]
+    },
+    {
+      "id": "iv-085-drink",
+      "group": "Everyday actions & physical context",
+      "base": "drink",
+      "pastSimple": "drank",
+      "pastParticiple": "drunk",
+      "translation": "пити",
+      "transcription": "drink /drɪŋk/ — drank /dræŋk/ — drunk /drʌŋk/",
+      "examples": [
+        {
+          "en": "I usually drink coffee before morning meetings.",
+          "ua": "Я зазвичай п’ю каву перед ранковими зустрічами."
+        },
+        {
+          "en": "I drank water before the assessment to feel more comfortable.",
+          "ua": "Я випив води перед асесментом, щоб почуватися комфортніше."
+        }
+      ]
+    },
+    {
+      "id": "iv-086-eat",
+      "group": "Everyday actions & physical context",
+      "base": "eat",
+      "pastSimple": "ate",
+      "pastParticiple": "eaten",
+      "translation": "їсти",
+      "transcription": "eat /iːt/ — ate /eɪt/ — eaten /ˈiːtən/",
+      "examples": [
+        {
+          "en": "I try to eat before long meetings so I can focus.",
+          "ua": "Я намагаюся поїсти перед довгими зустрічами, щоб краще фокусуватися."
+        },
+        {
+          "en": "I ate quickly before the call started.",
+          "ua": "Я швидко поїв перед початком дзвінка."
+        }
+      ]
+    },
+    {
+      "id": "iv-087-sleep",
+      "group": "Everyday actions & physical context",
+      "base": "sleep",
+      "pastSimple": "slept",
+      "pastParticiple": "slept",
+      "translation": "спати",
+      "transcription": "sleep /sliːp/ — slept /slept/ — slept /slept/",
+      "examples": [
+        {
+          "en": "Good sleep helps me speak more clearly.",
+          "ua": "Хороший сон допомагає мені говорити чіткіше."
+        },
+        {
+          "en": "I slept well before the interview.",
+          "ua": "Я добре поспав перед інтерв’ю."
+        }
+      ]
+    },
+    {
+      "id": "iv-088-beat",
+      "group": "Everyday actions & physical context",
+      "base": "beat",
+      "pastSimple": "beat",
+      "pastParticiple": "beaten",
+      "translation": "бити, перевершувати",
+      "transcription": "beat /biːt/ — beat /biːt/ — beaten /ˈbiːtən/",
+      "examples": [
+        {
+          "en": "A structured answer can beat a complicated answer.",
+          "ua": "Структурована відповідь може бути кращою за складну відповідь."
+        },
+        {
+          "en": "We beat the deadline by finishing early.",
+          "ua": "Ми випередили дедлайн, завершивши раніше."
+        }
+      ]
+    },
+    {
+      "id": "iv-089-bend",
+      "group": "Everyday actions & physical context",
+      "base": "bend",
+      "pastSimple": "bent",
+      "pastParticiple": "bent",
+      "translation": "згинати, адаптувати",
+      "transcription": "bend /bend/ — bent /bent/ — bent /bent/",
+      "examples": [
+        {
+          "en": "Sometimes we need to bend the plan without breaking the goal.",
+          "ua": "Іноді нам потрібно адаптувати план, не порушуючи мету."
+        },
+        {
+          "en": "We bent the process slightly to support the client’s request.",
+          "ua": "Ми трохи адаптували процес, щоб підтримати запит клієнта."
+        }
+      ]
+    },
+    {
+      "id": "iv-090-bite",
+      "group": "Everyday actions & physical context",
+      "base": "bite",
+      "pastSimple": "bit",
+      "pastParticiple": "bitten",
+      "translation": "кусати",
+      "transcription": "bite /baɪt/ — bit /bɪt/ — bitten /ˈbɪtən/",
+      "examples": [
+        {
+          "en": "A small bug can bite us later if we ignore it.",
+          "ua": "Маленький баг може створити проблеми пізніше, якщо ми його проігноруємо."
+        },
+        {
+          "en": "The team was bitten by the same issue twice.",
+          "ua": "Команда двічі постраждала від тієї самої проблеми."
+        }
+      ]
+    },
+    {
+      "id": "iv-091-bleed",
+      "group": "Everyday actions & physical context",
+      "base": "bleed",
+      "pastSimple": "bled",
+      "pastParticiple": "bled",
+      "translation": "кровоточити, витікати",
+      "transcription": "bleed /bliːd/ — bled /bled/ — bled /bled/",
+      "examples": [
+        {
+          "en": "Poor scope control can bleed time from the project.",
+          "ua": "Поганий контроль scope може витягувати час з проєкту."
+        },
+        {
+          "en": "The task bled into the next sprint.",
+          "ua": "Задача перетекла в наступний спринт."
+        }
+      ]
+    },
+    {
+      "id": "iv-092-blow",
+      "group": "Everyday actions & physical context",
+      "base": "blow",
+      "pastSimple": "blew",
+      "pastParticiple": "blown",
+      "translation": "дути, зірвати",
+      "transcription": "blow /bloʊ/ — blew /bluː/ — blown /bloʊn/",
+      "examples": [
+        {
+          "en": "A serious blocker can blow the timeline.",
+          "ua": "Серйозний блокер може зірвати таймлайн."
+        },
+        {
+          "en": "The unexpected issue blew our original estimate.",
+          "ua": "Неочікувана проблема зірвала нашу початкову оцінку."
+        }
+      ]
+    },
+    {
+      "id": "iv-093-burn",
+      "group": "Everyday actions & physical context",
+      "base": "burn",
+      "pastSimple": "burnt",
+      "pastParticiple": "burnt",
+      "translation": "горіти, вигорати",
+      "transcription": "burn /bɜːrn/ — burnt /bɜːrnt/ — burnt /bɜːrnt/",
+      "examples": [
+        {
+          "en": "People can burn out if they work under pressure for too long.",
+          "ua": "Люди можуть вигоріти, якщо занадто довго працюють під тиском."
+        },
+        {
+          "en": "The team burnt a lot of time on unclear requirements.",
+          "ua": "Команда витратила багато часу на нечіткі вимоги."
+        }
+      ]
+    },
+    {
+      "id": "iv-094-burst",
+      "group": "Everyday actions & physical context",
+      "base": "burst",
+      "pastSimple": "burst",
+      "pastParticiple": "burst",
+      "translation": "лопатися, раптово виникати",
+      "transcription": "burst /bɜːrst/ — burst /bɜːrst/ — burst /bɜːrst/",
+      "examples": [
+        {
+          "en": "Unexpected requests can burst into the sprint at the last moment.",
+          "ua": "Неочікувані запити можуть раптово з’явитися в спринті в останній момент."
+        },
+        {
+          "en": "Several issues burst out after the release.",
+          "ua": "Кілька проблем раптово з’явилися після релізу."
+        }
+      ]
+    },
+    {
+      "id": "iv-095-dig",
+      "group": "Everyday actions & physical context",
+      "base": "dig",
+      "pastSimple": "dug",
+      "pastParticiple": "dug",
+      "translation": "копати, глибше розбиратися",
+      "transcription": "dig /dɪɡ/ — dug /dʌɡ/ — dug /dʌɡ/",
+      "examples": [
+        {
+          "en": "We need to dig into the issue before making changes.",
+          "ua": "Нам потрібно глибше розібратися з проблемою перед змінами."
+        },
+        {
+          "en": "We dug into the logs and found the root cause.",
+          "ua": "Ми глибше розібралися з логами і знайшли першопричину."
+        }
+      ]
+    },
+    {
+      "id": "iv-096-fight",
+      "group": "Everyday actions & physical context",
+      "base": "fight",
+      "pastSimple": "fought",
+      "pastParticiple": "fought",
+      "translation": "боротися",
+      "transcription": "fight /faɪt/ — fought /fɔːt/ — fought /fɔːt/",
+      "examples": [
+        {
+          "en": "We should fight the root cause, not just the symptoms.",
+          "ua": "Нам слід боротися з першопричиною, а не лише з симптомами."
+        },
+        {
+          "en": "The team fought through several blockers.",
+          "ua": "Команда пройшла через кілька блокерів."
+        }
+      ]
+    },
+    {
+      "id": "iv-097-fit",
+      "group": "Everyday actions & physical context",
+      "base": "fit",
+      "pastSimple": "fit",
+      "pastParticiple": "fit",
+      "translation": "підходити, вміщуватися",
+      "transcription": "fit /fɪt/ — fit /fɪt/ — fit /fɪt/",
+      "examples": [
+        {
+          "en": "The solution should fit the current architecture.",
+          "ua": "Рішення має підходити до поточної архітектури."
+        },
+        {
+          "en": "The new component fit the design without major changes.",
+          "ua": "Новий компонент підійшов до дизайну без значних змін."
+        }
+      ]
+    },
+    {
+      "id": "iv-098-hang",
+      "group": "Everyday actions & physical context",
+      "base": "hang",
+      "pastSimple": "hung",
+      "pastParticiple": "hung",
+      "translation": "висіти, зависати",
+      "transcription": "hang /hæŋ/ — hung /hʌŋ/ — hung /hʌŋ/",
+      "examples": [
+        {
+          "en": "The app can hang if the request takes too long.",
+          "ua": "Додаток може зависнути, якщо запит виконується занадто довго."
+        },
+        {
+          "en": "The process hung during the deployment.",
+          "ua": "Процес завис під час деплою."
+        }
+      ]
+    },
+    {
+      "id": "iv-099-lay",
+      "group": "Everyday actions & physical context",
+      "base": "lay",
+      "pastSimple": "laid",
+      "pastParticiple": "laid",
+      "translation": "класти, закладати основу",
+      "transcription": "lay /leɪ/ — laid /leɪd/ — laid /leɪd/",
+      "examples": [
+        {
+          "en": "Good planning can lay the foundation for successful delivery.",
+          "ua": "Хороше планування може закласти основу для успішної доставки."
+        },
+        {
+          "en": "We laid out the action plan during the meeting.",
+          "ua": "Ми виклали план дій під час зустрічі."
+        }
+      ]
+    },
+    {
+      "id": "iv-100-shoot",
+      "group": "Everyday actions & physical context",
+      "base": "shoot",
+      "pastSimple": "shot",
+      "pastParticiple": "shot",
+      "translation": "стріляти, надсилати швидко",
+      "transcription": "shoot /ʃuːt/ — shot /ʃɑːt/ — shot /ʃɑːt/",
+      "examples": [
+        {
+          "en": "I can shoot you a quick message after the call.",
+          "ua": "Я можу швидко написати тобі повідомлення після дзвінка."
+        },
+        {
+          "en": "I shot a quick update to the team.",
+          "ua": "Я швидко надіслав апдейт команді."
+        }
+      ]
+    }
+  ]
+}
