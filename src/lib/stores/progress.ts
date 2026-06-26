@@ -16,6 +16,7 @@ export type ProgressState = {
   showHiddenWords: boolean;
   showHiddenIrregular: boolean;
   currentPrompt: string;
+  speechRepeatCount: 10 | 20 | 50;
   learnedPhrases: string[];
   hiddenPhrases: string[];
   hiddenWords: string[];
@@ -39,6 +40,7 @@ const defaultState: ProgressState = {
   showHiddenWords: false,
   showHiddenIrregular: false,
   currentPrompt: '',
+  speechRepeatCount: 10,
   learnedPhrases: [],
   hiddenPhrases: [],
   hiddenWords: [],
@@ -110,6 +112,7 @@ function createProgressStore() {
     setIrregularGroup: (irregularGroup: string) => update((state) => ({ ...state, irregularGroup })),
     setReverseMode: (reverseMode: ProgressState['reverseMode']) => update((state) => ({ ...state, reverseMode })),
     setCurrentPrompt: (currentPrompt: string) => update((state) => ({ ...state, currentPrompt })),
+    setSpeechRepeatCount: (speechRepeatCount: ProgressState['speechRepeatCount']) => update((state) => ({ ...state, speechRepeatCount })),
     toggleShowHidden: (kind: HideKind) => update((state) => {
       if (kind === 'phrase') return { ...state, showHiddenPhrases: !state.showHiddenPhrases };
       if (kind === 'word') return { ...state, showHiddenWords: !state.showHiddenWords };

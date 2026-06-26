@@ -4,6 +4,8 @@
   import { matchesQuery, uniqueSorted } from '../utils/filters';
   import WordCard from '../components/WordCard.svelte';
   import EmptyState from '../components/EmptyState.svelte';
+  import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+  import { wordToSpeechItem } from '../utils/speechFormatters';
 
   export let materials: Materials;
 
@@ -16,6 +18,8 @@
     if ($progress.wordCategory !== 'All' && item.category !== $progress.wordCategory) return false;
     return matchesQuery($progress.wordQuery, item.term, item.meaning, item.pronunciation, item.category, item.tag);
   }).sort((a, b) => a.term.localeCompare(b.term));
+
+  $: speechItems = visible.map(wordToSpeechItem);
 
   $: if (!selected && visible.length) selected = visible[0];
   $: if (selected && !visible.some((item) => item.id === selected?.id)) selected = visible[0] ?? null;
@@ -39,6 +43,7 @@
         {/each}
       </select>
     </label>
+    <SectionSpeechControl controlId="words-visible" label="Listen words" items={speechItems} help="Reads visible words, translations and examples." />
     <div class="control-actions">
       <button class="btn secondary" on:click={() => progress.toggleShowHidden('word')}>{$progress.showHiddenWords ? 'Hide hidden' : 'Show hidden'}</button>
       {#if $progress.hiddenWords.length}

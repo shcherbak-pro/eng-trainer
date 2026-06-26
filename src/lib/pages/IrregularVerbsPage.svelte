@@ -4,6 +4,8 @@
   import { matchesQuery, uniqueSorted } from '../utils/filters';
   import IrregularVerbCard from '../components/IrregularVerbCard.svelte';
   import EmptyState from '../components/EmptyState.svelte';
+  import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+  import { irregularVerbToSpeechItem } from '../utils/speechFormatters';
 
   export let materials: Materials;
 
@@ -14,6 +16,7 @@
     if ($progress.irregularGroup !== 'All' && item.group !== $progress.irregularGroup) return false;
     return matchesQuery($progress.irregularQuery, item.base, item.pastSimple, item.pastParticiple, item.translation, item.transcription, item.group);
   });
+  $: speechItems = visible.map(irregularVerbToSpeechItem);
 </script>
 
 <section class="section-stack">
@@ -34,6 +37,7 @@
         {/each}
       </select>
     </label>
+    <SectionSpeechControl controlId="irregular-visible" label="Listen verbs" items={speechItems} help="Reads visible verb forms, translations and examples." />
     <div class="control-actions">
       <button class="btn secondary" on:click={() => progress.toggleShowHidden('irregular')}>{$progress.showHiddenIrregular ? 'Hide hidden' : 'Show hidden'}</button>
       {#if $progress.hiddenIrregular.length}

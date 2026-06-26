@@ -4,6 +4,8 @@
   import { matchesQuery, uniqueSorted } from '../utils/filters';
   import PhraseCard from '../components/PhraseCard.svelte';
   import EmptyState from '../components/EmptyState.svelte';
+  import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+  import { phraseToSpeechItem } from '../utils/speechFormatters';
 
   export let materials: Materials;
 
@@ -14,6 +16,7 @@
     if ($progress.phraseCategory !== 'All' && item.category !== $progress.phraseCategory) return false;
     return matchesQuery($progress.phraseQuery, item.phrase, item.example, item.translation, item.category, item.tag);
   });
+  $: speechItems = visible.map(phraseToSpeechItem);
 </script>
 
 <section class="section-stack">
@@ -34,6 +37,7 @@
         {/each}
       </select>
     </label>
+    <SectionSpeechControl controlId="phrases-visible" label="Listen phrases" items={speechItems} help="Reads visible phrases, translations and examples." />
     <div class="control-actions">
       <button class="btn secondary" on:click={() => progress.toggleShowHidden('phrase')}>{$progress.showHiddenPhrases ? 'Hide hidden' : 'Show hidden'}</button>
       {#if $progress.hiddenPhrases.length}

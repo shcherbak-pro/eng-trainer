@@ -10,10 +10,11 @@ A responsive learning app for preparing for English speaking assessments and imp
 - 100 common irregular verbs grouped by usage context
 - ready-made answers and speaking patterns
 - random speaking prompts and pronunciation practice
+- full-section listening practice with configurable repetitions
 
 ## Personal learning experience
 
-You can mark items as learned, hide material you no longer need, and add important content to a Focus List. Your learning state is saved in the browser, so you can continue from where you stopped.
+You can mark items as learned, hide material you no longer need, add important content to a Focus List, and save your preferred listening repetition count. Your learning state is saved in the browser, so you can continue from where you stopped.
 
 ## Live app
 

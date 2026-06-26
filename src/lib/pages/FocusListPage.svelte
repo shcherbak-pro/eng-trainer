@@ -5,6 +5,8 @@
   import WordCard from '../components/WordCard.svelte';
   import IrregularVerbCard from '../components/IrregularVerbCard.svelte';
   import EmptyState from '../components/EmptyState.svelte';
+  import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+  import { blockToSpeechItem, irregularVerbToSpeechItem, phraseToSpeechItem, wordToSpeechItem } from '../utils/speechFormatters';
 
   export let materials: Materials;
   export let blocks: TrainingBlock[];
@@ -15,14 +17,21 @@
   $: favoriteWords = materials.wordIndex.filter((item) => $progress.favoriteWords.includes(item.id) && !$progress.hiddenWords.includes(item.id));
   $: favoriteIrregular = materials.irregularVerbs.filter((item) => $progress.favoriteIrregular.includes(item.id) && !$progress.hiddenIrregular.includes(item.id));
   $: isEmpty = !favoriteBlocks.length && !favoritePhrases.length && !favoriteWords.length && !favoriteIrregular.length;
+  $: speechItems = [
+    ...favoriteBlocks.map(blockToSpeechItem),
+    ...favoritePhrases.map(phraseToSpeechItem),
+    ...favoriteWords.map(wordToSpeechItem),
+    ...favoriteIrregular.map(irregularVerbToSpeechItem)
+  ];
 </script>
 
 <section class="section-stack">
-  <div class="toolbar-card">
+  <div class="toolbar-card focus-toolbar">
     <div>
       <h2>Focus List</h2>
       <p>Your favorite blocks, phrases, words, and verbs for focused revision.</p>
     </div>
+    <SectionSpeechControl controlId="focus-list" label="Listen focus" items={speechItems} help="Reads all materials from your Focus List." />
   </div>
 
   {#if isEmpty}
