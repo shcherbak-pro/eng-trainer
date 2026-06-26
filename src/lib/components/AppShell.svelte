@@ -1,6 +1,7 @@
 <script lang="ts">
   import { progress } from '../stores/progress';
   import type { Materials } from '../types/materials';
+  import ThemeToggle from './ThemeToggle.svelte';
 
   export let materials: Materials;
   export let availablePages: string[];
@@ -23,16 +24,20 @@
         </span>
       </button>
 
-      <nav class="desktop-nav" aria-label="Main navigation">
-        {#each availablePages as page}
-          <button class:active={activePage === page} on:click={() => onNavigate(page)}>
-            {pageLabels[page] ?? page}
-            {#if page === 'favorites' && focusCount > 0}
-              <span class="pill mini">{focusCount}</span>
-            {/if}
-          </button>
-        {/each}
-      </nav>
+      <div class="topbar__actions">
+        <nav class="desktop-nav" aria-label="Main navigation">
+          {#each availablePages as page}
+            <button class:active={activePage === page} on:click={() => onNavigate(page)}>
+              {pageLabels[page] ?? page}
+              {#if page === 'favorites' && focusCount > 0}
+                <span class="pill mini">{focusCount}</span>
+              {/if}
+            </button>
+          {/each}
+        </nav>
+
+        <ThemeToggle />
+      </div>
     </div>
   </header>
 
