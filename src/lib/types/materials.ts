@@ -19,11 +19,16 @@ export type Phrase = {
 };
 
 export type Pattern = {
+  id?: string;
   title: string;
   formula: string;
   use: string;
   example: string;
   translation: string;
+  transcription?: string;
+  commonAlternatives?: string[] | string;
+  tag?: string;
+  level?: string;
 };
 
 export type ReadyAnswer = {
@@ -31,6 +36,10 @@ export type ReadyAnswer = {
   question: string;
   answer: string;
   translation: string;
+  transcription?: string;
+  commonAlternatives?: string[] | string;
+  tag?: string;
+  level?: string;
 };
 
 export type TrainingBlock = {
