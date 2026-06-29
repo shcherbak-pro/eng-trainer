@@ -52,7 +52,7 @@
     );
   });
   $: speechItems = visible.map(phraseToSpeechItem);
-  $: showSectionGroups = $progress.phraseCategory === 'Presentation Phrases';
+  $: showSectionGroups = $progress.phraseCategory !== 'All' && visible.some((item) => item.section || item.sequence);
   $: sectionGroups = showSectionGroups ? groupBySection(visible) : [];
 </script>
 
