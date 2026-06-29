@@ -15,7 +15,16 @@
     const hidden = $progress.hiddenIrregular.includes(item.id);
     if (hidden && !$progress.showHiddenIrregular) return false;
     if ($progress.irregularGroup !== 'All' && item.group !== $progress.irregularGroup) return false;
-    return matchesQuery($progress.irregularQuery, item.base, item.pastSimple, item.pastParticiple, item.translation, item.transcription, item.group);
+    return matchesQuery(
+      $progress.irregularQuery,
+      item.base,
+      item.pastSimple,
+      item.pastParticiple,
+      item.translation,
+      item.transcription,
+      Array.isArray(item.commonAlternatives) ? item.commonAlternatives.join(' ') : item.commonAlternatives,
+      item.group
+    );
   });
   $: speechItems = visible.map(irregularVerbToSpeechItem);
 </script>

@@ -172,6 +172,9 @@ textarea { min-height: 130px; resize: vertical; }
 
 .block-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .cards-list { display: grid; gap: 16px; }
+.sectioned-list { display: grid; gap: 22px; }
+.phrase-section { display: grid; gap: 12px; }
+.phrase-section > h3 { margin: 4px 0 0; color: var(--text); }
 .cards-list.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .card { padding: 22px; }
 .card.hidden { opacity: 0.65; border-style: dashed; }
@@ -183,6 +186,9 @@ textarea { min-height: 130px; resize: vertical; }
 .example { color: var(--example-text); font-size: 1.05rem; line-height: 1.65; }
 .translation { color: var(--translation-text); line-height: 1.6; }
 .muted { color: var(--muted); }
+.meta-line { color: var(--muted); line-height: 1.5; margin: 7px 0 0; }
+.meta-line strong { color: var(--text); }
+.common-alternatives em { color: var(--example-text); font-style: italic; }
 .formula { background: var(--formula-bg); border-left: 5px solid var(--accent); padding: 12px 14px; border-radius: 14px; font-weight: 800; }
 .notice, .answer-box { background: var(--notice-bg); border: 1px solid var(--notice-border); border-radius: 16px; padding: 14px; margin-top: 14px; }
 

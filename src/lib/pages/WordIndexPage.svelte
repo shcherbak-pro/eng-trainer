@@ -17,8 +17,24 @@
     const hidden = $progress.hiddenWords.includes(item.id);
     if (hidden && !$progress.showHiddenWords) return false;
     if ($progress.wordCategory !== 'All' && item.category !== $progress.wordCategory) return false;
-    return matchesQuery($progress.wordQuery, item.term, item.meaning, item.pronunciation, item.category, item.tag);
-  }).sort((a, b) => a.term.localeCompare(b.term));
+    return matchesQuery(
+      $progress.wordQuery,
+      item.term,
+      item.meaning,
+      item.pronunciation,
+      item.transcription,
+      Array.isArray(item.commonAlternatives) ? item.commonAlternatives.join(' ') : item.commonAlternatives,
+      ...(item.examples ?? []).flatMap((example) => [example.en, example.ua ?? '']),
+      item.category,
+      item.section,
+      item.tag
+    );
+  }).sort((a, b) => {
+    if (a.category === 'Presentation Phrases' && b.category === 'Presentation Phrases') {
+      return (a.sequence ?? 0) - (b.sequence ?? 0);
+    }
+    return a.term.localeCompare(b.term);
+  });
 
   $: speechItems = visible.map(wordToSpeechItem);
 
@@ -30,7 +46,7 @@
   <div class="toolbar-card controls-grid">
     <div>
       <h2>Word Index</h2>
-      <p>Клік по фразі відкриває переклад, pronunciation і 2 приклади застосування.</p>
+      <p>Клік по фразі відкриває переклад, transcription, alternatives і приклади застосування.</p>
     </div>
     <label>
       Search

@@ -1,9 +1,19 @@
+export type WordExample = {
+  en: string;
+  ua?: string;
+};
+
 export type Phrase = {
   id: string;
   category: string;
   phrase: string;
-  example: string;
+  example?: string;
+  examples?: WordExample[];
   translation: string;
+  transcription?: string;
+  commonAlternatives?: string[] | string;
+  section?: string;
+  sequence?: number;
   level?: string;
   tag?: string;
 };
@@ -35,20 +45,19 @@ export type TrainingBlock = {
   priority?: number;
 };
 
-export type WordExample = {
-  en: string;
-  ua: string;
-};
-
 export type WordIndexItem = {
   id: string;
   sourcePhraseId?: string;
   term: string;
   category: string;
+  section?: string;
+  sequence?: number;
   level?: string;
   tag?: string;
   meaning: string;
   pronunciation: string;
+  transcription?: string;
+  commonAlternatives?: string[] | string;
   examples: WordExample[];
 };
 
@@ -60,6 +69,7 @@ export type IrregularVerb = {
   pastParticiple: string;
   translation: string;
   transcription: string;
+  commonAlternatives?: string[] | string;
   examples: WordExample[];
 };
 
