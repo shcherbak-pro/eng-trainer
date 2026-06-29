@@ -6,6 +6,7 @@
   import EmptyState from '../components/EmptyState.svelte';
   import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
   import { wordToSpeechItem } from '../utils/speechFormatters';
+  import IconButton from '../components/IconButton.svelte';
 
   export let materials: Materials;
 
@@ -45,9 +46,14 @@
     </label>
     <SectionSpeechControl controlId="words-visible" label="Listen words" items={speechItems} help="Reads visible words, translations and examples." />
     <div class="control-actions">
-      <button class="btn secondary" on:click={() => progress.toggleShowHidden('word')}>{$progress.showHiddenWords ? 'Hide hidden' : 'Show hidden'}</button>
+      <IconButton
+        icon={$progress.showHiddenWords ? 'visibility_off' : 'visibility'}
+        label={$progress.showHiddenWords ? 'Hide hidden words' : 'Show hidden words'}
+        variant="secondary"
+        onClick={() => progress.toggleShowHidden('word')}
+      />
       {#if $progress.hiddenWords.length}
-        <button class="btn danger" on:click={() => progress.unhideAll('word')}>Unhide all</button>
+        <IconButton icon="settings_backup_restore" label="Unhide all words" variant="danger" onClick={() => progress.unhideAll('word')} />
       {/if}
     </div>
   </div>

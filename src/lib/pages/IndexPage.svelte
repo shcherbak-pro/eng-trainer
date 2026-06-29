@@ -4,6 +4,7 @@
   import EmptyState from '../components/EmptyState.svelte';
   import FocusButton from '../components/FocusButton.svelte';
   import LearnPassManager from '../components/LearnPassManager.svelte';
+  import IconButton from '../components/IconButton.svelte';
 
   export let blocks: TrainingBlock[];
   export let allBlocks: TrainingBlock[];
@@ -18,7 +19,7 @@
       <h2>Learning blocks</h2>
       <p>Index page with access to materials from your active Learn Pass.</p>
     </div>
-    <button class="btn secondary" on:click={() => progress.resetAll()}>Reset progress</button>
+    <IconButton icon="restart_alt" label="Reset progress" variant="secondary" onClick={() => progress.resetAll()} />
   </div>
 
   {#if blocks.length}
@@ -29,7 +30,7 @@
           <h3>{block.title}</h3>
           <p>{block.description}</p>
           <div class="card__actions">
-            <button class="btn primary" on:click={() => onOpenBlock(block)}>Open</button>
+            <IconButton icon="arrow_forward" label={`Open ${block.title}`} variant="primary" onClick={() => onOpenBlock(block)} />
             <FocusButton kind="block" id={block.id} />
           </div>
         </article>

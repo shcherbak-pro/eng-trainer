@@ -1,4 +1,5 @@
 <script lang="ts">
+  import IconButton from '../components/IconButton.svelte';
   import { progress } from '../stores/progress';
   export let drills: string[];
 
@@ -14,7 +15,7 @@
       <h2>Practice Mode</h2>
       <p>Random prompts for active recall and 60–90 second speaking practice.</p>
     </div>
-    <button class="btn primary" on:click={randomPrompt}>Random prompt</button>
+    <IconButton icon="shuffle" label="Generate random prompt" variant="primary" onClick={randomPrompt} />
   </div>
 
   <article class="card practice-card">

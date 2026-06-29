@@ -2,6 +2,7 @@
   import { progress } from '../stores/progress';
   import type { Materials, Phrase, WordIndexItem } from '../types/materials';
   import SpeakButton from '../components/SpeakButton.svelte';
+  import IconButton from '../components/IconButton.svelte';
 
   export let materials: Materials;
 
@@ -52,7 +53,7 @@
       <h2>Reverse Practice</h2>
       <p>Бачиш український переклад — згадуєш англійську фразу.</p>
     </div>
-    <button class="btn primary" on:click={next}>Next random</button>
+    <IconButton icon="shuffle" label="Next random item" variant="primary" onClick={next} />
   </div>
 
   {#if current}
@@ -64,8 +65,13 @@
         <textarea bind:value={answer} placeholder="Type the English phrase here…"></textarea>
       </label>
       <div class="card__actions">
-        <button class="btn primary" on:click={check}>Check</button>
-        <button class="btn secondary" on:click={() => revealed = !revealed}>{revealed ? 'Hide answer' : 'Show answer'}</button>
+        <IconButton icon="fact_check" label="Check answer" variant="primary" onClick={check} />
+        <IconButton
+          icon={revealed ? 'visibility_off' : 'visibility'}
+          label={revealed ? 'Hide answer' : 'Show answer'}
+          variant="secondary"
+          onClick={() => revealed = !revealed}
+        />
       </div>
       {#if result}<p class="notice">{result}</p>{/if}
       {#if revealed}

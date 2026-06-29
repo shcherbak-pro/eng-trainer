@@ -1,6 +1,7 @@
 <script lang="ts">
   import { progress } from '../stores/progress';
   import type { FocusKind } from '../types/materials';
+  import IconButton from './IconButton.svelte';
 
   export let kind: FocusKind;
   export let id: string;
@@ -9,6 +10,10 @@
   $: active = list.includes(id);
 </script>
 
-<button class:active class="btn focus" type="button" on:click={() => progress.toggleFavorite(kind, id)}>
-  {active ? '★ In focus' : '☆ Add focus'}
-</button>
+<IconButton
+  icon={active ? 'star' : 'star_add'}
+  label={active ? 'Remove from Focus List' : 'Add to Focus List'}
+  variant="focus"
+  {active}
+  onClick={() => progress.toggleFavorite(kind, id)}
+/>

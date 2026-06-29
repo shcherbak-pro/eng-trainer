@@ -1,4 +1,5 @@
 <script lang="ts">
+  import IconButton from './IconButton.svelte';
   import { progress, type ProgressState } from '../stores/progress';
   import { sectionSpeech, speakSection, stopSectionSpeech, type SectionSpeechItem, type SpeechRepeatCount } from '../utils/sectionSpeech';
 
@@ -43,9 +44,9 @@
     </label>
 
     {#if isActive}
-      <button class="btn danger listen-control__button" on:click={stopSectionSpeech}>Stop</button>
+      <IconButton icon="stop_circle" label="Stop reading" variant="danger" onClick={stopSectionSpeech} />
     {:else}
-      <button class="btn primary listen-control__button" on:click={onStart} disabled={!items.length || isBusy}>▶ Read</button>
+      <IconButton icon="record_voice_over" label={`Read ${label.toLowerCase()}`} variant="primary" disabled={!items.length || isBusy} onClick={onStart} />
     {/if}
   </div>
 

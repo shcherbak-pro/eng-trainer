@@ -2,6 +2,7 @@
   import { DEFAULT_LEARN_PASS_ID, progress } from '../stores/progress';
   import type { LearnPass, TrainingBlock } from '../types/materials';
   import { matchesQuery } from '../utils/filters';
+  import IconButton from './IconButton.svelte';
 
   export let allBlocks: TrainingBlock[];
 
@@ -105,9 +106,9 @@
     </div>
   </div>
 
-  <div class="learn-pass-panel__actions">
-    <button class="btn primary" type="button" on:click={startCreate}>New pass</button>
-    <button class="btn secondary" type="button" on:click={() => selectedPass && startEdit(selectedPass)} disabled={!selectedPass}>Edit selected</button>
+  <div class="learn-pass-panel__actions" aria-label="Learn Pass actions">
+    <IconButton icon="add_circle" label="Create new Learn Pass" variant="primary" onClick={startCreate} />
+    <IconButton icon="edit" label="Edit selected Learn Pass" variant="secondary" disabled={!selectedPass} onClick={() => selectedPass && startEdit(selectedPass)} />
   </div>
 
   <div class="learn-pass-manager">
@@ -128,9 +129,9 @@
               <strong>{pass.name}</strong>
               <small>{pass.blockIds.length} block{pass.blockIds.length === 1 ? '' : 's'}{pass.description ? ` · ${pass.description}` : ''}</small>
             </button>
-            <div class="learn-pass-row__actions">
-              <button class="btn secondary" type="button" on:click={() => startEdit(pass)}>Edit</button>
-              <button class="btn danger" type="button" on:click={() => deletePass(pass)}>Delete</button>
+            <div class="learn-pass-row__actions" aria-label={`${pass.name} actions`}>
+              <IconButton icon="edit" label={`Edit ${pass.name}`} variant="secondary" onClick={() => startEdit(pass)} />
+              <IconButton icon="delete" label={`Delete ${pass.name}`} variant="danger" onClick={() => deletePass(pass)} />
             </div>
           </article>
         {/each}
@@ -149,7 +150,7 @@
           <h3>{editingId ? 'Edit Learn Pass' : 'Create Learn Pass'}</h3>
           <p class="muted">Select the blocks that should stay visible when this pass is active.</p>
         </div>
-        <button class="btn secondary" type="button" on:click={cancelBuilder}>Close</button>
+        <IconButton icon="close" label="Close Learn Pass builder" variant="secondary" onClick={cancelBuilder} />
       </div>
 
       <div class="learn-pass-builder__fields">
@@ -169,8 +170,8 @@
 
       <div class="learn-pass-builder__tools">
         <span class="muted">{draftBlockIds.length} selected</span>
-        <button class="btn secondary" type="button" on:click={selectVisibleBlocks}>Select visible</button>
-        <button class="btn danger" type="button" on:click={clearBlocks}>Clear</button>
+        <IconButton icon="select_check_box" label="Select visible materials" variant="secondary" onClick={selectVisibleBlocks} />
+        <IconButton icon="backspace" label="Clear selected materials" variant="danger" onClick={clearBlocks} />
       </div>
 
       <div class="learn-pass-blocks">
@@ -186,8 +187,8 @@
       </div>
 
       <div class="learn-pass-builder__footer">
-        <button class="btn primary" type="submit" disabled={!draftName.trim() || !draftBlockIds.length}>Save Learn Pass</button>
-        <button class="btn secondary" type="button" on:click={cancelBuilder}>Cancel</button>
+        <IconButton icon="save" label="Save Learn Pass" variant="primary" type="submit" disabled={!draftName.trim() || !draftBlockIds.length} />
+        <IconButton icon="cancel" label="Cancel Learn Pass changes" variant="secondary" onClick={cancelBuilder} />
       </div>
     </form>
   {/if}

@@ -6,6 +6,7 @@
   import IrregularVerbCard from '../components/IrregularVerbCard.svelte';
   import EmptyState from '../components/EmptyState.svelte';
   import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+  import IconButton from '../components/IconButton.svelte';
   import { blockToSpeechItem, irregularVerbToSpeechItem, phraseToSpeechItem, wordToSpeechItem } from '../utils/speechFormatters';
 
   export let materials: Materials;
@@ -46,8 +47,8 @@
             <h3>{block.title}</h3>
             <p>{block.description}</p>
             <div class="card__actions">
-              <button class="btn primary" on:click={() => onOpenBlock(block)}>Open</button>
-              <button class="btn focus active" on:click={() => progress.toggleFavorite('block', block.id)}>Remove focus</button>
+              <IconButton icon="arrow_forward" label={`Open ${block.title}`} variant="primary" onClick={() => onOpenBlock(block)} />
+              <IconButton icon="star" label={`Remove ${block.title} from Focus List`} variant="focus" active onClick={() => progress.toggleFavorite('block', block.id)} />
             </div>
           </article>
         {/each}

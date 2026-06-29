@@ -6,6 +6,7 @@
   import EmptyState from '../components/EmptyState.svelte';
   import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
   import { irregularVerbToSpeechItem } from '../utils/speechFormatters';
+  import IconButton from '../components/IconButton.svelte';
 
   export let materials: Materials;
 
@@ -39,9 +40,14 @@
     </label>
     <SectionSpeechControl controlId="irregular-visible" label="Listen verbs" items={speechItems} help="Reads visible verb forms, translations and examples." />
     <div class="control-actions">
-      <button class="btn secondary" on:click={() => progress.toggleShowHidden('irregular')}>{$progress.showHiddenIrregular ? 'Hide hidden' : 'Show hidden'}</button>
+      <IconButton
+        icon={$progress.showHiddenIrregular ? 'visibility_off' : 'visibility'}
+        label={$progress.showHiddenIrregular ? 'Hide hidden verbs' : 'Show hidden verbs'}
+        variant="secondary"
+        onClick={() => progress.toggleShowHidden('irregular')}
+      />
       {#if $progress.hiddenIrregular.length}
-        <button class="btn danger" on:click={() => progress.unhideAll('irregular')}>Unhide all</button>
+        <IconButton icon="settings_backup_restore" label="Unhide all verbs" variant="danger" onClick={() => progress.unhideAll('irregular')} />
       {/if}
     </div>
   </div>

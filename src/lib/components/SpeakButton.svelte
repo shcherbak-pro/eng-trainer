@@ -1,7 +1,9 @@
 <script lang="ts">
+  import IconButton from './IconButton.svelte';
   import { speak } from '../utils/speech';
+
   export let text: string;
   export let label = 'Speak';
 </script>
 
-<button class="btn secondary" on:click={() => speak(text)} type="button">{label}</button>
+<IconButton icon="volume_up" {label} variant="secondary" onClick={() => speak(text)} />
