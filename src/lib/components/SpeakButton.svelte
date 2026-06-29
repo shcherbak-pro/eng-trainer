@@ -4,6 +4,7 @@
 
   export let text: string;
   export let label = 'Speak';
+  export let icon = 'volume_up';
 </script>
 
-<IconButton icon="volume_up" {label} variant="secondary" onClick={() => speak(text)} />
+<IconButton {icon} {label} variant="secondary" onClick={() => speak(text)} />

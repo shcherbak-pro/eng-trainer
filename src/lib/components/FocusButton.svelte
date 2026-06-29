@@ -11,7 +11,7 @@
 </script>
 
 <IconButton
-  icon={active ? 'star' : 'star_add'}
+  icon={active ? 'remove' : 'add'}
   label={active ? 'Remove from Focus List' : 'Add to Focus List'}
   variant="focus"
   {active}

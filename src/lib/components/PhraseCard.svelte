@@ -30,7 +30,7 @@
   <p class="translation">{phrase.translation}</p>
   <div class="card__actions">
     <SpeakButton text={phrase.phrase} />
-    <SpeakButton text={phrase.example} label="Speak example" />
+    <SpeakButton text={phrase.example} label="Speak example" icon="record_voice_over" />
     <FocusButton kind="phrase" id={phrase.id} />
     <HideButton kind="phrase" id={phrase.id} />
   </div>
