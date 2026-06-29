@@ -11,7 +11,7 @@ export const DEFAULT_LEARN_PASS_ID = "default";
 
 export type IndexPageSize = 6 | 12 | "all";
 export type ListPageSize = 5 | 10 | 20 | "all";
-export type IndexPanelId = "learnPass" | "learningBlocks" | "tagCloud";
+export type IndexPanelId = "learnPass" | "learningBlocks" | "tagCloud" | "daily";
 
 export type ProgressState = {
   activePage: string;
@@ -35,6 +35,7 @@ export type ProgressState = {
   indexLearnPassExpanded: boolean;
   indexLearningBlocksExpanded: boolean;
   indexTagCloudExpanded: boolean;
+  indexDailyExpanded: boolean;
   phrasePage: number;
   phrasePageSize: ListPageSize;
   wordPage: number;
@@ -74,6 +75,7 @@ const defaultState: ProgressState = {
   indexLearnPassExpanded: true,
   indexLearningBlocksExpanded: true,
   indexTagCloudExpanded: true,
+  indexDailyExpanded: true,
   phrasePage: 1,
   phrasePageSize: 5,
   wordPage: 1,
@@ -165,6 +167,7 @@ function normalizeState(value: unknown): ProgressState {
     indexLearnPassExpanded: normalizeBoolean(state.indexLearnPassExpanded, true),
     indexLearningBlocksExpanded: normalizeBoolean(state.indexLearningBlocksExpanded, true),
     indexTagCloudExpanded: normalizeBoolean(state.indexTagCloudExpanded, true),
+    indexDailyExpanded: normalizeBoolean(state.indexDailyExpanded, true),
     phrasePage: normalizePositivePage(state.phrasePage),
     phrasePageSize: normalizeListPageSize(state.phrasePageSize),
     wordPage: normalizePositivePage(state.wordPage),
@@ -299,7 +302,10 @@ function createProgressStore() {
         if (panel === "learningBlocks") {
           return { ...state, indexLearningBlocksExpanded: !state.indexLearningBlocksExpanded };
         }
-        return { ...state, indexTagCloudExpanded: !state.indexTagCloudExpanded };
+        if (panel === "tagCloud") {
+          return { ...state, indexTagCloudExpanded: !state.indexTagCloudExpanded };
+        }
+        return { ...state, indexDailyExpanded: !state.indexDailyExpanded };
       }),
     setPhrasePage: (phrasePage: number) =>
       update((state) => ({

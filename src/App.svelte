@@ -162,7 +162,7 @@
 {:else}
   <AppShell {materials} {availablePages} {activePage} {pageLabels} onNavigate={navigate}>
     {#if activePage === 'index'}
-      <IndexPage {blocks} {allBlocks} onOpenBlock={openBlock} />
+      <IndexPage {materials} {blocks} {allBlocks} onOpenBlock={openBlock} />
     {:else if activePage === 'phrases'}
       <PhrasesPage {materials} />
     {:else if activePage === 'wordIndex'}

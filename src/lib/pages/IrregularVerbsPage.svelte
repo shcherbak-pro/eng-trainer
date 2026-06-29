@@ -55,34 +55,39 @@
 </script>
 
 <section class="section-stack">
-  <div class="toolbar-card controls-grid">
-    <div>
-      <h2>100 Irregular Verbs</h2>
-      <p>3 форми, переклад, транскрипція, 2 приклади, групування за контекстом.</p>
+  <div class="toolbar-card controls-stack">
+    <div class="controls-stack__header">
+      <div>
+        <h2>100 Irregular Verbs</h2>
+        <p>3 форми, переклад, транскрипція, 2 приклади, групування за контекстом.</p>
+      </div>
+      <div class="control-actions">
+        <IconButton
+          icon={$progress.showHiddenIrregular ? 'visibility_off' : 'visibility'}
+          label={$progress.showHiddenIrregular ? 'Hide hidden verbs' : 'Show hidden verbs'}
+          variant="secondary"
+          onClick={() => progress.toggleShowHidden('irregular')}
+        />
+        {#if $progress.hiddenIrregular.length}
+          <IconButton icon="settings_backup_restore" label="Unhide all verbs" variant="danger" onClick={() => progress.unhideAll('irregular')} />
+        {/if}
+      </div>
     </div>
-    <label>
-      Search
-      <input value={$progress.irregularQuery} on:input={(e) => progress.setIrregularQuery((e.target as HTMLInputElement).value)} placeholder="be, took, been, говорити…" />
-    </label>
-    <label>
-      Group
-      <select value={$progress.irregularGroup} on:change={(e) => progress.setIrregularGroup((e.target as HTMLSelectElement).value)}>
-        {#each groups as group}
-          <option value={group}>{group}</option>
-        {/each}
-      </select>
-    </label>
-    <SectionSpeechControl controlId="irregular-visible" label="Listen verbs" items={speechItems} help="Reads current page verb forms, translations and examples." />
-    <div class="control-actions">
-      <IconButton
-        icon={$progress.showHiddenIrregular ? 'visibility_off' : 'visibility'}
-        label={$progress.showHiddenIrregular ? 'Hide hidden verbs' : 'Show hidden verbs'}
-        variant="secondary"
-        onClick={() => progress.toggleShowHidden('irregular')}
-      />
-      {#if $progress.hiddenIrregular.length}
-        <IconButton icon="settings_backup_restore" label="Unhide all verbs" variant="danger" onClick={() => progress.unhideAll('irregular')} />
-      {/if}
+
+    <div class="controls-stack__row">
+      <label>
+        Search
+        <input value={$progress.irregularQuery} on:input={(e) => progress.setIrregularQuery((e.target as HTMLInputElement).value)} placeholder="be, took, been, говорити…" />
+      </label>
+      <label>
+        Group
+        <select value={$progress.irregularGroup} on:change={(e) => progress.setIrregularGroup((e.target as HTMLSelectElement).value)}>
+          {#each groups as group}
+            <option value={group}>{group}</option>
+          {/each}
+        </select>
+      </label>
+      <SectionSpeechControl controlId="irregular-visible" label="Listen verbs" items={speechItems} help="Reads current page verb forms, translations and examples." />
     </div>
   </div>
 

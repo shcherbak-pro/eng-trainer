@@ -84,34 +84,39 @@
 </script>
 
 <section class="section-stack">
-  <div class="toolbar-card controls-grid">
-    <div>
-      <h2>Phrases</h2>
-      <p>Фрази, переклади, transcription, alternatives, examples, learned / hide / focus.</p>
+  <div class="toolbar-card controls-stack">
+    <div class="controls-stack__header">
+      <div>
+        <h2>Phrases</h2>
+        <p>Фрази, переклади, transcription, alternatives, examples, learned / hide / focus.</p>
+      </div>
+      <div class="control-actions">
+        <IconButton
+          icon={$progress.showHiddenPhrases ? 'visibility_off' : 'visibility'}
+          label={$progress.showHiddenPhrases ? 'Hide hidden phrases' : 'Show hidden phrases'}
+          variant="secondary"
+          onClick={() => progress.toggleShowHidden('phrase')}
+        />
+        {#if $progress.hiddenPhrases.length}
+          <IconButton icon="settings_backup_restore" label="Unhide all phrases" variant="danger" onClick={() => progress.unhideAll('phrase')} />
+        {/if}
+      </div>
     </div>
-    <label>
-      Search
-      <input value={$progress.phraseQuery} on:input={(e) => progress.setPhraseQuery((e.target as HTMLInputElement).value)} placeholder="AI, otherwise, meeting…" />
-    </label>
-    <label>
-      Category
-      <select value={$progress.phraseCategory} on:change={(e) => progress.setPhraseCategory((e.target as HTMLSelectElement).value)}>
-        {#each categories as category}
-          <option value={category}>{category}</option>
-        {/each}
-      </select>
-    </label>
-    <SectionSpeechControl controlId="phrases-visible" label="Listen phrases" items={speechItems} help="Reads current page phrases, translations, alternatives and examples." />
-    <div class="control-actions">
-      <IconButton
-        icon={$progress.showHiddenPhrases ? 'visibility_off' : 'visibility'}
-        label={$progress.showHiddenPhrases ? 'Hide hidden phrases' : 'Show hidden phrases'}
-        variant="secondary"
-        onClick={() => progress.toggleShowHidden('phrase')}
-      />
-      {#if $progress.hiddenPhrases.length}
-        <IconButton icon="settings_backup_restore" label="Unhide all phrases" variant="danger" onClick={() => progress.unhideAll('phrase')} />
-      {/if}
+
+    <div class="controls-stack__row">
+      <label>
+        Search
+        <input value={$progress.phraseQuery} on:input={(e) => progress.setPhraseQuery((e.target as HTMLInputElement).value)} placeholder="AI, otherwise, meeting…" />
+      </label>
+      <label>
+        Category
+        <select value={$progress.phraseCategory} on:change={(e) => progress.setPhraseCategory((e.target as HTMLSelectElement).value)}>
+          {#each categories as category}
+            <option value={category}>{category}</option>
+          {/each}
+        </select>
+      </label>
+      <SectionSpeechControl controlId="phrases-visible" label="Listen phrases" items={speechItems} help="Reads current page phrases, translations, alternatives and examples." />
     </div>
   </div>
 
