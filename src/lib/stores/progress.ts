@@ -1,7 +1,8 @@
 import { writable } from 'svelte/store';
-import type { FocusKind, HideKind } from '../types/materials';
+import type { FocusKind, HideKind, LearnPass, LearnPassDraft } from '../types/materials';
 
 const STORAGE_KEY = 'englishAssessmentTrainer.svelteState.v1';
+export const DEFAULT_LEARN_PASS_ID = 'default';
 
 export type ProgressState = {
   activePage: string;
@@ -17,6 +18,8 @@ export type ProgressState = {
   showHiddenIrregular: boolean;
   currentPrompt: string;
   speechRepeatCount: 10 | 20 | 50;
+  selectedLearnPassId: string;
+  learnPassSearch: string;
   learnedPhrases: string[];
   hiddenPhrases: string[];
   hiddenWords: string[];
@@ -25,6 +28,7 @@ export type ProgressState = {
   favoritePhrases: string[];
   favoriteWords: string[];
   favoriteIrregular: string[];
+  learnPasses: LearnPass[];
 };
 
 const defaultState: ProgressState = {
@@ -41,6 +45,8 @@ const defaultState: ProgressState = {
   showHiddenIrregular: false,
   currentPrompt: '',
   speechRepeatCount: 10,
+  selectedLearnPassId: DEFAULT_LEARN_PASS_ID,
+  learnPassSearch: '',
   learnedPhrases: [],
   hiddenPhrases: [],
   hiddenWords: [],
@@ -48,11 +54,56 @@ const defaultState: ProgressState = {
   favoriteBlocks: [],
   favoritePhrases: [],
   favoriteWords: [],
-  favoriteIrregular: []
+  favoriteIrregular: [],
+  learnPasses: []
 };
 
 function canUseStorage(): boolean {
   return typeof window !== 'undefined' && typeof window.localStorage !== 'undefined';
+}
+
+function normalizeStringList(value: unknown): string[] {
+  return Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : [];
+}
+
+function normalizeLearnPass(value: unknown): LearnPass | null {
+  if (!value || typeof value !== 'object') return null;
+
+  const candidate = value as Partial<LearnPass>;
+  if (typeof candidate.id !== 'string' || typeof candidate.name !== 'string') return null;
+
+  const now = new Date().toISOString();
+
+  return {
+    id: candidate.id,
+    name: candidate.name.trim() || 'Untitled pass',
+    description: typeof candidate.description === 'string' ? candidate.description : '',
+    blockIds: normalizeStringList(candidate.blockIds),
+    createdAt: typeof candidate.createdAt === 'string' ? candidate.createdAt : now,
+    updatedAt: typeof candidate.updatedAt === 'string' ? candidate.updatedAt : now
+  };
+}
+
+function normalizeState(value: unknown): ProgressState {
+  const raw = value && typeof value === 'object' ? value as Partial<ProgressState> : {};
+  const state: ProgressState = { ...defaultState, ...raw };
+  const selectedExists = state.selectedLearnPassId === DEFAULT_LEARN_PASS_ID || state.learnPasses.some((pass) => pass.id === state.selectedLearnPassId);
+
+  return {
+    ...state,
+    selectedLearnPassId: selectedExists ? state.selectedLearnPassId : DEFAULT_LEARN_PASS_ID,
+    learnedPhrases: normalizeStringList(state.learnedPhrases),
+    hiddenPhrases: normalizeStringList(state.hiddenPhrases),
+    hiddenWords: normalizeStringList(state.hiddenWords),
+    hiddenIrregular: normalizeStringList(state.hiddenIrregular),
+    favoriteBlocks: normalizeStringList(state.favoriteBlocks),
+    favoritePhrases: normalizeStringList(state.favoritePhrases),
+    favoriteWords: normalizeStringList(state.favoriteWords),
+    favoriteIrregular: normalizeStringList(state.favoriteIrregular),
+    learnPasses: Array.isArray(state.learnPasses)
+      ? state.learnPasses.map(normalizeLearnPass).filter((pass): pass is LearnPass => Boolean(pass))
+      : []
+  };
 }
 
 function readState(): ProgressState {
@@ -60,7 +111,7 @@ function readState(): ProgressState {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return defaultState;
-    return { ...defaultState, ...JSON.parse(raw) };
+    return normalizeState(JSON.parse(raw));
   } catch {
     return defaultState;
   }
@@ -81,6 +132,18 @@ function toggleValue(list: string[], id: string): string[] {
 
 function removeValue(list: string[], id: string): string[] {
   return list.filter((item) => item !== id);
+}
+
+function uniqueValues(list: string[]): string[] {
+  return [...new Set(list.filter(Boolean))];
+}
+
+function createId(): string {
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+    return crypto.randomUUID();
+  }
+
+  return `learn-pass-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
 function focusKey(kind: FocusKind): keyof Pick<ProgressState, 'favoriteBlocks' | 'favoritePhrases' | 'favoriteWords' | 'favoriteIrregular'> {
@@ -113,6 +176,30 @@ function createProgressStore() {
     setReverseMode: (reverseMode: ProgressState['reverseMode']) => update((state) => ({ ...state, reverseMode })),
     setCurrentPrompt: (currentPrompt: string) => update((state) => ({ ...state, currentPrompt })),
     setSpeechRepeatCount: (speechRepeatCount: ProgressState['speechRepeatCount']) => update((state) => ({ ...state, speechRepeatCount })),
+    setSelectedLearnPass: (selectedLearnPassId: string) => update((state) => ({ ...state, selectedLearnPassId })),
+    setLearnPassSearch: (learnPassSearch: string) => update((state) => ({ ...state, learnPassSearch })),
+    saveLearnPass: (draft: LearnPassDraft) => update((state) => {
+      const existing = draft.id ? state.learnPasses.find((pass) => pass.id === draft.id) : undefined;
+      const now = new Date().toISOString();
+      const id = existing?.id ?? draft.id ?? createId();
+      const pass: LearnPass = {
+        id,
+        name: draft.name.trim() || 'Untitled pass',
+        description: draft.description?.trim() ?? '',
+        blockIds: uniqueValues(draft.blockIds),
+        createdAt: existing?.createdAt ?? now,
+        updatedAt: now
+      };
+      const learnPasses = existing
+        ? state.learnPasses.map((item) => item.id === id ? pass : item)
+        : [...state.learnPasses, pass];
+      return { ...state, learnPasses, selectedLearnPassId: id };
+    }),
+    deleteLearnPass: (id: string) => update((state) => ({
+      ...state,
+      learnPasses: state.learnPasses.filter((pass) => pass.id !== id),
+      selectedLearnPassId: state.selectedLearnPassId === id ? DEFAULT_LEARN_PASS_ID : state.selectedLearnPassId
+    })),
     toggleShowHidden: (kind: HideKind) => update((state) => {
       if (kind === 'phrase') return { ...state, showHiddenPhrases: !state.showHiddenPhrases };
       if (kind === 'word') return { ...state, showHiddenWords: !state.showHiddenWords };

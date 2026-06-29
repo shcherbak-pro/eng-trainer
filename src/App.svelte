@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { progress } from './lib/stores/progress';
+  import { DEFAULT_LEARN_PASS_ID, progress } from './lib/stores/progress';
   import type { Materials, TrainingBlock } from './lib/types/materials';
   import AppShell from './lib/components/AppShell.svelte';
   import IndexPage from './lib/pages/IndexPage.svelte';
@@ -41,18 +41,32 @@
     return false;
   }
 
-  $: blocks = materials ? materials.blocks.filter((block) => blockHasContent(block, materials!)).sort((a, b) => (a.priority ?? 0) - (b.priority ?? 0)) : [];
-  $: availablePages = materials ? getAvailablePages(materials) : ['index'];
+  function getBlocksForLearnPass(allBlocks: TrainingBlock[]): TrainingBlock[] {
+    if ($progress.selectedLearnPassId === DEFAULT_LEARN_PASS_ID) return allBlocks;
 
-  function getAvailablePages(data: Materials): string[] {
+    const activePass = $progress.learnPasses.find((pass) => pass.id === $progress.selectedLearnPassId);
+    if (!activePass) return allBlocks;
+
+    const allowed = new Set(activePass.blockIds);
+    return allBlocks.filter((block) => allowed.has(block.id));
+  }
+
+  $: allBlocks = materials ? materials.blocks.filter((block) => blockHasContent(block, materials!)).sort((a, b) => (a.priority ?? 0) - (b.priority ?? 0)) : [];
+  $: blocks = getBlocksForLearnPass(allBlocks);
+  $: availablePages = getAvailablePages(blocks);
+
+  function getAvailablePages(blockList: TrainingBlock[]): string[] {
     const pages = ['index'];
-    if (data.phrases.length) pages.push('phrases');
-    if (data.wordIndex.length) pages.push('wordIndex');
-    if (data.wordIndex.length || data.phrases.length) pages.push('reverse');
-    if (data.irregularVerbs.length) pages.push('irregularVerbs');
-    if (data.patterns.length) pages.push('patterns');
-    if (data.answers.length) pages.push('answers');
-    if (data.drills.length) pages.push('practice');
+    const types = new Set(blockList.map((block) => block.type));
+
+    if (types.has('phraseCategory')) pages.push('phrases');
+    if (types.has('wordIndex')) pages.push('wordIndex');
+    if (types.has('reversePractice')) pages.push('reverse');
+    if (types.has('irregularVerbs')) pages.push('irregularVerbs');
+    if (types.has('patterns')) pages.push('patterns');
+    if (types.has('answers')) pages.push('answers');
+    if (types.has('practice')) pages.push('practice');
+
     pages.push('favorites');
     return pages;
   }
@@ -90,6 +104,10 @@
     navigate(map[block.type] ?? 'index');
   }
 
+  $: if (!loading && materials && !availablePages.includes(activePage)) {
+    navigate('index');
+  }
+
   onMount(() => {
     let mounted = true;
 
@@ -102,7 +120,7 @@
         if (!mounted) return;
         materials = loaded;
         loading = false;
-        const pages = getAvailablePages(loaded);
+        const pages = getAvailablePages(loaded.blocks.filter((block: TrainingBlock) => blockHasContent(block, loaded)));
         const next = pageFromHash();
         activePage = pages.includes(next) ? next : 'index';
         progress.setActivePage(activePage);
@@ -138,7 +156,7 @@
 {:else}
   <AppShell {materials} {availablePages} {activePage} {pageLabels} onNavigate={navigate}>
     {#if activePage === 'index'}
-      <IndexPage {blocks} onOpenBlock={openBlock} />
+      <IndexPage {blocks} {allBlocks} onOpenBlock={openBlock} />
     {:else if activePage === 'phrases'}
       <PhrasesPage {materials} />
     {:else if activePage === 'wordIndex'}
@@ -154,7 +172,7 @@
     {:else if activePage === 'practice'}
       <PracticePage drills={materials.drills} />
     {:else if activePage === 'favorites'}
-      <FocusListPage {materials} {blocks} onOpenBlock={openBlock} />
+      <FocusListPage {materials} blocks={allBlocks} onOpenBlock={openBlock} />
     {/if}
   </AppShell>
 {/if}

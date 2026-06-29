@@ -84,5 +84,21 @@ export type Materials = {
   irregularVerbs: IrregularVerb[];
 };
 
+export type LearnPass = {
+  id: string;
+  name: string;
+  description?: string;
+  blockIds: string[];
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type LearnPassDraft = {
+  id?: string;
+  name: string;
+  description?: string;
+  blockIds: string[];
+};
+
 export type FocusKind = 'block' | 'phrase' | 'word' | 'irregular';
 export type HideKind = 'phrase' | 'word' | 'irregular';

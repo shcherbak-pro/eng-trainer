@@ -261,3 +261,42 @@ textarea { min-height: 130px; resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
+
+.learn-pass-panel { display: grid; gap: 18px; }
+.learn-pass-panel__main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 340px); gap: 18px; align-items: end; }
+.learn-pass-panel__main h2 { margin: 0 0 8px; }
+.eyebrow.local { color: var(--accent); margin-bottom: 8px; }
+.learn-pass-selectors { display: grid; gap: 8px; }
+.learn-pass-summary { margin: 0; color: var(--muted); font-weight: 800; }
+.learn-pass-panel__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.learn-pass-manager { display: grid; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
+.learn-pass-list { display: grid; gap: 10px; }
+.learn-pass-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; background: var(--surface-2); border: 1px solid var(--border); border-radius: 16px; padding: 10px; }
+.learn-pass-row.active { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.learn-pass-row__body { text-align: left; border: 0; background: transparent; color: var(--text); display: grid; gap: 4px; padding: 8px; border-radius: 12px; }
+.learn-pass-row__body:hover { background: var(--list-hover); }
+.learn-pass-row__body small { color: var(--muted); line-height: 1.35; }
+.learn-pass-row__actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.learn-pass-builder { display: grid; gap: 16px; border-top: 1px solid var(--border); padding-top: 18px; }
+.learn-pass-builder__header { display: flex; align-items: start; justify-content: space-between; gap: 14px; }
+.learn-pass-builder__header h3 { margin: 0 0 6px; }
+.learn-pass-builder__fields { display: grid; grid-template-columns: minmax(180px, 0.8fr) minmax(200px, 1fr) minmax(180px, 0.8fr); gap: 12px; }
+.learn-pass-builder__tools, .learn-pass-builder__footer { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.learn-pass-builder__tools { justify-content: flex-end; }
+.learn-pass-builder__tools .muted { margin-right: auto; font-weight: 800; }
+.learn-pass-blocks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-height: 420px; overflow: auto; padding-right: 4px; }
+.learn-pass-block { display: flex; gap: 10px; align-items: flex-start; background: var(--surface-2); border: 1px solid var(--border); border-radius: 16px; padding: 12px; color: var(--text); cursor: pointer; }
+.learn-pass-block:hover, .learn-pass-block.active { border-color: var(--accent); background: var(--focus-bg); }
+.learn-pass-block input { min-height: auto; margin-top: 3px; accent-color: var(--accent); }
+.learn-pass-block span { display: grid; gap: 4px; min-width: 0; }
+.learn-pass-block small { color: var(--muted); line-height: 1.35; }
+
+@media (max-width: 980px) {
+  .learn-pass-panel__main, .learn-pass-builder__fields { grid-template-columns: 1fr; }
+  .learn-pass-blocks { grid-template-columns: 1fr; max-height: none; }
+}
+
+@media (max-width: 640px) {
+  .learn-pass-panel__actions, .learn-pass-row, .learn-pass-row__actions, .learn-pass-builder__header, .learn-pass-builder__tools, .learn-pass-builder__footer { display: grid; grid-template-columns: 1fr; }
+  .learn-pass-builder__tools .muted { margin-right: 0; }
+}
