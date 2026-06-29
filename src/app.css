@@ -349,3 +349,25 @@ textarea { min-height: 130px; resize: vertical; }
   .pagination-control { grid-template-columns: 1fr; }
   .pagination-control__nav { justify-content: flex-start; }
 }
+
+.expansion-panel { padding: 0; overflow: hidden; }
+.expansion-panel__header { width: 100%; border: 0; background: transparent; color: var(--text); padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 18px; text-align: left; }
+.expansion-panel__header:hover { background: var(--list-hover); }
+.expansion-panel__header:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.expansion-panel__title { display: grid; gap: 5px; min-width: 0; }
+.expansion-panel__title h2, .expansion-panel__title h3 { margin: 0; }
+.expansion-panel__title .muted { line-height: 1.4; }
+.expansion-panel__icon { width: 42px; height: 42px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+.expansion-panel__body { padding: 0 22px 22px; display: grid; gap: 16px; }
+.expansion-panel.collapsed .expansion-panel__header { padding-bottom: 20px; }
+.expansion-panel .learn-pass-panel { box-shadow: none; border-radius: 18px; }
+.panel-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.pagination-footer { display: flex; justify-content: flex-end; }
+.pagination-footer > .pagination-control { width: min(380px, 100%); }
+
+@media (max-width: 640px) {
+  .expansion-panel__header { padding: 18px; align-items: flex-start; }
+  .expansion-panel__body { padding: 0 18px 18px; }
+  .pagination-footer { justify-content: stretch; }
+  .pagination-footer > .pagination-control { width: 100%; }
+}

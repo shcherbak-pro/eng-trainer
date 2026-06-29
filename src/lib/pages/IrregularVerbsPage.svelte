@@ -73,15 +73,6 @@
       </select>
     </label>
     <SectionSpeechControl controlId="irregular-visible" label="Listen verbs" items={speechItems} help="Reads current page verb forms, translations and examples." />
-    <PaginationControls
-      total={visible.length}
-      page={currentPage}
-      pageSize={$progress.irregularPageSize}
-      {pageSizeOptions}
-      label="Irregular verbs pagination"
-      onPageChange={(page) => progress.setIrregularPage(page)}
-      onPageSizeChange={setPageSize}
-    />
     <div class="control-actions">
       <IconButton
         icon={$progress.showHiddenIrregular ? 'visibility_off' : 'visibility'}
@@ -103,5 +94,19 @@
     </div>
   {:else}
     <EmptyState title="No verbs found" />
+  {/if}
+
+  {#if visible.length}
+    <div class="pagination-footer">
+      <PaginationControls
+        total={visible.length}
+        page={currentPage}
+        pageSize={$progress.irregularPageSize}
+        {pageSizeOptions}
+        label="Irregular verbs pagination"
+        onPageChange={(page) => progress.setIrregularPage(page)}
+        onPageSizeChange={setPageSize}
+      />
+    </div>
   {/if}
 </section>

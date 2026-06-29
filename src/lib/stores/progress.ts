@@ -11,6 +11,7 @@ export const DEFAULT_LEARN_PASS_ID = "default";
 
 export type IndexPageSize = 6 | 12 | "all";
 export type ListPageSize = 5 | 10 | 20 | "all";
+export type IndexPanelId = "learnPass" | "learningBlocks" | "tagCloud";
 
 export type ProgressState = {
   activePage: string;
@@ -31,6 +32,9 @@ export type ProgressState = {
   indexTagFilter: string;
   indexPage: number;
   indexPageSize: IndexPageSize;
+  indexLearnPassExpanded: boolean;
+  indexLearningBlocksExpanded: boolean;
+  indexTagCloudExpanded: boolean;
   phrasePage: number;
   phrasePageSize: ListPageSize;
   wordPage: number;
@@ -67,6 +71,9 @@ const defaultState: ProgressState = {
   indexTagFilter: "",
   indexPage: 1,
   indexPageSize: 6,
+  indexLearnPassExpanded: true,
+  indexLearningBlocksExpanded: true,
+  indexTagCloudExpanded: true,
   phrasePage: 1,
   phrasePageSize: 5,
   wordPage: 1,
@@ -94,6 +101,10 @@ function normalizeStringList(value: unknown): string[] {
   return Array.isArray(value)
     ? value.filter((item): item is string => typeof item === "string")
     : [];
+}
+
+function normalizeBoolean(value: unknown, fallback: boolean): boolean {
+  return typeof value === "boolean" ? value : fallback;
 }
 
 function normalizePositivePage(value: unknown): number {
@@ -151,6 +162,9 @@ function normalizeState(value: unknown): ProgressState {
       typeof state.indexTagFilter === "string" ? state.indexTagFilter : "",
     indexPage: normalizePositivePage(state.indexPage),
     indexPageSize: normalizeIndexPageSize(state.indexPageSize),
+    indexLearnPassExpanded: normalizeBoolean(state.indexLearnPassExpanded, true),
+    indexLearningBlocksExpanded: normalizeBoolean(state.indexLearningBlocksExpanded, true),
+    indexTagCloudExpanded: normalizeBoolean(state.indexTagCloudExpanded, true),
     phrasePage: normalizePositivePage(state.phrasePage),
     phrasePageSize: normalizeListPageSize(state.phrasePageSize),
     wordPage: normalizePositivePage(state.wordPage),
@@ -277,6 +291,16 @@ function createProgressStore() {
       })),
     setIndexPageSize: (indexPageSize: IndexPageSize) =>
       update((state) => ({ ...state, indexPageSize, indexPage: 1 })),
+    toggleIndexPanel: (panel: IndexPanelId) =>
+      update((state) => {
+        if (panel === "learnPass") {
+          return { ...state, indexLearnPassExpanded: !state.indexLearnPassExpanded };
+        }
+        if (panel === "learningBlocks") {
+          return { ...state, indexLearningBlocksExpanded: !state.indexLearningBlocksExpanded };
+        }
+        return { ...state, indexTagCloudExpanded: !state.indexTagCloudExpanded };
+      }),
     setPhrasePage: (phrasePage: number) =>
       update((state) => ({
         ...state,

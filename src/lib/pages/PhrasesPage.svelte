@@ -102,15 +102,6 @@
       </select>
     </label>
     <SectionSpeechControl controlId="phrases-visible" label="Listen phrases" items={speechItems} help="Reads current page phrases, translations, alternatives and examples." />
-    <PaginationControls
-      total={visible.length}
-      page={currentPage}
-      pageSize={$progress.phrasePageSize}
-      {pageSizeOptions}
-      label="Phrases pagination"
-      onPageChange={(page) => progress.setPhrasePage(page)}
-      onPageSizeChange={setPageSize}
-    />
     <div class="control-actions">
       <IconButton
         icon={$progress.showHiddenPhrases ? 'visibility_off' : 'visibility'}
@@ -147,5 +138,19 @@
     {/if}
   {:else}
     <EmptyState title="No phrases found" />
+  {/if}
+
+  {#if visible.length}
+    <div class="pagination-footer">
+      <PaginationControls
+        total={visible.length}
+        page={currentPage}
+        pageSize={$progress.phrasePageSize}
+        {pageSizeOptions}
+        label="Phrases pagination"
+        onPageChange={(page) => progress.setPhrasePage(page)}
+        onPageSizeChange={setPageSize}
+      />
+    </div>
   {/if}
 </section>

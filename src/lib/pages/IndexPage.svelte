@@ -6,6 +6,7 @@
   import LearnPassManager from '../components/LearnPassManager.svelte';
   import IconButton from '../components/IconButton.svelte';
   import PaginationControls from '../components/PaginationControls.svelte';
+  import ExpansionPanel from '../components/ExpansionPanel.svelte';
   import type { PageSizeOption } from '../types/pagination';
 
   export let blocks: TrainingBlock[];
@@ -62,31 +63,22 @@
 </script>
 
 <section class="section-stack">
-  <LearnPassManager {allBlocks} />
-
-  <div class="toolbar-card index-toolbar">
-    <div>
-      <h2>Learning blocks</h2>
-      <p>Index page with access to materials from your active Learn Pass.</p>
-    </div>
-    <PaginationControls
-      total={filteredBlocks.length}
-      page={currentPage}
-      pageSize={$progress.indexPageSize}
-      {pageSizeOptions}
-      label="Learning blocks pagination"
-      onPageChange={(page) => progress.setIndexPage(page)}
-      onPageSizeChange={setPageSize}
-    />
-    <IconButton icon="restart_alt" label="Reset progress" variant="secondary" onClick={() => progress.resetAll()} />
-  </div>
+  <ExpansionPanel
+    title="Learn Pass"
+    description="Choose or create a focused learning track."
+    open={$progress.indexLearnPassExpanded}
+    onToggle={() => progress.toggleIndexPanel('learnPass')}
+  >
+    <LearnPassManager {allBlocks} />
+  </ExpansionPanel>
 
   {#if tagOptions.length}
-    <section class="card tag-cloud-panel" aria-label="Learning block tags">
-      <div>
-        <h3>Tag cloud</h3>
-        <p class="muted">Filter the index by topic and keep the current Learn Pass focused.</p>
-      </div>
+    <ExpansionPanel
+      title="Tag cloud"
+      description="Filter visible learning blocks by topic."
+      open={$progress.indexTagCloudExpanded}
+      onToggle={() => progress.toggleIndexPanel('tagCloud')}
+    >
       <div class="tag-cloud">
         <button class:active={!$progress.indexTagFilter} type="button" on:click={() => progress.setIndexTagFilter('')}>
           All <span>{blocks.length}</span>
@@ -97,38 +89,61 @@
           </button>
         {/each}
       </div>
-    </section>
+    </ExpansionPanel>
   {/if}
 
-  {#if filteredBlocks.length}
-    <div class="block-grid">
-      {#each pagedBlocks as block}
-        <article class="card block-card">
-          <p class="tag-row">
-            {#if block.tag}
-              <button
-                class:active={$progress.indexTagFilter === block.tag}
-                class="chip-button"
-                type="button"
-                on:click={() => progress.setIndexTagFilter(block.tag ?? '')}
-              >{block.tag}</button>
-            {:else}
-              <span>{block.type}</span>
-            {/if}
-            {#if block.itemsCount}<span>{block.itemsCount} items</span>{/if}
-          </p>
-          <h3>{block.title}</h3>
-          <p>{block.description}</p>
-          <div class="card__actions">
-            <IconButton icon="arrow_forward" label={`Open ${block.title}`} variant="primary" onClick={() => onOpenBlock(block)} />
-            <FocusButton kind="block" id={block.id} />
-          </div>
-        </article>
-      {/each}
+  <ExpansionPanel
+    title="Learning blocks"
+    description="Materials from your active Learn Pass."
+    open={$progress.indexLearningBlocksExpanded}
+    onToggle={() => progress.toggleIndexPanel('learningBlocks')}
+  >
+    <div class="panel-actions">
+      <IconButton icon="restart_alt" label="Reset progress" variant="secondary" onClick={() => progress.resetAll()} />
     </div>
-  {:else if blocks.length}
-    <EmptyState title="No blocks for this tag" text="Select another tag or switch back to All." />
-  {:else}
-    <EmptyState title="No blocks in this Learn Pass" text="Edit the active Learn Pass and select at least one learning block." />
-  {/if}
+
+    {#if filteredBlocks.length}
+      <div class="block-grid">
+        {#each pagedBlocks as block}
+          <article class="card block-card">
+            <p class="tag-row">
+              {#if block.tag}
+                <button
+                  class:active={$progress.indexTagFilter === block.tag}
+                  class="chip-button"
+                  type="button"
+                  on:click={() => progress.setIndexTagFilter(block.tag ?? '')}
+                >{block.tag}</button>
+              {:else}
+                <span>{block.type}</span>
+              {/if}
+              {#if block.itemsCount}<span>{block.itemsCount} items</span>{/if}
+            </p>
+            <h3>{block.title}</h3>
+            <p>{block.description}</p>
+            <div class="card__actions">
+              <IconButton icon="arrow_forward" label={`Open ${block.title}`} variant="primary" onClick={() => onOpenBlock(block)} />
+              <FocusButton kind="block" id={block.id} />
+            </div>
+          </article>
+        {/each}
+      </div>
+
+      <div class="pagination-footer">
+        <PaginationControls
+          total={filteredBlocks.length}
+          page={currentPage}
+          pageSize={$progress.indexPageSize}
+          {pageSizeOptions}
+          label="Learning blocks pagination"
+          onPageChange={(page) => progress.setIndexPage(page)}
+          onPageSizeChange={setPageSize}
+        />
+      </div>
+    {:else if blocks.length}
+      <EmptyState title="No blocks for this tag" text="Select another tag or switch back to All." />
+    {:else}
+      <EmptyState title="No blocks in this Learn Pass" text="Edit the active Learn Pass and select at least one learning block." />
+    {/if}
+  </ExpansionPanel>
 </section>

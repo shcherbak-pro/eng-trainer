@@ -87,15 +87,6 @@
       </select>
     </label>
     <SectionSpeechControl controlId="words-visible" label="Listen words" items={speechItems} help="Reads current page words, translations and examples." />
-    <PaginationControls
-      total={visible.length}
-      page={currentPage}
-      pageSize={$progress.wordPageSize}
-      {pageSizeOptions}
-      label="Word index pagination"
-      onPageChange={(page) => progress.setWordPage(page)}
-      onPageSizeChange={setPageSize}
-    />
     <div class="control-actions">
       <IconButton
         icon={$progress.showHiddenWords ? 'visibility_off' : 'visibility'}
@@ -126,4 +117,18 @@
       {/if}
     </div>
   </div>
+
+  {#if visible.length}
+    <div class="pagination-footer">
+      <PaginationControls
+        total={visible.length}
+        page={currentPage}
+        pageSize={$progress.wordPageSize}
+        {pageSizeOptions}
+        label="Word index pagination"
+        onPageChange={(page) => progress.setWordPage(page)}
+        onPageSizeChange={setPageSize}
+      />
+    </div>
+  {/if}
 </section>
