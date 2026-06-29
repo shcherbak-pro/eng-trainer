@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { progress } from '../stores/progress';
+  import { progress, type ListPageSize } from '../stores/progress';
   import type { Materials, Phrase } from '../types/materials';
   import { matchesQuery, uniqueSorted } from '../utils/filters';
   import PhraseCard from '../components/PhraseCard.svelte';
@@ -7,13 +7,33 @@
   import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
   import { phraseToSpeechItem } from '../utils/speechFormatters';
   import IconButton from '../components/IconButton.svelte';
+  import PaginationControls from '../components/PaginationControls.svelte';
+  import type { PageSizeOption } from '../types/pagination';
 
   export let materials: Materials;
+
+  const pageSizeOptions: PageSizeOption[] = [5, 10, 20, 'all'];
 
   type PhraseGroup = {
     section: string;
     items: Phrase[];
   };
+
+
+
+  function paginate(items: Phrase[], page: number, pageSize: ListPageSize): Phrase[] {
+    if (pageSize === 'all') return items;
+    const start = (Math.max(1, page) - 1) * pageSize;
+    return items.slice(start, start + pageSize);
+  }
+
+  function totalPages(total: number, pageSize: ListPageSize): number {
+    return pageSize === 'all' ? 1 : Math.max(1, Math.ceil(total / pageSize));
+  }
+
+  function setPageSize(value: PageSizeOption): void {
+    progress.setPhrasePageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
+  }
 
   function groupBySection(items: Phrase[]): PhraseGroup[] {
     const groups: PhraseGroup[] = [];
@@ -51,9 +71,16 @@
       item.tag
     );
   });
-  $: speechItems = visible.map(phraseToSpeechItem);
-  $: showSectionGroups = $progress.phraseCategory !== 'All' && visible.some((item) => item.section || item.sequence);
-  $: sectionGroups = showSectionGroups ? groupBySection(visible) : [];
+  $: pageCount = totalPages(visible.length, $progress.phrasePageSize);
+  $: currentPage = Math.min(Math.max(1, $progress.phrasePage), pageCount);
+  $: pagedVisible = paginate(visible, currentPage, $progress.phrasePageSize);
+  $: speechItems = pagedVisible.map(phraseToSpeechItem);
+  $: showSectionGroups = $progress.phraseCategory !== 'All' && pagedVisible.some((item) => item.section || item.sequence);
+  $: sectionGroups = showSectionGroups ? groupBySection(pagedVisible) : [];
+
+  $: if ($progress.phrasePage !== currentPage) {
+    progress.setPhrasePage(currentPage);
+  }
 </script>
 
 <section class="section-stack">
@@ -74,7 +101,16 @@
         {/each}
       </select>
     </label>
-    <SectionSpeechControl controlId="phrases-visible" label="Listen phrases" items={speechItems} help="Reads visible phrases, translations, alternatives and examples." />
+    <SectionSpeechControl controlId="phrases-visible" label="Listen phrases" items={speechItems} help="Reads current page phrases, translations, alternatives and examples." />
+    <PaginationControls
+      total={visible.length}
+      page={currentPage}
+      pageSize={$progress.phrasePageSize}
+      {pageSizeOptions}
+      label="Phrases pagination"
+      onPageChange={(page) => progress.setPhrasePage(page)}
+      onPageSizeChange={setPageSize}
+    />
     <div class="control-actions">
       <IconButton
         icon={$progress.showHiddenPhrases ? 'visibility_off' : 'visibility'}
@@ -88,7 +124,7 @@
     </div>
   </div>
 
-  {#if visible.length}
+  {#if pagedVisible.length}
     {#if showSectionGroups}
       <div class="sectioned-list">
         {#each sectionGroups as group}
@@ -104,7 +140,7 @@
       </div>
     {:else}
       <div class="cards-list">
-        {#each visible as phrase (phrase.id)}
+        {#each pagedVisible as phrase (phrase.id)}
           <PhraseCard {phrase} />
         {/each}
       </div>

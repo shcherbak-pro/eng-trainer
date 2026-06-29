@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { progress } from '../stores/progress';
+  import { progress, type ListPageSize } from '../stores/progress';
   import type { Materials, WordIndexItem } from '../types/materials';
   import { matchesQuery, uniqueSorted } from '../utils/filters';
   import WordCard from '../components/WordCard.svelte';
@@ -7,10 +7,29 @@
   import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
   import { wordToSpeechItem } from '../utils/speechFormatters';
   import IconButton from '../components/IconButton.svelte';
+  import PaginationControls from '../components/PaginationControls.svelte';
+  import type { PageSizeOption } from '../types/pagination';
 
   export let materials: Materials;
 
+  const pageSizeOptions: PageSizeOption[] = [5, 10, 20, 'all'];
+
   let selected: WordIndexItem | null = null;
+
+
+  function paginate(items: WordIndexItem[], page: number, pageSize: ListPageSize): WordIndexItem[] {
+    if (pageSize === 'all') return items;
+    const start = (Math.max(1, page) - 1) * pageSize;
+    return items.slice(start, start + pageSize);
+  }
+
+  function totalPages(total: number, pageSize: ListPageSize): number {
+    return pageSize === 'all' ? 1 : Math.max(1, Math.ceil(total / pageSize));
+  }
+
+  function setPageSize(value: PageSizeOption): void {
+    progress.setWordPageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
+  }
 
   $: categories = ['All', ...uniqueSorted(materials.wordIndex.map((item) => item.category))];
   $: visible = materials.wordIndex.filter((item) => {
@@ -36,10 +55,17 @@
     return a.term.localeCompare(b.term);
   });
 
-  $: speechItems = visible.map(wordToSpeechItem);
+  $: pageCount = totalPages(visible.length, $progress.wordPageSize);
+  $: currentPage = Math.min(Math.max(1, $progress.wordPage), pageCount);
+  $: pagedVisible = paginate(visible, currentPage, $progress.wordPageSize);
+  $: speechItems = pagedVisible.map(wordToSpeechItem);
 
-  $: if (!selected && visible.length) selected = visible[0];
-  $: if (selected && !visible.some((item) => item.id === selected?.id)) selected = visible[0] ?? null;
+  $: if ($progress.wordPage !== currentPage) {
+    progress.setWordPage(currentPage);
+  }
+
+  $: if (!selected && pagedVisible.length) selected = pagedVisible[0];
+  $: if (selected && !pagedVisible.some((item) => item.id === selected?.id)) selected = pagedVisible[0] ?? null;
 </script>
 
 <section class="section-stack">
@@ -60,7 +86,16 @@
         {/each}
       </select>
     </label>
-    <SectionSpeechControl controlId="words-visible" label="Listen words" items={speechItems} help="Reads visible words, translations and examples." />
+    <SectionSpeechControl controlId="words-visible" label="Listen words" items={speechItems} help="Reads current page words, translations and examples." />
+    <PaginationControls
+      total={visible.length}
+      page={currentPage}
+      pageSize={$progress.wordPageSize}
+      {pageSizeOptions}
+      label="Word index pagination"
+      onPageChange={(page) => progress.setWordPage(page)}
+      onPageSizeChange={setPageSize}
+    />
     <div class="control-actions">
       <IconButton
         icon={$progress.showHiddenWords ? 'visibility_off' : 'visibility'}
@@ -76,7 +111,7 @@
 
   <div class="split-layout">
     <aside class="index-list card">
-      {#each visible as item}
+      {#each pagedVisible as item}
         <button class:active={selected?.id === item.id} on:click={() => selected = item}>
           <strong>{item.term}</strong>
           <small>{item.category}</small>

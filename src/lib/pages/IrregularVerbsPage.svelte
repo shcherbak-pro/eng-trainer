@@ -1,14 +1,32 @@
 <script lang="ts">
-  import { progress } from '../stores/progress';
-  import type { Materials } from '../types/materials';
+  import { progress, type ListPageSize } from '../stores/progress';
+  import type { IrregularVerb, Materials } from '../types/materials';
   import { matchesQuery, uniqueSorted } from '../utils/filters';
   import IrregularVerbCard from '../components/IrregularVerbCard.svelte';
   import EmptyState from '../components/EmptyState.svelte';
   import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
   import { irregularVerbToSpeechItem } from '../utils/speechFormatters';
   import IconButton from '../components/IconButton.svelte';
+  import PaginationControls from '../components/PaginationControls.svelte';
+  import type { PageSizeOption } from '../types/pagination';
 
   export let materials: Materials;
+
+  const pageSizeOptions: PageSizeOption[] = [5, 10, 20, 'all'];
+
+  function paginate(items: IrregularVerb[], page: number, pageSize: ListPageSize): IrregularVerb[] {
+    if (pageSize === 'all') return items;
+    const start = (Math.max(1, page) - 1) * pageSize;
+    return items.slice(start, start + pageSize);
+  }
+
+  function totalPages(total: number, pageSize: ListPageSize): number {
+    return pageSize === 'all' ? 1 : Math.max(1, Math.ceil(total / pageSize));
+  }
+
+  function setPageSize(value: PageSizeOption): void {
+    progress.setIrregularPageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
+  }
 
   $: groups = ['All', ...uniqueSorted(materials.irregularVerbs.map((item) => item.group))];
   $: visible = materials.irregularVerbs.filter((item) => {
@@ -26,7 +44,14 @@
       item.group
     );
   });
-  $: speechItems = visible.map(irregularVerbToSpeechItem);
+  $: pageCount = totalPages(visible.length, $progress.irregularPageSize);
+  $: currentPage = Math.min(Math.max(1, $progress.irregularPage), pageCount);
+  $: pagedVisible = paginate(visible, currentPage, $progress.irregularPageSize);
+  $: speechItems = pagedVisible.map(irregularVerbToSpeechItem);
+
+  $: if ($progress.irregularPage !== currentPage) {
+    progress.setIrregularPage(currentPage);
+  }
 </script>
 
 <section class="section-stack">
@@ -47,7 +72,16 @@
         {/each}
       </select>
     </label>
-    <SectionSpeechControl controlId="irregular-visible" label="Listen verbs" items={speechItems} help="Reads visible verb forms, translations and examples." />
+    <SectionSpeechControl controlId="irregular-visible" label="Listen verbs" items={speechItems} help="Reads current page verb forms, translations and examples." />
+    <PaginationControls
+      total={visible.length}
+      page={currentPage}
+      pageSize={$progress.irregularPageSize}
+      {pageSizeOptions}
+      label="Irregular verbs pagination"
+      onPageChange={(page) => progress.setIrregularPage(page)}
+      onPageSizeChange={setPageSize}
+    />
     <div class="control-actions">
       <IconButton
         icon={$progress.showHiddenIrregular ? 'visibility_off' : 'visibility'}
@@ -61,9 +95,9 @@
     </div>
   </div>
 
-  {#if visible.length}
+  {#if pagedVisible.length}
     <div class="cards-list">
-      {#each visible as verb (verb.id)}
+      {#each pagedVisible as verb (verb.id)}
         <IrregularVerbCard {verb} />
       {/each}
     </div>
