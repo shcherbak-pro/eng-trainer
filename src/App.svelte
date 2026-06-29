@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { DEFAULT_LEARN_PASS_ID, progress } from './lib/stores/progress';
-  import type { Materials, TrainingBlock } from './lib/types/materials';
+  import type { LearnPass, Materials, TrainingBlock } from './lib/types/materials';
   import AppShell from './lib/components/AppShell.svelte';
   import IndexPage from './lib/pages/IndexPage.svelte';
   import PhrasesPage from './lib/pages/PhrasesPage.svelte';
@@ -41,10 +41,14 @@
     return false;
   }
 
-  function getBlocksForLearnPass(allBlocks: TrainingBlock[]): TrainingBlock[] {
-    if ($progress.selectedLearnPassId === DEFAULT_LEARN_PASS_ID) return allBlocks;
+  function getBlocksForLearnPass(
+    allBlocks: TrainingBlock[],
+    selectedLearnPassId: string,
+    learnPasses: LearnPass[]
+  ): TrainingBlock[] {
+    if (selectedLearnPassId === DEFAULT_LEARN_PASS_ID) return allBlocks;
 
-    const activePass = $progress.learnPasses.find((pass) => pass.id === $progress.selectedLearnPassId);
+    const activePass = learnPasses.find((pass) => pass.id === selectedLearnPassId);
     if (!activePass) return allBlocks;
 
     const allowed = new Set(activePass.blockIds);
@@ -52,7 +56,9 @@
   }
 
   $: allBlocks = materials ? materials.blocks.filter((block) => blockHasContent(block, materials!)).sort((a, b) => (a.priority ?? 0) - (b.priority ?? 0)) : [];
-  $: blocks = getBlocksForLearnPass(allBlocks);
+  $: selectedLearnPassId = $progress.selectedLearnPassId;
+  $: learnPasses = $progress.learnPasses;
+  $: blocks = getBlocksForLearnPass(allBlocks, selectedLearnPassId, learnPasses);
   $: availablePages = getAvailablePages(blocks);
 
   function getAvailablePages(blockList: TrainingBlock[]): string[] {
