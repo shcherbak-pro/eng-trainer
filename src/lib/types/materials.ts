@@ -47,6 +47,7 @@ export type TrainingBlock = {
   title: string;
   category?: string;
   type: 'phraseCategory' | 'patterns' | 'answers' | 'practice' | 'wordIndex' | 'reversePractice' | 'irregularVerbs';
+  verbSet?: string;
   description: string;
   icon?: string;
   tag?: string;
@@ -72,6 +73,7 @@ export type WordIndexItem = {
 
 export type IrregularVerb = {
   id: string;
+  verbSet?: string;
   group: string;
   base: string;
   pastSimple: string;

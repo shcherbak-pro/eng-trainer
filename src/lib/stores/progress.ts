@@ -21,6 +21,7 @@ export type ProgressState = {
   wordCategory: string;
   irregularQuery: string;
   irregularGroup: string;
+  irregularSet: string;
   reverseMode: "phrase" | "example";
   showHiddenPhrases: boolean;
   showHiddenWords: boolean;
@@ -61,6 +62,7 @@ const defaultState: ProgressState = {
   wordCategory: "All",
   irregularQuery: "",
   irregularGroup: "All",
+  irregularSet: "essential-100",
   reverseMode: "phrase",
   showHiddenPhrases: false,
   showHiddenWords: false,
@@ -172,6 +174,8 @@ function normalizeState(value: unknown): ProgressState {
     phrasePageSize: normalizeListPageSize(state.phrasePageSize),
     wordPage: normalizePositivePage(state.wordPage),
     wordPageSize: normalizeListPageSize(state.wordPageSize),
+    irregularSet:
+      typeof state.irregularSet === "string" ? state.irregularSet : "essential-100",
     irregularPage: normalizePositivePage(state.irregularPage),
     irregularPageSize: normalizeListPageSize(state.irregularPageSize),
     learnedPhrases: normalizeStringList(state.learnedPhrases),
@@ -274,6 +278,8 @@ function createProgressStore() {
       update((state) => ({ ...state, irregularQuery, irregularPage: 1 })),
     setIrregularGroup: (irregularGroup: string) =>
       update((state) => ({ ...state, irregularGroup, irregularPage: 1 })),
+    setIrregularSet: (irregularSet: string) =>
+      update((state) => ({ ...state, irregularSet, irregularGroup: "All", irregularPage: 1 })),
     setReverseMode: (reverseMode: ProgressState["reverseMode"]) =>
       update((state) => ({ ...state, reverseMode })),
     setCurrentPrompt: (currentPrompt: string) =>

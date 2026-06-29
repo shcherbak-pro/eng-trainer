@@ -1,20 +1,36 @@
-# English Assessment Trainer
+# ShcherbakPro English Trainer
 
-A responsive learning app for preparing for English speaking assessments and improving practical workplace English.
+ShcherbakPro English Trainer is a responsive learning app for English speaking assessment preparation and practical workplace English.
 
-## What you can practice
+## What the app helps you practice
 
-- useful phrases, connectors, and phrasal verbs
-- vocabulary with translations, pronunciation, and examples
-- reverse translation practice
-- 100 common irregular verbs grouped by usage context
-- ready-made answers and speaking patterns
-- random speaking prompts and pronunciation practice
-- full-section listening practice with configurable repetitions
+- speaking answer patterns and ready-made answer structures
+- useful phrases, connectors, hedging phrases, and advanced linking words
+- workplace topics such as teamwork, remote work, leadership, time management, stress management, and conflict resolution
+- AI, coding tools, agent framework, presentation, and cost-optimization vocabulary
+- word index with translation, transcription, alternatives, and examples
+- reverse practice from Ukrainian to English
+- irregular verbs with 3 forms, translation, transcription, and examples
+- pronunciation and listening practice with browser speech synthesis
 
-## Personal learning experience
+## Focus tools
 
-You can mark items as learned, hide material you no longer need, add important content to a Focus List, and save your preferred listening repetition count. Your learning state is saved in the browser, so you can continue from where you stopped.
+The app includes several tools to keep learning focused:
+
+- **Learn Passes** — create focused learning tracks and show only selected materials.
+- **Focus List** — save important words, phrases, verbs, or learning blocks for repeated practice.
+- **Hide / Unhide** — remove learned items from normal lists without deleting them.
+- **Tag Cloud** — filter materials by topic tags.
+- **Phrase / Word of the Day** — get a random item for quick daily practice.
+- **Pagination** — control how many items are shown on each page.
+
+## Listening practice
+
+For phrases, words, irregular verbs, and Focus List items, the app can read the visible materials aloud. You can choose the number of repeats and use the feature for passive listening or pronunciation practice.
+
+## Personal progress
+
+Learning state is saved in the browser, including selected Learn Pass, hidden items, Focus List, pagination settings, theme, and expanded panels.
 
 ## Live app
 

@@ -139,6 +139,11 @@
         .map((block) => block.category as string)
     );
     const hasWordIndex = activeBlocks.some((block) => block.type === 'wordIndex');
+    const activeVerbSets = new Set(
+      activeBlocks
+        .filter((block) => block.type === 'irregularVerbs' && block.verbSet)
+        .map((block) => block.verbSet as string)
+    );
     const hasIrregularVerbs = activeBlocks.some((block) => block.type === 'irregularVerbs');
 
     if (phraseCategories.size) {
@@ -150,7 +155,10 @@
     }
 
     if (hasIrregularVerbs) {
-      candidates.push(...data.irregularVerbs.map(verbToDaily));
+      const verbs = activeVerbSets.size
+        ? data.irregularVerbs.filter((item) => item.verbSet && activeVerbSets.has(item.verbSet))
+        : data.irregularVerbs;
+      candidates.push(...verbs.map(verbToDaily));
     }
 
     if (!candidates.length) {

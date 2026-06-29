@@ -34,7 +34,11 @@
     if (block.type === 'phraseCategory') return data.phrases.some((item) => item.category === block.category);
     if (block.type === 'wordIndex') return data.wordIndex.length > 0;
     if (block.type === 'reversePractice') return data.wordIndex.length > 0 || data.phrases.length > 0;
-    if (block.type === 'irregularVerbs') return data.irregularVerbs.length > 0;
+    if (block.type === 'irregularVerbs') {
+      return block.verbSet
+        ? data.irregularVerbs.some((item) => item.verbSet === block.verbSet)
+        : data.irregularVerbs.length > 0;
+    }
     if (block.type === 'patterns') return data.patterns.length > 0;
     if (block.type === 'answers') return data.answers.length > 0;
     if (block.type === 'practice') return data.drills.length > 0;
@@ -99,10 +103,15 @@
       navigate('phrases');
       return;
     }
+    if (block.type === 'irregularVerbs') {
+      if (block.verbSet) progress.setIrregularSet(block.verbSet);
+      navigate('irregularVerbs');
+      return;
+    }
+
     const map: Record<string, string> = {
       wordIndex: 'wordIndex',
       reversePractice: 'reverse',
-      irregularVerbs: 'irregularVerbs',
       patterns: 'patterns',
       answers: 'answers',
       practice: 'practice'
