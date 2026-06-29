@@ -2,6 +2,11 @@
 
 ## 2026-06-29
 
+### Fixed
+
+- Improved toolbar layout on **Phrases** and **Word Index** pages.
+- Stacked **Search** and **Category** controls vertically and placed listening controls beside them to avoid overlap.
+
 ### Added
 
 - Added a new **200 Irregular Verbs — Logical Groups** learning block.

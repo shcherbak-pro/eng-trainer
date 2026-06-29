@@ -69,34 +69,41 @@
 </script>
 
 <section class="section-stack">
-  <div class="toolbar-card controls-grid">
-    <div>
-      <h2>Word Index</h2>
-      <p>Клік по фразі відкриває переклад, transcription, alternatives і приклади застосування.</p>
+  <div class="toolbar-card controls-stack">
+    <div class="controls-stack__header">
+      <div>
+        <h2>Word Index</h2>
+        <p>Клік по фразі відкриває переклад, transcription, alternatives і приклади застосування.</p>
+      </div>
+      <div class="control-actions">
+        <IconButton
+          icon={$progress.showHiddenWords ? 'visibility_off' : 'visibility'}
+          label={$progress.showHiddenWords ? 'Hide hidden words' : 'Show hidden words'}
+          variant="secondary"
+          onClick={() => progress.toggleShowHidden('word')}
+        />
+        {#if $progress.hiddenWords.length}
+          <IconButton icon="settings_backup_restore" label="Unhide all words" variant="danger" onClick={() => progress.unhideAll('word')} />
+        {/if}
+      </div>
     </div>
-    <label>
-      Search
-      <input value={$progress.wordQuery} on:input={(e) => progress.setWordQuery((e.target as HTMLInputElement).value)} placeholder="run into, lack, estimate…" />
-    </label>
-    <label>
-      Category
-      <select value={$progress.wordCategory} on:change={(e) => progress.setWordCategory((e.target as HTMLSelectElement).value)}>
-        {#each categories as category}
-          <option value={category}>{category}</option>
-        {/each}
-      </select>
-    </label>
-    <SectionSpeechControl controlId="words-visible" label="Listen words" items={speechItems} help="Reads current page words, translations and examples." />
-    <div class="control-actions">
-      <IconButton
-        icon={$progress.showHiddenWords ? 'visibility_off' : 'visibility'}
-        label={$progress.showHiddenWords ? 'Hide hidden words' : 'Show hidden words'}
-        variant="secondary"
-        onClick={() => progress.toggleShowHidden('word')}
-      />
-      {#if $progress.hiddenWords.length}
-        <IconButton icon="settings_backup_restore" label="Unhide all words" variant="danger" onClick={() => progress.unhideAll('word')} />
-      {/if}
+
+    <div class="controls-stack__row controls-stack__row--filters-listen">
+      <div class="controls-filter-stack">
+        <label>
+          Search
+          <input value={$progress.wordQuery} on:input={(e) => progress.setWordQuery((e.target as HTMLInputElement).value)} placeholder="run into, lack, estimate…" />
+        </label>
+        <label>
+          Category
+          <select value={$progress.wordCategory} on:change={(e) => progress.setWordCategory((e.target as HTMLSelectElement).value)}>
+            {#each categories as category}
+              <option value={category}>{category}</option>
+            {/each}
+          </select>
+        </label>
+      </div>
+      <SectionSpeechControl controlId="words-visible" label="Listen words" items={speechItems} help="Reads current page words, translations and examples." />
     </div>
   </div>
 

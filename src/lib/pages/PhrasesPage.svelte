@@ -103,19 +103,21 @@
       </div>
     </div>
 
-    <div class="controls-stack__row">
-      <label>
-        Search
-        <input value={$progress.phraseQuery} on:input={(e) => progress.setPhraseQuery((e.target as HTMLInputElement).value)} placeholder="AI, otherwise, meeting…" />
-      </label>
-      <label>
-        Category
-        <select value={$progress.phraseCategory} on:change={(e) => progress.setPhraseCategory((e.target as HTMLSelectElement).value)}>
-          {#each categories as category}
-            <option value={category}>{category}</option>
-          {/each}
-        </select>
-      </label>
+    <div class="controls-stack__row controls-stack__row--filters-listen">
+      <div class="controls-filter-stack">
+        <label>
+          Search
+          <input value={$progress.phraseQuery} on:input={(e) => progress.setPhraseQuery((e.target as HTMLInputElement).value)} placeholder="AI, otherwise, meeting…" />
+        </label>
+        <label>
+          Category
+          <select value={$progress.phraseCategory} on:change={(e) => progress.setPhraseCategory((e.target as HTMLSelectElement).value)}>
+            {#each categories as category}
+              <option value={category}>{category}</option>
+            {/each}
+          </select>
+        </label>
+      </div>
       <SectionSpeechControl controlId="phrases-visible" label="Listen phrases" items={speechItems} help="Reads current page phrases, translations, alternatives and examples." />
     </div>
   </div>
