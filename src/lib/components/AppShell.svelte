@@ -8,6 +8,8 @@
   export let activePage: string;
   export let pageLabels: Record<string, string>;
   export let onNavigate: (page: string) => void;
+  /** Shows only the page title in the hero, for pages that need the screen space. */
+  export let compactHero = false;
 
   $: focusCount = $progress.favoriteBlocks.length + $progress.favoritePhrases.length + $progress.favoriteWords.length + $progress.favoriteIrregular.length;
   $: hiddenCount = $progress.hiddenPhrases.length + $progress.hiddenWords.length + $progress.hiddenIrregular.length;
@@ -41,7 +43,7 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" class:hero--compact={compactHero}>
     <div>
       <p class="eyebrow">Speaking assessment trainer</p>
       <h1>{pageLabels[activePage] ?? 'Trainer'}</h1>
@@ -61,7 +63,7 @@
   </main>
 
   <nav class="bottom-nav" aria-label="Mobile navigation">
-    {#each ['index', 'phrases', 'wordIndex', 'reverse', 'irregularVerbs', 'favorites'] as page}
+    {#each ['index', 'phrases', 'wordIndex', 'flashcards', 'reverse', 'irregularVerbs', 'favorites'] as page}
       {#if availablePages.includes(page)}
         <button class:active={activePage === page} on:click={() => onNavigate(page)}>
           <span>{pageLabels[page]}</span>

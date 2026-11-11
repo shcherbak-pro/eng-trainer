@@ -6,6 +6,7 @@
   import IndexPage from './lib/pages/IndexPage.svelte';
   import PhrasesPage from './lib/pages/PhrasesPage.svelte';
   import WordIndexPage from './lib/pages/WordIndexPage.svelte';
+  import FlashcardsPage from './lib/pages/FlashcardsPage.svelte';
   import ReversePracticePage from './lib/pages/ReversePracticePage.svelte';
   import IrregularVerbsPage from './lib/pages/IrregularVerbsPage.svelte';
   import PatternsPage from './lib/pages/PatternsPage.svelte';
@@ -22,6 +23,7 @@
     index: 'Index',
     phrases: 'Phrases',
     wordIndex: 'Words',
+    flashcards: 'Flashcards',
     reverse: 'Reverse',
     irregularVerbs: 'Verbs',
     patterns: 'Patterns',
@@ -71,6 +73,7 @@
 
     if (types.has('phraseCategory')) pages.push('phrases');
     if (types.has('wordIndex')) pages.push('wordIndex');
+    if (types.has('phraseCategory') || types.has('wordIndex')) pages.push('flashcards');
     if (types.has('reversePractice')) pages.push('reverse');
     if (types.has('irregularVerbs')) pages.push('irregularVerbs');
     if (types.has('patterns')) pages.push('patterns');
@@ -169,13 +172,15 @@
     </div>
   </main>
 {:else}
-  <AppShell {materials} {availablePages} {activePage} {pageLabels} onNavigate={navigate}>
+  <AppShell {materials} {availablePages} {activePage} {pageLabels} compactHero={activePage === 'flashcards'} onNavigate={navigate}>
     {#if activePage === 'index'}
       <IndexPage {materials} {blocks} {allBlocks} onOpenBlock={openBlock} />
     {:else if activePage === 'phrases'}
       <PhrasesPage {materials} />
     {:else if activePage === 'wordIndex'}
       <WordIndexPage {materials} />
+    {:else if activePage === 'flashcards'}
+      <FlashcardsPage {materials} />
     {:else if activePage === 'reverse'}
       <ReversePracticePage {materials} />
     {:else if activePage === 'irregularVerbs'}

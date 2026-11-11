@@ -235,7 +235,7 @@ textarea { min-height: 130px; resize: vertical; }
 .compact-card { padding: 16px; }
 .empty-state { padding: 32px; text-align: center; color: var(--muted); }
 
-.bottom-nav { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: var(--bottom-nav-bg); backdrop-filter: blur(16px); border-top: 1px solid var(--border); padding: 8px max(10px, env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-right)); grid-template-columns: repeat(6, 1fr); gap: 4px; }
+.bottom-nav { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: var(--bottom-nav-bg); backdrop-filter: blur(16px); border-top: 1px solid var(--border); padding: 8px max(10px, env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-right)); grid-template-columns: repeat(7, 1fr); gap: 4px; }
 .bottom-nav button { border: 0; background: transparent; color: var(--muted); border-radius: 14px; min-height: 48px; font-size: 0.76rem; font-weight: 800; }
 .bottom-nav button.active { background: var(--active-nav-bg); color: var(--active-nav-text); }
 
@@ -273,7 +273,7 @@ textarea { min-height: 130px; resize: vertical; }
   .btn--icon-only { width: 42px; min-width: 42px; }
   .card__actions { display: flex; flex-wrap: wrap; }
   .listen-control__actions { grid-template-columns: 1fr; }
-  .bottom-nav { grid-template-columns: repeat(3, 1fr); }
+  .bottom-nav { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (max-width: 390px) {
@@ -387,4 +387,106 @@ textarea { min-height: 130px; resize: vertical; }
   .controls-stack__row, .controls-stack__row--filters-listen { grid-template-columns: 1fr; }
   .controls-stack__header { display: grid; grid-template-columns: 1fr; }
   .controls-stack__header .control-actions { justify-content: flex-start; }
+}
+
+/* Flashcards */
+.hero--compact { align-items: center; padding-top: 18px; padding-bottom: 18px; }
+.hero--compact h1 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.hero--compact .hero__stats, .hero--compact p:not(.eyebrow) { display: none; }
+.flashcards-toolbar { gap: 14px; }
+.flashcards-toolbar__header { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+.flashcards-toolbar__header h2 { margin: 0; }
+.flashcards-toolbar__header .control-actions { flex: 0 0 auto; flex-wrap: nowrap; justify-content: flex-end; }
+.flashcards-toolbar__intro { margin: 0; color: var(--muted); }
+.flashcards-deck { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: end; }
+.flashcards-deck label { flex: 1 1 240px; min-width: 0; }
+.flashcards-deck select { width: 100%; }
+.segmented { display: inline-flex; gap: 4px; padding: 4px; border: 1px solid var(--border); border-radius: 999px; background: var(--secondary-bg); }
+.segmented button { border: 0; border-radius: 999px; min-height: 38px; padding: 0 16px; background: transparent; color: var(--secondary-text); font-weight: 850; white-space: nowrap; }
+.segmented button.active { background: var(--accent); color: var(--accent-text); }
+.segmented button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.segmented button:disabled { cursor: not-allowed; opacity: 0.55; }
+
+.flashcards-progress { display: grid; gap: 8px; }
+.flashcards-progress__stats { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-weight: 700; }
+.flashcards-progress__stats strong { color: var(--text); }
+.flashcards-progress__bar { height: 8px; border-radius: 999px; background: var(--secondary-bg); overflow: hidden; }
+.flashcards-progress__bar span { display: block; height: 100%; border-radius: 999px; background: var(--success); transition: width 0.25s ease; }
+.flashcards-progress__note { margin: 0; font-size: 0.88rem; }
+.flashcards-progress__note:empty { display: none; }
+
+/* The stage clips the card while it flies off screen, so the page never scrolls sideways. */
+.flashcard-stage { display: grid; justify-items: center; gap: 16px; margin: 0 -12px; padding: 4px 12px 8px; overflow-x: hidden; overflow-x: clip; }
+/* touch-action: pan-y keeps vertical page scrolling native and leaves horizontal swipes to the card. */
+.flashcard-swipe { position: relative; width: min(560px, 100%); touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; transition: transform 0.2s ease, opacity 0.2s ease; will-change: transform; }
+.flashcard-swipe.dragging { transition: none; cursor: grabbing; }
+.flashcard { position: relative; animation: flashcard-in 0.22s ease; }
+@keyframes flashcard-in { from { opacity: 0; transform: translateY(10px) scale(0.97); } }
+.flashcard__surface { display: block; width: 100%; padding: 0; border: 0; border-radius: 28px; background: transparent; color: var(--text); text-align: center; cursor: inherit; touch-action: pan-y; perspective: 1400px; }
+.flashcard__surface:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.flashcard__inner { display: grid; min-height: clamp(280px, 40svh, 360px); transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.flashcard.flipped .flashcard__inner { transform: rotateY(180deg); }
+.flashcard__face { grid-area: 1 / 1; position: relative; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 66px 24px 54px; border: 1px solid var(--border); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flashcard__face--back { transform: rotateY(180deg); padding-bottom: 28px; background: linear-gradient(180deg, var(--surface), var(--surface-2)); }
+.flashcard__face .tag-row { position: absolute; top: 20px; left: 20px; right: 70px; margin: 0; }
+.flashcard__term { font-size: clamp(1.6rem, 5vw, 2.3rem); font-weight: 850; line-height: 1.2; overflow-wrap: anywhere; }
+.flashcard__translation { font-size: clamp(1.3rem, 4vw, 1.75rem); font-weight: 800; line-height: 1.3; overflow-wrap: anywhere; }
+.flashcard__term.long, .flashcard__translation.long { font-size: clamp(1.08rem, 3.4vw, 1.3rem); line-height: 1.4; }
+.flashcard__transcription { color: var(--muted); font-size: 1.05rem; overflow-wrap: anywhere; }
+.flashcard__label { color: var(--muted); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.flashcard__hint { position: absolute; left: 0; right: 0; bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--muted); font-size: 0.85rem; font-weight: 700; }
+.flashcard__hint .material-symbols-rounded { font-size: 18px; }
+.flashcard__example { display: grid; gap: 6px; width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); text-align: left; }
+.flashcard__example .example, .flashcard__example .translation { display: block; }
+.flashcard__example .example { font-size: 1rem; line-height: 1.5; }
+.flashcard__meta { color: var(--muted); font-size: 0.9rem; line-height: 1.45; }
+.flashcard__meta strong { color: var(--text); }
+.flashcard__speak { position: absolute; top: 14px; right: 14px; z-index: 2; }
+
+.swipe-badge { position: absolute; top: 18px; left: 50%; z-index: 3; transform: translateX(-50%) scale(0.9); padding: 6px 14px; border: 2px solid currentColor; border-radius: 999px; font-size: 0.82rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.12s ease, transform 0.12s ease; }
+.swipe-badge.visible { opacity: 0.55; }
+.swipe-badge.ready { opacity: 1; transform: translateX(-50%) scale(1); }
+.swipe-badge--know { background: var(--learned-bg); color: var(--success); }
+.swipe-badge--again { background: var(--focus-bg); color: var(--focus-text); }
+
+.flashcard-actions { width: min(560px, 100%); display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: center; }
+.flashcard-actions .btn { min-height: 52px; gap: 6px; padding: 6px 12px; line-height: 1.15; white-space: normal; }
+.flashcard-actions .btn--icon-only { width: 52px; min-width: 52px; padding: 0; }
+.flashcard-keys, .flashcard-touch-hint { margin: 0; font-size: 0.85rem; text-align: center; }
+.flashcard-touch-hint { display: none; }
+.flashcard-keys kbd { display: inline-block; min-width: 24px; padding: 1px 6px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); font: inherit; font-weight: 700; text-align: center; }
+
+.flashcards-review__list { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; }
+.flashcards-review__list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 14px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface-2); }
+.flashcards-review__text { display: grid; gap: 4px; min-width: 0; overflow-wrap: anywhere; }
+.flashcards-review__actions { display: flex; align-items: center; gap: 8px; }
+.flashcards-complete { display: grid; justify-items: center; gap: 4px; padding: 36px 22px; text-align: center; }
+.flashcards-complete > .material-symbols-rounded { font-size: 48px; color: var(--accent); }
+.flashcards-complete .card__actions { justify-content: center; }
+
+@media (hover: none) {
+  .flashcard-keys { display: none; }
+  .flashcard-touch-hint { display: block; }
+}
+
+@media (max-width: 360px) {
+  .flashcard-actions .btn:not(.btn--icon-only) .material-symbols-rounded { display: none; }
+}
+
+@media (max-width: 640px) {
+  /* On phones the toolbar already names the page, so the card gets the hero's space. */
+  .hero--compact { display: none; }
+  .hero--compact + .page-wrap { margin-top: 14px; }
+  /* The same hint is shown under the answer buttons on touch screens. */
+  .flashcards-toolbar__intro { display: none; }
+  .flashcards-page { padding-bottom: 28px; }
+  .flashcard__inner { min-height: clamp(240px, 36svh, 340px); }
+  .flashcard-actions { gap: 8px; }
+  .flashcard-actions .btn { padding: 6px 10px; font-size: 0.95rem; }
+  .flashcard-actions .btn--icon-only { width: 46px; min-width: 46px; padding: 0; }
+  .flashcards-deck .segmented { display: flex; width: 100%; }
+  .flashcards-deck .segmented button { flex: 1; padding: 0 10px; }
+  .flashcard__face { padding-left: 18px; padding-right: 18px; }
+  .flashcards-review__list li { grid-template-columns: 1fr; }
+  .flashcards-review__actions .btn:not(.btn--icon-only) { flex: 1; width: auto; }
 }
