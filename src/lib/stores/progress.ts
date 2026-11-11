@@ -5,6 +5,7 @@ import type {
   LearnPass,
   LearnPassDraft,
 } from "../types/materials";
+import type { FlashcardMode, FlashcardSession } from "../types/flashcards";
 
 const STORAGE_KEY = "englishAssessmentTrainer.svelteState.v1";
 export const DEFAULT_LEARN_PASS_ID = "default";
@@ -52,6 +53,9 @@ export type ProgressState = {
   favoriteWords: string[];
   favoriteIrregular: string[];
   learnPasses: LearnPass[];
+  flashcardMode: FlashcardMode;
+  flashcardTopic: string;
+  flashcardSessions: Record<string, FlashcardSession>;
 };
 
 const defaultState: ProgressState = {
@@ -93,6 +97,9 @@ const defaultState: ProgressState = {
   favoriteWords: [],
   favoriteIrregular: [],
   learnPasses: [],
+  flashcardMode: "all",
+  flashcardTopic: "",
+  flashcardSessions: {},
 };
 
 function canUseStorage(): boolean {
@@ -125,6 +132,31 @@ function normalizeIndexPageSize(value: unknown): IndexPageSize {
 function normalizeListPageSize(value: unknown): ListPageSize {
   if (value === 10 || value === 20 || value === "all") return value;
   return 5;
+}
+
+function normalizeFlashcardSessions(
+  value: unknown,
+): Record<string, FlashcardSession> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+
+  const sessions: Record<string, FlashcardSession> = {};
+
+  for (const [deckKey, entry] of Object.entries(value)) {
+    if (!entry || typeof entry !== "object") continue;
+
+    const candidate = entry as Partial<FlashcardSession>;
+    const order = uniqueValues(normalizeStringList(candidate.order));
+    const index =
+      typeof candidate.index === "number" &&
+      Number.isFinite(candidate.index) &&
+      candidate.index > 0
+        ? Math.floor(candidate.index)
+        : 0;
+
+    sessions[deckKey] = { order, index: index < order.length ? index : 0 };
+  }
+
+  return sessions;
 }
 
 function normalizeLearnPass(value: unknown): LearnPass | null {
@@ -191,6 +223,10 @@ function normalizeState(value: unknown): ProgressState {
           .map(normalizeLearnPass)
           .filter((pass): pass is LearnPass => Boolean(pass))
       : [],
+    flashcardMode: state.flashcardMode === "topic" ? "topic" : "all",
+    flashcardTopic:
+      typeof state.flashcardTopic === "string" ? state.flashcardTopic : "",
+    flashcardSessions: normalizeFlashcardSessions(state.flashcardSessions),
   };
 }
 
@@ -409,6 +445,42 @@ function createProgressStore() {
       update((state) => {
         const key = hiddenKey(kind);
         return { ...state, [key]: [] };
+      }),
+    setFlashcardMode: (flashcardMode: FlashcardMode) =>
+      update((state) => ({ ...state, flashcardMode })),
+    setFlashcardTopic: (flashcardTopic: string) =>
+      update((state) => ({ ...state, flashcardTopic })),
+    // Saves the review sequence of one deck. `learnedIds` are the items the
+    // learner has just marked as known; they are shared with every other deck.
+    saveFlashcardSession: (
+      deckKey: string,
+      session: FlashcardSession,
+      learnedIds: string[] = [],
+    ) =>
+      update((state) => ({
+        ...state,
+        learnedPhrases: uniqueValues([...state.learnedPhrases, ...learnedIds]),
+        flashcardSessions: { ...state.flashcardSessions, [deckKey]: session },
+      })),
+    // "Learn again": the items go back to the learning pool of every deck.
+    relearnFlashcards: (ids: string[]) =>
+      update((state) => ({
+        ...state,
+        learnedPhrases: state.learnedPhrases.filter((id) => !ids.includes(id)),
+      })),
+    // Resets one deck: its learned items become unlearned and its review
+    // sequence starts from the beginning.
+    resetFlashcardDeck: (deckKey: string, ids: string[]) =>
+      update((state) => {
+        const flashcardSessions = { ...state.flashcardSessions };
+        delete flashcardSessions[deckKey];
+        return {
+          ...state,
+          learnedPhrases: state.learnedPhrases.filter(
+            (id) => !ids.includes(id),
+          ),
+          flashcardSessions,
+        };
       }),
     resetAll: () => set(defaultState),
   };
