@@ -1,0 +1,10 @@
+chromium 151.0.7922.34
+PASS chromium explicit-links-different-text-and-unlinked-equal-text
+PASS chromium completion-only-abort
+PASS chromium sync-issue-failure
+PASS chromium saved-560-card-order-resumes-and-appends-six-identities
+firefox 153.0
+PASS firefox explicit-links-different-text-and-unlinked-equal-text
+PASS firefox completion-only-abort
+PASS firefox sync-issue-failure
+PASS firefox saved-560-card-order-resumes-and-appends-six-identities

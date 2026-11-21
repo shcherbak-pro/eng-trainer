@@ -1,6 +1,16 @@
-name: Deploy to GitHub Pages
+name: Build and deploy to GitHub Pages
+
+# One workflow builds both applications (v2 in the repository root, v1 in ./v1),
+# assembles them into one site and is the only publisher of GitHub Pages.
+#
+# - Pull requests to main: checks, both builds and the assembly. Nothing is published.
+# - Pushes to main: the same, then one upload and one deployment of the whole site.
+# - Manual runs: publish only when started from main.
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
@@ -8,19 +18,16 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
+# A newer commit of the same pull request replaces the older run.
+# Runs on main are never cancelled here; deployments are ordered below.
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: build-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
+  build:
+    name: Check, build and assemble
     runs-on: ubuntu-latest
 
     steps:
@@ -31,21 +38,76 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            v1/package-lock.json
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install v2 dependencies
+        run: npm ci
 
-      - name: Build application
+      - name: Install v1 dependencies
+        run: npm ci
+        working-directory: v1
+
+      - name: Check v2
+        run: npm run check
+
+      - name: Test v2
+        run: npm test
+
+      - name: Check v1
+        run: npm run check
+        working-directory: v1
+
+      - name: Test v1
+        run: npm test
+        working-directory: v1
+
+      - name: Build v2
         run: npm run build
 
+      - name: Build v1
+        run: npm run build
+        working-directory: v1
+
+      - name: Assemble the site
+        run: npm run assemble
+
+      - name: Check the assembled site
+        run: npm run check:site
+
       - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v6
 
-      - name: Upload production build
+      - name: Upload the assembled site
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./dist
+          path: ./site-dist
 
+  deploy:
+    name: Deploy to GitHub Pages
+    # Only main is published: pushes to main and manual runs started from main.
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    # One deployment at a time. A running deployment is allowed to finish.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

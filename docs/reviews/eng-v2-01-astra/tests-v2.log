@@ -1,0 +1,40 @@
+
+> english-assessment-trainer-v2@2.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 <repo>/.astra-review-JWjXDp/candidate
+
+ ✓ src/features/flashcards/flashcards.test.ts (30 tests) 59ms
+ ✓ src/content/catalog.test.ts (6 tests) 494ms
+   ✓ built-in content catalog > finds every phrase, word and verb by its own text, wherever it is in the catalog  484ms
+ ✓ src/state/progress.test.ts (25 tests) 4655ms
+   ✓ learning state in IndexedDB > returns items to the learning pool with "Learn again"  614ms
+   ✓ learning state in IndexedDB > resets one deck without touching the others  404ms
+ ✓ src/app/App.test.ts (9 tests) 7987ms
+   ✓ application shell > loads the built-in content from its own base path and shows the index  2319ms
+   ✓ application shell > links to the preserved v1 application  564ms
+   ✓ application shell > renders every screen from the catalog  1491ms
+   ✓ application shell > searches the whole catalog, not only the items shown on the current page  635ms
+   ✓ application shell > opens the saved screen and keeps progress and preferences after a reload  951ms
+   ✓ application shell > does not write anything while starting with existing saved state  437ms
+   ✓ loading and storage errors > shows an error and a retry when the content cannot be loaded  459ms
+   ✓ loading and storage errors > stops with a visible error when the saved state cannot be opened, and can continue without saving  575ms
+   ✓ loading and storage errors > shows a notice when a change cannot be saved, until saving succeeds  552ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts (26 tests) 9194ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1353ms
+   ✓ Flashcards page > flips the card on tap and shows the translation and example  493ms
+   ✓ Flashcards page > buttons > "I know it" marks the card as learned and moves on  305ms
+   ✓ Flashcards page > buttons > "Keep learning" keeps the card in the pool and brings it back later  362ms
+   ✓ Flashcards page > buttons > always starts the next card on the front side  314ms
+   ✓ Flashcards page > keyboard > ArrowLeft means "Keep learning"  355ms
+   ✓ Flashcards page > keyboard > Enter and Space flip the card  328ms
+   ✓ Flashcards page > keyboard > ignores shortcuts combined with modifier keys  301ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  551ms
+   ✓ Flashcards page > saved progress > resumes in the middle of a round after a reload  554ms
+
+ Test Files  5 passed (5)
+      Tests  96 passed (96)
+   Start at  11:31:30
+   Duration  11.14s (transform 1.94s, setup 283ms, collect 2.34s, tests 22.39s, environment 3.47s, prepare 767ms)
+

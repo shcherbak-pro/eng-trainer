@@ -1,0 +1,26 @@
+
+> english-assessment-trainer-v2@2.0.0 test:v1
+> npm --prefix v1 run test
+
+
+> english-assessment-trainer-v1@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 <repo>/.astra-review-JWjXDp/candidate/v1
+
+ ✓ src/lib/utils/flashcards.test.ts (30 tests) 112ms
+ ✓ src/lib/stores/progress.flashcards.test.ts (12 tests) 2305ms
+   ✓ flashcard progress in localStorage > keeps learned items, the review sequence and the selected deck after a reload  313ms
+   ✓ flashcard progress in localStorage > resets one deck without touching the others  600ms
+ ✓ src/lib/pages/FlashcardsPage.test.ts (26 tests) 8301ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1840ms
+   ✓ Flashcards page > buttons > "Keep learning" keeps the card in the pool and brings it back later  342ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  344ms
+   ✓ Flashcards page > saved progress > resumes in the middle of a round after a reload  344ms
+
+ Test Files  3 passed (3)
+      Tests  68 passed (68)
+   Start at  11:31:31
+   Duration  11.31s (transform 2.16s, setup 0ms, collect 2.69s, tests 10.72s, environment 3.99s, prepare 447ms)
+

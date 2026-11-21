@@ -1,0 +1,8 @@
+chromium 151.0.7922.34
+PASS chromium distinct-similar-entries-stay-independent
+PASS chromium built-in-duplicate-counts-agree-in-every-deck
+PASS chromium phrase-and-linked-word-are-one-identity
+firefox 153.0
+PASS firefox distinct-similar-entries-stay-independent
+PASS firefox built-in-duplicate-counts-agree-in-every-deck
+PASS firefox phrase-and-linked-word-are-one-identity

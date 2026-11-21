@@ -1,0 +1,230 @@
+{
+  "date": "2026-11-21T09:47:57.671Z",
+  "unchangedCandidateFiles": 127,
+  "sourceChanged": [],
+  "snapshotChanged": [],
+  "packages": [
+    {
+      "prefix": "",
+      "name": "english-assessment-trainer-v2",
+      "version": "2.0.0",
+      "manifestSha256": "b3afb27249bf149576e185bf6896f13edcd8eecd9d808f2b2f064992859a8518",
+      "lockSha256": "052752ba17ced8e1ce86e6830f0d00578e40cf90ce20dcb9a84ac333208e4bf1",
+      "lockfileVersion": 3,
+      "ignored": false
+    },
+    {
+      "prefix": "v1/",
+      "name": "english-assessment-trainer-v1",
+      "version": "1.0.0",
+      "manifestSha256": "a1020863bebc7e2b1a22fd9e7a7f2de1c48f13d7d4c652cb9dd553620519fb07",
+      "lockSha256": "65937877d5140403636a1123df04d6c4ab81f409f9ed4148f1328cb6a5fd6cc9",
+      "lockfileVersion": 3,
+      "ignored": false
+    }
+  ],
+  "externalV1Imports": [],
+  "io": [
+    {
+      "path": "src/content/builtIn.ts",
+      "terms": [
+        "fetch("
+      ]
+    },
+    {
+      "path": "src/storage/database.ts",
+      "terms": [
+        "openDB",
+        "indexedDB"
+      ]
+    }
+  ],
+  "moved": [
+    {
+      "before": "v1/src/App.svelte",
+      "after": "src/app/App.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/AppShell.svelte",
+      "after": "src/app/AppShell.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/ThemeToggle.svelte",
+      "after": "src/app/ThemeToggle.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/stores/theme.ts",
+      "after": "src/app/theme.ts",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/AnswersPage.svelte",
+      "after": "src/features/exercises/AnswersPage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/PatternsPage.svelte",
+      "after": "src/features/exercises/PatternsPage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/PracticePage.svelte",
+      "after": "src/features/exercises/PracticePage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/ReversePracticePage.svelte",
+      "after": "src/features/exercises/ReversePracticePage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/FlashcardsPage.svelte",
+      "after": "src/features/flashcards/FlashcardsPage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/FocusListPage.svelte",
+      "after": "src/features/focus/FocusListPage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/ExpansionPanel.svelte",
+      "after": "src/features/home/ExpansionPanel.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/IndexPage.svelte",
+      "after": "src/features/home/IndexPage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/LearnPassManager.svelte",
+      "after": "src/features/home/LearnPassManager.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/IrregularVerbsPage.svelte",
+      "after": "src/features/vocabulary/IrregularVerbsPage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/PhrasesPage.svelte",
+      "after": "src/features/vocabulary/PhrasesPage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/pages/WordIndexPage.svelte",
+      "after": "src/features/vocabulary/WordIndexPage.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/main.ts",
+      "after": "src/main.ts",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/FocusButton.svelte",
+      "after": "src/shared/entries/FocusButton.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/HideButton.svelte",
+      "after": "src/shared/entries/HideButton.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/IrregularVerbCard.svelte",
+      "after": "src/shared/entries/IrregularVerbCard.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/PhraseCard.svelte",
+      "after": "src/shared/entries/PhraseCard.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/WordCard.svelte",
+      "after": "src/shared/entries/WordCard.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/types/pagination.ts",
+      "after": "src/shared/pagination.ts",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/SectionSpeechControl.svelte",
+      "after": "src/shared/speech/SectionSpeechControl.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/SpeakButton.svelte",
+      "after": "src/shared/speech/SpeakButton.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/utils/sectionSpeech.ts",
+      "after": "src/shared/speech/sectionSpeech.ts",
+      "changed": false
+    },
+    {
+      "before": "v1/src/lib/utils/speech.ts",
+      "after": "src/shared/speech/speech.ts",
+      "changed": false
+    },
+    {
+      "before": "v1/src/lib/utils/speechFormatters.ts",
+      "after": "src/shared/speech/speechFormatters.ts",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/components/EmptyState.svelte",
+      "after": "src/shared/ui/EmptyState.svelte",
+      "changed": false
+    },
+    {
+      "before": "v1/src/lib/components/IconButton.svelte",
+      "after": "src/shared/ui/IconButton.svelte",
+      "changed": false
+    },
+    {
+      "before": "v1/src/lib/components/MaterialIcon.svelte",
+      "after": "src/shared/ui/MaterialIcon.svelte",
+      "changed": false
+    },
+    {
+      "before": "v1/src/lib/components/PaginationControls.svelte",
+      "after": "src/shared/ui/PaginationControls.svelte",
+      "changed": true
+    },
+    {
+      "before": "v1/src/lib/stores/progress.ts",
+      "after": "src/state/progress.ts",
+      "changed": true
+    },
+    {
+      "before": "v1/src/vite-env.d.ts",
+      "after": "src/vite-env.d.ts",
+      "changed": false
+    }
+  ],
+  "retainedTests": [
+    {
+      "name": "flashcards",
+      "identicalTestNames": true,
+      "count": 30
+    },
+    {
+      "name": "FlashcardsPage",
+      "identicalTestNames": true,
+      "count": 26
+    }
+  ],
+  "reconstructedOriginalLockSHA1": "0f24a6c9a936365b6c28cb0ddc0b80763d068dd8",
+  "originalLockReconstruction": "Restore original package name and CRLF line endings",
+  "trackedChanges": 51,
+  "intendedUntracked": 111
+}

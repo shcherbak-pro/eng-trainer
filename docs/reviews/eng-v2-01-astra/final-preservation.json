@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-21T09:48:33.7105151Z",
+  "unchangedCandidateFiles": 127,
+  "nonReviewStatusIdentical": true,
+  "indexEmpty": true,
+  "reviewWorkspaceRemoved": true,
+  "browsers": [
+    {
+      "engine": "chromium",
+      "version": "151.0.7922.34",
+      "scenarios": 17,
+      "passed": 14,
+      "failed": [
+        "failed-initial-read-preserves-populated-database",
+        "distinct-entry-identities-with-similar-display-text",
+        "built-in-duplicate-entry-consistency"
+      ]
+    },
+    {
+      "engine": "firefox",
+      "version": "153.0",
+      "scenarios": 17,
+      "passed": 14,
+      "failed": [
+        "failed-initial-read-preserves-populated-database",
+        "distinct-entry-identities-with-similar-display-text",
+        "built-in-duplicate-entry-consistency"
+      ]
+    }
+  ],
+  "reportSHA256": "f40d40cccc3eb9292f8df0dcc4a06cf0f73983059557e5583b5603906b29dda2"
+}

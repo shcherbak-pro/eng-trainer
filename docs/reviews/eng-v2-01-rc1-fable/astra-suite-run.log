@@ -1,0 +1,48 @@
+chromium 151.0.7922.34
+PASS chromium artifact-paths-navigation-and-mobile-link
+PASS chromium fresh-database-legacy-isolation-and-cross-version-reset
+PASS chromium restore-all-persistent-records-before-effects
+PASS chromium search-entire-corpus-and-transient-state
+PASS chromium rapid-updates-pending-navigation-and-reset
+PASS chromium abort-after-request-success-later-edits-retry
+PASS chromium failed-open-retry-and-unsaved-mode
+PASS chromium failed-initial-read-preserves-populated-database
+PASS chromium content-failure-retry
+PASS chromium learning-flows-and-native-speech-api
+FAIL chromium distinct-entry-identities-with-similar-display-text
+locator.waitFor: Timeout 12000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible[22m
+
+    at <repo>\docs\reviews\eng-v2-01-astra\browser-review.mjs:287:128
+    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13
+PASS chromium built-in-duplicate-entry-consistency
+PASS chromium missing-optional-records-do-not-write-defaults
+PASS chromium reset-after-failed-write-does-not-revive-progress
+PASS chromium flashcard-swipe-shuffle-and-topic-reset
+PASS chromium word-verb-identities-after-sort-filter-hide-and-reload
+PASS chromium v1-representative-learning-with-own-storage
+firefox 153.0
+PASS firefox artifact-paths-navigation-and-mobile-link
+PASS firefox fresh-database-legacy-isolation-and-cross-version-reset
+PASS firefox restore-all-persistent-records-before-effects
+PASS firefox search-entire-corpus-and-transient-state
+PASS firefox rapid-updates-pending-navigation-and-reset
+PASS firefox abort-after-request-success-later-edits-retry
+PASS firefox failed-open-retry-and-unsaved-mode
+PASS firefox failed-initial-read-preserves-populated-database
+PASS firefox content-failure-retry
+PASS firefox learning-flows-and-native-speech-api
+FAIL firefox distinct-entry-identities-with-similar-display-text
+locator.waitFor: Timeout 12000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible[22m
+
+    at <repo>\docs\reviews\eng-v2-01-astra\browser-review.mjs:287:128
+    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13
+PASS firefox built-in-duplicate-entry-consistency
+PASS firefox missing-optional-records-do-not-write-defaults
+PASS firefox reset-after-failed-write-does-not-revive-progress
+PASS firefox flashcard-swipe-shuffle-and-topic-reset
+PASS firefox word-verb-identities-after-sort-filter-hide-and-reload
+PASS firefox v1-representative-learning-with-own-storage

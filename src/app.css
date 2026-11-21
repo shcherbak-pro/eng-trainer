@@ -490,3 +490,10 @@ textarea { min-height: 130px; resize: vertical; }
   .flashcards-review__list li { grid-template-columns: 1fr; }
   .flashcards-review__actions .btn:not(.btn--icon-only) { flex: 1; width: auto; }
 }
+
+/* Shell: storage notice and the link to the preserved v1 application. */
+.storage-notice { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 16px; border-left: 6px solid var(--danger); }
+.storage-notice p { margin: 0; flex: 1 1 320px; }
+.storage-notice small { display: block; margin-top: 4px; }
+.app-footer { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 0.9rem; }
+.app-footer a { color: inherit; font-weight: 700; }

@@ -1,0 +1,3927 @@
+{
+  "date": "2026-11-21T10:47:42.475Z",
+  "engine": "chromium",
+  "version": "151.0.7922.34",
+  "origin": "http://127.0.0.1:55352",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
+  "results": [
+    {
+      "name": "artifact-paths-navigation-and-mobile-link",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "v2Requests": [
+        "http://127.0.0.1:55352/eng-trainer/",
+        "http://127.0.0.1:55352/eng-trainer/assets/index-CxUuAQO4.js",
+        "http://127.0.0.1:55352/eng-trainer/assets/index-ChYHRsBq.css",
+        "http://127.0.0.1:55352/eng-trainer/data/materials.json"
+      ],
+      "v1Requests": [
+        "http://127.0.0.1:55352/eng-trainer/v1/",
+        "http://127.0.0.1:55352/eng-trainer/v1/assets/index-C0A337ei.js",
+        "http://127.0.0.1:55352/eng-trainer/v1/assets/index-Bod3ovET.css",
+        "http://127.0.0.1:55352/eng-trainer/v1/data/materials.json"
+      ],
+      "mobileLink": {
+        "rect": {
+          "top": 700.265625,
+          "bottom": 720.265625
+        },
+        "unobscured": true
+      },
+      "probeAtEnd": {
+        "opens": [],
+        "transactions": [],
+        "writes": [],
+        "storageCalls": [
+          "get localStorage",
+          "getItem",
+          "get localStorage",
+          "get localStorage",
+          "getItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "getItem",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem"
+        ],
+        "speech": []
+      },
+      "elapsedMs": 5252
+    },
+    {
+      "name": "fresh-database-legacy-isolation-and-cross-version-reset",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "databases": [
+        {
+          "name": "eng-trainer-v2",
+          "version": 1
+        }
+      ],
+      "serviceWorkers": [],
+      "caches": [],
+      "reset": {
+        "flashcardSessions": {},
+        "learnPasses": {},
+        "progress": {
+          "favoriteBlocks": [],
+          "favoriteIrregular": [],
+          "favoritePhrases": [],
+          "favoriteWords": [],
+          "hiddenIrregular": [],
+          "hiddenPhrases": [],
+          "hiddenWords": [],
+          "learnedPhrases": []
+        },
+        "settings": {
+          "activePage": "index",
+          "theme": "light"
+        }
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "index"
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "learnedPhrases",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "hiddenPhrases",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "hiddenWords",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "hiddenIrregular",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "favoriteBlocks",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "favoritePhrases",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "favoriteWords",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "favoriteIrregular",
+            "value": []
+          }
+        ],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 3947
+    },
+    {
+      "name": "restore-all-persistent-records-before-effects",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "initial": {
+        "settings": {
+          "theme": "dark",
+          "speechRepeatCount": 50,
+          "activePage": "phrases",
+          "phraseCategory": "Start answer",
+          "wordCategory": "AI Certification Vocabulary",
+          "irregularSet": "ai-certification-verbs-contextual",
+          "irregularGroup": "Knowledge, data & security",
+          "indexTagFilter": "assessment",
+          "showHiddenPhrases": true,
+          "showHiddenWords": true,
+          "showHiddenIrregular": true,
+          "indexPageSize": 12,
+          "phrasePageSize": 10,
+          "wordPageSize": 20,
+          "irregularPageSize": 10,
+          "indexLearnPassExpanded": false,
+          "indexLearningBlocksExpanded": false,
+          "indexTagCloudExpanded": false,
+          "indexDailyExpanded": false,
+          "flashcardMode": "topic",
+          "flashcardTopic": "Start answer"
+        },
+        "progress": {
+          "learnedPhrases": [
+            "phrase-001"
+          ],
+          "hiddenPhrases": [
+            "phrase-002"
+          ],
+          "hiddenWords": [
+            "word-phrase-003"
+          ],
+          "hiddenIrregular": [
+            "iv-001-be"
+          ],
+          "favoriteBlocks": [
+            "word-index"
+          ],
+          "favoritePhrases": [
+            "phrase-001"
+          ],
+          "favoriteWords": [
+            "word-phrase-004"
+          ],
+          "favoriteIrregular": [
+            "iv-002-have"
+          ],
+          "selectedLearnPassId": "review-pass"
+        },
+        "learnPasses": {
+          "review-pass": {
+            "id": "review-pass",
+            "name": "Synthetic review pass",
+            "description": "review only",
+            "blockIds": [
+              "start-answer",
+              "structure",
+              "word-index",
+              "reverse-practice",
+              "irregular-verbs-100",
+              "irregular-verbs-logical-200",
+              "contrast",
+              "ending",
+              "ai-coding-tools",
+              "lack-not-enough",
+              "speed-difficulty-clarity",
+              "time-estimates",
+              "online-meetings",
+              "compare-difference",
+              "conduct-vs-carry-out",
+              "modals",
+              "conjunctions",
+              "otherwise",
+              "informal-phrases",
+              "presentation-phrases",
+              "agent-framework-vocabulary",
+              "hedging-phrases",
+              "advanced-linking-words",
+              "topic-tell-me-about-yourself",
+              "topic-hobbies",
+              "topic-work-life-balance",
+              "topic-teamwork",
+              "topic-stress-management",
+              "topic-time-management",
+              "topic-leadership",
+              "topic-remote-work",
+              "topic-career-growth",
+              "topic-communication-in-distributed-teams",
+              "topic-conflict-resolution-team-problems",
+              "answer-patterns",
+              "ready-answers",
+              "practice-mode",
+              "ai-certification-vocabulary",
+              "ai-certification-verbs-contextual"
+            ],
+            "createdAt": "2026-01-01",
+            "updatedAt": "2026-01-01"
+          }
+        },
+        "flashcardSessions": {
+          "topic:Start answer": {
+            "order": [
+              "phrase-004",
+              "phrase-005",
+              "phrase-003",
+              "phrase-006"
+            ],
+            "index": 1
+          }
+        }
+      },
+      "afterNavigation": {
+        "flashcardSessions": {
+          "topic:Start answer": {
+            "order": [
+              "phrase-004",
+              "phrase-005",
+              "phrase-003",
+              "phrase-006"
+            ],
+            "index": 1
+          }
+        },
+        "learnPasses": {
+          "review-pass": {
+            "id": "review-pass",
+            "name": "Synthetic review pass",
+            "description": "review only",
+            "blockIds": [
+              "start-answer",
+              "structure",
+              "word-index",
+              "reverse-practice",
+              "irregular-verbs-100",
+              "irregular-verbs-logical-200",
+              "contrast",
+              "ending",
+              "ai-coding-tools",
+              "lack-not-enough",
+              "speed-difficulty-clarity",
+              "time-estimates",
+              "online-meetings",
+              "compare-difference",
+              "conduct-vs-carry-out",
+              "modals",
+              "conjunctions",
+              "otherwise",
+              "informal-phrases",
+              "presentation-phrases",
+              "agent-framework-vocabulary",
+              "hedging-phrases",
+              "advanced-linking-words",
+              "topic-tell-me-about-yourself",
+              "topic-hobbies",
+              "topic-work-life-balance",
+              "topic-teamwork",
+              "topic-stress-management",
+              "topic-time-management",
+              "topic-leadership",
+              "topic-remote-work",
+              "topic-career-growth",
+              "topic-communication-in-distributed-teams",
+              "topic-conflict-resolution-team-problems",
+              "answer-patterns",
+              "ready-answers",
+              "practice-mode",
+              "ai-certification-vocabulary",
+              "ai-certification-verbs-contextual"
+            ],
+            "createdAt": "2026-01-01",
+            "updatedAt": "2026-01-01"
+          }
+        },
+        "progress": {
+          "favoriteBlocks": [
+            "word-index"
+          ],
+          "favoriteIrregular": [
+            "iv-002-have"
+          ],
+          "favoritePhrases": [
+            "phrase-001"
+          ],
+          "favoriteWords": [
+            "word-phrase-004"
+          ],
+          "hiddenIrregular": [
+            "iv-001-be"
+          ],
+          "hiddenPhrases": [
+            "phrase-002"
+          ],
+          "hiddenWords": [
+            "word-phrase-003"
+          ],
+          "learnedPhrases": [
+            "phrase-001"
+          ],
+          "selectedLearnPassId": "review-pass"
+        },
+        "settings": {
+          "activePage": "index",
+          "flashcardMode": "topic",
+          "flashcardTopic": "Start answer",
+          "indexDailyExpanded": false,
+          "indexLearnPassExpanded": false,
+          "indexLearningBlocksExpanded": false,
+          "indexPageSize": 12,
+          "indexTagCloudExpanded": false,
+          "indexTagFilter": "assessment",
+          "irregularGroup": "Knowledge, data & security",
+          "irregularPageSize": 10,
+          "irregularSet": "ai-certification-verbs-contextual",
+          "phraseCategory": "Start answer",
+          "phrasePageSize": 10,
+          "showHiddenIrregular": true,
+          "showHiddenPhrases": true,
+          "showHiddenWords": true,
+          "speechRepeatCount": 50,
+          "theme": "dark",
+          "wordCategory": "AI Certification Vocabulary",
+          "wordPageSize": 20
+        }
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "wordIndex"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "irregularVerbs"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "flashcards"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "favorites"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "index"
+          }
+        ],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 618
+    },
+    {
+      "name": "search-entire-corpus-and-transient-state",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "phraseSamples": [
+        "phrase-001",
+        "agent-vocab-022",
+        "ai-certification-phrase-121"
+      ],
+      "verbSamples": [
+        "iv-001-be",
+        "iv200-031-teach",
+        "iv-ai-certification-039-escalate"
+      ],
+      "practicePromptBeforeReload": "What makes a good team?",
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 1163
+    },
+    {
+      "name": "rapid-updates-pending-navigation-and-reset",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "pendingBeforeNavigation": 1,
+      "pendingBeforeReset": 1,
+      "saved": {
+        "flashcardSessions": {},
+        "learnPasses": {},
+        "progress": {
+          "favoritePhrases": [
+            "phrase-001"
+          ],
+          "learnedPhrases": [
+            "phrase-001"
+          ]
+        },
+        "settings": {
+          "activePage": "wordIndex",
+          "phrasePageSize": 10,
+          "speechRepeatCount": 20,
+          "theme": "dark",
+          "wordCategory": "AI Certification Vocabulary"
+        }
+      },
+      "reset": {
+        "flashcardSessions": {},
+        "learnPasses": {},
+        "progress": {
+          "favoriteBlocks": [],
+          "favoriteIrregular": [],
+          "favoritePhrases": [],
+          "favoriteWords": [],
+          "hiddenIrregular": [],
+          "hiddenPhrases": [],
+          "hiddenWords": [],
+          "learnedPhrases": []
+        },
+        "settings": {
+          "activePage": "index",
+          "phrasePageSize": 5,
+          "speechRepeatCount": 10,
+          "theme": "dark",
+          "wordCategory": "All"
+        }
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 4288
+    },
+    {
+      "name": "abort-after-request-success-later-edits-retry",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "failedTransactions": [
+        {
+          "mode": "readwrite",
+          "stores": [
+            "progress"
+          ],
+          "outcome": "abort",
+          "requestSuccessBeforeAbort": true
+        },
+        {
+          "mode": "readwrite",
+          "stores": [
+            "progress"
+          ],
+          "outcome": "abort",
+          "requestSuccessBeforeAbort": true
+        },
+        {
+          "mode": "readwrite",
+          "stores": [
+            "progress"
+          ],
+          "outcome": "abort",
+          "requestSuccessBeforeAbort": true
+        },
+        {
+          "mode": "readwrite",
+          "stores": [
+            "progress",
+            "settings"
+          ],
+          "outcome": "abort",
+          "requestSuccessBeforeAbort": true
+        }
+      ],
+      "saved": {
+        "flashcardSessions": {},
+        "learnPasses": {},
+        "progress": {
+          "favoritePhrases": [
+            "phrase-001"
+          ],
+          "learnedPhrases": []
+        },
+        "settings": {
+          "activePage": "phrases",
+          "speechRepeatCount": 50
+        }
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 6039
+    },
+    {
+      "name": "failed-open-retry-and-unsaved-mode",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "probe": {
+        "opens": [
+          "eng-trainer-v2"
+        ],
+        "transactions": [],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2"
+        ],
+        "transactions": [],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 749
+    },
+    {
+      "name": "failed-initial-read-preserves-populated-database",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "saved": {
+        "progress": {
+          "learnedPhrases": [
+            "phrase-001"
+          ]
+        },
+        "settings": {
+          "theme": "dark",
+          "activePage": "phrases"
+        },
+        "learnPasses": {},
+        "flashcardSessions": {}
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2",
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "abort",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 298
+    },
+    {
+      "name": "content-failure-retry",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "failedRequests": [],
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 291
+    },
+    {
+      "name": "learning-flows-and-native-speech-api",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "speech": [
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "speak",
+          "text": "I would start by saying that …",
+          "lang": "en-US",
+          "rate": 0.8799999952316284
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "speak",
+          "text": "I would start by saying that …",
+          "lang": "en-US",
+          "rate": 0.8799999952316284
+        },
+        {
+          "type": "error",
+          "error": "interrupted"
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "error",
+          "error": "interrupted"
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "speak",
+          "text": "I would start by saying that …",
+          "lang": "en-US",
+          "rate": 0.8799999952316284
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "error",
+          "error": "interrupted"
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "speak",
+          "text": "I would start by saying that …",
+          "lang": "en-US",
+          "rate": 0.8799999952316284
+        },
+        {
+          "type": "cancel"
+        }
+      ],
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "flashcardSessions",
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "learnedPhrases",
+            "value": [
+              "phrase-002"
+            ]
+          },
+          {
+            "method": "put",
+            "store": "flashcardSessions",
+            "key": "all",
+            "value": {
+              "order": [
+                "phrase-001",
+                "phrase-003",
+                "phrase-004",
+                "phrase-005",
+                "phrase-006",
+                "phrase-007",
+                "phrase-008",
+                "phrase-009",
+                "phrase-010",
+                "phrase-011",
+                "phrase-012",
+                "phrase-013",
+                "phrase-014",
+                "phrase-015",
+                "phrase-016",
+                "phrase-017",
+                "phrase-018",
+                "phrase-019",
+                "phrase-020",
+                "phrase-021",
+                "phrase-022",
+                "phrase-023",
+                "phrase-024",
+                "phrase-025",
+                "phrase-026",
+                "phrase-027",
+                "phrase-028",
+                "phrase-029",
+                "phrase-030",
+                "phrase-031",
+                "phrase-032",
+                "phrase-033",
+                "phrase-034",
+                "phrase-035",
+                "phrase-036",
+                "phrase-037",
+                "phrase-038",
+                "phrase-039",
+                "phrase-040",
+                "phrase-041",
+                "phrase-042",
+                "phrase-043",
+                "phrase-044",
+                "phrase-045",
+                "phrase-046",
+                "phrase-047",
+                "phrase-048",
+                "phrase-049",
+                "phrase-050",
+                "phrase-051",
+                "phrase-052",
+                "phrase-053",
+                "phrase-054",
+                "phrase-055",
+                "phrase-056",
+                "phrase-057",
+                "phrase-058",
+                "phrase-059",
+                "phrase-060",
+                "phrase-061",
+                "phrase-062",
+                "phrase-063",
+                "phrase-064",
+                "phrase-065",
+                "phrase-066",
+                "phrase-067",
+                "phrase-068",
+                "phrase-069",
+                "phrase-070",
+                "phrase-071",
+                "phrase-072",
+                "phrase-073",
+                "phrase-074",
+                "phrase-075",
+                "phrase-076",
+                "phrase-077",
+                "phrase-078",
+                "phrase-079",
+                "phrase-080",
+                "phrase-081",
+                "phrase-082",
+                "phrase-083",
+                "phrase-084",
+                "phrase-085",
+                "phrase-086",
+                "phrase-087",
+                "phrase-088",
+                "phrase-089",
+                "presentation-phrase-001",
+                "presentation-phrase-002",
+                "presentation-phrase-003",
+                "presentation-phrase-004",
+                "presentation-phrase-005",
+                "presentation-phrase-006",
+                "presentation-phrase-007",
+                "presentation-phrase-008",
+                "presentation-phrase-009",
+                "presentation-phrase-010",
+                "presentation-phrase-011",
+                "presentation-phrase-012",
+                "presentation-phrase-013",
+                "presentation-phrase-014",
+                "presentation-phrase-015",
+                "presentation-phrase-016",
+                "presentation-phrase-017",
+                "presentation-phrase-018",
+                "presentation-phrase-019",
+                "presentation-phrase-020",
+                "presentation-phrase-021",
+                "presentation-phrase-022",
+                "presentation-phrase-023",
+                "presentation-phrase-024",
+                "presentation-phrase-025",
+                "presentation-phrase-026",
+                "presentation-phrase-027",
+                "presentation-phrase-028",
+                "presentation-phrase-029",
+                "presentation-phrase-030",
+                "presentation-phrase-031",
+                "presentation-phrase-032",
+                "presentation-phrase-033",
+                "presentation-phrase-034",
+                "presentation-phrase-035",
+                "presentation-phrase-036",
+                "presentation-phrase-037",
+                "presentation-phrase-038",
+                "presentation-phrase-039",
+                "presentation-phrase-040",
+                "presentation-phrase-041",
+                "presentation-phrase-042",
+                "presentation-phrase-043",
+                "presentation-phrase-044",
+                "presentation-phrase-045",
+                "presentation-phrase-046",
+                "presentation-phrase-047",
+                "presentation-phrase-048",
+                "presentation-phrase-049",
+                "presentation-phrase-050",
+                "presentation-phrase-051",
+                "presentation-phrase-052",
+                "presentation-phrase-053",
+                "presentation-phrase-054",
+                "presentation-phrase-055",
+                "presentation-phrase-056",
+                "presentation-phrase-057",
+                "presentation-phrase-058",
+                "presentation-phrase-059",
+                "presentation-phrase-060",
+                "presentation-phrase-061",
+                "presentation-phrase-062",
+                "presentation-phrase-063",
+                "presentation-phrase-064",
+                "presentation-phrase-065",
+                "presentation-phrase-066",
+                "presentation-phrase-067",
+                "presentation-phrase-068",
+                "presentation-phrase-069",
+                "presentation-phrase-070",
+                "presentation-phrase-071",
+                "presentation-phrase-072",
+                "presentation-phrase-073",
+                "presentation-phrase-074",
+                "presentation-phrase-075",
+                "presentation-phrase-076",
+                "presentation-phrase-077",
+                "presentation-phrase-078",
+                "presentation-phrase-079",
+                "presentation-phrase-080",
+                "presentation-phrase-081",
+                "presentation-phrase-082",
+                "presentation-phrase-083",
+                "presentation-phrase-084",
+                "presentation-phrase-085",
+                "presentation-phrase-086",
+                "presentation-phrase-087",
+                "presentation-phrase-088",
+                "presentation-phrase-089",
+                "presentation-phrase-090",
+                "agent-vocab-001",
+                "agent-vocab-002",
+                "agent-vocab-003",
+                "agent-vocab-004",
+                "agent-vocab-005",
+                "agent-vocab-006",
+                "agent-vocab-007",
+                "agent-vocab-008",
+                "agent-vocab-009",
+                "agent-vocab-010",
+                "agent-vocab-011",
+                "agent-vocab-012",
+                "agent-vocab-013",
+                "agent-vocab-014",
+                "agent-vocab-015",
+                "agent-vocab-016",
+                "agent-vocab-017",
+                "agent-vocab-018",
+                "agent-vocab-019",
+                "agent-vocab-020",
+                "agent-vocab-021",
+                "agent-vocab-022",
+                "agent-vocab-023",
+                "agent-vocab-024",
+                "agent-vocab-025",
+                "agent-vocab-026",
+                "agent-vocab-027",
+                "agent-vocab-028",
+                "agent-vocab-029",
+                "agent-vocab-030",
+                "agent-vocab-031",
+                "agent-vocab-032",
+                "agent-vocab-033",
+                "agent-vocab-034",
+                "agent-vocab-035",
+                "agent-vocab-036",
+                "agent-vocab-037",
+                "agent-vocab-038",
+                "agent-vocab-039",
+                "agent-vocab-040",
+                "agent-vocab-041",
+                "agent-vocab-042",
+                "agent-vocab-043",
+                "agent-vocab-044",
+                "agent-vocab-045",
+                "agent-vocab-046",
+                "agent-vocab-047",
+                "agent-vocab-048",
+                "agent-vocab-049",
+                "agent-vocab-050",
+                "agent-vocab-051",
+                "agent-vocab-052",
+                "agent-vocab-053",
+                "agent-vocab-054",
+                "agent-vocab-055",
+                "agent-vocab-056",
+                "agent-vocab-057",
+                "agent-vocab-058",
+                "agent-vocab-059",
+                "agent-vocab-060",
+                "agent-vocab-061",
+                "agent-vocab-062",
+                "agent-vocab-063",
+                "agent-vocab-064",
+                "agent-vocab-065",
+                "agent-vocab-066",
+                "agent-vocab-067",
+                "agent-vocab-068",
+                "agent-vocab-069",
+                "agent-vocab-070",
+                "agent-vocab-071",
+                "agent-vocab-072",
+                "agent-vocab-073",
+                "agent-vocab-074",
+                "agent-vocab-075",
+                "agent-vocab-076",
+                "agent-vocab-077",
+                "agent-vocab-078",
+                "agent-vocab-079",
+                "agent-vocab-080",
+                "agent-vocab-081",
+                "hedging-001-i-would-say",
+                "hedging-002-i-suppose",
+                "hedging-003-i-guess",
+                "hedging-004-in-my-opinion",
+                "hedging-005-from-my-perspective",
+                "hedging-006-it-seems-to-me-that",
+                "hedging-007-i-tend-to-think-that",
+                "hedging-008-to-some-extent",
+                "hedging-009-i-am-not-completely-sure-but",
+                "hedging-010-in-many-cases",
+                "hedging-011-it-depends-on-the-situation",
+                "hedging-012-i-would-probably-choose",
+                "advanced-linking-001-moreover",
+                "advanced-linking-002-nevertheless",
+                "advanced-linking-003-in-addition-to-that",
+                "advanced-linking-004-consequently",
+                "advanced-linking-005-nonetheless",
+                "advanced-linking-006-to-put-it-another-way",
+                "advanced-linking-007-furthermore",
+                "advanced-linking-008-that-being-said",
+                "advanced-linking-009-as-a-result",
+                "advanced-linking-010-in-contrast",
+                "advanced-linking-011-for-instance",
+                "advanced-linking-012-more-importantly",
+                "topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+                "topic-tell-me-about-yourself-002-my-current-focus-is-improvin",
+                "topic-tell-me-about-yourself-003-i-enjoy-solving-technical-pr",
+                "topic-tell-me-about-yourself-004-over-the-years-i-have-worked",
+                "topic-tell-me-about-yourself-005-one-of-my-strengths-is-conne",
+                "topic-tell-me-about-yourself-006-i-am-also-interested-in-ai-n",
+                "topic-tell-me-about-yourself-007-i-try-to-be-reliable-practic",
+                "topic-tell-me-about-yourself-008-i-like-working-in-teams-wher",
+                "topic-tell-me-about-yourself-009-my-goal-is-to-keep-growing-a",
+                "topic-tell-me-about-yourself-010-outside-of-work-my-hobbies-h",
+                "topic-tell-me-about-yourself-011-i-would-describe-myself-as-c",
+                "topic-tell-me-about-yourself-012-i-usually-learn-best-through",
+                "topic-tell-me-about-yourself-013-i-care-about-clean-communica",
+                "topic-tell-me-about-yourself-014-i-am-comfortable-working-wit",
+                "topic-tell-me-about-yourself-015-in-the-long-run-i-want-to-co",
+                "topic-hobbies-001-my-hobbies-help-me-recharge-",
+                "topic-hobbies-002-i-enjoy-activities-that-give",
+                "topic-hobbies-003-driving-powerful-cars-is-exc",
+                "topic-hobbies-004-fantasy-books-help-me-switch",
+                "topic-hobbies-005-hiking-helps-me-slow-down-an",
+                "topic-hobbies-006-i-think-hobbies-are-importan",
+                "topic-hobbies-007-a-good-hobby-should-not-feel",
+                "topic-hobbies-008-my-hobbies-make-me-more-crea",
+                "topic-hobbies-009-i-prefer-hobbies-that-combin",
+                "topic-hobbies-010-spending-time-with-my-family",
+                "topic-hobbies-011-i-try-to-keep-my-hobbies-sep",
+                "topic-hobbies-012-hobbies-help-me-come-back-to",
+                "topic-hobbies-013-i-believe-a-balanced-lifesty",
+                "topic-hobbies-014-my-hobbies-reflect-my-person",
+                "topic-hobbies-015-i-do-not-need-many-hobbies-b",
+                "topic-work-life-balance-001-work-life-balance-means-havi",
+                "topic-work-life-balance-002-i-try-to-separate-urgent-tas",
+                "topic-work-life-balance-003-healthy-boundaries-help-prev",
+                "topic-work-life-balance-004-i-can-work-intensively-when-",
+                "topic-work-life-balance-005-a-balanced-person-usually-ma",
+                "topic-work-life-balance-006-planning-personal-time-is-as",
+                "topic-work-life-balance-007-i-try-not-to-check-work-mess",
+                "topic-work-life-balance-008-good-balance-improves-long-t",
+                "topic-work-life-balance-009-work-life-balance-depends-on",
+                "topic-work-life-balance-010-if-priorities-are-unclear-ba",
+                "topic-work-life-balance-011-i-believe-rest-is-part-of-pe",
+                "topic-work-life-balance-012-a-flexible-schedule-can-supp",
+                "topic-work-life-balance-013-i-try-to-manage-my-energy-no",
+                "topic-work-life-balance-014-balance-is-easier-when-commu",
+                "topic-work-life-balance-015-for-me-balance-is-about-sust",
+                "topic-teamwork-001-good-teamwork-starts-with-tr",
+                "topic-teamwork-002-i-prefer-teams-where-people-",
+                "topic-teamwork-003-a-strong-team-shares-context",
+                "topic-teamwork-004-when-people-communicate-earl",
+                "topic-teamwork-005-i-think-respect-is-more-impo",
+                "topic-teamwork-006-in-a-good-team-feedback-shou",
+                "topic-teamwork-007-teamwork-is-easier-when-resp",
+                "topic-teamwork-008-i-try-to-support-teammates-w",
+                "topic-teamwork-009-it-is-important-to-ask-for-h",
+                "topic-teamwork-010-a-team-should-focus-on-the-g",
+                "topic-teamwork-011-clear-documentation-helps-te",
+                "topic-teamwork-012-i-value-teammates-who-are-ho",
+                "topic-teamwork-013-good-teamwork-reduces-rework",
+                "topic-teamwork-014-i-try-to-listen-first-before",
+                "topic-teamwork-015-a-good-team-makes-people-fee",
+                "topic-stress-management-001-i-manage-stress-by-breaking-",
+                "topic-stress-management-002-when-i-feel-pressure-i-try-t",
+                "topic-stress-management-003-stress-is-easier-to-handle-w",
+                "topic-stress-management-004-i-try-not-to-react-emotional",
+                "topic-stress-management-005-a-short-pause-can-help-me-ma",
+                "topic-stress-management-006-i-usually-separate-what-i-ca",
+                "topic-stress-management-007-clear-communication-reduces-",
+                "topic-stress-management-008-i-prefer-to-raise-risks-earl",
+                "topic-stress-management-009-physical-activity-helps-me-r",
+                "topic-stress-management-010-i-try-to-keep-stress-tempora",
+                "topic-stress-management-011-if-the-situation-is-unclear-",
+                "topic-stress-management-012-i-try-to-protect-focus-time-",
+                "topic-stress-management-013-stress-can-be-useful-if-it-p",
+                "topic-stress-management-014-i-ask-for-support-when-the-p",
+                "topic-stress-management-015-the-main-thing-is-to-stay-ca",
+                "topic-time-management-001-good-time-management-starts-",
+                "topic-time-management-002-i-try-to-plan-my-day-around-",
+                "topic-time-management-003-not-every-urgent-task-is-tru",
+                "topic-time-management-004-i-prefer-realistic-estimates",
+                "topic-time-management-005-breaking-work-into-smaller-t",
+                "topic-time-management-006-i-try-to-avoid-multitasking-",
+                "topic-time-management-007-clear-deadlines-help-me-orga",
+                "topic-time-management-008-if-a-task-grows-in-scope-i-c",
+                "topic-time-management-009-i-usually-leave-some-buffer-",
+                "topic-time-management-010-time-management-is-also-abou",
+                "topic-time-management-011-i-use-short-updates-to-keep-",
+                "topic-time-management-012-i-try-to-finish-one-meaningf",
+                "topic-time-management-013-good-planning-reduces-stress",
+                "topic-time-management-014-i-prefer-to-clarify-acceptan",
+                "topic-time-management-015-in-my-experience-time-manage",
+                "topic-leadership-001-leadership-is-not-only-about",
+                "topic-leadership-002-a-good-leader-creates-clarit",
+                "topic-leadership-003-leadership-means-helping-peo",
+                "topic-leadership-004-i-think-a-leader-should-list",
+                "topic-leadership-005-a-leader-should-protect-the-",
+                "topic-leadership-006-good-leadership-combines-con",
+                "topic-leadership-007-a-leader-should-give-context",
+                "topic-leadership-008-trust-is-built-when-actions-",
+                "topic-leadership-009-leadership-also-means-taking",
+                "topic-leadership-010-a-good-leader-encourages-peo",
+                "topic-leadership-011-i-respect-leaders-who-are-fa",
+                "topic-leadership-012-leadership-is-stronger-when-",
+                "topic-leadership-013-a-leader-should-focus-on-out",
+                "topic-leadership-014-in-technical-teams-leadershi",
+                "topic-leadership-015-for-me-leadership-is-about-i",
+                "topic-remote-work-001-remote-work-gives-people-mor",
+                "topic-remote-work-002-clear-written-communication-",
+                "topic-remote-work-003-i-think-remote-work-works-be",
+                "topic-remote-work-004-async-updates-reduce-the-nee",
+                "topic-remote-work-005-remote-work-requires-proacti",
+                "topic-remote-work-006-it-is-important-to-make-prog",
+                "topic-remote-work-007-a-remote-team-needs-trust-no",
+                "topic-remote-work-008-i-try-to-be-clear-in-written",
+                "topic-remote-work-009-remote-work-can-improve-focu",
+                "topic-remote-work-010-time-zones-can-be-challengin",
+                "topic-remote-work-011-i-prefer-short-meetings-with",
+                "topic-remote-work-012-remote-work-should-include-s",
+                "topic-remote-work-013-the-biggest-risk-in-remote-w",
+                "topic-remote-work-014-good-remote-work-depends-on-",
+                "topic-remote-work-015-overall-i-see-remote-work-as",
+                "topic-career-growth-001-career-growth-means-continuo",
+                "topic-career-growth-002-i-try-to-learn-from-real-pro",
+                "topic-career-growth-003-feedback-is-one-of-the-faste",
+                "topic-career-growth-004-i-believe-curiosity-is-impor",
+                "topic-career-growth-005-career-growth-is-easier-when",
+                "topic-career-growth-006-i-try-to-invest-time-in-skil",
+                "topic-career-growth-007-ai-skills-are-becoming-an-im",
+                "topic-career-growth-008-i-prefer-learning-that-is-co",
+                "topic-career-growth-009-growth-also-means-taking-mor",
+                "topic-career-growth-010-i-try-to-reflect-on-mistakes",
+                "topic-career-growth-011-a-good-mentor-can-speed-up-c",
+                "topic-career-growth-012-i-want-to-grow-in-a-directio",
+                "topic-career-growth-013-career-growth-should-be-meas",
+                "topic-career-growth-014-i-try-to-combine-technical-d",
+                "topic-career-growth-015-for-me-growth-is-a-long-term",
+                "topic-communication-in-distributed-t-001-distributed-teams-need-more-",
+                "topic-communication-in-distributed-t-002-a-short-written-update-can-s",
+                "topic-communication-in-distributed-t-003-i-try-to-make-my-messages-cl",
+                "topic-communication-in-distributed-t-004-it-is-useful-to-repeat-decis",
+                "topic-communication-in-distributed-t-005-in-distributed-teams-silence",
+                "topic-communication-in-distributed-t-006-i-prefer-to-clarify-assumpti",
+                "topic-communication-in-distributed-t-007-time-zones-require-patience-",
+                "topic-communication-in-distributed-t-008-good-documentation-is-part-o",
+                "topic-communication-in-distributed-t-009-i-try-to-separate-urgent-que",
+                "topic-communication-in-distributed-t-010-clear-ownership-reduces-conf",
+                "topic-communication-in-distributed-t-011-it-helps-to-provide-context-",
+                "topic-communication-in-distributed-t-012-i-try-to-be-concise-but-not-",
+                "topic-communication-in-distributed-t-013-the-goal-is-to-keep-everyone",
+                "topic-communication-in-distributed-t-014-communication-should-create-",
+                "topic-communication-in-distributed-t-015-in-distributed-teams-proacti",
+                "topic-conflict-resolution-team-probl-001-i-think-conflicts-should-be-",
+                "topic-conflict-resolution-team-probl-002-the-first-step-is-to-underst",
+                "topic-conflict-resolution-team-probl-003-i-try-to-focus-on-the-proble",
+                "topic-conflict-resolution-team-probl-004-a-calm-conversation-usually-",
+                "topic-conflict-resolution-team-probl-005-it-is-important-to-check-whe",
+                "topic-conflict-resolution-team-probl-006-sometimes-conflict-comes-fro",
+                "topic-conflict-resolution-team-probl-007-i-try-not-to-assume-bad-inte",
+                "topic-conflict-resolution-team-probl-008-if-emotions-are-high-it-is-b",
+                "topic-conflict-resolution-team-probl-009-a-team-problem-should-be-sol",
+                "topic-conflict-resolution-team-probl-010-i-believe-feedback-should-be",
+                "topic-conflict-resolution-team-probl-011-when-there-is-disagreement-i",
+                "topic-conflict-resolution-team-probl-012-the-goal-is-not-to-win-the-a",
+                "topic-conflict-resolution-team-probl-013-if-needed-i-would-involve-a-",
+                "topic-conflict-resolution-team-probl-014-after-a-conflict-it-is-usefu",
+                "topic-conflict-resolution-team-probl-015-good-conflict-resolution-can",
+                "ai-certification-phrase-001",
+                "ai-certification-phrase-002",
+                "ai-certification-phrase-003",
+                "ai-certification-phrase-004",
+                "ai-certification-phrase-005",
+                "ai-certification-phrase-006",
+                "ai-certification-phrase-007",
+                "ai-certification-phrase-008",
+                "ai-certification-phrase-009",
+                "ai-certification-phrase-010",
+                "ai-certification-phrase-011",
+                "ai-certification-phrase-012",
+                "ai-certification-phrase-013",
+                "ai-certification-phrase-014",
+                "ai-certification-phrase-015",
+                "ai-certification-phrase-016",
+                "ai-certification-phrase-017",
+                "ai-certification-phrase-018",
+                "ai-certification-phrase-019",
+                "ai-certification-phrase-020",
+                "ai-certification-phrase-021",
+                "ai-certification-phrase-022",
+                "ai-certification-phrase-023",
+                "ai-certification-phrase-024",
+                "ai-certification-phrase-025",
+                "ai-certification-phrase-026",
+                "ai-certification-phrase-027",
+                "ai-certification-phrase-028",
+                "ai-certification-phrase-029",
+                "ai-certification-phrase-030",
+                "ai-certification-phrase-031",
+                "ai-certification-phrase-032",
+                "ai-certification-phrase-033",
+                "ai-certification-phrase-034",
+                "ai-certification-phrase-035",
+                "ai-certification-phrase-036",
+                "ai-certification-phrase-037",
+                "ai-certification-phrase-038",
+                "ai-certification-phrase-039",
+                "ai-certification-phrase-040",
+                "ai-certification-phrase-041",
+                "ai-certification-phrase-042",
+                "ai-certification-phrase-043",
+                "ai-certification-phrase-044",
+                "ai-certification-phrase-046",
+                "ai-certification-phrase-048",
+                "ai-certification-phrase-049",
+                "ai-certification-phrase-050",
+                "ai-certification-phrase-052",
+                "ai-certification-phrase-053",
+                "ai-certification-phrase-054",
+                "ai-certification-phrase-055",
+                "ai-certification-phrase-056",
+                "ai-certification-phrase-057",
+                "ai-certification-phrase-058",
+                "ai-certification-phrase-059",
+                "ai-certification-phrase-060",
+                "ai-certification-phrase-061",
+                "ai-certification-phrase-062",
+                "ai-certification-phrase-063",
+                "ai-certification-phrase-064",
+                "ai-certification-phrase-065",
+                "ai-certification-phrase-066",
+                "ai-certification-phrase-067",
+                "ai-certification-phrase-068",
+                "ai-certification-phrase-069",
+                "ai-certification-phrase-070",
+                "ai-certification-phrase-071",
+                "ai-certification-phrase-072",
+                "ai-certification-phrase-073",
+                "ai-certification-phrase-074",
+                "ai-certification-phrase-075",
+                "ai-certification-phrase-076",
+                "ai-certification-phrase-077",
+                "ai-certification-phrase-078",
+                "ai-certification-phrase-079",
+                "ai-certification-phrase-080",
+                "ai-certification-phrase-081",
+                "ai-certification-phrase-082",
+                "ai-certification-phrase-083",
+                "ai-certification-phrase-084",
+                "ai-certification-phrase-085",
+                "ai-certification-phrase-086",
+                "ai-certification-phrase-087",
+                "ai-certification-phrase-088",
+                "ai-certification-phrase-089",
+                "ai-certification-phrase-090",
+                "ai-certification-phrase-091",
+                "ai-certification-phrase-092",
+                "ai-certification-phrase-093",
+                "ai-certification-phrase-094",
+                "ai-certification-phrase-095",
+                "ai-certification-phrase-096",
+                "ai-certification-phrase-097",
+                "ai-certification-phrase-098",
+                "ai-certification-phrase-099",
+                "ai-certification-phrase-100",
+                "ai-certification-phrase-101",
+                "ai-certification-phrase-102",
+                "ai-certification-phrase-103",
+                "ai-certification-phrase-104",
+                "ai-certification-phrase-105",
+                "ai-certification-phrase-106",
+                "ai-certification-phrase-107",
+                "ai-certification-phrase-108",
+                "ai-certification-phrase-109",
+                "ai-certification-phrase-110",
+                "ai-certification-phrase-111",
+                "ai-certification-phrase-112",
+                "ai-certification-phrase-113",
+                "ai-certification-phrase-114",
+                "ai-certification-phrase-115",
+                "ai-certification-phrase-117",
+                "ai-certification-phrase-118",
+                "ai-certification-phrase-119",
+                "ai-certification-phrase-120",
+                "ai-certification-phrase-121"
+              ],
+              "index": 1
+            }
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "phrases"
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "hiddenPhrases",
+            "value": [
+              "phrase-001"
+            ]
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "favoritePhrases",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "showHiddenPhrases",
+            "value": true
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "hiddenPhrases",
+            "value": []
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "speechRepeatCount",
+            "value": 20
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "speechRepeatCount",
+            "value": 50
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "reverse"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "patterns"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "answers"
+          }
+        ],
+        "storageCalls": [],
+        "speech": [
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "speak",
+            "text": "I would start by saying that …",
+            "lang": "en-US",
+            "rate": 0.8799999952316284
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "speak",
+            "text": "I would start by saying that …",
+            "lang": "en-US",
+            "rate": 0.8799999952316284
+          },
+          {
+            "type": "error",
+            "error": "interrupted"
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "error",
+            "error": "interrupted"
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "speak",
+            "text": "I would start by saying that …",
+            "lang": "en-US",
+            "rate": 0.8799999952316284
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "error",
+            "error": "interrupted"
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "speak",
+            "text": "I would start by saying that …",
+            "lang": "en-US",
+            "rate": 0.8799999952316284
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "error",
+            "error": "interrupted"
+          }
+        ]
+      },
+      "elapsedMs": 5723
+    },
+    {
+      "name": "distinct-entry-identities-with-similar-display-text",
+      "status": "FAIL",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "cardText": "C++",
+      "cardCount": "2",
+      "afterFirstCounts": {
+        "learned": "1",
+        "total": "2"
+      },
+      "stored": {
+        "flashcardSessions": {
+          "all": {
+            "order": [
+              "review-csharp"
+            ],
+            "index": 0
+          }
+        },
+        "learnPasses": {},
+        "progress": {
+          "learnedPhrases": [
+            "review-cpp"
+          ]
+        },
+        "settings": {
+          "activePage": "flashcards"
+        }
+      },
+      "learnedCards": [
+        "C++"
+      ],
+      "firstReview": [
+        "C++"
+      ],
+      "afterSecond": {
+        "flashcardSessions": {
+          "all": {
+            "order": [],
+            "index": 0
+          }
+        },
+        "learnPasses": {},
+        "progress": {
+          "learnedPhrases": [
+            "review-cpp",
+            "review-csharp"
+          ]
+        },
+        "settings": {
+          "activePage": "flashcards"
+        }
+      },
+      "bothLearnedAfterReload": [
+        "C++",
+        "C#"
+      ],
+      "failure": "locator.click: Error: strict mode violation: getByRole('button', { name: 'Review learned vocabulary', exact: true }) resolved to 2 elements:\n    1) <button type=\"button\" title=\"Review learned vocabulary\" class=\"btn secondary btn--icon-only\" aria-label=\"Review learned vocabulary\">…</button> aka getByRole('button', { name: 'Review learned vocabulary', description: 'Review learned vocabulary' })\n    2) <button type=\"button\" class=\"btn primary\">Review learned vocabulary</button> aka getByText('Review learned vocabulary')\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Review learned vocabulary', exact: true })\u001b[22m\n\n    at <repo>\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.mjs:314:109\n    at async file:///<repo>/docs/reviews/eng-v2-01-rc1-astra/browser-review.mjs:429:13",
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "phrases"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "flashcards"
+          }
+        ],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 2805
+    },
+    {
+      "name": "built-in-duplicate-entry-consistency",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "focusLearned": 0,
+      "focusUnlearned": 1,
+      "topicLearned": "0",
+      "reviewed": [],
+      "database": {
+        "flashcardSessions": {},
+        "learnPasses": {},
+        "progress": {
+          "favoritePhrases": [
+            "advanced-linking-004-consequently"
+          ],
+          "learnedPhrases": [
+            "phrase-084"
+          ]
+        },
+        "settings": {
+          "activePage": "flashcards",
+          "flashcardMode": "topic",
+          "flashcardTopic": "Advanced Linking Words"
+        }
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "favorites"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "flashcards"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "flashcardMode",
+            "value": "topic"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "flashcardTopic",
+            "value": "Advanced Linking Words"
+          }
+        ],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 2772
+    },
+    {
+      "name": "missing-optional-records-do-not-write-defaults",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "saved": {
+        "progress": {
+          "learnedPhrases": [
+            "phrase-001"
+          ]
+        },
+        "settings": {
+          "theme": "dark"
+        },
+        "learnPasses": {},
+        "flashcardSessions": {}
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 333
+    },
+    {
+      "name": "reset-after-failed-write-does-not-revive-progress",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "saved": {
+        "flashcardSessions": {},
+        "learnPasses": {},
+        "progress": {
+          "favoriteBlocks": [],
+          "favoriteIrregular": [],
+          "favoritePhrases": [],
+          "favoriteWords": [],
+          "hiddenIrregular": [],
+          "hiddenPhrases": [],
+          "hiddenWords": [],
+          "learnedPhrases": []
+        },
+        "settings": {
+          "activePage": "index"
+        }
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 1069
+    },
+    {
+      "name": "flashcard-swipe-shuffle-and-topic-reset",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "shuffledOrderLength": 565,
+      "reset": {
+        "flashcardSessions": {
+          "all": {
+            "order": [
+              "ai-certification-phrase-013",
+              "presentation-phrase-053",
+              "presentation-phrase-030",
+              "phrase-033",
+              "presentation-phrase-015",
+              "phrase-010",
+              "ai-certification-phrase-052",
+              "topic-remote-work-015-overall-i-see-remote-work-as",
+              "ai-certification-phrase-114",
+              "agent-vocab-015",
+              "topic-communication-in-distributed-t-005-in-distributed-teams-silence",
+              "ai-certification-phrase-080",
+              "presentation-phrase-025",
+              "phrase-039",
+              "presentation-phrase-049",
+              "ai-certification-phrase-056",
+              "ai-certification-phrase-066",
+              "agent-vocab-072",
+              "agent-vocab-036",
+              "agent-vocab-061",
+              "topic-hobbies-007-a-good-hobby-should-not-feel",
+              "topic-time-management-015-in-my-experience-time-manage",
+              "topic-teamwork-014-i-try-to-listen-first-before",
+              "topic-stress-management-003-stress-is-easier-to-handle-w",
+              "agent-vocab-054",
+              "topic-time-management-007-clear-deadlines-help-me-orga",
+              "phrase-018",
+              "presentation-phrase-082",
+              "phrase-024",
+              "topic-hobbies-009-i-prefer-hobbies-that-combin",
+              "agent-vocab-009",
+              "ai-certification-phrase-102",
+              "topic-hobbies-012-hobbies-help-me-come-back-to",
+              "presentation-phrase-080",
+              "topic-hobbies-004-fantasy-books-help-me-switch",
+              "topic-work-life-balance-008-good-balance-improves-long-t",
+              "presentation-phrase-006",
+              "agent-vocab-080",
+              "ai-certification-phrase-037",
+              "topic-communication-in-distributed-t-013-the-goal-is-to-keep-everyone",
+              "presentation-phrase-008",
+              "agent-vocab-058",
+              "presentation-phrase-040",
+              "presentation-phrase-020",
+              "ai-certification-phrase-119",
+              "ai-certification-phrase-109",
+              "topic-tell-me-about-yourself-003-i-enjoy-solving-technical-pr",
+              "ai-certification-phrase-015",
+              "presentation-phrase-013",
+              "phrase-047",
+              "advanced-linking-003-in-addition-to-that",
+              "ai-certification-phrase-006",
+              "phrase-017",
+              "agent-vocab-051",
+              "topic-teamwork-010-a-team-should-focus-on-the-g",
+              "advanced-linking-009-as-a-result",
+              "ai-certification-phrase-017",
+              "ai-certification-phrase-087",
+              "presentation-phrase-059",
+              "agent-vocab-038",
+              "ai-certification-phrase-002",
+              "ai-certification-phrase-049",
+              "phrase-084",
+              "phrase-080",
+              "phrase-069",
+              "presentation-phrase-003",
+              "topic-hobbies-010-spending-time-with-my-family",
+              "topic-career-growth-006-i-try-to-invest-time-in-skil",
+              "phrase-077",
+              "topic-conflict-resolution-team-probl-004-a-calm-conversation-usually-",
+              "presentation-phrase-079",
+              "phrase-023",
+              "phrase-088",
+              "topic-conflict-resolution-team-probl-008-if-emotions-are-high-it-is-b",
+              "topic-stress-management-002-when-i-feel-pressure-i-try-t",
+              "agent-vocab-067",
+              "phrase-027",
+              "phrase-074",
+              "hedging-004-in-my-opinion",
+              "ai-certification-phrase-075",
+              "topic-time-management-011-i-use-short-updates-to-keep-",
+              "phrase-063",
+              "phrase-072",
+              "ai-certification-phrase-030",
+              "ai-certification-phrase-026",
+              "topic-work-life-balance-015-for-me-balance-is-about-sust",
+              "topic-teamwork-015-a-good-team-makes-people-fee",
+              "presentation-phrase-027",
+              "ai-certification-phrase-027",
+              "topic-career-growth-007-ai-skills-are-becoming-an-im",
+              "ai-certification-phrase-071",
+              "ai-certification-phrase-014",
+              "phrase-004",
+              "agent-vocab-025",
+              "topic-career-growth-013-career-growth-should-be-meas",
+              "topic-career-growth-012-i-want-to-grow-in-a-directio",
+              "topic-stress-management-014-i-ask-for-support-when-the-p",
+              "topic-career-growth-010-i-try-to-reflect-on-mistakes",
+              "phrase-089",
+              "topic-hobbies-011-i-try-to-keep-my-hobbies-sep",
+              "topic-communication-in-distributed-t-014-communication-should-create-",
+              "presentation-phrase-056",
+              "ai-certification-phrase-069",
+              "presentation-phrase-032",
+              "agent-vocab-078",
+              "agent-vocab-064",
+              "topic-work-life-balance-004-i-can-work-intensively-when-",
+              "ai-certification-phrase-072",
+              "ai-certification-phrase-120",
+              "presentation-phrase-019",
+              "presentation-phrase-063",
+              "topic-conflict-resolution-team-probl-012-the-goal-is-not-to-win-the-a",
+              "agent-vocab-059",
+              "advanced-linking-004-consequently",
+              "topic-communication-in-distributed-t-006-i-prefer-to-clarify-assumpti",
+              "phrase-075",
+              "topic-remote-work-011-i-prefer-short-meetings-with",
+              "ai-certification-phrase-041",
+              "presentation-phrase-088",
+              "ai-certification-phrase-107",
+              "topic-communication-in-distributed-t-001-distributed-teams-need-more-",
+              "topic-communication-in-distributed-t-004-it-is-useful-to-repeat-decis",
+              "topic-tell-me-about-yourself-015-in-the-long-run-i-want-to-co",
+              "presentation-phrase-024",
+              "agent-vocab-066",
+              "ai-certification-phrase-088",
+              "topic-stress-management-004-i-try-not-to-react-emotional",
+              "phrase-044",
+              "agent-vocab-023",
+              "topic-work-life-balance-006-planning-personal-time-is-as",
+              "phrase-045",
+              "ai-certification-phrase-108",
+              "presentation-phrase-051",
+              "topic-work-life-balance-011-i-believe-rest-is-part-of-pe",
+              "phrase-087",
+              "hedging-003-i-guess",
+              "ai-certification-phrase-011",
+              "ai-certification-phrase-005",
+              "presentation-phrase-022",
+              "topic-work-life-balance-013-i-try-to-manage-my-energy-no",
+              "ai-certification-phrase-018",
+              "topic-career-growth-004-i-believe-curiosity-is-impor",
+              "topic-work-life-balance-014-balance-is-easier-when-commu",
+              "topic-tell-me-about-yourself-006-i-am-also-interested-in-ai-n",
+              "ai-certification-phrase-016",
+              "phrase-029",
+              "agent-vocab-050",
+              "topic-hobbies-001-my-hobbies-help-me-recharge-",
+              "topic-teamwork-013-good-teamwork-reduces-rework",
+              "agent-vocab-024",
+              "topic-time-management-005-breaking-work-into-smaller-t",
+              "topic-work-life-balance-001-work-life-balance-means-havi",
+              "agent-vocab-034",
+              "phrase-085",
+              "phrase-059",
+              "topic-tell-me-about-yourself-010-outside-of-work-my-hobbies-h",
+              "topic-time-management-001-good-time-management-starts-",
+              "topic-leadership-015-for-me-leadership-is-about-i",
+              "topic-hobbies-002-i-enjoy-activities-that-give",
+              "topic-leadership-014-in-technical-teams-leadershi",
+              "presentation-phrase-033",
+              "agent-vocab-021",
+              "presentation-phrase-078",
+              "agent-vocab-007",
+              "presentation-phrase-075",
+              "ai-certification-phrase-086",
+              "agent-vocab-055",
+              "ai-certification-phrase-101",
+              "ai-certification-phrase-028",
+              "topic-career-growth-005-career-growth-is-easier-when",
+              "presentation-phrase-010",
+              "phrase-005",
+              "presentation-phrase-057",
+              "ai-certification-phrase-105",
+              "phrase-020",
+              "presentation-phrase-065",
+              "topic-leadership-007-a-leader-should-give-context",
+              "topic-remote-work-007-a-remote-team-needs-trust-no",
+              "ai-certification-phrase-082",
+              "topic-career-growth-009-growth-also-means-taking-mor",
+              "phrase-060",
+              "phrase-025",
+              "phrase-086",
+              "agent-vocab-057",
+              "presentation-phrase-064",
+              "ai-certification-phrase-089",
+              "presentation-phrase-044",
+              "ai-certification-phrase-019",
+              "topic-time-management-006-i-try-to-avoid-multitasking-",
+              "presentation-phrase-087",
+              "presentation-phrase-028",
+              "phrase-065",
+              "topic-teamwork-005-i-think-respect-is-more-impo",
+              "presentation-phrase-039",
+              "phrase-015",
+              "presentation-phrase-054",
+              "topic-conflict-resolution-team-probl-011-when-there-is-disagreement-i",
+              "agent-vocab-041",
+              "topic-stress-management-006-i-usually-separate-what-i-ca",
+              "topic-stress-management-007-clear-communication-reduces-",
+              "agent-vocab-048",
+              "phrase-066",
+              "agent-vocab-002",
+              "phrase-067",
+              "topic-stress-management-008-i-prefer-to-raise-risks-earl",
+              "topic-teamwork-003-a-strong-team-shares-context",
+              "ai-certification-phrase-093",
+              "phrase-078",
+              "ai-certification-phrase-118",
+              "ai-certification-phrase-046",
+              "phrase-008",
+              "phrase-050",
+              "ai-certification-phrase-042",
+              "topic-leadership-009-leadership-also-means-taking",
+              "topic-teamwork-007-teamwork-is-easier-when-resp",
+              "agent-vocab-071",
+              "phrase-053",
+              "phrase-021",
+              "topic-time-management-002-i-try-to-plan-my-day-around-",
+              "agent-vocab-030",
+              "topic-remote-work-005-remote-work-requires-proacti",
+              "agent-vocab-065",
+              "topic-time-management-010-time-management-is-also-abou",
+              "topic-stress-management-013-stress-can-be-useful-if-it-p",
+              "topic-remote-work-009-remote-work-can-improve-focu",
+              "topic-stress-management-015-the-main-thing-is-to-stay-ca",
+              "ai-certification-phrase-081",
+              "presentation-phrase-084",
+              "topic-teamwork-001-good-teamwork-starts-with-tr",
+              "phrase-057",
+              "topic-career-growth-003-feedback-is-one-of-the-faste",
+              "ai-certification-phrase-084",
+              "topic-remote-work-012-remote-work-should-include-s",
+              "hedging-008-to-some-extent",
+              "presentation-phrase-016",
+              "phrase-016",
+              "agent-vocab-044",
+              "topic-time-management-014-i-prefer-to-clarify-acceptan",
+              "topic-stress-management-011-if-the-situation-is-unclear-",
+              "topic-communication-in-distributed-t-002-a-short-written-update-can-s",
+              "ai-certification-phrase-068",
+              "agent-vocab-004",
+              "phrase-035",
+              "ai-certification-phrase-053",
+              "agent-vocab-022",
+              "presentation-phrase-067",
+              "phrase-051",
+              "phrase-030",
+              "ai-certification-phrase-074",
+              "topic-stress-management-012-i-try-to-protect-focus-time-",
+              "agent-vocab-046",
+              "ai-certification-phrase-070",
+              "presentation-phrase-074",
+              "presentation-phrase-081",
+              "topic-communication-in-distributed-t-008-good-documentation-is-part-o",
+              "hedging-012-i-would-probably-choose",
+              "ai-certification-phrase-077",
+              "advanced-linking-011-for-instance",
+              "presentation-phrase-086",
+              "agent-vocab-069",
+              "advanced-linking-005-nonetheless",
+              "ai-certification-phrase-009",
+              "ai-certification-phrase-034",
+              "topic-communication-in-distributed-t-012-i-try-to-be-concise-but-not-",
+              "topic-communication-in-distributed-t-015-in-distributed-teams-proacti",
+              "topic-communication-in-distributed-t-007-time-zones-require-patience-",
+              "ai-certification-phrase-021",
+              "phrase-026",
+              "topic-leadership-004-i-think-a-leader-should-list",
+              "phrase-019",
+              "ai-certification-phrase-111",
+              "topic-career-growth-008-i-prefer-learning-that-is-co",
+              "topic-tell-me-about-yourself-005-one-of-my-strengths-is-conne",
+              "topic-communication-in-distributed-t-009-i-try-to-separate-urgent-que",
+              "phrase-043",
+              "topic-work-life-balance-009-work-life-balance-depends-on",
+              "presentation-phrase-073",
+              "agent-vocab-013",
+              "ai-certification-phrase-035",
+              "topic-remote-work-003-i-think-remote-work-works-be",
+              "ai-certification-phrase-065",
+              "topic-career-growth-001-career-growth-means-continuo",
+              "phrase-056",
+              "phrase-076",
+              "topic-conflict-resolution-team-probl-003-i-try-to-focus-on-the-proble",
+              "ai-certification-phrase-113",
+              "topic-leadership-013-a-leader-should-focus-on-out",
+              "presentation-phrase-009",
+              "ai-certification-phrase-076",
+              "phrase-042",
+              "agent-vocab-079",
+              "presentation-phrase-060",
+              "topic-leadership-003-leadership-means-helping-peo",
+              "ai-certification-phrase-103",
+              "topic-career-growth-015-for-me-growth-is-a-long-term",
+              "presentation-phrase-066",
+              "hedging-007-i-tend-to-think-that",
+              "ai-certification-phrase-050",
+              "agent-vocab-029",
+              "phrase-028",
+              "phrase-034",
+              "ai-certification-phrase-033",
+              "hedging-010-in-many-cases",
+              "phrase-007",
+              "presentation-phrase-042",
+              "phrase-062",
+              "phrase-009",
+              "presentation-phrase-036",
+              "topic-remote-work-002-clear-written-communication-",
+              "ai-certification-phrase-029",
+              "presentation-phrase-072",
+              "agent-vocab-006",
+              "topic-remote-work-001-remote-work-gives-people-mor",
+              "hedging-011-it-depends-on-the-situation",
+              "phrase-003",
+              "presentation-phrase-048",
+              "ai-certification-phrase-094",
+              "topic-work-life-balance-005-a-balanced-person-usually-ma",
+              "phrase-079",
+              "ai-certification-phrase-097",
+              "phrase-052",
+              "hedging-009-i-am-not-completely-sure-but",
+              "topic-hobbies-014-my-hobbies-reflect-my-person",
+              "topic-remote-work-006-it-is-important-to-make-prog",
+              "presentation-phrase-077",
+              "topic-tell-me-about-yourself-007-i-try-to-be-reliable-practic",
+              "topic-tell-me-about-yourself-011-i-would-describe-myself-as-c",
+              "topic-communication-in-distributed-t-010-clear-ownership-reduces-conf",
+              "topic-stress-management-005-a-short-pause-can-help-me-ma",
+              "topic-conflict-resolution-team-probl-010-i-believe-feedback-should-be",
+              "topic-conflict-resolution-team-probl-009-a-team-problem-should-be-sol",
+              "topic-tell-me-about-yourself-012-i-usually-learn-best-through",
+              "ai-certification-phrase-039",
+              "agent-vocab-026",
+              "ai-certification-phrase-040",
+              "topic-conflict-resolution-team-probl-005-it-is-important-to-check-whe",
+              "agent-vocab-032",
+              "advanced-linking-001-moreover",
+              "topic-remote-work-004-async-updates-reduce-the-nee",
+              "topic-hobbies-006-i-think-hobbies-are-importan",
+              "topic-time-management-009-i-usually-leave-some-buffer-",
+              "topic-work-life-balance-003-healthy-boundaries-help-prev",
+              "agent-vocab-011",
+              "agent-vocab-019",
+              "agent-vocab-008",
+              "ai-certification-phrase-063",
+              "topic-tell-me-about-yourself-009-my-goal-is-to-keep-growing-a",
+              "ai-certification-phrase-091",
+              "presentation-phrase-029",
+              "phrase-082",
+              "topic-remote-work-014-good-remote-work-depends-on-",
+              "agent-vocab-018",
+              "agent-vocab-042",
+              "presentation-phrase-011",
+              "ai-certification-phrase-008",
+              "agent-vocab-033",
+              "ai-certification-phrase-100",
+              "ai-certification-phrase-061",
+              "ai-certification-phrase-036",
+              "presentation-phrase-061",
+              "topic-remote-work-013-the-biggest-risk-in-remote-w",
+              "agent-vocab-010",
+              "phrase-031",
+              "agent-vocab-068",
+              "agent-vocab-027",
+              "ai-certification-phrase-067",
+              "agent-vocab-052",
+              "presentation-phrase-043",
+              "phrase-061",
+              "topic-remote-work-008-i-try-to-be-clear-in-written",
+              "topic-communication-in-distributed-t-003-i-try-to-make-my-messages-cl",
+              "agent-vocab-077",
+              "phrase-014",
+              "topic-hobbies-005-hiking-helps-me-slow-down-an",
+              "topic-time-management-003-not-every-urgent-task-is-tru",
+              "phrase-081",
+              "agent-vocab-003",
+              "topic-time-management-004-i-prefer-realistic-estimates",
+              "agent-vocab-017",
+              "agent-vocab-081",
+              "topic-work-life-balance-007-i-try-not-to-check-work-mess",
+              "ai-certification-phrase-062",
+              "agent-vocab-056",
+              "presentation-phrase-005",
+              "phrase-046",
+              "ai-certification-phrase-098",
+              "ai-certification-phrase-121",
+              "ai-certification-phrase-079",
+              "topic-communication-in-distributed-t-011-it-helps-to-provide-context-",
+              "topic-time-management-008-if-a-task-grows-in-scope-i-c",
+              "advanced-linking-007-furthermore",
+              "phrase-071",
+              "presentation-phrase-004",
+              "ai-certification-phrase-083",
+              "presentation-phrase-017",
+              "phrase-083",
+              "ai-certification-phrase-043",
+              "agent-vocab-075",
+              "agent-vocab-012",
+              "topic-conflict-resolution-team-probl-014-after-a-conflict-it-is-usefu",
+              "topic-leadership-002-a-good-leader-creates-clarit",
+              "presentation-phrase-050",
+              "topic-teamwork-011-clear-documentation-helps-te",
+              "topic-work-life-balance-010-if-priorities-are-unclear-ba",
+              "presentation-phrase-085",
+              "ai-certification-phrase-020",
+              "topic-work-life-balance-002-i-try-to-separate-urgent-tas",
+              "presentation-phrase-062",
+              "presentation-phrase-023",
+              "ai-certification-phrase-112",
+              "agent-vocab-040",
+              "presentation-phrase-083",
+              "topic-time-management-012-i-try-to-finish-one-meaningf",
+              "ai-certification-phrase-099",
+              "topic-leadership-010-a-good-leader-encourages-peo",
+              "agent-vocab-074",
+              "agent-vocab-060",
+              "presentation-phrase-034",
+              "phrase-022",
+              "ai-certification-phrase-038",
+              "topic-tell-me-about-yourself-004-over-the-years-i-have-worked",
+              "presentation-phrase-018",
+              "topic-conflict-resolution-team-probl-007-i-try-not-to-assume-bad-inte",
+              "presentation-phrase-089",
+              "advanced-linking-002-nevertheless",
+              "ai-certification-phrase-004",
+              "phrase-006",
+              "ai-certification-phrase-024",
+              "agent-vocab-005",
+              "agent-vocab-014",
+              "presentation-phrase-052",
+              "topic-remote-work-010-time-zones-can-be-challengin",
+              "ai-certification-phrase-025",
+              "phrase-037",
+              "phrase-032",
+              "ai-certification-phrase-090",
+              "ai-certification-phrase-057",
+              "advanced-linking-010-in-contrast",
+              "topic-career-growth-014-i-try-to-combine-technical-d",
+              "agent-vocab-043",
+              "ai-certification-phrase-085",
+              "topic-conflict-resolution-team-probl-001-i-think-conflicts-should-be-",
+              "ai-certification-phrase-092",
+              "presentation-phrase-014",
+              "phrase-036",
+              "ai-certification-phrase-095",
+              "advanced-linking-006-to-put-it-another-way",
+              "ai-certification-phrase-010",
+              "topic-conflict-resolution-team-probl-015-good-conflict-resolution-can",
+              "topic-career-growth-002-i-try-to-learn-from-real-pro",
+              "topic-teamwork-006-in-a-good-team-feedback-shou",
+              "ai-certification-phrase-073",
+              "ai-certification-phrase-055",
+              "phrase-054",
+              "presentation-phrase-021",
+              "presentation-phrase-046",
+              "presentation-phrase-070",
+              "agent-vocab-073",
+              "presentation-phrase-068",
+              "agent-vocab-047",
+              "topic-tell-me-about-yourself-008-i-like-working-in-teams-wher",
+              "topic-leadership-012-leadership-is-stronger-when-",
+              "topic-tell-me-about-yourself-002-my-current-focus-is-improvin",
+              "presentation-phrase-037",
+              "topic-career-growth-011-a-good-mentor-can-speed-up-c",
+              "agent-vocab-037",
+              "phrase-073",
+              "topic-teamwork-002-i-prefer-teams-where-people-",
+              "agent-vocab-016",
+              "presentation-phrase-045",
+              "topic-teamwork-012-i-value-teammates-who-are-ho",
+              "presentation-phrase-058",
+              "ai-certification-phrase-115",
+              "phrase-058",
+              "topic-conflict-resolution-team-probl-006-sometimes-conflict-comes-fro",
+              "ai-certification-phrase-044",
+              "ai-certification-phrase-031",
+              "phrase-012",
+              "topic-tell-me-about-yourself-014-i-am-comfortable-working-wit",
+              "presentation-phrase-026",
+              "hedging-001-i-would-say",
+              "agent-vocab-049",
+              "phrase-041",
+              "phrase-002",
+              "ai-certification-phrase-032",
+              "ai-certification-phrase-001",
+              "topic-hobbies-008-my-hobbies-make-me-more-crea",
+              "topic-hobbies-015-i-do-not-need-many-hobbies-b",
+              "topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+              "phrase-055",
+              "topic-hobbies-013-i-believe-a-balanced-lifesty",
+              "presentation-phrase-031",
+              "presentation-phrase-076",
+              "topic-conflict-resolution-team-probl-013-if-needed-i-would-involve-a-",
+              "topic-work-life-balance-012-a-flexible-schedule-can-supp",
+              "topic-teamwork-004-when-people-communicate-earl",
+              "topic-stress-management-009-physical-activity-helps-me-r",
+              "agent-vocab-063",
+              "ai-certification-phrase-064",
+              "ai-certification-phrase-022",
+              "topic-tell-me-about-yourself-013-i-care-about-clean-communica",
+              "ai-certification-phrase-117",
+              "presentation-phrase-012",
+              "phrase-070",
+              "presentation-phrase-047",
+              "presentation-phrase-055",
+              "presentation-phrase-007",
+              "topic-teamwork-009-it-is-important-to-ask-for-h",
+              "agent-vocab-031",
+              "ai-certification-phrase-023",
+              "topic-stress-management-010-i-try-to-keep-stress-tempora",
+              "presentation-phrase-035",
+              "topic-hobbies-003-driving-powerful-cars-is-exc",
+              "topic-leadership-011-i-respect-leaders-who-are-fa",
+              "advanced-linking-008-that-being-said",
+              "hedging-006-it-seems-to-me-that",
+              "agent-vocab-062",
+              "agent-vocab-039",
+              "topic-conflict-resolution-team-probl-002-the-first-step-is-to-underst",
+              "phrase-048",
+              "phrase-013",
+              "topic-leadership-008-trust-is-built-when-actions-",
+              "ai-certification-phrase-104",
+              "phrase-038",
+              "topic-leadership-006-good-leadership-combines-con",
+              "advanced-linking-012-more-importantly",
+              "ai-certification-phrase-048",
+              "ai-certification-phrase-110",
+              "phrase-064",
+              "topic-leadership-005-a-leader-should-protect-the-",
+              "agent-vocab-070",
+              "agent-vocab-076",
+              "ai-certification-phrase-012",
+              "ai-certification-phrase-054",
+              "topic-time-management-013-good-planning-reduces-stress",
+              "agent-vocab-045",
+              "ai-certification-phrase-106",
+              "hedging-005-from-my-perspective",
+              "presentation-phrase-090",
+              "presentation-phrase-001",
+              "ai-certification-phrase-078",
+              "phrase-068",
+              "hedging-002-i-suppose",
+              "ai-certification-phrase-059",
+              "agent-vocab-035",
+              "topic-teamwork-008-i-try-to-support-teammates-w",
+              "ai-certification-phrase-096",
+              "agent-vocab-020",
+              "ai-certification-phrase-058",
+              "presentation-phrase-038",
+              "presentation-phrase-069",
+              "agent-vocab-001",
+              "phrase-049",
+              "ai-certification-phrase-003",
+              "presentation-phrase-071",
+              "topic-stress-management-001-i-manage-stress-by-breaking-",
+              "presentation-phrase-041",
+              "presentation-phrase-002",
+              "ai-certification-phrase-060",
+              "topic-leadership-001-leadership-is-not-only-about",
+              "phrase-011",
+              "agent-vocab-053",
+              "phrase-040",
+              "agent-vocab-028",
+              "ai-certification-phrase-007"
+            ],
+            "index": 0
+          }
+        },
+        "learnPasses": {},
+        "progress": {
+          "learnedPhrases": []
+        },
+        "settings": {
+          "activePage": "flashcards",
+          "flashcardMode": "topic",
+          "flashcardTopic": "Start answer"
+        }
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "flashcardMode",
+            "value": "topic"
+          },
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "flashcardTopic",
+            "value": "Start answer"
+          },
+          {
+            "method": "put",
+            "store": "progress",
+            "key": "learnedPhrases",
+            "value": []
+          }
+        ],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 1160
+    },
+    {
+      "name": "word-verb-identities-after-sort-filter-hide-and-reload",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "saved": {
+        "flashcardSessions": {},
+        "learnPasses": {},
+        "progress": {
+          "favoriteIrregular": [
+            "iv-ai-certification-039-escalate"
+          ],
+          "favoriteWords": [
+            "ai-certification-word-121"
+          ],
+          "hiddenIrregular": [],
+          "hiddenWords": []
+        },
+        "settings": {
+          "activePage": "favorites",
+          "indexDailyExpanded": false,
+          "indexLearnPassExpanded": false,
+          "indexLearningBlocksExpanded": false,
+          "indexPageSize": 12,
+          "indexTagCloudExpanded": false,
+          "indexTagFilter": "assessment",
+          "irregularPageSize": 10,
+          "irregularSet": "ai-certification-verbs-contextual",
+          "showHiddenIrregular": true,
+          "showHiddenWords": true,
+          "wordPageSize": 20
+        }
+      },
+      "probeAtEnd": {
+        "opens": [
+          "eng-trainer-v2",
+          "eng-trainer-v2"
+        ],
+        "transactions": [
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions",
+              "learnPasses",
+              "progress",
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readwrite",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "flashcardSessions"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "learnPasses"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "progress"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          },
+          {
+            "mode": "readonly",
+            "stores": [
+              "settings"
+            ],
+            "outcome": "complete",
+            "requestSuccessBeforeAbort": false
+          }
+        ],
+        "writes": [
+          {
+            "method": "put",
+            "store": "settings",
+            "key": "activePage",
+            "value": "favorites"
+          }
+        ],
+        "storageCalls": [],
+        "speech": []
+      },
+      "elapsedMs": 3721
+    },
+    {
+      "name": "v1-representative-learning-with-own-storage",
+      "status": "PASS",
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "speech": [
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "cancel"
+        },
+        {
+          "type": "speak",
+          "text": "Find, Validate, Test, Remediate, Prove",
+          "lang": "en-US",
+          "rate": 0.8799999952316284
+        }
+      ],
+      "legacy": {
+        "activePage": "flashcards",
+        "phraseQuery": "",
+        "phraseCategory": "All",
+        "wordQuery": "",
+        "wordCategory": "All",
+        "irregularQuery": "",
+        "irregularGroup": "All",
+        "irregularSet": "essential-100",
+        "reverseMode": "phrase",
+        "showHiddenPhrases": false,
+        "showHiddenWords": false,
+        "showHiddenIrregular": false,
+        "currentPrompt": "",
+        "speechRepeatCount": 10,
+        "selectedLearnPassId": "default",
+        "learnPassSearch": "",
+        "indexTagFilter": "",
+        "indexPage": 1,
+        "indexPageSize": 6,
+        "indexLearnPassExpanded": true,
+        "indexLearningBlocksExpanded": true,
+        "indexTagCloudExpanded": true,
+        "indexDailyExpanded": true,
+        "phrasePage": 1,
+        "phrasePageSize": 5,
+        "wordPage": 1,
+        "wordPageSize": 5,
+        "irregularPage": 1,
+        "irregularPageSize": 5,
+        "learnedPhrases": [
+          "phrase-001"
+        ],
+        "hiddenPhrases": [],
+        "hiddenWords": [],
+        "hiddenIrregular": [],
+        "favoriteBlocks": [],
+        "favoritePhrases": [],
+        "favoriteWords": [],
+        "favoriteIrregular": [],
+        "learnPasses": [],
+        "flashcardMode": "all",
+        "flashcardTopic": "",
+        "flashcardSessions": {
+          "all": {
+            "order": [
+              "phrase-002",
+              "phrase-003",
+              "phrase-004",
+              "phrase-005",
+              "phrase-006",
+              "phrase-007",
+              "phrase-008",
+              "phrase-009",
+              "phrase-010",
+              "phrase-011",
+              "phrase-012",
+              "phrase-013",
+              "phrase-014",
+              "phrase-015",
+              "phrase-016",
+              "phrase-017",
+              "phrase-018",
+              "phrase-019",
+              "phrase-020",
+              "phrase-021",
+              "phrase-022",
+              "phrase-023",
+              "phrase-024",
+              "phrase-025",
+              "phrase-026",
+              "phrase-027",
+              "phrase-028",
+              "phrase-029",
+              "phrase-030",
+              "phrase-031",
+              "phrase-032",
+              "phrase-033",
+              "phrase-034",
+              "phrase-035",
+              "phrase-036",
+              "phrase-037",
+              "phrase-038",
+              "phrase-039",
+              "phrase-040",
+              "phrase-041",
+              "phrase-042",
+              "phrase-043",
+              "phrase-044",
+              "phrase-045",
+              "phrase-046",
+              "phrase-047",
+              "phrase-048",
+              "phrase-049",
+              "phrase-050",
+              "phrase-051",
+              "phrase-052",
+              "phrase-053",
+              "phrase-054",
+              "phrase-055",
+              "phrase-056",
+              "phrase-057",
+              "phrase-058",
+              "phrase-059",
+              "phrase-060",
+              "phrase-061",
+              "phrase-062",
+              "phrase-063",
+              "phrase-064",
+              "phrase-065",
+              "phrase-066",
+              "phrase-067",
+              "phrase-068",
+              "phrase-069",
+              "phrase-070",
+              "phrase-071",
+              "phrase-072",
+              "phrase-073",
+              "phrase-074",
+              "phrase-075",
+              "phrase-076",
+              "phrase-077",
+              "phrase-078",
+              "phrase-079",
+              "phrase-080",
+              "phrase-081",
+              "phrase-082",
+              "phrase-083",
+              "phrase-084",
+              "phrase-085",
+              "phrase-086",
+              "phrase-087",
+              "phrase-088",
+              "phrase-089",
+              "presentation-phrase-001",
+              "presentation-phrase-002",
+              "presentation-phrase-003",
+              "presentation-phrase-004",
+              "presentation-phrase-005",
+              "presentation-phrase-006",
+              "presentation-phrase-007",
+              "presentation-phrase-008",
+              "presentation-phrase-009",
+              "presentation-phrase-010",
+              "presentation-phrase-011",
+              "presentation-phrase-012",
+              "presentation-phrase-013",
+              "presentation-phrase-014",
+              "presentation-phrase-015",
+              "presentation-phrase-016",
+              "presentation-phrase-017",
+              "presentation-phrase-018",
+              "presentation-phrase-019",
+              "presentation-phrase-020",
+              "presentation-phrase-021",
+              "presentation-phrase-022",
+              "presentation-phrase-023",
+              "presentation-phrase-024",
+              "presentation-phrase-025",
+              "presentation-phrase-026",
+              "presentation-phrase-027",
+              "presentation-phrase-028",
+              "presentation-phrase-029",
+              "presentation-phrase-030",
+              "presentation-phrase-031",
+              "presentation-phrase-032",
+              "presentation-phrase-033",
+              "presentation-phrase-034",
+              "presentation-phrase-035",
+              "presentation-phrase-036",
+              "presentation-phrase-037",
+              "presentation-phrase-038",
+              "presentation-phrase-039",
+              "presentation-phrase-040",
+              "presentation-phrase-041",
+              "presentation-phrase-042",
+              "presentation-phrase-043",
+              "presentation-phrase-044",
+              "presentation-phrase-045",
+              "presentation-phrase-046",
+              "presentation-phrase-047",
+              "presentation-phrase-048",
+              "presentation-phrase-049",
+              "presentation-phrase-050",
+              "presentation-phrase-051",
+              "presentation-phrase-052",
+              "presentation-phrase-053",
+              "presentation-phrase-054",
+              "presentation-phrase-055",
+              "presentation-phrase-056",
+              "presentation-phrase-057",
+              "presentation-phrase-058",
+              "presentation-phrase-059",
+              "presentation-phrase-060",
+              "presentation-phrase-061",
+              "presentation-phrase-062",
+              "presentation-phrase-063",
+              "presentation-phrase-064",
+              "presentation-phrase-065",
+              "presentation-phrase-066",
+              "presentation-phrase-067",
+              "presentation-phrase-068",
+              "presentation-phrase-069",
+              "presentation-phrase-070",
+              "presentation-phrase-071",
+              "presentation-phrase-072",
+              "presentation-phrase-073",
+              "presentation-phrase-074",
+              "presentation-phrase-075",
+              "presentation-phrase-076",
+              "presentation-phrase-077",
+              "presentation-phrase-078",
+              "presentation-phrase-079",
+              "presentation-phrase-080",
+              "presentation-phrase-081",
+              "presentation-phrase-082",
+              "presentation-phrase-083",
+              "presentation-phrase-084",
+              "presentation-phrase-085",
+              "presentation-phrase-086",
+              "presentation-phrase-087",
+              "presentation-phrase-088",
+              "presentation-phrase-089",
+              "presentation-phrase-090",
+              "agent-vocab-001",
+              "agent-vocab-002",
+              "agent-vocab-003",
+              "agent-vocab-004",
+              "agent-vocab-005",
+              "agent-vocab-006",
+              "agent-vocab-007",
+              "agent-vocab-008",
+              "agent-vocab-009",
+              "agent-vocab-010",
+              "agent-vocab-011",
+              "agent-vocab-012",
+              "agent-vocab-013",
+              "agent-vocab-014",
+              "agent-vocab-015",
+              "agent-vocab-016",
+              "agent-vocab-017",
+              "agent-vocab-018",
+              "agent-vocab-019",
+              "agent-vocab-020",
+              "agent-vocab-021",
+              "agent-vocab-022",
+              "agent-vocab-023",
+              "agent-vocab-024",
+              "agent-vocab-025",
+              "agent-vocab-026",
+              "agent-vocab-027",
+              "agent-vocab-028",
+              "agent-vocab-029",
+              "agent-vocab-030",
+              "agent-vocab-031",
+              "agent-vocab-032",
+              "agent-vocab-033",
+              "agent-vocab-034",
+              "agent-vocab-035",
+              "agent-vocab-036",
+              "agent-vocab-037",
+              "agent-vocab-038",
+              "agent-vocab-039",
+              "agent-vocab-040",
+              "agent-vocab-041",
+              "agent-vocab-042",
+              "agent-vocab-043",
+              "agent-vocab-044",
+              "agent-vocab-045",
+              "agent-vocab-046",
+              "agent-vocab-047",
+              "agent-vocab-048",
+              "agent-vocab-049",
+              "agent-vocab-050",
+              "agent-vocab-051",
+              "agent-vocab-052",
+              "agent-vocab-053",
+              "agent-vocab-054",
+              "agent-vocab-055",
+              "agent-vocab-056",
+              "agent-vocab-057",
+              "agent-vocab-058",
+              "agent-vocab-059",
+              "agent-vocab-060",
+              "agent-vocab-061",
+              "agent-vocab-062",
+              "agent-vocab-063",
+              "agent-vocab-064",
+              "agent-vocab-065",
+              "agent-vocab-066",
+              "agent-vocab-067",
+              "agent-vocab-068",
+              "agent-vocab-069",
+              "agent-vocab-070",
+              "agent-vocab-071",
+              "agent-vocab-072",
+              "agent-vocab-073",
+              "agent-vocab-074",
+              "agent-vocab-075",
+              "agent-vocab-076",
+              "agent-vocab-077",
+              "agent-vocab-078",
+              "agent-vocab-079",
+              "agent-vocab-080",
+              "agent-vocab-081",
+              "hedging-001-i-would-say",
+              "hedging-002-i-suppose",
+              "hedging-003-i-guess",
+              "hedging-004-in-my-opinion",
+              "hedging-006-it-seems-to-me-that",
+              "hedging-007-i-tend-to-think-that",
+              "hedging-009-i-am-not-completely-sure-but",
+              "hedging-010-in-many-cases",
+              "hedging-011-it-depends-on-the-situation",
+              "hedging-012-i-would-probably-choose",
+              "advanced-linking-001-moreover",
+              "advanced-linking-002-nevertheless",
+              "advanced-linking-003-in-addition-to-that",
+              "advanced-linking-005-nonetheless",
+              "advanced-linking-006-to-put-it-another-way",
+              "advanced-linking-007-furthermore",
+              "advanced-linking-010-in-contrast",
+              "advanced-linking-011-for-instance",
+              "topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+              "topic-tell-me-about-yourself-002-my-current-focus-is-improvin",
+              "topic-tell-me-about-yourself-003-i-enjoy-solving-technical-pr",
+              "topic-tell-me-about-yourself-004-over-the-years-i-have-worked",
+              "topic-tell-me-about-yourself-005-one-of-my-strengths-is-conne",
+              "topic-tell-me-about-yourself-006-i-am-also-interested-in-ai-n",
+              "topic-tell-me-about-yourself-007-i-try-to-be-reliable-practic",
+              "topic-tell-me-about-yourself-008-i-like-working-in-teams-wher",
+              "topic-tell-me-about-yourself-009-my-goal-is-to-keep-growing-a",
+              "topic-tell-me-about-yourself-010-outside-of-work-my-hobbies-h",
+              "topic-tell-me-about-yourself-011-i-would-describe-myself-as-c",
+              "topic-tell-me-about-yourself-012-i-usually-learn-best-through",
+              "topic-tell-me-about-yourself-013-i-care-about-clean-communica",
+              "topic-tell-me-about-yourself-014-i-am-comfortable-working-wit",
+              "topic-tell-me-about-yourself-015-in-the-long-run-i-want-to-co",
+              "topic-hobbies-001-my-hobbies-help-me-recharge-",
+              "topic-hobbies-002-i-enjoy-activities-that-give",
+              "topic-hobbies-003-driving-powerful-cars-is-exc",
+              "topic-hobbies-004-fantasy-books-help-me-switch",
+              "topic-hobbies-005-hiking-helps-me-slow-down-an",
+              "topic-hobbies-006-i-think-hobbies-are-importan",
+              "topic-hobbies-007-a-good-hobby-should-not-feel",
+              "topic-hobbies-008-my-hobbies-make-me-more-crea",
+              "topic-hobbies-009-i-prefer-hobbies-that-combin",
+              "topic-hobbies-010-spending-time-with-my-family",
+              "topic-hobbies-011-i-try-to-keep-my-hobbies-sep",
+              "topic-hobbies-012-hobbies-help-me-come-back-to",
+              "topic-hobbies-013-i-believe-a-balanced-lifesty",
+              "topic-hobbies-014-my-hobbies-reflect-my-person",
+              "topic-hobbies-015-i-do-not-need-many-hobbies-b",
+              "topic-work-life-balance-001-work-life-balance-means-havi",
+              "topic-work-life-balance-002-i-try-to-separate-urgent-tas",
+              "topic-work-life-balance-003-healthy-boundaries-help-prev",
+              "topic-work-life-balance-004-i-can-work-intensively-when-",
+              "topic-work-life-balance-005-a-balanced-person-usually-ma",
+              "topic-work-life-balance-006-planning-personal-time-is-as",
+              "topic-work-life-balance-007-i-try-not-to-check-work-mess",
+              "topic-work-life-balance-008-good-balance-improves-long-t",
+              "topic-work-life-balance-009-work-life-balance-depends-on",
+              "topic-work-life-balance-010-if-priorities-are-unclear-ba",
+              "topic-work-life-balance-011-i-believe-rest-is-part-of-pe",
+              "topic-work-life-balance-012-a-flexible-schedule-can-supp",
+              "topic-work-life-balance-013-i-try-to-manage-my-energy-no",
+              "topic-work-life-balance-014-balance-is-easier-when-commu",
+              "topic-work-life-balance-015-for-me-balance-is-about-sust",
+              "topic-teamwork-001-good-teamwork-starts-with-tr",
+              "topic-teamwork-002-i-prefer-teams-where-people-",
+              "topic-teamwork-003-a-strong-team-shares-context",
+              "topic-teamwork-004-when-people-communicate-earl",
+              "topic-teamwork-005-i-think-respect-is-more-impo",
+              "topic-teamwork-006-in-a-good-team-feedback-shou",
+              "topic-teamwork-007-teamwork-is-easier-when-resp",
+              "topic-teamwork-008-i-try-to-support-teammates-w",
+              "topic-teamwork-009-it-is-important-to-ask-for-h",
+              "topic-teamwork-010-a-team-should-focus-on-the-g",
+              "topic-teamwork-011-clear-documentation-helps-te",
+              "topic-teamwork-012-i-value-teammates-who-are-ho",
+              "topic-teamwork-013-good-teamwork-reduces-rework",
+              "topic-teamwork-014-i-try-to-listen-first-before",
+              "topic-teamwork-015-a-good-team-makes-people-fee",
+              "topic-stress-management-001-i-manage-stress-by-breaking-",
+              "topic-stress-management-002-when-i-feel-pressure-i-try-t",
+              "topic-stress-management-003-stress-is-easier-to-handle-w",
+              "topic-stress-management-004-i-try-not-to-react-emotional",
+              "topic-stress-management-005-a-short-pause-can-help-me-ma",
+              "topic-stress-management-006-i-usually-separate-what-i-ca",
+              "topic-stress-management-007-clear-communication-reduces-",
+              "topic-stress-management-008-i-prefer-to-raise-risks-earl",
+              "topic-stress-management-009-physical-activity-helps-me-r",
+              "topic-stress-management-010-i-try-to-keep-stress-tempora",
+              "topic-stress-management-011-if-the-situation-is-unclear-",
+              "topic-stress-management-012-i-try-to-protect-focus-time-",
+              "topic-stress-management-013-stress-can-be-useful-if-it-p",
+              "topic-stress-management-014-i-ask-for-support-when-the-p",
+              "topic-stress-management-015-the-main-thing-is-to-stay-ca",
+              "topic-time-management-001-good-time-management-starts-",
+              "topic-time-management-002-i-try-to-plan-my-day-around-",
+              "topic-time-management-003-not-every-urgent-task-is-tru",
+              "topic-time-management-004-i-prefer-realistic-estimates",
+              "topic-time-management-005-breaking-work-into-smaller-t",
+              "topic-time-management-006-i-try-to-avoid-multitasking-",
+              "topic-time-management-007-clear-deadlines-help-me-orga",
+              "topic-time-management-008-if-a-task-grows-in-scope-i-c",
+              "topic-time-management-009-i-usually-leave-some-buffer-",
+              "topic-time-management-010-time-management-is-also-abou",
+              "topic-time-management-011-i-use-short-updates-to-keep-",
+              "topic-time-management-012-i-try-to-finish-one-meaningf",
+              "topic-time-management-013-good-planning-reduces-stress",
+              "topic-time-management-014-i-prefer-to-clarify-acceptan",
+              "topic-time-management-015-in-my-experience-time-manage",
+              "topic-leadership-001-leadership-is-not-only-about",
+              "topic-leadership-002-a-good-leader-creates-clarit",
+              "topic-leadership-003-leadership-means-helping-peo",
+              "topic-leadership-004-i-think-a-leader-should-list",
+              "topic-leadership-005-a-leader-should-protect-the-",
+              "topic-leadership-006-good-leadership-combines-con",
+              "topic-leadership-007-a-leader-should-give-context",
+              "topic-leadership-008-trust-is-built-when-actions-",
+              "topic-leadership-009-leadership-also-means-taking",
+              "topic-leadership-010-a-good-leader-encourages-peo",
+              "topic-leadership-011-i-respect-leaders-who-are-fa",
+              "topic-leadership-012-leadership-is-stronger-when-",
+              "topic-leadership-013-a-leader-should-focus-on-out",
+              "topic-leadership-014-in-technical-teams-leadershi",
+              "topic-leadership-015-for-me-leadership-is-about-i",
+              "topic-remote-work-001-remote-work-gives-people-mor",
+              "topic-remote-work-002-clear-written-communication-",
+              "topic-remote-work-003-i-think-remote-work-works-be",
+              "topic-remote-work-004-async-updates-reduce-the-nee",
+              "topic-remote-work-005-remote-work-requires-proacti",
+              "topic-remote-work-006-it-is-important-to-make-prog",
+              "topic-remote-work-007-a-remote-team-needs-trust-no",
+              "topic-remote-work-008-i-try-to-be-clear-in-written",
+              "topic-remote-work-009-remote-work-can-improve-focu",
+              "topic-remote-work-010-time-zones-can-be-challengin",
+              "topic-remote-work-011-i-prefer-short-meetings-with",
+              "topic-remote-work-012-remote-work-should-include-s",
+              "topic-remote-work-013-the-biggest-risk-in-remote-w",
+              "topic-remote-work-014-good-remote-work-depends-on-",
+              "topic-remote-work-015-overall-i-see-remote-work-as",
+              "topic-career-growth-001-career-growth-means-continuo",
+              "topic-career-growth-002-i-try-to-learn-from-real-pro",
+              "topic-career-growth-003-feedback-is-one-of-the-faste",
+              "topic-career-growth-004-i-believe-curiosity-is-impor",
+              "topic-career-growth-005-career-growth-is-easier-when",
+              "topic-career-growth-006-i-try-to-invest-time-in-skil",
+              "topic-career-growth-007-ai-skills-are-becoming-an-im",
+              "topic-career-growth-008-i-prefer-learning-that-is-co",
+              "topic-career-growth-009-growth-also-means-taking-mor",
+              "topic-career-growth-010-i-try-to-reflect-on-mistakes",
+              "topic-career-growth-011-a-good-mentor-can-speed-up-c",
+              "topic-career-growth-012-i-want-to-grow-in-a-directio",
+              "topic-career-growth-013-career-growth-should-be-meas",
+              "topic-career-growth-014-i-try-to-combine-technical-d",
+              "topic-career-growth-015-for-me-growth-is-a-long-term",
+              "topic-communication-in-distributed-t-001-distributed-teams-need-more-",
+              "topic-communication-in-distributed-t-002-a-short-written-update-can-s",
+              "topic-communication-in-distributed-t-003-i-try-to-make-my-messages-cl",
+              "topic-communication-in-distributed-t-004-it-is-useful-to-repeat-decis",
+              "topic-communication-in-distributed-t-005-in-distributed-teams-silence",
+              "topic-communication-in-distributed-t-006-i-prefer-to-clarify-assumpti",
+              "topic-communication-in-distributed-t-007-time-zones-require-patience-",
+              "topic-communication-in-distributed-t-008-good-documentation-is-part-o",
+              "topic-communication-in-distributed-t-009-i-try-to-separate-urgent-que",
+              "topic-communication-in-distributed-t-010-clear-ownership-reduces-conf",
+              "topic-communication-in-distributed-t-011-it-helps-to-provide-context-",
+              "topic-communication-in-distributed-t-012-i-try-to-be-concise-but-not-",
+              "topic-communication-in-distributed-t-013-the-goal-is-to-keep-everyone",
+              "topic-communication-in-distributed-t-014-communication-should-create-",
+              "topic-communication-in-distributed-t-015-in-distributed-teams-proacti",
+              "topic-conflict-resolution-team-probl-001-i-think-conflicts-should-be-",
+              "topic-conflict-resolution-team-probl-002-the-first-step-is-to-underst",
+              "topic-conflict-resolution-team-probl-003-i-try-to-focus-on-the-proble",
+              "topic-conflict-resolution-team-probl-004-a-calm-conversation-usually-",
+              "topic-conflict-resolution-team-probl-005-it-is-important-to-check-whe",
+              "topic-conflict-resolution-team-probl-006-sometimes-conflict-comes-fro",
+              "topic-conflict-resolution-team-probl-007-i-try-not-to-assume-bad-inte",
+              "topic-conflict-resolution-team-probl-008-if-emotions-are-high-it-is-b",
+              "topic-conflict-resolution-team-probl-009-a-team-problem-should-be-sol",
+              "topic-conflict-resolution-team-probl-010-i-believe-feedback-should-be",
+              "topic-conflict-resolution-team-probl-011-when-there-is-disagreement-i",
+              "topic-conflict-resolution-team-probl-012-the-goal-is-not-to-win-the-a",
+              "topic-conflict-resolution-team-probl-013-if-needed-i-would-involve-a-",
+              "topic-conflict-resolution-team-probl-014-after-a-conflict-it-is-usefu",
+              "topic-conflict-resolution-team-probl-015-good-conflict-resolution-can",
+              "ai-certification-phrase-001",
+              "ai-certification-phrase-002",
+              "ai-certification-phrase-003",
+              "ai-certification-phrase-004",
+              "ai-certification-phrase-005",
+              "ai-certification-phrase-006",
+              "ai-certification-phrase-007",
+              "ai-certification-phrase-008",
+              "ai-certification-phrase-009",
+              "ai-certification-phrase-010",
+              "ai-certification-phrase-011",
+              "ai-certification-phrase-012",
+              "ai-certification-phrase-013",
+              "ai-certification-phrase-014",
+              "ai-certification-phrase-015",
+              "ai-certification-phrase-016",
+              "ai-certification-phrase-017",
+              "ai-certification-phrase-018",
+              "ai-certification-phrase-019",
+              "ai-certification-phrase-020",
+              "ai-certification-phrase-021",
+              "ai-certification-phrase-022",
+              "ai-certification-phrase-023",
+              "ai-certification-phrase-024",
+              "ai-certification-phrase-025",
+              "ai-certification-phrase-026",
+              "ai-certification-phrase-027",
+              "ai-certification-phrase-028",
+              "ai-certification-phrase-029",
+              "ai-certification-phrase-030",
+              "ai-certification-phrase-031",
+              "ai-certification-phrase-032",
+              "ai-certification-phrase-033",
+              "ai-certification-phrase-034",
+              "ai-certification-phrase-035",
+              "ai-certification-phrase-036",
+              "ai-certification-phrase-037",
+              "ai-certification-phrase-038",
+              "ai-certification-phrase-039",
+              "ai-certification-phrase-040",
+              "ai-certification-phrase-041",
+              "ai-certification-phrase-042",
+              "ai-certification-phrase-043",
+              "ai-certification-phrase-044",
+              "ai-certification-phrase-046",
+              "ai-certification-phrase-048",
+              "ai-certification-phrase-049",
+              "ai-certification-phrase-050",
+              "ai-certification-phrase-052",
+              "ai-certification-phrase-053",
+              "ai-certification-phrase-054",
+              "ai-certification-phrase-055",
+              "ai-certification-phrase-056",
+              "ai-certification-phrase-057",
+              "ai-certification-phrase-058",
+              "ai-certification-phrase-059",
+              "ai-certification-phrase-060",
+              "ai-certification-phrase-061",
+              "ai-certification-phrase-062",
+              "ai-certification-phrase-063",
+              "ai-certification-phrase-064",
+              "ai-certification-phrase-065",
+              "ai-certification-phrase-066",
+              "ai-certification-phrase-067",
+              "ai-certification-phrase-068",
+              "ai-certification-phrase-069",
+              "ai-certification-phrase-070",
+              "ai-certification-phrase-071",
+              "ai-certification-phrase-072",
+              "ai-certification-phrase-073",
+              "ai-certification-phrase-074",
+              "ai-certification-phrase-075",
+              "ai-certification-phrase-076",
+              "ai-certification-phrase-077",
+              "ai-certification-phrase-078",
+              "ai-certification-phrase-079",
+              "ai-certification-phrase-080",
+              "ai-certification-phrase-081",
+              "ai-certification-phrase-082",
+              "ai-certification-phrase-083",
+              "ai-certification-phrase-084",
+              "ai-certification-phrase-085",
+              "ai-certification-phrase-086",
+              "ai-certification-phrase-087",
+              "ai-certification-phrase-088",
+              "ai-certification-phrase-089",
+              "ai-certification-phrase-090",
+              "ai-certification-phrase-091",
+              "ai-certification-phrase-092",
+              "ai-certification-phrase-093",
+              "ai-certification-phrase-094",
+              "ai-certification-phrase-095",
+              "ai-certification-phrase-096",
+              "ai-certification-phrase-097",
+              "ai-certification-phrase-098",
+              "ai-certification-phrase-099",
+              "ai-certification-phrase-100",
+              "ai-certification-phrase-101",
+              "ai-certification-phrase-102",
+              "ai-certification-phrase-103",
+              "ai-certification-phrase-104",
+              "ai-certification-phrase-105",
+              "ai-certification-phrase-106",
+              "ai-certification-phrase-107",
+              "ai-certification-phrase-108",
+              "ai-certification-phrase-109",
+              "ai-certification-phrase-110",
+              "ai-certification-phrase-111",
+              "ai-certification-phrase-112",
+              "ai-certification-phrase-113",
+              "ai-certification-phrase-114",
+              "ai-certification-phrase-115",
+              "ai-certification-phrase-117",
+              "ai-certification-phrase-118",
+              "ai-certification-phrase-119",
+              "ai-certification-phrase-120",
+              "ai-certification-phrase-121"
+            ],
+            "index": 0
+          }
+        }
+      },
+      "probeAtEnd": {
+        "opens": [],
+        "transactions": [],
+        "writes": [],
+        "storageCalls": [
+          "get localStorage",
+          "getItem",
+          "get localStorage",
+          "get localStorage",
+          "getItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "getItem",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem",
+          "get localStorage",
+          "get localStorage",
+          "setItem"
+        ],
+        "speech": [
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "cancel"
+          },
+          {
+            "type": "speak",
+            "text": "Find, Validate, Test, Remediate, Prove",
+            "lang": "en-US",
+            "rate": 0.8799999952316284
+          }
+        ]
+      },
+      "elapsedMs": 952
+    }
+  ]
+}

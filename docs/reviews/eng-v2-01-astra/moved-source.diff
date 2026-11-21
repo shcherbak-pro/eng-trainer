@@ -1,0 +1,2490 @@
+diff --git a/v1/src/App.svelte b/src/app/App.svelte
+index 8456060..8b6ecf0 100644
+--- a/v1/src/App.svelte
++++ b/src/app/App.svelte
+@@ -1,156 +1,111 @@
+ <script lang="ts">
+   import { onMount } from 'svelte';
+-  import { DEFAULT_LEARN_PASS_ID, progress } from './lib/stores/progress';
+-  import type { LearnPass, Materials, TrainingBlock } from './lib/types/materials';
+-  import AppShell from './lib/components/AppShell.svelte';
+-  import IndexPage from './lib/pages/IndexPage.svelte';
+-  import PhrasesPage from './lib/pages/PhrasesPage.svelte';
+-  import WordIndexPage from './lib/pages/WordIndexPage.svelte';
+-  import FlashcardsPage from './lib/pages/FlashcardsPage.svelte';
+-  import ReversePracticePage from './lib/pages/ReversePracticePage.svelte';
+-  import IrregularVerbsPage from './lib/pages/IrregularVerbsPage.svelte';
+-  import PatternsPage from './lib/pages/PatternsPage.svelte';
+-  import AnswersPage from './lib/pages/AnswersPage.svelte';
+-  import PracticePage from './lib/pages/PracticePage.svelte';
+-  import FocusListPage from './lib/pages/FocusListPage.svelte';
+-
+-  let materials: Materials | null = null;
+-  let loading = true;
+-  let error = '';
++  import { loadBuiltInCatalog } from '../content/builtIn';
++  import type { ContentCatalog } from '../content/catalog';
++  import type { TrainingBlock } from '../content/types';
++  import { initState, initStateWithoutStorage, progress, settings } from '../state';
++  import { availablePagesFor, blocksForLearnPass, pageForBlock, pageFromHash } from './navigation';
++  import AppShell from './AppShell.svelte';
++  import IndexPage from '../features/home/IndexPage.svelte';
++  import PhrasesPage from '../features/vocabulary/PhrasesPage.svelte';
++  import WordIndexPage from '../features/vocabulary/WordIndexPage.svelte';
++  import IrregularVerbsPage from '../features/vocabulary/IrregularVerbsPage.svelte';
++  import FlashcardsPage from '../features/flashcards/FlashcardsPage.svelte';
++  import ReversePracticePage from '../features/exercises/ReversePracticePage.svelte';
++  import PatternsPage from '../features/exercises/PatternsPage.svelte';
++  import AnswersPage from '../features/exercises/AnswersPage.svelte';
++  import PracticePage from '../features/exercises/PracticePage.svelte';
++  import FocusListPage from '../features/focus/FocusListPage.svelte';
++
++  type Phase = 'loading' | 'storage-error' | 'content-error' | 'ready';
++
++  let phase: Phase = 'loading';
++  let errorMessage = '';
++  let catalog: ContentCatalog | null = null;
+   let activePage = 'index';
++  let mounted = false;
+ 
+-  const pageLabels: Record<string, string> = {
+-    index: 'Index',
+-    phrases: 'Phrases',
+-    wordIndex: 'Words',
+-    flashcards: 'Flashcards',
+-    reverse: 'Reverse',
+-    irregularVerbs: 'Verbs',
+-    patterns: 'Patterns',
+-    answers: 'Answers',
+-    practice: 'Practice',
+-    favorites: 'Focus'
+-  };
+-
+-  function blockHasContent(block: TrainingBlock, data: Materials): boolean {
+-    if (block.type === 'phraseCategory') return data.phrases.some((item) => item.category === block.category);
+-    if (block.type === 'wordIndex') return data.wordIndex.length > 0;
+-    if (block.type === 'reversePractice') return data.wordIndex.length > 0 || data.phrases.length > 0;
+-    if (block.type === 'irregularVerbs') {
+-      return block.verbSet
+-        ? data.irregularVerbs.some((item) => item.verbSet === block.verbSet)
+-        : data.irregularVerbs.length > 0;
+-    }
+-    if (block.type === 'patterns') return data.patterns.length > 0;
+-    if (block.type === 'answers') return data.answers.length > 0;
+-    if (block.type === 'practice') return data.drills.length > 0;
+-    return false;
++  $: blocks = catalog ? blocksForLearnPass(catalog.blocks, $progress.selectedLearnPassId, $progress.learnPasses) : [];
++  $: availablePages = availablePagesFor(blocks);
++
++  function fail(next: Phase, error: unknown): void {
++    if (!mounted) return;
++    errorMessage = error instanceof Error ? error.message : String(error);
++    phase = next;
+   }
+ 
+-  function getBlocksForLearnPass(
+-    allBlocks: TrainingBlock[],
+-    selectedLearnPassId: string,
+-    learnPasses: LearnPass[]
+-  ): TrainingBlock[] {
+-    if (selectedLearnPassId === DEFAULT_LEARN_PASS_ID) return allBlocks;
++  /** Startup order: saved state first, then content, then the first screen. */
++  async function start(): Promise<void> {
++    phase = 'loading';
++
++    // The content download does not depend on storage, so it starts right away.
++    const content = loadBuiltInCatalog();
++    content.catch(() => undefined);
+ 
+-    const activePass = learnPasses.find((pass) => pass.id === selectedLearnPassId);
+-    if (!activePass) return allBlocks;
++    try {
++      await initState();
++    } catch (error) {
++      fail('storage-error', error);
++      return;
++    }
+ 
+-    const allowed = new Set(activePass.blockIds);
+-    return allBlocks.filter((block) => allowed.has(block.id));
++    await showContent(content);
+   }
+ 
+-  $: allBlocks = materials ? materials.blocks.filter((block) => blockHasContent(block, materials!)).sort((a, b) => (a.priority ?? 0) - (b.priority ?? 0)) : [];
+-  $: selectedLearnPassId = $progress.selectedLearnPassId;
+-  $: learnPasses = $progress.learnPasses;
+-  $: blocks = getBlocksForLearnPass(allBlocks, selectedLearnPassId, learnPasses);
+-  $: availablePages = getAvailablePages(blocks);
+-
+-  function getAvailablePages(blockList: TrainingBlock[]): string[] {
+-    const pages = ['index'];
+-    const types = new Set(blockList.map((block) => block.type));
+-
+-    if (types.has('phraseCategory')) pages.push('phrases');
+-    if (types.has('wordIndex')) pages.push('wordIndex');
+-    if (types.has('phraseCategory') || types.has('wordIndex')) pages.push('flashcards');
+-    if (types.has('reversePractice')) pages.push('reverse');
+-    if (types.has('irregularVerbs')) pages.push('irregularVerbs');
+-    if (types.has('patterns')) pages.push('patterns');
+-    if (types.has('answers')) pages.push('answers');
+-    if (types.has('practice')) pages.push('practice');
+-
+-    pages.push('favorites');
+-    return pages;
++  async function showContent(content: Promise<ContentCatalog>): Promise<void> {
++    phase = 'loading';
++
++    let loaded: ContentCatalog;
++    try {
++      loaded = await content;
++    } catch (error) {
++      fail('content-error', error);
++      return;
++    }
++    if (!mounted) return;
++
++    const pages = availablePagesFor(blocksForLearnPass(loaded.blocks, $progress.selectedLearnPassId, $progress.learnPasses));
++    const requested = pageFromHash() || $settings.activePage;
++
++    catalog = loaded;
++    activePage = pages.includes(requested) ? requested : 'index';
++    settings.setActivePage(activePage);
++    phase = 'ready';
+   }
+ 
+-  function pageFromHash(): string {
+-    return (window.location.hash || '').replace('#', '') || $progress.activePage || 'index';
++  function continueWithoutSaving(): void {
++    initStateWithoutStorage();
++    void showContent(loadBuiltInCatalog());
+   }
+ 
+   function syncPageFromHash(): void {
+-    const next = pageFromHash();
++    if (phase !== 'ready') return;
++    const next = pageFromHash() || $settings.activePage;
+     activePage = availablePages.includes(next) ? next : 'index';
+-    progress.setActivePage(activePage);
++    settings.setActivePage(activePage);
+   }
+ 
+   function navigate(page: string): void {
+     window.location.hash = page;
+     activePage = page;
+-    progress.setActivePage(page);
++    settings.setActivePage(page);
+   }
+ 
+   function openBlock(block: TrainingBlock): void {
+-    if (block.type === 'phraseCategory' && block.category) {
+-      progress.setPhraseCategory(block.category);
+-      navigate('phrases');
+-      return;
+-    }
+-    if (block.type === 'irregularVerbs') {
+-      if (block.verbSet) progress.setIrregularSet(block.verbSet);
+-      navigate('irregularVerbs');
+-      return;
+-    }
+-
+-    const map: Record<string, string> = {
+-      wordIndex: 'wordIndex',
+-      reversePractice: 'reverse',
+-      patterns: 'patterns',
+-      answers: 'answers',
+-      practice: 'practice'
+-    };
+-    navigate(map[block.type] ?? 'index');
++    if (block.type === 'phraseCategory' && block.category) settings.setPhraseCategory(block.category);
++    if (block.type === 'irregularVerbs' && block.verbSet) settings.setIrregularSet(block.verbSet);
++    navigate(pageForBlock(block));
+   }
+ 
+-  $: if (!loading && materials && !availablePages.includes(activePage)) {
++  // A Learn Pass can remove the screen that is currently open.
++  $: if (phase === 'ready' && !availablePages.includes(activePage)) {
+     navigate('index');
+   }
+ 
+   onMount(() => {
+-    let mounted = true;
+-
+-    async function load(): Promise<void> {
+-      try {
+-        const url = `${import.meta.env.BASE_URL}data/materials.json`;
+-        const response = await fetch(url, { cache: 'no-store' });
+-        if (!response.ok) throw new Error(`Failed to load ${url}`);
+-        const loaded = await response.json();
+-        if (!mounted) return;
+-        materials = loaded;
+-        loading = false;
+-        const pages = getAvailablePages(loaded.blocks.filter((block: TrainingBlock) => blockHasContent(block, loaded)));
+-        const next = pageFromHash();
+-        activePage = pages.includes(next) ? next : 'index';
+-        progress.setActivePage(activePage);
+-        window.addEventListener('hashchange', syncPageFromHash);
+-      } catch (e) {
+-        if (!mounted) return;
+-        error = e instanceof Error ? e.message : 'Unable to load materials.';
+-        loading = false;
+-      }
+-    }
+-
+-    load();
++    mounted = true;
++    window.addEventListener('hashchange', syncPageFromHash);
++    void start();
+ 
+     return () => {
+       mounted = false;
+@@ -159,40 +114,56 @@
+   });
+ </script>
+ 
+-{#if loading}
++{#if phase === 'loading'}
+   <main class="center-page">
+     <div class="loader-card">Loading training materials…</div>
+   </main>
+-{:else if error || !materials}
++{:else if phase === 'storage-error'}
++  <main class="center-page">
++    <div class="error-card" role="alert">
++      <h1>Unable to open your saved progress</h1>
++      <p>The browser storage (IndexedDB) could not be opened or read, so the app did not start with empty progress on top of it.</p>
++      <p><code>{errorMessage}</code></p>
++      <p>You can try again, or continue without saving: the app will work, but nothing you change will be kept after this page is closed.</p>
++      <div class="card__actions">
++        <button type="button" class="btn primary" on:click={start}>Try again</button>
++        <button type="button" class="btn secondary" on:click={continueWithoutSaving}>Continue without saving</button>
++      </div>
++    </div>
++  </main>
++{:else if phase === 'content-error' || !catalog}
+   <main class="center-page">
+-    <div class="error-card">
++    <div class="error-card" role="alert">
+       <h1>Unable to start the app</h1>
+-      <p>{error}</p>
++      <p>{errorMessage}</p>
+       <p>For local development, run <code>npm run dev</code> or <code>npm run preview</code> after building.</p>
++      <div class="card__actions">
++        <button type="button" class="btn primary" on:click={() => showContent(loadBuiltInCatalog())}>Try again</button>
++      </div>
+     </div>
+   </main>
+ {:else}
+-  <AppShell {materials} {availablePages} {activePage} {pageLabels} compactHero={activePage === 'flashcards'} onNavigate={navigate}>
++  <AppShell {catalog} {availablePages} {activePage} compactHero={activePage === 'flashcards'} onNavigate={navigate}>
+     {#if activePage === 'index'}
+-      <IndexPage {materials} {blocks} {allBlocks} onOpenBlock={openBlock} />
++      <IndexPage {catalog} {blocks} onOpenBlock={openBlock} />
+     {:else if activePage === 'phrases'}
+-      <PhrasesPage {materials} />
++      <PhrasesPage {catalog} />
+     {:else if activePage === 'wordIndex'}
+-      <WordIndexPage {materials} />
++      <WordIndexPage {catalog} />
+     {:else if activePage === 'flashcards'}
+-      <FlashcardsPage {materials} />
++      <FlashcardsPage {catalog} />
+     {:else if activePage === 'reverse'}
+-      <ReversePracticePage {materials} />
++      <ReversePracticePage {catalog} />
+     {:else if activePage === 'irregularVerbs'}
+-      <IrregularVerbsPage {materials} />
++      <IrregularVerbsPage {catalog} />
+     {:else if activePage === 'patterns'}
+-      <PatternsPage patterns={materials.patterns} />
++      <PatternsPage patterns={catalog.patterns} />
+     {:else if activePage === 'answers'}
+-      <AnswersPage answers={materials.answers} />
++      <AnswersPage answers={catalog.answers} />
+     {:else if activePage === 'practice'}
+-      <PracticePage drills={materials.drills} />
++      <PracticePage drills={catalog.drills} />
+     {:else if activePage === 'favorites'}
+-      <FocusListPage {materials} blocks={allBlocks} onOpenBlock={openBlock} />
++      <FocusListPage {catalog} onOpenBlock={openBlock} />
+     {/if}
+   </AppShell>
+ {/if}
+diff --git a/v1/src/lib/components/AppShell.svelte b/src/app/AppShell.svelte
+index f115394..b821288 100644
+--- a/v1/src/lib/components/AppShell.svelte
++++ b/src/app/AppShell.svelte
+@@ -1,16 +1,20 @@
+ <script lang="ts">
+-  import { progress } from '../stores/progress';
+-  import type { Materials } from '../types/materials';
++  import type { ContentCatalog } from '../content/catalog';
++  import { progress } from '../state/progress';
++  import { retrySave, saveStatus } from '../state/persistence';
++  import { MOBILE_PAGES, PAGE_LABELS } from './navigation';
+   import ThemeToggle from './ThemeToggle.svelte';
+ 
+-  export let materials: Materials;
++  export let catalog: ContentCatalog;
+   export let availablePages: string[];
+   export let activePage: string;
+-  export let pageLabels: Record<string, string>;
+   export let onNavigate: (page: string) => void;
+   /** Shows only the page title in the hero, for pages that need the screen space. */
+   export let compactHero = false;
+ 
++  /** The preserved v1 application is published next to this one. */
++  const v1Url = `${import.meta.env.BASE_URL}v1/`;
++
+   $: focusCount = $progress.favoriteBlocks.length + $progress.favoritePhrases.length + $progress.favoriteWords.length + $progress.favoriteIrregular.length;
+   $: hiddenCount = $progress.hiddenPhrases.length + $progress.hiddenWords.length + $progress.hiddenIrregular.length;
+ </script>
+@@ -21,8 +25,8 @@
+       <button class="brand" on:click={() => onNavigate('index')} aria-label="Go to index">
+         <span class="brand__mark">EA</span>
+         <span>
+-          <strong>{materials.meta.title}</strong>
+-          <small>{materials.meta.version} · B1+ → B2</small>
++          <strong>{catalog.meta.title}</strong>
++          <small>{catalog.meta.version} · B1+ → B2</small>
+         </span>
+       </button>
+ 
+@@ -30,7 +34,7 @@
+         <nav class="desktop-nav" aria-label="Main navigation">
+           {#each availablePages as page}
+             <button class:active={activePage === page} on:click={() => onNavigate(page)}>
+-              {pageLabels[page] ?? page}
++              {PAGE_LABELS[page] ?? page}
+               {#if page === 'favorites' && focusCount > 0}
+                 <span class="pill mini">{focusCount}</span>
+               {/if}
+@@ -46,27 +50,50 @@
+   <section class="hero" class:hero--compact={compactHero}>
+     <div>
+       <p class="eyebrow">Speaking assessment trainer</p>
+-      <h1>{pageLabels[activePage] ?? 'Trainer'}</h1>
+-      <p>{materials.meta.goal}</p>
++      <h1>{PAGE_LABELS[activePage] ?? 'Trainer'}</h1>
++      <p>{catalog.meta.goal}</p>
+     </div>
+     <div class="hero__stats">
+-      <span><strong>{materials.phrases.length}</strong> phrases</span>
+-      <span><strong>{materials.wordIndex.length}</strong> words</span>
+-      <span><strong>{materials.irregularVerbs.length}</strong> verbs</span>
++      <span><strong>{catalog.phrases.length}</strong> phrases</span>
++      <span><strong>{catalog.wordIndex.length}</strong> words</span>
++      <span><strong>{catalog.irregularVerbs.length}</strong> verbs</span>
+       <span><strong>{focusCount}</strong> focus</span>
+       <span><strong>{hiddenCount}</strong> hidden</span>
+     </div>
+   </section>
+ 
+   <main class="page-wrap">
++    {#if $saveStatus.state === 'error'}
++      <div class="notice storage-notice" role="alert">
++        <p>
++          <strong>Your latest changes are not saved.</strong>
++          They stay on screen, but will be lost when this page is closed unless saving succeeds.
++          <small class="muted">{$saveStatus.message}</small>
++        </p>
++        <button type="button" class="btn primary" on:click={retrySave}>Try saving again</button>
++      </div>
++    {:else if $saveStatus.state === 'disabled'}
++      <div class="notice storage-notice" role="alert">
++        <p>
++          <strong>Saving is off.</strong>
++          The browser storage could not be opened, so changes are lost when this page is closed.
++        </p>
++      </div>
++    {/if}
++
+     <slot />
++
++    <footer class="app-footer">
++      <a href={v1Url}>Open the previous version (v1)</a>
++      <span class="muted">v1 is kept as it was and has its own separate progress.</span>
++    </footer>
+   </main>
+ 
+   <nav class="bottom-nav" aria-label="Mobile navigation">
+-    {#each ['index', 'phrases', 'wordIndex', 'flashcards', 'reverse', 'irregularVerbs', 'favorites'] as page}
++    {#each MOBILE_PAGES as page}
+       {#if availablePages.includes(page)}
+         <button class:active={activePage === page} on:click={() => onNavigate(page)}>
+-          <span>{pageLabels[page]}</span>
++          <span>{PAGE_LABELS[page]}</span>
+         </button>
+       {/if}
+     {/each}
+diff --git a/v1/src/lib/components/ThemeToggle.svelte b/src/app/ThemeToggle.svelte
+index 57be2eb..fee8aaa 100644
+--- a/v1/src/lib/components/ThemeToggle.svelte
++++ b/src/app/ThemeToggle.svelte
+@@ -1,6 +1,6 @@
+ <script lang="ts">
+-  import MaterialIcon from './MaterialIcon.svelte';
+-  import { theme, type ThemePreference } from '../stores/theme';
++  import MaterialIcon from '../shared/ui/MaterialIcon.svelte';
++  import { settings, type ThemePreference } from '../state/settings';
+ 
+   const sequence: ThemePreference[] = ['system', 'light', 'dark'];
+ 
+@@ -21,19 +21,16 @@
+     return sequence[(currentIndex + 1) % sequence.length];
+   }
+ 
+-  function cycleTheme(): void {
+-    theme.set(nextPreference($theme));
+-  }
+-
+-  $: next = nextPreference($theme);
++  $: theme = $settings.theme;
++  $: next = nextPreference(theme);
+ </script>
+ 
+ <button
+   type="button"
+   class="theme-toggle btn--icon-only"
+-  on:click={cycleTheme}
+-  aria-label={`Theme: ${labels[$theme]}. Switch to ${labels[next]}.`}
+-  title={`Theme: ${labels[$theme]}. Click to switch to ${labels[next]}.`}
++  on:click={() => settings.setTheme(next)}
++  aria-label={`Theme: ${labels[theme]}. Switch to ${labels[next]}.`}
++  title={`Theme: ${labels[theme]}. Click to switch to ${labels[next]}.`}
+ >
+-  <MaterialIcon name={icons[$theme]} />
++  <MaterialIcon name={icons[theme]} />
+ </button>
+diff --git a/v1/src/lib/stores/theme.ts b/src/app/theme.ts
+index 280a73e..088a5a3 100644
+--- a/v1/src/lib/stores/theme.ts
++++ b/src/app/theme.ts
+@@ -1,39 +1,13 @@
+-import { writable } from 'svelte/store';
++import { settings, type ThemePreference } from '../state/settings';
+ 
+-export type ThemePreference = 'system' | 'light' | 'dark';
+-export type ResolvedTheme = 'light' | 'dark';
++type ResolvedTheme = 'light' | 'dark';
+ 
+-const STORAGE_KEY = 'englishAssessmentTrainer.theme.v1';
+-const allowedPreferences: ThemePreference[] = ['system', 'light', 'dark'];
+-
+-function canUseDom(): boolean {
+-  return typeof window !== 'undefined' && typeof document !== 'undefined';
+-}
+-
+-function readPreference(): ThemePreference {
+-  if (!canUseDom()) return 'system';
+-
+-  try {
+-    const saved = window.localStorage.getItem(STORAGE_KEY) as ThemePreference | null;
+-    return saved && allowedPreferences.includes(saved) ? saved : 'system';
+-  } catch {
+-    return 'system';
+-  }
+-}
+-
+-function getSystemTheme(): ResolvedTheme {
+-  if (!canUseDom()) return 'light';
++function systemTheme(): ResolvedTheme {
+   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+ }
+ 
+-function resolveTheme(preference: ThemePreference): ResolvedTheme {
+-  return preference === 'system' ? getSystemTheme() : preference;
+-}
+-
+ function applyTheme(preference: ThemePreference): void {
+-  if (!canUseDom()) return;
+-
+-  const resolved = resolveTheme(preference);
++  const resolved = preference === 'system' ? systemTheme() : preference;
+   const root = document.documentElement;
+ 
+   root.dataset.theme = resolved;
+@@ -46,36 +20,21 @@ function applyTheme(preference: ThemePreference): void {
+   }
+ }
+ 
+-function savePreference(preference: ThemePreference): void {
+-  if (!canUseDom()) return;
+-
+-  try {
+-    window.localStorage.setItem(STORAGE_KEY, preference);
+-  } catch {
+-    // The theme still works when localStorage is unavailable.
+-  }
+-}
+-
+-const initialPreference = readPreference();
+-const store = writable<ThemePreference>(initialPreference);
+-let currentPreference = initialPreference;
+-
+-store.subscribe((preference) => {
+-  currentPreference = preference;
+-  savePreference(preference);
+-  applyTheme(preference);
+-});
++/**
++ * Keeps the document theme in line with the theme preference.
++ *
++ * `index.html` applies the system theme before the app starts. The saved
++ * preference is applied as soon as the settings have been loaded.
++ */
++export function startThemeSync(): void {
++  let current: ThemePreference = 'system';
++
++  settings.subscribe((state) => {
++    current = state.theme;
++    applyTheme(current);
++  });
+ 
+-if (canUseDom()) {
+-  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+-  systemTheme.addEventListener('change', () => {
+-    if (currentPreference === 'system') {
+-      applyTheme('system');
+-    }
++  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
++    if (current === 'system') applyTheme('system');
+   });
+ }
+-
+-export const theme = {
+-  subscribe: store.subscribe,
+-  set: (preference: ThemePreference) => store.set(preference)
+-};
+diff --git a/v1/src/lib/pages/AnswersPage.svelte b/src/features/exercises/AnswersPage.svelte
+index 80b0dc6..3278269 100644
+--- a/v1/src/lib/pages/AnswersPage.svelte
++++ b/src/features/exercises/AnswersPage.svelte
+@@ -1,13 +1,9 @@
+ <script lang="ts">
+-  import type { ReadyAnswer } from '../types/materials';
+-  import SpeakButton from '../components/SpeakButton.svelte';
++  import type { ReadyAnswer } from '../../content/types';
++  import { splitAlternatives } from '../../shared/text';
++  import SpeakButton from '../../shared/speech/SpeakButton.svelte';
+ 
+   export let answers: ReadyAnswer[];
+-
+-  function normalizeAlternatives(value: ReadyAnswer['commonAlternatives']): string[] {
+-    if (!value) return [];
+-    return Array.isArray(value) ? value.filter(Boolean) : value.split(';').map((item) => item.trim()).filter(Boolean);
+-  }
+ </script>
+ 
+ <section class="section-stack">
+@@ -20,7 +16,7 @@
+ 
+   <div class="cards-list">
+     {#each answers as item}
+-      {@const alternatives = normalizeAlternatives(item.commonAlternatives)}
++      {@const alternatives = splitAlternatives(item.commonAlternatives)}
+       <article class="card">
+         <p class="tag-row">
+           <span>{item.topic}</span>
+diff --git a/v1/src/lib/pages/PatternsPage.svelte b/src/features/exercises/PatternsPage.svelte
+index 01ee6e6..2a902e0 100644
+--- a/v1/src/lib/pages/PatternsPage.svelte
++++ b/src/features/exercises/PatternsPage.svelte
+@@ -1,13 +1,9 @@
+ <script lang="ts">
+-  import type { Pattern } from '../types/materials';
+-  import SpeakButton from '../components/SpeakButton.svelte';
++  import type { Pattern } from '../../content/types';
++  import { splitAlternatives } from '../../shared/text';
++  import SpeakButton from '../../shared/speech/SpeakButton.svelte';
+ 
+   export let patterns: Pattern[];
+-
+-  function normalizeAlternatives(value: Pattern['commonAlternatives']): string[] {
+-    if (!value) return [];
+-    return Array.isArray(value) ? value.filter(Boolean) : value.split(';').map((item) => item.trim()).filter(Boolean);
+-  }
+ </script>
+ 
+ <section class="section-stack">
+@@ -20,7 +16,7 @@
+ 
+   <div class="cards-list">
+     {#each patterns as pattern}
+-      {@const alternatives = normalizeAlternatives(pattern.commonAlternatives)}
++      {@const alternatives = splitAlternatives(pattern.commonAlternatives)}
+       <article class="card">
+         <p class="tag-row">
+           {#if pattern.level}<span>{pattern.level}</span>{/if}
+diff --git a/v1/src/lib/pages/PracticePage.svelte b/src/features/exercises/PracticePage.svelte
+index d380833..ba97d2d 100644
+--- a/v1/src/lib/pages/PracticePage.svelte
++++ b/src/features/exercises/PracticePage.svelte
+@@ -1,11 +1,12 @@
+ <script lang="ts">
+-  import IconButton from '../components/IconButton.svelte';
+-  import { progress } from '../stores/progress';
++  import IconButton from '../../shared/ui/IconButton.svelte';
++  import { viewState } from '../../state/viewState';
++
+   export let drills: string[];
+ 
+   function randomPrompt(): void {
+     const prompt = drills[Math.floor(Math.random() * drills.length)] ?? '';
+-    progress.setCurrentPrompt(prompt);
++    viewState.setCurrentPrompt(prompt);
+   }
+ </script>
+ 
+@@ -19,7 +20,7 @@
+   </div>
+ 
+   <article class="card practice-card">
+-    <h3>{$progress.currentPrompt || 'Click “Random prompt” to start.'}</h3>
++    <h3>{$viewState.currentPrompt || 'Click “Random prompt” to start.'}</h3>
+     <p class="muted">Suggested flow: think for 10 seconds → speak for 60 seconds → repeat with better structure.</p>
+   </article>
+ 
+diff --git a/v1/src/lib/pages/ReversePracticePage.svelte b/src/features/exercises/ReversePracticePage.svelte
+index 915395c..42ff34e 100644
+--- a/v1/src/lib/pages/ReversePracticePage.svelte
++++ b/src/features/exercises/ReversePracticePage.svelte
+@@ -1,10 +1,10 @@
+ <script lang="ts">
+-  import { progress } from '../stores/progress';
+-  import type { Materials, Phrase, WordIndexItem } from '../types/materials';
+-  import SpeakButton from '../components/SpeakButton.svelte';
+-  import IconButton from '../components/IconButton.svelte';
++  import type { ContentCatalog } from '../../content/catalog';
++  import { progress } from '../../state/progress';
++  import SpeakButton from '../../shared/speech/SpeakButton.svelte';
++  import IconButton from '../../shared/ui/IconButton.svelte';
+ 
+-  export let materials: Materials;
++  export let catalog: ContentCatalog;
+ 
+   type ReverseItem = {
+     id: string;
+@@ -20,11 +20,11 @@
+   let result = '';
+ 
+   function buildItems(): ReverseItem[] {
+-    const phraseItems = materials.phrases
+-      .filter((item: Phrase) => !$progress.hiddenPhrases.includes(item.id))
++    const phraseItems = catalog.phrases
++      .filter((item) => !$progress.hiddenPhrases.includes(item.id))
+       .map((item) => ({ id: item.id, type: 'phrase' as const, prompt: item.translation, answer: item.phrase, example: item.example }));
+-    const wordItems = materials.wordIndex
+-      .filter((item: WordIndexItem) => !$progress.hiddenWords.includes(item.id))
++    const wordItems = catalog.wordIndex
++      .filter((item) => !$progress.hiddenWords.includes(item.id))
+       .map((item) => ({ id: item.id, type: 'word' as const, prompt: item.meaning, answer: item.term, example: item.examples[0]?.en }));
+     return [...phraseItems, ...wordItems];
+   }
+@@ -44,7 +44,7 @@
+     result = actual && expected.includes(actual) || actual === expected ? 'Looks close. Good job.' : 'Not exact yet. Reveal and repeat it aloud.';
+   }
+ 
+-  $: if (!current && materials) next();
++  $: if (!current && catalog) next();
+ </script>
+ 
+ <section class="section-stack">
+diff --git a/v1/src/lib/pages/FlashcardsPage.svelte b/src/features/flashcards/FlashcardsPage.svelte
+index ec33758..9cf3133 100644
+--- a/v1/src/lib/pages/FlashcardsPage.svelte
++++ b/src/features/flashcards/FlashcardsPage.svelte
+@@ -1,8 +1,9 @@
+ <script lang="ts">
+   import { onDestroy } from 'svelte';
+-  import { progress } from '../stores/progress';
+-  import type { Materials } from '../types/materials';
+-  import type { Flashcard, FlashcardAnswer, FlashcardMode } from '../types/flashcards';
++  import type { ContentCatalog } from '../../content/catalog';
++  import { progress } from '../../state/progress';
++  import { settings } from '../../state/settings';
++  import type { Flashcard, FlashcardAnswer, FlashcardMode } from './types';
+   import {
+     actionForKey,
+     answerCard,
+@@ -15,13 +16,13 @@
+     resolveSession,
+     shuffleSession,
+     summarizeDeck
+-  } from '../utils/flashcards';
+-  import EmptyState from '../components/EmptyState.svelte';
+-  import IconButton from '../components/IconButton.svelte';
+-  import MaterialIcon from '../components/MaterialIcon.svelte';
+-  import SpeakButton from '../components/SpeakButton.svelte';
++  } from './flashcards';
++  import EmptyState from '../../shared/ui/EmptyState.svelte';
++  import IconButton from '../../shared/ui/IconButton.svelte';
++  import MaterialIcon from '../../shared/ui/MaterialIcon.svelte';
++  import SpeakButton from '../../shared/speech/SpeakButton.svelte';
+ 
+-  export let materials: Materials;
++  export let catalog: ContentCatalog;
+ 
+   /** Time the card needs to leave the screen before the next one appears. */
+   const EXIT_MS = 200;
+@@ -46,7 +47,7 @@
+   let pendingAnswer: (() => void) | null = null;
+   let cardSerial = 0;
+ 
+-  $: cards = buildFlashcards(materials);
++  $: cards = buildFlashcards(catalog);
+   $: cardById = new Map(cards.map((card) => [card.id, card]));
+   $: topics = getTopics(cards);
+   $: topicStats = topics.map((name) => {
+@@ -54,8 +55,8 @@
+     return { name, learned: summary.learned.length, total: summary.learned.length + summary.learning.length };
+   });
+ 
+-  $: mode = $progress.flashcardMode;
+-  $: topic = topics.includes($progress.flashcardTopic) ? $progress.flashcardTopic : (topics[0] ?? '');
++  $: mode = $settings.flashcardMode;
++  $: topic = topics.includes($settings.flashcardTopic) ? $settings.flashcardTopic : (topics[0] ?? '');
+   $: currentDeckKey = deckKey(mode, topic);
+   $: deckLabel = mode === 'topic' ? topic : 'All Vocabulary';
+ 
+@@ -146,12 +147,12 @@
+   function setMode(next: FlashcardMode): void {
+     if (busy) return;
+     notice = '';
+-    progress.setFlashcardMode(next);
++    settings.setFlashcardMode(next);
+   }
+ 
+   function setTopic(event: Event): void {
+     notice = '';
+-    progress.setFlashcardTopic((event.target as HTMLSelectElement).value);
++    settings.setFlashcardTopic((event.target as HTMLSelectElement).value);
+   }
+ 
+   function shuffle(): void {
+diff --git a/v1/src/lib/pages/FocusListPage.svelte b/src/features/focus/FocusListPage.svelte
+index b21b9de..ea13eab 100644
+--- a/v1/src/lib/pages/FocusListPage.svelte
++++ b/src/features/focus/FocusListPage.svelte
+@@ -1,22 +1,22 @@
+ <script lang="ts">
+-  import { progress } from '../stores/progress';
+-  import type { Materials, TrainingBlock } from '../types/materials';
+-  import PhraseCard from '../components/PhraseCard.svelte';
+-  import WordCard from '../components/WordCard.svelte';
+-  import IrregularVerbCard from '../components/IrregularVerbCard.svelte';
+-  import EmptyState from '../components/EmptyState.svelte';
+-  import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+-  import IconButton from '../components/IconButton.svelte';
+-  import { blockToSpeechItem, irregularVerbToSpeechItem, phraseToSpeechItem, wordToSpeechItem } from '../utils/speechFormatters';
++  import type { ContentCatalog } from '../../content/catalog';
++  import type { TrainingBlock } from '../../content/types';
++  import { progress } from '../../state/progress';
++  import PhraseCard from '../../shared/entries/PhraseCard.svelte';
++  import WordCard from '../../shared/entries/WordCard.svelte';
++  import IrregularVerbCard from '../../shared/entries/IrregularVerbCard.svelte';
++  import EmptyState from '../../shared/ui/EmptyState.svelte';
++  import SectionSpeechControl from '../../shared/speech/SectionSpeechControl.svelte';
++  import IconButton from '../../shared/ui/IconButton.svelte';
++  import { blockToSpeechItem, irregularVerbToSpeechItem, phraseToSpeechItem, wordToSpeechItem } from '../../shared/speech/speechFormatters';
+ 
+-  export let materials: Materials;
+-  export let blocks: TrainingBlock[];
++  export let catalog: ContentCatalog;
+   export let onOpenBlock: (block: TrainingBlock) => void;
+ 
+-  $: favoriteBlocks = blocks.filter((item) => $progress.favoriteBlocks.includes(item.id));
+-  $: favoritePhrases = materials.phrases.filter((item) => $progress.favoritePhrases.includes(item.id) && !$progress.hiddenPhrases.includes(item.id));
+-  $: favoriteWords = materials.wordIndex.filter((item) => $progress.favoriteWords.includes(item.id) && !$progress.hiddenWords.includes(item.id));
+-  $: favoriteIrregular = materials.irregularVerbs.filter((item) => $progress.favoriteIrregular.includes(item.id) && !$progress.hiddenIrregular.includes(item.id));
++  $: favoriteBlocks = catalog.blocks.filter((item) => $progress.favoriteBlocks.includes(item.id));
++  $: favoritePhrases = catalog.phrases.filter((item) => $progress.favoritePhrases.includes(item.id) && !$progress.hiddenPhrases.includes(item.id));
++  $: favoriteWords = catalog.wordIndex.filter((item) => $progress.favoriteWords.includes(item.id) && !$progress.hiddenWords.includes(item.id));
++  $: favoriteIrregular = catalog.irregularVerbs.filter((item) => $progress.favoriteIrregular.includes(item.id) && !$progress.hiddenIrregular.includes(item.id));
+   $: isEmpty = !favoriteBlocks.length && !favoritePhrases.length && !favoriteWords.length && !favoriteIrregular.length;
+   $: speechItems = [
+     ...favoriteBlocks.map(blockToSpeechItem),
+diff --git a/v1/src/lib/components/ExpansionPanel.svelte b/src/features/home/ExpansionPanel.svelte
+index 66ef7a0..9219239 100644
+--- a/v1/src/lib/components/ExpansionPanel.svelte
++++ b/src/features/home/ExpansionPanel.svelte
+@@ -1,5 +1,5 @@
+ <script lang="ts">
+-  import MaterialIcon from './MaterialIcon.svelte';
++  import MaterialIcon from '../../shared/ui/MaterialIcon.svelte';
+ 
+   export let title: string;
+   export let description = '';
+diff --git a/v1/src/lib/pages/IndexPage.svelte b/src/features/home/IndexPage.svelte
+index 512b9b8..4a89ca1 100644
+--- a/v1/src/lib/pages/IndexPage.svelte
++++ b/src/features/home/IndexPage.svelte
+@@ -1,18 +1,22 @@
+ <script lang="ts">
+-  import { progress, type IndexPageSize } from '../stores/progress';
+-  import type { IrregularVerb, Materials, Phrase, TrainingBlock, WordExample, WordIndexItem } from '../types/materials';
+-  import EmptyState from '../components/EmptyState.svelte';
+-  import FocusButton from '../components/FocusButton.svelte';
+-  import LearnPassManager from '../components/LearnPassManager.svelte';
+-  import IconButton from '../components/IconButton.svelte';
+-  import PaginationControls from '../components/PaginationControls.svelte';
+-  import ExpansionPanel from '../components/ExpansionPanel.svelte';
+-  import SpeakButton from '../components/SpeakButton.svelte';
+-  import type { PageSizeOption } from '../types/pagination';
+-
+-  export let materials: Materials;
++  import type { ContentCatalog } from '../../content/catalog';
++  import type { IrregularVerb, Phrase, TrainingBlock, WordExample, WordIndexItem } from '../../content/types';
++  import { resetAllState } from '../../state';
++  import { settings } from '../../state/settings';
++  import { viewState } from '../../state/viewState';
++  import FocusButton from '../../shared/entries/FocusButton.svelte';
++  import SpeakButton from '../../shared/speech/SpeakButton.svelte';
++  import EmptyState from '../../shared/ui/EmptyState.svelte';
++  import IconButton from '../../shared/ui/IconButton.svelte';
++  import PaginationControls from '../../shared/ui/PaginationControls.svelte';
++  import { paginate, totalPages, type PageSizeOption } from '../../shared/pagination';
++  import { splitAlternatives } from '../../shared/text';
++  import ExpansionPanel from './ExpansionPanel.svelte';
++  import LearnPassManager from './LearnPassManager.svelte';
++
++  export let catalog: ContentCatalog;
++  /** The blocks of the active Learn Pass. */
+   export let blocks: TrainingBlock[];
+-  export let allBlocks: TrainingBlock[];
+   export let onOpenBlock: (block: TrainingBlock) => void;
+ 
+   type TagOption = {
+@@ -53,23 +57,8 @@
+       .sort((a, b) => a.tag.localeCompare(b.tag));
+   }
+ 
+-  function paginate(items: TrainingBlock[], page: number, pageSize: IndexPageSize): TrainingBlock[] {
+-    if (pageSize === 'all') return items;
+-    const start = (Math.max(1, page) - 1) * pageSize;
+-    return items.slice(start, start + pageSize);
+-  }
+-
+-  function totalPages(total: number, pageSize: IndexPageSize): number {
+-    return pageSize === 'all' ? 1 : Math.max(1, Math.ceil(total / pageSize));
+-  }
+-
+   function setPageSize(value: PageSizeOption): void {
+-    progress.setIndexPageSize(value === 'all' ? 'all' : value === 12 ? 12 : 6);
+-  }
+-
+-  function normalizeAlternatives(value: string[] | string | undefined): string[] {
+-    if (!value) return [];
+-    return Array.isArray(value) ? value.filter(Boolean) : value.split(';').map((item) => item.trim()).filter(Boolean);
++    settings.setIndexPageSize(value === 'all' ? 'all' : value === 12 ? 12 : 6);
+   }
+ 
+   function phraseExamples(item: Phrase): WordExample[] {
+@@ -86,7 +75,7 @@
+       subtitle: item.category,
+       translation: item.translation,
+       transcription: item.transcription,
+-      alternatives: normalizeAlternatives(item.commonAlternatives),
++      alternatives: splitAlternatives(item.commonAlternatives),
+       examples,
+       tag: item.tag,
+       focusKind: 'phrase',
+@@ -104,7 +93,7 @@
+       subtitle: item.category,
+       translation: item.meaning,
+       transcription: item.transcription ?? item.pronunciation,
+-      alternatives: normalizeAlternatives(item.commonAlternatives),
++      alternatives: splitAlternatives(item.commonAlternatives),
+       examples,
+       tag: item.tag,
+       focusKind: 'word',
+@@ -122,7 +111,7 @@
+       subtitle: `${item.base} — ${item.pastSimple} — ${item.pastParticiple}`,
+       translation: item.translation,
+       transcription: item.transcription,
+-      alternatives: normalizeAlternatives(item.commonAlternatives),
++      alternatives: splitAlternatives(item.commonAlternatives),
+       examples,
+       tag: item.group,
+       focusKind: 'irregular',
+@@ -131,7 +120,7 @@
+     };
+   }
+ 
+-  function getDailyCandidates(data: Materials, activeBlocks: TrainingBlock[]): DailyItem[] {
++  function getDailyCandidates(data: ContentCatalog, activeBlocks: TrainingBlock[]): DailyItem[] {
+     const candidates: DailyItem[] = [];
+     const phraseCategories = new Set(
+       activeBlocks
+@@ -183,19 +172,19 @@
+   }
+ 
+   $: tagOptions = getTagOptions(blocks);
+-  $: selectedTagExists = !$progress.indexTagFilter || tagOptions.some((option) => option.tag === $progress.indexTagFilter);
+-  $: filteredBlocks = selectedTagExists && $progress.indexTagFilter
+-    ? blocks.filter((block) => block.tag === $progress.indexTagFilter)
++  $: selectedTagExists = !$settings.indexTagFilter || tagOptions.some((option) => option.tag === $settings.indexTagFilter);
++  $: filteredBlocks = selectedTagExists && $settings.indexTagFilter
++    ? blocks.filter((block) => block.tag === $settings.indexTagFilter)
+     : blocks;
+-  $: pageCount = totalPages(filteredBlocks.length, $progress.indexPageSize);
+-  $: currentPage = Math.min(Math.max(1, $progress.indexPage), pageCount);
+-  $: pagedBlocks = paginate(filteredBlocks, currentPage, $progress.indexPageSize);
+-  $: dailyCandidates = getDailyCandidates(materials, blocks);
++  $: pageCount = totalPages(filteredBlocks.length, $settings.indexPageSize);
++  $: currentPage = Math.min(Math.max(1, $viewState.indexPage), pageCount);
++  $: pagedBlocks = paginate(filteredBlocks, currentPage, $settings.indexPageSize);
++  $: dailyCandidates = getDailyCandidates(catalog, blocks);
+   $: nextDailyPoolSignature = getPoolSignature(dailyCandidates);
+   $: dailyItem = dailyCandidates.find((item) => item.key === dailyItemKey) ?? dailyCandidates[0] ?? null;
+ 
+-  $: if ($progress.indexPage !== currentPage) {
+-    progress.setIndexPage(currentPage);
++  $: if ($viewState.indexPage !== currentPage) {
++    viewState.setIndexPage(currentPage);
+   }
+ 
+   $: if (nextDailyPoolSignature && nextDailyPoolSignature !== dailyPoolSignature) {
+@@ -208,25 +197,25 @@
+   <ExpansionPanel
+     title="Learn Pass"
+     description="Choose or create a focused learning track."
+-    open={$progress.indexLearnPassExpanded}
+-    onToggle={() => progress.toggleIndexPanel('learnPass')}
++    open={$settings.indexLearnPassExpanded}
++    onToggle={() => settings.toggleIndexPanel('learnPass')}
+   >
+-    <LearnPassManager {allBlocks} />
++    <LearnPassManager {catalog} />
+   </ExpansionPanel>
+ 
+   {#if tagOptions.length}
+     <ExpansionPanel
+       title="Tag cloud"
+       description="Filter visible learning blocks by topic."
+-      open={$progress.indexTagCloudExpanded}
+-      onToggle={() => progress.toggleIndexPanel('tagCloud')}
++      open={$settings.indexTagCloudExpanded}
++      onToggle={() => settings.toggleIndexPanel('tagCloud')}
+     >
+       <div class="tag-cloud">
+-        <button class:active={!$progress.indexTagFilter} type="button" on:click={() => progress.setIndexTagFilter('')}>
++        <button class:active={!$settings.indexTagFilter} type="button" on:click={() => settings.setIndexTagFilter('')}>
+           All <span>{blocks.length}</span>
+         </button>
+         {#each tagOptions as option}
+-          <button class:active={$progress.indexTagFilter === option.tag} type="button" on:click={() => progress.setIndexTagFilter(option.tag)}>
++          <button class:active={$settings.indexTagFilter === option.tag} type="button" on:click={() => settings.setIndexTagFilter(option.tag)}>
+             {option.tag} <span>{option.count}</span>
+           </button>
+         {/each}
+@@ -237,11 +226,11 @@
+   <ExpansionPanel
+     title="Learning blocks"
+     description="Materials from your active Learn Pass."
+-    open={$progress.indexLearningBlocksExpanded}
+-    onToggle={() => progress.toggleIndexPanel('learningBlocks')}
++    open={$settings.indexLearningBlocksExpanded}
++    onToggle={() => settings.toggleIndexPanel('learningBlocks')}
+   >
+     <div class="panel-actions">
+-      <IconButton icon="restart_alt" label="Reset progress" variant="secondary" onClick={() => progress.resetAll()} />
++      <IconButton icon="restart_alt" label="Reset progress" variant="secondary" onClick={resetAllState} />
+     </div>
+ 
+     {#if filteredBlocks.length}
+@@ -251,10 +240,10 @@
+             <p class="tag-row">
+               {#if block.tag}
+                 <button
+-                  class:active={$progress.indexTagFilter === block.tag}
++                  class:active={$settings.indexTagFilter === block.tag}
+                   class="chip-button"
+                   type="button"
+-                  on:click={() => progress.setIndexTagFilter(block.tag ?? '')}
++                  on:click={() => settings.setIndexTagFilter(block.tag ?? '')}
+                 >{block.tag}</button>
+               {:else}
+                 <span>{block.type}</span>
+@@ -275,10 +264,10 @@
+         <PaginationControls
+           total={filteredBlocks.length}
+           page={currentPage}
+-          pageSize={$progress.indexPageSize}
++          pageSize={$settings.indexPageSize}
+           {pageSizeOptions}
+           label="Learning blocks pagination"
+-          onPageChange={(page) => progress.setIndexPage(page)}
++          onPageChange={(page) => viewState.setIndexPage(page)}
+           onPageSizeChange={setPageSize}
+         />
+       </div>
+@@ -292,8 +281,8 @@
+   <ExpansionPanel
+     title="Phrase / Word of the day"
+     description="A random focus card for quick daily practice."
+-    open={$progress.indexDailyExpanded}
+-    onToggle={() => progress.toggleIndexPanel('daily')}
++    open={$settings.indexDailyExpanded}
++    onToggle={() => settings.toggleIndexPanel('daily')}
+   >
+     {#if dailyItem}
+       <article class="card daily-card">
+diff --git a/v1/src/lib/components/LearnPassManager.svelte b/src/features/home/LearnPassManager.svelte
+index a734bc2..06a2650 100644
+--- a/v1/src/lib/components/LearnPassManager.svelte
++++ b/src/features/home/LearnPassManager.svelte
+@@ -1,10 +1,11 @@
+ <script lang="ts">
+-  import { DEFAULT_LEARN_PASS_ID, progress } from '../stores/progress';
+-  import type { LearnPass, TrainingBlock } from '../types/materials';
+-  import { matchesQuery } from '../utils/filters';
+-  import IconButton from './IconButton.svelte';
++  import type { ContentCatalog } from '../../content/catalog';
++  import { DEFAULT_LEARN_PASS_ID, progress, type LearnPass } from '../../state/progress';
++  import { viewState } from '../../state/viewState';
++  import { matchesQuery } from '../../shared/text';
++  import IconButton from '../../shared/ui/IconButton.svelte';
+ 
+-  export let allBlocks: TrainingBlock[];
++  export let catalog: ContentCatalog;
+ 
+   let builderOpen = false;
+   let editingId: string | null = null;
+@@ -14,9 +15,9 @@
+   let materialQuery = '';
+ 
+   $: selectedPass = $progress.learnPasses.find((pass) => pass.id === $progress.selectedLearnPassId) ?? null;
+-  $: filteredPasses = $progress.learnPasses.filter((pass) => matchesQuery($progress.learnPassSearch, pass.name, pass.description, pass.blockIds.join(' ')));
+-  $: filteredBlocks = allBlocks.filter((block) => matchesQuery(materialQuery, block.title, block.description, block.type, block.category, block.tag));
+-  $: selectedBlockCount = $progress.selectedLearnPassId === DEFAULT_LEARN_PASS_ID ? allBlocks.length : selectedPass?.blockIds.length ?? 0;
++  $: filteredPasses = $progress.learnPasses.filter((pass) => matchesQuery($viewState.learnPassSearch, pass.name, pass.description, pass.blockIds.join(' ')));
++  $: filteredBlocks = catalog.searchBlocks(materialQuery);
++  $: selectedBlockCount = $progress.selectedLearnPassId === DEFAULT_LEARN_PASS_ID ? catalog.blocks.length : selectedPass?.blockIds.length ?? 0;
+ 
+   function onPassChange(event: Event): void {
+     progress.setSelectedLearnPass((event.target as HTMLSelectElement).value);
+@@ -115,8 +116,8 @@
+     <label>
+       Search learn passes
+       <input
+-        value={$progress.learnPassSearch}
+-        on:input={(event) => progress.setLearnPassSearch((event.target as HTMLInputElement).value)}
++        value={$viewState.learnPassSearch}
++        on:input={(event) => viewState.setLearnPassSearch((event.target as HTMLInputElement).value)}
+         placeholder="verbs, meetings, assessment…"
+       />
+     </label>
+diff --git a/v1/src/lib/pages/IrregularVerbsPage.svelte b/src/features/vocabulary/IrregularVerbsPage.svelte
+index 63c856b..e3571ef 100644
+--- a/v1/src/lib/pages/IrregularVerbsPage.svelte
++++ b/src/features/vocabulary/IrregularVerbsPage.svelte
+@@ -1,38 +1,22 @@
+ <script lang="ts">
+-  import { progress, type ListPageSize } from '../stores/progress';
+-  import type { IrregularVerb, Materials, TrainingBlock } from '../types/materials';
+-  import { matchesQuery } from '../utils/filters';
+-  import IrregularVerbCard from '../components/IrregularVerbCard.svelte';
+-  import EmptyState from '../components/EmptyState.svelte';
+-  import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+-  import { irregularVerbToSpeechItem } from '../utils/speechFormatters';
+-  import IconButton from '../components/IconButton.svelte';
+-  import PaginationControls from '../components/PaginationControls.svelte';
+-  import type { PageSizeOption } from '../types/pagination';
+-
+-  export let materials: Materials;
++  import type { ContentCatalog } from '../../content/catalog';
++  import { progress } from '../../state/progress';
++  import { settings } from '../../state/settings';
++  import { viewState } from '../../state/viewState';
++  import IrregularVerbCard from '../../shared/entries/IrregularVerbCard.svelte';
++  import EmptyState from '../../shared/ui/EmptyState.svelte';
++  import SectionSpeechControl from '../../shared/speech/SectionSpeechControl.svelte';
++  import { irregularVerbToSpeechItem } from '../../shared/speech/speechFormatters';
++  import IconButton from '../../shared/ui/IconButton.svelte';
++  import PaginationControls from '../../shared/ui/PaginationControls.svelte';
++  import { paginate, totalPages, type PageSizeOption } from '../../shared/pagination';
++
++  export let catalog: ContentCatalog;
+ 
+   const pageSizeOptions: PageSizeOption[] = [5, 10, 20, 'all'];
+ 
+-  type VerbSetOption = {
+-    id: string;
+-    title: string;
+-    description?: string;
+-    count: number;
+-  };
+-
+-  function paginate(items: IrregularVerb[], page: number, pageSize: ListPageSize): IrregularVerb[] {
+-    if (pageSize === 'all') return items;
+-    const start = (Math.max(1, page) - 1) * pageSize;
+-    return items.slice(start, start + pageSize);
+-  }
+-
+-  function totalPages(total: number, pageSize: ListPageSize): number {
+-    return pageSize === 'all' ? 1 : Math.max(1, Math.ceil(total / pageSize));
+-  }
+-
+   function setPageSize(value: PageSizeOption): void {
+-    progress.setIrregularPageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
++    settings.setIrregularPageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
+   }
+ 
+   function uniqueInOrder(values: string[]): string[] {
+@@ -48,53 +32,33 @@
+     return result;
+   }
+ 
+-  function getVerbSetOptions(blocks: TrainingBlock[], verbs: IrregularVerb[]): VerbSetOption[] {
+-    return blocks
+-      .filter((block) => block.type === 'irregularVerbs' && block.verbSet)
+-      .map((block) => ({
+-        id: block.verbSet as string,
+-        title: block.title,
+-        description: block.description,
+-        count: verbs.filter((item) => item.verbSet === block.verbSet).length
+-      }))
+-      .filter((option) => option.count > 0);
+-  }
+-
+-  $: verbSetOptions = getVerbSetOptions(materials.blocks, materials.irregularVerbs);
+-  $: selectedSet = verbSetOptions.some((option) => option.id === $progress.irregularSet)
+-    ? $progress.irregularSet
++  $: verbSetOptions = catalog.verbSets;
++  $: selectedSet = verbSetOptions.some((option) => option.id === $settings.irregularSet)
++    ? $settings.irregularSet
+     : verbSetOptions[0]?.id ?? 'all';
+   $: activeSet = verbSetOptions.find((option) => option.id === selectedSet);
+   $: currentSetVerbs = selectedSet === 'all'
+-    ? materials.irregularVerbs
+-    : materials.irregularVerbs.filter((item) => item.verbSet === selectedSet);
++    ? catalog.irregularVerbs
++    : catalog.irregularVerbs.filter((item) => item.verbSet === selectedSet);
+   $: groups = ['All', ...uniqueInOrder(currentSetVerbs.map((item) => item.group))];
+-  $: visible = currentSetVerbs.filter((item) => {
++  $: visible = catalog.searchVerbs($viewState.irregularQuery).filter((item) => {
++    if (selectedSet !== 'all' && item.verbSet !== selectedSet) return false;
+     const hidden = $progress.hiddenIrregular.includes(item.id);
+-    if (hidden && !$progress.showHiddenIrregular) return false;
+-    if ($progress.irregularGroup !== 'All' && item.group !== $progress.irregularGroup) return false;
+-    return matchesQuery(
+-      $progress.irregularQuery,
+-      item.base,
+-      item.pastSimple,
+-      item.pastParticiple,
+-      item.translation,
+-      item.transcription,
+-      Array.isArray(item.commonAlternatives) ? item.commonAlternatives.join(' ') : item.commonAlternatives,
+-      item.group
+-    );
++    if (hidden && !$settings.showHiddenIrregular) return false;
++    if ($settings.irregularGroup !== 'All' && item.group !== $settings.irregularGroup) return false;
++    return true;
+   });
+-  $: pageCount = totalPages(visible.length, $progress.irregularPageSize);
+-  $: currentPage = Math.min(Math.max(1, $progress.irregularPage), pageCount);
+-  $: pagedVisible = paginate(visible, currentPage, $progress.irregularPageSize);
++  $: pageCount = totalPages(visible.length, $settings.irregularPageSize);
++  $: currentPage = Math.min(Math.max(1, $viewState.irregularPage), pageCount);
++  $: pagedVisible = paginate(visible, currentPage, $settings.irregularPageSize);
+   $: speechItems = pagedVisible.map(irregularVerbToSpeechItem);
+ 
+-  $: if (selectedSet !== $progress.irregularSet) {
+-    progress.setIrregularSet(selectedSet);
++  $: if (selectedSet !== $settings.irregularSet) {
++    settings.setIrregularSet(selectedSet);
+   }
+ 
+-  $: if ($progress.irregularPage !== currentPage) {
+-    progress.setIrregularPage(currentPage);
++  $: if ($viewState.irregularPage !== currentPage) {
++    viewState.setIrregularPage(currentPage);
+   }
+ </script>
+ 
+@@ -107,10 +71,10 @@
+       </div>
+       <div class="control-actions">
+         <IconButton
+-          icon={$progress.showHiddenIrregular ? 'visibility_off' : 'visibility'}
+-          label={$progress.showHiddenIrregular ? 'Hide hidden verbs' : 'Show hidden verbs'}
++          icon={$settings.showHiddenIrregular ? 'visibility_off' : 'visibility'}
++          label={$settings.showHiddenIrregular ? 'Hide hidden verbs' : 'Show hidden verbs'}
+           variant="secondary"
+-          onClick={() => progress.toggleShowHidden('irregular')}
++          onClick={() => settings.toggleShowHidden('irregular')}
+         />
+         {#if $progress.hiddenIrregular.length}
+           <IconButton icon="settings_backup_restore" label="Unhide all verbs" variant="danger" onClick={() => progress.unhideAll('irregular')} />
+@@ -122,7 +86,7 @@
+       {#if verbSetOptions.length > 1}
+         <label>
+           Set
+-          <select value={selectedSet} on:change={(e) => progress.setIrregularSet((e.target as HTMLSelectElement).value)}>
++          <select value={selectedSet} on:change={(e) => settings.setIrregularSet((e.target as HTMLSelectElement).value)}>
+             {#each verbSetOptions as option}
+               <option value={option.id}>{option.title} ({option.count})</option>
+             {/each}
+@@ -131,11 +95,11 @@
+       {/if}
+       <label>
+         Search
+-        <input value={$progress.irregularQuery} on:input={(e) => progress.setIrregularQuery((e.target as HTMLInputElement).value)} placeholder="be, took, been, говорити…" />
++        <input value={$viewState.irregularQuery} on:input={(e) => viewState.setIrregularQuery((e.target as HTMLInputElement).value)} placeholder="be, took, been, говорити…" />
+       </label>
+       <label>
+         Group
+-        <select value={$progress.irregularGroup} on:change={(e) => progress.setIrregularGroup((e.target as HTMLSelectElement).value)}>
++        <select value={$settings.irregularGroup} on:change={(e) => settings.setIrregularGroup((e.target as HTMLSelectElement).value)}>
+           {#each groups as group}
+             <option value={group}>{group}</option>
+           {/each}
+@@ -160,10 +124,10 @@
+       <PaginationControls
+         total={visible.length}
+         page={currentPage}
+-        pageSize={$progress.irregularPageSize}
++        pageSize={$settings.irregularPageSize}
+         {pageSizeOptions}
+         label="Irregular verbs pagination"
+-        onPageChange={(page) => progress.setIrregularPage(page)}
++        onPageChange={(page) => viewState.setIrregularPage(page)}
+         onPageSizeChange={setPageSize}
+       />
+     </div>
+diff --git a/v1/src/lib/pages/PhrasesPage.svelte b/src/features/vocabulary/PhrasesPage.svelte
+index 40ddeee..1d96a3a 100644
+--- a/v1/src/lib/pages/PhrasesPage.svelte
++++ b/src/features/vocabulary/PhrasesPage.svelte
+@@ -1,16 +1,18 @@
+ <script lang="ts">
+-  import { progress, type ListPageSize } from '../stores/progress';
+-  import type { Materials, Phrase } from '../types/materials';
+-  import { matchesQuery, uniqueSorted } from '../utils/filters';
+-  import PhraseCard from '../components/PhraseCard.svelte';
+-  import EmptyState from '../components/EmptyState.svelte';
+-  import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+-  import { phraseToSpeechItem } from '../utils/speechFormatters';
+-  import IconButton from '../components/IconButton.svelte';
+-  import PaginationControls from '../components/PaginationControls.svelte';
+-  import type { PageSizeOption } from '../types/pagination';
+-
+-  export let materials: Materials;
++  import type { ContentCatalog } from '../../content/catalog';
++  import type { Phrase } from '../../content/types';
++  import { progress } from '../../state/progress';
++  import { settings } from '../../state/settings';
++  import { viewState } from '../../state/viewState';
++  import PhraseCard from '../../shared/entries/PhraseCard.svelte';
++  import EmptyState from '../../shared/ui/EmptyState.svelte';
++  import SectionSpeechControl from '../../shared/speech/SectionSpeechControl.svelte';
++  import { phraseToSpeechItem } from '../../shared/speech/speechFormatters';
++  import IconButton from '../../shared/ui/IconButton.svelte';
++  import PaginationControls from '../../shared/ui/PaginationControls.svelte';
++  import { paginate, totalPages, type PageSizeOption } from '../../shared/pagination';
++
++  export let catalog: ContentCatalog;
+ 
+   const pageSizeOptions: PageSizeOption[] = [5, 10, 20, 'all'];
+ 
+@@ -19,20 +21,8 @@
+     items: Phrase[];
+   };
+ 
+-
+-
+-  function paginate(items: Phrase[], page: number, pageSize: ListPageSize): Phrase[] {
+-    if (pageSize === 'all') return items;
+-    const start = (Math.max(1, page) - 1) * pageSize;
+-    return items.slice(start, start + pageSize);
+-  }
+-
+-  function totalPages(total: number, pageSize: ListPageSize): number {
+-    return pageSize === 'all' ? 1 : Math.max(1, Math.ceil(total / pageSize));
+-  }
+-
+   function setPageSize(value: PageSizeOption): void {
+-    progress.setPhrasePageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
++    settings.setPhrasePageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
+   }
+ 
+   function groupBySection(items: Phrase[]): PhraseGroup[] {
+@@ -53,33 +43,22 @@
+     return groups;
+   }
+ 
+-  $: categories = ['All', ...uniqueSorted(materials.phrases.map((item) => item.category))];
+-  $: visible = materials.phrases.filter((item) => {
++  $: categories = ['All', ...catalog.phraseCategories];
++  $: visible = catalog.searchPhrases($viewState.phraseQuery).filter((item) => {
+     const hidden = $progress.hiddenPhrases.includes(item.id);
+-    if (hidden && !$progress.showHiddenPhrases) return false;
+-    if ($progress.phraseCategory !== 'All' && item.category !== $progress.phraseCategory) return false;
+-    return matchesQuery(
+-      $progress.phraseQuery,
+-      item.phrase,
+-      item.example,
+-      ...(item.examples ?? []).flatMap((example) => [example.en, example.ua ?? '']),
+-      item.translation,
+-      item.transcription,
+-      Array.isArray(item.commonAlternatives) ? item.commonAlternatives.join(' ') : item.commonAlternatives,
+-      item.category,
+-      item.section,
+-      item.tag
+-    );
++    if (hidden && !$settings.showHiddenPhrases) return false;
++    if ($settings.phraseCategory !== 'All' && item.category !== $settings.phraseCategory) return false;
++    return true;
+   });
+-  $: pageCount = totalPages(visible.length, $progress.phrasePageSize);
+-  $: currentPage = Math.min(Math.max(1, $progress.phrasePage), pageCount);
+-  $: pagedVisible = paginate(visible, currentPage, $progress.phrasePageSize);
++  $: pageCount = totalPages(visible.length, $settings.phrasePageSize);
++  $: currentPage = Math.min(Math.max(1, $viewState.phrasePage), pageCount);
++  $: pagedVisible = paginate(visible, currentPage, $settings.phrasePageSize);
+   $: speechItems = pagedVisible.map(phraseToSpeechItem);
+-  $: showSectionGroups = $progress.phraseCategory !== 'All' && pagedVisible.some((item) => item.section || item.sequence);
++  $: showSectionGroups = $settings.phraseCategory !== 'All' && pagedVisible.some((item) => item.section || item.sequence);
+   $: sectionGroups = showSectionGroups ? groupBySection(pagedVisible) : [];
+ 
+-  $: if ($progress.phrasePage !== currentPage) {
+-    progress.setPhrasePage(currentPage);
++  $: if ($viewState.phrasePage !== currentPage) {
++    viewState.setPhrasePage(currentPage);
+   }
+ </script>
+ 
+@@ -92,10 +71,10 @@
+       </div>
+       <div class="control-actions">
+         <IconButton
+-          icon={$progress.showHiddenPhrases ? 'visibility_off' : 'visibility'}
+-          label={$progress.showHiddenPhrases ? 'Hide hidden phrases' : 'Show hidden phrases'}
++          icon={$settings.showHiddenPhrases ? 'visibility_off' : 'visibility'}
++          label={$settings.showHiddenPhrases ? 'Hide hidden phrases' : 'Show hidden phrases'}
+           variant="secondary"
+-          onClick={() => progress.toggleShowHidden('phrase')}
++          onClick={() => settings.toggleShowHidden('phrase')}
+         />
+         {#if $progress.hiddenPhrases.length}
+           <IconButton icon="settings_backup_restore" label="Unhide all phrases" variant="danger" onClick={() => progress.unhideAll('phrase')} />
+@@ -107,11 +86,11 @@
+       <div class="controls-filter-stack">
+         <label>
+           Search
+-          <input value={$progress.phraseQuery} on:input={(e) => progress.setPhraseQuery((e.target as HTMLInputElement).value)} placeholder="AI, otherwise, meeting…" />
++          <input value={$viewState.phraseQuery} on:input={(e) => viewState.setPhraseQuery((e.target as HTMLInputElement).value)} placeholder="AI, otherwise, meeting…" />
+         </label>
+         <label>
+           Category
+-          <select value={$progress.phraseCategory} on:change={(e) => progress.setPhraseCategory((e.target as HTMLSelectElement).value)}>
++          <select value={$settings.phraseCategory} on:change={(e) => settings.setPhraseCategory((e.target as HTMLSelectElement).value)}>
+             {#each categories as category}
+               <option value={category}>{category}</option>
+             {/each}
+@@ -152,10 +131,10 @@
+       <PaginationControls
+         total={visible.length}
+         page={currentPage}
+-        pageSize={$progress.phrasePageSize}
++        pageSize={$settings.phrasePageSize}
+         {pageSizeOptions}
+         label="Phrases pagination"
+-        onPageChange={(page) => progress.setPhrasePage(page)}
++        onPageChange={(page) => viewState.setPhrasePage(page)}
+         onPageSizeChange={setPageSize}
+       />
+     </div>
+diff --git a/v1/src/lib/pages/WordIndexPage.svelte b/src/features/vocabulary/WordIndexPage.svelte
+index 44d5720..3f2d1a3 100644
+--- a/v1/src/lib/pages/WordIndexPage.svelte
++++ b/src/features/vocabulary/WordIndexPage.svelte
+@@ -1,53 +1,33 @@
+ <script lang="ts">
+-  import { progress, type ListPageSize } from '../stores/progress';
+-  import type { Materials, WordIndexItem } from '../types/materials';
+-  import { matchesQuery, uniqueSorted } from '../utils/filters';
+-  import WordCard from '../components/WordCard.svelte';
+-  import EmptyState from '../components/EmptyState.svelte';
+-  import SectionSpeechControl from '../components/SectionSpeechControl.svelte';
+-  import { wordToSpeechItem } from '../utils/speechFormatters';
+-  import IconButton from '../components/IconButton.svelte';
+-  import PaginationControls from '../components/PaginationControls.svelte';
+-  import type { PageSizeOption } from '../types/pagination';
++  import type { ContentCatalog } from '../../content/catalog';
++  import type { WordIndexItem } from '../../content/types';
++  import { progress } from '../../state/progress';
++  import { settings } from '../../state/settings';
++  import { viewState } from '../../state/viewState';
++  import WordCard from '../../shared/entries/WordCard.svelte';
++  import EmptyState from '../../shared/ui/EmptyState.svelte';
++  import SectionSpeechControl from '../../shared/speech/SectionSpeechControl.svelte';
++  import { wordToSpeechItem } from '../../shared/speech/speechFormatters';
++  import IconButton from '../../shared/ui/IconButton.svelte';
++  import PaginationControls from '../../shared/ui/PaginationControls.svelte';
++  import { paginate, totalPages, type PageSizeOption } from '../../shared/pagination';
+ 
+-  export let materials: Materials;
++  export let catalog: ContentCatalog;
+ 
+   const pageSizeOptions: PageSizeOption[] = [5, 10, 20, 'all'];
+ 
+   let selected: WordIndexItem | null = null;
+ 
+-
+-  function paginate(items: WordIndexItem[], page: number, pageSize: ListPageSize): WordIndexItem[] {
+-    if (pageSize === 'all') return items;
+-    const start = (Math.max(1, page) - 1) * pageSize;
+-    return items.slice(start, start + pageSize);
+-  }
+-
+-  function totalPages(total: number, pageSize: ListPageSize): number {
+-    return pageSize === 'all' ? 1 : Math.max(1, Math.ceil(total / pageSize));
+-  }
+-
+   function setPageSize(value: PageSizeOption): void {
+-    progress.setWordPageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
++    settings.setWordPageSize(value === 'all' ? 'all' : value === 10 ? 10 : value === 20 ? 20 : 5);
+   }
+ 
+-  $: categories = ['All', ...uniqueSorted(materials.wordIndex.map((item) => item.category))];
+-  $: visible = materials.wordIndex.filter((item) => {
++  $: categories = ['All', ...catalog.wordCategories];
++  $: visible = catalog.searchWords($viewState.wordQuery).filter((item) => {
+     const hidden = $progress.hiddenWords.includes(item.id);
+-    if (hidden && !$progress.showHiddenWords) return false;
+-    if ($progress.wordCategory !== 'All' && item.category !== $progress.wordCategory) return false;
+-    return matchesQuery(
+-      $progress.wordQuery,
+-      item.term,
+-      item.meaning,
+-      item.pronunciation,
+-      item.transcription,
+-      Array.isArray(item.commonAlternatives) ? item.commonAlternatives.join(' ') : item.commonAlternatives,
+-      ...(item.examples ?? []).flatMap((example) => [example.en, example.ua ?? '']),
+-      item.category,
+-      item.section,
+-      item.tag
+-    );
++    if (hidden && !$settings.showHiddenWords) return false;
++    if ($settings.wordCategory !== 'All' && item.category !== $settings.wordCategory) return false;
++    return true;
+   }).sort((a, b) => {
+     if (a.category === 'Presentation Phrases' && b.category === 'Presentation Phrases') {
+       return (a.sequence ?? 0) - (b.sequence ?? 0);
+@@ -55,13 +35,13 @@
+     return a.term.localeCompare(b.term);
+   });
+ 
+-  $: pageCount = totalPages(visible.length, $progress.wordPageSize);
+-  $: currentPage = Math.min(Math.max(1, $progress.wordPage), pageCount);
+-  $: pagedVisible = paginate(visible, currentPage, $progress.wordPageSize);
++  $: pageCount = totalPages(visible.length, $settings.wordPageSize);
++  $: currentPage = Math.min(Math.max(1, $viewState.wordPage), pageCount);
++  $: pagedVisible = paginate(visible, currentPage, $settings.wordPageSize);
+   $: speechItems = pagedVisible.map(wordToSpeechItem);
+ 
+-  $: if ($progress.wordPage !== currentPage) {
+-    progress.setWordPage(currentPage);
++  $: if ($viewState.wordPage !== currentPage) {
++    viewState.setWordPage(currentPage);
+   }
+ 
+   $: if (!selected && pagedVisible.length) selected = pagedVisible[0];
+@@ -77,10 +57,10 @@
+       </div>
+       <div class="control-actions">
+         <IconButton
+-          icon={$progress.showHiddenWords ? 'visibility_off' : 'visibility'}
+-          label={$progress.showHiddenWords ? 'Hide hidden words' : 'Show hidden words'}
++          icon={$settings.showHiddenWords ? 'visibility_off' : 'visibility'}
++          label={$settings.showHiddenWords ? 'Hide hidden words' : 'Show hidden words'}
+           variant="secondary"
+-          onClick={() => progress.toggleShowHidden('word')}
++          onClick={() => settings.toggleShowHidden('word')}
+         />
+         {#if $progress.hiddenWords.length}
+           <IconButton icon="settings_backup_restore" label="Unhide all words" variant="danger" onClick={() => progress.unhideAll('word')} />
+@@ -92,11 +72,11 @@
+       <div class="controls-filter-stack">
+         <label>
+           Search
+-          <input value={$progress.wordQuery} on:input={(e) => progress.setWordQuery((e.target as HTMLInputElement).value)} placeholder="run into, lack, estimate…" />
++          <input value={$viewState.wordQuery} on:input={(e) => viewState.setWordQuery((e.target as HTMLInputElement).value)} placeholder="run into, lack, estimate…" />
+         </label>
+         <label>
+           Category
+-          <select value={$progress.wordCategory} on:change={(e) => progress.setWordCategory((e.target as HTMLSelectElement).value)}>
++          <select value={$settings.wordCategory} on:change={(e) => settings.setWordCategory((e.target as HTMLSelectElement).value)}>
+             {#each categories as category}
+               <option value={category}>{category}</option>
+             {/each}
+@@ -130,10 +110,10 @@
+       <PaginationControls
+         total={visible.length}
+         page={currentPage}
+-        pageSize={$progress.wordPageSize}
++        pageSize={$settings.wordPageSize}
+         {pageSizeOptions}
+         label="Word index pagination"
+-        onPageChange={(page) => progress.setWordPage(page)}
++        onPageChange={(page) => viewState.setWordPage(page)}
+         onPageSizeChange={setPageSize}
+       />
+     </div>
+diff --git a/v1/src/main.ts b/src/main.ts
+index 5f1a5d1..cfca860 100644
+--- a/v1/src/main.ts
++++ b/src/main.ts
+@@ -1,5 +1,6 @@
+ import { mount } from 'svelte';
+-import App from './App.svelte';
++import App from './app/App.svelte';
++import { startThemeSync } from './app/theme';
+ import './app.css';
+ 
+ const target = document.getElementById('app');
+@@ -8,6 +9,8 @@ if (!target) {
+   throw new Error('App target element #app was not found');
+ }
+ 
++startThemeSync();
++
+ const app = mount(App, { target });
+ 
+ export default app;
+diff --git a/v1/src/lib/components/FocusButton.svelte b/src/shared/entries/FocusButton.svelte
+index 039c188..4aca95d 100644
+--- a/v1/src/lib/components/FocusButton.svelte
++++ b/src/shared/entries/FocusButton.svelte
+@@ -1,7 +1,6 @@
+ <script lang="ts">
+-  import { progress } from '../stores/progress';
+-  import type { FocusKind } from '../types/materials';
+-  import IconButton from './IconButton.svelte';
++  import { progress, type FocusKind } from '../../state/progress';
++  import IconButton from '../ui/IconButton.svelte';
+ 
+   export let kind: FocusKind;
+   export let id: string;
+diff --git a/v1/src/lib/components/HideButton.svelte b/src/shared/entries/HideButton.svelte
+index 4bb47ef..511b482 100644
+--- a/v1/src/lib/components/HideButton.svelte
++++ b/src/shared/entries/HideButton.svelte
+@@ -1,7 +1,6 @@
+ <script lang="ts">
+-  import { progress } from '../stores/progress';
+-  import type { HideKind } from '../types/materials';
+-  import IconButton from './IconButton.svelte';
++  import { progress, type HideKind } from '../../state/progress';
++  import IconButton from '../ui/IconButton.svelte';
+ 
+   export let kind: HideKind;
+   export let id: string;
+diff --git a/v1/src/lib/components/IrregularVerbCard.svelte b/src/shared/entries/IrregularVerbCard.svelte
+index 88960c9..713211d 100644
+--- a/v1/src/lib/components/IrregularVerbCard.svelte
++++ b/src/shared/entries/IrregularVerbCard.svelte
+@@ -1,17 +1,13 @@
+ <script lang="ts">
+-  import type { IrregularVerb } from '../types/materials';
+-  import SpeakButton from './SpeakButton.svelte';
++  import type { IrregularVerb } from '../../content/types';
++  import { splitAlternatives } from '../text';
++  import SpeakButton from '../speech/SpeakButton.svelte';
+   import FocusButton from './FocusButton.svelte';
+   import HideButton from './HideButton.svelte';
+ 
+   export let verb: IrregularVerb;
+ 
+-  function normalizeAlternatives(value: IrregularVerb['commonAlternatives']): string[] {
+-    if (!value) return [];
+-    return Array.isArray(value) ? value.filter(Boolean) : value.split(';').map((entry) => entry.trim()).filter(Boolean);
+-  }
+-
+-  $: alternatives = normalizeAlternatives(verb.commonAlternatives);
++  $: alternatives = splitAlternatives(verb.commonAlternatives);
+ </script>
+ 
+ <article class="card verb-card">
+diff --git a/v1/src/lib/components/PhraseCard.svelte b/src/shared/entries/PhraseCard.svelte
+index c8cc4aa..4eeb115 100644
+--- a/v1/src/lib/components/PhraseCard.svelte
++++ b/src/shared/entries/PhraseCard.svelte
+@@ -1,18 +1,14 @@
+ <script lang="ts">
+-  import { progress } from '../stores/progress';
+-  import type { Phrase, WordExample } from '../types/materials';
+-  import SpeakButton from './SpeakButton.svelte';
++  import { progress } from '../../state/progress';
++  import type { Phrase, WordExample } from '../../content/types';
++  import { splitAlternatives } from '../text';
++  import SpeakButton from '../speech/SpeakButton.svelte';
+   import FocusButton from './FocusButton.svelte';
+   import HideButton from './HideButton.svelte';
+-  import IconButton from './IconButton.svelte';
++  import IconButton from '../ui/IconButton.svelte';
+ 
+   export let phrase: Phrase;
+ 
+-  function normalizeAlternatives(value: Phrase['commonAlternatives']): string[] {
+-    if (!value) return [];
+-    return Array.isArray(value) ? value.filter(Boolean) : value.split(';').map((item) => item.trim()).filter(Boolean);
+-  }
+-
+   function getExamples(item: Phrase): WordExample[] {
+     if (item.examples?.length) return item.examples.slice(0, 2);
+     return item.example ? [{ en: item.example }] : [];
+@@ -20,7 +16,7 @@
+ 
+   $: learned = $progress.learnedPhrases.includes(phrase.id);
+   $: hidden = $progress.hiddenPhrases.includes(phrase.id);
+-  $: alternatives = normalizeAlternatives(phrase.commonAlternatives);
++  $: alternatives = splitAlternatives(phrase.commonAlternatives);
+   $: examples = getExamples(phrase);
+   $: exampleSpeech = examples.map((example) => example.en).join(' ');
+ </script>
+diff --git a/v1/src/lib/components/WordCard.svelte b/src/shared/entries/WordCard.svelte
+index 21bf72d..6b9632f 100644
+--- a/v1/src/lib/components/WordCard.svelte
++++ b/src/shared/entries/WordCard.svelte
+@@ -1,18 +1,14 @@
+ <script lang="ts">
+-  import type { WordIndexItem } from '../types/materials';
+-  import SpeakButton from './SpeakButton.svelte';
++  import type { WordIndexItem } from '../../content/types';
++  import { splitAlternatives } from '../text';
++  import SpeakButton from '../speech/SpeakButton.svelte';
+   import FocusButton from './FocusButton.svelte';
+   import HideButton from './HideButton.svelte';
+ 
+   export let item: WordIndexItem;
+ 
+-  function normalizeAlternatives(value: WordIndexItem['commonAlternatives']): string[] {
+-    if (!value) return [];
+-    return Array.isArray(value) ? value.filter(Boolean) : value.split(';').map((entry) => entry.trim()).filter(Boolean);
+-  }
+-
+   $: transcription = item.transcription ?? item.pronunciation;
+-  $: alternatives = normalizeAlternatives(item.commonAlternatives);
++  $: alternatives = splitAlternatives(item.commonAlternatives);
+ </script>
+ 
+ <article class="card word-card">
+diff --git a/v1/src/lib/types/pagination.ts b/src/shared/pagination.ts
+index 1af681e..cc90f2f 100644
+--- a/v1/src/lib/types/pagination.ts
++++ b/src/shared/pagination.ts
+@@ -1 +1,11 @@
+ export type PageSizeOption = number | 'all';
++
++export function paginate<T>(items: T[], page: number, pageSize: PageSizeOption): T[] {
++  if (pageSize === 'all') return items;
++  const start = (Math.max(1, page) - 1) * pageSize;
++  return items.slice(start, start + pageSize);
++}
++
++export function totalPages(total: number, pageSize: PageSizeOption): number {
++  return pageSize === 'all' ? 1 : Math.max(1, Math.ceil(total / pageSize));
++}
+diff --git a/v1/src/lib/components/SectionSpeechControl.svelte b/src/shared/speech/SectionSpeechControl.svelte
+index 7da9cf9..0bcf9d1 100644
+--- a/v1/src/lib/components/SectionSpeechControl.svelte
++++ b/src/shared/speech/SectionSpeechControl.svelte
+@@ -1,7 +1,7 @@
+ <script lang="ts">
+-  import IconButton from './IconButton.svelte';
+-  import { progress, type ProgressState } from '../stores/progress';
+-  import { sectionSpeech, speakSection, stopSectionSpeech, type SectionSpeechItem, type SpeechRepeatCount } from '../utils/sectionSpeech';
++  import IconButton from '../ui/IconButton.svelte';
++  import { settings } from '../../state/settings';
++  import { sectionSpeech, speakSection, stopSectionSpeech, type SectionSpeechItem, type SpeechRepeatCount } from './sectionSpeech';
+ 
+   export let controlId: string;
+   export let label = 'Read aloud';
+@@ -12,14 +12,13 @@
+ 
+   $: isActive = $sectionSpeech.activeControlId === controlId && $sectionSpeech.isSpeaking;
+   $: isBusy = Boolean($sectionSpeech.activeControlId) && $sectionSpeech.isSpeaking;
+-  $: repeatCount = $progress.speechRepeatCount;
++  $: repeatCount = $settings.speechRepeatCount;
+   $: status = isActive
+     ? `Repeat ${$sectionSpeech.currentRepeat}/${$sectionSpeech.repeats} · Item ${$sectionSpeech.currentItem}/${$sectionSpeech.totalItems}`
+     : `${items.length} item${items.length === 1 ? '' : 's'}`;
+ 
+   function onRepeatChange(event: Event): void {
+-    const value = Number((event.target as HTMLSelectElement).value) as ProgressState['speechRepeatCount'];
+-    progress.setSpeechRepeatCount(value);
++    settings.setSpeechRepeatCount(Number((event.target as HTMLSelectElement).value) as SpeechRepeatCount);
+   }
+ 
+   function onStart(): void {
+diff --git a/v1/src/lib/components/SpeakButton.svelte b/src/shared/speech/SpeakButton.svelte
+index e139ffd..ceca757 100644
+--- a/v1/src/lib/components/SpeakButton.svelte
++++ b/src/shared/speech/SpeakButton.svelte
+@@ -1,6 +1,6 @@
+ <script lang="ts">
+-  import IconButton from './IconButton.svelte';
+-  import { speak } from '../utils/speech';
++  import IconButton from '../ui/IconButton.svelte';
++  import { speak } from './speech';
+ 
+   export let text: string;
+   export let label = 'Speak';
+diff --git a/v1/src/lib/utils/speechFormatters.ts b/src/shared/speech/speechFormatters.ts
+index 4bef259..95dd8be 100644
+--- a/v1/src/lib/utils/speechFormatters.ts
++++ b/src/shared/speech/speechFormatters.ts
+@@ -1,4 +1,5 @@
+-import type { IrregularVerb, Phrase, TrainingBlock, WordIndexItem } from '../types/materials';
++import type { IrregularVerb, Phrase, TrainingBlock, WordIndexItem } from '../../content/types';
++import { splitAlternatives } from '../text';
+ import type { SectionSpeechItem, SpeechSegment } from './sectionSpeech';
+ 
+ const en = (text: string): SpeechSegment => ({ text, lang: 'en-US', rate: 0.88 });
+@@ -8,13 +9,8 @@ function joinForms(verb: IrregularVerb): string {
+   return `${verb.base}, ${verb.pastSimple}, ${verb.pastParticiple}`;
+ }
+ 
+-function normalizeAlternatives(value?: string[] | string): string[] {
+-  if (!value) return [];
+-  return Array.isArray(value) ? value.filter(Boolean) : value.split(';').map((item) => item.trim()).filter(Boolean);
+-}
+-
+ function commonAlternativeSegments(value?: string[] | string): SpeechSegment[] {
+-  const alternatives = normalizeAlternatives(value);
++  const alternatives = splitAlternatives(value);
+   if (!alternatives.length) return [];
+   return [en(`Common alternatives: ${alternatives.join('; ')}`)];
+ }
+diff --git a/v1/src/lib/components/PaginationControls.svelte b/src/shared/ui/PaginationControls.svelte
+index b8b4ae7..fbbe56d 100644
+--- a/v1/src/lib/components/PaginationControls.svelte
++++ b/src/shared/ui/PaginationControls.svelte
+@@ -1,6 +1,6 @@
+ <script lang="ts">
+   import IconButton from './IconButton.svelte';
+-  import type { PageSizeOption } from '../types/pagination';
++  import type { PageSizeOption } from '../pagination';
+ 
+   export let total = 0;
+   export let page = 1;
+diff --git a/v1/src/lib/stores/progress.ts b/src/state/progress.ts
+index 8739224..f7150fe 100644
+--- a/v1/src/lib/stores/progress.ts
++++ b/src/state/progress.ts
+@@ -1,93 +1,65 @@
+-import { writable } from "svelte/store";
+-import type {
+-  FocusKind,
+-  HideKind,
+-  LearnPass,
+-  LearnPassDraft,
+-} from "../types/materials";
+-import type { FlashcardMode, FlashcardSession } from "../types/flashcards";
+-
+-const STORAGE_KEY = "englishAssessmentTrainer.svelteState.v1";
+-export const DEFAULT_LEARN_PASS_ID = "default";
+-
+-export type IndexPageSize = 6 | 12 | "all";
+-export type ListPageSize = 5 | 10 | 20 | "all";
+-export type IndexPanelId = "learnPass" | "learningBlocks" | "tagCloud" | "daily";
+-
+-export type ProgressState = {
+-  activePage: string;
+-  phraseQuery: string;
+-  phraseCategory: string;
+-  wordQuery: string;
+-  wordCategory: string;
+-  irregularQuery: string;
+-  irregularGroup: string;
+-  irregularSet: string;
+-  reverseMode: "phrase" | "example";
+-  showHiddenPhrases: boolean;
+-  showHiddenWords: boolean;
+-  showHiddenIrregular: boolean;
+-  currentPrompt: string;
+-  speechRepeatCount: 10 | 20 | 50;
+-  selectedLearnPassId: string;
+-  learnPassSearch: string;
+-  indexTagFilter: string;
+-  indexPage: number;
+-  indexPageSize: IndexPageSize;
+-  indexLearnPassExpanded: boolean;
+-  indexLearningBlocksExpanded: boolean;
+-  indexTagCloudExpanded: boolean;
+-  indexDailyExpanded: boolean;
+-  phrasePage: number;
+-  phrasePageSize: ListPageSize;
+-  wordPage: number;
+-  wordPageSize: ListPageSize;
+-  irregularPage: number;
+-  irregularPageSize: ListPageSize;
+-  learnedPhrases: string[];
+-  hiddenPhrases: string[];
+-  hiddenWords: string[];
+-  hiddenIrregular: string[];
+-  favoriteBlocks: string[];
+-  favoritePhrases: string[];
+-  favoriteWords: string[];
+-  favoriteIrregular: string[];
++import { writable } from 'svelte/store';
++import type { StoredRecords, WriteOp } from '../storage/database';
++import { persist } from './persistence';
++import { viewState } from './viewState';
++
++/**
++ * Learning state: learned and hidden entries, the Focus List, Learn Passes and
++ * the review sequence of every flashcard deck.
++ *
++ * Entries are referenced by their dataset ids. In the database:
++ * - `progress` holds one record per id list (key = property name) and the
++ *   selected Learn Pass;
++ * - `learnPasses` holds one record per Learn Pass (key = pass id);
++ * - `flashcardSessions` holds one record per deck (key = deck key).
++ */
++export const DEFAULT_LEARN_PASS_ID = 'default';
++
++export type FocusKind = 'block' | 'phrase' | 'word' | 'irregular';
++export type HideKind = 'phrase' | 'word' | 'irregular';
++
++export type LearnPass = {
++  id: string;
++  name: string;
++  description?: string;
++  blockIds: string[];
++  createdAt: string;
++  updatedAt: string;
++};
++
++export type LearnPassDraft = {
++  id?: string;
++  name: string;
++  description?: string;
++  blockIds: string[];
++};
++
++/** The cards of one deck that are still being learned, and the current position. */
++export type FlashcardSession = {
++  order: string[];
++  index: number;
++};
++
++const LIST_KEYS = [
++  'learnedPhrases',
++  'hiddenPhrases',
++  'hiddenWords',
++  'hiddenIrregular',
++  'favoriteBlocks',
++  'favoritePhrases',
++  'favoriteWords',
++  'favoriteIrregular'
++] as const;
++
++type ListKey = (typeof LIST_KEYS)[number];
++
++export type ProgressState = Record<ListKey, string[]> & {
+   learnPasses: LearnPass[];
+-  flashcardMode: FlashcardMode;
+-  flashcardTopic: string;
++  selectedLearnPassId: string;
+   flashcardSessions: Record<string, FlashcardSession>;
+ };
+ 
+ const defaultState: ProgressState = {
+-  activePage: "index",
+-  phraseQuery: "",
+-  phraseCategory: "All",
+-  wordQuery: "",
+-  wordCategory: "All",
+-  irregularQuery: "",
+-  irregularGroup: "All",
+-  irregularSet: "essential-100",
+-  reverseMode: "phrase",
+-  showHiddenPhrases: false,
+-  showHiddenWords: false,
+-  showHiddenIrregular: false,
+-  currentPrompt: "",
+-  speechRepeatCount: 10,
+-  selectedLearnPassId: DEFAULT_LEARN_PASS_ID,
+-  learnPassSearch: "",
+-  indexTagFilter: "",
+-  indexPage: 1,
+-  indexPageSize: 6,
+-  indexLearnPassExpanded: true,
+-  indexLearningBlocksExpanded: true,
+-  indexTagCloudExpanded: true,
+-  indexDailyExpanded: true,
+-  phrasePage: 1,
+-  phrasePageSize: 5,
+-  wordPage: 1,
+-  wordPageSize: 5,
+-  irregularPage: 1,
+-  irregularPageSize: 5,
+   learnedPhrases: [],
+   hiddenPhrases: [],
+   hiddenWords: [],
+@@ -97,392 +69,246 @@ const defaultState: ProgressState = {
+   favoriteWords: [],
+   favoriteIrregular: [],
+   learnPasses: [],
+-  flashcardMode: "all",
+-  flashcardTopic: "",
+-  flashcardSessions: {},
++  selectedLearnPassId: DEFAULT_LEARN_PASS_ID,
++  flashcardSessions: {}
+ };
+ 
+-function canUseStorage(): boolean {
+-  return (
+-    typeof window !== "undefined" && typeof window.localStorage !== "undefined"
+-  );
+-}
++const FOCUS_LIST: Record<FocusKind, ListKey> = {
++  block: 'favoriteBlocks',
++  phrase: 'favoritePhrases',
++  word: 'favoriteWords',
++  irregular: 'favoriteIrregular'
++};
+ 
+-function normalizeStringList(value: unknown): string[] {
+-  return Array.isArray(value)
+-    ? value.filter((item): item is string => typeof item === "string")
+-    : [];
+-}
++const HIDDEN_LIST: Record<HideKind, ListKey> = {
++  phrase: 'hiddenPhrases',
++  word: 'hiddenWords',
++  irregular: 'hiddenIrregular'
++};
+ 
+-function normalizeBoolean(value: unknown, fallback: boolean): boolean {
+-  return typeof value === "boolean" ? value : fallback;
++function uniqueValues(list: string[]): string[] {
++  return [...new Set(list.filter(Boolean))];
+ }
+ 
+-function normalizePositivePage(value: unknown): number {
+-  return typeof value === "number" && Number.isFinite(value) && value > 0
+-    ? Math.floor(value)
+-    : 1;
++function toggleValue(list: string[], id: string): string[] {
++  return list.includes(id) ? list.filter((item) => item !== id) : [...list, id];
+ }
+ 
+-function normalizeIndexPageSize(value: unknown): IndexPageSize {
+-  if (value === 12 || value === "all") return value;
+-  return 6;
++function removeValue(list: string[], id: string): string[] {
++  return list.includes(id) ? list.filter((item) => item !== id) : list;
+ }
+ 
+-function normalizeListPageSize(value: unknown): ListPageSize {
+-  if (value === 10 || value === 20 || value === "all") return value;
+-  return 5;
++function removeValues(list: string[], ids: string[]): string[] {
++  return list.some((id) => ids.includes(id)) ? list.filter((id) => !ids.includes(id)) : list;
+ }
+ 
+-function normalizeFlashcardSessions(
+-  value: unknown,
+-): Record<string, FlashcardSession> {
+-  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+-
+-  const sessions: Record<string, FlashcardSession> = {};
+-
+-  for (const [deckKey, entry] of Object.entries(value)) {
+-    if (!entry || typeof entry !== "object") continue;
++function createId(): string {
++  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
++    return crypto.randomUUID();
++  }
+ 
+-    const candidate = entry as Partial<FlashcardSession>;
+-    const order = uniqueValues(normalizeStringList(candidate.order));
+-    const index =
+-      typeof candidate.index === "number" &&
+-      Number.isFinite(candidate.index) &&
+-      candidate.index > 0
+-        ? Math.floor(candidate.index)
+-        : 0;
++  return `learn-pass-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
++}
+ 
+-    sessions[deckKey] = { order, index: index < order.length ? index : 0 };
+-  }
++// --- Reading saved records -------------------------------------------------
+ 
+-  return sessions;
++function readStringList(value: unknown): string[] {
++  return Array.isArray(value) ? uniqueValues(value.filter((item): item is string => typeof item === 'string')) : [];
+ }
+ 
+-function normalizeLearnPass(value: unknown): LearnPass | null {
+-  if (!value || typeof value !== "object") return null;
++function readLearnPass(value: unknown): LearnPass | null {
++  if (!value || typeof value !== 'object') return null;
+ 
+   const candidate = value as Partial<LearnPass>;
+-  if (typeof candidate.id !== "string" || typeof candidate.name !== "string")
+-    return null;
++  if (typeof candidate.id !== 'string' || typeof candidate.name !== 'string') return null;
+ 
+   const now = new Date().toISOString();
+ 
+   return {
+     id: candidate.id,
+-    name: candidate.name.trim() || "Untitled pass",
+-    description:
+-      typeof candidate.description === "string" ? candidate.description : "",
+-    blockIds: normalizeStringList(candidate.blockIds),
+-    createdAt:
+-      typeof candidate.createdAt === "string" ? candidate.createdAt : now,
+-    updatedAt:
+-      typeof candidate.updatedAt === "string" ? candidate.updatedAt : now,
++    name: candidate.name.trim() || 'Untitled pass',
++    description: typeof candidate.description === 'string' ? candidate.description : '',
++    blockIds: readStringList(candidate.blockIds),
++    createdAt: typeof candidate.createdAt === 'string' ? candidate.createdAt : now,
++    updatedAt: typeof candidate.updatedAt === 'string' ? candidate.updatedAt : now
+   };
+ }
+ 
+-function normalizeState(value: unknown): ProgressState {
+-  const raw =
+-    value && typeof value === "object" ? (value as Partial<ProgressState>) : {};
+-  const state: ProgressState = { ...defaultState, ...raw };
+-  const selectedExists =
+-    state.selectedLearnPassId === DEFAULT_LEARN_PASS_ID ||
+-    state.learnPasses.some((pass) => pass.id === state.selectedLearnPassId);
++function readFlashcardSession(value: unknown): FlashcardSession | null {
++  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+ 
+-  return {
+-    ...state,
+-    selectedLearnPassId: selectedExists
+-      ? state.selectedLearnPassId
+-      : DEFAULT_LEARN_PASS_ID,
+-    indexTagFilter:
+-      typeof state.indexTagFilter === "string" ? state.indexTagFilter : "",
+-    indexPage: normalizePositivePage(state.indexPage),
+-    indexPageSize: normalizeIndexPageSize(state.indexPageSize),
+-    indexLearnPassExpanded: normalizeBoolean(state.indexLearnPassExpanded, true),
+-    indexLearningBlocksExpanded: normalizeBoolean(state.indexLearningBlocksExpanded, true),
+-    indexTagCloudExpanded: normalizeBoolean(state.indexTagCloudExpanded, true),
+-    indexDailyExpanded: normalizeBoolean(state.indexDailyExpanded, true),
+-    phrasePage: normalizePositivePage(state.phrasePage),
+-    phrasePageSize: normalizeListPageSize(state.phrasePageSize),
+-    wordPage: normalizePositivePage(state.wordPage),
+-    wordPageSize: normalizeListPageSize(state.wordPageSize),
+-    irregularSet:
+-      typeof state.irregularSet === "string" ? state.irregularSet : "essential-100",
+-    irregularPage: normalizePositivePage(state.irregularPage),
+-    irregularPageSize: normalizeListPageSize(state.irregularPageSize),
+-    learnedPhrases: normalizeStringList(state.learnedPhrases),
+-    hiddenPhrases: normalizeStringList(state.hiddenPhrases),
+-    hiddenWords: normalizeStringList(state.hiddenWords),
+-    hiddenIrregular: normalizeStringList(state.hiddenIrregular),
+-    favoriteBlocks: normalizeStringList(state.favoriteBlocks),
+-    favoritePhrases: normalizeStringList(state.favoritePhrases),
+-    favoriteWords: normalizeStringList(state.favoriteWords),
+-    favoriteIrregular: normalizeStringList(state.favoriteIrregular),
+-    learnPasses: Array.isArray(state.learnPasses)
+-      ? state.learnPasses
+-          .map(normalizeLearnPass)
+-          .filter((pass): pass is LearnPass => Boolean(pass))
+-      : [],
+-    flashcardMode: state.flashcardMode === "topic" ? "topic" : "all",
+-    flashcardTopic:
+-      typeof state.flashcardTopic === "string" ? state.flashcardTopic : "",
+-    flashcardSessions: normalizeFlashcardSessions(state.flashcardSessions),
+-  };
++  const candidate = value as Partial<FlashcardSession>;
++  const order = readStringList(candidate.order);
++  const index =
++    typeof candidate.index === 'number' && Number.isFinite(candidate.index) && candidate.index > 0
++      ? Math.floor(candidate.index)
++      : 0;
++
++  return { order, index: index < order.length ? index : 0 };
+ }
+ 
+-function readState(): ProgressState {
+-  if (!canUseStorage()) return defaultState;
+-  try {
+-    const raw = window.localStorage.getItem(STORAGE_KEY);
+-    if (!raw) return defaultState;
+-    return normalizeState(JSON.parse(raw));
+-  } catch {
+-    return defaultState;
++/**
++ * Builds the learning state from the saved records.
++ * Missing records keep their defaults; malformed records are repaired or skipped.
++ */
++export function readProgress(records: StoredRecords): ProgressState {
++  const state: ProgressState = { ...defaultState };
++
++  for (const key of LIST_KEYS) {
++    state[key] = readStringList(records.progress.get(key));
+   }
+-}
+ 
+-function writeState(state: ProgressState): void {
+-  if (!canUseStorage()) return;
+-  try {
+-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+-  } catch {
+-    // localStorage can be disabled in private mode; the app should still work.
++  state.learnPasses = [...records.learnPasses.values()]
++    .map(readLearnPass)
++    .filter((pass): pass is LearnPass => pass !== null)
++    .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
++
++  const selected = records.progress.get('selectedLearnPassId');
++  state.selectedLearnPassId =
++    typeof selected === 'string' && state.learnPasses.some((pass) => pass.id === selected)
++      ? selected
++      : DEFAULT_LEARN_PASS_ID;
++
++  state.flashcardSessions = {};
++  for (const [deckKey, value] of records.flashcardSessions) {
++    const session = readFlashcardSession(value);
++    if (session) state.flashcardSessions[deckKey] = session;
+   }
+-}
+ 
+-function toggleValue(list: string[], id: string): string[] {
+-  return list.includes(id) ? list.filter((item) => item !== id) : [...list, id];
++  return state;
+ }
+ 
+-function removeValue(list: string[], id: string): string[] {
+-  return list.filter((item) => item !== id);
+-}
++// --- Writing changes ---------------------------------------------------------
+ 
+-function uniqueValues(list: string[]): string[] {
+-  return [...new Set(list.filter(Boolean))];
+-}
++/** The storage operations that turn the saved `previous` state into `next`. */
++function changedRecords(previous: ProgressState, next: ProgressState): WriteOp[] {
++  const ops: WriteOp[] = [];
+ 
+-function createId(): string {
+-  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+-    return crypto.randomUUID();
++  for (const key of LIST_KEYS) {
++    if (previous[key] !== next[key]) ops.push({ type: 'put', store: 'progress', key, value: next[key] });
+   }
+ 
+-  return `learn-pass-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+-}
++  if (previous.selectedLearnPassId !== next.selectedLearnPassId) {
++    ops.push({ type: 'put', store: 'progress', key: 'selectedLearnPassId', value: next.selectedLearnPassId });
++  }
+ 
+-function focusKey(
+-  kind: FocusKind,
+-): keyof Pick<
+-  ProgressState,
+-  "favoriteBlocks" | "favoritePhrases" | "favoriteWords" | "favoriteIrregular"
+-> {
+-  if (kind === "block") return "favoriteBlocks";
+-  if (kind === "phrase") return "favoritePhrases";
+-  if (kind === "word") return "favoriteWords";
+-  return "favoriteIrregular";
+-}
++  if (previous.learnPasses !== next.learnPasses) {
++    const before = new Map(previous.learnPasses.map((pass) => [pass.id, pass]));
++    for (const pass of next.learnPasses) {
++      if (before.get(pass.id) !== pass) ops.push({ type: 'put', store: 'learnPasses', key: pass.id, value: pass });
++      before.delete(pass.id);
++    }
++    for (const id of before.keys()) ops.push({ type: 'delete', store: 'learnPasses', key: id });
++  }
++
++  if (previous.flashcardSessions !== next.flashcardSessions) {
++    for (const [deckKey, session] of Object.entries(next.flashcardSessions)) {
++      if (previous.flashcardSessions[deckKey] !== session) {
++        ops.push({ type: 'put', store: 'flashcardSessions', key: deckKey, value: session });
++      }
++    }
++    for (const deckKey of Object.keys(previous.flashcardSessions)) {
++      if (!(deckKey in next.flashcardSessions)) ops.push({ type: 'delete', store: 'flashcardSessions', key: deckKey });
++    }
++  }
+ 
+-function hiddenKey(
+-  kind: HideKind,
+-): keyof Pick<
+-  ProgressState,
+-  "hiddenPhrases" | "hiddenWords" | "hiddenIrregular"
+-> {
+-  if (kind === "phrase") return "hiddenPhrases";
+-  if (kind === "word") return "hiddenWords";
+-  return "hiddenIrregular";
++  return ops;
+ }
+ 
+ function createProgressStore() {
+-  const { subscribe, set, update } = writable<ProgressState>(readState());
+-
+-  subscribe(writeState);
++  let state = defaultState;
++  const store = writable<ProgressState>(state);
++
++  /** Applies a change in memory and queues the records that changed. */
++  function update(change: (current: ProgressState) => ProgressState): void {
++    const next = change(state);
++    const ops = changedRecords(state, next);
++    if (!ops.length) return;
++
++    state = next;
++    store.set(next);
++    persist(ops);
++  }
+ 
+   return {
+-    subscribe,
+-    setActivePage: (activePage: string) =>
+-      update((state) => ({ ...state, activePage })),
+-    setPhraseQuery: (phraseQuery: string) =>
+-      update((state) => ({ ...state, phraseQuery, phrasePage: 1 })),
+-    setPhraseCategory: (phraseCategory: string) =>
+-      update((state) => ({ ...state, phraseCategory, phrasePage: 1 })),
+-    setWordQuery: (wordQuery: string) =>
+-      update((state) => ({ ...state, wordQuery, wordPage: 1 })),
+-    setWordCategory: (wordCategory: string) =>
+-      update((state) => ({ ...state, wordCategory, wordPage: 1 })),
+-    setIrregularQuery: (irregularQuery: string) =>
+-      update((state) => ({ ...state, irregularQuery, irregularPage: 1 })),
+-    setIrregularGroup: (irregularGroup: string) =>
+-      update((state) => ({ ...state, irregularGroup, irregularPage: 1 })),
+-    setIrregularSet: (irregularSet: string) =>
+-      update((state) => ({ ...state, irregularSet, irregularGroup: "All", irregularPage: 1 })),
+-    setReverseMode: (reverseMode: ProgressState["reverseMode"]) =>
+-      update((state) => ({ ...state, reverseMode })),
+-    setCurrentPrompt: (currentPrompt: string) =>
+-      update((state) => ({ ...state, currentPrompt })),
+-    setSpeechRepeatCount: (
+-      speechRepeatCount: ProgressState["speechRepeatCount"],
+-    ) => update((state) => ({ ...state, speechRepeatCount })),
+-    setSelectedLearnPass: (selectedLearnPassId: string) =>
+-      update((state) => ({ ...state, selectedLearnPassId, indexPage: 1 })),
+-    setLearnPassSearch: (learnPassSearch: string) =>
+-      update((state) => ({ ...state, learnPassSearch })),
+-    setIndexTagFilter: (indexTagFilter: string) =>
+-      update((state) => ({ ...state, indexTagFilter, indexPage: 1 })),
+-    setIndexPage: (indexPage: number) =>
+-      update((state) => ({
+-        ...state,
+-        indexPage: normalizePositivePage(indexPage),
+-      })),
+-    setIndexPageSize: (indexPageSize: IndexPageSize) =>
+-      update((state) => ({ ...state, indexPageSize, indexPage: 1 })),
+-    toggleIndexPanel: (panel: IndexPanelId) =>
+-      update((state) => {
+-        if (panel === "learnPass") {
+-          return { ...state, indexLearnPassExpanded: !state.indexLearnPassExpanded };
+-        }
+-        if (panel === "learningBlocks") {
+-          return { ...state, indexLearningBlocksExpanded: !state.indexLearningBlocksExpanded };
+-        }
+-        if (panel === "tagCloud") {
+-          return { ...state, indexTagCloudExpanded: !state.indexTagCloudExpanded };
+-        }
+-        return { ...state, indexDailyExpanded: !state.indexDailyExpanded };
++    subscribe: store.subscribe,
++    /** Replaces the in-memory state with the saved one. Writes nothing. */
++    hydrate(records: StoredRecords): void {
++      state = readProgress(records);
++      store.set(state);
++    },
++    toggleLearnedPhrase: (id: string) =>
++      update((current) => ({ ...current, learnedPhrases: toggleValue(current.learnedPhrases, id) })),
++    toggleFavorite: (kind: FocusKind, id: string) =>
++      update((current) => ({ ...current, [FOCUS_LIST[kind]]: toggleValue(current[FOCUS_LIST[kind]], id) })),
++    /** A hidden item also leaves the Focus List and is no longer "learned". */
++    hideItem: (kind: HideKind, id: string) =>
++      update((current) => {
++        const hidden = HIDDEN_LIST[kind];
++        const focus = FOCUS_LIST[kind];
++        return {
++          ...current,
++          [hidden]: current[hidden].includes(id) ? current[hidden] : [...current[hidden], id],
++          [focus]: removeValue(current[focus], id),
++          learnedPhrases: kind === 'phrase' ? removeValue(current.learnedPhrases, id) : current.learnedPhrases
++        };
+       }),
+-    setPhrasePage: (phrasePage: number) =>
+-      update((state) => ({
+-        ...state,
+-        phrasePage: normalizePositivePage(phrasePage),
+-      })),
+-    setPhrasePageSize: (phrasePageSize: ListPageSize) =>
+-      update((state) => ({ ...state, phrasePageSize, phrasePage: 1 })),
+-    setWordPage: (wordPage: number) =>
+-      update((state) => ({
+-        ...state,
+-        wordPage: normalizePositivePage(wordPage),
+-      })),
+-    setWordPageSize: (wordPageSize: ListPageSize) =>
+-      update((state) => ({ ...state, wordPageSize, wordPage: 1 })),
+-    setIrregularPage: (irregularPage: number) =>
+-      update((state) => ({
+-        ...state,
+-        irregularPage: normalizePositivePage(irregularPage),
+-      })),
+-    setIrregularPageSize: (irregularPageSize: ListPageSize) =>
+-      update((state) => ({ ...state, irregularPageSize, irregularPage: 1 })),
++    unhideItem: (kind: HideKind, id: string) =>
++      update((current) => ({ ...current, [HIDDEN_LIST[kind]]: removeValue(current[HIDDEN_LIST[kind]], id) })),
++    unhideAll: (kind: HideKind) =>
++      update((current) => (current[HIDDEN_LIST[kind]].length ? { ...current, [HIDDEN_LIST[kind]]: [] } : current)),
++    setSelectedLearnPass(selectedLearnPassId: string): void {
++      update((current) => ({ ...current, selectedLearnPassId }));
++      viewState.resetPage('index');
++    },
++    /** Creates or updates a Learn Pass and makes it the active one. */
+     saveLearnPass: (draft: LearnPassDraft) =>
+-      update((state) => {
+-        const existing = draft.id
+-          ? state.learnPasses.find((pass) => pass.id === draft.id)
+-          : undefined;
++      update((current) => {
++        const existing = draft.id ? current.learnPasses.find((pass) => pass.id === draft.id) : undefined;
+         const now = new Date().toISOString();
+         const id = existing?.id ?? draft.id ?? createId();
+         const pass: LearnPass = {
+           id,
+-          name: draft.name.trim() || "Untitled pass",
+-          description: draft.description?.trim() ?? "",
++          name: draft.name.trim() || 'Untitled pass',
++          description: draft.description?.trim() ?? '',
+           blockIds: uniqueValues(draft.blockIds),
+           createdAt: existing?.createdAt ?? now,
+-          updatedAt: now,
++          updatedAt: now
+         };
+         const learnPasses = existing
+-          ? state.learnPasses.map((item) => (item.id === id ? pass : item))
+-          : [...state.learnPasses, pass];
+-        return { ...state, learnPasses, selectedLearnPassId: id };
++          ? current.learnPasses.map((item) => (item.id === id ? pass : item))
++          : [...current.learnPasses, pass];
++        return { ...current, learnPasses, selectedLearnPassId: id };
+       }),
+     deleteLearnPass: (id: string) =>
+-      update((state) => ({
+-        ...state,
+-        learnPasses: state.learnPasses.filter((pass) => pass.id !== id),
+-        selectedLearnPassId:
+-          state.selectedLearnPassId === id
+-            ? DEFAULT_LEARN_PASS_ID
+-            : state.selectedLearnPassId,
+-      })),
+-    toggleShowHidden: (kind: HideKind) =>
+-      update((state) => {
+-        if (kind === "phrase")
+-          return { ...state, showHiddenPhrases: !state.showHiddenPhrases };
+-        if (kind === "word")
+-          return { ...state, showHiddenWords: !state.showHiddenWords };
+-        return { ...state, showHiddenIrregular: !state.showHiddenIrregular };
+-      }),
+-    toggleLearnedPhrase: (id: string) =>
+-      update((state) => ({
+-        ...state,
+-        learnedPhrases: toggleValue(state.learnedPhrases, id),
++      update((current) => ({
++        ...current,
++        learnPasses: current.learnPasses.filter((pass) => pass.id !== id),
++        selectedLearnPassId: current.selectedLearnPassId === id ? DEFAULT_LEARN_PASS_ID : current.selectedLearnPassId
+       })),
+-    toggleFavorite: (kind: FocusKind, id: string) =>
+-      update((state) => {
+-        const key = focusKey(kind);
+-        return { ...state, [key]: toggleValue(state[key], id) };
+-      }),
+-    hideItem: (kind: HideKind, id: string) =>
+-      update((state) => {
+-        const hidden = hiddenKey(kind);
+-        const favorite =
+-          kind === "phrase"
+-            ? "favoritePhrases"
+-            : kind === "word"
+-              ? "favoriteWords"
+-              : "favoriteIrregular";
+-        const patch: Partial<ProgressState> = {
+-          [hidden]: state[hidden].includes(id)
+-            ? state[hidden]
+-            : [...state[hidden], id],
+-          [favorite]: removeValue(state[favorite], id),
+-        };
+-        if (kind === "phrase")
+-          patch.learnedPhrases = removeValue(state.learnedPhrases, id);
+-        return { ...state, ...patch };
+-      }),
+-    unhideItem: (kind: HideKind, id: string) =>
+-      update((state) => {
+-        const key = hiddenKey(kind);
+-        return { ...state, [key]: removeValue(state[key], id) };
+-      }),
+-    unhideAll: (kind: HideKind) =>
+-      update((state) => {
+-        const key = hiddenKey(kind);
+-        return { ...state, [key]: [] };
+-      }),
+-    setFlashcardMode: (flashcardMode: FlashcardMode) =>
+-      update((state) => ({ ...state, flashcardMode })),
+-    setFlashcardTopic: (flashcardTopic: string) =>
+-      update((state) => ({ ...state, flashcardTopic })),
+     // Saves the review sequence of one deck. `learnedIds` are the items the
+     // learner has just marked as known; they are shared with every other deck.
+-    saveFlashcardSession: (
+-      deckKey: string,
+-      session: FlashcardSession,
+-      learnedIds: string[] = [],
+-    ) =>
+-      update((state) => ({
+-        ...state,
+-        learnedPhrases: uniqueValues([...state.learnedPhrases, ...learnedIds]),
+-        flashcardSessions: { ...state.flashcardSessions, [deckKey]: session },
++    saveFlashcardSession: (deckKey: string, session: FlashcardSession, learnedIds: string[] = []) =>
++      update((current) => ({
++        ...current,
++        learnedPhrases: learnedIds.every((id) => current.learnedPhrases.includes(id))
++          ? current.learnedPhrases
++          : uniqueValues([...current.learnedPhrases, ...learnedIds]),
++        flashcardSessions: { ...current.flashcardSessions, [deckKey]: session }
+       })),
+     // "Learn again": the items go back to the learning pool of every deck.
+     relearnFlashcards: (ids: string[]) =>
+-      update((state) => ({
+-        ...state,
+-        learnedPhrases: state.learnedPhrases.filter((id) => !ids.includes(id)),
+-      })),
++      update((current) => ({ ...current, learnedPhrases: removeValues(current.learnedPhrases, ids) })),
+     // Resets one deck: its learned items become unlearned and its review
+     // sequence starts from the beginning.
+     resetFlashcardDeck: (deckKey: string, ids: string[]) =>
+-      update((state) => {
+-        const flashcardSessions = { ...state.flashcardSessions };
++      update((current) => {
++        const flashcardSessions = { ...current.flashcardSessions };
+         delete flashcardSessions[deckKey];
+-        return {
+-          ...state,
+-          learnedPhrases: state.learnedPhrases.filter(
+-            (id) => !ids.includes(id),
+-          ),
+-          flashcardSessions,
+-        };
++        return { ...current, learnedPhrases: removeValues(current.learnedPhrases, ids), flashcardSessions };
+       }),
+-    resetAll: () => set(defaultState),
++    /** Removes all v2 learning state. Nothing outside the v2 database is touched. */
++    reset: () => update(() => defaultState)
+   };
+ }
+ 

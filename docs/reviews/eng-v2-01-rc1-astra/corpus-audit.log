@@ -1,0 +1,326 @@
+{
+  "status": "PASS",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
+  "original": "<review-temp>\\candidate",
+  "phraseCount": 566,
+  "wordCount": 566,
+  "oldCards": 560,
+  "cards": 566,
+  "cases": [
+    [
+      {
+        "id": "phrase-005",
+        "text": "From my perspective, …",
+        "topics": [
+          "Start answer"
+        ],
+        "wordIds": [
+          "word-phrase-005"
+        ],
+        "index": 4
+      },
+      {
+        "id": "hedging-005-from-my-perspective",
+        "text": "From my perspective, …",
+        "topics": [
+          "Hedging Phrases"
+        ],
+        "wordIds": [
+          "word-hedging-005-from-my-perspective"
+        ],
+        "index": 264
+      }
+    ],
+    [
+      {
+        "id": "phrase-013",
+        "text": "That being said, …",
+        "topics": [
+          "Contrast"
+        ],
+        "wordIds": [
+          "word-phrase-013"
+        ],
+        "index": 12
+      },
+      {
+        "id": "advanced-linking-008-that-being-said",
+        "text": "That being said, …",
+        "topics": [
+          "Advanced Linking Words"
+        ],
+        "wordIds": [
+          "word-advanced-linking-008-that-being-said"
+        ],
+        "index": 279
+      }
+    ],
+    [
+      {
+        "id": "phrase-084",
+        "text": "consequently",
+        "topics": [
+          "Conjunctions"
+        ],
+        "wordIds": [
+          "word-phrase-084"
+        ],
+        "index": 83
+      },
+      {
+        "id": "advanced-linking-004-consequently",
+        "text": "Consequently, …",
+        "topics": [
+          "Advanced Linking Words"
+        ],
+        "wordIds": [
+          "word-advanced-linking-004-consequently"
+        ],
+        "index": 275
+      }
+    ],
+    [
+      {
+        "id": "presentation-phrase-085",
+        "text": "As a result,...",
+        "topics": [
+          "Presentation Phrases"
+        ],
+        "wordIds": [
+          "presentation-word-085"
+        ],
+        "index": 173
+      },
+      {
+        "id": "advanced-linking-009-as-a-result",
+        "text": "As a result, …",
+        "topics": [
+          "Advanced Linking Words"
+        ],
+        "wordIds": [
+          "word-advanced-linking-009-as-a-result"
+        ],
+        "index": 280
+      }
+    ],
+    [
+      {
+        "id": "presentation-phrase-087",
+        "text": "More importantly,...",
+        "topics": [
+          "Presentation Phrases"
+        ],
+        "wordIds": [
+          "presentation-word-087"
+        ],
+        "index": 175
+      },
+      {
+        "id": "advanced-linking-012-more-importantly",
+        "text": "More importantly, …",
+        "topics": [
+          "Advanced Linking Words"
+        ],
+        "wordIds": [
+          "word-advanced-linking-012-more-importantly"
+        ],
+        "index": 283
+      }
+    ],
+    [
+      {
+        "id": "presentation-phrase-088",
+        "text": "To some extent,...",
+        "topics": [
+          "Presentation Phrases"
+        ],
+        "wordIds": [
+          "presentation-word-088"
+        ],
+        "index": 176
+      },
+      {
+        "id": "hedging-008-to-some-extent",
+        "text": "To some extent, …",
+        "topics": [
+          "Hedging Phrases"
+        ],
+        "wordIds": [
+          "word-hedging-008-to-some-extent"
+        ],
+        "index": 267
+      }
+    ]
+  ],
+  "topics": [
+    {
+      "topic": "Advanced Linking Words",
+      "oldCount": 12,
+      "count": 12
+    },
+    {
+      "topic": "Agent Framework Vocabulary",
+      "oldCount": 81,
+      "count": 81
+    },
+    {
+      "topic": "AI / Coding tools",
+      "oldCount": 9,
+      "count": 9
+    },
+    {
+      "topic": "AI Certification Vocabulary",
+      "oldCount": 117,
+      "count": 117
+    },
+    {
+      "topic": "Career Growth",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Communication in Distributed Teams",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Compare / Difference",
+      "oldCount": 6,
+      "count": 6
+    },
+    {
+      "topic": "Conduct vs Carry out",
+      "oldCount": 5,
+      "count": 5
+    },
+    {
+      "topic": "Conflict Resolution / Team Problems",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Conjunctions",
+      "oldCount": 5,
+      "count": 5
+    },
+    {
+      "topic": "Contrast",
+      "oldCount": 6,
+      "count": 6
+    },
+    {
+      "topic": "Ending",
+      "oldCount": 3,
+      "count": 3
+    },
+    {
+      "topic": "Hedging Phrases",
+      "oldCount": 12,
+      "count": 12
+    },
+    {
+      "topic": "Hobbies",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Informal phrases",
+      "oldCount": 2,
+      "count": 2
+    },
+    {
+      "topic": "Lack / Not enough",
+      "oldCount": 6,
+      "count": 6
+    },
+    {
+      "topic": "Leadership",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Modals",
+      "oldCount": 3,
+      "count": 3
+    },
+    {
+      "topic": "Online meetings",
+      "oldCount": 12,
+      "count": 12
+    },
+    {
+      "topic": "Otherwise",
+      "oldCount": 3,
+      "count": 3
+    },
+    {
+      "topic": "Presentation Phrases",
+      "oldCount": 90,
+      "count": 90
+    },
+    {
+      "topic": "Remote Work",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Speed / Difficulty / Clarity",
+      "oldCount": 10,
+      "count": 10
+    },
+    {
+      "topic": "Start answer",
+      "oldCount": 6,
+      "count": 6
+    },
+    {
+      "topic": "Stress Management",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Structure",
+      "oldCount": 5,
+      "count": 5
+    },
+    {
+      "topic": "Teamwork",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Tell me about yourself",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Time estimates",
+      "oldCount": 8,
+      "count": 8
+    },
+    {
+      "topic": "Time Management",
+      "oldCount": 15,
+      "count": 15
+    },
+    {
+      "topic": "Work-Life Balance",
+      "oldCount": 15,
+      "count": 15
+    }
+  ],
+  "savedOrder": {
+    "previousCount": 560,
+    "restoredCount": 566,
+    "index": 80,
+    "currentId": "phrase-081",
+    "appendedIds": [
+      "hedging-005-from-my-perspective",
+      "hedging-008-to-some-extent",
+      "advanced-linking-004-consequently",
+      "advanced-linking-008-that-being-said",
+      "advanced-linking-009-as-a-result",
+      "advanced-linking-012-more-importantly"
+    ]
+  }
+}

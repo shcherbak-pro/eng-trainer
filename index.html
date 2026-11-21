@@ -11,25 +11,13 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <title>English Assessment Trainer</title>
     <script>
+      // Applies the system theme before the app starts. A saved theme preference
+      // lives in IndexedDB and is applied by the app as soon as it has been read.
       (() => {
-        const storageKey = 'englishAssessmentTrainer.theme.v1';
-        let preference = 'system';
-
-        try {
-          const saved = window.localStorage.getItem(storageKey);
-          if (saved === 'light' || saved === 'dark' || saved === 'system') {
-            preference = saved;
-          }
-        } catch {
-          // Use the system theme when storage is unavailable.
-        }
-
-        const resolved = preference === 'system'
-          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-          : preference;
+        const resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
         document.documentElement.dataset.theme = resolved;
-        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.dataset.themePreference = 'system';
         document.documentElement.style.colorScheme = resolved;
 
         const themeColor = document.querySelector('meta[name="theme-color"]');
