@@ -35,6 +35,8 @@ The **Flashcards** page shows one word or phrase at a time. The front has the En
 - **All Vocabulary** studies every word and phrase once. **By Topic** studies one category. The learned status is shared between them and with the **Phrases** page.
 - **Review learned vocabulary** lists learned items, where **Learn again** returns an item to the deck. **Reset progress** clears the learned items of the selected deck after a confirmation.
 
+Each phrase is one card, together with the Word Index entry that is linked to it. A card is learned exactly when its phrase is learned on the **Phrases** page and in the **Focus List**. If the material lists the same or a similar text as two entries (for example `consequently` in Conjunctions and `Consequently, …` in Advanced Linking Words), these are two cards with separate progress.
+
 Items hidden on the Phrases or Words page are left out of the flashcards.
 
 ## Listening practice

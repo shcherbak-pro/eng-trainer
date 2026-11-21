@@ -17,8 +17,12 @@ export const SWIPE_THRESHOLD = 90;
 /** Horizontal distance in pixels after which a pointer move becomes a drag. */
 const DRAG_START_DISTANCE = 10;
 
-/** Lower-cased text without punctuation, used to recognise the same item twice. */
-export function normalizeTerm(value: unknown): string {
+/**
+ * Lower-cased text without punctuation. It is used only to tell whether a
+ * pronunciation hint says more than the term itself. It never decides which
+ * entries belong to one card: identity comes from dataset ids alone.
+ */
+function normalizeTerm(value: unknown): string {
   return String(value ?? '')
     .toLowerCase()
     .replace(/[^\p{L}\p{N}]+/gu, ' ')
@@ -49,29 +53,31 @@ function createCard(id: string, text: string): Flashcard {
     examples: [],
     alternatives: [],
     topics: [],
-    phraseIds: [],
-    wordIds: [],
-    learnIds: []
+    phraseId: null,
+    wordIds: []
   };
 }
 
-function mergePhrase(card: Flashcard, phrase: Phrase): void {
-  card.phraseIds.push(phrase.id);
-  addTopic(card, phrase.category);
-  card.translation ||= phrase.translation ?? '';
-  card.transcription ||= phrase.transcription ?? '';
-  card.section ??= phrase.section;
-  card.level ??= phrase.level;
-  card.tag ??= phrase.tag;
+/** A card for exactly one phrase. */
+function createPhraseCard(phrase: Phrase): Flashcard {
+  const card = createCard(phrase.id, phrase.phrase);
+  const examples = cleanExamples(phrase.examples);
 
-  if (!card.alternatives.length) card.alternatives = normalizeAlternatives(phrase.commonAlternatives);
-  if (!card.examples.length) {
-    const examples = cleanExamples(phrase.examples);
-    card.examples = examples.length ? examples : phrase.example ? [{ en: phrase.example }] : [];
-  }
+  card.phraseId = phrase.id;
+  addTopic(card, phrase.category);
+  card.translation = phrase.translation ?? '';
+  card.transcription = phrase.transcription ?? '';
+  card.section = phrase.section;
+  card.level = phrase.level;
+  card.tag = phrase.tag;
+  card.alternatives = normalizeAlternatives(phrase.commonAlternatives);
+  card.examples = examples.length ? examples : phrase.example ? [{ en: phrase.example }] : [];
+
+  return card;
 }
 
-function mergeWord(card: Flashcard, word: WordIndexItem): void {
+/** Adds a word-index entry to the card it belongs to: its phrase's card, or its own. */
+function addWord(card: Flashcard, word: WordIndexItem): void {
   const isFirstWord = card.wordIds.length === 0;
   card.wordIds.push(word.id);
   addTopic(card, word.category);
@@ -102,48 +108,49 @@ function mergeWord(card: Flashcard, word: WordIndexItem): void {
 /**
  * Builds the flashcard list from the existing vocabulary data.
  *
+ * - Every phrase is one card. The card id is the phrase id.
  * - A word-index entry that points to a phrase (`sourcePhraseId`) joins that phrase's card.
- * - Items with the same text (for example the same phrase listed in two categories)
- *   share one card that belongs to both topics.
+ * - A word-index entry without a phrase in the dataset is its own card. The card id is its id.
+ * - Entries are never joined because their text is equal or similar. The same
+ *   text listed under two ids is two cards with separate progress.
  * - Card ids come from the dataset ids, never from array positions.
  */
 export function buildFlashcards(materials: Pick<Materials, 'phrases' | 'wordIndex'>): Flashcard[] {
   const cards: Flashcard[] = [];
-  const cardByTerm = new Map<string, Flashcard>();
+  const cardById = new Map<string, Flashcard>();
   const cardByPhraseId = new Map<string, Flashcard>();
+
+  // An id that is already a card is not used for a second card: two cards
+  // with one id would share their progress. The catalog tests keep the
+  // built-in content free of such ids.
+  const addCard = (card: Flashcard): void => {
+    cards.push(card);
+    cardById.set(card.id, card);
+  };
 
   const phrases = Array.isArray(materials?.phrases) ? materials.phrases : [];
   const words = Array.isArray(materials?.wordIndex) ? materials.wordIndex : [];
 
   for (const phrase of phrases) {
     if (!phrase || typeof phrase.id !== 'string' || !phrase.id || !phrase.phrase) continue;
+    if (cardById.has(phrase.id)) continue;
 
-    const term = normalizeTerm(phrase.phrase) || phrase.id;
-    let card = cardByTerm.get(term);
-    if (!card) {
-      card = createCard(phrase.id, phrase.phrase);
-      cards.push(card);
-      cardByTerm.set(term, card);
-    }
+    const card = createPhraseCard(phrase);
+    addCard(card);
     cardByPhraseId.set(phrase.id, card);
-    mergePhrase(card, phrase);
   }
 
   for (const word of words) {
     if (!word || typeof word.id !== 'string' || !word.id || !word.term) continue;
 
-    const term = normalizeTerm(word.term) || word.id;
-    let card = (word.sourcePhraseId ? cardByPhraseId.get(word.sourcePhraseId) : undefined) ?? cardByTerm.get(term);
+    // The explicit link is the only way a word-index entry joins a phrase.
+    let card = word.sourcePhraseId ? cardByPhraseId.get(word.sourcePhraseId) : undefined;
     if (!card) {
+      if (cardById.has(word.id)) continue;
       card = createCard(word.id, word.term);
-      cards.push(card);
-      cardByTerm.set(term, card);
+      addCard(card);
     }
-    mergeWord(card, word);
-  }
-
-  for (const card of cards) {
-    card.learnIds = card.phraseIds.length ? [...card.phraseIds] : [...card.wordIds];
+    addWord(card, word);
   }
 
   return cards;
@@ -167,7 +174,12 @@ export function filterDeck(cards: Flashcard[], mode: FlashcardMode, topic: strin
   return cards.filter((card) => card.topics.includes(topic));
 }
 
-/** Splits a deck into cards still being learned and cards already learned. */
+/**
+ * Splits a deck into cards still being learned and cards already learned.
+ *
+ * A card is learned when its own id is in the learned list. That is the same
+ * id and the same list the Phrases page and the Focus List use.
+ */
 export function summarizeDeck(cards: Flashcard[], progress: FlashcardProgress): DeckSummary {
   const learnedIds = new Set(progress.learnedPhrases);
   const hiddenPhrases = new Set(progress.hiddenPhrases);
@@ -177,11 +189,11 @@ export function summarizeDeck(cards: Flashcard[], progress: FlashcardProgress): 
 
   for (const card of cards) {
     const hidden =
-      card.phraseIds.some((id) => hiddenPhrases.has(id)) || card.wordIds.some((id) => hiddenWords.has(id));
+      (card.phraseId !== null && hiddenPhrases.has(card.phraseId)) || card.wordIds.some((id) => hiddenWords.has(id));
 
     if (hidden) {
       summary.hiddenCount += 1;
-    } else if (card.learnIds.some((id) => learnedIds.has(id))) {
+    } else if (learnedIds.has(card.id)) {
       summary.learned.push(card);
     } else {
       summary.learning.push(card);

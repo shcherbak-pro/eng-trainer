@@ -7,11 +7,20 @@ export type { FlashcardMode, FlashcardSession };
 /**
  * One vocabulary item shown as a flashcard.
  *
- * Cards are derived from the existing `phrases` and `wordIndex` datasets.
- * A phrase and the word-index entry that mirrors it become a single card.
+ * Identity comes from the dataset only:
+ * - every phrase is one card, and the card id is the phrase id;
+ * - a word-index entry that names a phrase in `sourcePhraseId` belongs to that
+ *   phrase's card;
+ * - a word-index entry without such a phrase is its own card, and the card id
+ *   is the word-index id.
+ *
+ * Two entries with different ids are never one card, however similar their
+ * text is. The card id is also the id saved as "learned", so a phrase is
+ * learned on the Flashcards page exactly when it is learned on the Phrases page
+ * and in the Focus List.
  */
 export type Flashcard = {
-  /** Stable identifier: the phrase id, or the word-index id for word-only items. */
+  /** The phrase id, or the word-index id for a card without a phrase. */
   id: string;
   text: string;
   translation: string;
@@ -19,17 +28,15 @@ export type Flashcard = {
   transcription: string;
   examples: WordExample[];
   alternatives: string[];
-  /** Dataset categories this item belongs to. Usually one. */
+  /** Categories of the phrase and of its linked word-index entries. Usually one. */
   topics: string[];
   section?: string;
   level?: string;
   tag?: string;
-  /** Phrase ids merged into this card. */
-  phraseIds: string[];
-  /** Word-index ids merged into this card. */
+  /** The phrase this card shows, or `null` for a word-index entry without a phrase. */
+  phraseId: string | null;
+  /** The word-index entries of this card: linked through `sourcePhraseId`, or the entry itself. */
   wordIds: string[];
-  /** Ids stored in the progress store when the card is marked as learned. */
-  learnIds: string[];
 };
 
 /** The two answers a learner can give for a card. */

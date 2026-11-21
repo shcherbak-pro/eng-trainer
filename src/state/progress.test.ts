@@ -1,6 +1,6 @@
 import { get } from 'svelte/store';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { readDatabase, resetDatabase, seedDatabase } from '../test/database';
+import { abortReadTransactions, readDatabase, resetDatabase, seedDatabase, watchUnhandledRejections } from '../test/database';
 
 /** Starts the state services from the database, the same way a page load does. */
 async function loadState() {
@@ -343,6 +343,44 @@ describe('storage failures', () => {
 
     vi.restoreAllMocks();
     expect(await readDatabase()).toMatchObject({ progress: { learnedPhrases: ['phrase-001'] }, settings: { theme: 'dark' } });
+  });
+
+  it('handles a read transaction that aborts by itself: no unhandled rejection, no overwrite, and a retry loads the saved state', async () => {
+    const seeded = { progress: { learnedPhrases: ['phrase-001'] }, settings: { theme: 'dark', activePage: 'phrases' } };
+    await seedDatabase(seeded);
+    const rejections = watchUnhandledRejections();
+    const removeFailure = abortReadTransactions();
+
+    vi.resetModules();
+    const state = await import('./index');
+    const persistence = await import('./persistence');
+
+    let failure: unknown;
+    try {
+      await state.initState();
+    } catch (error) {
+      failure = error;
+    } finally {
+      removeFailure();
+    }
+
+    expect(failure).toMatchObject({ name: 'StorageError', operation: 'read' });
+    expect(String((failure as Error).message)).toMatch(/abort/i);
+    expect(await rejections.stop()).toEqual([]);
+
+    // Nothing was loaded and nothing is connected, so nothing can be overwritten.
+    expect(get(state.progress).learnedPhrases).toEqual([]);
+    state.progress.toggleLearnedPhrase('phrase-777');
+    await persistence.persistenceSettled();
+    expect(get(persistence.saveStatus).state).not.toBe('saved');
+    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
+
+    // "Try again" after the failure is gone: the saved state replaces what is in memory.
+    await state.initState();
+
+    expect(get(state.progress).learnedPhrases).toEqual(['phrase-001']);
+    expect(get(state.settings)).toMatchObject({ theme: 'dark', activePage: 'phrases' });
+    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
   });
 
   it('reports an initialization failure when the database cannot be opened', async () => {

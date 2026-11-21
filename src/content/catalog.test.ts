@@ -20,6 +20,21 @@ describe('built-in content catalog', () => {
     }
   });
 
+  it('uses ids that are unique across phrases and word-index entries together', () => {
+    // Flashcards take their id from a phrase or from a word-index entry, and the
+    // learned list holds those ids, so the two lists share one id space.
+    const ids = [...catalog.phrases, ...catalog.wordIndex].map((item) => item.id);
+
+    expect(duplicates(ids)).toEqual([]);
+  });
+
+  it('links word-index entries only to phrases that exist', () => {
+    const phraseIds = new Set(catalog.phrases.map((item) => item.id));
+    const broken = catalog.wordIndex.filter((item) => item.sourcePhraseId && !phraseIds.has(item.sourcePhraseId));
+
+    expect(broken.map((item) => item.id)).toEqual([]);
+  });
+
   it('exposes all built-in material', () => {
     const source = realMaterials as Materials;
 

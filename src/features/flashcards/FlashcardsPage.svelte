@@ -129,7 +129,7 @@
         ? `End of the deck. Starting again with the ${plural(next.order.length, 'card')} you are still learning.`
         : '';
 
-      progress.saveFlashcardSession(targetDeckKey, next, choice === 'know' ? card.learnIds : []);
+      progress.saveFlashcardSession(targetDeckKey, next, choice === 'know' ? [card.id] : []);
     };
 
     busy = true;
@@ -164,7 +164,7 @@
   }
 
   function learnAgain(card: Flashcard): void {
-    progress.relearnFlashcards(card.learnIds);
+    progress.relearnFlashcards([card.id]);
   }
 
   function resetDeck(): void {
@@ -179,7 +179,7 @@
 
     progress.resetFlashcardDeck(
       currentDeckKey,
-      deck.learned.flatMap((card) => card.learnIds)
+      deck.learned.map((card) => card.id)
     );
     view = 'learn';
     notice = '';

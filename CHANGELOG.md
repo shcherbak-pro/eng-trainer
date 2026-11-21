@@ -17,6 +17,12 @@
 - Search text, the current page of each list, and the current practice prompt are no longer saved. They are kept while the app is open and start fresh after a reload.
 - The saved theme is applied when the app has read its settings. Before that, the system theme is shown.
 - The GitHub Pages workflow builds and publishes both applications as one site. Pull requests to `main` are checked and built without publishing.
+- Flashcards in v2 no longer join entries because their text is the same or similar. Each phrase is one card with its linked Word Index entry, and "I know it" marks only that phrase as learned. The All Vocabulary deck therefore has 566 cards instead of 560: six texts that the material lists under two ids are now two cards each.
+
+### Fixed
+
+- A flashcard could be counted as learned while the same entry was shown as not learned on the Phrases page or in the Focus List, and one answer could mark several entries as learned (review finding F1).
+- An aborted read of the saved progress showed the storage error screen but also left an unhandled error in the browser (review finding F2).
 
 ## 2026-11-11
 

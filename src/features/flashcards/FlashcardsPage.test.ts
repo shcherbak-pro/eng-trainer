@@ -18,13 +18,14 @@ const materials = {
     { id: 'p1', category: 'Greetings', phrase: 'Good morning', translation: 'Доброго ранку', transcription: '/ɡʊd ˈmɔːrnɪŋ/', example: 'Good morning, team.' },
     { id: 'p2', category: 'Greetings', phrase: 'See you later', translation: 'Побачимось пізніше' },
     { id: 'p3', category: 'Work', phrase: 'dig into', translation: 'заглибитися' },
-    { id: 'p4', category: 'Work', phrase: 'Good morning', translation: 'Доброго ранку' }
+    // Differs from p1 only in punctuation. It is a separate entry with its own progress.
+    { id: 'p4', category: 'Work', phrase: 'Good morning!', translation: 'Доброго ранку!' }
   ],
   wordIndex: [
     { id: 'w1', sourcePhraseId: 'p1', term: 'Good morning', category: 'Greetings', meaning: 'Доброго ранку', pronunciation: '', examples: [{ en: 'Good morning, team.', ua: 'Доброго ранку, командо.' }] },
     { id: 'w2', sourcePhraseId: 'p2', term: 'See you later', category: 'Greetings', meaning: 'Побачимось пізніше', pronunciation: '', examples: [] },
     { id: 'w3', sourcePhraseId: 'p3', term: 'dig into', category: 'Work', meaning: 'заглибитися', pronunciation: '', examples: [] },
-    { id: 'w4', sourcePhraseId: 'p4', term: 'Good morning', category: 'Work', meaning: 'Доброго ранку', pronunciation: '', examples: [] }
+    { id: 'w4', sourcePhraseId: 'p4', term: 'Good morning!', category: 'Work', meaning: 'Доброго ранку!', pronunciation: '', examples: [] }
   ]
 } as Materials;
 
@@ -162,8 +163,8 @@ describe('Flashcards page', () => {
     expect(page.root.querySelectorAll('.flashcard')).toHaveLength(1);
     expect(frontText(page)).toBe('Good morning');
     expect(text(page, '.flashcard__transcription')).toBe('/ɡʊd ˈmɔːrnɪŋ/');
-    // 4 phrases + 4 word-index entries are 3 different vocabulary items.
-    expect(stats(page)).toBe('3 remaining 0 learned Card 1 of 3');
+    // 4 phrases, each with its linked word-index entry, are 4 cards.
+    expect(stats(page)).toBe('4 remaining 0 learned Card 1 of 4');
     expect(isFlipped(page)).toBe(false);
   });
 
@@ -189,9 +190,11 @@ describe('Flashcards page', () => {
       click(page, 'I know it');
       finishAnswer(page);
 
-      expect(page.state().learnedPhrases).toEqual(['p1', 'p4']);
+      // Only the card's own id is saved: not the linked word-index id (w1) and
+      // not the similar-looking entry (p4).
+      expect(page.state().learnedPhrases).toEqual(['p1']);
       expect(frontText(page)).toBe('See you later');
-      expect(stats(page)).toBe('2 remaining 1 learned Card 1 of 2');
+      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
     });
 
     it('"Keep learning" keeps the card in the pool and brings it back later', async () => {
@@ -202,17 +205,21 @@ describe('Flashcards page', () => {
 
       expect(page.state().learnedPhrases).toEqual([]);
       expect(frontText(page)).toBe('See you later');
-      expect(stats(page)).toBe('3 remaining 0 learned Card 2 of 3');
+      expect(stats(page)).toBe('4 remaining 0 learned Card 2 of 4');
 
       click(page, 'I know it');
       finishAnswer(page);
+      expect(frontText(page)).toBe('dig into');
+      click(page, 'Keep learning');
+      finishAnswer(page);
+      expect(frontText(page)).toBe('Good morning!');
       click(page, 'Keep learning');
       finishAnswer(page);
 
       // End of the deck: the cards still being learned come round again.
       expect(frontText(page)).toBe('Good morning');
-      expect(stats(page)).toBe('2 remaining 1 learned Card 1 of 2');
-      expect(text(page, '[role="status"]')).toContain('Starting again with the 2 cards');
+      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
+      expect(text(page, '[role="status"]')).toContain('Starting again with the 3 cards');
     });
 
     it('always starts the next card on the front side', async () => {
@@ -233,7 +240,7 @@ describe('Flashcards page', () => {
       press(page, 'ArrowRight');
       finishAnswer(page);
 
-      expect(page.state().learnedPhrases).toEqual(['p1', 'p4']);
+      expect(page.state().learnedPhrases).toEqual(['p1']);
       expect(frontText(page)).toBe('See you later');
     });
 
@@ -296,7 +303,7 @@ describe('Flashcards page', () => {
       swipe(page, 160);
       finishAnswer(page);
 
-      expect(page.state().learnedPhrases).toEqual(['p1', 'p4']);
+      expect(page.state().learnedPhrases).toEqual(['p1']);
       expect(frontText(page)).toBe('See you later');
     });
 
@@ -308,7 +315,7 @@ describe('Flashcards page', () => {
 
       expect(page.state().learnedPhrases).toEqual([]);
       expect(frontText(page)).toBe('See you later');
-      expect(stats(page)).toBe('3 remaining 0 learned Card 2 of 3');
+      expect(stats(page)).toBe('4 remaining 0 learned Card 2 of 4');
     });
 
     it('does nothing when the swipe is too short', async () => {
@@ -319,7 +326,7 @@ describe('Flashcards page', () => {
 
       expect(page.state().learnedPhrases).toEqual([]);
       expect(frontText(page)).toBe('Good morning');
-      expect(stats(page)).toBe('3 remaining 0 learned Card 1 of 3');
+      expect(stats(page)).toBe('4 remaining 0 learned Card 1 of 4');
     });
 
     it('does nothing on a vertical move, so the page can scroll', async () => {
@@ -350,29 +357,58 @@ describe('Flashcards page', () => {
       selectTopic(page, 'Work');
 
       expect(stats(page)).toBe('2 remaining 0 learned Card 1 of 2');
-      expect(frontText(page)).toBe('Good morning');
+      expect(frontText(page)).toBe('dig into');
 
       click(page, 'Keep learning');
       finishAnswer(page);
-      expect(frontText(page)).toBe('dig into');
+      expect(frontText(page)).toBe('Good morning!');
     });
 
-    it('shares the learned status between topic decks and All Vocabulary', async () => {
+    it('shares the learned status between a topic deck and All Vocabulary', async () => {
       const page = await openPage();
 
-      // "Good morning" is in both topics. Learn it in "Work".
+      // Learn "dig into" in its topic.
       selectTopic(page, 'Work');
       click(page, 'I know it');
       finishAnswer(page);
+      expect(page.state().learnedPhrases).toEqual(['p3']);
       expect(stats(page)).toBe('1 remaining 1 learned Card 1 of 1');
-
-      selectTopic(page, 'Greetings');
-      expect(stats(page)).toBe('1 remaining 1 learned Card 1 of 1');
-      expect(frontText(page)).toBe('See you later');
 
       click(page, 'All Vocabulary');
-      expect(stats(page)).toBe('2 remaining 1 learned Card 1 of 2');
-      expect(frontText(page)).toBe('See you later');
+      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
+
+      click(page, 'Review learned vocabulary');
+      expect(page.root.querySelectorAll('.flashcards-review__list li')).toHaveLength(1);
+      expect(text(page, '.flashcards-review__list')).toContain('dig into');
+    });
+
+    it('keeps entries that look alike apart: learning one does not mark the other', async () => {
+      const page = await openPage();
+
+      // "Good morning!" (p4, Work) looks like "Good morning" (p1, Greetings).
+      selectTopic(page, 'Work');
+      click(page, 'Keep learning');
+      finishAnswer(page);
+      expect(frontText(page)).toBe('Good morning!');
+      click(page, 'I know it');
+      finishAnswer(page);
+
+      expect(page.state().learnedPhrases).toEqual(['p4']);
+      expect(stats(page)).toBe('1 remaining 1 learned Card 1 of 1');
+
+      // "Good morning" is still to learn in its own topic and in All Vocabulary.
+      selectTopic(page, 'Greetings');
+      expect(stats(page)).toBe('2 remaining 0 learned Card 1 of 2');
+      expect(frontText(page)).toBe('Good morning');
+
+      click(page, 'All Vocabulary');
+      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
+      expect(frontText(page)).toBe('Good morning');
+
+      click(page, 'Review learned vocabulary');
+      expect(page.root.querySelectorAll('.flashcards-review__list li')).toHaveLength(1);
+      expect(text(page, '.flashcards-review__text')).toContain('Good morning!');
+      await page.saved();
     });
 
     it('shows a completed state when every card of the deck is learned', async () => {
@@ -426,9 +462,14 @@ describe('Flashcards page', () => {
       const reloaded = await openPage();
 
       expect(reloaded.root.querySelector('select')!.value).toBe('Work');
-      expect(reloaded.state().learnedPhrases).toEqual(['p3']);
-      expect(frontText(reloaded)).toBe('Good morning');
+      expect(reloaded.state().learnedPhrases).toEqual(['p4']);
+      expect(frontText(reloaded)).toBe('dig into');
       expect(stats(reloaded)).toBe('1 remaining 1 learned Card 1 of 1');
+
+      // The entry that only looks like the learned one is still to learn after the reload.
+      selectTopic(reloaded, 'Greetings');
+      expect(stats(reloaded)).toBe('2 remaining 0 learned Card 1 of 2');
+      expect(frontText(reloaded)).toBe('Good morning');
     });
 
     it('resumes in the middle of a round after a reload', async () => {
@@ -443,7 +484,7 @@ describe('Flashcards page', () => {
       const reloaded = await openPage();
 
       expect(frontText(reloaded)).toBe('See you later');
-      expect(stats(reloaded)).toBe('3 remaining 0 learned Card 2 of 3');
+      expect(stats(reloaded)).toBe('4 remaining 0 learned Card 2 of 4');
     });
 
     it('respects items already marked as learned on the Phrases page', async () => {
@@ -451,10 +492,10 @@ describe('Flashcards page', () => {
 
       const page = await openPage();
 
-      expect(stats(page)).toBe('2 remaining 1 learned Card 1 of 2');
+      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
       click(page, 'I know it');
       finishAnswer(page);
-      expect(page.state().learnedPhrases).toEqual(['p2', 'p1', 'p4']);
+      expect(page.state().learnedPhrases).toEqual(['p2', 'p1']);
       expect(page.state().favoritePhrases).toEqual(['p2']);
     });
   });
@@ -473,12 +514,12 @@ describe('Flashcards page', () => {
 
       expect(page.state().learnedPhrases).toEqual([]);
       expect(page.root.querySelectorAll('.flashcards-review__list li')).toHaveLength(0);
-      expect(stats(page)).toBe('3 remaining 0 learned');
+      expect(stats(page)).toBe('4 remaining 0 learned');
 
       click(page, 'Back to flashcards');
       // The restored card is reintroduced at the end of the review sequence.
       expect(frontText(page)).toBe('See you later');
-      expect(stats(page)).toBe('3 remaining 0 learned Card 1 of 3');
+      expect(stats(page)).toBe('4 remaining 0 learned Card 1 of 4');
     });
 
     it('resets the progress of the selected topic only after confirmation', async () => {
@@ -487,8 +528,6 @@ describe('Flashcards page', () => {
 
       // Learn "dig into" (Work) and "See you later" (Greetings).
       selectTopic(page, 'Work');
-      click(page, 'Keep learning');
-      finishAnswer(page);
       click(page, 'I know it');
       finishAnswer(page);
       selectTopic(page, 'Greetings');
