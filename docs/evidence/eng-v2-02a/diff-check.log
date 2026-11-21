@@ -1,0 +1,9 @@
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/check-site.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/app/App.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/content/builtIn.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/content/catalog.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/content/types.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/features/flashcards/flashcards.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tsconfig.json', LF will be replaced by CRLF the next time Git touches it

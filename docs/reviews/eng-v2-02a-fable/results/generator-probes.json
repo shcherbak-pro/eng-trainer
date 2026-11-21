@@ -1,0 +1,408 @@
+{
+  "candidate": "<candidate>",
+  "generatorSha256": {
+    "scripts/generate-content.mjs": "f7147818bfcac4ec51a005e34925cc1f9e9c3ced33f76f059964174645cfb936",
+    "scripts/content-build.mjs": "dcb970ddd949304b405b6b05b5ee768b80eb6794aaba5621bbc612872ef339f1",
+    "src/content/packFormat.js": "a90ec34f5f1d2abb48c514c062942abb47d3e26e01781400217b6be310eae649"
+  },
+  "total": 47,
+  "passed": 47,
+  "results": [
+    {
+      "name": "two independent trees and a rerun produce byte-identical outputs",
+      "passed": true,
+      "files": 12
+    },
+    {
+      "name": "CRLF, 4-space and minified source formatting do not change generated names or bytes",
+      "passed": true
+    },
+    {
+      "name": "duplicate phrase id across packs",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: duplicate entry id phrase-001",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "duplicate verb id across packs",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: duplicate entry id iv-006-become",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "duplicate word id within a pack",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: duplicate entry id word-topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "word id equal to a block id",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: duplicate entry id start-answer",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "duplicate pack order",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: duplicate pack order",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "duplicate pack id under another filename",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Pack filename presentations-copy.json must match its id presentations",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "filename differs from id",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Pack filename talks.json must match its id presentations",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "pack schemaVersion 2",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: pack.schemaVersion must be 1",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "catalog schemaVersion 2",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: descriptor.schemaVersion must be 1",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "missing schemaVersion",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: pack.schemaVersion must be 1",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "unknown envelope key",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: pack.description is unknown",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "misspelled collection key",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: presentations.content.phrase is unknown",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "uppercase / path-like pack id",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: pack.id must be a lowercase slug",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "negative order",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: presentations.order must be a nonnegative integer",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "fractional order",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: presentations.order must be a nonnegative integer",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "empty content object",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: presentations is empty",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "empty collections only",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: speaking-practice is empty",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "missing required phrase field",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: presentations.phrases[3].translation must be a string",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "wrong field type (examples not an array)",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: presentations.wordIndex[3].examples must be an array",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "empty drill string",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: speaking-practice.drills[0] must be a nonempty string",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "dangling sourcePhraseId",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: presentation-word-004.sourcePhraseId points to missing phrase no-such-phrase",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "block → absent phrase category",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: start-answer has no phrases in No such category",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "block → absent verb set",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: irregular-verbs-100 has no verbs in no-such-set",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "unsupported block type",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: blocks[0].type is unsupported",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "duplicate block id",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: duplicate entry id start-answer",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "pack providing every verb of a referenced set removed",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: irregular-verbs-100 has no verbs in essential-100",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "syntactically invalid JSON (trailing comma)",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "SyntaxError: Expected double-quoted property name in JSON at position 167365 (line 4602 column 1)",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "UTF-8 byte-order mark",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "SyntaxError: Unexpected token '﻿', \"﻿{",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "missing catalog.json",
+      "expectation": "reject",
+      "exit": 1,
+      "message": "Error: ENOENT: no such file or directory, open '<review-copy>\\generator-probes\\missing-catalog-json\\content\\catalog.json'",
+      "outputsChanged": false,
+      "passed": true
+    },
+    {
+      "name": "changed translation regenerates a new content-addressed pack and removes the stale one",
+      "expectation": "accept",
+      "exit": 0,
+      "message": "Generated 11 built-in packs: {\"phrases\":566,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":6,\"drills\":15}",
+      "outputsChanged": true,
+      "passed": true,
+      "stalePackRemoved": true,
+      "otherPacksUntouched": true
+    },
+    {
+      "name": "an unrelated non-JSON file in content/packs is ignored",
+      "expectation": "accept",
+      "exit": 0,
+      "message": "Generated 11 built-in packs: {\"phrases\":566,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":6,\"drills\":15}",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": {
+        "phrases": 566,
+        "wordIndex": 566,
+        "irregularVerbs": 339,
+        "patterns": 7,
+        "answers": 6,
+        "drills": 15
+      }
+    },
+    {
+      "name": "observe: a pack renamed to an upper-case .JSON extension (skipped by discovery)",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: agent-framework-vocabulary has no phrases in Agent Framework Vocabulary",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "a JSON object with a duplicated key keeps the last value without an error",
+      "expectation": "accept",
+      "exit": 0,
+      "message": "Generated 11 built-in packs: {\"phrases\":566,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":6,\"drills\":15}",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": {
+        "phrases": 566,
+        "wordIndex": 566,
+        "irregularVerbs": 339,
+        "patterns": 7,
+        "answers": 6,
+        "drills": 15
+      }
+    },
+    {
+      "name": "observe: authored pack agent-framework deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: agent-framework-vocabulary has no phrases in Agent Framework Vocabulary",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack ai-certification-verbs-contextual deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: ai-certification-verbs-contextual has no verbs in ai-certification-verbs-contextual",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack ai-certification deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: ai-certification-vocabulary has no phrases in AI Certification Vocabulary",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack essential-100 deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: irregular-verbs-100 has no verbs in essential-100",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack hedging-and-linking deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: hedging-phrases has no phrases in Hedging Phrases",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack logical-200 deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: irregular-verbs-logical-200 has no verbs in logical-200",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack personal-topics deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: topic-tell-me-about-yourself has no phrases in Tell me about yourself",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack presentations deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: presentation-phrases has no phrases in Presentation Phrases",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack speaking-foundations deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: start-answer has no phrases in Start answer",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack speaking-practice deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: answer-patterns has no patterns",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "observe: authored pack workplace-topics deleted",
+      "expectation": "observe",
+      "exit": 1,
+      "message": "Error: Invalid built-in content: topic-teamwork has no phrases in Teamwork",
+      "outputsChanged": false,
+      "passed": true,
+      "generatedCounts": null
+    },
+    {
+      "name": "cleanup removes stale hash-named packs but leaves unrelated files",
+      "passed": true,
+      "unrelatedFileKept": true
+    }
+  ]
+}

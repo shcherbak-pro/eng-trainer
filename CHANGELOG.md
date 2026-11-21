@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — ENG-V2-02A (2026-11-21)
+
+- Split v2 built-in learning material into 11 thematic JSON packs and a course descriptor. Build generation validates content and emits a central manifest with content-addressed pack URLs.
+- Load every built-in pack through the shared catalog before the app becomes ready. Missing or invalid packs use the existing error and retry flow.
+- Preserve all 1,538 records/items, field values, IDs, entry order and 566 explicit phrase relationships. Flashcards, Focus, saved learning state and IndexedDB version 1 remain compatible.
+- Add migration fingerprints, a Git-object comparison, pack validation/loading/search tests and focused native-browser evidence. v1 source and the deployment workflow are unchanged.
+
 ## 2026-11-21 — ENG-V2-01
 
 ### Added

@@ -1,0 +1,18 @@
+chromium: PASS requests
+chromium: PASS differential
+chromium: PASS failures
+chromium: PASS no-partial
+chromium: PASS v1
+  performance [http/1.1 → http/1.1] unthrottled: baseline 143 ms, candidate 191 ms (+48 ms)
+  performance [http/1.1 → http/1.1] moderate: 150 ms RTT, 1.6 Mbps down, 750 kbps up: baseline 2030 ms, candidate 2310 ms (+280 ms)
+  performance [http/1.1 → http/1.1] high-latency: 300 ms RTT, 5 Mbps down, 1 Mbps up: baseline 1543 ms, candidate 2032 ms (+489 ms)
+  performance [h2 → h2] unthrottled: baseline 166 ms, candidate 192 ms (+26 ms)
+  performance [h2 → h2] moderate: 150 ms RTT, 1.6 Mbps down, 750 kbps up: baseline 2060 ms, candidate 2277 ms (+217 ms)
+  performance [h2 → h2] high-latency: 300 ms RTT, 5 Mbps down, 1 Mbps up: baseline 1547 ms, candidate 1911 ms (+364 ms)
+chromium: PASS performance
+firefox: PASS requests
+firefox: PASS differential
+firefox: PASS failures
+firefox: PASS no-partial
+firefox: PASS v1
+exit 0

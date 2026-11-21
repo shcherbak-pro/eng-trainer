@@ -1,0 +1,47 @@
+warning: in the working copy of 'v1/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/src/lib/pages/FlashcardsPage.svelte', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/src/lib/pages/FlashcardsPage.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/src/lib/stores/progress.flashcards.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/src/lib/types/flashcards.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/src/lib/utils/flashcards.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/src/lib/utils/flashcards.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/vite.config.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'v1/vitest.config.ts', LF will be replaced by CRLF the next time Git touches it
+{
+  "verdict": "PASS",
+  "failures": [],
+  "source": {
+    "phrases": "566/566 exact=566 keyOrderOnly=0 diffs=0",
+    "patterns": "7/7 exact=7 keyOrderOnly=0 diffs=0",
+    "answers": "6/6 exact=6 keyOrderOnly=0 diffs=0",
+    "drills": "15/15 exact=15 keyOrderOnly=0 diffs=0",
+    "blocks": "39/39 exact=39 keyOrderOnly=0 diffs=0",
+    "wordIndex": "566/566 exact=566 keyOrderOnly=0 diffs=0",
+    "irregularVerbs": "339/339 exact=339 keyOrderOnly=0 diffs=0"
+  },
+  "relationships": {
+    "linksBefore": 566,
+    "linksAfter": 566,
+    "identical": true,
+    "allTargetsExist": true,
+    "phrasesWithExactlyOneLinkedWord": 566,
+    "crossPackLinks": 0,
+    "linksWhoseTextDiffers": 0
+  },
+  "generated": [
+    {
+      "dir": "<root>\\public\\data",
+      "files": 11,
+      "bytes": 1610203,
+      "deepEqual": true
+    },
+    {
+      "dir": "<root>\\site-dist\\data",
+      "files": 11,
+      "bytes": 1610203,
+      "deepEqual": true
+    }
+  ]
+}

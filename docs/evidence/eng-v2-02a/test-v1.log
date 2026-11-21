@@ -1,0 +1,26 @@
+
+> english-assessment-trainer-v2@2.0.0 test:v1
+> npm --prefix v1 run test
+
+
+> english-assessment-trainer-v1@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 <repo>/v1
+
+ ✓ src/lib/utils/flashcards.test.ts (30 tests) 37ms
+ ✓ src/lib/stores/progress.flashcards.test.ts (12 tests) 1976ms
+   ✓ flashcard progress in localStorage > resets one deck without touching the others  457ms
+ ✓ src/lib/pages/FlashcardsPage.test.ts (26 tests) 6963ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1452ms
+   ✓ Flashcards page > flips the card on tap and shows the translation and example  306ms
+   ✓ Flashcards page > buttons > "Keep learning" keeps the card in the pool and brings it back later  310ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  342ms
+   ✓ Flashcards page > saved progress > resumes in the middle of a round after a reload  341ms
+
+ Test Files  3 passed (3)
+      Tests  68 passed (68)
+   Start at  16:17:44
+   Duration  8.79s (transform 1.27s, setup 0ms, collect 1.31s, tests 8.98s, environment 2.58s, prepare 301ms)
+

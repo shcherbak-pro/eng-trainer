@@ -1,0 +1,1130 @@
+{
+  "engine": "chromium",
+  "version": "151.0.7922.34",
+  "results": [
+    {
+      "name": "requests",
+      "localRequests": [
+        "/eng-trainer/",
+        "/eng-trainer/assets/index-CZazVQkb.js",
+        "/eng-trainer/assets/index-ChYHRsBq.css",
+        "/eng-trainer/data/manifest.json",
+        "/eng-trainer/data/packs/speaking-foundations.378bea01a015d76e.json",
+        "/eng-trainer/data/packs/presentations.2cd234cc3c91ce8d.json",
+        "/eng-trainer/data/packs/agent-framework.30b26432f0ecf993.json",
+        "/eng-trainer/data/packs/hedging-and-linking.06c92cc29e38d601.json",
+        "/eng-trainer/data/packs/personal-topics.03c1443a2cc176cf.json",
+        "/eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json",
+        "/eng-trainer/data/packs/ai-certification.a743e81dde1bc943.json",
+        "/eng-trainer/data/packs/speaking-practice.30d81bc404256cb8.json",
+        "/eng-trainer/data/packs/essential-100.3a71b8e1e38939e1.json",
+        "/eng-trainer/data/packs/logical-200.7dea9a714b2c308b.json",
+        "/eng-trainer/data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json"
+      ],
+      "externalRequests": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap"
+      ],
+      "status": "PASS",
+      "durationMs": 295,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "name": "differential",
+      "oracle": {
+        "current": "advanced-linking-004-consequently",
+        "expectedDeck": {
+          "now": 5,
+          "max": 562,
+          "index": 3
+        },
+        "afterReload": "phrase-084"
+      },
+      "compared": {
+        "phraseCases": [
+          {
+            "category": "All",
+            "query": "",
+            "cards": 564,
+            "learned": 5
+          },
+          {
+            "category": "All",
+            "query": "from my perspective",
+            "cards": 2,
+            "learned": 1
+          },
+          {
+            "category": "All",
+            "query": "CONSEQUENTLY",
+            "cards": 4,
+            "learned": 1
+          },
+          {
+            "category": "Hedging Phrases",
+            "query": "",
+            "cards": 11,
+            "learned": 0
+          },
+          {
+            "category": "Advanced Linking Words",
+            "query": "As a result",
+            "cards": 2,
+            "learned": 0
+          },
+          {
+            "category": "AI Certification Vocabulary",
+            "query": "FIND, VALIDATE, TEST, REMEDIATE, PROVE",
+            "cards": 1,
+            "learned": 1
+          },
+          {
+            "category": "All",
+            "query": "Що",
+            "cards": 95,
+            "learned": 2
+          },
+          {
+            "category": "All",
+            "query": "uld start ",
+            "cards": 3,
+            "learned": 1
+          },
+          {
+            "category": "All",
+            "query": "zz-no-match",
+            "cards": 0,
+            "learned": 0
+          },
+          {
+            "category": "Presentation Phrases",
+            "query": "6. Questions",
+            "cards": 10,
+            "learned": 0
+          }
+        ],
+        "wordCases": [
+          {
+            "category": "All",
+            "query": ""
+          },
+          {
+            "category": "All",
+            "query": "THE FIRST THING I’D SAY IS THAT …"
+          },
+          {
+            "category": "AI Certification Vocabulary",
+            "query": ""
+          },
+          {
+            "category": "All",
+            "query": "Ключова"
+          },
+          {
+            "category": "Hedging Phrases",
+            "query": "extent"
+          }
+        ],
+        "verbCases": [
+          {
+            "set": "essential-100",
+            "query": "",
+            "count": 99
+          },
+          {
+            "set": "essential-100",
+            "query": "BE",
+            "count": 5
+          },
+          {
+            "set": "essential-100",
+            "query": "стріляти",
+            "count": 1
+          },
+          {
+            "set": "logical-200",
+            "query": "",
+            "count": 200
+          },
+          {
+            "set": "logical-200",
+            "query": "BE",
+            "count": 12
+          },
+          {
+            "set": "logical-200",
+            "query": "братися",
+            "count": 1
+          },
+          {
+            "set": "ai-certification-verbs-contextual",
+            "query": "",
+            "count": 38
+          },
+          {
+            "set": "ai-certification-verbs-contextual",
+            "query": "BE",
+            "count": 0
+          },
+          {
+            "set": "ai-certification-verbs-contextual",
+            "query": "передавати",
+            "count": 0
+          }
+        ],
+        "flash": {
+          "before": {
+            "term": "Consequently, …",
+            "now": 5,
+            "max": 562,
+            "stats": "557 remaining 5 learned Card 4 of 557"
+          },
+          "afterAnswer": {
+            "term": "consequently",
+            "now": 6,
+            "max": 562,
+            "stats": "556 remaining 6 learned Card 4 of 556"
+          },
+          "afterReload": {
+            "term": "consequently",
+            "now": 6,
+            "max": 562,
+            "stats": "556 remaining 6 learned Card 4 of 556"
+          }
+        },
+        "focusCards": 5,
+        "snapshotSha256": "05f2eee64b3327b6c0c0232b436cdaa3b38e543f922b66396084e8580df30111"
+      },
+      "status": "PASS",
+      "durationMs": 12293,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "name": "failures",
+      "cases": [
+        {
+          "name": "manifest-404",
+          "message": "Unable to start the app Failed to load /eng-trainer/data/manifest.json (HTTP 404)",
+          "firstRequests": 1,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "manifest-html-200",
+          "message": "Unable to start the app Invalid JSON in /eng-trainer/data/manifest.json",
+          "firstRequests": 1,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "manifest-unsafe-url",
+          "message": "Unable to start the app Invalid built-in content: speaking-foundations.url must be a generated relative pack path",
+          "firstRequests": 1,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "manifest-count-mismatch",
+          "message": "Unable to start the app Invalid built-in content: manifest.phrases count mismatch (566 != 567)",
+          "firstRequests": 1,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "pack-503",
+          "message": "Unable to start the app Failed to load /eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json (HTTP 503)",
+          "firstRequests": 12,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "pack-network-abort",
+          "message": "Unable to start the app Failed to fetch",
+          "firstRequests": 12,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "pack-truncated-json",
+          "message": "Unable to start the app Invalid JSON in /eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json",
+          "firstRequests": 12,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "pack-other-pack-body",
+          "message": "Unable to start the app Unexpected pack metadata in packs/workplace-topics.dad3daa8ab78823e.json",
+          "firstRequests": 12,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "pack-record-removed",
+          "message": "Unable to start the app Invalid built-in content: workplace-topics.phrases count mismatch (119 != 120)",
+          "firstRequests": 12,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "pack-dangling-link",
+          "message": "Unable to start the app Invalid built-in content: word-topic-teamwork-001-good-teamwork-starts-with-tr.sourcePhraseId points to missing phrase absent-phrase",
+          "firstRequests": 12,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "pack-duplicate-id",
+          "message": "Unable to start the app Invalid built-in content: duplicate entry id phrase-001",
+          "firstRequests": 12,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        },
+        {
+          "name": "last-pack-schema-2",
+          "message": "Unable to start the app Invalid built-in content: pack.schemaVersion must be 1",
+          "firstRequests": 12,
+          "writesBeforeRecovery": 0,
+          "recoveryRequests": 12,
+          "writesAfterUserNavigation": [
+            "settings:activePage",
+            "settings:irregularSet"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "durationMs": 11198,
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ]
+    },
+    {
+      "name": "no-partial",
+      "shellWhileLastPackPending": 0,
+      "loaderTextWhilePending": "Loading training materials…",
+      "lastPackVerbFound": 1,
+      "status": "PASS",
+      "durationMs": 2064,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "name": "v1",
+      "v1MonolithSha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422",
+      "v1IndexedDbOpens": [],
+      "v1StorageCalls": [
+        "get localStorage",
+        "getItem",
+        "setItem"
+      ],
+      "v1Requests": [
+        "/eng-trainer/v1/",
+        "/eng-trainer/v1/assets/index-C0A337ei.js",
+        "/eng-trainer/v1/assets/index-Bod3ovET.css",
+        "/eng-trainer/v1/data/materials.json"
+      ],
+      "v2IndexedDbOpens": [
+        "eng-trainer-v2"
+      ],
+      "v2LocalStorageCalls": [],
+      "v2Requests": [
+        "/eng-trainer/",
+        "/eng-trainer/assets/index-CZazVQkb.js",
+        "/eng-trainer/assets/index-ChYHRsBq.css",
+        "/eng-trainer/data/manifest.json",
+        "/eng-trainer/data/packs/speaking-foundations.378bea01a015d76e.json",
+        "/eng-trainer/data/packs/presentations.2cd234cc3c91ce8d.json",
+        "/eng-trainer/data/packs/agent-framework.30b26432f0ecf993.json",
+        "/eng-trainer/data/packs/hedging-and-linking.06c92cc29e38d601.json",
+        "/eng-trainer/data/packs/personal-topics.03c1443a2cc176cf.json",
+        "/eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json",
+        "/eng-trainer/data/packs/ai-certification.a743e81dde1bc943.json",
+        "/eng-trainer/data/packs/speaking-practice.30d81bc404256cb8.json",
+        "/eng-trainer/data/packs/essential-100.3a71b8e1e38939e1.json",
+        "/eng-trainer/data/packs/logical-200.7dea9a714b2c308b.json",
+        "/eng-trainer/data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json"
+      ],
+      "v1KeyAfterV2": {
+        "englishAssessmentTrainer.theme.v1": "system",
+        "englishAssessmentTrainer.svelteState.v1": "{\"activePage\":\"phrases\",\"phraseQuery\":\"\",\"phraseCategory\":\"All\",\"wordQuery\":\"\",\"wordCategory\":\"All\",\"irregularQuery\":\"\",\"irregularGroup\":\"All\",\"irregularSet\":\"essential-100\",\"reverseMode\":\"phrase\",\"showHiddenPhrases\":false,\"showHiddenWords\":false,\"showHiddenIrregular\":false,\"currentPrompt\":\"\",\"speechRepeatCount\":10,\"selectedLearnPassId\":\"default\",\"learnPassSearch\":\"\",\"indexTagFilter\":\"\",\"indexPage\":1,\"indexPageSize\":6,\"indexLearnPassExpanded\":true,\"indexLearningBlocksExpanded\":true,\"indexTagCloudExpanded\":true,\"indexDailyExpanded\":true,\"phrasePage\":1,\"phrasePageSize\":\"all\",\"wordPage\":1,\"wordPageSize\":5,\"irregularPage\":1,\"irregularPageSize\":5,\"learnedPhrases\":[\"phrase-002\"],\"hiddenPhrases\":[],\"hiddenWords\":[],\"hiddenIrregular\":[],\"favoriteBlocks\":[],\"favoritePhrases\":[],\"favoriteWords\":[],\"favoriteIrregular\":[],\"learnPasses\":[],\"flashcardMode\":\"all\",\"flashcardTopic\":\"\",\"flashcardSessions\":{}}"
+      },
+      "status": "PASS",
+      "durationMs": 1087,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "name": "performance",
+      "profiles": [
+        {
+          "transport": "http/1.1",
+          "profile": "unthrottled",
+          "baseline": [
+            {
+              "shellMs": 263,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 57,
+              "lastDataEnd": 186,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 96,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 38,
+              "lastDataEnd": 45,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 109,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 36,
+              "lastDataEnd": 47,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 156,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 42,
+              "lastDataEnd": 60,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 143,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 53,
+              "lastDataEnd": 75,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            }
+          ],
+          "candidate": [
+            {
+              "shellMs": 227,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 62,
+              "lastDataEnd": 184,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 174,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 48,
+              "lastDataEnd": 101,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 103,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 33,
+              "lastDataEnd": 64,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 195,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 49,
+              "lastDataEnd": 116,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 191,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 53,
+              "lastDataEnd": 126,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            }
+          ],
+          "baselineMedian": {
+            "shellMs": 143,
+            "firstDataStart": 42,
+            "lastDataEnd": 60,
+            "dataTransferBytes": 224960,
+            "dataDecodedBytes": 1533856,
+            "dataRequests": 1
+          },
+          "candidateMedian": {
+            "shellMs": 191,
+            "firstDataStart": 49,
+            "lastDataEnd": 116,
+            "dataTransferBytes": 233903,
+            "dataDecodedBytes": 1610203,
+            "dataRequests": 12
+          },
+          "shellDeltaMs": 48,
+          "shellDeltaPercent": 34,
+          "negotiated": [
+            "http/1.1"
+          ]
+        },
+        {
+          "transport": "http/1.1",
+          "profile": "moderate: 150 ms RTT, 1.6 Mbps down, 750 kbps up",
+          "baseline": [
+            {
+              "shellMs": 2090,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 672,
+              "lastDataEnd": 2014,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 2028,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 652,
+              "lastDataEnd": 1961,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 2076,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 670,
+              "lastDataEnd": 2000,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 2030,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 662,
+              "lastDataEnd": 1969,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 2026,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 650,
+              "lastDataEnd": 1952,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            }
+          ],
+          "candidate": [
+            {
+              "shellMs": 2322,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 712,
+              "lastDataEnd": 2269,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2316,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 695,
+              "lastDataEnd": 2258,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2255,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 660,
+              "lastDataEnd": 2201,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2283,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 676,
+              "lastDataEnd": 2234,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2310,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 689,
+              "lastDataEnd": 2250,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            }
+          ],
+          "baselineMedian": {
+            "shellMs": 2030,
+            "firstDataStart": 662,
+            "lastDataEnd": 1969,
+            "dataTransferBytes": 224960,
+            "dataDecodedBytes": 1533856,
+            "dataRequests": 1
+          },
+          "candidateMedian": {
+            "shellMs": 2310,
+            "firstDataStart": 689,
+            "lastDataEnd": 2250,
+            "dataTransferBytes": 233903,
+            "dataDecodedBytes": 1610203,
+            "dataRequests": 12
+          },
+          "shellDeltaMs": 280,
+          "shellDeltaPercent": 14,
+          "negotiated": [
+            "http/1.1"
+          ]
+        },
+        {
+          "transport": "http/1.1",
+          "profile": "high-latency: 300 ms RTT, 5 Mbps down, 1 Mbps up",
+          "baseline": [
+            {
+              "shellMs": 1537,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 777,
+              "lastDataEnd": 1462,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 1555,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 786,
+              "lastDataEnd": 1477,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 1543,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 793,
+              "lastDataEnd": 1474,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 1552,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 779,
+              "lastDataEnd": 1478,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 1541,
+              "protocols": "http/1.1",
+              "dataRequests": 1,
+              "firstDataStart": 785,
+              "lastDataEnd": 1475,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            }
+          ],
+          "candidate": [
+            {
+              "shellMs": 2041,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 791,
+              "lastDataEnd": 1990,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2034,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 793,
+              "lastDataEnd": 1994,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2026,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 778,
+              "lastDataEnd": 1988,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2028,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 782,
+              "lastDataEnd": 1978,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2032,
+              "protocols": "http/1.1",
+              "dataRequests": 12,
+              "firstDataStart": 772,
+              "lastDataEnd": 1976,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            }
+          ],
+          "baselineMedian": {
+            "shellMs": 1543,
+            "firstDataStart": 785,
+            "lastDataEnd": 1475,
+            "dataTransferBytes": 224960,
+            "dataDecodedBytes": 1533856,
+            "dataRequests": 1
+          },
+          "candidateMedian": {
+            "shellMs": 2032,
+            "firstDataStart": 782,
+            "lastDataEnd": 1988,
+            "dataTransferBytes": 233903,
+            "dataDecodedBytes": 1610203,
+            "dataRequests": 12
+          },
+          "shellDeltaMs": 489,
+          "shellDeltaPercent": 32,
+          "negotiated": [
+            "http/1.1"
+          ]
+        },
+        {
+          "transport": "h2",
+          "profile": "unthrottled",
+          "baseline": [
+            {
+              "shellMs": 261,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 76,
+              "lastDataEnd": 171,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 85,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 31,
+              "lastDataEnd": 39,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 166,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 64,
+              "lastDataEnd": 77,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 176,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 69,
+              "lastDataEnd": 81,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 155,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 71,
+              "lastDataEnd": 86,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            }
+          ],
+          "candidate": [
+            {
+              "shellMs": 226,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 75,
+              "lastDataEnd": 171,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 96,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 29,
+              "lastDataEnd": 56,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 192,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 72,
+              "lastDataEnd": 123,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 211,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 65,
+              "lastDataEnd": 116,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 99,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 32,
+              "lastDataEnd": 59,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            }
+          ],
+          "baselineMedian": {
+            "shellMs": 166,
+            "firstDataStart": 69,
+            "lastDataEnd": 81,
+            "dataTransferBytes": 224960,
+            "dataDecodedBytes": 1533856,
+            "dataRequests": 1
+          },
+          "candidateMedian": {
+            "shellMs": 192,
+            "firstDataStart": 65,
+            "lastDataEnd": 116,
+            "dataTransferBytes": 233903,
+            "dataDecodedBytes": 1610203,
+            "dataRequests": 12
+          },
+          "shellDeltaMs": 26,
+          "shellDeltaPercent": 16,
+          "negotiated": [
+            "h2"
+          ]
+        },
+        {
+          "transport": "h2",
+          "profile": "moderate: 150 ms RTT, 1.6 Mbps down, 750 kbps up",
+          "baseline": [
+            {
+              "shellMs": 2060,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 665,
+              "lastDataEnd": 1976,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 2077,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 676,
+              "lastDataEnd": 1993,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 2050,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 666,
+              "lastDataEnd": 1966,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 2052,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 667,
+              "lastDataEnd": 1975,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 2095,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 690,
+              "lastDataEnd": 2011,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            }
+          ],
+          "candidate": [
+            {
+              "shellMs": 2267,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 675,
+              "lastDataEnd": 2209,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2277,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 671,
+              "lastDataEnd": 2215,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2274,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 672,
+              "lastDataEnd": 2219,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2295,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 688,
+              "lastDataEnd": 2249,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 2318,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 703,
+              "lastDataEnd": 2275,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            }
+          ],
+          "baselineMedian": {
+            "shellMs": 2060,
+            "firstDataStart": 667,
+            "lastDataEnd": 1976,
+            "dataTransferBytes": 224960,
+            "dataDecodedBytes": 1533856,
+            "dataRequests": 1
+          },
+          "candidateMedian": {
+            "shellMs": 2277,
+            "firstDataStart": 675,
+            "lastDataEnd": 2219,
+            "dataTransferBytes": 233903,
+            "dataDecodedBytes": 1610203,
+            "dataRequests": 12
+          },
+          "shellDeltaMs": 217,
+          "shellDeltaPercent": 11,
+          "negotiated": [
+            "h2"
+          ]
+        },
+        {
+          "transport": "h2",
+          "profile": "high-latency: 300 ms RTT, 5 Mbps down, 1 Mbps up",
+          "baseline": [
+            {
+              "shellMs": 1566,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 804,
+              "lastDataEnd": 1488,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 1536,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 787,
+              "lastDataEnd": 1479,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 1550,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 782,
+              "lastDataEnd": 1468,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 1534,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 805,
+              "lastDataEnd": 1491,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            },
+            {
+              "shellMs": 1547,
+              "protocols": "h2",
+              "dataRequests": 1,
+              "firstDataStart": 777,
+              "lastDataEnd": 1468,
+              "dataTransferBytes": 224960,
+              "dataDecodedBytes": 1533856
+            }
+          ],
+          "candidate": [
+            {
+              "shellMs": 1867,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 789,
+              "lastDataEnd": 1821,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 1911,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 825,
+              "lastDataEnd": 1865,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 1921,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 799,
+              "lastDataEnd": 1861,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 1848,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 782,
+              "lastDataEnd": 1819,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            },
+            {
+              "shellMs": 1911,
+              "protocols": "h2",
+              "dataRequests": 12,
+              "firstDataStart": 800,
+              "lastDataEnd": 1852,
+              "dataTransferBytes": 233903,
+              "dataDecodedBytes": 1610203
+            }
+          ],
+          "baselineMedian": {
+            "shellMs": 1547,
+            "firstDataStart": 787,
+            "lastDataEnd": 1479,
+            "dataTransferBytes": 224960,
+            "dataDecodedBytes": 1533856,
+            "dataRequests": 1
+          },
+          "candidateMedian": {
+            "shellMs": 1911,
+            "firstDataStart": 799,
+            "lastDataEnd": 1852,
+            "dataTransferBytes": 233903,
+            "dataDecodedBytes": 1610203,
+            "dataRequests": 12
+          },
+          "shellDeltaMs": 364,
+          "shellDeltaPercent": 24,
+          "negotiated": [
+            "h2"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "durationMs": 98608,
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ]
+}

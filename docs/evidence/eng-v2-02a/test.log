@@ -1,0 +1,55 @@
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ preserves all baseline record values, array order, identities, metadata and explicit links (6.508ms)
+✔ generation is deterministic and generated files equal the validated source catalog (55.4685ms)
+✔ explicit order preserves each collection even when pack discovery order changes (2.6136ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (12.1105ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (15.5895ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (2.2226ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (1.1455ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (17.7008ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (2.006ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (43.8959ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 361.0739
+
+ RUN  v3.2.7 <repo>
+
+ ✓ src/features/flashcards/flashcards.test.ts (44 tests) 42ms
+ ✓ src/content/catalog.test.ts (8 tests) 454ms
+   ✓ built-in content catalog > finds every phrase, word and verb by its own text, wherever it is in the catalog  440ms
+ ✓ src/state/progress.test.ts (26 tests) 2082ms
+ ✓ src/content/builtIn.test.ts (10 tests) 3108ms
+   ✓ complete search through the loaded shared catalog > matches a direct field-by-field oracle for every searchable field across all packs  2690ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts (27 tests) 4476ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  920ms
+ ✓ src/app/App.test.ts (14 tests) 5768ms
+   ✓ application shell > preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry  1408ms
+   ✓ application shell > opens the saved screen and keeps progress and preferences after a reload  348ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps "consequently" and "Consequently, …" apart in every view, also after a reload  399ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps distinct entries with similar-looking text independent: C++ and C#  777ms
+   ✓ learning identity across Phrases, Focus and Flashcards > treats a phrase and its linked word-index entry as one learning identity: the phrase id  641ms
+   ✓ loading and storage errors > handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state  341ms
+
+ Test Files  6 passed (6)
+      Tests  129 passed (129)
+   Start at  16:19:42
+   Duration  7.12s (transform 1.32s, setup 228ms, collect 2.10s, tests 15.93s, environment 2.74s, prepare 635ms)
+
