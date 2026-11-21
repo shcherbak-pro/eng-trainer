@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { ContentCatalog } from '../../content/catalog';
+  import { inCollection, resolvedCollection } from '../../content/userCatalog';
+  import CollectionFilter from '../../shared/ui/CollectionFilter.svelte';
   import type { Phrase } from '../../content/types';
   import { progress } from '../../state/progress';
   import { settings } from '../../state/settings';
@@ -44,7 +46,10 @@
   }
 
   $: categories = ['All', ...catalog.phraseCategories];
+  $: availableHiddenIds = catalog.phrases.filter((item) => $progress.hiddenPhrases.includes(item.id)).map((item) => item.id);
+  $: collectionFilter = resolvedCollection(catalog, $settings.collectionFilter);
   $: visible = catalog.searchPhrases($viewState.phraseQuery).filter((item) => {
+    if (!inCollection(item, collectionFilter)) return false;
     const hidden = $progress.hiddenPhrases.includes(item.id);
     if (hidden && !$settings.showHiddenPhrases) return false;
     if ($settings.phraseCategory !== 'All' && item.category !== $settings.phraseCategory) return false;
@@ -76,14 +81,15 @@
           variant="secondary"
           onClick={() => settings.toggleShowHidden('phrase')}
         />
-        {#if $progress.hiddenPhrases.length}
-          <IconButton icon="settings_backup_restore" label="Unhide all phrases" variant="danger" onClick={() => progress.unhideAll('phrase')} />
+        {#if availableHiddenIds.length}
+          <IconButton icon="settings_backup_restore" label="Unhide all phrases" variant="danger" onClick={() => progress.unhideAll('phrase', availableHiddenIds)} />
         {/if}
       </div>
     </div>
 
     <div class="controls-stack__row controls-stack__row--filters-listen">
       <div class="controls-filter-stack">
+        <CollectionFilter {catalog} />
         <label>
           Search
           <input value={$viewState.phraseQuery} on:input={(e) => viewState.setPhraseQuery((e.target as HTMLInputElement).value)} placeholder="AI, otherwise, meeting…" />

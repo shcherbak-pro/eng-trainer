@@ -2,6 +2,9 @@
   import { onMount } from 'svelte';
   import { loadBuiltInCatalog } from '../content/builtIn';
   import type { ContentCatalog } from '../content/catalog';
+  import { combineCatalog } from '../content/userCatalog';
+  import { userVocabulary } from '../collections/service';
+  import CollectionsPage from '../features/collections/CollectionsPage.svelte';
   import type { TrainingBlock } from '../content/types';
   import { initState, initStateWithoutStorage, progress, settings } from '../state';
   import { availablePagesFor, blocksForLearnPass, pageForBlock, pageFromHash } from './navigation';
@@ -22,8 +25,11 @@
   let phase: Phase = 'loading';
   let errorMessage = '';
   let catalog: ContentCatalog | null = null;
+  let builtIn: ContentCatalog | null = null;
   let activePage = 'index';
   let mounted = false;
+
+  $: catalog = builtIn ? combineCatalog(builtIn, $userVocabulary) : null;
 
   $: blocks = catalog ? blocksForLearnPass(catalog.blocks, $progress.selectedLearnPassId, $progress.learnPasses) : [];
   $: availablePages = availablePagesFor(blocks);
@@ -67,7 +73,7 @@
     const pages = availablePagesFor(blocksForLearnPass(loaded.blocks, $progress.selectedLearnPassId, $progress.learnPasses));
     const requested = pageFromHash() || $settings.activePage;
 
-    catalog = loaded;
+    builtIn = loaded;
     activePage = pages.includes(requested) ? requested : 'index';
     settings.setActivePage(activePage);
     phase = 'ready';
@@ -164,6 +170,8 @@
       <PracticePage drills={catalog.drills} />
     {:else if activePage === 'favorites'}
       <FocusListPage {catalog} onOpenBlock={openBlock} />
+    {:else if activePage === 'collections'}
+      <CollectionsPage {catalog} />
     {/if}
   </AppShell>
 {/if}

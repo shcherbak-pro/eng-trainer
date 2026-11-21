@@ -12,11 +12,12 @@ export const PAGE_LABELS: Record<string, string> = {
   patterns: 'Patterns',
   answers: 'Answers',
   practice: 'Practice',
-  favorites: 'Focus'
+  favorites: 'Focus',
+  collections: 'Collections'
 };
 
 /** Screens shown in the bottom navigation on small screens. */
-export const MOBILE_PAGES = ['index', 'phrases', 'wordIndex', 'flashcards', 'reverse', 'irregularVerbs', 'favorites'];
+export const MOBILE_PAGES = ['index', 'phrases', 'wordIndex', 'flashcards', 'reverse', 'irregularVerbs', 'favorites', 'collections'];
 
 const PAGE_BY_BLOCK_TYPE: Partial<Record<TrainingBlock['type'], string>> = {
   phraseCategory: 'phrases',
@@ -57,7 +58,7 @@ export function availablePagesFor(blocks: TrainingBlock[]): string[] {
   if (types.has('answers')) pages.push('answers');
   if (types.has('practice')) pages.push('practice');
 
-  pages.push('favorites');
+  pages.push('favorites', 'collections');
   return pages;
 }
 

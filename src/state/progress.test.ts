@@ -44,7 +44,7 @@ describe('learning state in IndexedDB', () => {
     expect(state.flashcardSessions).toEqual({});
     expect(state.learnedPhrases).toEqual([]);
     expect(get(app.saveStatus)).toEqual({ state: 'idle' });
-    expect(await app.saved()).toEqual({ progress: {}, learnPasses: {}, flashcardSessions: {}, settings: {} });
+    expect(await app.saved()).toEqual({ progress: {}, learnPasses: {}, flashcardSessions: {}, settings: {}, userCollections: {}, userEntries: {} });
   });
 
   it('keeps learned items, the review sequence and the selected deck after a reload', async () => {
@@ -176,7 +176,7 @@ describe('learning state in IndexedDB', () => {
     app.viewState.setCurrentPrompt('Describe your team.');
 
     expect(get(app.saveStatus)).toEqual({ state: 'idle' });
-    expect(await app.saved()).toEqual({ progress: {}, learnPasses: {}, flashcardSessions: {}, settings: {} });
+    expect(await app.saved()).toEqual({ progress: {}, learnPasses: {}, flashcardSessions: {}, settings: {}, userCollections: {}, userEntries: {} });
     expect(get((await app.reload()).viewState)).toMatchObject({ phraseQuery: '', phrasePage: 1, currentPrompt: '' });
   });
 
@@ -373,14 +373,14 @@ describe('storage failures', () => {
     state.progress.toggleLearnedPhrase('phrase-777');
     await persistence.persistenceSettled();
     expect(get(persistence.saveStatus).state).not.toBe('saved');
-    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
+    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {}, userCollections: {}, userEntries: {} });
 
     // "Try again" after the failure is gone: the saved state replaces what is in memory.
     await state.initState();
 
     expect(get(state.progress).learnedPhrases).toEqual(['phrase-001']);
     expect(get(state.settings)).toMatchObject({ theme: 'dark', activePage: 'phrases' });
-    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
+    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {}, userCollections: {}, userEntries: {} });
   });
 
   it('reports an initialization failure when the database cannot be opened', async () => {
@@ -432,7 +432,7 @@ describe('storage failures', () => {
 
     expect(calls).toBe(2);
     expect(get(app.saveStatus)).toMatchObject({ state: 'error' });
-    expect(await readDatabase()).toEqual({ progress: {}, learnPasses: {}, flashcardSessions: {}, settings: {} });
+    expect(await readDatabase()).toEqual({ progress: {}, learnPasses: {}, flashcardSessions: {}, settings: {}, userCollections: {}, userEntries: {} });
   });
 
   it('saves earlier failed changes together with the next change', async () => {
@@ -463,6 +463,6 @@ describe('storage failures', () => {
 
     expect(get(state.progress).learnedPhrases).toEqual(['phrase-001']);
     expect(get(persistence.saveStatus)).toEqual({ state: 'disabled' });
-    expect(await readDatabase()).toEqual({ progress: {}, learnPasses: {}, flashcardSessions: {}, settings: {} });
+    expect(await readDatabase()).toEqual({ progress: {}, learnPasses: {}, flashcardSessions: {}, settings: {}, userCollections: {}, userEntries: {} });
   });
 });

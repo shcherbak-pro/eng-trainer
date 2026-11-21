@@ -255,8 +255,9 @@ function createProgressStore() {
       }),
     unhideItem: (kind: HideKind, id: string) =>
       update((current) => ({ ...current, [HIDDEN_LIST[kind]]: removeValue(current[HIDDEN_LIST[kind]], id) })),
-    unhideAll: (kind: HideKind) =>
-      update((current) => (current[HIDDEN_LIST[kind]].length ? { ...current, [HIDDEN_LIST[kind]]: [] } : current)),
+    // Bulk unhide is scoped to catalog-known IDs; absent collections keep their flags.
+    unhideAll: (kind: HideKind, availableIds: string[]) =>
+      update((current) => ({ ...current, [HIDDEN_LIST[kind]]: removeValues(current[HIDDEN_LIST[kind]], availableIds) })),
     setSelectedLearnPass(selectedLearnPassId: string): void {
       update((current) => ({ ...current, selectedLearnPassId }));
       viewState.resetPage('index');
@@ -300,11 +301,13 @@ function createProgressStore() {
     relearnFlashcards: (ids: string[]) =>
       update((current) => ({ ...current, learnedPhrases: removeValues(current.learnedPhrases, ids) })),
     // Resets one deck: its learned items become unlearned and its review
-    // sequence starts from the beginning.
-    resetFlashcardDeck: (deckKey: string, ids: string[]) =>
+    // sequence starts from the beginning. A reconciled session may retain
+    // temporarily unavailable vocabulary in its existing slots.
+    resetFlashcardDeck: (deckKey: string, ids: string[], session?: FlashcardSession) =>
       update((current) => {
         const flashcardSessions = { ...current.flashcardSessions };
-        delete flashcardSessions[deckKey];
+        if (session) flashcardSessions[deckKey] = session;
+        else delete flashcardSessions[deckKey];
         return { ...current, learnedPhrases: removeValues(current.learnedPhrases, ids), flashcardSessions };
       }),
     /** Removes all v2 learning state. Nothing outside the v2 database is touched. */

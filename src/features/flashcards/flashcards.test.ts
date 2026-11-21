@@ -13,6 +13,7 @@ import {
   filterDeck,
   getTopics,
   isHorizontalDrag,
+  preserveUnavailableCards,
   resolveSession,
   shuffleSession,
   summarizeDeck
@@ -418,6 +419,54 @@ describe('review sequence', () => {
     expect([...shuffled.order].sort()).toEqual(['a', 'b', 'c', 'd', 'e']);
     expect(shuffled.order).not.toEqual(session.order);
     expect(session.order).toEqual(['a', 'b', 'c', 'd', 'e']);
+  });
+});
+
+describe('temporarily unavailable user cards', () => {
+  const available = new Set(['a', 'b', 'c', 'new', 'user:hidden', 'user:learned']);
+  const saved = { order: ['user:x', 'a', 'user:y', 'b', 'c', 'user:z'], index: 2 };
+
+  it('hides absent cards while retaining their order after an answer and restore', () => {
+    const visible = resolveSession(saved, ['a', 'b', 'c']);
+    expect(visible).toEqual({ order: ['a', 'b', 'c'], index: 1 });
+    const next = preserveUnavailableCards(saved, answerCard(visible, 'b', 'again'), available);
+    expect(next).toEqual({ order: saved.order, index: 4 });
+    expect(resolveSession(next, saved.order)).toEqual(next);
+  });
+
+  it('removes only learned/hidden known cards and appends genuinely new IDs', () => {
+    const previous = { order: [...saved.order, 'user:hidden', 'user:learned', 'obsolete-built-in'], index: 3 };
+    const visible = resolveSession(previous, ['a', 'b', 'c', 'new']);
+    expect(preserveUnavailableCards(previous, answerCard(visible, 'b', 'know'), available)).toEqual({
+      order: ['user:x', 'a', 'user:y', 'c', 'user:z', 'new'], index: 3
+    });
+  });
+
+  it('wraps to the first available card, not a ghost before it', () => {
+    const next = preserveUnavailableCards(saved, answerCard(resolveSession(saved, ['a', 'b', 'c']), 'c', 'again'), available);
+    expect(next).toEqual({ order: saved.order, index: 1 });
+    expect(resolveSession(next, ['a', 'b', 'c']).index).toBe(0);
+  });
+
+  it('keeps an exhausted deck empty on screen but restores absent cards later', () => {
+    const next = preserveUnavailableCards(saved, { order: [], index: 0 }, available);
+    expect(next).toEqual({ order: ['user:x', 'user:y', 'user:z'], index: 0 });
+    expect(resolveSession(next, [])).toEqual({ order: [], index: 0 });
+    expect(resolveSession(next, ['user:z', 'user:x', 'user:y'])).toEqual(next);
+  });
+
+  it('shuffles available slots without moving absent cards and keeps the visible cursor', () => {
+    const next = preserveUnavailableCards(saved, shuffleSession(resolveSession(saved, ['a', 'b', 'c']), () => 0), available);
+    expect(next).toEqual({ order: ['user:x', 'b', 'user:y', 'c', 'a', 'user:z'], index: 1 });
+    expect(resolveSession(next, ['a', 'b', 'c'])).toEqual({ order: ['b', 'c', 'a'], index: 0 });
+  });
+
+  it('does not duplicate slots and leaves sessions with no absent cards unchanged', () => {
+    const next = { order: ['c', 'a', 'new'], index: 1 };
+    expect(preserveUnavailableCards(undefined, next, available)).toEqual(next);
+    expect(preserveUnavailableCards({ order: ['a', 'a', 'b', 'c'], index: 0 }, next, available)).toEqual(next);
+    expect(preserveUnavailableCards({ order: ['user:x', 'user:x', 'a'], index: 0 }, next, available))
+      .toEqual({ order: ['user:x', ...next.order], index: 2 });
   });
 });
 
