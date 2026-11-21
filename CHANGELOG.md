@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-11-21 — ENG-V2-01
+
+### Added
+
+- Added `v1/`: an independent copy of the application as it was before this change, with its own data, dependencies, lockfile, and build. It is published at `/eng-trainer/v1/` and keeps its `localStorage` progress.
+- Added a link to v1 at the bottom of every v2 screen.
+- Added a notice when a change cannot be saved, with **Try saving again**, and a start screen for the case when saved progress cannot be opened.
+- Added `npm run build:site`, which builds both applications and assembles them into `site-dist/`.
+- Added tests for IndexedDB persistence, storage failures, the content catalog, and the application shell.
+
+### Changed
+
+- The root application is now v2. Its code is split into an application shell, a content catalog, a storage adapter, progress and settings services, feature screens, and shared components.
+- v2 saves progress and preferences in the IndexedDB database `eng-trainer-v2`. It does not use `localStorage` and does not read v1 progress, so v2 starts with empty progress.
+- Search text, the current page of each list, and the current practice prompt are no longer saved. They are kept while the app is open and start fresh after a reload.
+- The saved theme is applied when the app has read its settings. Before that, the system theme is shown.
+- The GitHub Pages workflow builds and publishes both applications as one site. Pull requests to `main` are checked and built without publishing.
+
 ## 2026-11-11
 
 ### Added

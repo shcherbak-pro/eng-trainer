@@ -43,7 +43,67 @@ For phrases, words, irregular verbs, and Focus List items, the app can read the 
 
 ## Personal progress
 
-Learning state is saved in the browser, including selected Learn Pass, hidden items, Focus List, flashcard progress, pagination settings, theme, and expanded panels.
+Learning state is saved in the browser, in the IndexedDB database `eng-trainer-v2`. This includes learned and hidden items, the Focus List, Learn Passes and the selected pass, flashcard progress, the theme, speech repeats, list filters, page sizes, and expanded panels.
+
+Search text, the current page of a list, and the current practice prompt are not saved. They start fresh after a reload.
+
+If the browser cannot save a change, the app shows a notice with a **Try saving again** button. If the saved progress cannot be opened at all, the app stops and offers to try again or to continue without saving.
+
+## Two versions
+
+| Version | Address | Source | Storage |
+|---|---|---|---|
+| v2 (current) | https://shcherbak-pro.github.io/eng-trainer/ | repository root | IndexedDB `eng-trainer-v2` |
+| v1 (preserved) | https://shcherbak-pro.github.io/eng-trainer/v1/ | [`v1/`](v1/) | `localStorage` |
+
+The two versions are separate applications. They do not share code, data files, or progress. v2 starts with empty progress and does not read v1 data. A link at the bottom of every v2 screen opens v1.
+
+## Development
+
+Requirements: Node.js 22 or newer.
+
+```bash
+npm ci                # install v2 dependencies
+npm run install:v1    # install v1 dependencies (v1/ has its own package.json and lockfile)
+
+npm run dev           # v2 dev server: http://localhost:5173/eng-trainer/
+npm run dev:v1        # v1 dev server: http://localhost:5173/eng-trainer/v1/
+
+npm run check         # svelte-check for v2        (v1: npm run check:v1)
+npm test              # vitest for v2              (v1: npm run test:v1)
+
+npm run build         # v2 -> dist/
+npm run build:v1      # v1 -> v1/dist/
+npm run assemble      # dist/ + v1/dist/ -> site-dist/ and site-dist/v1/
+npm run check:site    # structural check of site-dist/
+npm run build:site    # all four steps above in order
+```
+
+To look at the assembled site locally: `npx vite preview --outDir site-dist`, then open `http://localhost:4173/eng-trainer/`.
+
+The link from v2 to v1 works in the assembled site. In the v2 dev server it leads to a missing page, because v1 runs in its own dev server.
+
+### Structure of v2
+
+```text
+src/
+  app/         Application shell: startup, navigation, loading and error screens, theme
+  content/     Content catalog: the one interface to the built-in learning material, with search
+  storage/     IndexedDB adapter: database, object stores, transactions
+  state/       Progress and settings services, the save queue, in-memory view state
+  features/    Screens: home, vocabulary, flashcards, exercises, focus
+  shared/      Components and helpers used by several features (ui, entries, speech)
+  test/        Test setup (in-memory IndexedDB) and database helpers
+public/data/   Built-in learning material (materials.json)
+scripts/       Site assembly and its structural check
+v1/            The preserved v1 application (independent project)
+```
+
+IndexedDB is used through [`idb`](https://github.com/jakearchibald/idb), a small promise wrapper. Only `src/storage/database.ts` imports it.
+
+### Deployment
+
+`.github/workflows/deploy.yml` builds both applications, assembles `site-dist/`, and is the only GitHub Pages publisher. Pull requests to `main` run the checks and builds without publishing. Pushes to `main` publish the assembled site.
 
 ## Live app
 

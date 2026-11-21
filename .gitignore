@@ -2,3 +2,6 @@ node_modules/
 dist/
 .env
 .env.*
+
+# Assembled GitHub Pages site (v2 build + v1 build), see scripts/assemble-site.mjs
+site-dist/
