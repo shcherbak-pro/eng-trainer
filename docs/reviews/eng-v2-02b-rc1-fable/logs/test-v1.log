@@ -1,0 +1,37 @@
+
+> english-assessment-trainer-v2@2.0.0 test:v1
+> npm --prefix v1 run test
+
+
+> english-assessment-trainer-v1@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 <review-copy>/v1
+
+ ✓ src/lib/utils/flashcards.test.ts (30 tests) 31ms
+ ✓ src/lib/stores/progress.flashcards.test.ts (12 tests) 1450ms
+   ✓ flashcard progress in localStorage > resets one deck without touching the others  448ms
+ ✓ src/lib/pages/FlashcardsPage.test.ts (26 tests) 9356ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1114ms
+   ✓ Flashcards page > buttons > always starts the next card on the front side  379ms
+   ✓ Flashcards page > keyboard > ArrowLeft means "Keep learning"  338ms
+   ✓ Flashcards page > keyboard > leaves Enter and Space to a focused button  348ms
+   ✓ Flashcards page > keyboard > does not answer while the topic selector is being used  335ms
+   ✓ Flashcards page > keyboard > ignores shortcuts combined with modifier keys  319ms
+   ✓ Flashcards page > swipe > left keeps the card in the learning pool and moves on  319ms
+   ✓ Flashcards page > swipe > does nothing when the swipe is too short  405ms
+   ✓ Flashcards page > swipe > does nothing on a vertical move, so the page can scroll  365ms
+   ✓ Flashcards page > decks > shows a completed state when every card of the deck is learned  396ms
+   ✓ Flashcards page > decks > shows an empty state when a topic has no cards to study  329ms
+   ✓ Flashcards page > decks > falls back to the first topic when the saved topic no longer exists  312ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  614ms
+   ✓ Flashcards page > saved progress > resumes in the middle of a round after a reload  625ms
+   ✓ Flashcards page > saved progress > respects items already marked as learned on the Phrases page  305ms
+   ✓ Flashcards page > learned vocabulary > resets the progress of the selected topic only after confirmation  361ms
+
+ Test Files  3 passed (3)
+      Tests  68 passed (68)
+   Start at  21:19:42
+   Duration  10.63s (transform 960ms, setup 0ms, collect 1.05s, tests 10.84s, environment 1.20s, prepare 292ms)
+

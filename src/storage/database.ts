@@ -9,11 +9,15 @@ import { openDB, type IDBPDatabase, type IDBPTransaction } from 'idb';
  */
 
 export const DATABASE_NAME = 'eng-trainer-v2';
-export const DATABASE_VERSION = 1;
+export const DATABASE_VERSION = 2;
 
 /** Every store uses explicit string keys (`put(value, key)`). */
-export const STORE_NAMES = ['progress', 'learnPasses', 'flashcardSessions', 'settings'] as const;
+export const STATE_STORE_NAMES = ['progress', 'learnPasses', 'flashcardSessions', 'settings'] as const;
+export const STORE_NAMES = [...STATE_STORE_NAMES, 'userCollections', 'userEntries'] as const;
 export type StoreName = (typeof STORE_NAMES)[number];
+
+/** Optimistic concurrency checks, read inside the same transaction as the writes. */
+export type WriteCondition = { store: StoreName; key: string; expected: unknown };
 
 export type WriteOp =
   | { type: 'put'; store: StoreName; key: string; value: unknown }
@@ -47,7 +51,7 @@ export interface AppStorage {
    * Resolves only after the transaction has completed. If anything fails, the
    * transaction is aborted, nothing is saved and the promise rejects.
    */
-  write(ops: WriteOp[]): Promise<void>;
+  write(ops: WriteOp[], conditions?: WriteCondition[]): Promise<void>;
   close(): void;
 }
 
@@ -119,21 +123,34 @@ function createStorage(db: IDBPDatabase): AppStorage {
       }
     },
 
-    async write(ops) {
-      if (!ops.length) return;
+    async write(ops, conditions = []) {
+      if (!ops.length && !conditions.length) return;
 
       let tx: IDBPTransaction<unknown, StoreName[], 'readwrite'> | undefined;
       const pending: Promise<unknown>[] = [];
 
       try {
-        tx = db.transaction([...new Set(ops.map((op) => op.store))], 'readwrite');
-        // All requests are issued before the first await, so they belong to
-        // this transaction and are committed or rolled back together.
+        tx = db.transaction([...new Set([...ops, ...conditions].map((op) => op.store))], 'readwrite');
+        pending.push(tx.done);
+        if (conditions.length) {
+          const checks = conditions.map((condition) => {
+            const request = tx!.objectStore(condition.store).get(condition.key);
+            pending.push(request);
+            return request;
+          });
+          const values = await Promise.all(checks);
+          conditions.forEach((condition, index) => {
+            if (JSON.stringify(values[index]) !== JSON.stringify(condition.expected)) {
+              throw new Error('Saved data changed in another session. Reload and review the import again.');
+            }
+          });
+        }
+        // Issue all writes together after any condition reads, while this
+        // transaction is active. They commit or roll back together.
         for (const op of ops) {
           const store = tx.objectStore(op.store);
           pending.push(op.type === 'put' ? store.put(op.value, op.key) : store.delete(op.key));
         }
-        pending.push(tx.done);
         await Promise.all(pending);
       } catch (error) {
         releaseAfterFailure(tx, pending);
@@ -154,18 +171,43 @@ export async function openStorage(): Promise<AppStorage> {
       throw new Error('IndexedDB is not available in this browser.');
     }
 
-    const db = await openDB(DATABASE_NAME, DATABASE_VERSION, {
-      upgrade(database, oldVersion) {
-        if (oldVersion < 1) {
-          for (const name of STORE_NAMES) database.createObjectStore(name);
+    let abandoned = false;
+    let upgradeFailure: unknown;
+    let rejectBlocked: (error: Error) => void;
+    const blocked = new Promise<never>((_resolve, reject) => { rejectBlocked = reject; });
+    const opening = openDB(DATABASE_NAME, DATABASE_VERSION, {
+      upgrade(database, oldVersion, _newVersion, transaction) {
+        // The open request reports a failed migration; also observe idb's
+        // wrapped upgrade-transaction promise so its abort is not detached.
+        void transaction.done.catch(() => undefined);
+        try {
+          if (oldVersion < 1) {
+            for (const name of STATE_STORE_NAMES) database.createObjectStore(name);
+          }
+          if (oldVersion < 2) {
+            database.createObjectStore('userCollections');
+            database.createObjectStore('userEntries');
+          }
+        } catch (error) {
+          upgradeFailure = error;
+          transaction.abort();
         }
+      },
+      blocked() {
+        abandoned = true;
+        rejectBlocked(new Error('Close other eng-trainer tabs so browser storage can be upgraded, then try again.'));
       },
       blocking() {
         // A newer version of the app in another tab wants to upgrade the
         // database. Let it: later writes from this tab fail visibly.
-        db.close();
+        void opening.then((database) => database.close());
       }
     });
+
+    // An IndexedDB open request cannot be canceled. Close it if an abandoned
+    // blocked attempt eventually completes after the other tab is closed.
+    void opening.then((database) => { if (abandoned) database.close(); }, () => undefined);
+    const db = await Promise.race([opening, blocked]).catch((error) => { throw upgradeFailure ?? error; });
 
     return createStorage(db);
   } catch (error) {

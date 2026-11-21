@@ -1,0 +1,8 @@
+chromium: PASS F1-all-shared-deck-lifecycle (14.7s, {"answers":18,"shuffles":1,"resets":1})
+chromium: PASS F1-topic-shared-deck-lifecycle (20.3s, {"answers":36,"shuffles":2,"resets":1})
+chromium: PASS F1-cursor-on-removed-card-without-answers (3.9s, {"answers":0,"shuffles":0,"resets":0})
+chromium: PASS F2-hidden-state-mixed-types-filters-delete-reimport (10.5s, {"answers":0,"shuffles":0,"resets":0})
+firefox: PASS F1-all-shared-deck-lifecycle (15.7s, {"answers":18,"shuffles":1,"resets":1})
+firefox: PASS F1-topic-shared-deck-lifecycle (21.5s, {"answers":36,"shuffles":2,"resets":1})
+firefox: PASS F1-cursor-on-removed-card-without-answers (4.4s, {"answers":0,"shuffles":0,"resets":0})
+firefox: PASS F2-hidden-state-mixed-types-filters-delete-reimport (12.4s, {"answers":0,"shuffles":0,"resets":0})

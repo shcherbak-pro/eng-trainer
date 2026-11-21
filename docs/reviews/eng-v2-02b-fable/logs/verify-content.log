@@ -1,0 +1,166 @@
+
+> english-assessment-trainer-v2@2.0.0 verify:content
+> node scripts/verify-content-migration.mjs
+
+{
+  "baseline": "c84ef30d80ffbaae4ac0f3aa0fb7fe6090b8067b",
+  "branch": "feature/eng-v2-02b-vocabulary-import",
+  "head": "020babfaf24a14a0a1fdc15c13c90dde00ea9633",
+  "packs": [
+    {
+      "id": "speaking-foundations",
+      "counts": {
+        "phrases": 89,
+        "wordIndex": 89,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "presentations",
+      "counts": {
+        "phrases": 90,
+        "wordIndex": 90,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "agent-framework",
+      "counts": {
+        "phrases": 81,
+        "wordIndex": 81,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "hedging-and-linking",
+      "counts": {
+        "phrases": 24,
+        "wordIndex": 24,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "personal-topics",
+      "counts": {
+        "phrases": 45,
+        "wordIndex": 45,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "workplace-topics",
+      "counts": {
+        "phrases": 120,
+        "wordIndex": 120,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "ai-certification",
+      "counts": {
+        "phrases": 117,
+        "wordIndex": 117,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "speaking-practice",
+      "counts": {
+        "phrases": 0,
+        "wordIndex": 0,
+        "irregularVerbs": 0,
+        "patterns": 7,
+        "answers": 6,
+        "drills": 15
+      }
+    },
+    {
+      "id": "essential-100",
+      "counts": {
+        "phrases": 0,
+        "wordIndex": 0,
+        "irregularVerbs": 100,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "logical-200",
+      "counts": {
+        "phrases": 0,
+        "wordIndex": 0,
+        "irregularVerbs": 200,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "ai-certification-verbs-contextual",
+      "counts": {
+        "phrases": 0,
+        "wordIndex": 0,
+        "irregularVerbs": 39,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    }
+  ],
+  "collections": {
+    "phrases": {
+      "count": 566,
+      "sha256": "5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5"
+    },
+    "patterns": {
+      "count": 7,
+      "sha256": "1edaf33bea16c91c29bcbb40ca24e18d0823ff0c3918a928810f2ea7834ac9bf"
+    },
+    "answers": {
+      "count": 6,
+      "sha256": "a9d3fa8e57220ff5558b809de9bc313fabc6b776a10a60ea577398d911a464db"
+    },
+    "drills": {
+      "count": 15,
+      "sha256": "d2baeb109cc6bcb09d3ca725e73078b35e3c4a6f977e812a78c2c1b4b28fd9fe"
+    },
+    "blocks": {
+      "count": 39,
+      "sha256": "e751b8ea0992fa56af11b00a85b1889d5916e7f6a7c1ce2943eb53a0aa4d5f0f"
+    },
+    "wordIndex": {
+      "count": 566,
+      "sha256": "c298edca2a8dec946306a9a2a23db652679d6e9217d08e17e3a604ba7832a06b"
+    },
+    "irregularVerbs": {
+      "count": 339,
+      "sha256": "7eb6097b147ca5c419205c1a8997862b253000a2d94225240bec304cbec5b084"
+    }
+  },
+  "exactContentAndOrderMatch": true,
+  "exactPublishedContentMatch": true,
+  "sourcePhraseLinks": 566,
+  "v1Unchanged": true
+}

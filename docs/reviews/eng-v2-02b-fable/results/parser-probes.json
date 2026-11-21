@@ -1,0 +1,1299 @@
+{
+  "node": "v24.18.0",
+  "total": 126,
+  "failed": 0,
+  "slowest": [
+    {
+      "name": "size: exactly 2 MiB (2,097,152 bytes) passes the byte check",
+      "ms": 319.3
+    },
+    {
+      "name": "pathological: ~2 MiB of newlines",
+      "ms": 148.3
+    },
+    {
+      "name": "json: ~2 MiB of nested arrays handled without crashing",
+      "ms": 130
+    },
+    {
+      "name": "pathological: one ~2 MiB quoted field",
+      "ms": 106.9
+    },
+    {
+      "name": "pathological: ~2 MiB of commas in one record (an all-empty record is ignored)",
+      "ms": 64.4
+    },
+    {
+      "name": "pathological: ~2 MiB of double quotes (one quoted field of escaped quotes)",
+      "ms": 62.3
+    }
+  ],
+  "results": [
+    {
+      "name": "csv: BOM, CRLF, quoted comma, doubled quotes, multiline field",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 4.4,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: semicolon delimiter with quoted semicolon and literal comma",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.2,
+      "summary": {
+        "entries": 2,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: comma file whose data contains semicolons stays comma-delimited",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: headers ignore case and surrounding whitespace, columns in any order",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: quoted header names",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: lone CR line endings",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 2,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: LF without trailing newline",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: empty and whitespace-only records are ignored",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 2,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: tab inside a field is kept (not a control-character error)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: surrounding field whitespace is trimmed",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: empty kind defaults to word; phrase kept",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 2,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: example column becomes one example without translation",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: formula-like and HTML-like text is kept literally",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 3,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: same text with different meanings gets distinct IDs (no text dedup)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 3,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: collection ID and entry IDs use the native lowercase UUID namespace",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: two parses of the same file propose different collection IDs",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 0
+      }
+    },
+    {
+      "name": "csv: missing translation header",
+      "pass": true,
+      "outcome": "threw",
+      "error": "CSV needs english and translation headers; topic, example and kind are optional.",
+      "ms": 0.1
+    },
+    {
+      "name": "csv: missing english header",
+      "pass": true,
+      "outcome": "threw",
+      "error": "CSV needs english and translation headers; topic, example and kind are optional.",
+      "ms": 0
+    },
+    {
+      "name": "csv: duplicate header (case-insensitive)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "CSV has a duplicate or unsupported header.",
+      "ms": 0
+    },
+    {
+      "name": "csv: unsupported header",
+      "pass": true,
+      "outcome": "threw",
+      "error": "CSV has a duplicate or unsupported header.",
+      "ms": 0
+    },
+    {
+      "name": "csv: empty header cell",
+      "pass": true,
+      "outcome": "threw",
+      "error": "CSV has a duplicate or unsupported header.",
+      "ms": 0
+    },
+    {
+      "name": "csv: empty file",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The CSV file is empty.",
+      "ms": 0
+    },
+    {
+      "name": "csv: BOM-only file",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The CSV file is empty.",
+      "ms": 0
+    },
+    {
+      "name": "csv: header only",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The file contains no entries.",
+      "ms": 0
+    },
+    {
+      "name": "csv: header followed only by empty records",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The file contains no entries.",
+      "ms": 0
+    },
+    {
+      "name": "csv: unclosed quote",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Malformed CSV: an opening quote has no closing quote.",
+      "ms": 0
+    },
+    {
+      "name": "csv: quote inside an unquoted field",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Malformed CSV near record 2: unexpected text or quote.",
+      "ms": 0
+    },
+    {
+      "name": "csv: text after a closing quote",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Malformed CSV near record 2: unexpected text or quote.",
+      "ms": 0
+    },
+    {
+      "name": "csv: whitespace before an opening quote (strict RFC 4180)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Malformed CSV near record 3: unexpected text or quote.",
+      "ms": 0
+    },
+    {
+      "name": "csv: whitespace after a closing quote (strict RFC 4180)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Malformed CSV near record 2: unexpected text or quote.",
+      "ms": 0
+    },
+    {
+      "name": "csv: fewer fields than headers -> record issue with record number",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [
+          "3: The number of fields does not match the header."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: more fields than headers (trailing delimiter) -> record issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: The number of fields does not match the header."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: empty required english -> record issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: English text is required."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: empty required translation -> record issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: Translation is required."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: invalid kind -> record issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: Kind must be word or phrase."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: kind is case-sensitive (Phrase rejected)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: Kind must be word or phrase."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: NUL / BEL control characters -> record issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: English text contains unsupported control characters.",
+          "3: English text contains unsupported control characters."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: every invalid record is reported, valid ones are not imported implicitly",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 2,
+        "issues": [
+          "3: The number of fields does not match the header.",
+          "5: English text is required."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: record numbers count non-empty records, not physical lines (empty lines and multiline fields shift them)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.4,
+      "summary": {
+        "entries": 2,
+        "issues": [
+          "4: The number of fields does not match the header."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: english 300 chars accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.3,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: english 301 chars -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.2,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: English text must be at most 300 characters."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: translation 2000 accepted / 2001 -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 1.4,
+      "summary": {
+        "entries": 1,
+        "issues": [
+          "3: Translation must be at most 2000 characters."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: topic 100 accepted / 101 -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.3,
+      "summary": {
+        "entries": 1,
+        "issues": [
+          "3: Topic must be at most 100 characters."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: example 4000 accepted / 4001 -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 1.8,
+      "summary": {
+        "entries": 1,
+        "issues": [
+          "3: Example text must be at most 4000 characters."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: lengths are measured after trimming",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: exactly 1,000 records accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 10.4,
+      "summary": {
+        "entries": 1000,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: 1,001 records rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "A collection may contain at most 1000 entries.",
+      "ms": 1.7
+    },
+    {
+      "name": "csv: 1,000 records plus 500 empty lines accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 6.3,
+      "summary": {
+        "entries": 1000,
+        "issues": [],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "csv: 1,001 records where one has a field-count error still rejected by count",
+      "pass": true,
+      "outcome": "threw",
+      "error": "A collection may contain at most 1000 entries.",
+      "ms": 2.3
+    },
+    {
+      "name": "size: exactly 2 MiB (2,097,152 bytes) passes the byte check",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 319.3,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: Translation must be at most 2000 characters."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "size: 2 MiB + 1 byte rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The file or resulting collection exceeds the 2 MiB limit.",
+      "ms": 7
+    },
+    {
+      "name": "size: limit counts UTF-8 bytes, not characters (1,048,577 Cyrillic chars)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The file or resulting collection exceeds the 2 MiB limit.",
+      "ms": 5.1
+    },
+    {
+      "name": "size: the leading BOM counts toward the byte limit in parseImport",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The file or resulting collection exceeds the 2 MiB limit.",
+      "ms": 9.2
+    },
+    {
+      "name": "pathological: ~2 MiB of commas in one record (an all-empty record is ignored)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The file contains no entries.",
+      "ms": 64.4
+    },
+    {
+      "name": "pathological: ~2 MiB of \"x,\" fields in one record",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 46.1,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: The number of fields does not match the header."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "pathological: ~2 MiB of double quotes (one quoted field of escaped quotes)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 62.3,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: The number of fields does not match the header."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "pathological: odd number of double quotes (unclosed)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Malformed CSV: an opening quote has no closing quote.",
+      "ms": 32.6
+    },
+    {
+      "name": "pathological: ~2 MiB of newlines",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The file contains no entries.",
+      "ms": 148.3
+    },
+    {
+      "name": "pathological: ~1M tiny records stop early at the entry limit",
+      "pass": true,
+      "outcome": "threw",
+      "error": "A collection may contain at most 1000 entries.",
+      "ms": 25.2
+    },
+    {
+      "name": "pathological: one ~2 MiB quoted field",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 106.9,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "2: English text must be at most 300 characters."
+        ],
+        "collection": "review"
+      }
+    },
+    {
+      "name": "pathological: header line with ~2 MiB of semicolons (an empty record)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The CSV file is empty.",
+      "ms": 60.6
+    },
+    {
+      "name": "name: upper-case .CSV extension accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "WORDS"
+      }
+    },
+    {
+      "name": "name: unsupported extension rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Choose a .csv or .json file.",
+      "ms": 0
+    },
+    {
+      "name": "name: no extension rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Choose a .csv or .json file.",
+      "ms": 0
+    },
+    {
+      "name": "name: 256-character file name rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "File name must be at most 255 characters.",
+      "ms": 0
+    },
+    {
+      "name": "name: \".csv\" alone -> default collection name",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "Imported vocabulary"
+      }
+    },
+    {
+      "name": "name: CSV collection name truncated to 100 UTF-16 units",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"
+      }
+    },
+    {
+      "name": "name: truncation can split a surrogate pair (emoji at the 100th unit)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\ud83d"
+      }
+    },
+    {
+      "name": "json: minimal valid file; optional topic/examples/description default",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.2,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: invalid syntax",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Invalid JSON. Check the file syntax before importing.",
+      "ms": 0
+    },
+    {
+      "name": "json: top-level array",
+      "pass": true,
+      "outcome": "threw",
+      "error": "File must be an object.",
+      "ms": 0
+    },
+    {
+      "name": "json: version 2",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Expected eng-trainer-vocabulary JSON version 1.",
+      "ms": 0
+    },
+    {
+      "name": "json: version \"1\" (string)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Expected eng-trainer-vocabulary JSON version 1.",
+      "ms": 0
+    },
+    {
+      "name": "json: other format marker",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Expected eng-trainer-vocabulary JSON version 1.",
+      "ms": 0
+    },
+    {
+      "name": "json: unknown envelope field",
+      "pass": true,
+      "outcome": "threw",
+      "error": "File contains an unsupported field.",
+      "ms": 0
+    },
+    {
+      "name": "json: unknown collection field (whole file rejected)",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection contains an unsupported field.",
+      "ms": 0
+    },
+    {
+      "name": "json: missing collection",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection must be an object.",
+      "ms": 0
+    },
+    {
+      "name": "json: missing collection name",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection name must be text.",
+      "ms": 0
+    },
+    {
+      "name": "json: whitespace-only collection name",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection name is required.",
+      "ms": 0
+    },
+    {
+      "name": "json: collection name 100 accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "name": "json: collection name 101 rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection name must be at most 100 characters.",
+      "ms": 0
+    },
+    {
+      "name": "json: description 1000 accepted / 1001 rejected",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 0
+      }
+    },
+    {
+      "name": "json: entries not an array",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Entries must be an array.",
+      "ms": 0
+    },
+    {
+      "name": "json: empty entries",
+      "pass": true,
+      "outcome": "threw",
+      "error": "The file contains no entries.",
+      "ms": 0
+    },
+    {
+      "name": "json: exactly 1,000 entries accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 2.1,
+      "summary": {
+        "entries": 1000,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: 1,001 entries rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "A collection may contain at most 1000 entries.",
+      "ms": 1.3
+    },
+    {
+      "name": "json: built-in style collection ID rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection ID must use the native user UUID namespace.",
+      "ms": 0
+    },
+    {
+      "name": "json: upper-case UUID collection ID rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection ID must use the native user UUID namespace.",
+      "ms": 0
+    },
+    {
+      "name": "json: collection ID with trailing text rejected",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection ID must use the native user UUID namespace.",
+      "ms": 0
+    },
+    {
+      "name": "json: built-in entry ID (phrase-001) -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Entry ID must belong to this collection and use a native entry UUID."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: entry ID of another collection -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Entry ID must belong to this collection and use a native entry UUID."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: entry ID with upper-case UUID -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Entry ID must belong to this collection and use a native entry UUID."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: non-string entry ID -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Entry ID must belong to this collection and use a native entry UUID."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: duplicate entry IDs -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 2,
+        "issues": [
+          "0: Duplicate entry IDs are not allowed."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: same English text with different meanings and IDs accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 2,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: word -> phrase link in the same file accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 2,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: link declared before its phrase accepted (order-independent)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 2,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: several words linked to one phrase accepted",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 3,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: link to a word -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 2,
+        "issues": [
+          "0: Word “word 2” links to a missing phrase."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: self-link -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [
+          "0: Word “word 1” links to a missing phrase."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: phrase with sourcePhraseId -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [
+          "2: Only a word can link to a phrase in the same collection."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: link to built-in phrase-001 -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Only a word can link to a phrase in the same collection."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: link to another collection -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Only a word can link to a phrase in the same collection."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: dangling same-collection link -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [
+          "0: Word “word 1” links to a missing phrase."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: null sourcePhraseId -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Only a word can link to a phrase in the same collection."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: unknown entry field -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Entry contains an unsupported field."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: kind verb -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Kind must be word or phrase."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: number as translation -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Translation must be text."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: array as topic -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Topic must be text."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: null topic/examples treated as absent (lenient)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: five examples accepted / six -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.1,
+      "summary": {
+        "entries": 0
+      }
+    },
+    {
+      "name": "json: example without en -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Example text must be text."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: example with ua instead of translation -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Example contains an unsupported field."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: example translation optional, empty allowed",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: values are trimmed",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: control character in english -> issue",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: English text contains unsupported control characters."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: lone surrogate accepted and re-serialized as an escape",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: duplicate JSON keys — last value wins (JSON.parse semantics)",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 1,
+        "issues": [],
+        "collection": "x"
+      }
+    },
+    {
+      "name": "json: __proto__ key in envelope rejected; Object.prototype untouched",
+      "pass": true,
+      "outcome": "threw",
+      "error": "File contains an unsupported field.",
+      "ms": 0
+    },
+    {
+      "name": "json: __proto__ key in collection rejected; Object.prototype untouched",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection contains an unsupported field.",
+      "ms": 0
+    },
+    {
+      "name": "json: __proto__ key in entry rejected; Object.prototype untouched",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Entry contains an unsupported field."
+        ],
+        "collection": "x"
+      }
+    },
+    {
+      "name": "json: __proto__ key in example rejected; Object.prototype untouched",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Example contains an unsupported field."
+        ],
+        "collection": "x"
+      }
+    },
+    {
+      "name": "json: constructor / prototype keys rejected",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0,
+      "summary": {
+        "entries": 0,
+        "issues": [
+          "1: Entry contains an unsupported field."
+        ],
+        "collection": "Review"
+      }
+    },
+    {
+      "name": "json: ~2 MiB of nested arrays handled without crashing",
+      "pass": true,
+      "outcome": "threw",
+      "error": "File must be an object.",
+      "ms": 130
+    },
+    {
+      "name": "export: serialize -> parse -> serialize is byte-identical, links and order kept",
+      "pass": true,
+      "outcome": "returned",
+      "ms": 0.3,
+      "summary": {
+        "entries": 3
+      }
+    },
+    {
+      "name": "export: serializer rejects invalid collection metadata",
+      "pass": true,
+      "outcome": "threw",
+      "error": "Collection ID must use the native user UUID namespace.",
+      "ms": 0
+    }
+  ]
+}

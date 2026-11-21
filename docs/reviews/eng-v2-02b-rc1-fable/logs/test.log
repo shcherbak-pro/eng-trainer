@@ -1,0 +1,86 @@
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ preserves all baseline record values, array order, identities, metadata and explicit links (15.2043ms)
+✔ generation is deterministic and generated files equal the validated source catalog (101.5695ms)
+✔ explicit order preserves each collection even when pack discovery order changes (5.7035ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (15.8568ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (34.2313ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (3.1314ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (0.6756ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (28.7068ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (2.9208ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (76.0821ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 594.2393
+
+ RUN  v3.2.7 <review-copy>
+
+ ✓ src/collections/format.test.ts (35 tests) 15ms
+ ✓ src/features/flashcards/flashcards.test.ts (50 tests) 46ms
+ ✓ src/content/catalog.test.ts (8 tests) 364ms
+   ✓ built-in content catalog > finds every phrase, word and verb by its own text, wherever it is in the catalog  349ms
+ ✓ src/collections/service.test.ts (18 tests) 190ms
+ ✓ src/content/builtIn.test.ts (10 tests) 3956ms
+   ✓ complete search through the loaded shared catalog > matches a direct field-by-field oracle for every searchable field across all packs  3608ms
+ ✓ src/state/progress.test.ts (26 tests) 3816ms
+   ✓ learning state in IndexedDB > returns items to the learning pool with "Learn again"  667ms
+   ✓ learning state in IndexedDB > resets one deck without touching the others  520ms
+ ✓ src/features/collections/retainedLearning.test.ts (5 tests) 4021ms
+   ✓ retained collection learning state > restores all order after deletion, answers and reload  2187ms
+   ✓ retained collection learning state > restores topic:Synthetic topic order after deletion, answers and reload  623ms
+   ✓ retained collection learning state > unhides only available words and restores hidden IDs after reimport  338ms
+   ✓ retained collection learning state > unhides only available phrases and restores hidden IDs after reimport  604ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts (27 tests) 10116ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1433ms
+   ✓ Flashcards page > flips the card on tap and shows the translation and example  611ms
+   ✓ Flashcards page > buttons > "Keep learning" keeps the card in the pool and brings it back later  369ms
+   ✓ Flashcards page > keyboard > ignores shortcuts combined with modifier keys  355ms
+   ✓ Flashcards page > swipe > right marks the card as learned and moves on  338ms
+   ✓ Flashcards page > decks > shows only the cards of the selected topic  302ms
+   ✓ Flashcards page > decks > shares the learned status between a topic deck and All Vocabulary  338ms
+   ✓ Flashcards page > decks > keeps entries that look alike apart: learning one does not mark the other  343ms
+   ✓ Flashcards page > decks > shows a completed state when every card of the deck is learned  304ms
+   ✓ Flashcards page > decks > shows an empty state when a topic has no cards to study  348ms
+   ✓ Flashcards page > decks > falls back to the first topic when the saved topic no longer exists  361ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  702ms
+   ✓ Flashcards page > saved progress > resumes in the middle of a round after a reload  617ms
+   ✓ Flashcards page > saved progress > respects items already marked as learned on the Phrases page  325ms
+   ✓ Flashcards page > learned vocabulary > lists learned cards and returns one to the deck with "Learn again"  345ms
+   ✓ Flashcards page > learned vocabulary > resets the progress of the selected topic only after confirmation  323ms
+ ✓ src/app/App.test.ts (14 tests) 12000ms
+   ✓ application shell > preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry  2608ms
+   ✓ application shell > loads the built-in content from its own base path and shows the index  403ms
+   ✓ application shell > renders every screen from the catalog  411ms
+   ✓ application shell > searches the whole catalog, not only the items shown on the current page  506ms
+   ✓ application shell > opens the saved screen and keeps progress and preferences after a reload  1052ms
+   ✓ application shell > does not write anything while starting with existing saved state  458ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps "consequently" and "Consequently, …" apart in every view, also after a reload  1153ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps distinct entries with similar-looking text independent: C++ and C#  1382ms
+   ✓ learning identity across Phrases, Focus and Flashcards > treats a phrase and its linked word-index entry as one learning identity: the phrase id  1332ms
+   ✓ loading and storage errors > handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state  625ms
+   ✓ loading and storage errors > shows an error and a retry when the content cannot be loaded  554ms
+   ✓ loading and storage errors > stops with a visible error when the saved state cannot be opened, and can continue without saving  646ms
+   ✓ loading and storage errors > shows a notice when a change cannot be saved, until saving succeeds  590ms
+
+ Test Files  9 passed (9)
+      Tests  193 passed (193)
+   Start at  21:19:14
+   Duration  13.67s (transform 2.31s, setup 460ms, collect 4.15s, tests 34.52s, environment 4.87s, prepare 988ms)
+

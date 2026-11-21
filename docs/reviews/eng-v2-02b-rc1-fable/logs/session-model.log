@@ -1,0 +1,20 @@
+
+ RUN  v3.2.7 <review-copy>
+
+ ✓ src/review-fable-rc1/session-model.test.ts (11 tests) 36546ms
+   ✓ F1 model: shared-deck order preservation > RC1 preserveUnavailableCards satisfies the oracle (all deck, 3,000 random runs × 60 steps)  15461ms
+   ✓ F1 model: shared-deck order preservation > detects mutant: pre-RC1 (save the visible session directly) (all deck)  1294ms
+   ✓ F1 model: shared-deck order preservation > detects mutant: absent IDs moved to the end (all deck)  2156ms
+   ✓ F1 model: shared-deck order preservation > detects mutant: cursor index not remapped (all deck)  2096ms
+   ✓ F1 model: shared-deck order preservation > detects mutant: learned/hidden known cards retained (all deck)  1682ms
+   ✓ F1 model: shared-deck order preservation > RC1 preserveUnavailableCards satisfies the oracle (topic deck, 3,000 random runs × 60 steps)  10564ms
+   ✓ F1 model: shared-deck order preservation > detects mutant: pre-RC1 (save the visible session directly) (topic deck)  677ms
+   ✓ F1 model: shared-deck order preservation > detects mutant: absent IDs moved to the end (topic deck)  715ms
+   ✓ F1 model: shared-deck order preservation > detects mutant: cursor index not remapped (topic deck)  945ms
+   ✓ F1 model: shared-deck order preservation > detects mutant: learned/hidden known cards retained (topic deck)  933ms
+
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  21:24:40
+   Duration  37.51s (transform 69ms, setup 57ms, collect 55ms, tests 36.55s, environment 402ms, prepare 99ms)
+

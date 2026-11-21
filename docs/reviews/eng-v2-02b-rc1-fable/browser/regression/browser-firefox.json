@@ -1,0 +1,571 @@
+{
+  "engine": "firefox",
+  "version": "153.0",
+  "results": [
+    {
+      "engine": "firefox",
+      "name": "fresh-database",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "version": 2,
+      "stores": [
+        "flashcardSessions",
+        "learnPasses",
+        "progress",
+        "settings",
+        "userCollections",
+        "userEntries"
+      ],
+      "startupWrites": [],
+      "records": {
+        "flashcardSessions": 0,
+        "learnPasses": 0,
+        "progress": 0,
+        "settings": 0,
+        "userCollections": 0,
+        "userEntries": 0
+      },
+      "status": "PASS",
+      "seconds": 0.7,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "upgrade-from-released-build-with-open-old-tab",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "released": {
+        "hero": {
+          "phrases": 566,
+          "words": 566,
+          "verbs": 339,
+          "focus": 3,
+          "hidden": 2
+        },
+        "card": {
+          "term": "In my experience, …",
+          "stats": "561 remaining 3 learned Card 4 of 561"
+        },
+        "storeNames": [
+          "flashcardSessions",
+          "learnPasses",
+          "progress",
+          "settings"
+        ]
+      },
+      "learnPassVisible": true,
+      "candidateNavigationWrites": [
+        "put:settings:activePage",
+        "put:settings:activePage"
+      ],
+      "oldTabSaveFailsVisibly": true,
+      "releasedBuildAfterUpgrade": "Unable to open your saved progress The browser storage (IndexedDB) could not be opened or read, so the app did not start with empty progress on top of it. IndexedDB open failed: The operation failed because the stored database is a higher version than the version requested. You can try again, or con",
+      "preserved": {
+        "learned": [
+          "phrase-005",
+          "phrase-084",
+          "phrase-001"
+        ],
+        "sessions": [
+          "all",
+          "topic:Linking"
+        ],
+        "learnPasses": [
+          "pass-review"
+        ],
+        "settings": {
+          "activePage": "phrases",
+          "flashcardMode": "all",
+          "phrasePageSize": 10,
+          "theme": "dark"
+        }
+      },
+      "status": "PASS",
+      "seconds": 3.8,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "blocked-upgrade-retry-while-blocked-and-recovery",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "blockedMessage": "Unable to open your saved progress The browser storage (IndexedDB) could not be opened or read, so the app did not start with empty progress on top of it. IndexedDB open failed: Close other eng-trainer tabs so browser storage can be upgraded, then try again. Y",
+      "retryWhileBlocked": "still loading",
+      "afterHolderClosed": "recovered without another click",
+      "unhandled": [],
+      "opens": 3,
+      "status": "PASS",
+      "seconds": 3.9,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "failed-upgrade-throw-rolls-back",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "upgradeError": "IndexedDB open failed: Injected upgrade failure",
+      "retried": true,
+      "unhandled": [],
+      "status": "PASS",
+      "seconds": 0.5,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "failed-upgrade-abort-rolls-back",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "upgradeError": "IndexedDB open failed: A request was aborted, for example through a call to IDBTransaction.abort.",
+      "retried": true,
+      "unhandled": [],
+      "status": "PASS",
+      "seconds": 0.5,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "import-preview-cancel-confirm-catalog-reload",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "startupWritesWithHash": [
+        "put:settings:activePage"
+      ],
+      "previewSummary": "",
+      "previewReview": [
+        "New",
+        "Possible duplicate",
+        "Possible duplicate",
+        "New",
+        "New"
+      ],
+      "duplicateCount": "2",
+      "message": "Imported 5 entries. 0 identical entries were already present.",
+      "importWrites": [
+        "put:userCollections",
+        "put:userEntries",
+        "put:userEntries",
+        "put:userEntries",
+        "put:userEntries",
+        "put:userEntries"
+      ],
+      "collection": {
+        "name": "Qzx review set",
+        "revision": 1,
+        "lastImport": {
+          "fileName": "Review words.csv",
+          "format": "csv",
+          "importedAt": "2026-11-21T19:37:01.053Z",
+          "added": 5,
+          "skipped": 0
+        }
+      },
+      "collectionPlusCategory": [
+        "bank Money"
+      ],
+      "collectionCategoryHidden": 0,
+      "builtInPlusMoneyCategory": 0,
+      "flashcardsCollectionDeck": {
+        "term": "Let me explain, briefly",
+        "stats": "4 remaining 0 learned Card 1 of 4"
+      },
+      "flashcardsBuiltInDeck": {
+        "term": "I would start by saying that …",
+        "stats": "562 remaining 2 learned Card 1 of 562"
+      },
+      "flashcardsAllDeck": {
+        "term": "Before going into details, I’d say that …",
+        "stats": "566 remaining 2 learned Card 3 of 566"
+      },
+      "deckKeysSaved": [
+        "all",
+        "topic:Linking"
+      ],
+      "heroAtFirstShellRender": "567 phrases 570 words 339 verbs 3 focus 3 hidden",
+      "collectionFilterSetting": "",
+      "status": "PASS",
+      "seconds": 7.4,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "delete-retains-progress-and-reimport-restores",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "collectionDeckKey": "collection:[\"user:c0110001-feed-4abc-8abc-000000000000\",\"all\"]",
+      "exportFileName": "Xavier-set.json",
+      "removalPrompt": "Remove Xavier set and its vocabulary from this browser? Export it first if you want a backup. Learning progress is kept under the original IDs and becomes visible again if you import the same native JSON. Other collections and built-in vocabulary stay intact. Confirm removal Keep collection",
+      "hero": {
+        "before": {
+          "phrases": 568,
+          "words": 572,
+          "verbs": 339,
+          "focus": 5,
+          "hidden": 3
+        },
+        "removed": {
+          "phrases": 566,
+          "words": 568,
+          "verbs": 339,
+          "focus": 3,
+          "hidden": 2
+        },
+        "restored": {
+          "phrases": 568,
+          "words": 572,
+          "verbs": 339,
+          "focus": 5,
+          "hidden": 3
+        }
+      },
+      "unhideAllPhrasesShown": true,
+      "unhideAllWordsShownWithOnlyOrphanedOrBuiltInHidden": true,
+      "filterOptionsAfterRemoval": [
+        "All collections",
+        "Built-in vocabulary",
+        "yankee"
+      ],
+      "sharedAllDeck": {
+        "xIdsBeforeDeletion": 3,
+        "xIdsAfterAnswerWhileDeleted": 3
+      },
+      "reimportPreview": "Xavier-set.json: 6 new entries; 0 identical entries already present.",
+      "collectionDeck": {
+        "beforeDeletion": {
+          "term": "xenon",
+          "stats": "3 remaining 1 learned Card 2 of 3"
+        },
+        "afterReimport": {
+          "term": "xenon",
+          "stats": "3 remaining 1 learned Card 2 of 3"
+        }
+      },
+      "afterReset": {
+        "learnedPhrases": [],
+        "hero": {
+          "phrases": 568,
+          "words": 572,
+          "verbs": 339,
+          "focus": 0,
+          "hidden": 0
+        },
+        "userEntries": 8
+      },
+      "status": "PASS",
+      "seconds": 11.1,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "orphaned-progress-affordances-after-removal",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "heroHiddenAfterRemoval": 0,
+      "unhideAllWordsShown": false,
+      "hiddenWordsListedWhenShowingHidden": 0,
+      "unhideAllPhrasesShown": false,
+      "wordHiddenAfterReimport": true,
+      "phraseHiddenAfterReimport": true,
+      "status": "PASS",
+      "seconds": 5.8,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "two-tabs-stale-writes-are-refused",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "staleTabUiStillShows": [
+        "Xavier set"
+      ],
+      "previewInStaleTabAfterRemoteDelete": "noop.json: 0 new entries; 6 identical entries already present.",
+      "outcomes": {
+        "rename": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: Saved data changed in another session. Reload and review the import again. Check available browser storage and try again.",
+        "remove": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: Saved data changed in another session. Reload and review the import again. Check available browser storage and try again.",
+        "append": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: Saved data changed in another session. Reload and review the import again. Check available browser storage and try again.",
+        "noOp": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: Saved data changed in another session. Reload and review the import again. Check available browser storage and try again.",
+        "newCollectionRace": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: Saved data changed in another session. Reload and review the import again. Check available browser storage and try again.",
+        "noOpAfterRemoteDelete": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: Saved data changed in another session. Reload and review the import again. Check available browser storage and try again."
+      },
+      "unhandled": [],
+      "status": "PASS",
+      "seconds": 4.2,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "native-transaction-failures-and-retry",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "cases": {
+        "abortAfterRequestsSucceed": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: A request was aborted, for example through a call to IDBTransaction.abort. Check available browser storage and try again.",
+        "quotaOnEntryPut": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: Injected quota exceeded Check available browser storage and try again.",
+        "renameAbort": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: AbortError Check available browser storage and try again.",
+        "deleteAbortAfterRequestsSucceed": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: A request was aborted, for example through a call to IDBTransaction.abort. Check available browser storage and try again."
+      },
+      "faultHits": 0,
+      "unhandled": [],
+      "status": "PASS",
+      "seconds": 3.9,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "security-inert-text-and-local-only",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requestsDuringImportExport": [],
+      "views": {
+        "collections": {
+          "injectedImg": 0,
+          "injectedSvg": 0,
+          "injectedScripts": 0,
+          "literalTextShown": true
+        },
+        "flashcards": {
+          "injectedImg": 0,
+          "injectedSvg": 0,
+          "injectedScripts": 0,
+          "literalTextShown": true
+        }
+      },
+      "xss": null,
+      "exportFileName": "Name-img-src-x-onerror-window-__xss-3-b-.json",
+      "rejected": {
+        "protoEnvelope": "File contains an unsupported field.",
+        "protoEntry": "Nothing can be imported until these issues are fixed: Record 1: Entry contains an unsupported field.",
+        "invalidUtf8": "The file could not be read as UTF-8. Save it as CSV UTF-8 or native JSON and try again.",
+        "utf16": "The file could not be read as UTF-8. Save it as CSV UTF-8 or native JSON and try again.",
+        "oversize": "Choose a file no larger than 2 MiB.",
+        "deepJson": "File must be an object.",
+        "quotes": "Malformed CSV: an opening quote has no closing quote.",
+        "manyRows": "A collection may contain at most 1000 entries."
+      },
+      "prototypePolluted": null,
+      "exportFileNames": {
+        "../../etc/passwd": "-etc-passwd.json",
+        "CON": "Untitled.json",
+        "Мої слова": "-.json",
+        "Слова 2026": "-2026.json",
+        "😀 emoji": "-emoji.json",
+        "aaaaaaaaaaaaaaaaaaaa": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+      },
+      "status": "PASS",
+      "seconds": 7.8,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "export-roundtrip-same-and-fresh-environment",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "sameEnvironmentPreview": "Xavier-set.json: 0 new entries; 6 identical entries already present.",
+      "sameEnvironmentMessage": "No changes needed. All 6 entries are already present.",
+      "bytes": 1995,
+      "entries": 6,
+      "links": 1,
+      "status": "PASS",
+      "seconds": 2.8,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "ui-keyboard-and-responsive-layout",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "tabOrderFromFileInput": [
+        "input[text]:Collection name",
+        "input[checkbox]:I reviewed these possible dupl",
+        "div:Import entries",
+        "button[button]:Cancel import",
+        "button[button]:Rename LLLLLLLLLLLLLLLLLLLLLLL",
+        "button[button]:Export LLLLLLLLLLLLLLLLLLLLLLL",
+        "button[button]:Remove LLLLLLLLLLLLLLLLLLLLLLL",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)"
+      ],
+      "keyboardImport": "Imported 5 entries. 0 identical entries were already present.",
+      "focusBeforeChoosingFile": "input[file]",
+      "focusAfterError": "input[file]",
+      "focusAfterPreviewAppears": "body",
+      "focusAfterOneTabFromThere": "input:Collection name",
+      "focusAfterRenameOpens": "Rename LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL",
+      "layout": {
+        "1440x1000": {
+          "docOverflow": 0,
+          "overflowing": [],
+          "navButtons": 11,
+          "navRows": 2,
+          "minNavHeight": 42,
+          "navInside": true,
+          "desktopNavClipped": false,
+          "collectionsInNav": true,
+          "lastActionClickable": true,
+          "pageEndAboveNav": null,
+          "bottomGeometry": null
+        },
+        "1000x900": {
+          "docOverflow": 0,
+          "overflowing": [],
+          "navButtons": 11,
+          "navRows": 2,
+          "minNavHeight": 42,
+          "navInside": true,
+          "desktopNavClipped": false,
+          "collectionsInNav": true,
+          "lastActionClickable": true,
+          "pageEndAboveNav": null,
+          "bottomGeometry": null
+        },
+        "390x844": {
+          "docOverflow": 0,
+          "overflowing": [
+            "svelte-1huuhsz",
+            "THEAD",
+            "TR",
+            "svelte-1huuhsz",
+            "svelte-1huuhsz"
+          ],
+          "navButtons": 8,
+          "navRows": 2,
+          "minNavHeight": 48,
+          "navInside": true,
+          "desktopNavClipped": null,
+          "collectionsInNav": true,
+          "lastActionClickable": true,
+          "pageEndAboveNav": false,
+          "bottomGeometry": {
+            "innerHeight": 844,
+            "scrollY": 2089,
+            "maxScroll": 2295,
+            "navTop": 727,
+            "navHeight": 117,
+            "lastCardBottom": 803,
+            "footerBottom": 894
+          },
+          "lastCardButtonClickable": true
+        },
+        "320x640": {
+          "docOverflow": 0,
+          "overflowing": [
+            "svelte-1huuhsz",
+            "THEAD",
+            "TR",
+            "svelte-1huuhsz",
+            "svelte-1huuhsz"
+          ],
+          "navButtons": 8,
+          "navRows": 2,
+          "minNavHeight": 48,
+          "navInside": true,
+          "desktopNavClipped": null,
+          "collectionsInNav": true,
+          "lastActionClickable": true,
+          "pageEndAboveNav": true,
+          "bottomGeometry": {
+            "innerHeight": 640,
+            "scrollY": 2804,
+            "maxScroll": 2804,
+            "navTop": 523,
+            "navHeight": 117,
+            "lastCardBottom": 373,
+            "footerBottom": 484
+          },
+          "lastCardButtonClickable": true
+        }
+      },
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: 390x844: page end clears the fixed bottom navigation |  | false !== true |  |     at <repo>/docs/reviews/eng-v2-02b-fable/browser-review.mjs:871:44 |     at async <repo>/docs/reviews/eng-v2-02b-fable/browser-review.mjs:1001:11",
+      "seconds": 7,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "performance-1000-entry-collections",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "imports": [
+        {
+          "collection": 0,
+          "bytes": 1966311,
+          "previewMs": 482,
+          "saveMs": 480
+        },
+        {
+          "collection": 1,
+          "bytes": 422091,
+          "previewMs": 245,
+          "saveMs": 414
+        },
+        {
+          "collection": 2,
+          "bytes": 422091,
+          "previewMs": 238,
+          "saveMs": 454
+        },
+        {
+          "collection": 3,
+          "bytes": 422091,
+          "previewMs": 348,
+          "saveMs": 461
+        },
+        {
+          "collection": 4,
+          "bytes": 422091,
+          "previewMs": 343,
+          "saveMs": 449
+        }
+      ],
+      "longTasksDuringImports": [],
+      "searchMs": {
+        "perf 3 term 99": 16,
+        "ж": 13,
+        "gamma": 15,
+        "переклад 5": 12,
+        "zzz-none": 23,
+        "(empty)": 17
+      },
+      "flashcardsOpenMs": 341,
+      "flashcardsStats": "5566 remaining 0 learned Card 1 of 5566",
+      "flashcardsFilterMs": 39,
+      "startupShellMs": {
+        "empty": 131,
+        "fiveCollections": 221
+      },
+      "heroAtShell": "1816 phrases 4316 words 339 verbs 0 focus 0 hidden",
+      "jsHeapUsedMB": {
+        "emptyAfterStartup": null,
+        "afterFiveImportsAndFlashcards": null,
+        "afterReloadWithFiveCollections": null
+      },
+      "savedEntries": 5000,
+      "status": "PASS",
+      "seconds": 6.6,
+      "blockedExternal": []
+    },
+    {
+      "engine": "firefox",
+      "name": "v1-isolation-after-v2-collections",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "v2LocalStorageCalls": 0,
+      "v1Requests": [
+        "/eng-trainer/v1/",
+        "/eng-trainer/v1/assets/index-C0A337ei.js",
+        "/eng-trainer/v1/assets/index-Bod3ovET.css",
+        "/eng-trainer/v1/data/materials.json",
+        "/eng-trainer/v1/favicon.svg"
+      ],
+      "v1State": [
+        "phrase-002"
+      ],
+      "status": "PASS",
+      "seconds": 1.7,
+      "blockedExternal": []
+    }
+  ]
+}

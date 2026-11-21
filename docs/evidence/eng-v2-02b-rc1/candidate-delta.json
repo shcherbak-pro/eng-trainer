@@ -1,0 +1,238 @@
+{
+  "baseline": "020babfaf24a14a0a1fdc15c13c90dde00ea9633",
+  "branch": "feature/eng-v2-02b-vocabulary-import",
+  "stagedFiles": 0,
+  "commitsCreated": 0,
+  "pushed": false,
+  "deployed": false,
+  "initialFingerprintFiles": 404,
+  "fableOriginalFingerprintMatchesBeforeEdit": 356,
+  "preservedReleaseFiles": [
+    {
+      "path": "docs/releases/eng-v2-02a-production/artifact-inventory.json",
+      "sha256": "d06b72119d49e465db2da5dff7d9eefd0171ec011dd7cd00d8a15bb5055a5850"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/browser-chromium.json",
+      "sha256": "2cedc5504ab057f6835883db543fd22d725aefab84841ebad1dabf306d321690"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/browser-firefox.json",
+      "sha256": "5a31816aecf77a2917724a34e645a91639cf2f679a436e6e6ace69e7cb7eedb8"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/chromium-v1-focus.png",
+      "sha256": "87388facd0fe87428602be4aafd2ad4a96cf4521d2470a42fbfeecf998185fb6"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/chromium-v2-focus.png",
+      "sha256": "32a426939b592d28120b3311ab9b37a30a5144c1963741ed85b0f3d803eba5ad"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/firefox-v1-focus.png",
+      "sha256": "92f1a9649176a1ec9ca1954b439ff5835c16093b67db380b126b96d7b1530745"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/firefox-v2-focus.png",
+      "sha256": "6a0ec880980663bc9f1cf90958c5cdd82da8543c9b9ab9863f313357ff353b5d"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/github-release.json",
+      "sha256": "ad984a05dee5cd2d5b398289ab04aa7e50e83c70f665a0714d4e6be717d3af8b"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/navigation-observation.json",
+      "sha256": "0e53a441fbc53ee76ff005fc8d59403753ee293286c844515d251c2f09fcdb1b"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/production-content.json",
+      "sha256": "7d1b74cd743e719ca0cc8a4b3b2f05ce8cbc691911625d5c0baa5ae330a0887f"
+    },
+    {
+      "path": "docs/releases/eng-v2-02a-production/smoke.mjs",
+      "sha256": "840bed1f94f8f6defc0b39bbe45f47acccb91115acf2fb5d875fee74cab4dba0"
+    },
+    {
+      "path": "docs/releases/ENG-V2-02A.md",
+      "sha256": "4275221503a74d60c3474cc515f03b5383d4a1a4c647f0c616d7828bc301b857"
+    }
+  ],
+  "preservedIndependentReviewFiles": 48,
+  "preservedOriginalImplementationEvidenceFiles": 20,
+  "generatedContentTracked": false,
+  "v1Unchanged": true,
+  "databaseImplementationUnchangedFromReviewedCandidate": true,
+  "changedExistingFiles": [
+    {
+      "path": "docs/architecture/USER-COLLECTIONS.md",
+      "beforeSha256": "d0f0c968f1d8df5adaaccec41fb75757e183bd2ea9bc31bb497a923bd7014e3b",
+      "afterSha256": "077055edee2974563c8942e76c039ff13c416b95b286b7e36ac71c0b991fdf0b"
+    },
+    {
+      "path": "docs/handoffs/ENG-V2-02B.md",
+      "beforeSha256": "7b81a58644dcb8b928ffdb4e90fef3314544eee4f2541dfdd8abc12989044b7a",
+      "afterSha256": "8a343bba315fc87f9cff65dd6c46a198ce9ca4e2cdf80d7af79301242ea6b8d4"
+    },
+    {
+      "path": "src/features/flashcards/flashcards.test.ts",
+      "beforeSha256": "df72808e6f6fb50ad6bc0fdfce3d6ea6a90f8b0d577a7481e6cd205d067ecaf7",
+      "afterSha256": "696c8ed83e8061129a38429a2859ebeff219c3651480ac5fb3f7cfce2ecc47b2"
+    },
+    {
+      "path": "src/features/flashcards/flashcards.ts",
+      "beforeSha256": "1596337ccb63afc353e3f38e8fb93ad8fb1299474a80d0a7e7b6ef43e06806eb",
+      "afterSha256": "40e3155a5668b46890d72002cedbe446542b101818fe2dbe712dc340360a72bf"
+    },
+    {
+      "path": "src/features/flashcards/FlashcardsPage.svelte",
+      "beforeSha256": "56d516f623eccb51e4d9c859deb3604ca9726ec7989f4658453a6b6673513ddb",
+      "afterSha256": "d40ca069f1f73e8d188f56a4b250ff0d69d1f69d29727808736cea2ae9989aba"
+    },
+    {
+      "path": "src/features/vocabulary/IrregularVerbsPage.svelte",
+      "beforeSha256": "d01ff85f1cf61758643ba743b96238bcd83a17fdb09fb28d56486e71f6bc3ee6",
+      "afterSha256": "1aa4ba9681b7fcfae407802a7750999a5c4ba2d90a0dc19b1af7a0785bbfdd46"
+    },
+    {
+      "path": "src/features/vocabulary/PhrasesPage.svelte",
+      "beforeSha256": "cb3e2b227ecc53250832fa38eccab5e2e5ec75519cb91c2008927d3c7d1adace",
+      "afterSha256": "8998756e897a11a4eb751c86ba703028b3970f1b08e5c4dedfb653f925edb235"
+    },
+    {
+      "path": "src/features/vocabulary/WordIndexPage.svelte",
+      "beforeSha256": "d14abba6632c3033647f748c79c464da2127f0314cf87da8da473120a26a23e7",
+      "afterSha256": "c568e6b8db20620d13c284afb6bf16b1e69a1ff3567ea9c7df7065d959c3fa47"
+    },
+    {
+      "path": "src/state/progress.ts",
+      "beforeSha256": "b173cc79ff8977f8cf85b1b183fce4a434fec59844671b18637da51b072e5819",
+      "afterSha256": "059f3eab629f7b2b196e432356530eda67dee44d140982c9f1c29a6935fdee13"
+    }
+  ],
+  "addedFiles": [
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/README.md",
+      "sha256": "4d172ae12384c66359cf113134cdd41badbb7708551dc28e417e5ee209ba55f6"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/artifact.json",
+      "sha256": "4f82e14096c7f2f8a36f4c93807a4a450a7073e2d87a79b08db4132d253aa311"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/baseline-browser/browser-chromium.json",
+      "sha256": "ae0939295f33098b882589165a4723a24481a2e852de660c8124402bb71566e6"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/baseline-browser/browser-firefox.json",
+      "sha256": "9f19de33904b728791ecc381cde3e487e8aa49dca26d03cee3d830e61ceb712d"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/baseline-browser/chromium-collections.png",
+      "sha256": "6e2abd9fd80b66dca5df9cb8f31268d434ad2779a1b6bbf3787b8452da7e60dd"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/baseline-browser/chromium-mobile.png",
+      "sha256": "9c3c88687aeeb91d07b75e1e2e38851300f926230f1e1aed341563a9b76ff2a8"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/baseline-browser/chromium-synthetic-export.json",
+      "sha256": "cf11049f0bda1900ccf04bbf76d3d66e4a0cff2ef539f0284d8189b3de33e68c"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/baseline-browser/firefox-collections.png",
+      "sha256": "ef1683624ef9b0439521482a56117c9849c6bce8bf46bd5ce333c15fe3988d59"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/baseline-browser/firefox-mobile.png",
+      "sha256": "1125f9cc36f1b40c6bf408ccfadf4db748ecaca70831793bef96db01da4d2402"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/baseline-browser/firefox-synthetic-export.json",
+      "sha256": "0d6277b0e74d837a0b0960170e452f5e1772c589f0266fabc9542d1d1e7c4c25"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser-check.mjs",
+      "sha256": "1d13fc360123261ed69b1153190515a9425d88ebc26fb90e4e37a65fb6309c1a"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser/browser-chromium.json",
+      "sha256": "f761b77dc3788271eb1710ca9d0356bbab19ef764d9a55ed3c616afc4a3c9f36"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser/browser-firefox.json",
+      "sha256": "7eceb30a61c67a2d45815814b82890b0f45594040327c9f1825cfbe8d3c98bb9"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser/chromium-F1-all-delete-learn-reload-restore.png",
+      "sha256": "d1a70009a86adb53f830d1d9741506f5a3d63278fa4e9fb39c8a0c665d97ea7e"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser/chromium-F1-topic-delete-learn-reload-restore.png",
+      "sha256": "7fd7b5b7af685ac17c63ecdc1eb774f1d561e35fba90a8b7f8ed22a012f38e97"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser/chromium-synthetic-export.json",
+      "sha256": "91a1dfb2f83bd9e8c01ab03b56744c1378d41855757eea893a80df5566f900ad"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser/firefox-F1-all-delete-learn-reload-restore.png",
+      "sha256": "0665621024557780677020e081517df595bccae3c54d91d0c47f3a1c7a418416"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser/firefox-F1-topic-delete-learn-reload-restore.png",
+      "sha256": "c639fb8ec94aa280179484154f1e02b182390e33db04f38c14b5920676b69f3f"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/browser/firefox-synthetic-export.json",
+      "sha256": "91a1dfb2f83bd9e8c01ab03b56744c1378d41855757eea893a80df5566f900ad"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/collect-evidence.mjs",
+      "sha256": "0c30d1df2c1a564d95678b67cdc1f0bb2ef1c9ef034440846ea0706c92cdffca"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/git-status.txt",
+      "sha256": "1578f32a1598b2794463b169e66060cf58e6ef85c3819b843c8ca1673fd58d16"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/logs/baseline-browser.log",
+      "sha256": "1e2decf43ebaa532d7946dd02acc3cc7b5897b03a1af4d531024dd18f50fdecf"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/logs/browser.log",
+      "sha256": "aca686385b34ec4050f817abf132d110e75d18b56f7aff66c2285064fd83a1c8"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/logs/build-site.log",
+      "sha256": "96b870ff2f0391190a327a76f73f98a405684f7803880ffd88a86630e21823ee"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/logs/check-v1.log",
+      "sha256": "46f334755ed39b785963821d25efed23dee3123ae61f225481312424c88627f7"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/logs/check.log",
+      "sha256": "d057f22f712e7c6f2987df7d41e058e4b88e0559acbe1a67bf677cd1998e8e85"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/logs/test-v1.log",
+      "sha256": "26247765dc7129ca1ee99a1178f17061a64ec2f03da3df0a0e25fbc8dd4def13"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/logs/test.log",
+      "sha256": "9d8dd553443209da97ab73c9dbeedd46fad272c5b8a00a1bd684d1f019ad7d5c"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/logs/verify-content.log",
+      "sha256": "d7433e2da6e9aaa34351314e9b6d18c6c1cfdc2e0795953456f3a8eb74788514"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02b-rc1/sanitization.json",
+      "sha256": "e7d3da9da2ae6690dab3187b3b647c4562d1db7bb5e3773ee33be270f0be60bf"
+    },
+    {
+      "path": "src/features/collections/retainedLearning.test.ts",
+      "sha256": "377ea3cb1043d4c57fca40709ec9b693d79c2797a5a182556f21bfada8ff6522"
+    }
+  ]
+}

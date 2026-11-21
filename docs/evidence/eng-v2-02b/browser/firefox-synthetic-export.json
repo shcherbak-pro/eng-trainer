@@ -1,0 +1,55 @@
+{
+  "format": "eng-trainer-vocabulary",
+  "version": 1,
+  "collection": {
+    "id": "user:161f1551-005c-4834-85a5-55530e21d7cc",
+    "name": "Renamed collection",
+    "description": ""
+  },
+  "entries": [
+    {
+      "id": "user:161f1551-005c-4834-85a5-55530e21d7cc:entry:2190a7ab-374f-4cd4-9bb7-29feb9dec8d6",
+      "kind": "word",
+      "english": "local bank",
+      "translation": "банк",
+      "topic": "Local words",
+      "examples": [
+        {
+          "en": "I visit the local bank."
+        }
+      ]
+    },
+    {
+      "id": "user:161f1551-005c-4834-85a5-55530e21d7cc:entry:e19b554d-9d43-48c6-9271-2258811da19a",
+      "kind": "word",
+      "english": "local bank",
+      "translation": "берег",
+      "topic": "Local words",
+      "examples": [
+        {
+          "en": "A local bank of a river."
+        }
+      ]
+    },
+    {
+      "id": "user:161f1551-005c-4834-85a5-55530e21d7cc:entry:160b87b5-6c30-4fc5-9133-39fd8300fc4f",
+      "kind": "phrase",
+      "english": "A local phrase",
+      "translation": "Місцева фраза",
+      "topic": "Local phrases",
+      "examples": [
+        {
+          "en": "Here is a local phrase."
+        }
+      ]
+    },
+    {
+      "id": "user:161f1551-005c-4834-85a5-55530e21d7cc:entry:a12c735a-cc1d-4ff8-9459-bac041e8f524",
+      "kind": "word",
+      "english": "<img src=x onerror=alert(1)>",
+      "translation": "Literal safe text",
+      "topic": "Local words",
+      "examples": []
+    }
+  ]
+}

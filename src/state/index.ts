@@ -3,6 +3,7 @@ import { connectStorage, disablePersistence } from './persistence';
 import { progress } from './progress';
 import { settings } from './settings';
 import { viewState } from './viewState';
+import { connectCollections, disableCollections, readCollections } from '../collections/service';
 
 /**
  * Opens the database and loads the saved state.
@@ -17,8 +18,10 @@ export async function initState(): Promise<void> {
 
   try {
     const records = await storage.readAll();
+    const collections = readCollections(records);
     progress.hydrate(records);
     settings.hydrate(records);
+    connectCollections(storage, collections);
   } catch (error) {
     storage.close();
     throw error;
@@ -30,6 +33,7 @@ export async function initState(): Promise<void> {
 /** Lets the app run with default state when storage is unavailable. Nothing is saved. */
 export function initStateWithoutStorage(): void {
   disablePersistence();
+  disableCollections();
 }
 
 /**

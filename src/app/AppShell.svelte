@@ -15,8 +15,13 @@
   /** The preserved v1 application is published next to this one. */
   const v1Url = `${import.meta.env.BASE_URL}v1/`;
 
-  $: focusCount = $progress.favoriteBlocks.length + $progress.favoritePhrases.length + $progress.favoriteWords.length + $progress.favoriteIrregular.length;
-  $: hiddenCount = $progress.hiddenPhrases.length + $progress.hiddenWords.length + $progress.hiddenIrregular.length;
+  function knownCount(ids: string[], entries: { id: string }[]): number {
+    const known = new Set(entries.map((item) => item.id));
+    return ids.filter((id) => known.has(id)).length;
+  }
+  // Removed user entries retain progress for reimport, but do not inflate visible counts.
+  $: focusCount = knownCount($progress.favoriteBlocks, catalog.blocks) + knownCount($progress.favoritePhrases, catalog.phrases) + knownCount($progress.favoriteWords, catalog.wordIndex) + knownCount($progress.favoriteIrregular, catalog.irregularVerbs);
+  $: hiddenCount = knownCount($progress.hiddenPhrases, catalog.phrases) + knownCount($progress.hiddenWords, catalog.wordIndex) + knownCount($progress.hiddenIrregular, catalog.irregularVerbs);
 </script>
 
 <div class="app-shell">

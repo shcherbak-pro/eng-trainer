@@ -194,17 +194,17 @@ describe('application shell', () => {
     const app = await startApp();
     await waitFor(() => app.root.querySelector('.error-card') !== null, 'the pack error');
     expect(app.root.querySelector('.app-shell')).toBeNull();
-    expect(await readDatabase()).toEqual(stored);
+    expect(await readDatabase()).toEqual({ ...stored, userCollections: {}, userEntries: {} });
     vi.stubGlobal('fetch', vi.fn(createContentFetch()));
     press(app, app.root, 'Try again');
     await ready(app);
     expect(phraseCard(app, first.phrase).classList.contains('learned')).toBe(true);
     expect(phraseCard(app, last.phrase).classList.contains('learned')).toBe(false);
     await app.saved();
-    expect(await readDatabase()).toEqual(stored);
+    expect(await readDatabase()).toEqual({ ...stored, userCollections: {}, userEntries: {} });
     const reloaded = await reload(app);
     expect(phraseCard(reloaded, first.phrase).classList.contains('learned')).toBe(true);
-    expect(await readDatabase()).toEqual(stored);
+    expect(await readDatabase()).toEqual({ ...stored, userCollections: {}, userEntries: {} });
   });
 
   it('loads the built-in content from its own base path and shows the index', async () => {
@@ -307,7 +307,7 @@ describe('application shell', () => {
     await ready(app);
     await app.saved();
 
-    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
+    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {}, userCollections: {}, userEntries: {} });
   });
 });
 
@@ -469,7 +469,7 @@ describe('loading and storage errors', () => {
     expect(text(app.root)).toContain('Unable to open your saved progress');
     expect(text(app.root)).toMatch(/IndexedDB read failed/);
     expect(await rejections.stop()).toEqual([]);
-    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
+    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {}, userCollections: {}, userEntries: {} });
 
     [...app.root.querySelectorAll('button')].find((item) => text(item) === 'Try again')!.click();
     await ready(app);
@@ -480,7 +480,7 @@ describe('loading and storage errors', () => {
     expect(app.root.querySelector('.storage-notice')).toBeNull();
 
     await app.saved();
-    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
+    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {}, userCollections: {}, userEntries: {} });
   });
 
   it('shows an error and a retry when the content cannot be loaded', async () => {

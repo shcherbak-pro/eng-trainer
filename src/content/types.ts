@@ -5,6 +5,7 @@ export type WordExample = {
 
 export type Phrase = {
   id: string;
+  collectionId?: string;
   category: string;
   phrase: string;
   example?: string;
@@ -57,6 +58,7 @@ export type TrainingBlock = {
 
 export type WordIndexItem = {
   id: string;
+  collectionId?: string;
   sourcePhraseId?: string;
   term: string;
   category: string;
@@ -95,6 +97,7 @@ export type MaterialsMeta = {
 };
 
 export type Materials = {
+  collections?: { id: string; name: string }[];
   meta: MaterialsMeta;
   blocks: TrainingBlock[];
   phrases: Phrase[];

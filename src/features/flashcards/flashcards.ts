@@ -64,6 +64,7 @@ function createPhraseCard(phrase: Phrase): Flashcard {
   const examples = cleanExamples(phrase.examples);
 
   card.phraseId = phrase.id;
+  if (phrase.collectionId) card.collectionId = phrase.collectionId;
   addTopic(card, phrase.category);
   card.translation = phrase.translation ?? '';
   card.transcription = phrase.transcription ?? '';
@@ -78,6 +79,7 @@ function createPhraseCard(phrase: Phrase): Flashcard {
 
 /** Adds a word-index entry to the card it belongs to: its phrase's card, or its own. */
 function addWord(card: Flashcard, word: WordIndexItem): void {
+  if (word.collectionId) card.collectionId ??= word.collectionId;
   const isFirstWord = card.wordIds.length === 0;
   card.wordIds.push(word.id);
   addTopic(card, word.category);
@@ -232,6 +234,36 @@ export function resolveSession(saved: FlashcardSession | undefined, learningIds:
   }
 
   return { order, index: index < order.length ? index : 0 };
+}
+
+/**
+ * Saves a visible session without losing the slots of absent user vocabulary.
+ * Known cards no longer being learned still leave the sequence. A shuffle/reset
+ * replaces the available slots only; genuinely new cards append after them.
+ * The cursor follows the next visible card, including when the deck wraps.
+ */
+export function preserveUnavailableCards(
+  saved: FlashcardSession | undefined,
+  next: FlashcardSession,
+  availableIds: ReadonlySet<string>
+): FlashcardSession {
+  const remaining = new Set(next.order);
+  const seen = new Set<string>();
+  const order: string[] = [];
+  let position = 0;
+
+  for (const id of saved?.order ?? []) {
+    if (seen.has(id)) continue;
+    seen.add(id);
+    if (id.startsWith('user:') && !availableIds.has(id)) {
+      order.push(id);
+    } else if (remaining.has(id)) {
+      order.push(next.order[position++]);
+    }
+  }
+  order.push(...next.order.slice(position));
+  const index = order.indexOf(next.order[next.index]);
+  return { order, index: index < 0 ? 0 : index };
 }
 
 /**

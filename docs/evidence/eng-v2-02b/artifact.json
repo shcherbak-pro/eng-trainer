@@ -1,0 +1,107 @@
+[
+  {
+    "path": "assets/index--3Iv1npA.css",
+    "bytes": 29372,
+    "sha256": "e08d97131468eaab4cf738e00f53f3d9697ea88411c88e34b1ce58720f639e1c"
+  },
+  {
+    "path": "assets/index-8GauB1Od.js",
+    "bytes": 177712,
+    "sha256": "adb9a902f072f0a2e99b35752214181ca4f0ef202f788e1221f08eb63ca0c065"
+  },
+  {
+    "path": "data/manifest.json",
+    "bytes": 18677,
+    "sha256": "189f4720137c476c14395795cc76c178ba5a0f69538d5f37eb0ff095d07049f2"
+  },
+  {
+    "path": "data/packs/agent-framework.30b26432f0ecf993.json",
+    "bytes": 133718,
+    "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+  },
+  {
+    "path": "data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+    "bytes": 36070,
+    "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+  },
+  {
+    "path": "data/packs/ai-certification.a743e81dde1bc943.json",
+    "bytes": 294755,
+    "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+  },
+  {
+    "path": "data/packs/essential-100.3a71b8e1e38939e1.json",
+    "bytes": 93477,
+    "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+  },
+  {
+    "path": "data/packs/hedging-and-linking.06c92cc29e38d601.json",
+    "bytes": 32554,
+    "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+  },
+  {
+    "path": "data/packs/logical-200.7dea9a714b2c308b.json",
+    "bytes": 181013,
+    "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+  },
+  {
+    "path": "data/packs/personal-topics.03c1443a2cc176cf.json",
+    "bytes": 145090,
+    "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+  },
+  {
+    "path": "data/packs/presentations.2cd234cc3c91ce8d.json",
+    "bytes": 179620,
+    "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+  },
+  {
+    "path": "data/packs/speaking-foundations.378bea01a015d76e.json",
+    "bytes": 111770,
+    "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+  },
+  {
+    "path": "data/packs/speaking-practice.30d81bc404256cb8.json",
+    "bytes": 16057,
+    "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+  },
+  {
+    "path": "data/packs/workplace-topics.dad3daa8ab78823e.json",
+    "bytes": 367402,
+    "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+  },
+  {
+    "path": "favicon.svg",
+    "bytes": 258,
+    "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+  },
+  {
+    "path": "index.html",
+    "bytes": 1624,
+    "sha256": "afd0641a1837d5d96f499921a5e04cccddd2d1599d88379ffa9cf8fe0672f3ef"
+  },
+  {
+    "path": "v1/assets/index-Bod3ovET.css",
+    "bytes": 27847,
+    "sha256": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83"
+  },
+  {
+    "path": "v1/assets/index-C0A337ei.js",
+    "bytes": 138547,
+    "sha256": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913"
+  },
+  {
+    "path": "v1/data/materials.json",
+    "bytes": 1569661,
+    "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+  },
+  {
+    "path": "v1/favicon.svg",
+    "bytes": 258,
+    "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+  },
+  {
+    "path": "v1/index.html",
+    "bytes": 1932,
+    "sha256": "0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f"
+  }
+]

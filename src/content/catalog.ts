@@ -27,6 +27,7 @@ export type VerbSet = {
  * entries by those ids only, never by position.
  */
 export interface ContentCatalog {
+  readonly collections: { id: string; name: string }[];
   readonly meta: MaterialsMeta;
   /** Learning blocks that have content, ordered by priority. */
   readonly blocks: TrainingBlock[];
@@ -97,6 +98,7 @@ export function createCatalog(source: Materials): ContentCatalog {
     .filter((set) => set.count > 0);
 
   return {
+    collections: source.collections ?? [],
     meta: data.meta,
     blocks,
     phrases: data.phrases,

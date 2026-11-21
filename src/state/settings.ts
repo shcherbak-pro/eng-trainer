@@ -19,6 +19,7 @@ export type FlashcardMode = 'all' | 'topic';
 export type HiddenListKind = 'phrase' | 'word' | 'irregular';
 
 export type SettingsState = {
+  collectionFilter: string;
   theme: ThemePreference;
   speechRepeatCount: SpeechRepeatCount;
   /** The screen that opens when the address has no page in it. */
@@ -44,6 +45,7 @@ export type SettingsState = {
 };
 
 const defaultState: SettingsState = {
+  collectionFilter: '',
   theme: 'system',
   speechRepeatCount: 10,
   activePage: 'index',
@@ -85,6 +87,7 @@ function oneOf(...allowed: unknown[]): (value: unknown) => boolean {
 
 /** A saved value that fails its check is ignored and the default is used. */
 const isValid: Record<SettingKey, (value: unknown) => boolean> = {
+  collectionFilter: isString,
   theme: oneOf('system', 'light', 'dark'),
   speechRepeatCount: oneOf(10, 20, 50),
   activePage: isString,
@@ -145,6 +148,11 @@ function createSettingsStore() {
 
   return {
     subscribe: store.subscribe,
+    setCollectionFilter(collectionFilter: string): void {
+      update({ collectionFilter });
+      viewState.resetPage('phrase');
+      viewState.resetPage('word');
+    },
     /** Replaces the in-memory settings with the saved ones. Writes nothing. */
     hydrate(records: StoredRecords): void {
       state = readSettings(records);

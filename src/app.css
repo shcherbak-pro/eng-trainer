@@ -239,9 +239,17 @@ textarea { min-height: 130px; resize: vertical; }
 .bottom-nav button { border: 0; background: transparent; color: var(--muted); border-radius: 14px; min-height: 48px; font-size: 0.76rem; font-weight: 800; }
 .bottom-nav button.active { background: var(--active-nav-bg); color: var(--active-nav-text); }
 
+/* Accommodate Collections without clipping navigation labels or the brand. */
+@media (min-width: 981px) {
+  .topbar__inner { height: auto; min-height: 68px; padding-block: 8px; }
+  .brand { flex-shrink: 0; }
+  .desktop-nav { flex-wrap: wrap; justify-content: flex-end; overflow: visible; }
+}
+
 @media (max-width: 980px) {
   .desktop-nav { display: none; }
-  .bottom-nav { display: grid; }
+  .bottom-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .page-wrap { margin-bottom: 156px; }
   .hero { display: grid; padding: 22px; }
   .hero__stats { grid-template-columns: repeat(3, minmax(0, 1fr)); min-width: 0; }
   .block-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -264,7 +272,7 @@ textarea { min-height: 130px; resize: vertical; }
   .hero { margin: 14px auto; border-radius: 22px; gap: 16px; }
   .hero p { font-size: 0.94rem; }
   .hero__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .page-wrap { margin-bottom: 98px; }
+  .page-wrap { margin-bottom: 156px; }
   .toolbar-card, .controls-grid { display: grid; grid-template-columns: 1fr; align-items: stretch; }
   .block-grid, .cards-list.compact { grid-template-columns: 1fr; }
   .card, .toolbar-card { padding: 18px; border-radius: 18px; }

@@ -1,0 +1,34 @@
+{
+  "differential": {
+    "queries": 9844,
+    "variants": 19688,
+    "comparisons": 78752,
+    "mismatches": 0,
+    "userEntries": 1208,
+    "userCards": 1141,
+    "builtInCardsIdentical": true
+  },
+  "append": {
+    "skipped": 2,
+    "added": 2,
+    "revision": 2,
+    "positions": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "duplicates": {
+    "flagged": 3,
+    "punctuationVariantFlagged": false
+  },
+  "doubleConfirm": {
+    "concurrent": [
+      "fulfilled",
+      "rejected"
+    ],
+    "sequentialSecond": "rejected: collection changed"
+  }
+}

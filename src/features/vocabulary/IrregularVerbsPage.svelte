@@ -33,6 +33,7 @@
   }
 
   $: verbSetOptions = catalog.verbSets;
+  $: availableHiddenIds = catalog.irregularVerbs.filter((item) => $progress.hiddenIrregular.includes(item.id)).map((item) => item.id);
   $: selectedSet = verbSetOptions.some((option) => option.id === $settings.irregularSet)
     ? $settings.irregularSet
     : verbSetOptions[0]?.id ?? 'all';
@@ -76,8 +77,8 @@
           variant="secondary"
           onClick={() => settings.toggleShowHidden('irregular')}
         />
-        {#if $progress.hiddenIrregular.length}
-          <IconButton icon="settings_backup_restore" label="Unhide all verbs" variant="danger" onClick={() => progress.unhideAll('irregular')} />
+        {#if availableHiddenIds.length}
+          <IconButton icon="settings_backup_restore" label="Unhide all verbs" variant="danger" onClick={() => progress.unhideAll('irregular', availableHiddenIds)} />
         {/if}
       </div>
     </div>

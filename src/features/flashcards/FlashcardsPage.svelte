@@ -1,6 +1,8 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
   import type { ContentCatalog } from '../../content/catalog';
+  import { inCollection, resolvedCollection } from '../../content/userCatalog';
+  import CollectionFilter from '../../shared/ui/CollectionFilter.svelte';
   import { progress } from '../../state/progress';
   import { settings } from '../../state/settings';
   import type { Flashcard, FlashcardAnswer, FlashcardMode } from './types';
@@ -13,6 +15,7 @@
     filterDeck,
     getTopics,
     isHorizontalDrag,
+    preserveUnavailableCards,
     resolveSession,
     shuffleSession,
     summarizeDeck
@@ -47,7 +50,9 @@
   let pendingAnswer: (() => void) | null = null;
   let cardSerial = 0;
 
-  $: cards = buildFlashcards(catalog);
+  $: collectionFilter = resolvedCollection(catalog, $settings.collectionFilter);
+  $: cards = buildFlashcards(catalog).filter((card) => inCollection(card, collectionFilter));
+  $: availableIds = new Set([...catalog.phrases, ...catalog.wordIndex].map((item) => item.id));
   $: cardById = new Map(cards.map((card) => [card.id, card]));
   $: topics = getTopics(cards);
   $: topicStats = topics.map((name) => {
@@ -57,7 +62,7 @@
 
   $: mode = $settings.flashcardMode;
   $: topic = topics.includes($settings.flashcardTopic) ? $settings.flashcardTopic : (topics[0] ?? '');
-  $: currentDeckKey = deckKey(mode, topic);
+  $: currentDeckKey = collectionFilter ? `collection:${JSON.stringify([collectionFilter, deckKey(mode, topic)])}` : deckKey(mode, topic);
   $: deckLabel = mode === 'topic' ? topic : 'All Vocabulary';
 
   $: deck = summarizeDeck(filterDeck(cards, mode, topic), $progress);
@@ -113,6 +118,8 @@
     const card = current;
     const targetDeckKey = currentDeckKey;
     const targetSession = session;
+    const savedSession = $progress.flashcardSessions[targetDeckKey];
+    const targetAvailableIds = availableIds;
 
     const finish = (): void => {
       pendingAnswer = null;
@@ -129,7 +136,11 @@
         ? `End of the deck. Starting again with the ${plural(next.order.length, 'card')} you are still learning.`
         : '';
 
-      progress.saveFlashcardSession(targetDeckKey, next, choice === 'know' ? [card.id] : []);
+      progress.saveFlashcardSession(
+        targetDeckKey,
+        preserveUnavailableCards(savedSession, next, targetAvailableIds),
+        choice === 'know' ? [card.id] : []
+      );
     };
 
     busy = true;
@@ -160,7 +171,9 @@
     notice = 'Deck shuffled.';
     flipped = false;
     cardSerial += 1;
-    progress.saveFlashcardSession(currentDeckKey, shuffleSession(session));
+    progress.saveFlashcardSession(currentDeckKey, preserveUnavailableCards(
+      $progress.flashcardSessions[currentDeckKey], shuffleSession(session), availableIds
+    ));
   }
 
   function learnAgain(card: Flashcard): void {
@@ -177,9 +190,16 @@
       );
     if (!confirmed) return;
 
+    const resetIds = new Set([...deck.learning, ...deck.learned].map((card) => card.id));
+    const resetSession = preserveUnavailableCards(
+      $progress.flashcardSessions[currentDeckKey],
+      { order: cards.filter((card) => resetIds.has(card.id)).map((card) => card.id), index: 0 },
+      availableIds
+    );
     progress.resetFlashcardDeck(
       currentDeckKey,
-      deck.learned.map((card) => card.id)
+      deck.learned.map((card) => card.id),
+      resetSession.order.some((id) => !availableIds.has(id)) ? resetSession : undefined
     );
     view = 'learn';
     notice = '';
@@ -303,6 +323,7 @@
     <p class="flashcards-toolbar__intro">Swipe right if you know it, left to keep learning. Tap the card to flip it.</p>
 
     <div class="flashcards-deck">
+      <CollectionFilter {catalog} />
       <div class="segmented" role="group" aria-label="Deck">
         <button type="button" class:active={mode === 'all'} aria-pressed={mode === 'all'} on:click={() => setMode('all')}>
           All Vocabulary

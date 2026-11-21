@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { ContentCatalog } from '../../content/catalog';
+  import { inCollection, resolvedCollection } from '../../content/userCatalog';
+  import CollectionFilter from '../../shared/ui/CollectionFilter.svelte';
   import type { WordIndexItem } from '../../content/types';
   import { progress } from '../../state/progress';
   import { settings } from '../../state/settings';
@@ -23,7 +25,10 @@
   }
 
   $: categories = ['All', ...catalog.wordCategories];
+  $: availableHiddenIds = catalog.wordIndex.filter((item) => $progress.hiddenWords.includes(item.id)).map((item) => item.id);
+  $: collectionFilter = resolvedCollection(catalog, $settings.collectionFilter);
   $: visible = catalog.searchWords($viewState.wordQuery).filter((item) => {
+    if (!inCollection(item, collectionFilter)) return false;
     const hidden = $progress.hiddenWords.includes(item.id);
     if (hidden && !$settings.showHiddenWords) return false;
     if ($settings.wordCategory !== 'All' && item.category !== $settings.wordCategory) return false;
@@ -62,14 +67,15 @@
           variant="secondary"
           onClick={() => settings.toggleShowHidden('word')}
         />
-        {#if $progress.hiddenWords.length}
-          <IconButton icon="settings_backup_restore" label="Unhide all words" variant="danger" onClick={() => progress.unhideAll('word')} />
+        {#if availableHiddenIds.length}
+          <IconButton icon="settings_backup_restore" label="Unhide all words" variant="danger" onClick={() => progress.unhideAll('word', availableHiddenIds)} />
         {/if}
       </div>
     </div>
 
     <div class="controls-stack__row controls-stack__row--filters-listen">
       <div class="controls-filter-stack">
+        <CollectionFilter {catalog} />
         <label>
           Search
           <input value={$viewState.wordQuery} on:input={(e) => viewState.setWordQuery((e.target as HTMLInputElement).value)} placeholder="run into, lack, estimate…" />

@@ -22,6 +22,7 @@ export type { FlashcardMode, FlashcardSession };
 export type Flashcard = {
   /** The phrase id, or the word-index id for a card without a phrase. */
   id: string;
+  collectionId?: string;
   text: string;
   translation: string;
   /** IPA transcription or stress hint. Empty when the dataset has none. */

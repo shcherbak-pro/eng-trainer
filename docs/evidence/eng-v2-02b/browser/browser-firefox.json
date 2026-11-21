@@ -1,0 +1,85 @@
+{
+  "engine": "firefox",
+  "version": "153.0",
+  "isolatedSyntheticStorage": true,
+  "results": [
+    {
+      "engine": "firefox",
+      "name": "migration-import-search-progress-export-delete-reimport",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "collectionId": "user:161f1551-005c-4834-85a5-55530e21d7cc",
+      "entryIds": [
+        "user:161f1551-005c-4834-85a5-55530e21d7cc:entry:2190a7ab-374f-4cd4-9bb7-29feb9dec8d6",
+        "user:161f1551-005c-4834-85a5-55530e21d7cc:entry:e19b554d-9d43-48c6-9271-2258811da19a",
+        "user:161f1551-005c-4834-85a5-55530e21d7cc:entry:160b87b5-6c30-4fc5-9133-39fd8300fc4f",
+        "user:161f1551-005c-4834-85a5-55530e21d7cc:entry:a12c735a-cc1d-4ff8-9459-bac041e8f524"
+      ],
+      "migratedFromVersion": 1,
+      "databaseVersion": 2,
+      "noStartupWrites": true,
+      "searchAndFilters": true,
+      "duplicateIdentities": true,
+      "safeText": true,
+      "progressAndSavedDeckRestored": true,
+      "nativeReimportNoOp": true,
+      "deleteAndRestorePolicy": true,
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "name": "invalid-files-and-native-id-conflicts-do-not-write",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "invalidFiles": [
+        "bad.csv",
+        "partial.csv",
+        "bad.json",
+        "big.csv"
+      ],
+      "idConflictBlocked": true,
+      "noPartialImport": true,
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "name": "transaction-abort-and-quota-failure-are-visible-and-retryable",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "abortRolledBack": true,
+      "quotaRolledBack": true,
+      "retrySucceeded": true,
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "name": "blocked-upgrade-recovers-with-old-records-preserved",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "blockedUpgradeReported": true,
+      "retryPreservedEveryRecord": true,
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "name": "v1-remains-independent-after-v2-import",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "requests": [
+        "/eng-trainer/v1/",
+        "/eng-trainer/v1/assets/index-C0A337ei.js",
+        "/eng-trainer/v1/assets/index-Bod3ovET.css",
+        "/eng-trainer/v1/data/materials.json",
+        "/eng-trainer/v1/favicon.svg"
+      ],
+      "v1LocalStoragePreserved": true,
+      "v2Untouched": true,
+      "status": "PASS"
+    }
+  ]
+}
