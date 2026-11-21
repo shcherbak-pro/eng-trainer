@@ -1,0 +1,3830 @@
+{
+  "schemaVersion": 1,
+  "id": "agent-framework",
+  "title": "Agent framework",
+  "order": 30,
+  "content": {
+    "phrases": [
+      {
+        "id": "agent-vocab-001",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 1,
+        "phrase": "cost optimization",
+        "translation": "оптимізація витрат",
+        "transcription": "/kɔːst ˌɑːptəmaɪˈzeɪʃən/",
+        "commonAlternatives": [
+          "cost reduction",
+          "efficiency improvement",
+          "cost control"
+        ],
+        "example": "Cost optimization is not only about cheaper models.",
+        "examples": [
+          {
+            "en": "Cost optimization is not only about cheaper models."
+          },
+          {
+            "en": "Our framework focuses on cost optimization through context reuse."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-002",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 2,
+        "phrase": "agent framework",
+        "translation": "агентний фреймворк",
+        "transcription": "/ˈeɪdʒənt ˈfreɪmwɜːrk/",
+        "commonAlternatives": [
+          "agent platform",
+          "agent system",
+          "automation framework"
+        ],
+        "example": "The agent framework defines how agents load memory and verify results.",
+        "examples": [
+          {
+            "en": "The agent framework defines how agents load memory and verify results."
+          },
+          {
+            "en": "We use the framework to make AI workflows repeatable."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-003",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 3,
+        "phrase": "orchestrator",
+        "translation": "оркестратор",
+        "transcription": "/ˈɔːrkəstreɪtər/",
+        "commonAlternatives": [
+          "coordinator",
+          "controller",
+          "workflow manager"
+        ],
+        "example": "The orchestrator decides which agent should handle the task.",
+        "examples": [
+          {
+            "en": "The orchestrator decides which agent should handle the task."
+          },
+          {
+            "en": "The orchestrator should be event-driven, not constantly running."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-004",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 4,
+        "phrase": "event-driven workflow",
+        "translation": "workflow, що запускається подією",
+        "transcription": "/ɪˈvent ˈdrɪvən ˈwɜːrkfloʊ/",
+        "commonAlternatives": [
+          "trigger-based workflow",
+          "on-demand workflow",
+          "reactive workflow"
+        ],
+        "example": "An event-driven workflow starts when a pull request is created.",
+        "examples": [
+          {
+            "en": "An event-driven workflow starts when a pull request is created."
+          },
+          {
+            "en": "This approach helps avoid unnecessary model calls."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-005",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 5,
+        "phrase": "pull request review",
+        "translation": "ревʼю pull request",
+        "transcription": "/pʊl rɪˈkwest rɪˈvjuː/",
+        "commonAlternatives": [
+          "code review",
+          "PR review",
+          "review pass"
+        ],
+        "example": "AI can perform the first pass of a pull request review.",
+        "examples": [
+          {
+            "en": "AI can perform the first pass of a pull request review."
+          },
+          {
+            "en": "Human reviewers still make the final decision."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-006",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 6,
+        "phrase": "baseline",
+        "translation": "базовий рівень для порівняння",
+        "transcription": "/ˈbeɪslaɪn/",
+        "commonAlternatives": [
+          "starting point",
+          "reference point",
+          "benchmark"
+        ],
+        "example": "We need a baseline before measuring improvement.",
+        "examples": [
+          {
+            "en": "We need a baseline before measuring improvement."
+          },
+          {
+            "en": "Historical PRs can help us build a reliable baseline."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-007",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 7,
+        "phrase": "benchmark",
+        "translation": "бенчмарк, еталон для оцінки",
+        "transcription": "/ˈbentʃmɑːrk/",
+        "commonAlternatives": [
+          "standard",
+          "reference",
+          "comparison point"
+        ],
+        "example": "We do not always have a perfect benchmark for agentic workflows.",
+        "examples": [
+          {
+            "en": "We do not always have a perfect benchmark for agentic workflows."
+          },
+          {
+            "en": "Instead of a golden solution, we can compare against historical data."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-008",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 8,
+        "phrase": "evaluation harness",
+        "translation": "система/набір для оцінювання",
+        "transcription": "/ɪˌvæljuˈeɪʃən ˈhɑːrnəs/",
+        "commonAlternatives": [
+          "measurement setup",
+          "test harness",
+          "assessment framework"
+        ],
+        "example": "The evaluation harness tracks useful findings and model cost.",
+        "examples": [
+          {
+            "en": "The evaluation harness tracks useful findings and model cost."
+          },
+          {
+            "en": "It helps us show real value without a perfect template solution."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-009",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 9,
+        "phrase": "useful finding",
+        "translation": "корисне зауваження/знахідка",
+        "transcription": "/ˈjuːsfəl ˈfaɪndɪŋ/",
+        "commonAlternatives": [
+          "valid issue",
+          "actionable comment",
+          "accepted finding"
+        ],
+        "example": "A useful finding is something the developer actually fixes.",
+        "examples": [
+          {
+            "en": "A useful finding is something the developer actually fixes."
+          },
+          {
+            "en": "We should measure cost per useful finding."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-010",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 10,
+        "phrase": "false positive",
+        "translation": "хибне спрацювання",
+        "transcription": "/fɔːls ˈpɑːzətɪv/",
+        "commonAlternatives": [
+          "incorrect alert",
+          "invalid finding",
+          "noise"
+        ],
+        "example": "Too many false positives reduce trust in the agent.",
+        "examples": [
+          {
+            "en": "Too many false positives reduce trust in the agent."
+          },
+          {
+            "en": "The goal is to keep false positives low."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-011",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 11,
+        "phrase": "model routing",
+        "translation": "вибір моделі залежно від задачі",
+        "transcription": "/ˈmɑːdəl ˈruːtɪŋ/",
+        "commonAlternatives": [
+          "model selection",
+          "task routing",
+          "routing strategy"
+        ],
+        "example": "Model routing sends simple tasks to cheaper models.",
+        "examples": [
+          {
+            "en": "Model routing sends simple tasks to cheaper models."
+          },
+          {
+            "en": "High-risk changes can be routed to a stronger model."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-012",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 12,
+        "phrase": "token budget",
+        "translation": "бюджет токенів",
+        "transcription": "/ˈtoʊkən ˈbʌdʒɪt/",
+        "commonAlternatives": [
+          "context budget",
+          "usage limit",
+          "token allowance"
+        ],
+        "example": "Every PR review should have a token budget.",
+        "examples": [
+          {
+            "en": "Every PR review should have a token budget."
+          },
+          {
+            "en": "A smaller token budget encourages better context selection."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-013",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 13,
+        "phrase": "context reuse",
+        "translation": "повторне використання контексту",
+        "transcription": "/ˈkɑːntekst riːˈjuːs/",
+        "commonAlternatives": [
+          "memory reuse",
+          "context sharing",
+          "knowledge reuse"
+        ],
+        "example": "Context reuse reduces repeated explanations.",
+        "examples": [
+          {
+            "en": "Context reuse reduces repeated explanations."
+          },
+          {
+            "en": "Agent memory makes context reuse possible across tasks."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-014",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 14,
+        "phrase": "memory loader",
+        "translation": "завантажувач памʼяті",
+        "transcription": "/ˈmeməri ˈloʊdər/",
+        "commonAlternatives": [
+          "context loader",
+          "memory selector",
+          "context planner"
+        ],
+        "example": "The memory loader selects only relevant project knowledge.",
+        "examples": [
+          {
+            "en": "The memory loader selects only relevant project knowledge."
+          },
+          {
+            "en": "It prevents the agent from loading the whole repository."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-015",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 15,
+        "phrase": "decision log",
+        "translation": "журнал рішень",
+        "transcription": "/dɪˈsɪʒən lɔːɡ/",
+        "commonAlternatives": [
+          "ADR log",
+          "decision record",
+          "architecture log"
+        ],
+        "example": "The decision log preserves architectural choices.",
+        "examples": [
+          {
+            "en": "The decision log preserves architectural choices."
+          },
+          {
+            "en": "It helps agents avoid asking the same questions again."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-016",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 16,
+        "phrase": "closed loop",
+        "translation": "замкнутий цикл",
+        "transcription": "/kloʊzd luːp/",
+        "commonAlternatives": [
+          "feedback loop",
+          "learning loop",
+          "continuous improvement loop"
+        ],
+        "example": "A closed loop turns completed work into better memory.",
+        "examples": [
+          {
+            "en": "A closed loop turns completed work into better memory."
+          },
+          {
+            "en": "Verification and learning are part of the closed loop."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-017",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 17,
+        "phrase": "first-pass review",
+        "translation": "первинне ревʼю",
+        "transcription": "/fɜːrst pæs rɪˈvjuː/",
+        "commonAlternatives": [
+          "initial review",
+          "preliminary review",
+          "early review"
+        ],
+        "example": "The agent can do a first-pass review before a senior developer.",
+        "examples": [
+          {
+            "en": "The agent can do a first-pass review before a senior developer."
+          },
+          {
+            "en": "This reduces obvious issues before human review."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-018",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 18,
+        "phrase": "review effort",
+        "translation": "зусилля на ревʼю",
+        "transcription": "/rɪˈvjuː ˈefərt/",
+        "commonAlternatives": [
+          "review workload",
+          "review time",
+          "reviewer effort"
+        ],
+        "example": "We want to reduce review effort without reducing quality.",
+        "examples": [
+          {
+            "en": "We want to reduce review effort without reducing quality."
+          },
+          {
+            "en": "AI can help reviewers focus on high-risk parts."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-019",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 19,
+        "phrase": "rework",
+        "translation": "переробка",
+        "transcription": "/ˌriːˈwɜːrk/",
+        "commonAlternatives": [
+          "correction",
+          "redo work",
+          "follow-up fixes"
+        ],
+        "example": "Early AI feedback can reduce rework.",
+        "examples": [
+          {
+            "en": "Early AI feedback can reduce rework."
+          },
+          {
+            "en": "Rework is often more expensive than initial review."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-020",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 20,
+        "phrase": "governance",
+        "translation": "управління, контроль процесу",
+        "transcription": "/ˈɡʌvərnəns/",
+        "commonAlternatives": [
+          "control",
+          "oversight",
+          "management"
+        ],
+        "example": "Memory governance prevents outdated context from being reused.",
+        "examples": [
+          {
+            "en": "Memory governance prevents outdated context from being reused."
+          },
+          {
+            "en": "Cost governance is needed for scalable agent usage."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-021",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 21,
+        "phrase": "adoption",
+        "translation": "впровадження, прийняття користувачами",
+        "transcription": "/əˈdɑːpʃən/",
+        "commonAlternatives": [
+          "usage",
+          "rollout",
+          "acceptance"
+        ],
+        "example": "Adoption depends on trust and measurable value.",
+        "examples": [
+          {
+            "en": "Adoption depends on trust and measurable value."
+          },
+          {
+            "en": "Developers will adopt agents if findings are useful."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-022",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 22,
+        "phrase": "return on investment",
+        "translation": "окупність інвестицій",
+        "transcription": "/rɪˈtɜːrn ɑːn ɪnˈvestmənt/",
+        "commonAlternatives": [
+          "ROI",
+          "business value",
+          "payoff"
+        ],
+        "example": "We need to show return on investment for agent automation.",
+        "examples": [
+          {
+            "en": "We need to show return on investment for agent automation."
+          },
+          {
+            "en": "ROI should include time saved and reduced rework."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Nouns"
+      },
+      {
+        "id": "agent-vocab-023",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 23,
+        "phrase": "optimize",
+        "translation": "оптимізувати",
+        "transcription": "/ˈɑːptəmaɪz/",
+        "commonAlternatives": [
+          "Three forms: optimize — optimized — optimized",
+          "improve",
+          "reduce cost",
+          "streamline"
+        ],
+        "example": "We optimize cost by loading only the required context.",
+        "examples": [
+          {
+            "en": "We optimize cost by loading only the required context."
+          },
+          {
+            "en": "The framework helps optimize AI usage across PRs."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-024",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 24,
+        "phrase": "reduce",
+        "translation": "зменшувати",
+        "transcription": "/rɪˈduːs/",
+        "commonAlternatives": [
+          "Three forms: reduce — reduced — reduced",
+          "decrease",
+          "lower",
+          "cut"
+        ],
+        "example": "We reduce token usage by reviewing only the diff.",
+        "examples": [
+          {
+            "en": "We reduce token usage by reviewing only the diff."
+          },
+          {
+            "en": "AI can reduce repetitive review work."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-025",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 25,
+        "phrase": "measure",
+        "translation": "вимірювати",
+        "transcription": "/ˈmeʒər/",
+        "commonAlternatives": [
+          "Three forms: measure — measured — measured",
+          "track",
+          "quantify",
+          "assess"
+        ],
+        "example": "We measure cost per accepted finding.",
+        "examples": [
+          {
+            "en": "We measure cost per accepted finding."
+          },
+          {
+            "en": "We should measure both AI cost and engineering impact."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-026",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 26,
+        "phrase": "compare",
+        "translation": "порівнювати",
+        "transcription": "/kəmˈper/",
+        "commonAlternatives": [
+          "Three forms: compare — compared — compared",
+          "benchmark",
+          "contrast",
+          "evaluate against"
+        ],
+        "example": "We compare agent output with historical human reviews.",
+        "examples": [
+          {
+            "en": "We compare agent output with historical human reviews."
+          },
+          {
+            "en": "We should compare PR cycle time before and after adoption."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-027",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 27,
+        "phrase": "route",
+        "translation": "направляти, маршрутизувати",
+        "transcription": "/ruːt/",
+        "commonAlternatives": [
+          "Three forms: route — routed — routed",
+          "direct",
+          "assign",
+          "dispatch"
+        ],
+        "example": "The orchestrator routes simple tasks to a cheaper model.",
+        "examples": [
+          {
+            "en": "The orchestrator routes simple tasks to a cheaper model."
+          },
+          {
+            "en": "Risky changes are routed to a stronger model."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-028",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 28,
+        "phrase": "trigger",
+        "translation": "запускати подією",
+        "transcription": "/ˈtrɪɡər/",
+        "commonAlternatives": [
+          "Three forms: trigger — triggered — triggered",
+          "start",
+          "initiate",
+          "activate"
+        ],
+        "example": "A PR update triggers the review workflow.",
+        "examples": [
+          {
+            "en": "A PR update triggers the review workflow."
+          },
+          {
+            "en": "We should trigger agents only when there is a meaningful event."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-029",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 29,
+        "phrase": "reuse",
+        "translation": "повторно використовувати",
+        "transcription": "/ˌriːˈjuːz/",
+        "commonAlternatives": [
+          "Three forms: reuse — reused — reused",
+          "recycle",
+          "leverage again",
+          "repurpose"
+        ],
+        "example": "We reuse validated memory instead of rebuilding context.",
+        "examples": [
+          {
+            "en": "We reuse validated memory instead of rebuilding context."
+          },
+          {
+            "en": "Design Memory lets us reuse Figma knowledge locally."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-030",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 30,
+        "phrase": "classify",
+        "translation": "класифікувати",
+        "transcription": "/ˈklæsəfaɪ/",
+        "commonAlternatives": [
+          "Three forms: classify — classified — classified",
+          "categorize",
+          "label",
+          "group"
+        ],
+        "example": "The orchestrator classifies the PR by risk level.",
+        "examples": [
+          {
+            "en": "The orchestrator classifies the PR by risk level."
+          },
+          {
+            "en": "The agent classifies changes as frontend, backend, DB, or design-related."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-031",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 31,
+        "phrase": "prioritize",
+        "translation": "пріоритезувати",
+        "transcription": "/praɪˈɔːrətaɪz/",
+        "commonAlternatives": [
+          "Three forms: prioritize — prioritized — prioritized",
+          "rank",
+          "order",
+          "focus on"
+        ],
+        "example": "We prioritize high-impact findings over minor comments.",
+        "examples": [
+          {
+            "en": "We prioritize high-impact findings over minor comments."
+          },
+          {
+            "en": "The review should prioritize correctness and security risks."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-032",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 32,
+        "phrase": "validate",
+        "translation": "валідувати, перевіряти",
+        "transcription": "/ˈvælədeɪt/",
+        "commonAlternatives": [
+          "Three forms: validate — validated — validated",
+          "verify",
+          "check",
+          "confirm"
+        ],
+        "example": "The framework validates memory before using it.",
+        "examples": [
+          {
+            "en": "The framework validates memory before using it."
+          },
+          {
+            "en": "We validate whether an AI finding is accepted by developers."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-033",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 33,
+        "phrase": "detect",
+        "translation": "виявляти",
+        "transcription": "/dɪˈtekt/",
+        "commonAlternatives": [
+          "Three forms: detect — detected — detected",
+          "identify",
+          "discover",
+          "spot"
+        ],
+        "example": "The agent can detect API contract mismatches.",
+        "examples": [
+          {
+            "en": "The agent can detect API contract mismatches."
+          },
+          {
+            "en": "Static tools detect formatting and build issues before the LLM runs."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-034",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 34,
+        "phrase": "prevent",
+        "translation": "запобігати",
+        "transcription": "/prɪˈvent/",
+        "commonAlternatives": [
+          "Three forms: prevent — prevented — prevented",
+          "avoid",
+          "stop",
+          "block"
+        ],
+        "example": "Memory rules prevent agents from changing internal IDs incorrectly.",
+        "examples": [
+          {
+            "en": "Memory rules prevent agents from changing internal IDs incorrectly."
+          },
+          {
+            "en": "Early review helps prevent costly rework."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-035",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 35,
+        "phrase": "estimate",
+        "translation": "оцінювати приблизно",
+        "transcription": "/ˈestəmeɪt/",
+        "commonAlternatives": [
+          "Three forms: estimate — estimated — estimated",
+          "approximate",
+          "forecast",
+          "calculate roughly"
+        ],
+        "example": "We estimate the cost of each PR review.",
+        "examples": [
+          {
+            "en": "We estimate the cost of each PR review."
+          },
+          {
+            "en": "The report should estimate time saved and AI cost."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-036",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 36,
+        "phrase": "automate",
+        "translation": "автоматизувати",
+        "transcription": "/ˈɔːtəmeɪt/",
+        "commonAlternatives": [
+          "Three forms: automate — automated — automated",
+          "mechanize",
+          "systematize",
+          "streamline"
+        ],
+        "example": "We automate the first-pass PR review.",
+        "examples": [
+          {
+            "en": "We automate the first-pass PR review."
+          },
+          {
+            "en": "The goal is to automate repeatable checks, not replace human judgment."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-037",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 37,
+        "phrase": "orchestrate",
+        "translation": "оркеструвати, координувати",
+        "transcription": "/ˈɔːrkəstreɪt/",
+        "commonAlternatives": [
+          "Three forms: orchestrate — orchestrated — orchestrated",
+          "coordinate",
+          "manage",
+          "arrange"
+        ],
+        "example": "The service orchestrates agents based on PR risk.",
+        "examples": [
+          {
+            "en": "The service orchestrates agents based on PR risk."
+          },
+          {
+            "en": "We can orchestrate DB, backend, and frontend review agents."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-038",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 38,
+        "phrase": "review",
+        "translation": "ревʼювити, переглядати",
+        "transcription": "/rɪˈvjuː/",
+        "commonAlternatives": [
+          "Three forms: review — reviewed — reviewed",
+          "inspect",
+          "examine",
+          "assess"
+        ],
+        "example": "The agent reviews changed files and related contracts.",
+        "examples": [
+          {
+            "en": "The agent reviews changed files and related contracts."
+          },
+          {
+            "en": "Human reviewers review the final decision and critical comments."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-039",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 39,
+        "phrase": "summarize",
+        "translation": "підсумовувати",
+        "transcription": "/ˈsʌməraɪz/",
+        "commonAlternatives": [
+          "Three forms: summarize — summarized — summarized",
+          "recap",
+          "outline",
+          "condense"
+        ],
+        "example": "The agent summarizes the PR before detailed review.",
+        "examples": [
+          {
+            "en": "The agent summarizes the PR before detailed review."
+          },
+          {
+            "en": "A concise summary helps reviewers understand the change faster."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-040",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 40,
+        "phrase": "filter",
+        "translation": "фільтрувати",
+        "transcription": "/ˈfɪltər/",
+        "commonAlternatives": [
+          "Three forms: filter — filtered — filtered",
+          "narrow down",
+          "screen",
+          "exclude"
+        ],
+        "example": "The framework filters irrelevant memory.",
+        "examples": [
+          {
+            "en": "The framework filters irrelevant memory."
+          },
+          {
+            "en": "We should filter generated files from AI review unless needed."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-041",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 41,
+        "phrase": "escalate",
+        "translation": "ескалювати",
+        "transcription": "/ˈeskəleɪt/",
+        "commonAlternatives": [
+          "Three forms: escalate — escalated — escalated",
+          "raise",
+          "promote",
+          "forward"
+        ],
+        "example": "High-risk PRs are escalated to a stronger model.",
+        "examples": [
+          {
+            "en": "High-risk PRs are escalated to a stronger model."
+          },
+          {
+            "en": "Security findings should be escalated to a human reviewer."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-042",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 42,
+        "phrase": "quantify",
+        "translation": "кількісно оцінювати",
+        "transcription": "/ˈkwɑːntəfaɪ/",
+        "commonAlternatives": [
+          "Three forms: quantify — quantified — quantified",
+          "measure",
+          "calculate",
+          "express numerically"
+        ],
+        "example": "We quantify savings through accepted findings and review time reduction.",
+        "examples": [
+          {
+            "en": "We quantify savings through accepted findings and review time reduction."
+          },
+          {
+            "en": "It is difficult to quantify value without a baseline."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-043",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 43,
+        "phrase": "justify",
+        "translation": "обґрунтовувати",
+        "transcription": "/ˈdʒʌstəfaɪ/",
+        "commonAlternatives": [
+          "Three forms: justify — justified — justified",
+          "explain",
+          "support",
+          "defend"
+        ],
+        "example": "We need to justify the investment with measurable outcomes.",
+        "examples": [
+          {
+            "en": "We need to justify the investment with measurable outcomes."
+          },
+          {
+            "en": "The agent should justify why it loaded specific memory files."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-044",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 44,
+        "phrase": "de-risk",
+        "translation": "знижувати ризик",
+        "transcription": "/diː rɪsk/",
+        "commonAlternatives": [
+          "Three forms: de-risk — de-risked — de-risked",
+          "reduce risk",
+          "make safer",
+          "mitigate"
+        ],
+        "example": "AI review can de-risk complex database changes.",
+        "examples": [
+          {
+            "en": "AI review can de-risk complex database changes."
+          },
+          {
+            "en": "The framework de-risks agent usage by enforcing rules and validation."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Verbs"
+      },
+      {
+        "id": "agent-vocab-045",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 45,
+        "phrase": "cost-aware",
+        "translation": "з урахуванням вартості",
+        "transcription": "/kɔːst əˈwer/",
+        "commonAlternatives": [
+          "budget-aware",
+          "cost-conscious",
+          "efficient"
+        ],
+        "example": "We need a cost-aware agent workflow.",
+        "examples": [
+          {
+            "en": "We need a cost-aware agent workflow."
+          },
+          {
+            "en": "A cost-aware review avoids unnecessary model calls."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-046",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 46,
+        "phrase": "event-driven",
+        "translation": "керований подіями",
+        "transcription": "/ɪˈvent ˈdrɪvən/",
+        "commonAlternatives": [
+          "trigger-based",
+          "reactive",
+          "on-demand"
+        ],
+        "example": "The orchestrator should be event-driven.",
+        "examples": [
+          {
+            "en": "The orchestrator should be event-driven."
+          },
+          {
+            "en": "Event-driven agents run only when needed."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-047",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 47,
+        "phrase": "on-demand",
+        "translation": "на вимогу",
+        "transcription": "/ɑːn dɪˈmænd/",
+        "commonAlternatives": [
+          "as needed",
+          "request-based",
+          "ad hoc"
+        ],
+        "example": "We can start with on-demand PR reviews.",
+        "examples": [
+          {
+            "en": "We can start with on-demand PR reviews."
+          },
+          {
+            "en": "On-demand execution is cheaper than always-on processing."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-048",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 48,
+        "phrase": "non-blocking",
+        "translation": "такий, що не блокує процес",
+        "transcription": "/nɑːn ˈblɑːkɪŋ/",
+        "commonAlternatives": [
+          "advisory",
+          "optional",
+          "informational"
+        ],
+        "example": "The first version should provide non-blocking review comments.",
+        "examples": [
+          {
+            "en": "The first version should provide non-blocking review comments."
+          },
+          {
+            "en": "Non-blocking feedback is safer during pilot adoption."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-049",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 49,
+        "phrase": "high-risk",
+        "translation": "високоризиковий",
+        "transcription": "/haɪ rɪsk/",
+        "commonAlternatives": [
+          "critical",
+          "sensitive",
+          "risky"
+        ],
+        "example": "DB migrations are high-risk changes.",
+        "examples": [
+          {
+            "en": "DB migrations are high-risk changes."
+          },
+          {
+            "en": "High-risk PRs should get deeper review."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-050",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 50,
+        "phrase": "low-risk",
+        "translation": "низькоризиковий",
+        "transcription": "/loʊ rɪsk/",
+        "commonAlternatives": [
+          "safe",
+          "minor",
+          "simple"
+        ],
+        "example": "A small CSS change is usually low-risk.",
+        "examples": [
+          {
+            "en": "A small CSS change is usually low-risk."
+          },
+          {
+            "en": "Low-risk changes can use a cheaper review path."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-051",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 51,
+        "phrase": "actionable",
+        "translation": "такий, по якому можна діяти",
+        "transcription": "/ˈækʃənəbəl/",
+        "commonAlternatives": [
+          "practical",
+          "useful",
+          "specific"
+        ],
+        "example": "AI comments should be actionable.",
+        "examples": [
+          {
+            "en": "AI comments should be actionable."
+          },
+          {
+            "en": "A finding is useful only if it is clear and actionable."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-052",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 52,
+        "phrase": "measurable",
+        "translation": "вимірюваний",
+        "transcription": "/ˈmeʒərəbl/",
+        "commonAlternatives": [
+          "quantifiable",
+          "trackable",
+          "observable"
+        ],
+        "example": "We need measurable outcomes, not only opinions.",
+        "examples": [
+          {
+            "en": "We need measurable outcomes, not only opinions."
+          },
+          {
+            "en": "Cost per PR is a measurable metric."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-053",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 53,
+        "phrase": "scalable",
+        "translation": "масштабований",
+        "transcription": "/ˈskeɪləbəl/",
+        "commonAlternatives": [
+          "expandable",
+          "sustainable",
+          "growth-ready"
+        ],
+        "example": "The framework must be scalable across repositories.",
+        "examples": [
+          {
+            "en": "The framework must be scalable across repositories."
+          },
+          {
+            "en": "Scalable review requires model routing and memory reuse."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-054",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 54,
+        "phrase": "repeatable",
+        "translation": "повторюваний",
+        "transcription": "/rɪˈpiːtəbl/",
+        "commonAlternatives": [
+          "reproducible",
+          "consistent",
+          "standardized"
+        ],
+        "example": "Skills make agent workflows repeatable.",
+        "examples": [
+          {
+            "en": "Skills make agent workflows repeatable."
+          },
+          {
+            "en": "Repeatable evaluation helps us compare results over time."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-055",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 55,
+        "phrase": "lightweight",
+        "translation": "легкий, не надмірний",
+        "transcription": "/ˈlaɪtweɪt/",
+        "commonAlternatives": [
+          "simple",
+          "minimal",
+          "low-overhead"
+        ],
+        "example": "We should start with a lightweight pilot.",
+        "examples": [
+          {
+            "en": "We should start with a lightweight pilot."
+          },
+          {
+            "en": "A lightweight workflow is easier to adopt."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-056",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 56,
+        "phrase": "evidence-based",
+        "translation": "заснований на доказах",
+        "transcription": "/ˈevədəns beɪst/",
+        "commonAlternatives": [
+          "data-driven",
+          "fact-based",
+          "supported"
+        ],
+        "example": "We need evidence-based claims about cost savings.",
+        "examples": [
+          {
+            "en": "We need evidence-based claims about cost savings."
+          },
+          {
+            "en": "The framework should produce evidence-based review findings."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-057",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 57,
+        "phrase": "context-heavy",
+        "translation": "такий, що потребує багато контексту",
+        "transcription": "/ˈkɑːntekst ˈhevi/",
+        "commonAlternatives": [
+          "complex",
+          "information-heavy",
+          "knowledge-intensive"
+        ],
+        "example": "Public ID migration is a context-heavy task.",
+        "examples": [
+          {
+            "en": "Public ID migration is a context-heavy task."
+          },
+          {
+            "en": "Context-heavy tasks benefit most from agent memory."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-058",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 58,
+        "phrase": "token-efficient",
+        "translation": "ефективний за токенами",
+        "transcription": "/ˈtoʊkən ɪˈfɪʃənt/",
+        "commonAlternatives": [
+          "compact",
+          "optimized",
+          "low-token"
+        ],
+        "example": "The memory loader should be token-efficient.",
+        "examples": [
+          {
+            "en": "The memory loader should be token-efficient."
+          },
+          {
+            "en": "Token-efficient prompts reduce AI spend."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-059",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 59,
+        "phrase": "fit for purpose",
+        "translation": "відповідний задачі",
+        "transcription": "/fɪt fər ˈpɜːrpəs/",
+        "commonAlternatives": [
+          "suitable",
+          "appropriate",
+          "adequate"
+        ],
+        "example": "We choose a model that is fit for purpose.",
+        "examples": [
+          {
+            "en": "We choose a model that is fit for purpose."
+          },
+          {
+            "en": "Not every task requires the most powerful model."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-060",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 60,
+        "phrase": "good enough",
+        "translation": "достатньо хороший",
+        "transcription": "/ɡʊd ɪˈnʌf/",
+        "commonAlternatives": [
+          "sufficient",
+          "acceptable",
+          "adequate"
+        ],
+        "example": "A cheap model may be good enough for classification.",
+        "examples": [
+          {
+            "en": "A cheap model may be good enough for classification."
+          },
+          {
+            "en": "Strong models should be reserved for tasks where cheaper models are not good enough."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-061",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 61,
+        "phrase": "human-in-the-loop",
+        "translation": "людина в процесі контролю",
+        "transcription": "/ˈhjuːmən ɪn ðə luːp/",
+        "commonAlternatives": [
+          "human-reviewed",
+          "supervised",
+          "human-controlled"
+        ],
+        "example": "PR review should remain human-in-the-loop.",
+        "examples": [
+          {
+            "en": "PR review should remain human-in-the-loop."
+          },
+          {
+            "en": "Human-in-the-loop design improves trust and safety."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-062",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 62,
+        "phrase": "source of truth",
+        "translation": "джерело істини",
+        "transcription": "/sɔːrs əv truːθ/",
+        "commonAlternatives": [
+          "authoritative source",
+          "official source",
+          "trusted reference"
+        ],
+        "example": "The decision log should be the source of truth for architecture decisions.",
+        "examples": [
+          {
+            "en": "The decision log should be the source of truth for architecture decisions."
+          },
+          {
+            "en": "Code and DB schema are stronger sources of truth than chat history."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-063",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 63,
+        "phrase": "cost per accepted finding",
+        "translation": "вартість одного прийнятого зауваження",
+        "transcription": "/kɔːst pər əkˈseptɪd ˈfaɪndɪŋ/",
+        "commonAlternatives": [
+          "cost per useful issue",
+          "cost per valid comment",
+          "unit cost"
+        ],
+        "example": "Cost per accepted finding is more useful than total comment count.",
+        "examples": [
+          {
+            "en": "Cost per accepted finding is more useful than total comment count."
+          },
+          {
+            "en": "This metric connects AI spend with real engineering value."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-064",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 64,
+        "phrase": "memory hit rate",
+        "translation": "частка випадків, коли памʼять була корисною",
+        "transcription": "/ˈmeməri hɪt reɪt/",
+        "commonAlternatives": [
+          "memory reuse rate",
+          "context hit rate",
+          "retrieval success rate"
+        ],
+        "example": "Memory hit rate shows how often stored knowledge helps.",
+        "examples": [
+          {
+            "en": "Memory hit rate shows how often stored knowledge helps."
+          },
+          {
+            "en": "A high memory hit rate means the framework avoids repeated discovery."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Useful phrases"
+      },
+      {
+        "id": "agent-vocab-065",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 65,
+        "phrase": "Today I want to focus on cost optimization through agentic workflows and reusable memory.",
+        "translation": "Сьогодні я хочу сфокусуватися на оптимізації витрат через агентні workflow та повторно використовувану памʼять.",
+        "commonAlternatives": [
+          "Situation: Opening"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-066",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 66,
+        "phrase": "The goal is not to replace engineers, but to reduce repetitive work and review effort.",
+        "translation": "Мета не в тому, щоб замінити інженерів, а в тому, щоб зменшити повторювану роботу та зусилля на ревʼю.",
+        "commonAlternatives": [
+          "Situation: Main idea"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-067",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 67,
+        "phrase": "We should measure not only token cost, but also engineering time, rework, and context gathering.",
+        "translation": "Ми повинні вимірювати не тільки вартість токенів, а й інженерний час, переробку та збір контексту.",
+        "commonAlternatives": [
+          "Situation: Cost framing"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-068",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 68,
+        "phrase": "The orchestrator should be event-driven: it runs when a pull request is created or updated.",
+        "translation": "Оркестратор має бути керованим подіями: він запускається, коли pull request створено або оновлено.",
+        "commonAlternatives": [
+          "Situation: Orchestrator explanation"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-069",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 69,
+        "phrase": "Agent memory helps us avoid explaining the same project context again and again.",
+        "translation": "Агентна памʼять допомагає не пояснювати один і той самий проєктний контекст знову й знову.",
+        "commonAlternatives": [
+          "Situation: Memory value"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-070",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 70,
+        "phrase": "Simple tasks can use cheaper models, while high-risk changes are routed to stronger models.",
+        "translation": "Прості задачі можуть використовувати дешевші моделі, тоді як високоризикові зміни направляються до сильніших моделей.",
+        "commonAlternatives": [
+          "Situation: Model routing"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-071",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 71,
+        "phrase": "AI can provide a first-pass review and help human reviewers focus on critical issues.",
+        "translation": "AI може виконати первинне ревʼю та допомогти людським ревʼюерам сфокусуватися на критичних проблемах.",
+        "commonAlternatives": [
+          "Situation: PR review value"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-072",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 72,
+        "phrase": "The key metric is not the number of AI comments, but the number of useful accepted findings.",
+        "translation": "Ключова метрика — не кількість AI-коментарів, а кількість корисних прийнятих зауважень.",
+        "commonAlternatives": [
+          "Situation: Metrics"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-073",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 73,
+        "phrase": "We do not need a perfect golden solution; we can compare against historical PR data.",
+        "translation": "Нам не потрібне ідеальне еталонне рішення; ми можемо порівнювати з історичними PR-даними.",
+        "commonAlternatives": [
+          "Situation: Baseline"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-074",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 74,
+        "phrase": "The safest first step is shadow mode, where the agent reviews PRs without posting comments.",
+        "translation": "Найбезпечніший перший крок — shadow mode, коли агент ревʼюить PR без публікації коментарів.",
+        "commonAlternatives": [
+          "Situation: Pilot approach"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-075",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 75,
+        "phrase": "The framework controls risk through memory rules, validation, and human-in-the-loop review.",
+        "translation": "Фреймворк контролює ризик через правила памʼяті, валідацію та human-in-the-loop ревʼю.",
+        "commonAlternatives": [
+          "Situation: Risk control"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-076",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 76,
+        "phrase": "The real optimization comes from smaller context, fewer repeated tool calls, better model routing, and less rework.",
+        "translation": "Реальна оптимізація приходить завдяки меншому контексту, меншій кількості повторних tool calls, кращому routing моделей і меншій переробці.",
+        "commonAlternatives": [
+          "Situation: Closing"
+        ],
+        "level": "B2",
+        "tag": "4. Ready phrases"
+      },
+      {
+        "id": "agent-vocab-077",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 77,
+        "phrase": "AI usage can become expensive if agents load too much context, call strong models too often, or repeat the same discovery work.",
+        "translation": "Використання AI може стати дорогим, якщо агенти завантажують занадто багато контексту, занадто часто викликають сильні моделі або повторюють ту саму роботу з дослідження.",
+        "commonAlternatives": [
+          "Script step: Problem / Проблема"
+        ],
+        "level": "B2+",
+        "tag": "5. Compact script"
+      },
+      {
+        "id": "agent-vocab-078",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 78,
+        "phrase": "We propose a cost-aware agent framework with event-driven orchestration, model routing, reusable memory, and first-pass PR review.",
+        "translation": "Ми пропонуємо cost-aware агентний фреймворк з event-driven orchestration, model routing, reusable memory та first-pass PR review.",
+        "commonAlternatives": [
+          "Script step: Approach / Підхід"
+        ],
+        "level": "B2+",
+        "tag": "5. Compact script"
+      },
+      {
+        "id": "agent-vocab-079",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 79,
+        "phrase": "We reduce cost through diff-based review, static checks before LLM calls, minimal memory loading, and reusable design/API/DB context.",
+        "translation": "Ми зменшуємо витрати через diff-based review, static checks перед LLM calls, мінімальне завантаження памʼяті та повторне використання design/API/DB context.",
+        "commonAlternatives": [
+          "Script step: Optimization points / Точки оптимізації"
+        ],
+        "level": "B2+",
+        "tag": "5. Compact script"
+      },
+      {
+        "id": "agent-vocab-080",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 80,
+        "phrase": "Instead of relying on a golden solution, we measure baseline PR data, accepted AI findings, false positives, review effort, and cost per accepted finding.",
+        "translation": "Замість того щоб покладатися на golden solution, ми вимірюємо baseline PR data, accepted AI findings, false positives, review effort та cost per accepted finding.",
+        "commonAlternatives": [
+          "Script step: Measurement / Вимірювання"
+        ],
+        "level": "B2+",
+        "tag": "5. Compact script"
+      },
+      {
+        "id": "agent-vocab-081",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 81,
+        "phrase": "The framework helps control AI cost while improving review quality, reducing rework, and preserving engineering knowledge.",
+        "translation": "Фреймворк допомагає контролювати AI cost, одночасно покращуючи якість ревʼю, зменшуючи rework і зберігаючи engineering knowledge.",
+        "commonAlternatives": [
+          "Script step: Result / Результат"
+        ],
+        "level": "B2+",
+        "tag": "5. Compact script"
+      }
+    ],
+    "wordIndex": [
+      {
+        "id": "word-agent-vocab-001",
+        "sourcePhraseId": "agent-vocab-001",
+        "term": "cost optimization",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "оптимізація витрат",
+        "pronunciation": "cost optimization",
+        "transcription": "/kɔːst ˌɑːptəmaɪˈzeɪʃən/",
+        "commonAlternatives": [
+          "cost reduction",
+          "efficiency improvement",
+          "cost control"
+        ],
+        "examples": [
+          {
+            "en": "Cost optimization is not only about cheaper models."
+          },
+          {
+            "en": "Our framework focuses on cost optimization through context reuse."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-002",
+        "sourcePhraseId": "agent-vocab-002",
+        "term": "agent framework",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "агентний фреймворк",
+        "pronunciation": "agent framework",
+        "transcription": "/ˈeɪdʒənt ˈfreɪmwɜːrk/",
+        "commonAlternatives": [
+          "agent platform",
+          "agent system",
+          "automation framework"
+        ],
+        "examples": [
+          {
+            "en": "The agent framework defines how agents load memory and verify results."
+          },
+          {
+            "en": "We use the framework to make AI workflows repeatable."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-003",
+        "sourcePhraseId": "agent-vocab-003",
+        "term": "orchestrator",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "оркестратор",
+        "pronunciation": "orchestrator",
+        "transcription": "/ˈɔːrkəstreɪtər/",
+        "commonAlternatives": [
+          "coordinator",
+          "controller",
+          "workflow manager"
+        ],
+        "examples": [
+          {
+            "en": "The orchestrator decides which agent should handle the task."
+          },
+          {
+            "en": "The orchestrator should be event-driven, not constantly running."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-004",
+        "sourcePhraseId": "agent-vocab-004",
+        "term": "event-driven workflow",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "workflow, що запускається подією",
+        "pronunciation": "event-driven workflow",
+        "transcription": "/ɪˈvent ˈdrɪvən ˈwɜːrkfloʊ/",
+        "commonAlternatives": [
+          "trigger-based workflow",
+          "on-demand workflow",
+          "reactive workflow"
+        ],
+        "examples": [
+          {
+            "en": "An event-driven workflow starts when a pull request is created."
+          },
+          {
+            "en": "This approach helps avoid unnecessary model calls."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-005",
+        "sourcePhraseId": "agent-vocab-005",
+        "term": "pull request review",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "ревʼю pull request",
+        "pronunciation": "pull request review",
+        "transcription": "/pʊl rɪˈkwest rɪˈvjuː/",
+        "commonAlternatives": [
+          "code review",
+          "PR review",
+          "review pass"
+        ],
+        "examples": [
+          {
+            "en": "AI can perform the first pass of a pull request review."
+          },
+          {
+            "en": "Human reviewers still make the final decision."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-006",
+        "sourcePhraseId": "agent-vocab-006",
+        "term": "baseline",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "базовий рівень для порівняння",
+        "pronunciation": "baseline",
+        "transcription": "/ˈbeɪslaɪn/",
+        "commonAlternatives": [
+          "starting point",
+          "reference point",
+          "benchmark"
+        ],
+        "examples": [
+          {
+            "en": "We need a baseline before measuring improvement."
+          },
+          {
+            "en": "Historical PRs can help us build a reliable baseline."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-007",
+        "sourcePhraseId": "agent-vocab-007",
+        "term": "benchmark",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "бенчмарк, еталон для оцінки",
+        "pronunciation": "benchmark",
+        "transcription": "/ˈbentʃmɑːrk/",
+        "commonAlternatives": [
+          "standard",
+          "reference",
+          "comparison point"
+        ],
+        "examples": [
+          {
+            "en": "We do not always have a perfect benchmark for agentic workflows."
+          },
+          {
+            "en": "Instead of a golden solution, we can compare against historical data."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-008",
+        "sourcePhraseId": "agent-vocab-008",
+        "term": "evaluation harness",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "система/набір для оцінювання",
+        "pronunciation": "evaluation harness",
+        "transcription": "/ɪˌvæljuˈeɪʃən ˈhɑːrnəs/",
+        "commonAlternatives": [
+          "measurement setup",
+          "test harness",
+          "assessment framework"
+        ],
+        "examples": [
+          {
+            "en": "The evaluation harness tracks useful findings and model cost."
+          },
+          {
+            "en": "It helps us show real value without a perfect template solution."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-009",
+        "sourcePhraseId": "agent-vocab-009",
+        "term": "useful finding",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "корисне зауваження/знахідка",
+        "pronunciation": "useful finding",
+        "transcription": "/ˈjuːsfəl ˈfaɪndɪŋ/",
+        "commonAlternatives": [
+          "valid issue",
+          "actionable comment",
+          "accepted finding"
+        ],
+        "examples": [
+          {
+            "en": "A useful finding is something the developer actually fixes."
+          },
+          {
+            "en": "We should measure cost per useful finding."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-010",
+        "sourcePhraseId": "agent-vocab-010",
+        "term": "false positive",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "хибне спрацювання",
+        "pronunciation": "false positive",
+        "transcription": "/fɔːls ˈpɑːzətɪv/",
+        "commonAlternatives": [
+          "incorrect alert",
+          "invalid finding",
+          "noise"
+        ],
+        "examples": [
+          {
+            "en": "Too many false positives reduce trust in the agent."
+          },
+          {
+            "en": "The goal is to keep false positives low."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-011",
+        "sourcePhraseId": "agent-vocab-011",
+        "term": "model routing",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "вибір моделі залежно від задачі",
+        "pronunciation": "model routing",
+        "transcription": "/ˈmɑːdəl ˈruːtɪŋ/",
+        "commonAlternatives": [
+          "model selection",
+          "task routing",
+          "routing strategy"
+        ],
+        "examples": [
+          {
+            "en": "Model routing sends simple tasks to cheaper models."
+          },
+          {
+            "en": "High-risk changes can be routed to a stronger model."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-012",
+        "sourcePhraseId": "agent-vocab-012",
+        "term": "token budget",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "бюджет токенів",
+        "pronunciation": "token budget",
+        "transcription": "/ˈtoʊkən ˈbʌdʒɪt/",
+        "commonAlternatives": [
+          "context budget",
+          "usage limit",
+          "token allowance"
+        ],
+        "examples": [
+          {
+            "en": "Every PR review should have a token budget."
+          },
+          {
+            "en": "A smaller token budget encourages better context selection."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-013",
+        "sourcePhraseId": "agent-vocab-013",
+        "term": "context reuse",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 13,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "повторне використання контексту",
+        "pronunciation": "context reuse",
+        "transcription": "/ˈkɑːntekst riːˈjuːs/",
+        "commonAlternatives": [
+          "memory reuse",
+          "context sharing",
+          "knowledge reuse"
+        ],
+        "examples": [
+          {
+            "en": "Context reuse reduces repeated explanations."
+          },
+          {
+            "en": "Agent memory makes context reuse possible across tasks."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-014",
+        "sourcePhraseId": "agent-vocab-014",
+        "term": "memory loader",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 14,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "завантажувач памʼяті",
+        "pronunciation": "memory loader",
+        "transcription": "/ˈmeməri ˈloʊdər/",
+        "commonAlternatives": [
+          "context loader",
+          "memory selector",
+          "context planner"
+        ],
+        "examples": [
+          {
+            "en": "The memory loader selects only relevant project knowledge."
+          },
+          {
+            "en": "It prevents the agent from loading the whole repository."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-015",
+        "sourcePhraseId": "agent-vocab-015",
+        "term": "decision log",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 15,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "журнал рішень",
+        "pronunciation": "decision log",
+        "transcription": "/dɪˈsɪʒən lɔːɡ/",
+        "commonAlternatives": [
+          "ADR log",
+          "decision record",
+          "architecture log"
+        ],
+        "examples": [
+          {
+            "en": "The decision log preserves architectural choices."
+          },
+          {
+            "en": "It helps agents avoid asking the same questions again."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-016",
+        "sourcePhraseId": "agent-vocab-016",
+        "term": "closed loop",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 16,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "замкнутий цикл",
+        "pronunciation": "closed loop",
+        "transcription": "/kloʊzd luːp/",
+        "commonAlternatives": [
+          "feedback loop",
+          "learning loop",
+          "continuous improvement loop"
+        ],
+        "examples": [
+          {
+            "en": "A closed loop turns completed work into better memory."
+          },
+          {
+            "en": "Verification and learning are part of the closed loop."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-017",
+        "sourcePhraseId": "agent-vocab-017",
+        "term": "first-pass review",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 17,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "первинне ревʼю",
+        "pronunciation": "first-pass review",
+        "transcription": "/fɜːrst pæs rɪˈvjuː/",
+        "commonAlternatives": [
+          "initial review",
+          "preliminary review",
+          "early review"
+        ],
+        "examples": [
+          {
+            "en": "The agent can do a first-pass review before a senior developer."
+          },
+          {
+            "en": "This reduces obvious issues before human review."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-018",
+        "sourcePhraseId": "agent-vocab-018",
+        "term": "review effort",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 18,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "зусилля на ревʼю",
+        "pronunciation": "review effort",
+        "transcription": "/rɪˈvjuː ˈefərt/",
+        "commonAlternatives": [
+          "review workload",
+          "review time",
+          "reviewer effort"
+        ],
+        "examples": [
+          {
+            "en": "We want to reduce review effort without reducing quality."
+          },
+          {
+            "en": "AI can help reviewers focus on high-risk parts."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-019",
+        "sourcePhraseId": "agent-vocab-019",
+        "term": "rework",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 19,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "переробка",
+        "pronunciation": "rework",
+        "transcription": "/ˌriːˈwɜːrk/",
+        "commonAlternatives": [
+          "correction",
+          "redo work",
+          "follow-up fixes"
+        ],
+        "examples": [
+          {
+            "en": "Early AI feedback can reduce rework."
+          },
+          {
+            "en": "Rework is often more expensive than initial review."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-020",
+        "sourcePhraseId": "agent-vocab-020",
+        "term": "governance",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 20,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "управління, контроль процесу",
+        "pronunciation": "governance",
+        "transcription": "/ˈɡʌvərnəns/",
+        "commonAlternatives": [
+          "control",
+          "oversight",
+          "management"
+        ],
+        "examples": [
+          {
+            "en": "Memory governance prevents outdated context from being reused."
+          },
+          {
+            "en": "Cost governance is needed for scalable agent usage."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-021",
+        "sourcePhraseId": "agent-vocab-021",
+        "term": "adoption",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 21,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "впровадження, прийняття користувачами",
+        "pronunciation": "adoption",
+        "transcription": "/əˈdɑːpʃən/",
+        "commonAlternatives": [
+          "usage",
+          "rollout",
+          "acceptance"
+        ],
+        "examples": [
+          {
+            "en": "Adoption depends on trust and measurable value."
+          },
+          {
+            "en": "Developers will adopt agents if findings are useful."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-022",
+        "sourcePhraseId": "agent-vocab-022",
+        "term": "return on investment",
+        "category": "Agent Framework Vocabulary",
+        "section": "1. Nouns / Іменники",
+        "sequence": 22,
+        "level": "B2",
+        "tag": "1. Nouns",
+        "meaning": "окупність інвестицій",
+        "pronunciation": "return on investment",
+        "transcription": "/rɪˈtɜːrn ɑːn ɪnˈvestmənt/",
+        "commonAlternatives": [
+          "ROI",
+          "business value",
+          "payoff"
+        ],
+        "examples": [
+          {
+            "en": "We need to show return on investment for agent automation."
+          },
+          {
+            "en": "ROI should include time saved and reduced rework."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-023",
+        "sourcePhraseId": "agent-vocab-023",
+        "term": "optimize",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 23,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "оптимізувати",
+        "pronunciation": "optimize",
+        "transcription": "/ˈɑːptəmaɪz/",
+        "commonAlternatives": [
+          "Three forms: optimize — optimized — optimized",
+          "improve",
+          "reduce cost",
+          "streamline"
+        ],
+        "examples": [
+          {
+            "en": "We optimize cost by loading only the required context."
+          },
+          {
+            "en": "The framework helps optimize AI usage across PRs."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-024",
+        "sourcePhraseId": "agent-vocab-024",
+        "term": "reduce",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 24,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "зменшувати",
+        "pronunciation": "reduce",
+        "transcription": "/rɪˈduːs/",
+        "commonAlternatives": [
+          "Three forms: reduce — reduced — reduced",
+          "decrease",
+          "lower",
+          "cut"
+        ],
+        "examples": [
+          {
+            "en": "We reduce token usage by reviewing only the diff."
+          },
+          {
+            "en": "AI can reduce repetitive review work."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-025",
+        "sourcePhraseId": "agent-vocab-025",
+        "term": "measure",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 25,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "вимірювати",
+        "pronunciation": "measure",
+        "transcription": "/ˈmeʒər/",
+        "commonAlternatives": [
+          "Three forms: measure — measured — measured",
+          "track",
+          "quantify",
+          "assess"
+        ],
+        "examples": [
+          {
+            "en": "We measure cost per accepted finding."
+          },
+          {
+            "en": "We should measure both AI cost and engineering impact."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-026",
+        "sourcePhraseId": "agent-vocab-026",
+        "term": "compare",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 26,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "порівнювати",
+        "pronunciation": "compare",
+        "transcription": "/kəmˈper/",
+        "commonAlternatives": [
+          "Three forms: compare — compared — compared",
+          "benchmark",
+          "contrast",
+          "evaluate against"
+        ],
+        "examples": [
+          {
+            "en": "We compare agent output with historical human reviews."
+          },
+          {
+            "en": "We should compare PR cycle time before and after adoption."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-027",
+        "sourcePhraseId": "agent-vocab-027",
+        "term": "route",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 27,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "направляти, маршрутизувати",
+        "pronunciation": "route",
+        "transcription": "/ruːt/",
+        "commonAlternatives": [
+          "Three forms: route — routed — routed",
+          "direct",
+          "assign",
+          "dispatch"
+        ],
+        "examples": [
+          {
+            "en": "The orchestrator routes simple tasks to a cheaper model."
+          },
+          {
+            "en": "Risky changes are routed to a stronger model."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-028",
+        "sourcePhraseId": "agent-vocab-028",
+        "term": "trigger",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 28,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "запускати подією",
+        "pronunciation": "trigger",
+        "transcription": "/ˈtrɪɡər/",
+        "commonAlternatives": [
+          "Three forms: trigger — triggered — triggered",
+          "start",
+          "initiate",
+          "activate"
+        ],
+        "examples": [
+          {
+            "en": "A PR update triggers the review workflow."
+          },
+          {
+            "en": "We should trigger agents only when there is a meaningful event."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-029",
+        "sourcePhraseId": "agent-vocab-029",
+        "term": "reuse",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 29,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "повторно використовувати",
+        "pronunciation": "reuse",
+        "transcription": "/ˌriːˈjuːz/",
+        "commonAlternatives": [
+          "Three forms: reuse — reused — reused",
+          "recycle",
+          "leverage again",
+          "repurpose"
+        ],
+        "examples": [
+          {
+            "en": "We reuse validated memory instead of rebuilding context."
+          },
+          {
+            "en": "Design Memory lets us reuse Figma knowledge locally."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-030",
+        "sourcePhraseId": "agent-vocab-030",
+        "term": "classify",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 30,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "класифікувати",
+        "pronunciation": "classify",
+        "transcription": "/ˈklæsəfaɪ/",
+        "commonAlternatives": [
+          "Three forms: classify — classified — classified",
+          "categorize",
+          "label",
+          "group"
+        ],
+        "examples": [
+          {
+            "en": "The orchestrator classifies the PR by risk level."
+          },
+          {
+            "en": "The agent classifies changes as frontend, backend, DB, or design-related."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-031",
+        "sourcePhraseId": "agent-vocab-031",
+        "term": "prioritize",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 31,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "пріоритезувати",
+        "pronunciation": "prioritize",
+        "transcription": "/praɪˈɔːrətaɪz/",
+        "commonAlternatives": [
+          "Three forms: prioritize — prioritized — prioritized",
+          "rank",
+          "order",
+          "focus on"
+        ],
+        "examples": [
+          {
+            "en": "We prioritize high-impact findings over minor comments."
+          },
+          {
+            "en": "The review should prioritize correctness and security risks."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-032",
+        "sourcePhraseId": "agent-vocab-032",
+        "term": "validate",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 32,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "валідувати, перевіряти",
+        "pronunciation": "validate",
+        "transcription": "/ˈvælədeɪt/",
+        "commonAlternatives": [
+          "Three forms: validate — validated — validated",
+          "verify",
+          "check",
+          "confirm"
+        ],
+        "examples": [
+          {
+            "en": "The framework validates memory before using it."
+          },
+          {
+            "en": "We validate whether an AI finding is accepted by developers."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-033",
+        "sourcePhraseId": "agent-vocab-033",
+        "term": "detect",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 33,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "виявляти",
+        "pronunciation": "detect",
+        "transcription": "/dɪˈtekt/",
+        "commonAlternatives": [
+          "Three forms: detect — detected — detected",
+          "identify",
+          "discover",
+          "spot"
+        ],
+        "examples": [
+          {
+            "en": "The agent can detect API contract mismatches."
+          },
+          {
+            "en": "Static tools detect formatting and build issues before the LLM runs."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-034",
+        "sourcePhraseId": "agent-vocab-034",
+        "term": "prevent",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 34,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "запобігати",
+        "pronunciation": "prevent",
+        "transcription": "/prɪˈvent/",
+        "commonAlternatives": [
+          "Three forms: prevent — prevented — prevented",
+          "avoid",
+          "stop",
+          "block"
+        ],
+        "examples": [
+          {
+            "en": "Memory rules prevent agents from changing internal IDs incorrectly."
+          },
+          {
+            "en": "Early review helps prevent costly rework."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-035",
+        "sourcePhraseId": "agent-vocab-035",
+        "term": "estimate",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 35,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "оцінювати приблизно",
+        "pronunciation": "estimate",
+        "transcription": "/ˈestəmeɪt/",
+        "commonAlternatives": [
+          "Three forms: estimate — estimated — estimated",
+          "approximate",
+          "forecast",
+          "calculate roughly"
+        ],
+        "examples": [
+          {
+            "en": "We estimate the cost of each PR review."
+          },
+          {
+            "en": "The report should estimate time saved and AI cost."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-036",
+        "sourcePhraseId": "agent-vocab-036",
+        "term": "automate",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 36,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "автоматизувати",
+        "pronunciation": "automate",
+        "transcription": "/ˈɔːtəmeɪt/",
+        "commonAlternatives": [
+          "Three forms: automate — automated — automated",
+          "mechanize",
+          "systematize",
+          "streamline"
+        ],
+        "examples": [
+          {
+            "en": "We automate the first-pass PR review."
+          },
+          {
+            "en": "The goal is to automate repeatable checks, not replace human judgment."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-037",
+        "sourcePhraseId": "agent-vocab-037",
+        "term": "orchestrate",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 37,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "оркеструвати, координувати",
+        "pronunciation": "orchestrate",
+        "transcription": "/ˈɔːrkəstreɪt/",
+        "commonAlternatives": [
+          "Three forms: orchestrate — orchestrated — orchestrated",
+          "coordinate",
+          "manage",
+          "arrange"
+        ],
+        "examples": [
+          {
+            "en": "The service orchestrates agents based on PR risk."
+          },
+          {
+            "en": "We can orchestrate DB, backend, and frontend review agents."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-038",
+        "sourcePhraseId": "agent-vocab-038",
+        "term": "review",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 38,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "ревʼювити, переглядати",
+        "pronunciation": "review",
+        "transcription": "/rɪˈvjuː/",
+        "commonAlternatives": [
+          "Three forms: review — reviewed — reviewed",
+          "inspect",
+          "examine",
+          "assess"
+        ],
+        "examples": [
+          {
+            "en": "The agent reviews changed files and related contracts."
+          },
+          {
+            "en": "Human reviewers review the final decision and critical comments."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-039",
+        "sourcePhraseId": "agent-vocab-039",
+        "term": "summarize",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 39,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "підсумовувати",
+        "pronunciation": "summarize",
+        "transcription": "/ˈsʌməraɪz/",
+        "commonAlternatives": [
+          "Three forms: summarize — summarized — summarized",
+          "recap",
+          "outline",
+          "condense"
+        ],
+        "examples": [
+          {
+            "en": "The agent summarizes the PR before detailed review."
+          },
+          {
+            "en": "A concise summary helps reviewers understand the change faster."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-040",
+        "sourcePhraseId": "agent-vocab-040",
+        "term": "filter",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 40,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "фільтрувати",
+        "pronunciation": "filter",
+        "transcription": "/ˈfɪltər/",
+        "commonAlternatives": [
+          "Three forms: filter — filtered — filtered",
+          "narrow down",
+          "screen",
+          "exclude"
+        ],
+        "examples": [
+          {
+            "en": "The framework filters irrelevant memory."
+          },
+          {
+            "en": "We should filter generated files from AI review unless needed."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-041",
+        "sourcePhraseId": "agent-vocab-041",
+        "term": "escalate",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 41,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "ескалювати",
+        "pronunciation": "escalate",
+        "transcription": "/ˈeskəleɪt/",
+        "commonAlternatives": [
+          "Three forms: escalate — escalated — escalated",
+          "raise",
+          "promote",
+          "forward"
+        ],
+        "examples": [
+          {
+            "en": "High-risk PRs are escalated to a stronger model."
+          },
+          {
+            "en": "Security findings should be escalated to a human reviewer."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-042",
+        "sourcePhraseId": "agent-vocab-042",
+        "term": "quantify",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 42,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "кількісно оцінювати",
+        "pronunciation": "quantify",
+        "transcription": "/ˈkwɑːntəfaɪ/",
+        "commonAlternatives": [
+          "Three forms: quantify — quantified — quantified",
+          "measure",
+          "calculate",
+          "express numerically"
+        ],
+        "examples": [
+          {
+            "en": "We quantify savings through accepted findings and review time reduction."
+          },
+          {
+            "en": "It is difficult to quantify value without a baseline."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-043",
+        "sourcePhraseId": "agent-vocab-043",
+        "term": "justify",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 43,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "обґрунтовувати",
+        "pronunciation": "justify",
+        "transcription": "/ˈdʒʌstəfaɪ/",
+        "commonAlternatives": [
+          "Three forms: justify — justified — justified",
+          "explain",
+          "support",
+          "defend"
+        ],
+        "examples": [
+          {
+            "en": "We need to justify the investment with measurable outcomes."
+          },
+          {
+            "en": "The agent should justify why it loaded specific memory files."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-044",
+        "sourcePhraseId": "agent-vocab-044",
+        "term": "de-risk",
+        "category": "Agent Framework Vocabulary",
+        "section": "2. Verbs / Дієслова",
+        "sequence": 44,
+        "level": "B2",
+        "tag": "2. Verbs",
+        "meaning": "знижувати ризик",
+        "pronunciation": "de-risk",
+        "transcription": "/diː rɪsk/",
+        "commonAlternatives": [
+          "Three forms: de-risk — de-risked — de-risked",
+          "reduce risk",
+          "make safer",
+          "mitigate"
+        ],
+        "examples": [
+          {
+            "en": "AI review can de-risk complex database changes."
+          },
+          {
+            "en": "The framework de-risks agent usage by enforcing rules and validation."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-045",
+        "sourcePhraseId": "agent-vocab-045",
+        "term": "cost-aware",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 45,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "з урахуванням вартості",
+        "pronunciation": "cost-aware",
+        "transcription": "/kɔːst əˈwer/",
+        "commonAlternatives": [
+          "budget-aware",
+          "cost-conscious",
+          "efficient"
+        ],
+        "examples": [
+          {
+            "en": "We need a cost-aware agent workflow."
+          },
+          {
+            "en": "A cost-aware review avoids unnecessary model calls."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-046",
+        "sourcePhraseId": "agent-vocab-046",
+        "term": "event-driven",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 46,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "керований подіями",
+        "pronunciation": "event-driven",
+        "transcription": "/ɪˈvent ˈdrɪvən/",
+        "commonAlternatives": [
+          "trigger-based",
+          "reactive",
+          "on-demand"
+        ],
+        "examples": [
+          {
+            "en": "The orchestrator should be event-driven."
+          },
+          {
+            "en": "Event-driven agents run only when needed."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-047",
+        "sourcePhraseId": "agent-vocab-047",
+        "term": "on-demand",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 47,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "на вимогу",
+        "pronunciation": "on-demand",
+        "transcription": "/ɑːn dɪˈmænd/",
+        "commonAlternatives": [
+          "as needed",
+          "request-based",
+          "ad hoc"
+        ],
+        "examples": [
+          {
+            "en": "We can start with on-demand PR reviews."
+          },
+          {
+            "en": "On-demand execution is cheaper than always-on processing."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-048",
+        "sourcePhraseId": "agent-vocab-048",
+        "term": "non-blocking",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 48,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "такий, що не блокує процес",
+        "pronunciation": "non-blocking",
+        "transcription": "/nɑːn ˈblɑːkɪŋ/",
+        "commonAlternatives": [
+          "advisory",
+          "optional",
+          "informational"
+        ],
+        "examples": [
+          {
+            "en": "The first version should provide non-blocking review comments."
+          },
+          {
+            "en": "Non-blocking feedback is safer during pilot adoption."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-049",
+        "sourcePhraseId": "agent-vocab-049",
+        "term": "high-risk",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 49,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "високоризиковий",
+        "pronunciation": "high-risk",
+        "transcription": "/haɪ rɪsk/",
+        "commonAlternatives": [
+          "critical",
+          "sensitive",
+          "risky"
+        ],
+        "examples": [
+          {
+            "en": "DB migrations are high-risk changes."
+          },
+          {
+            "en": "High-risk PRs should get deeper review."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-050",
+        "sourcePhraseId": "agent-vocab-050",
+        "term": "low-risk",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 50,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "низькоризиковий",
+        "pronunciation": "low-risk",
+        "transcription": "/loʊ rɪsk/",
+        "commonAlternatives": [
+          "safe",
+          "minor",
+          "simple"
+        ],
+        "examples": [
+          {
+            "en": "A small CSS change is usually low-risk."
+          },
+          {
+            "en": "Low-risk changes can use a cheaper review path."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-051",
+        "sourcePhraseId": "agent-vocab-051",
+        "term": "actionable",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 51,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "такий, по якому можна діяти",
+        "pronunciation": "actionable",
+        "transcription": "/ˈækʃənəbəl/",
+        "commonAlternatives": [
+          "practical",
+          "useful",
+          "specific"
+        ],
+        "examples": [
+          {
+            "en": "AI comments should be actionable."
+          },
+          {
+            "en": "A finding is useful only if it is clear and actionable."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-052",
+        "sourcePhraseId": "agent-vocab-052",
+        "term": "measurable",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 52,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "вимірюваний",
+        "pronunciation": "measurable",
+        "transcription": "/ˈmeʒərəbl/",
+        "commonAlternatives": [
+          "quantifiable",
+          "trackable",
+          "observable"
+        ],
+        "examples": [
+          {
+            "en": "We need measurable outcomes, not only opinions."
+          },
+          {
+            "en": "Cost per PR is a measurable metric."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-053",
+        "sourcePhraseId": "agent-vocab-053",
+        "term": "scalable",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 53,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "масштабований",
+        "pronunciation": "scalable",
+        "transcription": "/ˈskeɪləbəl/",
+        "commonAlternatives": [
+          "expandable",
+          "sustainable",
+          "growth-ready"
+        ],
+        "examples": [
+          {
+            "en": "The framework must be scalable across repositories."
+          },
+          {
+            "en": "Scalable review requires model routing and memory reuse."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-054",
+        "sourcePhraseId": "agent-vocab-054",
+        "term": "repeatable",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 54,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "повторюваний",
+        "pronunciation": "repeatable",
+        "transcription": "/rɪˈpiːtəbl/",
+        "commonAlternatives": [
+          "reproducible",
+          "consistent",
+          "standardized"
+        ],
+        "examples": [
+          {
+            "en": "Skills make agent workflows repeatable."
+          },
+          {
+            "en": "Repeatable evaluation helps us compare results over time."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-055",
+        "sourcePhraseId": "agent-vocab-055",
+        "term": "lightweight",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 55,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "легкий, не надмірний",
+        "pronunciation": "lightweight",
+        "transcription": "/ˈlaɪtweɪt/",
+        "commonAlternatives": [
+          "simple",
+          "minimal",
+          "low-overhead"
+        ],
+        "examples": [
+          {
+            "en": "We should start with a lightweight pilot."
+          },
+          {
+            "en": "A lightweight workflow is easier to adopt."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-056",
+        "sourcePhraseId": "agent-vocab-056",
+        "term": "evidence-based",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 56,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "заснований на доказах",
+        "pronunciation": "evidence-based",
+        "transcription": "/ˈevədəns beɪst/",
+        "commonAlternatives": [
+          "data-driven",
+          "fact-based",
+          "supported"
+        ],
+        "examples": [
+          {
+            "en": "We need evidence-based claims about cost savings."
+          },
+          {
+            "en": "The framework should produce evidence-based review findings."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-057",
+        "sourcePhraseId": "agent-vocab-057",
+        "term": "context-heavy",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 57,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "такий, що потребує багато контексту",
+        "pronunciation": "context-heavy",
+        "transcription": "/ˈkɑːntekst ˈhevi/",
+        "commonAlternatives": [
+          "complex",
+          "information-heavy",
+          "knowledge-intensive"
+        ],
+        "examples": [
+          {
+            "en": "Public ID migration is a context-heavy task."
+          },
+          {
+            "en": "Context-heavy tasks benefit most from agent memory."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-058",
+        "sourcePhraseId": "agent-vocab-058",
+        "term": "token-efficient",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 58,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "ефективний за токенами",
+        "pronunciation": "token-efficient",
+        "transcription": "/ˈtoʊkən ɪˈfɪʃənt/",
+        "commonAlternatives": [
+          "compact",
+          "optimized",
+          "low-token"
+        ],
+        "examples": [
+          {
+            "en": "The memory loader should be token-efficient."
+          },
+          {
+            "en": "Token-efficient prompts reduce AI spend."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-059",
+        "sourcePhraseId": "agent-vocab-059",
+        "term": "fit for purpose",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 59,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "відповідний задачі",
+        "pronunciation": "fit for purpose",
+        "transcription": "/fɪt fər ˈpɜːrpəs/",
+        "commonAlternatives": [
+          "suitable",
+          "appropriate",
+          "adequate"
+        ],
+        "examples": [
+          {
+            "en": "We choose a model that is fit for purpose."
+          },
+          {
+            "en": "Not every task requires the most powerful model."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-060",
+        "sourcePhraseId": "agent-vocab-060",
+        "term": "good enough",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 60,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "достатньо хороший",
+        "pronunciation": "good enough",
+        "transcription": "/ɡʊd ɪˈnʌf/",
+        "commonAlternatives": [
+          "sufficient",
+          "acceptable",
+          "adequate"
+        ],
+        "examples": [
+          {
+            "en": "A cheap model may be good enough for classification."
+          },
+          {
+            "en": "Strong models should be reserved for tasks where cheaper models are not good enough."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-061",
+        "sourcePhraseId": "agent-vocab-061",
+        "term": "human-in-the-loop",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 61,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "людина в процесі контролю",
+        "pronunciation": "human-in-the-loop",
+        "transcription": "/ˈhjuːmən ɪn ðə luːp/",
+        "commonAlternatives": [
+          "human-reviewed",
+          "supervised",
+          "human-controlled"
+        ],
+        "examples": [
+          {
+            "en": "PR review should remain human-in-the-loop."
+          },
+          {
+            "en": "Human-in-the-loop design improves trust and safety."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-062",
+        "sourcePhraseId": "agent-vocab-062",
+        "term": "source of truth",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 62,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "джерело істини",
+        "pronunciation": "source of truth",
+        "transcription": "/sɔːrs əv truːθ/",
+        "commonAlternatives": [
+          "authoritative source",
+          "official source",
+          "trusted reference"
+        ],
+        "examples": [
+          {
+            "en": "The decision log should be the source of truth for architecture decisions."
+          },
+          {
+            "en": "Code and DB schema are stronger sources of truth than chat history."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-063",
+        "sourcePhraseId": "agent-vocab-063",
+        "term": "cost per accepted finding",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 63,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "вартість одного прийнятого зауваження",
+        "pronunciation": "cost per accepted finding",
+        "transcription": "/kɔːst pər əkˈseptɪd ˈfaɪndɪŋ/",
+        "commonAlternatives": [
+          "cost per useful issue",
+          "cost per valid comment",
+          "unit cost"
+        ],
+        "examples": [
+          {
+            "en": "Cost per accepted finding is more useful than total comment count."
+          },
+          {
+            "en": "This metric connects AI spend with real engineering value."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-064",
+        "sourcePhraseId": "agent-vocab-064",
+        "term": "memory hit rate",
+        "category": "Agent Framework Vocabulary",
+        "section": "3. Other Useful Words and Phrases / Інші корисні слова та фрази",
+        "sequence": 64,
+        "level": "B2",
+        "tag": "3. Useful phrases",
+        "meaning": "частка випадків, коли памʼять була корисною",
+        "pronunciation": "memory hit rate",
+        "transcription": "/ˈmeməri hɪt reɪt/",
+        "commonAlternatives": [
+          "memory reuse rate",
+          "context hit rate",
+          "retrieval success rate"
+        ],
+        "examples": [
+          {
+            "en": "Memory hit rate shows how often stored knowledge helps."
+          },
+          {
+            "en": "A high memory hit rate means the framework avoids repeated discovery."
+          }
+        ]
+      },
+      {
+        "id": "word-agent-vocab-065",
+        "sourcePhraseId": "agent-vocab-065",
+        "term": "Today I want to focus on cost optimization through agentic workflows and reusable memory.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 65,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Сьогодні я хочу сфокусуватися на оптимізації витрат через агентні workflow та повторно використовувану памʼять.",
+        "pronunciation": "Today I want to focus on cost optimization through agentic workflows and reusable memory.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Opening"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-066",
+        "sourcePhraseId": "agent-vocab-066",
+        "term": "The goal is not to replace engineers, but to reduce repetitive work and review effort.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 66,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Мета не в тому, щоб замінити інженерів, а в тому, щоб зменшити повторювану роботу та зусилля на ревʼю.",
+        "pronunciation": "The goal is not to replace engineers, but to reduce repetitive work and review effort.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Main idea"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-067",
+        "sourcePhraseId": "agent-vocab-067",
+        "term": "We should measure not only token cost, but also engineering time, rework, and context gathering.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 67,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Ми повинні вимірювати не тільки вартість токенів, а й інженерний час, переробку та збір контексту.",
+        "pronunciation": "We should measure not only token cost, but also engineering time, rework, and context gathering.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Cost framing"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-068",
+        "sourcePhraseId": "agent-vocab-068",
+        "term": "The orchestrator should be event-driven: it runs when a pull request is created or updated.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 68,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Оркестратор має бути керованим подіями: він запускається, коли pull request створено або оновлено.",
+        "pronunciation": "The orchestrator should be event-driven: it runs when a pull request is created or updated.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Orchestrator explanation"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-069",
+        "sourcePhraseId": "agent-vocab-069",
+        "term": "Agent memory helps us avoid explaining the same project context again and again.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 69,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Агентна памʼять допомагає не пояснювати один і той самий проєктний контекст знову й знову.",
+        "pronunciation": "Agent memory helps us avoid explaining the same project context again and again.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Memory value"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-070",
+        "sourcePhraseId": "agent-vocab-070",
+        "term": "Simple tasks can use cheaper models, while high-risk changes are routed to stronger models.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 70,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Прості задачі можуть використовувати дешевші моделі, тоді як високоризикові зміни направляються до сильніших моделей.",
+        "pronunciation": "Simple tasks can use cheaper models, while high-risk changes are routed to stronger models.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Model routing"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-071",
+        "sourcePhraseId": "agent-vocab-071",
+        "term": "AI can provide a first-pass review and help human reviewers focus on critical issues.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 71,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "AI може виконати первинне ревʼю та допомогти людським ревʼюерам сфокусуватися на критичних проблемах.",
+        "pronunciation": "AI can provide a first-pass review and help human reviewers focus on critical issues.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: PR review value"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-072",
+        "sourcePhraseId": "agent-vocab-072",
+        "term": "The key metric is not the number of AI comments, but the number of useful accepted findings.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 72,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Ключова метрика — не кількість AI-коментарів, а кількість корисних прийнятих зауважень.",
+        "pronunciation": "The key metric is not the number of AI comments, but the number of useful accepted findings.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Metrics"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-073",
+        "sourcePhraseId": "agent-vocab-073",
+        "term": "We do not need a perfect golden solution; we can compare against historical PR data.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 73,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Нам не потрібне ідеальне еталонне рішення; ми можемо порівнювати з історичними PR-даними.",
+        "pronunciation": "We do not need a perfect golden solution; we can compare against historical PR data.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Baseline"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-074",
+        "sourcePhraseId": "agent-vocab-074",
+        "term": "The safest first step is shadow mode, where the agent reviews PRs without posting comments.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 74,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Найбезпечніший перший крок — shadow mode, коли агент ревʼюить PR без публікації коментарів.",
+        "pronunciation": "The safest first step is shadow mode, where the agent reviews PRs without posting comments.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Pilot approach"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-075",
+        "sourcePhraseId": "agent-vocab-075",
+        "term": "The framework controls risk through memory rules, validation, and human-in-the-loop review.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 75,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Фреймворк контролює ризик через правила памʼяті, валідацію та human-in-the-loop ревʼю.",
+        "pronunciation": "The framework controls risk through memory rules, validation, and human-in-the-loop review.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Risk control"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-076",
+        "sourcePhraseId": "agent-vocab-076",
+        "term": "The real optimization comes from smaller context, fewer repeated tool calls, better model routing, and less rework.",
+        "category": "Agent Framework Vocabulary",
+        "section": "4. Ready-to-use Presentation Phrases",
+        "sequence": 76,
+        "level": "B2",
+        "tag": "4. Ready phrases",
+        "meaning": "Реальна оптимізація приходить завдяки меншому контексту, меншій кількості повторних tool calls, кращому routing моделей і меншій переробці.",
+        "pronunciation": "The real optimization comes from smaller context, fewer repeated tool calls, better model routing, and less rework.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Situation: Closing"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-077",
+        "sourcePhraseId": "agent-vocab-077",
+        "term": "AI usage can become expensive if agents load too much context, call strong models too often, or repeat the same discovery work.",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 77,
+        "level": "B2+",
+        "tag": "5. Compact script",
+        "meaning": "Використання AI може стати дорогим, якщо агенти завантажують занадто багато контексту, занадто часто викликають сильні моделі або повторюють ту саму роботу з дослідження.",
+        "pronunciation": "AI usage can become expensive if agents load too much context, call strong models too often, or repeat the same discovery work.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Script step: Problem / Проблема"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-078",
+        "sourcePhraseId": "agent-vocab-078",
+        "term": "We propose a cost-aware agent framework with event-driven orchestration, model routing, reusable memory, and first-pass PR review.",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 78,
+        "level": "B2+",
+        "tag": "5. Compact script",
+        "meaning": "Ми пропонуємо cost-aware агентний фреймворк з event-driven orchestration, model routing, reusable memory та first-pass PR review.",
+        "pronunciation": "We propose a cost-aware agent framework with event-driven orchestration, model routing, reusable memory, and first-pass PR review.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Script step: Approach / Підхід"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-079",
+        "sourcePhraseId": "agent-vocab-079",
+        "term": "We reduce cost through diff-based review, static checks before LLM calls, minimal memory loading, and reusable design/API/DB context.",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 79,
+        "level": "B2+",
+        "tag": "5. Compact script",
+        "meaning": "Ми зменшуємо витрати через diff-based review, static checks перед LLM calls, мінімальне завантаження памʼяті та повторне використання design/API/DB context.",
+        "pronunciation": "We reduce cost through diff-based review, static checks before LLM calls, minimal memory loading, and reusable design/API/DB context.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Script step: Optimization points / Точки оптимізації"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-080",
+        "sourcePhraseId": "agent-vocab-080",
+        "term": "Instead of relying on a golden solution, we measure baseline PR data, accepted AI findings, false positives, review effort, and cost per accepted finding.",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 80,
+        "level": "B2+",
+        "tag": "5. Compact script",
+        "meaning": "Замість того щоб покладатися на golden solution, ми вимірюємо baseline PR data, accepted AI findings, false positives, review effort та cost per accepted finding.",
+        "pronunciation": "Instead of relying on a golden solution, we measure baseline PR data, accepted AI findings, false positives, review effort, and cost per accepted finding.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Script step: Measurement / Вимірювання"
+        ],
+        "examples": []
+      },
+      {
+        "id": "word-agent-vocab-081",
+        "sourcePhraseId": "agent-vocab-081",
+        "term": "The framework helps control AI cost while improving review quality, reducing rework, and preserving engineering knowledge.",
+        "category": "Agent Framework Vocabulary",
+        "section": "5. Compact Presentation Script",
+        "sequence": 81,
+        "level": "B2+",
+        "tag": "5. Compact script",
+        "meaning": "Фреймворк допомагає контролювати AI cost, одночасно покращуючи якість ревʼю, зменшуючи rework і зберігаючи engineering knowledge.",
+        "pronunciation": "The framework helps control AI cost while improving review quality, reducing rework, and preserving engineering knowledge.",
+        "transcription": null,
+        "commonAlternatives": [
+          "Script step: Result / Результат"
+        ],
+        "examples": []
+      }
+    ]
+  }
+}

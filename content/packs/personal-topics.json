@@ -1,0 +1,2442 @@
+{
+  "schemaVersion": 1,
+  "id": "personal-topics",
+  "title": "Personal speaking topics",
+  "order": 50,
+  "content": {
+    "phrases": [
+      {
+        "id": "topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+        "category": "Tell me about yourself",
+        "phrase": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions.",
+        "translation": "Я software engineer з практичним досвідом у .NET, Angular та cloud-based рішеннях.",
+        "transcription": "/aɪ am a ˈsɔːftwer ˌendʒəˈnɪr with practical ɪkˈspɪriəns ɪn net ˈæŋɡjələr and cloud based solutions/",
+        "commonAlternatives": [
+          "I work as a software engineer",
+          "My background is in software engineering",
+          "I have experience as a developer"
+        ],
+        "examples": [
+          {
+            "en": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions. For example, I often connect technical decisions with business value.",
+            "ua": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions. This helps me present my experience in a clear way.",
+            "ua": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-002-my-current-focus-is-improvin",
+        "category": "Tell me about yourself",
+        "phrase": "My current focus is improving delivery quality and using AI tools more effectively.",
+        "translation": "Мій поточний фокус — покращувати якість delivery та ефективніше використовувати AI tools.",
+        "transcription": "/maɪ current ˈfoʊkəs ɪz ɪmˈpruːvɪŋ delivery ˈkwɑːləti and using eɪ aɪ tools mɔːr effectively/",
+        "commonAlternatives": [
+          "At the moment, I focus on",
+          "Currently, I am focused on",
+          "My main focus now is"
+        ],
+        "examples": [
+          {
+            "en": "My current focus is improving delivery quality and using AI tools more effectively. For example, I often connect technical decisions with business value.",
+            "ua": "My current focus is improving delivery quality and using AI tools more effectively. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "My current focus is improving delivery quality and using AI tools more effectively. This helps me present my experience in a clear way.",
+            "ua": "My current focus is improving delivery quality and using AI tools more effectively. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-003-i-enjoy-solving-technical-pr",
+        "category": "Tell me about yourself",
+        "phrase": "I enjoy solving technical problems that have a clear business impact.",
+        "translation": "Мені подобається вирішувати технічні проблеми, які мають чіткий бізнес-вплив.",
+        "transcription": "/aɪ enjoy solving ˈteknɪkəl problems ðæt have a klɪr business impact/",
+        "commonAlternatives": [
+          "I like solving practical problems",
+          "I enjoy working on meaningful tasks",
+          "I prefer problems with real value"
+        ],
+        "examples": [
+          {
+            "en": "I enjoy solving technical problems that have a clear business impact. For example, I often connect technical decisions with business value.",
+            "ua": "I enjoy solving technical problems that have a clear business impact. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I enjoy solving technical problems that have a clear business impact. This helps me present my experience in a clear way.",
+            "ua": "I enjoy solving technical problems that have a clear business impact. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-004-over-the-years-i-have-worked",
+        "category": "Tell me about yourself",
+        "phrase": "Over the years, I have worked with both backend and frontend technologies.",
+        "translation": "Протягом років я працював і з backend, і з frontend технологіями.",
+        "transcription": "/over ðə years aɪ have worked with both backend and frontend technologies/",
+        "commonAlternatives": [
+          "I have experience on both sides",
+          "My experience covers backend and frontend",
+          "I have worked across the stack"
+        ],
+        "examples": [
+          {
+            "en": "Over the years, I have worked with both backend and frontend technologies. For example, I often connect technical decisions with business value.",
+            "ua": "Over the years, I have worked with both backend and frontend technologies. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "Over the years, I have worked with both backend and frontend technologies. This helps me present my experience in a clear way.",
+            "ua": "Over the years, I have worked with both backend and frontend technologies. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-005-one-of-my-strengths-is-conne",
+        "category": "Tell me about yourself",
+        "phrase": "One of my strengths is connecting technical details with the bigger picture.",
+        "translation": "Одна з моїх сильних сторін — пов’язувати технічні деталі з більшою картиною.",
+        "transcription": "/one of maɪ strengths ɪz connecting ˈteknɪkəl details with ðə bigger picture/",
+        "commonAlternatives": [
+          "I can see the bigger picture",
+          "I try to connect details with context",
+          "I combine technical and business thinking"
+        ],
+        "examples": [
+          {
+            "en": "One of my strengths is connecting technical details with the bigger picture. For example, I often connect technical decisions with business value.",
+            "ua": "One of my strengths is connecting technical details with the bigger picture. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "One of my strengths is connecting technical details with the bigger picture. This helps me present my experience in a clear way.",
+            "ua": "One of my strengths is connecting technical details with the bigger picture. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-006-i-am-also-interested-in-ai-n",
+        "category": "Tell me about yourself",
+        "phrase": "I am also interested in AI-native development and agent-based workflows.",
+        "translation": "Я також цікавлюся AI-native development та agent-based workflows.",
+        "transcription": "/aɪ am also ˈɪntrəstɪd ɪn eɪ aɪ native development and agent based workflows/",
+        "commonAlternatives": [
+          "I am exploring AI-assisted development",
+          "I am interested in agentic workflows",
+          "AI engineering is one of my current interests"
+        ],
+        "examples": [
+          {
+            "en": "I am also interested in AI-native development and agent-based workflows. For example, I often connect technical decisions with business value.",
+            "ua": "I am also interested in AI-native development and agent-based workflows. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I am also interested in AI-native development and agent-based workflows. This helps me present my experience in a clear way.",
+            "ua": "I am also interested in AI-native development and agent-based workflows. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-007-i-try-to-be-reliable-practic",
+        "category": "Tell me about yourself",
+        "phrase": "I try to be reliable, practical, and open to feedback.",
+        "translation": "Я намагаюся бути надійним, практичним і відкритим до фідбеку.",
+        "transcription": "/aɪ try tə biː reliable practical and open tə ˈfiːdbæk/",
+        "commonAlternatives": [
+          "I value reliability",
+          "I try to stay practical",
+          "Feedback is important to me"
+        ],
+        "examples": [
+          {
+            "en": "I try to be reliable, practical, and open to feedback. For example, I often connect technical decisions with business value.",
+            "ua": "I try to be reliable, practical, and open to feedback. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I try to be reliable, practical, and open to feedback. This helps me present my experience in a clear way.",
+            "ua": "I try to be reliable, practical, and open to feedback. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-008-i-like-working-in-teams-wher",
+        "category": "Tell me about yourself",
+        "phrase": "I like working in teams where people communicate clearly and take ownership.",
+        "translation": "Мені подобається працювати в командах, де люди чітко комунікують і беруть відповідальність.",
+        "transcription": "/aɪ like ˈwɜːrkɪŋ ɪn tiːmz where ˈpiːpəl communicate clearly and take ownership/",
+        "commonAlternatives": [
+          "I value clear communication",
+          "I appreciate ownership",
+          "I prefer collaborative teams"
+        ],
+        "examples": [
+          {
+            "en": "I like working in teams where people communicate clearly and take ownership. For example, I often connect technical decisions with business value.",
+            "ua": "I like working in teams where people communicate clearly and take ownership. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I like working in teams where people communicate clearly and take ownership. This helps me present my experience in a clear way.",
+            "ua": "I like working in teams where people communicate clearly and take ownership. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-009-my-goal-is-to-keep-growing-a",
+        "category": "Tell me about yourself",
+        "phrase": "My goal is to keep growing as an engineer and bring measurable value to the team.",
+        "translation": "Моя мета — продовжувати рости як інженер і приносити команді вимірювану цінність.",
+        "transcription": "/maɪ ɡoʊl ɪz tə keep growing as an ˌendʒəˈnɪr and bring measurable value tə ðə tiːm/",
+        "commonAlternatives": [
+          "I want to keep growing",
+          "I aim to bring value",
+          "My goal is continuous growth"
+        ],
+        "examples": [
+          {
+            "en": "My goal is to keep growing as an engineer and bring measurable value to the team. For example, I often connect technical decisions with business value.",
+            "ua": "My goal is to keep growing as an engineer and bring measurable value to the team. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "My goal is to keep growing as an engineer and bring measurable value to the team. This helps me present my experience in a clear way.",
+            "ua": "My goal is to keep growing as an engineer and bring measurable value to the team. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-010-outside-of-work-my-hobbies-h",
+        "category": "Tell me about yourself",
+        "phrase": "Outside of work, my hobbies help me recharge and stay balanced.",
+        "translation": "Поза роботою мої хобі допомагають мені відновлюватися і зберігати баланс.",
+        "transcription": "/ˌaʊtˈsaɪd of wɜːrk maɪ ˈhɑːbiz help miː riːˈtʃɑːrdʒ and stay balanced/",
+        "commonAlternatives": [
+          "In my free time",
+          "Outside the office",
+          "After work"
+        ],
+        "examples": [
+          {
+            "en": "Outside of work, my hobbies help me recharge and stay balanced. For example, I often connect technical decisions with business value.",
+            "ua": "Outside of work, my hobbies help me recharge and stay balanced. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "Outside of work, my hobbies help me recharge and stay balanced. This helps me present my experience in a clear way.",
+            "ua": "Outside of work, my hobbies help me recharge and stay balanced. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-011-i-would-describe-myself-as-c",
+        "category": "Tell me about yourself",
+        "phrase": "I would describe myself as curious, responsible, and focused on continuous improvement.",
+        "translation": "Я б описав себе як допитливого, відповідального і сфокусованого на постійному покращенні.",
+        "transcription": "/aɪ wʊd describe myself as curious responsible and focused ɑːn kənˈtɪnjuəs improvement/",
+        "commonAlternatives": [
+          "I am curious and responsible",
+          "I focus on improvement",
+          "I try to learn continuously"
+        ],
+        "examples": [
+          {
+            "en": "I would describe myself as curious, responsible, and focused on continuous improvement. For example, I often connect technical decisions with business value.",
+            "ua": "I would describe myself as curious, responsible, and focused on continuous improvement. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I would describe myself as curious, responsible, and focused on continuous improvement. This helps me present my experience in a clear way.",
+            "ua": "I would describe myself as curious, responsible, and focused on continuous improvement. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-012-i-usually-learn-best-through",
+        "category": "Tell me about yourself",
+        "phrase": "I usually learn best through real tasks and practical challenges.",
+        "translation": "Я зазвичай найкраще навчаюся через реальні задачі та практичні виклики.",
+        "transcription": "/aɪ usually lɜːrn best through real tæsks and practical ˈtʃælɪndʒz/",
+        "commonAlternatives": [
+          "I learn by doing",
+          "Practical tasks help me learn",
+          "Real challenges are the best learning source"
+        ],
+        "examples": [
+          {
+            "en": "I usually learn best through real tasks and practical challenges. For example, I often connect technical decisions with business value.",
+            "ua": "I usually learn best through real tasks and practical challenges. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I usually learn best through real tasks and practical challenges. This helps me present my experience in a clear way.",
+            "ua": "I usually learn best through real tasks and practical challenges. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-013-i-care-about-clean-communica",
+        "category": "Tell me about yourself",
+        "phrase": "I care about clean communication because it saves time and prevents confusion.",
+        "translation": "Мені важлива чиста комунікація, бо вона економить час і запобігає плутанині.",
+        "transcription": "/aɪ care əˈbaʊt clean kəˌmjuːnəˈkeɪʃən because ɪt saves taɪm and prevents confusion/",
+        "commonAlternatives": [
+          "Communication matters to me",
+          "I value clarity",
+          "Clear communication saves effort"
+        ],
+        "examples": [
+          {
+            "en": "I care about clean communication because it saves time and prevents confusion. For example, I often connect technical decisions with business value.",
+            "ua": "I care about clean communication because it saves time and prevents confusion. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I care about clean communication because it saves time and prevents confusion. This helps me present my experience in a clear way.",
+            "ua": "I care about clean communication because it saves time and prevents confusion. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 13,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-014-i-am-comfortable-working-wit",
+        "category": "Tell me about yourself",
+        "phrase": "I am comfortable working with complex systems if the goals are clear.",
+        "translation": "Мені комфортно працювати зі складними системами, якщо цілі зрозумілі.",
+        "transcription": "/aɪ am comfortable ˈwɜːrkɪŋ with complex systems if ðə ɡoʊlz ɑːr klɪr/",
+        "commonAlternatives": [
+          "I can handle complexity",
+          "Complex systems are manageable with clear goals",
+          "Clear goals make complexity easier"
+        ],
+        "examples": [
+          {
+            "en": "I am comfortable working with complex systems if the goals are clear. For example, I often connect technical decisions with business value.",
+            "ua": "I am comfortable working with complex systems if the goals are clear. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I am comfortable working with complex systems if the goals are clear. This helps me present my experience in a clear way.",
+            "ua": "I am comfortable working with complex systems if the goals are clear. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 14,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-tell-me-about-yourself-015-in-the-long-run-i-want-to-co",
+        "category": "Tell me about yourself",
+        "phrase": "In the long run, I want to combine engineering experience with AI-driven productivity.",
+        "translation": "У довгостроковій перспективі я хочу поєднувати engineering досвід з AI-driven продуктивністю.",
+        "transcription": "/ɪn ðə long run aɪ want tə combine ˌendʒəˈnɪrɪŋ ɪkˈspɪriəns with eɪ aɪ driven productivity/",
+        "commonAlternatives": [
+          "My long-term goal is",
+          "In the future, I want to",
+          "I would like to combine engineering and AI"
+        ],
+        "examples": [
+          {
+            "en": "In the long run, I want to combine engineering experience with AI-driven productivity. For example, I often connect technical decisions with business value.",
+            "ua": "In the long run, I want to combine engineering experience with AI-driven productivity. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "In the long run, I want to combine engineering experience with AI-driven productivity. This helps me present my experience in a clear way.",
+            "ua": "In the long run, I want to combine engineering experience with AI-driven productivity. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ],
+        "section": "Tell me about yourself",
+        "sequence": 15,
+        "level": "B2",
+        "tag": "assessment"
+      },
+      {
+        "id": "topic-hobbies-001-my-hobbies-help-me-recharge-",
+        "category": "Hobbies",
+        "phrase": "My hobbies help me recharge after a busy work week.",
+        "translation": "Мої хобі допомагають мені відновитися після насиченого робочого тижня.",
+        "transcription": "/maɪ ˈhɑːbiz help miː riːˈtʃɑːrdʒ after a busy wɜːrk week/",
+        "commonAlternatives": [
+          "They help me relax",
+          "They help me recover",
+          "They give me energy"
+        ],
+        "examples": [
+          {
+            "en": "My hobbies help me recharge after a busy work week. For example, hobbies help me recharge after an intense work week.",
+            "ua": "My hobbies help me recharge after a busy work week. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "My hobbies help me recharge after a busy work week. They also improve my creativity and focus.",
+            "ua": "My hobbies help me recharge after a busy work week. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-002-i-enjoy-activities-that-give",
+        "category": "Hobbies",
+        "phrase": "I enjoy activities that give me a sense of freedom and focus.",
+        "translation": "Мені подобаються активності, які дають відчуття свободи й фокусу.",
+        "transcription": "/aɪ enjoy activities ðæt give miː a sense of ˈfriːdəm and ˈfoʊkəs/",
+        "commonAlternatives": [
+          "I like activities that clear my mind",
+          "I enjoy focused hobbies",
+          "Freedom is important to me"
+        ],
+        "examples": [
+          {
+            "en": "I enjoy activities that give me a sense of freedom and focus. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I enjoy activities that give me a sense of freedom and focus. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I enjoy activities that give me a sense of freedom and focus. They also improve my creativity and focus.",
+            "ua": "I enjoy activities that give me a sense of freedom and focus. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-003-driving-powerful-cars-is-exc",
+        "category": "Hobbies",
+        "phrase": "Driving powerful cars is exciting for me, but it also requires responsibility.",
+        "translation": "Керування потужними авто для мене захопливе, але воно також вимагає відповідальності.",
+        "transcription": "/ˈdraɪvɪŋ powerful kɑːrz ɪz exciting fər miː bʌt ɪt also rɪˈkwaɪərz rɪˌspɑːnsəˈbɪləti/",
+        "commonAlternatives": [
+          "Driving is exciting",
+          "It requires discipline",
+          "It is both fun and responsible"
+        ],
+        "examples": [
+          {
+            "en": "Driving powerful cars is exciting for me, but it also requires responsibility. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Driving powerful cars is exciting for me, but it also requires responsibility. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Driving powerful cars is exciting for me, but it also requires responsibility. They also improve my creativity and focus.",
+            "ua": "Driving powerful cars is exciting for me, but it also requires responsibility. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-004-fantasy-books-help-me-switch",
+        "category": "Hobbies",
+        "phrase": "Fantasy books help me switch off and use my imagination.",
+        "translation": "Фентезі-книги допомагають мені перемкнутися й використовувати уяву.",
+        "transcription": "/fantasy bʊks help miː switch off and use maɪ ɪˌmædʒəˈneɪʃən/",
+        "commonAlternatives": [
+          "Books help me relax",
+          "Reading expands imagination",
+          "Fantasy helps me disconnect"
+        ],
+        "examples": [
+          {
+            "en": "Fantasy books help me switch off and use my imagination. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Fantasy books help me switch off and use my imagination. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Fantasy books help me switch off and use my imagination. They also improve my creativity and focus.",
+            "ua": "Fantasy books help me switch off and use my imagination. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-005-hiking-helps-me-slow-down-an",
+        "category": "Hobbies",
+        "phrase": "Hiking helps me slow down and enjoy nature.",
+        "translation": "Піші прогулянки допомагають мені сповільнитися й насолоджуватися природою.",
+        "transcription": "/ˈhaɪkɪŋ helps miː slow daʊn and enjoy nature/",
+        "commonAlternatives": [
+          "Walking in nature helps me relax",
+          "Hiking clears my mind",
+          "Nature gives me energy"
+        ],
+        "examples": [
+          {
+            "en": "Hiking helps me slow down and enjoy nature. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Hiking helps me slow down and enjoy nature. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Hiking helps me slow down and enjoy nature. They also improve my creativity and focus.",
+            "ua": "Hiking helps me slow down and enjoy nature. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-006-i-think-hobbies-are-importan",
+        "category": "Hobbies",
+        "phrase": "I think hobbies are important because they support mental balance.",
+        "translation": "Я думаю, хобі важливі, бо вони підтримують ментальний баланс.",
+        "transcription": "/aɪ θɪŋk ˈhɑːbiz ɑːr ɪmˈpɔːrtənt because they support mental ˈbæləns/",
+        "commonAlternatives": [
+          "Hobbies support balance",
+          "They are good for mental health",
+          "They help me stay balanced"
+        ],
+        "examples": [
+          {
+            "en": "I think hobbies are important because they support mental balance. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I think hobbies are important because they support mental balance. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I think hobbies are important because they support mental balance. They also improve my creativity and focus.",
+            "ua": "I think hobbies are important because they support mental balance. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-007-a-good-hobby-should-not-feel",
+        "category": "Hobbies",
+        "phrase": "A good hobby should not feel like another task.",
+        "translation": "Хороше хобі не повинно відчуватися як ще одна задача.",
+        "transcription": "/a good hobby ʃʊd nɑːt feel like əˈnʌðər tæsk/",
+        "commonAlternatives": [
+          "It should feel natural",
+          "It should be enjoyable",
+          "It should not create pressure"
+        ],
+        "examples": [
+          {
+            "en": "A good hobby should not feel like another task. For example, hobbies help me recharge after an intense work week.",
+            "ua": "A good hobby should not feel like another task. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "A good hobby should not feel like another task. They also improve my creativity and focus.",
+            "ua": "A good hobby should not feel like another task. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-008-my-hobbies-make-me-more-crea",
+        "category": "Hobbies",
+        "phrase": "My hobbies make me more creative at work.",
+        "translation": "Мої хобі роблять мене більш креативним на роботі.",
+        "transcription": "/maɪ ˈhɑːbiz make miː mɔːr creative at wɜːrk/",
+        "commonAlternatives": [
+          "They improve creativity",
+          "They give me fresh ideas",
+          "They help me think differently"
+        ],
+        "examples": [
+          {
+            "en": "My hobbies make me more creative at work. For example, hobbies help me recharge after an intense work week.",
+            "ua": "My hobbies make me more creative at work. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "My hobbies make me more creative at work. They also improve my creativity and focus.",
+            "ua": "My hobbies make me more creative at work. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-009-i-prefer-hobbies-that-combin",
+        "category": "Hobbies",
+        "phrase": "I prefer hobbies that combine relaxation with personal interest.",
+        "translation": "Я віддаю перевагу хобі, які поєднують відпочинок з особистим інтересом.",
+        "transcription": "/aɪ prefer ˈhɑːbiz ðæt combine relaxation with ˈpɜːrsənəl interest/",
+        "commonAlternatives": [
+          "I like meaningful hobbies",
+          "I prefer relaxing hobbies",
+          "I choose hobbies I really care about"
+        ],
+        "examples": [
+          {
+            "en": "I prefer hobbies that combine relaxation with personal interest. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I prefer hobbies that combine relaxation with personal interest. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I prefer hobbies that combine relaxation with personal interest. They also improve my creativity and focus.",
+            "ua": "I prefer hobbies that combine relaxation with personal interest. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-010-spending-time-with-my-family",
+        "category": "Hobbies",
+        "phrase": "Spending time with my family is also an important part of my free time.",
+        "translation": "Час із сім’єю також є важливою частиною мого вільного часу.",
+        "transcription": "/spending taɪm with maɪ ˈfæməli ɪz also an ɪmˈpɔːrtənt part of maɪ free taɪm/",
+        "commonAlternatives": [
+          "Family time matters to me",
+          "I value time with family",
+          "My family helps me recharge"
+        ],
+        "examples": [
+          {
+            "en": "Spending time with my family is also an important part of my free time. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Spending time with my family is also an important part of my free time. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Spending time with my family is also an important part of my free time. They also improve my creativity and focus.",
+            "ua": "Spending time with my family is also an important part of my free time. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-011-i-try-to-keep-my-hobbies-sep",
+        "category": "Hobbies",
+        "phrase": "I try to keep my hobbies separate from work pressure.",
+        "translation": "Я намагаюся тримати хобі окремо від робочого тиску.",
+        "transcription": "/aɪ try tə keep maɪ ˈhɑːbiz separate frəm wɜːrk pressure/",
+        "commonAlternatives": [
+          "I protect my free time",
+          "I try to disconnect",
+          "I avoid turning hobbies into work"
+        ],
+        "examples": [
+          {
+            "en": "I try to keep my hobbies separate from work pressure. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I try to keep my hobbies separate from work pressure. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I try to keep my hobbies separate from work pressure. They also improve my creativity and focus.",
+            "ua": "I try to keep my hobbies separate from work pressure. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-012-hobbies-help-me-come-back-to",
+        "category": "Hobbies",
+        "phrase": "Hobbies help me come back to work with more energy.",
+        "translation": "Хобі допомагають мені повертатися до роботи з більшою енергією.",
+        "transcription": "/ˈhɑːbiz help miː come back tə wɜːrk with mɔːr ˈenərdʒi/",
+        "commonAlternatives": [
+          "They restore energy",
+          "They help me reset",
+          "They improve my focus"
+        ],
+        "examples": [
+          {
+            "en": "Hobbies help me come back to work with more energy. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Hobbies help me come back to work with more energy. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Hobbies help me come back to work with more energy. They also improve my creativity and focus.",
+            "ua": "Hobbies help me come back to work with more energy. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-013-i-believe-a-balanced-lifesty",
+        "category": "Hobbies",
+        "phrase": "I believe a balanced lifestyle makes people more productive.",
+        "translation": "Я вважаю, що збалансований стиль життя робить людей продуктивнішими.",
+        "transcription": "/aɪ believe a balanced lifestyle makes ˈpiːpəl mɔːr prəˈdʌktɪv/",
+        "commonAlternatives": [
+          "Balance improves productivity",
+          "A healthy lifestyle helps work",
+          "Productivity needs balance"
+        ],
+        "examples": [
+          {
+            "en": "I believe a balanced lifestyle makes people more productive. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I believe a balanced lifestyle makes people more productive. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I believe a balanced lifestyle makes people more productive. They also improve my creativity and focus.",
+            "ua": "I believe a balanced lifestyle makes people more productive. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 13,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-014-my-hobbies-reflect-my-person",
+        "category": "Hobbies",
+        "phrase": "My hobbies reflect my personality: freedom, imagination, and balance.",
+        "translation": "Мої хобі відображають мою особистість: свободу, уяву і баланс.",
+        "transcription": "/maɪ ˈhɑːbiz reflect maɪ personality ˈfriːdəm ɪˌmædʒəˈneɪʃən and ˈbæləns/",
+        "commonAlternatives": [
+          "They show what I value",
+          "They reflect my values",
+          "They describe my personality"
+        ],
+        "examples": [
+          {
+            "en": "My hobbies reflect my personality: freedom, imagination, and balance. For example, hobbies help me recharge after an intense work week.",
+            "ua": "My hobbies reflect my personality: freedom, imagination, and balance. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "My hobbies reflect my personality: freedom, imagination, and balance. They also improve my creativity and focus.",
+            "ua": "My hobbies reflect my personality: freedom, imagination, and balance. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 14,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-hobbies-015-i-do-not-need-many-hobbies-b",
+        "category": "Hobbies",
+        "phrase": "I do not need many hobbies, but I need hobbies that really help me recharge.",
+        "translation": "Мені не потрібно багато хобі, але потрібні ті, які реально допомагають відновитися.",
+        "transcription": "/aɪ do nɑːt niːd ˈmeni ˈhɑːbiz bʌt aɪ niːd ˈhɑːbiz ðæt really help miː riːˈtʃɑːrdʒ/",
+        "commonAlternatives": [
+          "Quality matters more than quantity",
+          "A few good hobbies are enough",
+          "I choose meaningful hobbies"
+        ],
+        "examples": [
+          {
+            "en": "I do not need many hobbies, but I need hobbies that really help me recharge. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I do not need many hobbies, but I need hobbies that really help me recharge. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I do not need many hobbies, but I need hobbies that really help me recharge. They also improve my creativity and focus.",
+            "ua": "I do not need many hobbies, but I need hobbies that really help me recharge. Вони також покращують мою креативність і фокус."
+          }
+        ],
+        "section": "Hobbies",
+        "sequence": 15,
+        "level": "B2",
+        "tag": "hobbies"
+      },
+      {
+        "id": "topic-work-life-balance-001-work-life-balance-means-havi",
+        "category": "Work-Life Balance",
+        "phrase": "Work-life balance means having enough energy for both work and personal life.",
+        "translation": "Work-life balance означає мати достатньо енергії і для роботи, і для особистого життя.",
+        "transcription": "/wɜːrk laɪf ˈbæləns miːnz having enough ˈenərdʒi fər both wɜːrk and ˈpɜːrsənəl laɪf/",
+        "commonAlternatives": [
+          "Balance means energy management",
+          "It means protecting personal life",
+          "It means sustainable work"
+        ],
+        "examples": [
+          {
+            "en": "Work-life balance means having enough energy for both work and personal life. For example, I try to protect personal time after work.",
+            "ua": "Work-life balance means having enough energy for both work and personal life. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Work-life balance means having enough energy for both work and personal life. It helps me stay productive in the long run.",
+            "ua": "Work-life balance means having enough energy for both work and personal life. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-002-i-try-to-separate-urgent-tas",
+        "category": "Work-Life Balance",
+        "phrase": "I try to separate urgent tasks from truly important tasks.",
+        "translation": "Я намагаюся відділяти термінові задачі від справді важливих.",
+        "transcription": "/aɪ try tə separate urgent tæsks frəm truly ɪmˈpɔːrtənt tæsks/",
+        "commonAlternatives": [
+          "I separate urgency from importance",
+          "I clarify priorities",
+          "I focus on what matters"
+        ],
+        "examples": [
+          {
+            "en": "I try to separate urgent tasks from truly important tasks. For example, I try to protect personal time after work.",
+            "ua": "I try to separate urgent tasks from truly important tasks. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I try to separate urgent tasks from truly important tasks. It helps me stay productive in the long run.",
+            "ua": "I try to separate urgent tasks from truly important tasks. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-003-healthy-boundaries-help-prev",
+        "category": "Work-Life Balance",
+        "phrase": "Healthy boundaries help prevent burnout.",
+        "translation": "Здорові межі допомагають запобігати вигоранню.",
+        "transcription": "/ˈhelθi ˈbaʊndəriz help prevent burnout/",
+        "commonAlternatives": [
+          "Boundaries reduce burnout",
+          "Clear limits help",
+          "Personal time matters"
+        ],
+        "examples": [
+          {
+            "en": "Healthy boundaries help prevent burnout. For example, I try to protect personal time after work.",
+            "ua": "Healthy boundaries help prevent burnout. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Healthy boundaries help prevent burnout. It helps me stay productive in the long run.",
+            "ua": "Healthy boundaries help prevent burnout. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-004-i-can-work-intensively-when-",
+        "category": "Work-Life Balance",
+        "phrase": "I can work intensively when needed, but it should not become the normal mode.",
+        "translation": "Я можу працювати інтенсивно за потреби, але це не має ставати нормальним режимом.",
+        "transcription": "/aɪ can wɜːrk intensively wen needed bʌt ɪt ʃʊd nɑːt become ðə normal mode/",
+        "commonAlternatives": [
+          "Intense periods are fine sometimes",
+          "It should not be constant",
+          "Crunch should not be the standard"
+        ],
+        "examples": [
+          {
+            "en": "I can work intensively when needed, but it should not become the normal mode. For example, I try to protect personal time after work.",
+            "ua": "I can work intensively when needed, but it should not become the normal mode. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I can work intensively when needed, but it should not become the normal mode. It helps me stay productive in the long run.",
+            "ua": "I can work intensively when needed, but it should not become the normal mode. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-005-a-balanced-person-usually-ma",
+        "category": "Work-Life Balance",
+        "phrase": "A balanced person usually makes better decisions.",
+        "translation": "Збалансована людина зазвичай приймає кращі рішення.",
+        "transcription": "/a balanced person usually makes better decisions/",
+        "commonAlternatives": [
+          "Balance improves decisions",
+          "Rest helps judgment",
+          "Energy affects thinking"
+        ],
+        "examples": [
+          {
+            "en": "A balanced person usually makes better decisions. For example, I try to protect personal time after work.",
+            "ua": "A balanced person usually makes better decisions. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "A balanced person usually makes better decisions. It helps me stay productive in the long run.",
+            "ua": "A balanced person usually makes better decisions. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-006-planning-personal-time-is-as",
+        "category": "Work-Life Balance",
+        "phrase": "Planning personal time is as important as planning work tasks.",
+        "translation": "Планування особистого часу так само важливе, як і планування робочих задач.",
+        "transcription": "/planning ˈpɜːrsənəl taɪm ɪz as ɪmˈpɔːrtənt as planning wɜːrk tæsks/",
+        "commonAlternatives": [
+          "Personal time needs planning",
+          "Rest should be planned",
+          "Balance requires intention"
+        ],
+        "examples": [
+          {
+            "en": "Planning personal time is as important as planning work tasks. For example, I try to protect personal time after work.",
+            "ua": "Planning personal time is as important as planning work tasks. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Planning personal time is as important as planning work tasks. It helps me stay productive in the long run.",
+            "ua": "Planning personal time is as important as planning work tasks. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-007-i-try-not-to-check-work-mess",
+        "category": "Work-Life Balance",
+        "phrase": "I try not to check work messages all the time after hours.",
+        "translation": "Я намагаюся не перевіряти робочі повідомлення постійно після роботи.",
+        "transcription": "/aɪ try nɑːt tə check wɜːrk messages all ðə taɪm after hours/",
+        "commonAlternatives": [
+          "I avoid constant checking",
+          "I disconnect after work",
+          "I protect my evenings"
+        ],
+        "examples": [
+          {
+            "en": "I try not to check work messages all the time after hours. For example, I try to protect personal time after work.",
+            "ua": "I try not to check work messages all the time after hours. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I try not to check work messages all the time after hours. It helps me stay productive in the long run.",
+            "ua": "I try not to check work messages all the time after hours. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-008-good-balance-improves-long-t",
+        "category": "Work-Life Balance",
+        "phrase": "Good balance improves long-term productivity.",
+        "translation": "Хороший баланс покращує довгострокову продуктивність.",
+        "transcription": "/good ˈbæləns ɪmˈpruːvz long term productivity/",
+        "commonAlternatives": [
+          "Balance supports productivity",
+          "It is sustainable",
+          "It helps in the long run"
+        ],
+        "examples": [
+          {
+            "en": "Good balance improves long-term productivity. For example, I try to protect personal time after work.",
+            "ua": "Good balance improves long-term productivity. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Good balance improves long-term productivity. It helps me stay productive in the long run.",
+            "ua": "Good balance improves long-term productivity. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-009-work-life-balance-depends-on",
+        "category": "Work-Life Balance",
+        "phrase": "Work-life balance depends on clear expectations from the team.",
+        "translation": "Work-life balance залежить від чітких очікувань команди.",
+        "transcription": "/wɜːrk laɪf ˈbæləns dɪˈpendz ɑːn klɪr expectations frəm ðə tiːm/",
+        "commonAlternatives": [
+          "Expectations matter",
+          "Clarity supports balance",
+          "The team should agree on expectations"
+        ],
+        "examples": [
+          {
+            "en": "Work-life balance depends on clear expectations from the team. For example, I try to protect personal time after work.",
+            "ua": "Work-life balance depends on clear expectations from the team. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Work-life balance depends on clear expectations from the team. It helps me stay productive in the long run.",
+            "ua": "Work-life balance depends on clear expectations from the team. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-010-if-priorities-are-unclear-ba",
+        "category": "Work-Life Balance",
+        "phrase": "If priorities are unclear, balance becomes much harder.",
+        "translation": "Якщо пріоритети нечіткі, баланс стає набагато складнішим.",
+        "transcription": "/if praɪˈɔːrətiz ɑːr unclear ˈbæləns becomes much harder/",
+        "commonAlternatives": [
+          "Unclear priorities hurt balance",
+          "Ambiguity creates stress",
+          "Clarity makes balance easier"
+        ],
+        "examples": [
+          {
+            "en": "If priorities are unclear, balance becomes much harder. For example, I try to protect personal time after work.",
+            "ua": "If priorities are unclear, balance becomes much harder. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "If priorities are unclear, balance becomes much harder. It helps me stay productive in the long run.",
+            "ua": "If priorities are unclear, balance becomes much harder. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-011-i-believe-rest-is-part-of-pe",
+        "category": "Work-Life Balance",
+        "phrase": "I believe rest is part of performance, not the opposite of it.",
+        "translation": "Я вважаю, що відпочинок є частиною продуктивності, а не протилежністю.",
+        "transcription": "/aɪ believe rest ɪz part of performance nɑːt ðə opposite of ɪt/",
+        "commonAlternatives": [
+          "Rest supports performance",
+          "Recovery improves work",
+          "Breaks are useful"
+        ],
+        "examples": [
+          {
+            "en": "I believe rest is part of performance, not the opposite of it. For example, I try to protect personal time after work.",
+            "ua": "I believe rest is part of performance, not the opposite of it. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I believe rest is part of performance, not the opposite of it. It helps me stay productive in the long run.",
+            "ua": "I believe rest is part of performance, not the opposite of it. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-012-a-flexible-schedule-can-supp",
+        "category": "Work-Life Balance",
+        "phrase": "A flexible schedule can support balance if people are responsible.",
+        "translation": "Гнучкий графік може підтримувати баланс, якщо люди відповідальні.",
+        "transcription": "/a flexible schedule can support ˈbæləns if ˈpiːpəl ɑːr responsible/",
+        "commonAlternatives": [
+          "Flexibility helps",
+          "Responsibility makes flexibility work",
+          "Flexible work needs ownership"
+        ],
+        "examples": [
+          {
+            "en": "A flexible schedule can support balance if people are responsible. For example, I try to protect personal time after work.",
+            "ua": "A flexible schedule can support balance if people are responsible. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "A flexible schedule can support balance if people are responsible. It helps me stay productive in the long run.",
+            "ua": "A flexible schedule can support balance if people are responsible. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-013-i-try-to-manage-my-energy-no",
+        "category": "Work-Life Balance",
+        "phrase": "I try to manage my energy, not only my calendar.",
+        "translation": "Я намагаюся керувати своєю енергією, а не тільки календарем.",
+        "transcription": "/aɪ try tə ˈmænɪdʒ maɪ ˈenərdʒi nɑːt ˈoʊnli maɪ calendar/",
+        "commonAlternatives": [
+          "Energy management matters",
+          "Time is not the only factor",
+          "Energy affects productivity"
+        ],
+        "examples": [
+          {
+            "en": "I try to manage my energy, not only my calendar. For example, I try to protect personal time after work.",
+            "ua": "I try to manage my energy, not only my calendar. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I try to manage my energy, not only my calendar. It helps me stay productive in the long run.",
+            "ua": "I try to manage my energy, not only my calendar. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 13,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-014-balance-is-easier-when-commu",
+        "category": "Work-Life Balance",
+        "phrase": "Balance is easier when communication is clear and proactive.",
+        "translation": "Баланс легший, коли комунікація чітка і проактивна.",
+        "transcription": "/ˈbæləns ɪz easier wen kəˌmjuːnəˈkeɪʃən ɪz klɪr and proactive/",
+        "commonAlternatives": [
+          "Communication supports balance",
+          "Proactive updates help",
+          "Clarity reduces pressure"
+        ],
+        "examples": [
+          {
+            "en": "Balance is easier when communication is clear and proactive. For example, I try to protect personal time after work.",
+            "ua": "Balance is easier when communication is clear and proactive. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Balance is easier when communication is clear and proactive. It helps me stay productive in the long run.",
+            "ua": "Balance is easier when communication is clear and proactive. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 14,
+        "level": "B2",
+        "tag": "balance"
+      },
+      {
+        "id": "topic-work-life-balance-015-for-me-balance-is-about-sust",
+        "category": "Work-Life Balance",
+        "phrase": "For me, balance is about sustainability, not avoiding hard work.",
+        "translation": "Для мене баланс — це про сталість, а не про уникнення складної роботи.",
+        "transcription": "/fər miː ˈbæləns ɪz əˈbaʊt sustainability nɑːt avoiding hard wɜːrk/",
+        "commonAlternatives": [
+          "Balance means sustainability",
+          "It is not about laziness",
+          "It is about long-term performance"
+        ],
+        "examples": [
+          {
+            "en": "For me, balance is about sustainability, not avoiding hard work. For example, I try to protect personal time after work.",
+            "ua": "For me, balance is about sustainability, not avoiding hard work. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "For me, balance is about sustainability, not avoiding hard work. It helps me stay productive in the long run.",
+            "ua": "For me, balance is about sustainability, not avoiding hard work. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ],
+        "section": "Work-Life Balance",
+        "sequence": 15,
+        "level": "B2",
+        "tag": "balance"
+      }
+    ],
+    "wordIndex": [
+      {
+        "id": "word-topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+        "sourcePhraseId": "topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+        "term": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Я software engineer з практичним досвідом у .NET, Angular та cloud-based рішеннях.",
+        "pronunciation": "/aɪ am a ˈsɔːftwer ˌendʒəˈnɪr with practical ɪkˈspɪriəns ɪn net ˈæŋɡjələr and cloud based solutions/",
+        "transcription": "/aɪ am a ˈsɔːftwer ˌendʒəˈnɪr with practical ɪkˈspɪriəns ɪn net ˈæŋɡjələr and cloud based solutions/",
+        "commonAlternatives": [
+          "I work as a software engineer",
+          "My background is in software engineering",
+          "I have experience as a developer"
+        ],
+        "examples": [
+          {
+            "en": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions. For example, I often connect technical decisions with business value.",
+            "ua": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions. This helps me present my experience in a clear way.",
+            "ua": "I am a software engineer with practical experience in .NET, Angular, and cloud-based solutions. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-002-my-current-focus-is-improvin",
+        "sourcePhraseId": "topic-tell-me-about-yourself-002-my-current-focus-is-improvin",
+        "term": "My current focus is improving delivery quality and using AI tools more effectively.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Мій поточний фокус — покращувати якість delivery та ефективніше використовувати AI tools.",
+        "pronunciation": "/maɪ current ˈfoʊkəs ɪz ɪmˈpruːvɪŋ delivery ˈkwɑːləti and using eɪ aɪ tools mɔːr effectively/",
+        "transcription": "/maɪ current ˈfoʊkəs ɪz ɪmˈpruːvɪŋ delivery ˈkwɑːləti and using eɪ aɪ tools mɔːr effectively/",
+        "commonAlternatives": [
+          "At the moment, I focus on",
+          "Currently, I am focused on",
+          "My main focus now is"
+        ],
+        "examples": [
+          {
+            "en": "My current focus is improving delivery quality and using AI tools more effectively. For example, I often connect technical decisions with business value.",
+            "ua": "My current focus is improving delivery quality and using AI tools more effectively. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "My current focus is improving delivery quality and using AI tools more effectively. This helps me present my experience in a clear way.",
+            "ua": "My current focus is improving delivery quality and using AI tools more effectively. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-003-i-enjoy-solving-technical-pr",
+        "sourcePhraseId": "topic-tell-me-about-yourself-003-i-enjoy-solving-technical-pr",
+        "term": "I enjoy solving technical problems that have a clear business impact.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Мені подобається вирішувати технічні проблеми, які мають чіткий бізнес-вплив.",
+        "pronunciation": "/aɪ enjoy solving ˈteknɪkəl problems ðæt have a klɪr business impact/",
+        "transcription": "/aɪ enjoy solving ˈteknɪkəl problems ðæt have a klɪr business impact/",
+        "commonAlternatives": [
+          "I like solving practical problems",
+          "I enjoy working on meaningful tasks",
+          "I prefer problems with real value"
+        ],
+        "examples": [
+          {
+            "en": "I enjoy solving technical problems that have a clear business impact. For example, I often connect technical decisions with business value.",
+            "ua": "I enjoy solving technical problems that have a clear business impact. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I enjoy solving technical problems that have a clear business impact. This helps me present my experience in a clear way.",
+            "ua": "I enjoy solving technical problems that have a clear business impact. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-004-over-the-years-i-have-worked",
+        "sourcePhraseId": "topic-tell-me-about-yourself-004-over-the-years-i-have-worked",
+        "term": "Over the years, I have worked with both backend and frontend technologies.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Протягом років я працював і з backend, і з frontend технологіями.",
+        "pronunciation": "/over ðə years aɪ have worked with both backend and frontend technologies/",
+        "transcription": "/over ðə years aɪ have worked with both backend and frontend technologies/",
+        "commonAlternatives": [
+          "I have experience on both sides",
+          "My experience covers backend and frontend",
+          "I have worked across the stack"
+        ],
+        "examples": [
+          {
+            "en": "Over the years, I have worked with both backend and frontend technologies. For example, I often connect technical decisions with business value.",
+            "ua": "Over the years, I have worked with both backend and frontend technologies. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "Over the years, I have worked with both backend and frontend technologies. This helps me present my experience in a clear way.",
+            "ua": "Over the years, I have worked with both backend and frontend technologies. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-005-one-of-my-strengths-is-conne",
+        "sourcePhraseId": "topic-tell-me-about-yourself-005-one-of-my-strengths-is-conne",
+        "term": "One of my strengths is connecting technical details with the bigger picture.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Одна з моїх сильних сторін — пов’язувати технічні деталі з більшою картиною.",
+        "pronunciation": "/one of maɪ strengths ɪz connecting ˈteknɪkəl details with ðə bigger picture/",
+        "transcription": "/one of maɪ strengths ɪz connecting ˈteknɪkəl details with ðə bigger picture/",
+        "commonAlternatives": [
+          "I can see the bigger picture",
+          "I try to connect details with context",
+          "I combine technical and business thinking"
+        ],
+        "examples": [
+          {
+            "en": "One of my strengths is connecting technical details with the bigger picture. For example, I often connect technical decisions with business value.",
+            "ua": "One of my strengths is connecting technical details with the bigger picture. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "One of my strengths is connecting technical details with the bigger picture. This helps me present my experience in a clear way.",
+            "ua": "One of my strengths is connecting technical details with the bigger picture. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-006-i-am-also-interested-in-ai-n",
+        "sourcePhraseId": "topic-tell-me-about-yourself-006-i-am-also-interested-in-ai-n",
+        "term": "I am also interested in AI-native development and agent-based workflows.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Я також цікавлюся AI-native development та agent-based workflows.",
+        "pronunciation": "/aɪ am also ˈɪntrəstɪd ɪn eɪ aɪ native development and agent based workflows/",
+        "transcription": "/aɪ am also ˈɪntrəstɪd ɪn eɪ aɪ native development and agent based workflows/",
+        "commonAlternatives": [
+          "I am exploring AI-assisted development",
+          "I am interested in agentic workflows",
+          "AI engineering is one of my current interests"
+        ],
+        "examples": [
+          {
+            "en": "I am also interested in AI-native development and agent-based workflows. For example, I often connect technical decisions with business value.",
+            "ua": "I am also interested in AI-native development and agent-based workflows. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I am also interested in AI-native development and agent-based workflows. This helps me present my experience in a clear way.",
+            "ua": "I am also interested in AI-native development and agent-based workflows. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-007-i-try-to-be-reliable-practic",
+        "sourcePhraseId": "topic-tell-me-about-yourself-007-i-try-to-be-reliable-practic",
+        "term": "I try to be reliable, practical, and open to feedback.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Я намагаюся бути надійним, практичним і відкритим до фідбеку.",
+        "pronunciation": "/aɪ try tə biː reliable practical and open tə ˈfiːdbæk/",
+        "transcription": "/aɪ try tə biː reliable practical and open tə ˈfiːdbæk/",
+        "commonAlternatives": [
+          "I value reliability",
+          "I try to stay practical",
+          "Feedback is important to me"
+        ],
+        "examples": [
+          {
+            "en": "I try to be reliable, practical, and open to feedback. For example, I often connect technical decisions with business value.",
+            "ua": "I try to be reliable, practical, and open to feedback. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I try to be reliable, practical, and open to feedback. This helps me present my experience in a clear way.",
+            "ua": "I try to be reliable, practical, and open to feedback. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-008-i-like-working-in-teams-wher",
+        "sourcePhraseId": "topic-tell-me-about-yourself-008-i-like-working-in-teams-wher",
+        "term": "I like working in teams where people communicate clearly and take ownership.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Мені подобається працювати в командах, де люди чітко комунікують і беруть відповідальність.",
+        "pronunciation": "/aɪ like ˈwɜːrkɪŋ ɪn tiːmz where ˈpiːpəl communicate clearly and take ownership/",
+        "transcription": "/aɪ like ˈwɜːrkɪŋ ɪn tiːmz where ˈpiːpəl communicate clearly and take ownership/",
+        "commonAlternatives": [
+          "I value clear communication",
+          "I appreciate ownership",
+          "I prefer collaborative teams"
+        ],
+        "examples": [
+          {
+            "en": "I like working in teams where people communicate clearly and take ownership. For example, I often connect technical decisions with business value.",
+            "ua": "I like working in teams where people communicate clearly and take ownership. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I like working in teams where people communicate clearly and take ownership. This helps me present my experience in a clear way.",
+            "ua": "I like working in teams where people communicate clearly and take ownership. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-009-my-goal-is-to-keep-growing-a",
+        "sourcePhraseId": "topic-tell-me-about-yourself-009-my-goal-is-to-keep-growing-a",
+        "term": "My goal is to keep growing as an engineer and bring measurable value to the team.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Моя мета — продовжувати рости як інженер і приносити команді вимірювану цінність.",
+        "pronunciation": "/maɪ ɡoʊl ɪz tə keep growing as an ˌendʒəˈnɪr and bring measurable value tə ðə tiːm/",
+        "transcription": "/maɪ ɡoʊl ɪz tə keep growing as an ˌendʒəˈnɪr and bring measurable value tə ðə tiːm/",
+        "commonAlternatives": [
+          "I want to keep growing",
+          "I aim to bring value",
+          "My goal is continuous growth"
+        ],
+        "examples": [
+          {
+            "en": "My goal is to keep growing as an engineer and bring measurable value to the team. For example, I often connect technical decisions with business value.",
+            "ua": "My goal is to keep growing as an engineer and bring measurable value to the team. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "My goal is to keep growing as an engineer and bring measurable value to the team. This helps me present my experience in a clear way.",
+            "ua": "My goal is to keep growing as an engineer and bring measurable value to the team. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-010-outside-of-work-my-hobbies-h",
+        "sourcePhraseId": "topic-tell-me-about-yourself-010-outside-of-work-my-hobbies-h",
+        "term": "Outside of work, my hobbies help me recharge and stay balanced.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Поза роботою мої хобі допомагають мені відновлюватися і зберігати баланс.",
+        "pronunciation": "/ˌaʊtˈsaɪd of wɜːrk maɪ ˈhɑːbiz help miː riːˈtʃɑːrdʒ and stay balanced/",
+        "transcription": "/ˌaʊtˈsaɪd of wɜːrk maɪ ˈhɑːbiz help miː riːˈtʃɑːrdʒ and stay balanced/",
+        "commonAlternatives": [
+          "In my free time",
+          "Outside the office",
+          "After work"
+        ],
+        "examples": [
+          {
+            "en": "Outside of work, my hobbies help me recharge and stay balanced. For example, I often connect technical decisions with business value.",
+            "ua": "Outside of work, my hobbies help me recharge and stay balanced. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "Outside of work, my hobbies help me recharge and stay balanced. This helps me present my experience in a clear way.",
+            "ua": "Outside of work, my hobbies help me recharge and stay balanced. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-011-i-would-describe-myself-as-c",
+        "sourcePhraseId": "topic-tell-me-about-yourself-011-i-would-describe-myself-as-c",
+        "term": "I would describe myself as curious, responsible, and focused on continuous improvement.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Я б описав себе як допитливого, відповідального і сфокусованого на постійному покращенні.",
+        "pronunciation": "/aɪ wʊd describe myself as curious responsible and focused ɑːn kənˈtɪnjuəs improvement/",
+        "transcription": "/aɪ wʊd describe myself as curious responsible and focused ɑːn kənˈtɪnjuəs improvement/",
+        "commonAlternatives": [
+          "I am curious and responsible",
+          "I focus on improvement",
+          "I try to learn continuously"
+        ],
+        "examples": [
+          {
+            "en": "I would describe myself as curious, responsible, and focused on continuous improvement. For example, I often connect technical decisions with business value.",
+            "ua": "I would describe myself as curious, responsible, and focused on continuous improvement. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I would describe myself as curious, responsible, and focused on continuous improvement. This helps me present my experience in a clear way.",
+            "ua": "I would describe myself as curious, responsible, and focused on continuous improvement. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-012-i-usually-learn-best-through",
+        "sourcePhraseId": "topic-tell-me-about-yourself-012-i-usually-learn-best-through",
+        "term": "I usually learn best through real tasks and practical challenges.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Я зазвичай найкраще навчаюся через реальні задачі та практичні виклики.",
+        "pronunciation": "/aɪ usually lɜːrn best through real tæsks and practical ˈtʃælɪndʒz/",
+        "transcription": "/aɪ usually lɜːrn best through real tæsks and practical ˈtʃælɪndʒz/",
+        "commonAlternatives": [
+          "I learn by doing",
+          "Practical tasks help me learn",
+          "Real challenges are the best learning source"
+        ],
+        "examples": [
+          {
+            "en": "I usually learn best through real tasks and practical challenges. For example, I often connect technical decisions with business value.",
+            "ua": "I usually learn best through real tasks and practical challenges. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I usually learn best through real tasks and practical challenges. This helps me present my experience in a clear way.",
+            "ua": "I usually learn best through real tasks and practical challenges. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-013-i-care-about-clean-communica",
+        "sourcePhraseId": "topic-tell-me-about-yourself-013-i-care-about-clean-communica",
+        "term": "I care about clean communication because it saves time and prevents confusion.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 13,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Мені важлива чиста комунікація, бо вона економить час і запобігає плутанині.",
+        "pronunciation": "/aɪ care əˈbaʊt clean kəˌmjuːnəˈkeɪʃən because ɪt saves taɪm and prevents confusion/",
+        "transcription": "/aɪ care əˈbaʊt clean kəˌmjuːnəˈkeɪʃən because ɪt saves taɪm and prevents confusion/",
+        "commonAlternatives": [
+          "Communication matters to me",
+          "I value clarity",
+          "Clear communication saves effort"
+        ],
+        "examples": [
+          {
+            "en": "I care about clean communication because it saves time and prevents confusion. For example, I often connect technical decisions with business value.",
+            "ua": "I care about clean communication because it saves time and prevents confusion. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I care about clean communication because it saves time and prevents confusion. This helps me present my experience in a clear way.",
+            "ua": "I care about clean communication because it saves time and prevents confusion. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-014-i-am-comfortable-working-wit",
+        "sourcePhraseId": "topic-tell-me-about-yourself-014-i-am-comfortable-working-wit",
+        "term": "I am comfortable working with complex systems if the goals are clear.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 14,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "Мені комфортно працювати зі складними системами, якщо цілі зрозумілі.",
+        "pronunciation": "/aɪ am comfortable ˈwɜːrkɪŋ with complex systems if ðə ɡoʊlz ɑːr klɪr/",
+        "transcription": "/aɪ am comfortable ˈwɜːrkɪŋ with complex systems if ðə ɡoʊlz ɑːr klɪr/",
+        "commonAlternatives": [
+          "I can handle complexity",
+          "Complex systems are manageable with clear goals",
+          "Clear goals make complexity easier"
+        ],
+        "examples": [
+          {
+            "en": "I am comfortable working with complex systems if the goals are clear. For example, I often connect technical decisions with business value.",
+            "ua": "I am comfortable working with complex systems if the goals are clear. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "I am comfortable working with complex systems if the goals are clear. This helps me present my experience in a clear way.",
+            "ua": "I am comfortable working with complex systems if the goals are clear. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-tell-me-about-yourself-015-in-the-long-run-i-want-to-co",
+        "sourcePhraseId": "topic-tell-me-about-yourself-015-in-the-long-run-i-want-to-co",
+        "term": "In the long run, I want to combine engineering experience with AI-driven productivity.",
+        "category": "Tell me about yourself",
+        "section": "Tell me about yourself",
+        "sequence": 15,
+        "level": "B2",
+        "tag": "assessment",
+        "meaning": "У довгостроковій перспективі я хочу поєднувати engineering досвід з AI-driven продуктивністю.",
+        "pronunciation": "/ɪn ðə long run aɪ want tə combine ˌendʒəˈnɪrɪŋ ɪkˈspɪriəns with eɪ aɪ driven productivity/",
+        "transcription": "/ɪn ðə long run aɪ want tə combine ˌendʒəˈnɪrɪŋ ɪkˈspɪriəns with eɪ aɪ driven productivity/",
+        "commonAlternatives": [
+          "My long-term goal is",
+          "In the future, I want to",
+          "I would like to combine engineering and AI"
+        ],
+        "examples": [
+          {
+            "en": "In the long run, I want to combine engineering experience with AI-driven productivity. For example, I often connect technical decisions with business value.",
+            "ua": "In the long run, I want to combine engineering experience with AI-driven productivity. Наприклад, я часто пов’язую технічні рішення з бізнес-цінністю."
+          },
+          {
+            "en": "In the long run, I want to combine engineering experience with AI-driven productivity. This helps me present my experience in a clear way.",
+            "ua": "In the long run, I want to combine engineering experience with AI-driven productivity. Це допомагає мені чітко презентувати свій досвід."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-001-my-hobbies-help-me-recharge-",
+        "sourcePhraseId": "topic-hobbies-001-my-hobbies-help-me-recharge-",
+        "term": "My hobbies help me recharge after a busy work week.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Мої хобі допомагають мені відновитися після насиченого робочого тижня.",
+        "pronunciation": "/maɪ ˈhɑːbiz help miː riːˈtʃɑːrdʒ after a busy wɜːrk week/",
+        "transcription": "/maɪ ˈhɑːbiz help miː riːˈtʃɑːrdʒ after a busy wɜːrk week/",
+        "commonAlternatives": [
+          "They help me relax",
+          "They help me recover",
+          "They give me energy"
+        ],
+        "examples": [
+          {
+            "en": "My hobbies help me recharge after a busy work week. For example, hobbies help me recharge after an intense work week.",
+            "ua": "My hobbies help me recharge after a busy work week. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "My hobbies help me recharge after a busy work week. They also improve my creativity and focus.",
+            "ua": "My hobbies help me recharge after a busy work week. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-002-i-enjoy-activities-that-give",
+        "sourcePhraseId": "topic-hobbies-002-i-enjoy-activities-that-give",
+        "term": "I enjoy activities that give me a sense of freedom and focus.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Мені подобаються активності, які дають відчуття свободи й фокусу.",
+        "pronunciation": "/aɪ enjoy activities ðæt give miː a sense of ˈfriːdəm and ˈfoʊkəs/",
+        "transcription": "/aɪ enjoy activities ðæt give miː a sense of ˈfriːdəm and ˈfoʊkəs/",
+        "commonAlternatives": [
+          "I like activities that clear my mind",
+          "I enjoy focused hobbies",
+          "Freedom is important to me"
+        ],
+        "examples": [
+          {
+            "en": "I enjoy activities that give me a sense of freedom and focus. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I enjoy activities that give me a sense of freedom and focus. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I enjoy activities that give me a sense of freedom and focus. They also improve my creativity and focus.",
+            "ua": "I enjoy activities that give me a sense of freedom and focus. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-003-driving-powerful-cars-is-exc",
+        "sourcePhraseId": "topic-hobbies-003-driving-powerful-cars-is-exc",
+        "term": "Driving powerful cars is exciting for me, but it also requires responsibility.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Керування потужними авто для мене захопливе, але воно також вимагає відповідальності.",
+        "pronunciation": "/ˈdraɪvɪŋ powerful kɑːrz ɪz exciting fər miː bʌt ɪt also rɪˈkwaɪərz rɪˌspɑːnsəˈbɪləti/",
+        "transcription": "/ˈdraɪvɪŋ powerful kɑːrz ɪz exciting fər miː bʌt ɪt also rɪˈkwaɪərz rɪˌspɑːnsəˈbɪləti/",
+        "commonAlternatives": [
+          "Driving is exciting",
+          "It requires discipline",
+          "It is both fun and responsible"
+        ],
+        "examples": [
+          {
+            "en": "Driving powerful cars is exciting for me, but it also requires responsibility. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Driving powerful cars is exciting for me, but it also requires responsibility. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Driving powerful cars is exciting for me, but it also requires responsibility. They also improve my creativity and focus.",
+            "ua": "Driving powerful cars is exciting for me, but it also requires responsibility. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-004-fantasy-books-help-me-switch",
+        "sourcePhraseId": "topic-hobbies-004-fantasy-books-help-me-switch",
+        "term": "Fantasy books help me switch off and use my imagination.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Фентезі-книги допомагають мені перемкнутися й використовувати уяву.",
+        "pronunciation": "/fantasy bʊks help miː switch off and use maɪ ɪˌmædʒəˈneɪʃən/",
+        "transcription": "/fantasy bʊks help miː switch off and use maɪ ɪˌmædʒəˈneɪʃən/",
+        "commonAlternatives": [
+          "Books help me relax",
+          "Reading expands imagination",
+          "Fantasy helps me disconnect"
+        ],
+        "examples": [
+          {
+            "en": "Fantasy books help me switch off and use my imagination. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Fantasy books help me switch off and use my imagination. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Fantasy books help me switch off and use my imagination. They also improve my creativity and focus.",
+            "ua": "Fantasy books help me switch off and use my imagination. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-005-hiking-helps-me-slow-down-an",
+        "sourcePhraseId": "topic-hobbies-005-hiking-helps-me-slow-down-an",
+        "term": "Hiking helps me slow down and enjoy nature.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Піші прогулянки допомагають мені сповільнитися й насолоджуватися природою.",
+        "pronunciation": "/ˈhaɪkɪŋ helps miː slow daʊn and enjoy nature/",
+        "transcription": "/ˈhaɪkɪŋ helps miː slow daʊn and enjoy nature/",
+        "commonAlternatives": [
+          "Walking in nature helps me relax",
+          "Hiking clears my mind",
+          "Nature gives me energy"
+        ],
+        "examples": [
+          {
+            "en": "Hiking helps me slow down and enjoy nature. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Hiking helps me slow down and enjoy nature. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Hiking helps me slow down and enjoy nature. They also improve my creativity and focus.",
+            "ua": "Hiking helps me slow down and enjoy nature. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-006-i-think-hobbies-are-importan",
+        "sourcePhraseId": "topic-hobbies-006-i-think-hobbies-are-importan",
+        "term": "I think hobbies are important because they support mental balance.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Я думаю, хобі важливі, бо вони підтримують ментальний баланс.",
+        "pronunciation": "/aɪ θɪŋk ˈhɑːbiz ɑːr ɪmˈpɔːrtənt because they support mental ˈbæləns/",
+        "transcription": "/aɪ θɪŋk ˈhɑːbiz ɑːr ɪmˈpɔːrtənt because they support mental ˈbæləns/",
+        "commonAlternatives": [
+          "Hobbies support balance",
+          "They are good for mental health",
+          "They help me stay balanced"
+        ],
+        "examples": [
+          {
+            "en": "I think hobbies are important because they support mental balance. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I think hobbies are important because they support mental balance. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I think hobbies are important because they support mental balance. They also improve my creativity and focus.",
+            "ua": "I think hobbies are important because they support mental balance. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-007-a-good-hobby-should-not-feel",
+        "sourcePhraseId": "topic-hobbies-007-a-good-hobby-should-not-feel",
+        "term": "A good hobby should not feel like another task.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Хороше хобі не повинно відчуватися як ще одна задача.",
+        "pronunciation": "/a good hobby ʃʊd nɑːt feel like əˈnʌðər tæsk/",
+        "transcription": "/a good hobby ʃʊd nɑːt feel like əˈnʌðər tæsk/",
+        "commonAlternatives": [
+          "It should feel natural",
+          "It should be enjoyable",
+          "It should not create pressure"
+        ],
+        "examples": [
+          {
+            "en": "A good hobby should not feel like another task. For example, hobbies help me recharge after an intense work week.",
+            "ua": "A good hobby should not feel like another task. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "A good hobby should not feel like another task. They also improve my creativity and focus.",
+            "ua": "A good hobby should not feel like another task. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-008-my-hobbies-make-me-more-crea",
+        "sourcePhraseId": "topic-hobbies-008-my-hobbies-make-me-more-crea",
+        "term": "My hobbies make me more creative at work.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Мої хобі роблять мене більш креативним на роботі.",
+        "pronunciation": "/maɪ ˈhɑːbiz make miː mɔːr creative at wɜːrk/",
+        "transcription": "/maɪ ˈhɑːbiz make miː mɔːr creative at wɜːrk/",
+        "commonAlternatives": [
+          "They improve creativity",
+          "They give me fresh ideas",
+          "They help me think differently"
+        ],
+        "examples": [
+          {
+            "en": "My hobbies make me more creative at work. For example, hobbies help me recharge after an intense work week.",
+            "ua": "My hobbies make me more creative at work. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "My hobbies make me more creative at work. They also improve my creativity and focus.",
+            "ua": "My hobbies make me more creative at work. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-009-i-prefer-hobbies-that-combin",
+        "sourcePhraseId": "topic-hobbies-009-i-prefer-hobbies-that-combin",
+        "term": "I prefer hobbies that combine relaxation with personal interest.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Я віддаю перевагу хобі, які поєднують відпочинок з особистим інтересом.",
+        "pronunciation": "/aɪ prefer ˈhɑːbiz ðæt combine relaxation with ˈpɜːrsənəl interest/",
+        "transcription": "/aɪ prefer ˈhɑːbiz ðæt combine relaxation with ˈpɜːrsənəl interest/",
+        "commonAlternatives": [
+          "I like meaningful hobbies",
+          "I prefer relaxing hobbies",
+          "I choose hobbies I really care about"
+        ],
+        "examples": [
+          {
+            "en": "I prefer hobbies that combine relaxation with personal interest. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I prefer hobbies that combine relaxation with personal interest. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I prefer hobbies that combine relaxation with personal interest. They also improve my creativity and focus.",
+            "ua": "I prefer hobbies that combine relaxation with personal interest. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-010-spending-time-with-my-family",
+        "sourcePhraseId": "topic-hobbies-010-spending-time-with-my-family",
+        "term": "Spending time with my family is also an important part of my free time.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Час із сім’єю також є важливою частиною мого вільного часу.",
+        "pronunciation": "/spending taɪm with maɪ ˈfæməli ɪz also an ɪmˈpɔːrtənt part of maɪ free taɪm/",
+        "transcription": "/spending taɪm with maɪ ˈfæməli ɪz also an ɪmˈpɔːrtənt part of maɪ free taɪm/",
+        "commonAlternatives": [
+          "Family time matters to me",
+          "I value time with family",
+          "My family helps me recharge"
+        ],
+        "examples": [
+          {
+            "en": "Spending time with my family is also an important part of my free time. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Spending time with my family is also an important part of my free time. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Spending time with my family is also an important part of my free time. They also improve my creativity and focus.",
+            "ua": "Spending time with my family is also an important part of my free time. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-011-i-try-to-keep-my-hobbies-sep",
+        "sourcePhraseId": "topic-hobbies-011-i-try-to-keep-my-hobbies-sep",
+        "term": "I try to keep my hobbies separate from work pressure.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Я намагаюся тримати хобі окремо від робочого тиску.",
+        "pronunciation": "/aɪ try tə keep maɪ ˈhɑːbiz separate frəm wɜːrk pressure/",
+        "transcription": "/aɪ try tə keep maɪ ˈhɑːbiz separate frəm wɜːrk pressure/",
+        "commonAlternatives": [
+          "I protect my free time",
+          "I try to disconnect",
+          "I avoid turning hobbies into work"
+        ],
+        "examples": [
+          {
+            "en": "I try to keep my hobbies separate from work pressure. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I try to keep my hobbies separate from work pressure. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I try to keep my hobbies separate from work pressure. They also improve my creativity and focus.",
+            "ua": "I try to keep my hobbies separate from work pressure. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-012-hobbies-help-me-come-back-to",
+        "sourcePhraseId": "topic-hobbies-012-hobbies-help-me-come-back-to",
+        "term": "Hobbies help me come back to work with more energy.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Хобі допомагають мені повертатися до роботи з більшою енергією.",
+        "pronunciation": "/ˈhɑːbiz help miː come back tə wɜːrk with mɔːr ˈenərdʒi/",
+        "transcription": "/ˈhɑːbiz help miː come back tə wɜːrk with mɔːr ˈenərdʒi/",
+        "commonAlternatives": [
+          "They restore energy",
+          "They help me reset",
+          "They improve my focus"
+        ],
+        "examples": [
+          {
+            "en": "Hobbies help me come back to work with more energy. For example, hobbies help me recharge after an intense work week.",
+            "ua": "Hobbies help me come back to work with more energy. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "Hobbies help me come back to work with more energy. They also improve my creativity and focus.",
+            "ua": "Hobbies help me come back to work with more energy. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-013-i-believe-a-balanced-lifesty",
+        "sourcePhraseId": "topic-hobbies-013-i-believe-a-balanced-lifesty",
+        "term": "I believe a balanced lifestyle makes people more productive.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 13,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Я вважаю, що збалансований стиль життя робить людей продуктивнішими.",
+        "pronunciation": "/aɪ believe a balanced lifestyle makes ˈpiːpəl mɔːr prəˈdʌktɪv/",
+        "transcription": "/aɪ believe a balanced lifestyle makes ˈpiːpəl mɔːr prəˈdʌktɪv/",
+        "commonAlternatives": [
+          "Balance improves productivity",
+          "A healthy lifestyle helps work",
+          "Productivity needs balance"
+        ],
+        "examples": [
+          {
+            "en": "I believe a balanced lifestyle makes people more productive. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I believe a balanced lifestyle makes people more productive. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I believe a balanced lifestyle makes people more productive. They also improve my creativity and focus.",
+            "ua": "I believe a balanced lifestyle makes people more productive. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-014-my-hobbies-reflect-my-person",
+        "sourcePhraseId": "topic-hobbies-014-my-hobbies-reflect-my-person",
+        "term": "My hobbies reflect my personality: freedom, imagination, and balance.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 14,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Мої хобі відображають мою особистість: свободу, уяву і баланс.",
+        "pronunciation": "/maɪ ˈhɑːbiz reflect maɪ personality ˈfriːdəm ɪˌmædʒəˈneɪʃən and ˈbæləns/",
+        "transcription": "/maɪ ˈhɑːbiz reflect maɪ personality ˈfriːdəm ɪˌmædʒəˈneɪʃən and ˈbæləns/",
+        "commonAlternatives": [
+          "They show what I value",
+          "They reflect my values",
+          "They describe my personality"
+        ],
+        "examples": [
+          {
+            "en": "My hobbies reflect my personality: freedom, imagination, and balance. For example, hobbies help me recharge after an intense work week.",
+            "ua": "My hobbies reflect my personality: freedom, imagination, and balance. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "My hobbies reflect my personality: freedom, imagination, and balance. They also improve my creativity and focus.",
+            "ua": "My hobbies reflect my personality: freedom, imagination, and balance. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-hobbies-015-i-do-not-need-many-hobbies-b",
+        "sourcePhraseId": "topic-hobbies-015-i-do-not-need-many-hobbies-b",
+        "term": "I do not need many hobbies, but I need hobbies that really help me recharge.",
+        "category": "Hobbies",
+        "section": "Hobbies",
+        "sequence": 15,
+        "level": "B2",
+        "tag": "hobbies",
+        "meaning": "Мені не потрібно багато хобі, але потрібні ті, які реально допомагають відновитися.",
+        "pronunciation": "/aɪ do nɑːt niːd ˈmeni ˈhɑːbiz bʌt aɪ niːd ˈhɑːbiz ðæt really help miː riːˈtʃɑːrdʒ/",
+        "transcription": "/aɪ do nɑːt niːd ˈmeni ˈhɑːbiz bʌt aɪ niːd ˈhɑːbiz ðæt really help miː riːˈtʃɑːrdʒ/",
+        "commonAlternatives": [
+          "Quality matters more than quantity",
+          "A few good hobbies are enough",
+          "I choose meaningful hobbies"
+        ],
+        "examples": [
+          {
+            "en": "I do not need many hobbies, but I need hobbies that really help me recharge. For example, hobbies help me recharge after an intense work week.",
+            "ua": "I do not need many hobbies, but I need hobbies that really help me recharge. Наприклад, хобі допомагають мені відновитися після насиченого робочого тижня."
+          },
+          {
+            "en": "I do not need many hobbies, but I need hobbies that really help me recharge. They also improve my creativity and focus.",
+            "ua": "I do not need many hobbies, but I need hobbies that really help me recharge. Вони також покращують мою креативність і фокус."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-001-work-life-balance-means-havi",
+        "sourcePhraseId": "topic-work-life-balance-001-work-life-balance-means-havi",
+        "term": "Work-life balance means having enough energy for both work and personal life.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Work-life balance означає мати достатньо енергії і для роботи, і для особистого життя.",
+        "pronunciation": "/wɜːrk laɪf ˈbæləns miːnz having enough ˈenərdʒi fər both wɜːrk and ˈpɜːrsənəl laɪf/",
+        "transcription": "/wɜːrk laɪf ˈbæləns miːnz having enough ˈenərdʒi fər both wɜːrk and ˈpɜːrsənəl laɪf/",
+        "commonAlternatives": [
+          "Balance means energy management",
+          "It means protecting personal life",
+          "It means sustainable work"
+        ],
+        "examples": [
+          {
+            "en": "Work-life balance means having enough energy for both work and personal life. For example, I try to protect personal time after work.",
+            "ua": "Work-life balance means having enough energy for both work and personal life. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Work-life balance means having enough energy for both work and personal life. It helps me stay productive in the long run.",
+            "ua": "Work-life balance means having enough energy for both work and personal life. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-002-i-try-to-separate-urgent-tas",
+        "sourcePhraseId": "topic-work-life-balance-002-i-try-to-separate-urgent-tas",
+        "term": "I try to separate urgent tasks from truly important tasks.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Я намагаюся відділяти термінові задачі від справді важливих.",
+        "pronunciation": "/aɪ try tə separate urgent tæsks frəm truly ɪmˈpɔːrtənt tæsks/",
+        "transcription": "/aɪ try tə separate urgent tæsks frəm truly ɪmˈpɔːrtənt tæsks/",
+        "commonAlternatives": [
+          "I separate urgency from importance",
+          "I clarify priorities",
+          "I focus on what matters"
+        ],
+        "examples": [
+          {
+            "en": "I try to separate urgent tasks from truly important tasks. For example, I try to protect personal time after work.",
+            "ua": "I try to separate urgent tasks from truly important tasks. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I try to separate urgent tasks from truly important tasks. It helps me stay productive in the long run.",
+            "ua": "I try to separate urgent tasks from truly important tasks. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-003-healthy-boundaries-help-prev",
+        "sourcePhraseId": "topic-work-life-balance-003-healthy-boundaries-help-prev",
+        "term": "Healthy boundaries help prevent burnout.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Здорові межі допомагають запобігати вигоранню.",
+        "pronunciation": "/ˈhelθi ˈbaʊndəriz help prevent burnout/",
+        "transcription": "/ˈhelθi ˈbaʊndəriz help prevent burnout/",
+        "commonAlternatives": [
+          "Boundaries reduce burnout",
+          "Clear limits help",
+          "Personal time matters"
+        ],
+        "examples": [
+          {
+            "en": "Healthy boundaries help prevent burnout. For example, I try to protect personal time after work.",
+            "ua": "Healthy boundaries help prevent burnout. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Healthy boundaries help prevent burnout. It helps me stay productive in the long run.",
+            "ua": "Healthy boundaries help prevent burnout. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-004-i-can-work-intensively-when-",
+        "sourcePhraseId": "topic-work-life-balance-004-i-can-work-intensively-when-",
+        "term": "I can work intensively when needed, but it should not become the normal mode.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Я можу працювати інтенсивно за потреби, але це не має ставати нормальним режимом.",
+        "pronunciation": "/aɪ can wɜːrk intensively wen needed bʌt ɪt ʃʊd nɑːt become ðə normal mode/",
+        "transcription": "/aɪ can wɜːrk intensively wen needed bʌt ɪt ʃʊd nɑːt become ðə normal mode/",
+        "commonAlternatives": [
+          "Intense periods are fine sometimes",
+          "It should not be constant",
+          "Crunch should not be the standard"
+        ],
+        "examples": [
+          {
+            "en": "I can work intensively when needed, but it should not become the normal mode. For example, I try to protect personal time after work.",
+            "ua": "I can work intensively when needed, but it should not become the normal mode. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I can work intensively when needed, but it should not become the normal mode. It helps me stay productive in the long run.",
+            "ua": "I can work intensively when needed, but it should not become the normal mode. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-005-a-balanced-person-usually-ma",
+        "sourcePhraseId": "topic-work-life-balance-005-a-balanced-person-usually-ma",
+        "term": "A balanced person usually makes better decisions.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Збалансована людина зазвичай приймає кращі рішення.",
+        "pronunciation": "/a balanced person usually makes better decisions/",
+        "transcription": "/a balanced person usually makes better decisions/",
+        "commonAlternatives": [
+          "Balance improves decisions",
+          "Rest helps judgment",
+          "Energy affects thinking"
+        ],
+        "examples": [
+          {
+            "en": "A balanced person usually makes better decisions. For example, I try to protect personal time after work.",
+            "ua": "A balanced person usually makes better decisions. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "A balanced person usually makes better decisions. It helps me stay productive in the long run.",
+            "ua": "A balanced person usually makes better decisions. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-006-planning-personal-time-is-as",
+        "sourcePhraseId": "topic-work-life-balance-006-planning-personal-time-is-as",
+        "term": "Planning personal time is as important as planning work tasks.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Планування особистого часу так само важливе, як і планування робочих задач.",
+        "pronunciation": "/planning ˈpɜːrsənəl taɪm ɪz as ɪmˈpɔːrtənt as planning wɜːrk tæsks/",
+        "transcription": "/planning ˈpɜːrsənəl taɪm ɪz as ɪmˈpɔːrtənt as planning wɜːrk tæsks/",
+        "commonAlternatives": [
+          "Personal time needs planning",
+          "Rest should be planned",
+          "Balance requires intention"
+        ],
+        "examples": [
+          {
+            "en": "Planning personal time is as important as planning work tasks. For example, I try to protect personal time after work.",
+            "ua": "Planning personal time is as important as planning work tasks. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Planning personal time is as important as planning work tasks. It helps me stay productive in the long run.",
+            "ua": "Planning personal time is as important as planning work tasks. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-007-i-try-not-to-check-work-mess",
+        "sourcePhraseId": "topic-work-life-balance-007-i-try-not-to-check-work-mess",
+        "term": "I try not to check work messages all the time after hours.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Я намагаюся не перевіряти робочі повідомлення постійно після роботи.",
+        "pronunciation": "/aɪ try nɑːt tə check wɜːrk messages all ðə taɪm after hours/",
+        "transcription": "/aɪ try nɑːt tə check wɜːrk messages all ðə taɪm after hours/",
+        "commonAlternatives": [
+          "I avoid constant checking",
+          "I disconnect after work",
+          "I protect my evenings"
+        ],
+        "examples": [
+          {
+            "en": "I try not to check work messages all the time after hours. For example, I try to protect personal time after work.",
+            "ua": "I try not to check work messages all the time after hours. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I try not to check work messages all the time after hours. It helps me stay productive in the long run.",
+            "ua": "I try not to check work messages all the time after hours. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-008-good-balance-improves-long-t",
+        "sourcePhraseId": "topic-work-life-balance-008-good-balance-improves-long-t",
+        "term": "Good balance improves long-term productivity.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Хороший баланс покращує довгострокову продуктивність.",
+        "pronunciation": "/good ˈbæləns ɪmˈpruːvz long term productivity/",
+        "transcription": "/good ˈbæləns ɪmˈpruːvz long term productivity/",
+        "commonAlternatives": [
+          "Balance supports productivity",
+          "It is sustainable",
+          "It helps in the long run"
+        ],
+        "examples": [
+          {
+            "en": "Good balance improves long-term productivity. For example, I try to protect personal time after work.",
+            "ua": "Good balance improves long-term productivity. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Good balance improves long-term productivity. It helps me stay productive in the long run.",
+            "ua": "Good balance improves long-term productivity. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-009-work-life-balance-depends-on",
+        "sourcePhraseId": "topic-work-life-balance-009-work-life-balance-depends-on",
+        "term": "Work-life balance depends on clear expectations from the team.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Work-life balance залежить від чітких очікувань команди.",
+        "pronunciation": "/wɜːrk laɪf ˈbæləns dɪˈpendz ɑːn klɪr expectations frəm ðə tiːm/",
+        "transcription": "/wɜːrk laɪf ˈbæləns dɪˈpendz ɑːn klɪr expectations frəm ðə tiːm/",
+        "commonAlternatives": [
+          "Expectations matter",
+          "Clarity supports balance",
+          "The team should agree on expectations"
+        ],
+        "examples": [
+          {
+            "en": "Work-life balance depends on clear expectations from the team. For example, I try to protect personal time after work.",
+            "ua": "Work-life balance depends on clear expectations from the team. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Work-life balance depends on clear expectations from the team. It helps me stay productive in the long run.",
+            "ua": "Work-life balance depends on clear expectations from the team. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-010-if-priorities-are-unclear-ba",
+        "sourcePhraseId": "topic-work-life-balance-010-if-priorities-are-unclear-ba",
+        "term": "If priorities are unclear, balance becomes much harder.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Якщо пріоритети нечіткі, баланс стає набагато складнішим.",
+        "pronunciation": "/if praɪˈɔːrətiz ɑːr unclear ˈbæləns becomes much harder/",
+        "transcription": "/if praɪˈɔːrətiz ɑːr unclear ˈbæləns becomes much harder/",
+        "commonAlternatives": [
+          "Unclear priorities hurt balance",
+          "Ambiguity creates stress",
+          "Clarity makes balance easier"
+        ],
+        "examples": [
+          {
+            "en": "If priorities are unclear, balance becomes much harder. For example, I try to protect personal time after work.",
+            "ua": "If priorities are unclear, balance becomes much harder. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "If priorities are unclear, balance becomes much harder. It helps me stay productive in the long run.",
+            "ua": "If priorities are unclear, balance becomes much harder. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-011-i-believe-rest-is-part-of-pe",
+        "sourcePhraseId": "topic-work-life-balance-011-i-believe-rest-is-part-of-pe",
+        "term": "I believe rest is part of performance, not the opposite of it.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Я вважаю, що відпочинок є частиною продуктивності, а не протилежністю.",
+        "pronunciation": "/aɪ believe rest ɪz part of performance nɑːt ðə opposite of ɪt/",
+        "transcription": "/aɪ believe rest ɪz part of performance nɑːt ðə opposite of ɪt/",
+        "commonAlternatives": [
+          "Rest supports performance",
+          "Recovery improves work",
+          "Breaks are useful"
+        ],
+        "examples": [
+          {
+            "en": "I believe rest is part of performance, not the opposite of it. For example, I try to protect personal time after work.",
+            "ua": "I believe rest is part of performance, not the opposite of it. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I believe rest is part of performance, not the opposite of it. It helps me stay productive in the long run.",
+            "ua": "I believe rest is part of performance, not the opposite of it. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-012-a-flexible-schedule-can-supp",
+        "sourcePhraseId": "topic-work-life-balance-012-a-flexible-schedule-can-supp",
+        "term": "A flexible schedule can support balance if people are responsible.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Гнучкий графік може підтримувати баланс, якщо люди відповідальні.",
+        "pronunciation": "/a flexible schedule can support ˈbæləns if ˈpiːpəl ɑːr responsible/",
+        "transcription": "/a flexible schedule can support ˈbæləns if ˈpiːpəl ɑːr responsible/",
+        "commonAlternatives": [
+          "Flexibility helps",
+          "Responsibility makes flexibility work",
+          "Flexible work needs ownership"
+        ],
+        "examples": [
+          {
+            "en": "A flexible schedule can support balance if people are responsible. For example, I try to protect personal time after work.",
+            "ua": "A flexible schedule can support balance if people are responsible. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "A flexible schedule can support balance if people are responsible. It helps me stay productive in the long run.",
+            "ua": "A flexible schedule can support balance if people are responsible. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-013-i-try-to-manage-my-energy-no",
+        "sourcePhraseId": "topic-work-life-balance-013-i-try-to-manage-my-energy-no",
+        "term": "I try to manage my energy, not only my calendar.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 13,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Я намагаюся керувати своєю енергією, а не тільки календарем.",
+        "pronunciation": "/aɪ try tə ˈmænɪdʒ maɪ ˈenərdʒi nɑːt ˈoʊnli maɪ calendar/",
+        "transcription": "/aɪ try tə ˈmænɪdʒ maɪ ˈenərdʒi nɑːt ˈoʊnli maɪ calendar/",
+        "commonAlternatives": [
+          "Energy management matters",
+          "Time is not the only factor",
+          "Energy affects productivity"
+        ],
+        "examples": [
+          {
+            "en": "I try to manage my energy, not only my calendar. For example, I try to protect personal time after work.",
+            "ua": "I try to manage my energy, not only my calendar. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "I try to manage my energy, not only my calendar. It helps me stay productive in the long run.",
+            "ua": "I try to manage my energy, not only my calendar. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-014-balance-is-easier-when-commu",
+        "sourcePhraseId": "topic-work-life-balance-014-balance-is-easier-when-commu",
+        "term": "Balance is easier when communication is clear and proactive.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 14,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Баланс легший, коли комунікація чітка і проактивна.",
+        "pronunciation": "/ˈbæləns ɪz easier wen kəˌmjuːnəˈkeɪʃən ɪz klɪr and proactive/",
+        "transcription": "/ˈbæləns ɪz easier wen kəˌmjuːnəˈkeɪʃən ɪz klɪr and proactive/",
+        "commonAlternatives": [
+          "Communication supports balance",
+          "Proactive updates help",
+          "Clarity reduces pressure"
+        ],
+        "examples": [
+          {
+            "en": "Balance is easier when communication is clear and proactive. For example, I try to protect personal time after work.",
+            "ua": "Balance is easier when communication is clear and proactive. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "Balance is easier when communication is clear and proactive. It helps me stay productive in the long run.",
+            "ua": "Balance is easier when communication is clear and proactive. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      },
+      {
+        "id": "word-topic-work-life-balance-015-for-me-balance-is-about-sust",
+        "sourcePhraseId": "topic-work-life-balance-015-for-me-balance-is-about-sust",
+        "term": "For me, balance is about sustainability, not avoiding hard work.",
+        "category": "Work-Life Balance",
+        "section": "Work-Life Balance",
+        "sequence": 15,
+        "level": "B2",
+        "tag": "balance",
+        "meaning": "Для мене баланс — це про сталість, а не про уникнення складної роботи.",
+        "pronunciation": "/fər miː ˈbæləns ɪz əˈbaʊt sustainability nɑːt avoiding hard wɜːrk/",
+        "transcription": "/fər miː ˈbæləns ɪz əˈbaʊt sustainability nɑːt avoiding hard wɜːrk/",
+        "commonAlternatives": [
+          "Balance means sustainability",
+          "It is not about laziness",
+          "It is about long-term performance"
+        ],
+        "examples": [
+          {
+            "en": "For me, balance is about sustainability, not avoiding hard work. For example, I try to protect personal time after work.",
+            "ua": "For me, balance is about sustainability, not avoiding hard work. Наприклад, я намагаюся захищати особистий час після роботи."
+          },
+          {
+            "en": "For me, balance is about sustainability, not avoiding hard work. It helps me stay productive in the long run.",
+            "ua": "For me, balance is about sustainability, not avoiding hard work. Це допомагає мені залишатися продуктивним у довгостроковій перспективі."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,829 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-certification-verbs-contextual",
+  "title": "AI Certification Verbs — Contextual",
+  "order": 110,
+  "content": {
+    "irregularVerbs": [
+      {
+        "id": "iv-ai-certification-001-proceed",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "proceed",
+        "pastSimple": "proceeded",
+        "pastParticiple": "proceeded",
+        "translation": "продовжувати / переходити далі",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Proceed only after access boundaries and review ownership are clear.",
+            "ua": "Продовжуйте лише після того, як буде чітко визначено межі доступу та відповідального за перевірку."
+          },
+          {
+            "en": "The team proceeded with a limited pilot after closing the blockers.",
+            "ua": "Команда перейшла до обмеженого пілота після усунення всіх блокувальних проблем."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-002-deploy",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "deploy",
+        "pastSimple": "deployed",
+        "pastParticiple": "deployed",
+        "translation": "розгортати / впроваджувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Do not deploy the workflow before the release gate passes.",
+            "ua": "Не розгортайте робочий процес, доки він не пройде контрольний етап перед випуском."
+          },
+          {
+            "en": "The team deployed the validated version to a small pilot group.",
+            "ua": "Команда розгорнула перевірену версію для невеликої пілотної групи."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-003-release",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "release",
+        "pastSimple": "released",
+        "pastParticiple": "released",
+        "translation": "випускати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Release only the exact version that passed validation.",
+            "ua": "Випускайте лише ту версію, яка пройшла перевірку."
+          },
+          {
+            "en": "The team released the API after the rollback path was confirmed.",
+            "ua": "Команда випустила API після підтвердження сценарію відкату."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-004-launch",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "launch",
+        "pastSimple": "launched",
+        "pastParticiple": "launched",
+        "translation": "запускати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Launch a limited pilot before broader exposure.",
+            "ua": "Запустіть обмежений пілот перед ширшим відкриттям доступу."
+          },
+          {
+            "en": "The team launched the workflow for 25 approved users.",
+            "ua": "Команда запустила робочий процес для двадцяти п'яти затверджених користувачів."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-005-expand",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "expand",
+        "pastSimple": "expanded",
+        "pastParticiple": "expanded",
+        "translation": "розширювати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Expand only after the first workflow shows verified value.",
+            "ua": "Розширюйте рішення лише після того, як перший робочий процес покаже підтверджену цінність."
+          },
+          {
+            "en": "The team expanded access after review quality remained stable.",
+            "ua": "Команда розширила доступ після того, як якість перевірки залишалася стабільною."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-006-scale",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "scale",
+        "pastSimple": "scaled",
+        "pastParticiple": "scaled",
+        "translation": "масштабувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Scale based on evidence, not on interest in new features.",
+            "ua": "Масштабуйте на основі доказів, а не зацікавлення новими функціями."
+          },
+          {
+            "en": "The customer scaled the workflow after the safeguards proved effective.",
+            "ua": "Клієнт масштабував робочий процес після підтвердження ефективності запобіжних заходів."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-007-delegate",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "delegate",
+        "pastSimple": "delegated",
+        "pastParticiple": "delegated",
+        "translation": "делегувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Delegate only bounded work with clear validation expectations.",
+            "ua": "Делегуйте лише обмежені за обсягом завдання з чіткими очікуваннями щодо перевірки."
+          },
+          {
+            "en": "The manager delegated a multi-step research task for review.",
+            "ua": "Керівник делегував багатокрокове дослідницьке завдання для подальшої перевірки."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-008-automate",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "automate",
+        "pastSimple": "automated",
+        "pastParticiple": "automated",
+        "translation": "автоматизувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Do not automate a workflow until ownership and monitoring are defined.",
+            "ua": "Не автоматизуйте робочий процес, доки не визначено відповідальних і моніторинг."
+          },
+          {
+            "en": "The team automated only the repeatable low-risk step.",
+            "ua": "Команда автоматизувала лише повторюваний крок із низьким ризиком."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-009-generate",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "generate",
+        "pastSimple": "generated",
+        "pastParticiple": "generated",
+        "translation": "генерувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "The API should generate structured output that matches the contract.",
+            "ua": "API має генерувати структурований результат, який відповідає контракту."
+          },
+          {
+            "en": "The model generated a candidate summary for review.",
+            "ua": "Модель згенерувала попереднє резюме для перевірки."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-010-remediate",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "remediate",
+        "pastSimple": "remediated",
+        "pastParticiple": "remediated",
+        "translation": "усувати недоліки",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Remediate the blockers before release.",
+            "ua": "Усуньте блокувальні недоліки до випуску."
+          },
+          {
+            "en": "The team remediated the logging gap before pilot exposure.",
+            "ua": "Команда усунула прогалину в журналюванні до відкриття пілота користувачам."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-011-recover",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "recover",
+        "pastSimple": "recovered",
+        "pastParticiple": "recovered",
+        "translation": "відновлюватися / відновлювати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "The team should recover from the last known-good checkpoint.",
+            "ua": "Команда має відновитися з останньої відомої справної контрольної точки."
+          },
+          {
+            "en": "The workflow recovered after the failed attempt was isolated.",
+            "ua": "Робочий процес відновився після ізоляції невдалої спроби."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-012-resume",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Workflow & deployment",
+        "base": "resume",
+        "pastSimple": "resumed",
+        "pastParticiple": "resumed",
+        "translation": "відновлювати виконання / продовжувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Resume only after the checkpoint and constraints are reloaded.",
+            "ua": "Відновлюйте виконання лише після завантаження контрольної точки та обмежень."
+          },
+          {
+            "en": "The team resumed the task from the recorded SHA.",
+            "ua": "Команда продовжила завдання із зафіксованого ідентифікатора коміту."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-013-validate",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "validate",
+        "pastSimple": "validated",
+        "pastParticiple": "validated",
+        "translation": "перевіряти відповідність / підтверджувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Validate the workflow with representative normal and failure cases.",
+            "ua": "Перевірте робочий процес на репрезентативних звичайних сценаріях і сценаріях відмови."
+          },
+          {
+            "en": "The team validated the review path before launch.",
+            "ua": "Команда перевірила процес розгляду перед запуском."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-014-verify",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "verify",
+        "pastSimple": "verified",
+        "pastParticiple": "verified",
+        "translation": "перевіряти",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Verify every contract behavior you claim to support.",
+            "ua": "Перевірте кожен заявлений сценарій поведінки контракту."
+          },
+          {
+            "en": "The reviewer verified the source IDs against the approved policy.",
+            "ua": "Перевіряльник звірив ідентифікатори джерел із затвердженою політикою."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-015-evaluate",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "evaluate",
+        "pastSimple": "evaluated",
+        "pastParticiple": "evaluated",
+        "translation": "оцінювати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Evaluate model candidates against the same task requirements.",
+            "ua": "Оцінюйте моделі-кандидати за однаковими вимогами до завдання."
+          },
+          {
+            "en": "The team evaluated quality, latency, and cost per successful task.",
+            "ua": "Команда оцінила якість, затримку та вартість кожного успішного завдання."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-016-measure",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "measure",
+        "pastSimple": "measured",
+        "pastParticiple": "measured",
+        "translation": "вимірювати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Measure workflow value before claiming ROI.",
+            "ua": "Виміряйте цінність робочого процесу до заяв про рентабельність інвестицій."
+          },
+          {
+            "en": "The pilot measured preparation time and revision cycles.",
+            "ua": "Пілот виміряв час підготовки та кількість циклів доопрацювання."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-017-capture",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "capture",
+        "pastSimple": "captured",
+        "pastParticiple": "captured",
+        "translation": "фіксувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Capture request IDs and failure evidence for troubleshooting.",
+            "ua": "Фіксуйте ідентифікатори запитів і докази помилок для діагностики."
+          },
+          {
+            "en": "The test captured the expected status code and response body.",
+            "ua": "Тест зафіксував очікуваний код стану та тіло відповіді."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-018-inspect",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "inspect",
+        "pastSimple": "inspected",
+        "pastParticiple": "inspected",
+        "translation": "ретельно перевіряти",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Inspect the diff before accepting a generated patch.",
+            "ua": "Перегляньте різницю у файлах перед прийняттям згенерованої зміни."
+          },
+          {
+            "en": "The engineer inspected the relevant files and test evidence.",
+            "ua": "Інженер перевірив відповідні файли та результати тестів."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-019-monitor",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "monitor",
+        "pastSimple": "monitored",
+        "pastParticiple": "monitored",
+        "translation": "моніторити",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Monitor retrieval failures and review-trigger rates after release.",
+            "ua": "Відстежуйте помилки пошуку та частоту передавання на перевірку після випуску."
+          },
+          {
+            "en": "Operations monitored usage and latency during the pilot.",
+            "ua": "Операційна команда відстежувала використання та затримку під час пілота."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-020-retry",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "retry",
+        "pastSimple": "retried",
+        "pastParticiple": "retried",
+        "translation": "повторювати спробу",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Retry only transient failures with bounded backoff.",
+            "ua": "Повторюйте лише операції з тимчасовими помилками та обмеженою затримкою між спробами."
+          },
+          {
+            "en": "The client retried the temporary service error twice.",
+            "ua": "Клієнт двічі повторив запит після тимчасової помилки сервісу."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-021-detect",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "detect",
+        "pastSimple": "detected",
+        "pastParticiple": "detected",
+        "translation": "виявляти",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "The system should detect conflicting policy guidance.",
+            "ua": "Система має виявляти суперечливі настанови політик."
+          },
+          {
+            "en": "The eval detected an unsupported exception in the answer.",
+            "ua": "Оцінювання виявило у відповіді непідтверджений виняток."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-022-flag",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "flag",
+        "pastSimple": "flagged",
+        "pastParticiple": "flagged",
+        "translation": "позначати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Flag sensitive cases for human review.",
+            "ua": "Позначайте чутливі випадки для перевірки людиною."
+          },
+          {
+            "en": "The workflow flagged the restricted dataset request correctly.",
+            "ua": "Робочий процес правильно позначив запит до обмеженого набору даних."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-023-trigger",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "trigger",
+        "pastSimple": "triggered",
+        "pastParticiple": "triggered",
+        "translation": "запускати / активувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "High-impact uncertainty should trigger human review.",
+            "ua": "Невизначеність із суттєвими наслідками має запускати перевірку людиною."
+          },
+          {
+            "en": "The sensitive case triggered the escalation path.",
+            "ua": "Чутливий випадок запустив процес передавання на вищий рівень."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-024-route",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Evaluation & verification",
+        "base": "route",
+        "pastSimple": "routed",
+        "pastParticiple": "routed",
+        "translation": "спрямовувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Route ambiguous cases to the appropriate reviewer.",
+            "ua": "Спрямовуйте неоднозначні випадки до відповідного перевіряльника."
+          },
+          {
+            "en": "The classifier routed the ticket to the correct support queue.",
+            "ua": "Класифікатор спрямував звернення до правильної черги підтримки."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-025-classify",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "classify",
+        "pastSimple": "classified",
+        "pastParticiple": "classified",
+        "translation": "класифікувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "The API should classify short support requests into fixed categories.",
+            "ua": "API має класифікувати короткі звернення до підтримки за фіксованими категоріями."
+          },
+          {
+            "en": "The model classified the damaged-item request correctly.",
+            "ua": "Модель правильно класифікувала запит щодо пошкодженого товару."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-026-summarize",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "summarize",
+        "pastSimple": "summarized",
+        "pastParticiple": "summarized",
+        "translation": "підсумовувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Summarize approved context into a review-ready brief.",
+            "ua": "Підсумуйте затверджений контекст у матеріалі, готовому до перевірки."
+          },
+          {
+            "en": "The API summarized the support history for the account manager.",
+            "ua": "API підсумував історію звернень для менеджера клієнта."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-027-synthesize",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "synthesize",
+        "pastSimple": "synthesized",
+        "pastParticiple": "synthesized",
+        "translation": "узагальнювати дані з кількох джерел",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Synthesize evidence from approved sources, not from general assumptions.",
+            "ua": "Узагальнюйте докази із затверджених джерел, а не із загальних припущень."
+          },
+          {
+            "en": "The workflow synthesized policy updates into a structured brief.",
+            "ua": "Робочий процес об'єднав оновлення політик у структурований огляд."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-028-retrieve",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "retrieve",
+        "pastSimple": "retrieved",
+        "pastParticiple": "retrieved",
+        "translation": "знаходити й отримувати дані",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Retrieve only current and approved policy content.",
+            "ua": "Знаходьте й отримуйте лише актуальний та затверджений вміст політик."
+          },
+          {
+            "en": "The API retrieved the correct regional addendum.",
+            "ua": "API отримав правильний регіональний додаток."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-029-ground",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "ground",
+        "pastSimple": "grounded",
+        "pastParticiple": "grounded",
+        "translation": "обґрунтовувати даними з надійних джерел",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Ground sensitive answers in approved source evidence.",
+            "ua": "Обґрунтовуйте чутливі відповіді доказами із затверджених джерел."
+          },
+          {
+            "en": "The response was grounded in the current policy.",
+            "ua": "Відповідь була обґрунтована чинною політикою."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-030-filter",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "filter",
+        "pastSimple": "filtered",
+        "pastParticiple": "filtered",
+        "translation": "фільтрувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Filter retrieval results by region and permission.",
+            "ua": "Фільтруйте результати пошуку за регіоном і правами доступу."
+          },
+          {
+            "en": "The system filtered out content from another region.",
+            "ua": "Система відфільтрувала вміст з іншого регіону."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-031-minimize",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "minimize",
+        "pastSimple": "minimized",
+        "pastParticiple": "minimized",
+        "translation": "мінімізувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Minimize sensitive data before sending it to the model.",
+            "ua": "Мінімізуйте обсяг чутливих даних перед надсиланням моделі."
+          },
+          {
+            "en": "The prototype minimized ticket fields during the pilot.",
+            "ua": "Під час пілота прототип скоротив набір полів звернення."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-032-redact",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "redact",
+        "pastSimple": "redacted",
+        "pastParticiple": "redacted",
+        "translation": "вилучати або приховувати чутливі дані",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Redact personal information from general application logs.",
+            "ua": "Вилучайте особисту інформацію із загальних журналів застосунку."
+          },
+          {
+            "en": "The team redacted customer identifiers before sharing the evidence.",
+            "ua": "Команда приховала ідентифікатори клієнтів перед передаванням доказів."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-033-mask",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "mask",
+        "pastSimple": "masked",
+        "pastParticiple": "masked",
+        "translation": "маскувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Mask sensitive fields in debugging output.",
+            "ua": "Маскуйте чутливі поля у діагностичних даних."
+          },
+          {
+            "en": "The logging layer masked the employee identifier.",
+            "ua": "Підсистема журналювання замаскувала ідентифікатор працівника."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-034-protect",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "protect",
+        "pastSimple": "protected",
+        "pastParticiple": "protected",
+        "translation": "захищати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Protect customer data with least-privilege access.",
+            "ua": "Захищайте дані клієнтів за принципом мінімально необхідних прав доступу."
+          },
+          {
+            "en": "The new boundary protected restricted policy content.",
+            "ua": "Нова межа доступу захистила обмежений вміст політики."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-035-restrict",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "restrict",
+        "pastSimple": "restricted",
+        "pastParticiple": "restricted",
+        "translation": "обмежувати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Restrict write permissions to the fields required by the workflow.",
+            "ua": "Обмежуйте права на запис лише полями, потрібними робочому процесу."
+          },
+          {
+            "en": "The pilot restricted cloud access to an approved cohort.",
+            "ua": "Пілот обмежив хмарний доступ для затвердженої групи користувачів."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-036-prevent",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "prevent",
+        "pastSimple": "prevented",
+        "pastParticiple": "prevented",
+        "translation": "запобігати",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Use idempotency controls to prevent duplicate side effects.",
+            "ua": "Використовуйте засоби ідемпотентності, щоб запобігати повторним побічним ефектам."
+          },
+          {
+            "en": "The request ID prevented the same update from running twice.",
+            "ua": "Ідентифікатор запиту не дав виконати те саме оновлення двічі."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-037-expose",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "expose",
+        "pastSimple": "exposed",
+        "pastParticiple": "exposed",
+        "translation": "розкривати / робити доступним; піддавати ризику",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Do not expose restricted content to unauthorized users.",
+            "ua": "Не розкривайте обмежений вміст неавторизованим користувачам."
+          },
+          {
+            "en": "The old logging setup exposed too much request content.",
+            "ua": "Стара конфігурація журналювання розкривала забагато вмісту запитів."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-038-retain",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "retain",
+        "pastSimple": "retained",
+        "pastParticiple": "retained",
+        "translation": "зберігати протягом визначеного строку",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Retain audit evidence according to the approved policy.",
+            "ua": "Зберігайте докази аудиту відповідно до затвердженої політики."
+          },
+          {
+            "en": "The system retained the conversation state until deletion.",
+            "ua": "Система зберігала стан розмови до його видалення."
+          }
+        ]
+      },
+      {
+        "id": "iv-ai-certification-039-escalate",
+        "verbSet": "ai-certification-verbs-contextual",
+        "group": "Knowledge, data & security",
+        "base": "escalate",
+        "pastSimple": "escalated",
+        "pastParticiple": "escalated",
+        "translation": "передавати на вищий рівень розгляду",
+        "transcription": "",
+        "commonAlternatives": [],
+        "examples": [
+          {
+            "en": "Escalate high-impact or unsupported cases to the named owner.",
+            "ua": "Передавайте випадки з високим впливом або без належного підтвердження визначеному відповідальному."
+          },
+          {
+            "en": "The workflow escalated the restricted-access question to security.",
+            "ua": "Робочий процес передав питання про обмежений доступ команді безпеки."
+          }
+        ]
+      }
+    ]
+  }
+}

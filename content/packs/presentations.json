@@ -1,0 +1,4602 @@
+{
+  "schemaVersion": 1,
+  "id": "presentations",
+  "title": "Presentations",
+  "order": 20,
+  "content": {
+    "phrases": [
+      {
+        "id": "presentation-phrase-001",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 1,
+        "phrase": "Good morning everyone, thank you for joining.",
+        "translation": "Доброго ранку всім, дякую, що приєдналися.",
+        "transcription": "/ɡʊd ˈmɔːrnɪŋ ˈevriwʌn, θæŋk juː fər ˈdʒɔɪnɪŋ/",
+        "commonAlternatives": [
+          "Hello everyone",
+          "Thanks for joining",
+          "Welcome everyone"
+        ],
+        "example": "Good morning everyone, thank you for joining today's session.",
+        "examples": [
+          {
+            "en": "Good morning everyone, thank you for joining today's session."
+          },
+          {
+            "en": "Good morning everyone, thank you for joining this presentation about agent-based cost optimization."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-002",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 2,
+        "phrase": "Today, I would like to talk about...",
+        "translation": "Сьогодні я хотів би поговорити про...",
+        "transcription": "/təˈdeɪ aɪ wʊd laɪk tə tɔːk əˈbaʊt/",
+        "commonAlternatives": [
+          "Today I’ll cover",
+          "Today I’ll focus on",
+          "The topic for today is"
+        ],
+        "example": "Today, I would like to talk about cost optimization with AI agents.",
+        "examples": [
+          {
+            "en": "Today, I would like to talk about cost optimization with AI agents."
+          },
+          {
+            "en": "Today, I would like to talk about how an agent framework can reduce engineering cost."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-003",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 3,
+        "phrase": "The main goal of this presentation is...",
+        "translation": "Головна ціль цієї презентації...",
+        "transcription": "/ðə meɪn ɡoʊl əv ðɪs ˌprezənˈteɪʃən ɪz/",
+        "commonAlternatives": [
+          "The key objective is",
+          "The purpose is",
+          "What I want to show is"
+        ],
+        "example": "The main goal of this presentation is to explain where real savings can come from.",
+        "examples": [
+          {
+            "en": "The main goal of this presentation is to explain where real savings can come from."
+          },
+          {
+            "en": "The main goal of this presentation is to connect AI cost with engineering value."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-004",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 4,
+        "phrase": "I will focus on three key areas.",
+        "translation": "Я сфокусуюся на трьох ключових напрямках.",
+        "transcription": "/aɪ wɪl ˈfoʊkəs ɑːn θriː kiː ˈeriəz/",
+        "commonAlternatives": [
+          "I’ll cover three points",
+          "There are three areas",
+          "I’ll structure this around three topics"
+        ],
+        "example": "I will focus on three key areas: orchestration, memory, and measurement.",
+        "examples": [
+          {
+            "en": "I will focus on three key areas: orchestration, memory, and measurement."
+          },
+          {
+            "en": "I will focus on three key areas: cost control, PR review, and reusable context."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-005",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 5,
+        "phrase": "Let me start with the context.",
+        "translation": "Дозвольте почати з контексту.",
+        "transcription": "/let miː stɑːrt wɪð ðə ˈkɑːntekst/",
+        "commonAlternatives": [
+          "Let’s start with context",
+          "First, some background",
+          "I’ll start with the background"
+        ],
+        "example": "Let me start with the context: AI agents can be powerful, but they can also be expensive.",
+        "examples": [
+          {
+            "en": "Let me start with the context: AI agents can be powerful, but they can also be expensive."
+          },
+          {
+            "en": "Let me start with the context before we move to the proposed solution."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-006",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 6,
+        "phrase": "This topic is important because...",
+        "translation": "Ця тема важлива, тому що...",
+        "transcription": "/ðɪs ˈtɑːpɪk ɪz ɪmˈpɔːrtənt bɪˈkɔːz/",
+        "commonAlternatives": [
+          "This matters because",
+          "The reason this is important is",
+          "The business value is"
+        ],
+        "example": "This topic is important because uncontrolled AI usage can become expensive.",
+        "examples": [
+          {
+            "en": "This topic is important because uncontrolled AI usage can become expensive."
+          },
+          {
+            "en": "This topic is important because engineering time is often more expensive than model usage."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-007",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 7,
+        "phrase": "I want to keep this practical.",
+        "translation": "Я хочу зробити це практичним.",
+        "transcription": "/aɪ wɑːnt tə kiːp ðɪs ˈpræktɪkəl/",
+        "commonAlternatives": [
+          "I’ll keep it practical",
+          "This will be practical",
+          "I’ll focus on real use cases"
+        ],
+        "example": "I want to keep this practical and focus on what we can actually measure.",
+        "examples": [
+          {
+            "en": "I want to keep this practical and focus on what we can actually measure."
+          },
+          {
+            "en": "I want to keep this practical, so I will use PR review as the main example."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-008",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 8,
+        "phrase": "I will not go too deep into implementation details.",
+        "translation": "Я не буду занадто глибоко заходити в деталі реалізації.",
+        "transcription": "/aɪ wɪl nɑːt ɡoʊ tuː diːp ˈɪntuː ˌɪmpləmənˈteɪʃən dɪˈteɪlz/",
+        "commonAlternatives": [
+          "I’ll avoid too much technical detail",
+          "I’ll stay at a high level",
+          "I’ll focus on the concept"
+        ],
+        "example": "I will not go too deep into implementation details, but I’ll explain the architecture.",
+        "examples": [
+          {
+            "en": "I will not go too deep into implementation details, but I’ll explain the architecture."
+          },
+          {
+            "en": "I will not go too deep into implementation details unless there are questions."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-009",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 9,
+        "phrase": "By the end of this presentation, I hope to show...",
+        "translation": "До кінця презентації я сподіваюся показати...",
+        "transcription": "/baɪ ði end əv ðɪs ˌprezənˈteɪʃən, aɪ hoʊp tə ʃoʊ/",
+        "commonAlternatives": [
+          "At the end, you should see",
+          "The takeaway should be",
+          "My goal is to demonstrate"
+        ],
+        "example": "By the end of this presentation, I hope to show how agents can reduce repeated work.",
+        "examples": [
+          {
+            "en": "By the end of this presentation, I hope to show how agents can reduce repeated work."
+          },
+          {
+            "en": "By the end of this presentation, I hope to show how we can measure agent value."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-010",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 10,
+        "phrase": "The key message is simple.",
+        "translation": "Ключова ідея проста.",
+        "transcription": "/ðə kiː ˈmesɪdʒ ɪz ˈsɪmpəl/",
+        "commonAlternatives": [
+          "The main idea is simple",
+          "The core message is",
+          "The main takeaway is"
+        ],
+        "example": "The key message is simple: cost optimization is about controlled context and reusable memory.",
+        "examples": [
+          {
+            "en": "The key message is simple: cost optimization is about controlled context and reusable memory."
+          },
+          {
+            "en": "The key message is simple: agents should run only when they create measurable value."
+          }
+        ],
+        "level": "B2",
+        "tag": "1. Opening"
+      },
+      {
+        "id": "presentation-phrase-011",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 11,
+        "phrase": "Here is the agenda for today.",
+        "translation": "Ось план на сьогодні.",
+        "transcription": "/hɪr ɪz ði əˈdʒendə fər təˈdeɪ/",
+        "commonAlternatives": [
+          "Here is the plan",
+          "Today’s agenda is",
+          "We’ll cover the following points"
+        ],
+        "example": "Here is the agenda for today: problem, solution, metrics, and next steps.",
+        "examples": [
+          {
+            "en": "Here is the agenda for today: problem, solution, metrics, and next steps."
+          },
+          {
+            "en": "Here is the agenda for today, and I’ll keep it focused."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-012",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 12,
+        "phrase": "I will break this down into several parts.",
+        "translation": "Я розділю це на кілька частин.",
+        "transcription": "/aɪ wɪl breɪk ðɪs daʊn ˈɪntuː ˈsevərəl pɑːrts/",
+        "commonAlternatives": [
+          "I’ll split this into",
+          "I’ll structure this as",
+          "I’ll organize this around"
+        ],
+        "example": "I will break this down into cost drivers, optimization levers, and measurement.",
+        "examples": [
+          {
+            "en": "I will break this down into cost drivers, optimization levers, and measurement."
+          },
+          {
+            "en": "I will break this down into how agents work and how we measure value."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-013",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 13,
+        "phrase": "First, I’ll explain the problem.",
+        "translation": "Спочатку я поясню проблему.",
+        "transcription": "/fɜːrst, aɪl ɪkˈspleɪn ðə ˈprɑːbləm/",
+        "commonAlternatives": [
+          "First, I’ll cover the challenge",
+          "First, let’s look at the problem",
+          "I’ll start with the issue"
+        ],
+        "example": "First, I’ll explain the problem with uncontrolled agent usage.",
+        "examples": [
+          {
+            "en": "First, I’ll explain the problem with uncontrolled agent usage."
+          },
+          {
+            "en": "First, I’ll explain why token cost alone is not the full picture."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-014",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 14,
+        "phrase": "Then, I’ll move to the proposed approach.",
+        "translation": "Потім я перейду до запропонованого підходу.",
+        "transcription": "/ðen, aɪl muːv tə ðə prəˈpoʊzd əˈproʊtʃ/",
+        "commonAlternatives": [
+          "Then I’ll cover the solution",
+          "Next, I’ll explain the approach",
+          "After that, I’ll move to the framework"
+        ],
+        "example": "Then, I’ll move to the proposed event-driven orchestrator.",
+        "examples": [
+          {
+            "en": "Then, I’ll move to the proposed event-driven orchestrator."
+          },
+          {
+            "en": "Then, I’ll move to the proposed agent framework."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-015",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 15,
+        "phrase": "After that, I’ll show the metrics.",
+        "translation": "Після цього я покажу метрики.",
+        "transcription": "/ˈæftər ðæt, aɪl ʃoʊ ðə ˈmetrɪks/",
+        "commonAlternatives": [
+          "Then we’ll look at metrics",
+          "Next, I’ll cover measurement",
+          "After that, I’ll show how we evaluate it"
+        ],
+        "example": "After that, I’ll show the metrics we can use to prove value.",
+        "examples": [
+          {
+            "en": "After that, I’ll show the metrics we can use to prove value."
+          },
+          {
+            "en": "After that, I’ll show why cost per accepted finding is important."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-016",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 16,
+        "phrase": "Finally, I’ll summarize the next steps.",
+        "translation": "Наприкінці я підсумую наступні кроки.",
+        "transcription": "/ˈfaɪnəli, aɪl ˈsʌməraɪz ðə nekst steps/",
+        "commonAlternatives": [
+          "I’ll close with next steps",
+          "I’ll finish with recommendations",
+          "I’ll end with the roadmap"
+        ],
+        "example": "Finally, I’ll summarize the next steps for a pilot.",
+        "examples": [
+          {
+            "en": "Finally, I’ll summarize the next steps for a pilot."
+          },
+          {
+            "en": "Finally, I’ll summarize how we can validate this approach."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-017",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 17,
+        "phrase": "I’ll keep the structure simple.",
+        "translation": "Я зроблю структуру простою.",
+        "transcription": "/aɪl kiːp ðə ˈstrʌktʃər ˈsɪmpəl/",
+        "commonAlternatives": [
+          "I’ll keep it simple",
+          "I’ll keep it straightforward",
+          "I’ll avoid unnecessary complexity"
+        ],
+        "example": "I’ll keep the structure simple: problem, approach, measurement, outcome.",
+        "examples": [
+          {
+            "en": "I’ll keep the structure simple: problem, approach, measurement, outcome."
+          },
+          {
+            "en": "I’ll keep the structure simple so we can focus on decisions."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-018",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 18,
+        "phrase": "Let’s move step by step.",
+        "translation": "Давайте рухатися крок за кроком.",
+        "transcription": "/lets muːv step baɪ step/",
+        "commonAlternatives": [
+          "Let’s go step by step",
+          "Let’s take it in order",
+          "Let’s walk through it"
+        ],
+        "example": "Let’s move step by step and start with the current challenge.",
+        "examples": [
+          {
+            "en": "Let’s move step by step and start with the current challenge."
+          },
+          {
+            "en": "Let’s move step by step from cost drivers to measurable outcomes."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-019",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 19,
+        "phrase": "I’ll start high-level and then go deeper.",
+        "translation": "Я почну на високому рівні, а потім заглиблюся.",
+        "transcription": "/aɪl stɑːrt haɪ ˈlevəl ænd ðen ɡoʊ ˈdiːpər/",
+        "commonAlternatives": [
+          "I’ll begin with the overview",
+          "I’ll start broadly",
+          "I’ll explain the big picture first"
+        ],
+        "example": "I’ll start high-level and then go deeper into PR review automation.",
+        "examples": [
+          {
+            "en": "I’ll start high-level and then go deeper into PR review automation."
+          },
+          {
+            "en": "I’ll start high-level and then go deeper into metrics."
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-020",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 20,
+        "phrase": "This presentation is organized around one main question.",
+        "translation": "Ця презентація побудована навколо одного головного питання.",
+        "transcription": "/ðɪs ˌprezənˈteɪʃən ɪz ˈɔːrɡənaɪzd əˈraʊnd wʌn meɪn ˈkwestʃən/",
+        "commonAlternatives": [
+          "The central question is",
+          "The main question is",
+          "Everything comes back to this question"
+        ],
+        "example": "This presentation is organized around one main question: how do we prove agent value?",
+        "examples": [
+          {
+            "en": "This presentation is organized around one main question: how do we prove agent value?"
+          },
+          {
+            "en": "This presentation is organized around one main question: how do we optimize cost without losing quality?"
+          }
+        ],
+        "level": "B2",
+        "tag": "2. Agenda"
+      },
+      {
+        "id": "presentation-phrase-021",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 21,
+        "phrase": "Let’s move to the next slide.",
+        "translation": "Перейдемо до наступного слайду.",
+        "transcription": "/lets muːv tə ðə nekst slaɪd/",
+        "commonAlternatives": [
+          "Let’s continue",
+          "Moving on",
+          "Let’s go to the next point"
+        ],
+        "example": "Let’s move to the next slide and look at the cost drivers.",
+        "examples": [
+          {
+            "en": "Let’s move to the next slide and look at the cost drivers."
+          },
+          {
+            "en": "Let’s move to the next slide where I show the proposed workflow."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-022",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 22,
+        "phrase": "Now let’s look at...",
+        "translation": "Тепер давайте подивимось на...",
+        "transcription": "/naʊ lets lʊk æt/",
+        "commonAlternatives": [
+          "Now let’s review",
+          "Let’s examine",
+          "Let’s focus on"
+        ],
+        "example": "Now let’s look at how the orchestrator can reduce unnecessary model calls.",
+        "examples": [
+          {
+            "en": "Now let’s look at how the orchestrator can reduce unnecessary model calls."
+          },
+          {
+            "en": "Now let’s look at the metrics we can use."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-023",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 23,
+        "phrase": "This brings us to the next point.",
+        "translation": "Це підводить нас до наступного пункту.",
+        "transcription": "/ðɪs brɪŋz ʌs tə ðə nekst pɔɪnt/",
+        "commonAlternatives": [
+          "This leads to",
+          "This connects to",
+          "This takes us to"
+        ],
+        "example": "This brings us to the next point: reusable memory.",
+        "examples": [
+          {
+            "en": "This brings us to the next point: reusable memory."
+          },
+          {
+            "en": "This brings us to the next point: measuring accepted findings."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-024",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 24,
+        "phrase": "The next important area is...",
+        "translation": "Наступна важлива область — це...",
+        "transcription": "/ðə nekst ɪmˈpɔːrtənt ˈeriə ɪz/",
+        "commonAlternatives": [
+          "The next key area is",
+          "Another important topic is",
+          "The next topic is"
+        ],
+        "example": "The next important area is model routing.",
+        "examples": [
+          {
+            "en": "The next important area is model routing."
+          },
+          {
+            "en": "The next important area is memory governance."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-025",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 25,
+        "phrase": "Before we go further, let me clarify one thing.",
+        "translation": "Перед тим як рухатися далі, дозвольте уточнити одну річ.",
+        "transcription": "/bɪˈfɔːr wi ɡoʊ ˈfɜːrðər, let miː ˈklærəfaɪ wʌn θɪŋ/",
+        "commonAlternatives": [
+          "Before moving on",
+          "One clarification",
+          "Let me make one point clear"
+        ],
+        "example": "Before we go further, let me clarify that agents do not replace human reviewers.",
+        "examples": [
+          {
+            "en": "Before we go further, let me clarify that agents do not replace human reviewers."
+          },
+          {
+            "en": "Before we go further, let me clarify that token cost is only part of the total cost."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-026",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 26,
+        "phrase": "Let’s zoom in on this part.",
+        "translation": "Давайте детальніше розглянемо цю частину.",
+        "transcription": "/lets zuːm ɪn ɑːn ðɪs pɑːrt/",
+        "commonAlternatives": [
+          "Let’s look closer",
+          "Let’s go deeper",
+          "Let’s focus on this"
+        ],
+        "example": "Let’s zoom in on how PR review orchestration works.",
+        "examples": [
+          {
+            "en": "Let’s zoom in on how PR review orchestration works."
+          },
+          {
+            "en": "Let’s zoom in on cost per accepted finding."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-027",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 27,
+        "phrase": "Let’s zoom out for a moment.",
+        "translation": "Давайте на мить подивимося ширше.",
+        "transcription": "/lets zuːm aʊt fər ə ˈmoʊmənt/",
+        "commonAlternatives": [
+          "Let’s look at the big picture",
+          "Let’s step back",
+          "Let’s take a broader view"
+        ],
+        "example": "Let’s zoom out for a moment and look at the whole framework.",
+        "examples": [
+          {
+            "en": "Let’s zoom out for a moment and look at the whole framework."
+          },
+          {
+            "en": "Let’s zoom out and connect this to engineering cost."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-028",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 28,
+        "phrase": "This slide shows...",
+        "translation": "Цей слайд показує...",
+        "transcription": "/ðɪs slaɪd ʃoʊz/",
+        "commonAlternatives": [
+          "Here we can see",
+          "This diagram shows",
+          "This view explains"
+        ],
+        "example": "This slide shows the event-driven review flow.",
+        "examples": [
+          {
+            "en": "This slide shows the event-driven review flow."
+          },
+          {
+            "en": "This slide shows the difference between token cost and engineering cost."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-029",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 29,
+        "phrase": "The important thing here is...",
+        "translation": "Важливо тут те, що...",
+        "transcription": "/ði ɪmˈpɔːrtənt θɪŋ hɪr ɪz/",
+        "commonAlternatives": [
+          "The key point is",
+          "What matters here is",
+          "The main point is"
+        ],
+        "example": "The important thing here is that agents should run only when needed.",
+        "examples": [
+          {
+            "en": "The important thing here is that agents should run only when needed."
+          },
+          {
+            "en": "The important thing here is that memory reduces repeated context gathering."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-030",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 30,
+        "phrase": "I’ll come back to this later.",
+        "translation": "Я повернуся до цього пізніше.",
+        "transcription": "/aɪl kʌm bæk tə ðɪs ˈleɪtər/",
+        "commonAlternatives": [
+          "I’ll return to this point",
+          "We’ll revisit this",
+          "I’ll mention this again later"
+        ],
+        "example": "I’ll come back to this later when we discuss metrics.",
+        "examples": [
+          {
+            "en": "I’ll come back to this later when we discuss metrics."
+          },
+          {
+            "en": "I’ll come back to this later in the pilot plan."
+          }
+        ],
+        "level": "B2",
+        "tag": "3. Slide transitions"
+      },
+      {
+        "id": "presentation-phrase-031",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 31,
+        "phrase": "The idea is not to..., but to...",
+        "translation": "Ідея не в тому, щоб..., а в тому, щоб...",
+        "transcription": "/ði aɪˈdiːə ɪz nɑːt tə, bʌt tə/",
+        "commonAlternatives": [
+          "The goal is not",
+          "We are not trying to",
+          "The purpose is"
+        ],
+        "example": "The idea is not to replace engineers, but to reduce repetitive work.",
+        "examples": [
+          {
+            "en": "The idea is not to replace engineers, but to reduce repetitive work."
+          },
+          {
+            "en": "The idea is not to run agents everywhere, but to run them where they create value."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-032",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 32,
+        "phrase": "From a cost perspective,...",
+        "translation": "З точки зору витрат...",
+        "transcription": "/frəm ə kɔːst pərˈspektɪv/",
+        "commonAlternatives": [
+          "Cost-wise",
+          "In terms of cost",
+          "Looking at cost"
+        ],
+        "example": "From a cost perspective, always-on agents are not the best starting point.",
+        "examples": [
+          {
+            "en": "From a cost perspective, always-on agents are not the best starting point."
+          },
+          {
+            "en": "From a cost perspective, event-driven orchestration is more efficient."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-033",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 33,
+        "phrase": "From an engineering perspective,...",
+        "translation": "З інженерної точки зору...",
+        "transcription": "/frəm ən ˌendʒəˈnɪrɪŋ pərˈspektɪv/",
+        "commonAlternatives": [
+          "Technically",
+          "For engineering teams",
+          "In engineering terms"
+        ],
+        "example": "From an engineering perspective, the biggest saving is reduced rework.",
+        "examples": [
+          {
+            "en": "From an engineering perspective, the biggest saving is reduced rework."
+          },
+          {
+            "en": "From an engineering perspective, memory helps preserve project knowledge."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-034",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 34,
+        "phrase": "This gives us two benefits.",
+        "translation": "Це дає нам дві переваги.",
+        "transcription": "/ðɪs ɡɪvz ʌs tuː ˈbenəfɪts/",
+        "commonAlternatives": [
+          "This creates two advantages",
+          "This helps in two ways",
+          "There are two benefits"
+        ],
+        "example": "This gives us two benefits: lower token usage and better consistency.",
+        "examples": [
+          {
+            "en": "This gives us two benefits: lower token usage and better consistency."
+          },
+          {
+            "en": "This gives us two benefits: faster review and reusable context."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-035",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 35,
+        "phrase": "The trade-off is...",
+        "translation": "Компроміс / trade-off полягає в...",
+        "transcription": "/ðə ˈtreɪd ɔːf ɪz/",
+        "commonAlternatives": [
+          "The downside is",
+          "The compromise is",
+          "The limitation is"
+        ],
+        "example": "The trade-off is that stronger models cost more but handle complex tasks better.",
+        "examples": [
+          {
+            "en": "The trade-off is that stronger models cost more but handle complex tasks better."
+          },
+          {
+            "en": "The trade-off is that deep review takes more time and more tokens."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-036",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 36,
+        "phrase": "This is where the framework helps.",
+        "translation": "Саме тут допомагає фреймворк.",
+        "transcription": "/ðɪs ɪz wer ðə ˈfreɪmwɜːrk helps/",
+        "commonAlternatives": [
+          "This is where the framework adds value",
+          "This is the role of the framework",
+          "This is why we need the framework"
+        ],
+        "example": "This is where the framework helps by controlling context and model routing.",
+        "examples": [
+          {
+            "en": "This is where the framework helps by controlling context and model routing."
+          },
+          {
+            "en": "This is where the framework helps by turning repeated knowledge into memory."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-037",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 37,
+        "phrase": "In practice, this means...",
+        "translation": "На практиці це означає...",
+        "transcription": "/ɪn ˈpræktɪs, ðɪs miːnz/",
+        "commonAlternatives": [
+          "Practically speaking",
+          "In real usage",
+          "In day-to-day work"
+        ],
+        "example": "In practice, this means agents review only changed files and relevant context.",
+        "examples": [
+          {
+            "en": "In practice, this means agents review only changed files and relevant context."
+          },
+          {
+            "en": "In practice, this means we pay less for repeated analysis."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-038",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 38,
+        "phrase": "A simple example would be...",
+        "translation": "Простий приклад — це...",
+        "transcription": "/ə ˈsɪmpəl ɪɡˈzæmpəl wʊd biː/",
+        "commonAlternatives": [
+          "For example",
+          "One example is",
+          "A practical example is"
+        ],
+        "example": "A simple example would be PR review for a small frontend change.",
+        "examples": [
+          {
+            "en": "A simple example would be PR review for a small frontend change."
+          },
+          {
+            "en": "A simple example would be using Design Memory instead of calling Figma again."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-039",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 39,
+        "phrase": "The main risk is...",
+        "translation": "Основний ризик — це...",
+        "transcription": "/ðə meɪn rɪsk ɪz/",
+        "commonAlternatives": [
+          "The biggest risk is",
+          "The main concern is",
+          "The key risk is"
+        ],
+        "example": "The main risk is loading too much irrelevant context.",
+        "examples": [
+          {
+            "en": "The main risk is loading too much irrelevant context."
+          },
+          {
+            "en": "The main risk is producing too many false positives in PR review."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-040",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 40,
+        "phrase": "To reduce this risk, we can...",
+        "translation": "Щоб зменшити цей ризик, ми можемо...",
+        "transcription": "/tə rɪˈduːs ðɪs rɪsk, wi kæn/",
+        "commonAlternatives": [
+          "To mitigate this",
+          "To control this",
+          "To make this safer"
+        ],
+        "example": "To reduce this risk, we can use memory validation and human-in-the-loop review.",
+        "examples": [
+          {
+            "en": "To reduce this risk, we can use memory validation and human-in-the-loop review."
+          },
+          {
+            "en": "To reduce this risk, we can start with shadow mode."
+          }
+        ],
+        "level": "B2",
+        "tag": "4. Explaining ideas"
+      },
+      {
+        "id": "presentation-phrase-041",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 41,
+        "phrase": "Let’s look at how we can measure this.",
+        "translation": "Давайте подивимось, як ми можемо це виміряти.",
+        "transcription": "/lets lʊk æt haʊ wi kæn ˈmeʒər ðɪs/",
+        "commonAlternatives": [
+          "Let’s look at measurement",
+          "Let’s discuss metrics",
+          "Let’s see how we evaluate this"
+        ],
+        "example": "Let’s look at how we can measure the value of AI review.",
+        "examples": [
+          {
+            "en": "Let’s look at how we can measure the value of AI review."
+          },
+          {
+            "en": "Let’s look at how we can measure cost optimization."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-042",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 42,
+        "phrase": "The key metric here is...",
+        "translation": "Ключова метрика тут — це...",
+        "transcription": "/ðə kiː ˈmetrɪk hɪr ɪz/",
+        "commonAlternatives": [
+          "The main metric is",
+          "The most important metric is",
+          "The primary metric is"
+        ],
+        "example": "The key metric here is cost per accepted finding.",
+        "examples": [
+          {
+            "en": "The key metric here is cost per accepted finding."
+          },
+          {
+            "en": "The key metric here is useful finding rate, not total comment count."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-043",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 43,
+        "phrase": "We should not measure only...",
+        "translation": "Ми не повинні вимірювати тільки...",
+        "transcription": "/wi ʃʊd nɑːt ˈmeʒər ˈoʊnli/",
+        "commonAlternatives": [
+          "We should not focus only on",
+          "We should avoid measuring only",
+          "It is not enough to measure"
+        ],
+        "example": "We should not measure only token usage.",
+        "examples": [
+          {
+            "en": "We should not measure only token usage."
+          },
+          {
+            "en": "We should not measure only how many comments the agent produces."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-044",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 44,
+        "phrase": "We need a baseline.",
+        "translation": "Нам потрібен базовий рівень для порівняння.",
+        "transcription": "/wi niːd ə ˈbeɪslaɪn/",
+        "commonAlternatives": [
+          "We need a reference point",
+          "We need historical data",
+          "We need something to compare against"
+        ],
+        "example": "We need a baseline based on historical PR data.",
+        "examples": [
+          {
+            "en": "We need a baseline based on historical PR data."
+          },
+          {
+            "en": "We need a baseline before we can claim improvement."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-045",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 45,
+        "phrase": "This metric connects AI spend with real value.",
+        "translation": "Ця метрика повʼязує витрати на AI з реальною цінністю.",
+        "transcription": "/ðɪs ˈmetrɪk kəˈnekts eɪ aɪ spend wɪð ˈriːəl ˈvæljuː/",
+        "commonAlternatives": [
+          "This ties cost to value",
+          "This links spend and impact",
+          "This makes value measurable"
+        ],
+        "example": "This metric connects AI spend with real engineering value.",
+        "examples": [
+          {
+            "en": "This metric connects AI spend with real engineering value."
+          },
+          {
+            "en": "Cost per accepted finding connects model usage with useful outcomes."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-046",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 46,
+        "phrase": "The number itself is less important than the trend.",
+        "translation": "Саме число менш важливе, ніж тенденція.",
+        "transcription": "/ðə ˈnʌmbər ɪtˈself ɪz les ɪmˈpɔːrtənt ðæn ðə trend/",
+        "commonAlternatives": [
+          "The trend matters more",
+          "We should focus on direction",
+          "The movement is more important than one number"
+        ],
+        "example": "The number itself is less important than the trend over several PRs.",
+        "examples": [
+          {
+            "en": "The number itself is less important than the trend over several PRs."
+          },
+          {
+            "en": "The trend shows whether the framework is improving."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-047",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 47,
+        "phrase": "We can track this over time.",
+        "translation": "Ми можемо відстежувати це з часом.",
+        "transcription": "/wi kæn træk ðɪs ˈoʊvər taɪm/",
+        "commonAlternatives": [
+          "We can monitor this",
+          "We can measure this continuously",
+          "We can observe the trend"
+        ],
+        "example": "We can track this over time during the pilot.",
+        "examples": [
+          {
+            "en": "We can track this over time during the pilot."
+          },
+          {
+            "en": "We can track accepted findings and false positives over time."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-048",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 48,
+        "phrase": "This helps us avoid subjective claims.",
+        "translation": "Це допомагає уникнути субʼєктивних тверджень.",
+        "transcription": "/ðɪs helps ʌs əˈvɔɪd səbˈdʒektɪv kleɪmz/",
+        "commonAlternatives": [
+          "This makes it evidence-based",
+          "This reduces guesswork",
+          "This makes the discussion data-driven"
+        ],
+        "example": "This helps us avoid subjective claims like “AI feels faster.”",
+        "examples": [
+          {
+            "en": "This helps us avoid subjective claims like “AI feels faster.”"
+          },
+          {
+            "en": "Metrics help us make the discussion evidence-based."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-049",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 49,
+        "phrase": "Early results should be treated carefully.",
+        "translation": "До ранніх результатів треба ставитися обережно.",
+        "transcription": "/ˈɜːrli rɪˈzʌlts ʃʊd bi triːtɪd ˈkerfəli/",
+        "commonAlternatives": [
+          "Initial data is not final",
+          "Early numbers are directional",
+          "We should not overinterpret early results"
+        ],
+        "example": "Early results should be treated carefully because the sample size may be small.",
+        "examples": [
+          {
+            "en": "Early results should be treated carefully because the sample size may be small."
+          },
+          {
+            "en": "Early results are useful, but they should not be overpromised."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-050",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 50,
+        "phrase": "The goal is measurable improvement, not perfect automation.",
+        "translation": "Ціль — вимірюване покращення, а не ідеальна автоматизація.",
+        "transcription": "/ðə ɡoʊl ɪz ˈmeʒərəbl ɪmˈpruːvmənt, nɑːt ˈpɜːrfɪkt ˌɔːtəˈmeɪʃən/",
+        "commonAlternatives": [
+          "The goal is improvement",
+          "We aim for practical value",
+          "We focus on measurable impact"
+        ],
+        "example": "The goal is measurable improvement, not perfect automation.",
+        "examples": [
+          {
+            "en": "The goal is measurable improvement, not perfect automation."
+          },
+          {
+            "en": "We want measurable improvement in review effort and rework reduction."
+          }
+        ],
+        "level": "B2",
+        "tag": "5. Metrics"
+      },
+      {
+        "id": "presentation-phrase-051",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 51,
+        "phrase": "Please feel free to ask questions.",
+        "translation": "Будь ласка, не соромтеся ставити питання.",
+        "transcription": "/pliːz fiːl friː tə æsk ˈkwestʃənz/",
+        "commonAlternatives": [
+          "Feel free to ask",
+          "Questions are welcome",
+          "Please jump in"
+        ],
+        "example": "Please feel free to ask questions at any time.",
+        "examples": [
+          {
+            "en": "Please feel free to ask questions at any time."
+          },
+          {
+            "en": "Please feel free to ask questions after each section."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-052",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 52,
+        "phrase": "I’ll pause here for questions.",
+        "translation": "Я тут зроблю паузу для питань.",
+        "transcription": "/aɪl pɔːz hɪr fər ˈkwestʃənz/",
+        "commonAlternatives": [
+          "Let me pause here",
+          "I’ll stop here",
+          "Any questions so far?"
+        ],
+        "example": "I’ll pause here for questions before we move to metrics.",
+        "examples": [
+          {
+            "en": "I’ll pause here for questions before we move to metrics."
+          },
+          {
+            "en": "I’ll pause here in case anything is unclear."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-053",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 53,
+        "phrase": "That’s a good question.",
+        "translation": "Це хороше питання.",
+        "transcription": "/ðæts ə ɡʊd ˈkwestʃən/",
+        "commonAlternatives": [
+          "Great question",
+          "Good point",
+          "That’s an important question"
+        ],
+        "example": "That’s a good question, especially from a cost perspective.",
+        "examples": [
+          {
+            "en": "That’s a good question, especially from a cost perspective."
+          },
+          {
+            "en": "That’s a good question because it touches the main risk."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-054",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 54,
+        "phrase": "Let me clarify.",
+        "translation": "Дозвольте уточнити.",
+        "transcription": "/let miː ˈklærəfaɪ/",
+        "commonAlternatives": [
+          "Let me explain",
+          "Let me make it clearer",
+          "To clarify"
+        ],
+        "example": "Let me clarify: the orchestrator is event-driven, not always actively running.",
+        "examples": [
+          {
+            "en": "Let me clarify: the orchestrator is event-driven, not always actively running."
+          },
+          {
+            "en": "Let me clarify: AI review is non-blocking in the pilot phase."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-055",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 55,
+        "phrase": "I don’t have the exact number yet.",
+        "translation": "У мене поки немає точної цифри.",
+        "transcription": "/aɪ doʊnt hæv ði ɪɡˈzækt ˈnʌmbər jet/",
+        "commonAlternatives": [
+          "I don’t have exact data yet",
+          "We still need to measure it",
+          "I can’t give an exact number yet"
+        ],
+        "example": "I don’t have the exact number yet, but we can collect it during the pilot.",
+        "examples": [
+          {
+            "en": "I don’t have the exact number yet, but we can collect it during the pilot."
+          },
+          {
+            "en": "I don’t have the exact number yet, so I would avoid making a strong claim."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-056",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 56,
+        "phrase": "We need to validate this with real PR data.",
+        "translation": "Нам потрібно перевірити це на реальних PR-даних.",
+        "transcription": "/wi niːd tə ˈvælədeɪt ðɪs wɪð ˈriːəl piː ɑːr ˈdeɪtə/",
+        "commonAlternatives": [
+          "We need evidence",
+          "We need historical data",
+          "We need to test this in practice"
+        ],
+        "example": "We need to validate this with real PR data before making conclusions.",
+        "examples": [
+          {
+            "en": "We need to validate this with real PR data before making conclusions."
+          },
+          {
+            "en": "We need to validate the savings with a pilot."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-057",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 57,
+        "phrase": "I would separate this into two questions.",
+        "translation": "Я б розділив це на два питання.",
+        "transcription": "/aɪ wʊd ˈsepəreɪt ðɪs ˈɪntuː tuː ˈkwestʃənz/",
+        "commonAlternatives": [
+          "There are two parts here",
+          "I’d split this into",
+          "Let’s separate the concerns"
+        ],
+        "example": "I would separate this into two questions: token cost and engineering cost.",
+        "examples": [
+          {
+            "en": "I would separate this into two questions: token cost and engineering cost."
+          },
+          {
+            "en": "I would separate this into two questions: automation value and risk control."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-058",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 58,
+        "phrase": "Let me answer this from two perspectives.",
+        "translation": "Дозвольте відповісти з двох точок зору.",
+        "transcription": "/let miː ˈænsər ðɪs frəm tuː pərˈspektɪvz/",
+        "commonAlternatives": [
+          "I’ll answer in two parts",
+          "There are two angles",
+          "From one side... from another side..."
+        ],
+        "example": "Let me answer this from two perspectives: business value and engineering risk.",
+        "examples": [
+          {
+            "en": "Let me answer this from two perspectives: business value and engineering risk."
+          },
+          {
+            "en": "Let me answer this from two perspectives: cost and quality."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-059",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 59,
+        "phrase": "I suggest we take this as a follow-up action.",
+        "translation": "Я пропоную взяти це як follow-up дію.",
+        "transcription": "/aɪ səˈdʒest wi teɪk ðɪs æz ə ˈfɑːloʊ ʌp ˈækʃən/",
+        "commonAlternatives": [
+          "Let’s follow up on this",
+          "We can take it offline",
+          "This needs a separate discussion"
+        ],
+        "example": "I suggest we take this as a follow-up action and validate it with data.",
+        "examples": [
+          {
+            "en": "I suggest we take this as a follow-up action and validate it with data."
+          },
+          {
+            "en": "I suggest we take this as a follow-up action after the pilot."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-060",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 60,
+        "phrase": "I can come back to this after the presentation.",
+        "translation": "Я можу повернутися до цього після презентації.",
+        "transcription": "/aɪ kæn kʌm bæk tə ðɪs ˈæftər ðə ˌprezənˈteɪʃən/",
+        "commonAlternatives": [
+          "We can discuss it afterwards",
+          "I can follow up later",
+          "Let’s return to this later"
+        ],
+        "example": "I can come back to this after the presentation with more details.",
+        "examples": [
+          {
+            "en": "I can come back to this after the presentation with more details."
+          },
+          {
+            "en": "I can come back to this after the presentation if we have time."
+          }
+        ],
+        "level": "B2",
+        "tag": "6. Questions"
+      },
+      {
+        "id": "presentation-phrase-061",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 61,
+        "phrase": "This is an assumption, not a final conclusion.",
+        "translation": "Це припущення, а не фінальний висновок.",
+        "transcription": "/ðɪs ɪz ən əˈsʌmpʃən, nɑːt ə ˈfaɪnəl kənˈkluːʒən/",
+        "commonAlternatives": [
+          "This is preliminary",
+          "This is not confirmed yet",
+          "This is an initial hypothesis"
+        ],
+        "example": "This is an assumption, not a final conclusion, and we need a pilot to validate it.",
+        "examples": [
+          {
+            "en": "This is an assumption, not a final conclusion, and we need a pilot to validate it."
+          },
+          {
+            "en": "This is an assumption based on current workflow understanding."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-062",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 62,
+        "phrase": "We should be careful with this claim.",
+        "translation": "З цим твердженням треба бути обережними.",
+        "transcription": "/wi ʃʊd bi ˈkerfəl wɪð ðɪs kleɪm/",
+        "commonAlternatives": [
+          "We should not overpromise",
+          "We should avoid strong claims",
+          "We should be cautious"
+        ],
+        "example": "We should be careful with this claim until we have enough data.",
+        "examples": [
+          {
+            "en": "We should be careful with this claim until we have enough data."
+          },
+          {
+            "en": "We should be careful with this claim because productivity is hard to measure."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-063",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 63,
+        "phrase": "The initial version should be lightweight.",
+        "translation": "Початкова версія має бути легкою.",
+        "transcription": "/ði ɪˈnɪʃəl ˈvɜːrʒən ʃʊd bi ˈlaɪtweɪt/",
+        "commonAlternatives": [
+          "The first version should be simple",
+          "Start small",
+          "Keep the MVP lightweight"
+        ],
+        "example": "The initial version should be lightweight and non-blocking.",
+        "examples": [
+          {
+            "en": "The initial version should be lightweight and non-blocking."
+          },
+          {
+            "en": "The initial version should focus on measurement, not full automation."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-064",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 64,
+        "phrase": "We can start in shadow mode.",
+        "translation": "Ми можемо почати в shadow mode.",
+        "transcription": "/wi kæn stɑːrt ɪn ˈʃædoʊ moʊd/",
+        "commonAlternatives": [
+          "We can start silently",
+          "We can start without posting comments",
+          "We can test it in the background"
+        ],
+        "example": "We can start in shadow mode to measure quality without affecting developers.",
+        "examples": [
+          {
+            "en": "We can start in shadow mode to measure quality without affecting developers."
+          },
+          {
+            "en": "We can start in shadow mode and compare agent findings with human reviews."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-065",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 65,
+        "phrase": "This needs more validation.",
+        "translation": "Це потребує додаткової перевірки.",
+        "transcription": "/ðɪs niːdz mɔːr ˌvæləˈdeɪʃən/",
+        "commonAlternatives": [
+          "This needs more data",
+          "We need to validate it",
+          "We need to test it"
+        ],
+        "example": "This needs more validation before we roll it out widely.",
+        "examples": [
+          {
+            "en": "This needs more validation before we roll it out widely."
+          },
+          {
+            "en": "This needs more validation on real pull requests."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-066",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 66,
+        "phrase": "We should not treat this as a replacement for human review.",
+        "translation": "Ми не повинні розглядати це як заміну людському ревʼю.",
+        "transcription": "/wi ʃʊd nɑːt triːt ðɪs æz ə rɪˈpleɪsmənt fər ˈhjuːmən rɪˈvjuː/",
+        "commonAlternatives": [
+          "This is not a replacement",
+          "Humans remain responsible",
+          "Human review is still required"
+        ],
+        "example": "We should not treat this as a replacement for human review.",
+        "examples": [
+          {
+            "en": "We should not treat this as a replacement for human review."
+          },
+          {
+            "en": "We should treat it as a first-pass assistant for reviewers."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-067",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 67,
+        "phrase": "There are still open questions.",
+        "translation": "Ще залишаються відкриті питання.",
+        "transcription": "/ðer ɑːr stɪl ˈoʊpən ˈkwestʃənz/",
+        "commonAlternatives": [
+          "Some questions remain",
+          "We still need to decide",
+          "This is not fully resolved"
+        ],
+        "example": "There are still open questions around governance and rollout.",
+        "examples": [
+          {
+            "en": "There are still open questions around governance and rollout."
+          },
+          {
+            "en": "There are still open questions around exact measurement methodology."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-068",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 68,
+        "phrase": "This is a pilot, not a full rollout.",
+        "translation": "Це пілот, а не повне впровадження.",
+        "transcription": "/ðɪs ɪz ə ˈpaɪlət, nɑːt ə fʊl ˈroʊlaʊt/",
+        "commonAlternatives": [
+          "This is an experiment",
+          "This is a controlled trial",
+          "This is an MVP"
+        ],
+        "example": "This is a pilot, not a full rollout, so we can learn safely.",
+        "examples": [
+          {
+            "en": "This is a pilot, not a full rollout, so we can learn safely."
+          },
+          {
+            "en": "This is a pilot focused on evidence and cost measurement."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-069",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 69,
+        "phrase": "The purpose is to learn quickly.",
+        "translation": "Мета — швидко навчитися.",
+        "transcription": "/ðə ˈpɜːrpəs ɪz tə lɜːrn ˈkwɪkli/",
+        "commonAlternatives": [
+          "The goal is learning",
+          "We want fast feedback",
+          "We want to validate assumptions"
+        ],
+        "example": "The purpose is to learn quickly and adjust the framework.",
+        "examples": [
+          {
+            "en": "The purpose is to learn quickly and adjust the framework."
+          },
+          {
+            "en": "The purpose is to learn quickly before scaling the approach."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-070",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 70,
+        "phrase": "We can refine this after the first results.",
+        "translation": "Ми можемо уточнити це після перших результатів.",
+        "transcription": "/wi kæn rɪˈfaɪn ðɪs ˈæftər ðə fɜːrst rɪˈzʌlts/",
+        "commonAlternatives": [
+          "We can improve it later",
+          "We can iterate",
+          "We can tune it after feedback"
+        ],
+        "example": "We can refine this after the first results from shadow mode.",
+        "examples": [
+          {
+            "en": "We can refine this after the first results from shadow mode."
+          },
+          {
+            "en": "We can refine the metrics after the first pilot."
+          }
+        ],
+        "level": "B2",
+        "tag": "7. Limitations"
+      },
+      {
+        "id": "presentation-phrase-071",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 71,
+        "phrase": "Let me summarize the main points.",
+        "translation": "Дозвольте підсумувати основні пункти.",
+        "transcription": "/let miː ˈsʌməraɪz ðə meɪn pɔɪnts/",
+        "commonAlternatives": [
+          "To summarize",
+          "Let me recap",
+          "In summary"
+        ],
+        "example": "Let me summarize the main points before we move to questions.",
+        "examples": [
+          {
+            "en": "Let me summarize the main points before we move to questions."
+          },
+          {
+            "en": "Let me summarize the main points: orchestration, memory, routing, and metrics."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-072",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 72,
+        "phrase": "The main takeaway is...",
+        "translation": "Головний висновок — це...",
+        "transcription": "/ðə meɪn ˈteɪkəweɪ ɪz/",
+        "commonAlternatives": [
+          "The key takeaway is",
+          "The main message is",
+          "The key conclusion is"
+        ],
+        "example": "The main takeaway is that cost optimization comes from controlled agent usage.",
+        "examples": [
+          {
+            "en": "The main takeaway is that cost optimization comes from controlled agent usage."
+          },
+          {
+            "en": "The main takeaway is that we need measurable outcomes, not assumptions."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-073",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 73,
+        "phrase": "To make this practical, I suggest...",
+        "translation": "Щоб зробити це практичним, я пропоную...",
+        "transcription": "/tə meɪk ðɪs ˈpræktɪkəl, aɪ səˈdʒest/",
+        "commonAlternatives": [
+          "I recommend",
+          "The next step should be",
+          "My suggestion is"
+        ],
+        "example": "To make this practical, I suggest starting with a shadow-mode PR review pilot.",
+        "examples": [
+          {
+            "en": "To make this practical, I suggest starting with a shadow-mode PR review pilot."
+          },
+          {
+            "en": "To make this practical, I suggest measuring cost per accepted finding."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-074",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 74,
+        "phrase": "The next step would be...",
+        "translation": "Наступним кроком буде...",
+        "transcription": "/ðə nekst step wʊd biː/",
+        "commonAlternatives": [
+          "The next step is",
+          "We should start with",
+          "The immediate next action is"
+        ],
+        "example": "The next step would be to define the PR review evaluation harness.",
+        "examples": [
+          {
+            "en": "The next step would be to define the PR review evaluation harness."
+          },
+          {
+            "en": "The next step would be to collect baseline metrics from historical PRs."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-075",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 75,
+        "phrase": "We can start small and scale gradually.",
+        "translation": "Ми можемо почати з малого і масштабувати поступово.",
+        "transcription": "/wi kæn stɑːrt smɔːl ænd skeɪl ˈɡrædʒuəli/",
+        "commonAlternatives": [
+          "Start small",
+          "Scale later",
+          "Begin with an MVP"
+        ],
+        "example": "We can start small and scale gradually after we see real results.",
+        "examples": [
+          {
+            "en": "We can start small and scale gradually after we see real results."
+          },
+          {
+            "en": "We can start small with one repository and expand later."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-076",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 76,
+        "phrase": "I believe this is a low-risk way to validate the value.",
+        "translation": "Я вважаю, що це низькоризиковий спосіб перевірити цінність.",
+        "transcription": "/aɪ bɪˈliːv ðɪs ɪz ə loʊ rɪsk weɪ tə ˈvælədeɪt ðə ˈvæljuː/",
+        "commonAlternatives": [
+          "This is a safe approach",
+          "This reduces rollout risk",
+          "This is a controlled way to test it"
+        ],
+        "example": "I believe this is a low-risk way to validate the value before full automation.",
+        "examples": [
+          {
+            "en": "I believe this is a low-risk way to validate the value before full automation."
+          },
+          {
+            "en": "I believe shadow mode is a low-risk way to validate the framework."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-077",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 77,
+        "phrase": "The goal is controlled adoption.",
+        "translation": "Мета — контрольоване впровадження.",
+        "transcription": "/ðə ɡoʊl ɪz kənˈtroʊld əˈdɑːpʃən/",
+        "commonAlternatives": [
+          "The goal is safe rollout",
+          "The goal is gradual adoption",
+          "We need controlled scaling"
+        ],
+        "example": "The goal is controlled adoption based on data.",
+        "examples": [
+          {
+            "en": "The goal is controlled adoption based on data."
+          },
+          {
+            "en": "The goal is controlled adoption, not uncontrolled AI usage."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-078",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 78,
+        "phrase": "Thank you for your time.",
+        "translation": "Дякую за ваш час.",
+        "transcription": "/θæŋk juː fər jɔːr taɪm/",
+        "commonAlternatives": [
+          "Thank you",
+          "Thanks for listening",
+          "I appreciate your time"
+        ],
+        "example": "Thank you for your time, and I’m happy to take questions.",
+        "examples": [
+          {
+            "en": "Thank you for your time, and I’m happy to take questions."
+          },
+          {
+            "en": "Thank you for your time and attention."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-079",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 79,
+        "phrase": "I’m happy to take any questions.",
+        "translation": "Я з радістю відповім на питання.",
+        "transcription": "/aɪm ˈhæpi tə teɪk ˈeni ˈkwestʃənz/",
+        "commonAlternatives": [
+          "Happy to answer questions",
+          "I’m open to questions",
+          "Let’s discuss"
+        ],
+        "example": "I’m happy to take any questions about the framework or metrics.",
+        "examples": [
+          {
+            "en": "I’m happy to take any questions about the framework or metrics."
+          },
+          {
+            "en": "I’m happy to take any questions before we close."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-080",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 80,
+        "phrase": "Thanks again, and I’m looking forward to your feedback.",
+        "translation": "Ще раз дякую, чекаю на ваш фідбек.",
+        "transcription": "/θæŋks əˈɡen, ænd aɪm ˈlʊkɪŋ ˈfɔːrwərd tə jɔːr ˈfiːdbæk/",
+        "commonAlternatives": [
+          "Thanks again",
+          "I’d appreciate your feedback",
+          "Looking forward to feedback"
+        ],
+        "example": "Thanks again, and I’m looking forward to your feedback on the pilot approach.",
+        "examples": [
+          {
+            "en": "Thanks again, and I’m looking forward to your feedback on the pilot approach."
+          },
+          {
+            "en": "Thanks again, and I’m looking forward to your feedback on the proposed metrics."
+          }
+        ],
+        "level": "B2",
+        "tag": "8. Closing"
+      },
+      {
+        "id": "presentation-phrase-081",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 81,
+        "phrase": "However,...",
+        "translation": "Однак...",
+        "transcription": "/haʊˈevər/",
+        "commonAlternatives": [
+          "But",
+          "At the same time",
+          "Still"
+        ],
+        "example": "However, token cost is only one part of the total cost.",
+        "examples": [
+          {
+            "en": "However, token cost is only one part of the total cost."
+          },
+          {
+            "en": "However, we should not overpromise productivity gains."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-082",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 82,
+        "phrase": "Therefore,...",
+        "translation": "Тому...",
+        "transcription": "/ˈðerfɔːr/",
+        "commonAlternatives": [
+          "So",
+          "As a result",
+          "For that reason"
+        ],
+        "example": "Therefore, we need an evaluation harness.",
+        "examples": [
+          {
+            "en": "Therefore, we need an evaluation harness."
+          },
+          {
+            "en": "Therefore, agents should be event-driven."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-083",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 83,
+        "phrase": "In other words,...",
+        "translation": "Іншими словами...",
+        "transcription": "/ɪn ˈʌðər wɜːrdz/",
+        "commonAlternatives": [
+          "Put simply",
+          "To put it another way",
+          "Simply put"
+        ],
+        "example": "In other words, memory is also a cost optimization mechanism.",
+        "examples": [
+          {
+            "en": "In other words, memory is also a cost optimization mechanism."
+          },
+          {
+            "en": "In other words, fewer repeated explanations means lower cost."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-084",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 84,
+        "phrase": "For example,...",
+        "translation": "Наприклад...",
+        "transcription": "/fər ɪɡˈzæmpəl/",
+        "commonAlternatives": [
+          "For instance",
+          "A simple example is",
+          "One example would be"
+        ],
+        "example": "For example, a small UI PR should not trigger a deep architecture review.",
+        "examples": [
+          {
+            "en": "For example, a small UI PR should not trigger a deep architecture review."
+          },
+          {
+            "en": "For example, Figma data can be reused through Design Memory."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-085",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 85,
+        "phrase": "As a result,...",
+        "translation": "Як результат...",
+        "transcription": "/æz ə rɪˈzʌlt/",
+        "commonAlternatives": [
+          "Consequently",
+          "This means",
+          "This leads to"
+        ],
+        "example": "As a result, we reduce model calls and review effort.",
+        "examples": [
+          {
+            "en": "As a result, we reduce model calls and review effort."
+          },
+          {
+            "en": "As a result, reviewers can focus on higher-risk changes."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-086",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 86,
+        "phrase": "On the other hand,...",
+        "translation": "З іншого боку...",
+        "transcription": "/ɑːn ði ˈʌðər hænd/",
+        "commonAlternatives": [
+          "At the same time",
+          "In contrast",
+          "Another angle is"
+        ],
+        "example": "On the other hand, complex DB changes need stronger review.",
+        "examples": [
+          {
+            "en": "On the other hand, complex DB changes need stronger review."
+          },
+          {
+            "en": "On the other hand, too much automation can create noise."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-087",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 87,
+        "phrase": "More importantly,...",
+        "translation": "Що важливіше...",
+        "transcription": "/mɔːr ɪmˈpɔːrtəntli/",
+        "commonAlternatives": [
+          "Even more important",
+          "The bigger point is",
+          "What matters more"
+        ],
+        "example": "More importantly, we need to measure accepted findings.",
+        "examples": [
+          {
+            "en": "More importantly, we need to measure accepted findings."
+          },
+          {
+            "en": "More importantly, we need to reduce rework, not just token usage."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-088",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 88,
+        "phrase": "To some extent,...",
+        "translation": "Певною мірою...",
+        "transcription": "/tə səm ɪkˈstent/",
+        "commonAlternatives": [
+          "Partly",
+          "In some cases",
+          "To a degree"
+        ],
+        "example": "To some extent, model cost can be controlled by routing.",
+        "examples": [
+          {
+            "en": "To some extent, model cost can be controlled by routing."
+          },
+          {
+            "en": "To some extent, memory reduces repeated discovery."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-089",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 89,
+        "phrase": "In this case,...",
+        "translation": "У цьому випадку...",
+        "transcription": "/ɪn ðɪs keɪs/",
+        "commonAlternatives": [
+          "Here",
+          "For this scenario",
+          "In this situation"
+        ],
+        "example": "In this case, a cheaper model is probably enough.",
+        "examples": [
+          {
+            "en": "In this case, a cheaper model is probably enough."
+          },
+          {
+            "en": "In this case, we should escalate to a stronger model."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      },
+      {
+        "id": "presentation-phrase-090",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 90,
+        "phrase": "The point is...",
+        "translation": "Суть у тому, що...",
+        "transcription": "/ðə pɔɪnt ɪz/",
+        "commonAlternatives": [
+          "The key point is",
+          "What I mean is",
+          "The message is"
+        ],
+        "example": "The point is not to automate everything.",
+        "examples": [
+          {
+            "en": "The point is not to automate everything."
+          },
+          {
+            "en": "The point is to automate repeatable parts and keep humans in control."
+          }
+        ],
+        "level": "B2",
+        "tag": "9. Connectors"
+      }
+    ],
+    "wordIndex": [
+      {
+        "id": "presentation-word-001",
+        "sourcePhraseId": "presentation-phrase-001",
+        "term": "Good morning everyone, thank you for joining.",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Доброго ранку всім, дякую, що приєдналися.",
+        "pronunciation": "/ɡʊd ˈmɔːrnɪŋ ˈevriwʌn, θæŋk juː fər ˈdʒɔɪnɪŋ/",
+        "transcription": "/ɡʊd ˈmɔːrnɪŋ ˈevriwʌn, θæŋk juː fər ˈdʒɔɪnɪŋ/",
+        "commonAlternatives": [
+          "Hello everyone",
+          "Thanks for joining",
+          "Welcome everyone"
+        ],
+        "examples": [
+          {
+            "en": "Good morning everyone, thank you for joining today's session."
+          },
+          {
+            "en": "Good morning everyone, thank you for joining this presentation about agent-based cost optimization."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-002",
+        "sourcePhraseId": "presentation-phrase-002",
+        "term": "Today, I would like to talk about...",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Сьогодні я хотів би поговорити про...",
+        "pronunciation": "/təˈdeɪ aɪ wʊd laɪk tə tɔːk əˈbaʊt/",
+        "transcription": "/təˈdeɪ aɪ wʊd laɪk tə tɔːk əˈbaʊt/",
+        "commonAlternatives": [
+          "Today I’ll cover",
+          "Today I’ll focus on",
+          "The topic for today is"
+        ],
+        "examples": [
+          {
+            "en": "Today, I would like to talk about cost optimization with AI agents."
+          },
+          {
+            "en": "Today, I would like to talk about how an agent framework can reduce engineering cost."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-003",
+        "sourcePhraseId": "presentation-phrase-003",
+        "term": "The main goal of this presentation is...",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Головна ціль цієї презентації...",
+        "pronunciation": "/ðə meɪn ɡoʊl əv ðɪs ˌprezənˈteɪʃən ɪz/",
+        "transcription": "/ðə meɪn ɡoʊl əv ðɪs ˌprezənˈteɪʃən ɪz/",
+        "commonAlternatives": [
+          "The key objective is",
+          "The purpose is",
+          "What I want to show is"
+        ],
+        "examples": [
+          {
+            "en": "The main goal of this presentation is to explain where real savings can come from."
+          },
+          {
+            "en": "The main goal of this presentation is to connect AI cost with engineering value."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-004",
+        "sourcePhraseId": "presentation-phrase-004",
+        "term": "I will focus on three key areas.",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Я сфокусуюся на трьох ключових напрямках.",
+        "pronunciation": "/aɪ wɪl ˈfoʊkəs ɑːn θriː kiː ˈeriəz/",
+        "transcription": "/aɪ wɪl ˈfoʊkəs ɑːn θriː kiː ˈeriəz/",
+        "commonAlternatives": [
+          "I’ll cover three points",
+          "There are three areas",
+          "I’ll structure this around three topics"
+        ],
+        "examples": [
+          {
+            "en": "I will focus on three key areas: orchestration, memory, and measurement."
+          },
+          {
+            "en": "I will focus on three key areas: cost control, PR review, and reusable context."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-005",
+        "sourcePhraseId": "presentation-phrase-005",
+        "term": "Let me start with the context.",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Дозвольте почати з контексту.",
+        "pronunciation": "/let miː stɑːrt wɪð ðə ˈkɑːntekst/",
+        "transcription": "/let miː stɑːrt wɪð ðə ˈkɑːntekst/",
+        "commonAlternatives": [
+          "Let’s start with context",
+          "First, some background",
+          "I’ll start with the background"
+        ],
+        "examples": [
+          {
+            "en": "Let me start with the context: AI agents can be powerful, but they can also be expensive."
+          },
+          {
+            "en": "Let me start with the context before we move to the proposed solution."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-006",
+        "sourcePhraseId": "presentation-phrase-006",
+        "term": "This topic is important because...",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Ця тема важлива, тому що...",
+        "pronunciation": "/ðɪs ˈtɑːpɪk ɪz ɪmˈpɔːrtənt bɪˈkɔːz/",
+        "transcription": "/ðɪs ˈtɑːpɪk ɪz ɪmˈpɔːrtənt bɪˈkɔːz/",
+        "commonAlternatives": [
+          "This matters because",
+          "The reason this is important is",
+          "The business value is"
+        ],
+        "examples": [
+          {
+            "en": "This topic is important because uncontrolled AI usage can become expensive."
+          },
+          {
+            "en": "This topic is important because engineering time is often more expensive than model usage."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-007",
+        "sourcePhraseId": "presentation-phrase-007",
+        "term": "I want to keep this practical.",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Я хочу зробити це практичним.",
+        "pronunciation": "/aɪ wɑːnt tə kiːp ðɪs ˈpræktɪkəl/",
+        "transcription": "/aɪ wɑːnt tə kiːp ðɪs ˈpræktɪkəl/",
+        "commonAlternatives": [
+          "I’ll keep it practical",
+          "This will be practical",
+          "I’ll focus on real use cases"
+        ],
+        "examples": [
+          {
+            "en": "I want to keep this practical and focus on what we can actually measure."
+          },
+          {
+            "en": "I want to keep this practical, so I will use PR review as the main example."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-008",
+        "sourcePhraseId": "presentation-phrase-008",
+        "term": "I will not go too deep into implementation details.",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Я не буду занадто глибоко заходити в деталі реалізації.",
+        "pronunciation": "/aɪ wɪl nɑːt ɡoʊ tuː diːp ˈɪntuː ˌɪmpləmənˈteɪʃən dɪˈteɪlz/",
+        "transcription": "/aɪ wɪl nɑːt ɡoʊ tuː diːp ˈɪntuː ˌɪmpləmənˈteɪʃən dɪˈteɪlz/",
+        "commonAlternatives": [
+          "I’ll avoid too much technical detail",
+          "I’ll stay at a high level",
+          "I’ll focus on the concept"
+        ],
+        "examples": [
+          {
+            "en": "I will not go too deep into implementation details, but I’ll explain the architecture."
+          },
+          {
+            "en": "I will not go too deep into implementation details unless there are questions."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-009",
+        "sourcePhraseId": "presentation-phrase-009",
+        "term": "By the end of this presentation, I hope to show...",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "До кінця презентації я сподіваюся показати...",
+        "pronunciation": "/baɪ ði end əv ðɪs ˌprezənˈteɪʃən, aɪ hoʊp tə ʃoʊ/",
+        "transcription": "/baɪ ði end əv ðɪs ˌprezənˈteɪʃən, aɪ hoʊp tə ʃoʊ/",
+        "commonAlternatives": [
+          "At the end, you should see",
+          "The takeaway should be",
+          "My goal is to demonstrate"
+        ],
+        "examples": [
+          {
+            "en": "By the end of this presentation, I hope to show how agents can reduce repeated work."
+          },
+          {
+            "en": "By the end of this presentation, I hope to show how we can measure agent value."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-010",
+        "sourcePhraseId": "presentation-phrase-010",
+        "term": "The key message is simple.",
+        "category": "Presentation Phrases",
+        "section": "Opening / Початок презентації",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "1. Opening",
+        "meaning": "Ключова ідея проста.",
+        "pronunciation": "/ðə kiː ˈmesɪdʒ ɪz ˈsɪmpəl/",
+        "transcription": "/ðə kiː ˈmesɪdʒ ɪz ˈsɪmpəl/",
+        "commonAlternatives": [
+          "The main idea is simple",
+          "The core message is",
+          "The main takeaway is"
+        ],
+        "examples": [
+          {
+            "en": "The key message is simple: cost optimization is about controlled context and reusable memory."
+          },
+          {
+            "en": "The key message is simple: agents should run only when they create measurable value."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-011",
+        "sourcePhraseId": "presentation-phrase-011",
+        "term": "Here is the agenda for today.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Ось план на сьогодні.",
+        "pronunciation": "/hɪr ɪz ði əˈdʒendə fər təˈdeɪ/",
+        "transcription": "/hɪr ɪz ði əˈdʒendə fər təˈdeɪ/",
+        "commonAlternatives": [
+          "Here is the plan",
+          "Today’s agenda is",
+          "We’ll cover the following points"
+        ],
+        "examples": [
+          {
+            "en": "Here is the agenda for today: problem, solution, metrics, and next steps."
+          },
+          {
+            "en": "Here is the agenda for today, and I’ll keep it focused."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-012",
+        "sourcePhraseId": "presentation-phrase-012",
+        "term": "I will break this down into several parts.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Я розділю це на кілька частин.",
+        "pronunciation": "/aɪ wɪl breɪk ðɪs daʊn ˈɪntuː ˈsevərəl pɑːrts/",
+        "transcription": "/aɪ wɪl breɪk ðɪs daʊn ˈɪntuː ˈsevərəl pɑːrts/",
+        "commonAlternatives": [
+          "I’ll split this into",
+          "I’ll structure this as",
+          "I’ll organize this around"
+        ],
+        "examples": [
+          {
+            "en": "I will break this down into cost drivers, optimization levers, and measurement."
+          },
+          {
+            "en": "I will break this down into how agents work and how we measure value."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-013",
+        "sourcePhraseId": "presentation-phrase-013",
+        "term": "First, I’ll explain the problem.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 13,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Спочатку я поясню проблему.",
+        "pronunciation": "/fɜːrst, aɪl ɪkˈspleɪn ðə ˈprɑːbləm/",
+        "transcription": "/fɜːrst, aɪl ɪkˈspleɪn ðə ˈprɑːbləm/",
+        "commonAlternatives": [
+          "First, I’ll cover the challenge",
+          "First, let’s look at the problem",
+          "I’ll start with the issue"
+        ],
+        "examples": [
+          {
+            "en": "First, I’ll explain the problem with uncontrolled agent usage."
+          },
+          {
+            "en": "First, I’ll explain why token cost alone is not the full picture."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-014",
+        "sourcePhraseId": "presentation-phrase-014",
+        "term": "Then, I’ll move to the proposed approach.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 14,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Потім я перейду до запропонованого підходу.",
+        "pronunciation": "/ðen, aɪl muːv tə ðə prəˈpoʊzd əˈproʊtʃ/",
+        "transcription": "/ðen, aɪl muːv tə ðə prəˈpoʊzd əˈproʊtʃ/",
+        "commonAlternatives": [
+          "Then I’ll cover the solution",
+          "Next, I’ll explain the approach",
+          "After that, I’ll move to the framework"
+        ],
+        "examples": [
+          {
+            "en": "Then, I’ll move to the proposed event-driven orchestrator."
+          },
+          {
+            "en": "Then, I’ll move to the proposed agent framework."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-015",
+        "sourcePhraseId": "presentation-phrase-015",
+        "term": "After that, I’ll show the metrics.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 15,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Після цього я покажу метрики.",
+        "pronunciation": "/ˈæftər ðæt, aɪl ʃoʊ ðə ˈmetrɪks/",
+        "transcription": "/ˈæftər ðæt, aɪl ʃoʊ ðə ˈmetrɪks/",
+        "commonAlternatives": [
+          "Then we’ll look at metrics",
+          "Next, I’ll cover measurement",
+          "After that, I’ll show how we evaluate it"
+        ],
+        "examples": [
+          {
+            "en": "After that, I’ll show the metrics we can use to prove value."
+          },
+          {
+            "en": "After that, I’ll show why cost per accepted finding is important."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-016",
+        "sourcePhraseId": "presentation-phrase-016",
+        "term": "Finally, I’ll summarize the next steps.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 16,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Наприкінці я підсумую наступні кроки.",
+        "pronunciation": "/ˈfaɪnəli, aɪl ˈsʌməraɪz ðə nekst steps/",
+        "transcription": "/ˈfaɪnəli, aɪl ˈsʌməraɪz ðə nekst steps/",
+        "commonAlternatives": [
+          "I’ll close with next steps",
+          "I’ll finish with recommendations",
+          "I’ll end with the roadmap"
+        ],
+        "examples": [
+          {
+            "en": "Finally, I’ll summarize the next steps for a pilot."
+          },
+          {
+            "en": "Finally, I’ll summarize how we can validate this approach."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-017",
+        "sourcePhraseId": "presentation-phrase-017",
+        "term": "I’ll keep the structure simple.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 17,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Я зроблю структуру простою.",
+        "pronunciation": "/aɪl kiːp ðə ˈstrʌktʃər ˈsɪmpəl/",
+        "transcription": "/aɪl kiːp ðə ˈstrʌktʃər ˈsɪmpəl/",
+        "commonAlternatives": [
+          "I’ll keep it simple",
+          "I’ll keep it straightforward",
+          "I’ll avoid unnecessary complexity"
+        ],
+        "examples": [
+          {
+            "en": "I’ll keep the structure simple: problem, approach, measurement, outcome."
+          },
+          {
+            "en": "I’ll keep the structure simple so we can focus on decisions."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-018",
+        "sourcePhraseId": "presentation-phrase-018",
+        "term": "Let’s move step by step.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 18,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Давайте рухатися крок за кроком.",
+        "pronunciation": "/lets muːv step baɪ step/",
+        "transcription": "/lets muːv step baɪ step/",
+        "commonAlternatives": [
+          "Let’s go step by step",
+          "Let’s take it in order",
+          "Let’s walk through it"
+        ],
+        "examples": [
+          {
+            "en": "Let’s move step by step and start with the current challenge."
+          },
+          {
+            "en": "Let’s move step by step from cost drivers to measurable outcomes."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-019",
+        "sourcePhraseId": "presentation-phrase-019",
+        "term": "I’ll start high-level and then go deeper.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 19,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Я почну на високому рівні, а потім заглиблюся.",
+        "pronunciation": "/aɪl stɑːrt haɪ ˈlevəl ænd ðen ɡoʊ ˈdiːpər/",
+        "transcription": "/aɪl stɑːrt haɪ ˈlevəl ænd ðen ɡoʊ ˈdiːpər/",
+        "commonAlternatives": [
+          "I’ll begin with the overview",
+          "I’ll start broadly",
+          "I’ll explain the big picture first"
+        ],
+        "examples": [
+          {
+            "en": "I’ll start high-level and then go deeper into PR review automation."
+          },
+          {
+            "en": "I’ll start high-level and then go deeper into metrics."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-020",
+        "sourcePhraseId": "presentation-phrase-020",
+        "term": "This presentation is organized around one main question.",
+        "category": "Presentation Phrases",
+        "section": "Agenda and Structure / План та структура",
+        "sequence": 20,
+        "level": "B2",
+        "tag": "2. Agenda",
+        "meaning": "Ця презентація побудована навколо одного головного питання.",
+        "pronunciation": "/ðɪs ˌprezənˈteɪʃən ɪz ˈɔːrɡənaɪzd əˈraʊnd wʌn meɪn ˈkwestʃən/",
+        "transcription": "/ðɪs ˌprezənˈteɪʃən ɪz ˈɔːrɡənaɪzd əˈraʊnd wʌn meɪn ˈkwestʃən/",
+        "commonAlternatives": [
+          "The central question is",
+          "The main question is",
+          "Everything comes back to this question"
+        ],
+        "examples": [
+          {
+            "en": "This presentation is organized around one main question: how do we prove agent value?"
+          },
+          {
+            "en": "This presentation is organized around one main question: how do we optimize cost without losing quality?"
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-021",
+        "sourcePhraseId": "presentation-phrase-021",
+        "term": "Let’s move to the next slide.",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 21,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Перейдемо до наступного слайду.",
+        "pronunciation": "/lets muːv tə ðə nekst slaɪd/",
+        "transcription": "/lets muːv tə ðə nekst slaɪd/",
+        "commonAlternatives": [
+          "Let’s continue",
+          "Moving on",
+          "Let’s go to the next point"
+        ],
+        "examples": [
+          {
+            "en": "Let’s move to the next slide and look at the cost drivers."
+          },
+          {
+            "en": "Let’s move to the next slide where I show the proposed workflow."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-022",
+        "sourcePhraseId": "presentation-phrase-022",
+        "term": "Now let’s look at...",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 22,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Тепер давайте подивимось на...",
+        "pronunciation": "/naʊ lets lʊk æt/",
+        "transcription": "/naʊ lets lʊk æt/",
+        "commonAlternatives": [
+          "Now let’s review",
+          "Let’s examine",
+          "Let’s focus on"
+        ],
+        "examples": [
+          {
+            "en": "Now let’s look at how the orchestrator can reduce unnecessary model calls."
+          },
+          {
+            "en": "Now let’s look at the metrics we can use."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-023",
+        "sourcePhraseId": "presentation-phrase-023",
+        "term": "This brings us to the next point.",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 23,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Це підводить нас до наступного пункту.",
+        "pronunciation": "/ðɪs brɪŋz ʌs tə ðə nekst pɔɪnt/",
+        "transcription": "/ðɪs brɪŋz ʌs tə ðə nekst pɔɪnt/",
+        "commonAlternatives": [
+          "This leads to",
+          "This connects to",
+          "This takes us to"
+        ],
+        "examples": [
+          {
+            "en": "This brings us to the next point: reusable memory."
+          },
+          {
+            "en": "This brings us to the next point: measuring accepted findings."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-024",
+        "sourcePhraseId": "presentation-phrase-024",
+        "term": "The next important area is...",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 24,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Наступна важлива область — це...",
+        "pronunciation": "/ðə nekst ɪmˈpɔːrtənt ˈeriə ɪz/",
+        "transcription": "/ðə nekst ɪmˈpɔːrtənt ˈeriə ɪz/",
+        "commonAlternatives": [
+          "The next key area is",
+          "Another important topic is",
+          "The next topic is"
+        ],
+        "examples": [
+          {
+            "en": "The next important area is model routing."
+          },
+          {
+            "en": "The next important area is memory governance."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-025",
+        "sourcePhraseId": "presentation-phrase-025",
+        "term": "Before we go further, let me clarify one thing.",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 25,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Перед тим як рухатися далі, дозвольте уточнити одну річ.",
+        "pronunciation": "/bɪˈfɔːr wi ɡoʊ ˈfɜːrðər, let miː ˈklærəfaɪ wʌn θɪŋ/",
+        "transcription": "/bɪˈfɔːr wi ɡoʊ ˈfɜːrðər, let miː ˈklærəfaɪ wʌn θɪŋ/",
+        "commonAlternatives": [
+          "Before moving on",
+          "One clarification",
+          "Let me make one point clear"
+        ],
+        "examples": [
+          {
+            "en": "Before we go further, let me clarify that agents do not replace human reviewers."
+          },
+          {
+            "en": "Before we go further, let me clarify that token cost is only part of the total cost."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-026",
+        "sourcePhraseId": "presentation-phrase-026",
+        "term": "Let’s zoom in on this part.",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 26,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Давайте детальніше розглянемо цю частину.",
+        "pronunciation": "/lets zuːm ɪn ɑːn ðɪs pɑːrt/",
+        "transcription": "/lets zuːm ɪn ɑːn ðɪs pɑːrt/",
+        "commonAlternatives": [
+          "Let’s look closer",
+          "Let’s go deeper",
+          "Let’s focus on this"
+        ],
+        "examples": [
+          {
+            "en": "Let’s zoom in on how PR review orchestration works."
+          },
+          {
+            "en": "Let’s zoom in on cost per accepted finding."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-027",
+        "sourcePhraseId": "presentation-phrase-027",
+        "term": "Let’s zoom out for a moment.",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 27,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Давайте на мить подивимося ширше.",
+        "pronunciation": "/lets zuːm aʊt fər ə ˈmoʊmənt/",
+        "transcription": "/lets zuːm aʊt fər ə ˈmoʊmənt/",
+        "commonAlternatives": [
+          "Let’s look at the big picture",
+          "Let’s step back",
+          "Let’s take a broader view"
+        ],
+        "examples": [
+          {
+            "en": "Let’s zoom out for a moment and look at the whole framework."
+          },
+          {
+            "en": "Let’s zoom out and connect this to engineering cost."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-028",
+        "sourcePhraseId": "presentation-phrase-028",
+        "term": "This slide shows...",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 28,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Цей слайд показує...",
+        "pronunciation": "/ðɪs slaɪd ʃoʊz/",
+        "transcription": "/ðɪs slaɪd ʃoʊz/",
+        "commonAlternatives": [
+          "Here we can see",
+          "This diagram shows",
+          "This view explains"
+        ],
+        "examples": [
+          {
+            "en": "This slide shows the event-driven review flow."
+          },
+          {
+            "en": "This slide shows the difference between token cost and engineering cost."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-029",
+        "sourcePhraseId": "presentation-phrase-029",
+        "term": "The important thing here is...",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 29,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Важливо тут те, що...",
+        "pronunciation": "/ði ɪmˈpɔːrtənt θɪŋ hɪr ɪz/",
+        "transcription": "/ði ɪmˈpɔːrtənt θɪŋ hɪr ɪz/",
+        "commonAlternatives": [
+          "The key point is",
+          "What matters here is",
+          "The main point is"
+        ],
+        "examples": [
+          {
+            "en": "The important thing here is that agents should run only when needed."
+          },
+          {
+            "en": "The important thing here is that memory reduces repeated context gathering."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-030",
+        "sourcePhraseId": "presentation-phrase-030",
+        "term": "I’ll come back to this later.",
+        "category": "Presentation Phrases",
+        "section": "Moving Between Slides / Переходи між слайдами",
+        "sequence": 30,
+        "level": "B2",
+        "tag": "3. Slide transitions",
+        "meaning": "Я повернуся до цього пізніше.",
+        "pronunciation": "/aɪl kʌm bæk tə ðɪs ˈleɪtər/",
+        "transcription": "/aɪl kʌm bæk tə ðɪs ˈleɪtər/",
+        "commonAlternatives": [
+          "I’ll return to this point",
+          "We’ll revisit this",
+          "I’ll mention this again later"
+        ],
+        "examples": [
+          {
+            "en": "I’ll come back to this later when we discuss metrics."
+          },
+          {
+            "en": "I’ll come back to this later in the pilot plan."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-031",
+        "sourcePhraseId": "presentation-phrase-031",
+        "term": "The idea is not to..., but to...",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 31,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "Ідея не в тому, щоб..., а в тому, щоб...",
+        "pronunciation": "/ði aɪˈdiːə ɪz nɑːt tə, bʌt tə/",
+        "transcription": "/ði aɪˈdiːə ɪz nɑːt tə, bʌt tə/",
+        "commonAlternatives": [
+          "The goal is not",
+          "We are not trying to",
+          "The purpose is"
+        ],
+        "examples": [
+          {
+            "en": "The idea is not to replace engineers, but to reduce repetitive work."
+          },
+          {
+            "en": "The idea is not to run agents everywhere, but to run them where they create value."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-032",
+        "sourcePhraseId": "presentation-phrase-032",
+        "term": "From a cost perspective,...",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 32,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "З точки зору витрат...",
+        "pronunciation": "/frəm ə kɔːst pərˈspektɪv/",
+        "transcription": "/frəm ə kɔːst pərˈspektɪv/",
+        "commonAlternatives": [
+          "Cost-wise",
+          "In terms of cost",
+          "Looking at cost"
+        ],
+        "examples": [
+          {
+            "en": "From a cost perspective, always-on agents are not the best starting point."
+          },
+          {
+            "en": "From a cost perspective, event-driven orchestration is more efficient."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-033",
+        "sourcePhraseId": "presentation-phrase-033",
+        "term": "From an engineering perspective,...",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 33,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "З інженерної точки зору...",
+        "pronunciation": "/frəm ən ˌendʒəˈnɪrɪŋ pərˈspektɪv/",
+        "transcription": "/frəm ən ˌendʒəˈnɪrɪŋ pərˈspektɪv/",
+        "commonAlternatives": [
+          "Technically",
+          "For engineering teams",
+          "In engineering terms"
+        ],
+        "examples": [
+          {
+            "en": "From an engineering perspective, the biggest saving is reduced rework."
+          },
+          {
+            "en": "From an engineering perspective, memory helps preserve project knowledge."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-034",
+        "sourcePhraseId": "presentation-phrase-034",
+        "term": "This gives us two benefits.",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 34,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "Це дає нам дві переваги.",
+        "pronunciation": "/ðɪs ɡɪvz ʌs tuː ˈbenəfɪts/",
+        "transcription": "/ðɪs ɡɪvz ʌs tuː ˈbenəfɪts/",
+        "commonAlternatives": [
+          "This creates two advantages",
+          "This helps in two ways",
+          "There are two benefits"
+        ],
+        "examples": [
+          {
+            "en": "This gives us two benefits: lower token usage and better consistency."
+          },
+          {
+            "en": "This gives us two benefits: faster review and reusable context."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-035",
+        "sourcePhraseId": "presentation-phrase-035",
+        "term": "The trade-off is...",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 35,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "Компроміс / trade-off полягає в...",
+        "pronunciation": "/ðə ˈtreɪd ɔːf ɪz/",
+        "transcription": "/ðə ˈtreɪd ɔːf ɪz/",
+        "commonAlternatives": [
+          "The downside is",
+          "The compromise is",
+          "The limitation is"
+        ],
+        "examples": [
+          {
+            "en": "The trade-off is that stronger models cost more but handle complex tasks better."
+          },
+          {
+            "en": "The trade-off is that deep review takes more time and more tokens."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-036",
+        "sourcePhraseId": "presentation-phrase-036",
+        "term": "This is where the framework helps.",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 36,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "Саме тут допомагає фреймворк.",
+        "pronunciation": "/ðɪs ɪz wer ðə ˈfreɪmwɜːrk helps/",
+        "transcription": "/ðɪs ɪz wer ðə ˈfreɪmwɜːrk helps/",
+        "commonAlternatives": [
+          "This is where the framework adds value",
+          "This is the role of the framework",
+          "This is why we need the framework"
+        ],
+        "examples": [
+          {
+            "en": "This is where the framework helps by controlling context and model routing."
+          },
+          {
+            "en": "This is where the framework helps by turning repeated knowledge into memory."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-037",
+        "sourcePhraseId": "presentation-phrase-037",
+        "term": "In practice, this means...",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 37,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "На практиці це означає...",
+        "pronunciation": "/ɪn ˈpræktɪs, ðɪs miːnz/",
+        "transcription": "/ɪn ˈpræktɪs, ðɪs miːnz/",
+        "commonAlternatives": [
+          "Practically speaking",
+          "In real usage",
+          "In day-to-day work"
+        ],
+        "examples": [
+          {
+            "en": "In practice, this means agents review only changed files and relevant context."
+          },
+          {
+            "en": "In practice, this means we pay less for repeated analysis."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-038",
+        "sourcePhraseId": "presentation-phrase-038",
+        "term": "A simple example would be...",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 38,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "Простий приклад — це...",
+        "pronunciation": "/ə ˈsɪmpəl ɪɡˈzæmpəl wʊd biː/",
+        "transcription": "/ə ˈsɪmpəl ɪɡˈzæmpəl wʊd biː/",
+        "commonAlternatives": [
+          "For example",
+          "One example is",
+          "A practical example is"
+        ],
+        "examples": [
+          {
+            "en": "A simple example would be PR review for a small frontend change."
+          },
+          {
+            "en": "A simple example would be using Design Memory instead of calling Figma again."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-039",
+        "sourcePhraseId": "presentation-phrase-039",
+        "term": "The main risk is...",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 39,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "Основний ризик — це...",
+        "pronunciation": "/ðə meɪn rɪsk ɪz/",
+        "transcription": "/ðə meɪn rɪsk ɪz/",
+        "commonAlternatives": [
+          "The biggest risk is",
+          "The main concern is",
+          "The key risk is"
+        ],
+        "examples": [
+          {
+            "en": "The main risk is loading too much irrelevant context."
+          },
+          {
+            "en": "The main risk is producing too many false positives in PR review."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-040",
+        "sourcePhraseId": "presentation-phrase-040",
+        "term": "To reduce this risk, we can...",
+        "category": "Presentation Phrases",
+        "section": "Explaining Ideas and Arguments / Пояснення ідей та аргументів",
+        "sequence": 40,
+        "level": "B2",
+        "tag": "4. Explaining ideas",
+        "meaning": "Щоб зменшити цей ризик, ми можемо...",
+        "pronunciation": "/tə rɪˈduːs ðɪs rɪsk, wi kæn/",
+        "transcription": "/tə rɪˈduːs ðɪs rɪsk, wi kæn/",
+        "commonAlternatives": [
+          "To mitigate this",
+          "To control this",
+          "To make this safer"
+        ],
+        "examples": [
+          {
+            "en": "To reduce this risk, we can use memory validation and human-in-the-loop review."
+          },
+          {
+            "en": "To reduce this risk, we can start with shadow mode."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-041",
+        "sourcePhraseId": "presentation-phrase-041",
+        "term": "Let’s look at how we can measure this.",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 41,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Давайте подивимось, як ми можемо це виміряти.",
+        "pronunciation": "/lets lʊk æt haʊ wi kæn ˈmeʒər ðɪs/",
+        "transcription": "/lets lʊk æt haʊ wi kæn ˈmeʒər ðɪs/",
+        "commonAlternatives": [
+          "Let’s look at measurement",
+          "Let’s discuss metrics",
+          "Let’s see how we evaluate this"
+        ],
+        "examples": [
+          {
+            "en": "Let’s look at how we can measure the value of AI review."
+          },
+          {
+            "en": "Let’s look at how we can measure cost optimization."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-042",
+        "sourcePhraseId": "presentation-phrase-042",
+        "term": "The key metric here is...",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 42,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Ключова метрика тут — це...",
+        "pronunciation": "/ðə kiː ˈmetrɪk hɪr ɪz/",
+        "transcription": "/ðə kiː ˈmetrɪk hɪr ɪz/",
+        "commonAlternatives": [
+          "The main metric is",
+          "The most important metric is",
+          "The primary metric is"
+        ],
+        "examples": [
+          {
+            "en": "The key metric here is cost per accepted finding."
+          },
+          {
+            "en": "The key metric here is useful finding rate, not total comment count."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-043",
+        "sourcePhraseId": "presentation-phrase-043",
+        "term": "We should not measure only...",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 43,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Ми не повинні вимірювати тільки...",
+        "pronunciation": "/wi ʃʊd nɑːt ˈmeʒər ˈoʊnli/",
+        "transcription": "/wi ʃʊd nɑːt ˈmeʒər ˈoʊnli/",
+        "commonAlternatives": [
+          "We should not focus only on",
+          "We should avoid measuring only",
+          "It is not enough to measure"
+        ],
+        "examples": [
+          {
+            "en": "We should not measure only token usage."
+          },
+          {
+            "en": "We should not measure only how many comments the agent produces."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-044",
+        "sourcePhraseId": "presentation-phrase-044",
+        "term": "We need a baseline.",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 44,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Нам потрібен базовий рівень для порівняння.",
+        "pronunciation": "/wi niːd ə ˈbeɪslaɪn/",
+        "transcription": "/wi niːd ə ˈbeɪslaɪn/",
+        "commonAlternatives": [
+          "We need a reference point",
+          "We need historical data",
+          "We need something to compare against"
+        ],
+        "examples": [
+          {
+            "en": "We need a baseline based on historical PR data."
+          },
+          {
+            "en": "We need a baseline before we can claim improvement."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-045",
+        "sourcePhraseId": "presentation-phrase-045",
+        "term": "This metric connects AI spend with real value.",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 45,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Ця метрика повʼязує витрати на AI з реальною цінністю.",
+        "pronunciation": "/ðɪs ˈmetrɪk kəˈnekts eɪ aɪ spend wɪð ˈriːəl ˈvæljuː/",
+        "transcription": "/ðɪs ˈmetrɪk kəˈnekts eɪ aɪ spend wɪð ˈriːəl ˈvæljuː/",
+        "commonAlternatives": [
+          "This ties cost to value",
+          "This links spend and impact",
+          "This makes value measurable"
+        ],
+        "examples": [
+          {
+            "en": "This metric connects AI spend with real engineering value."
+          },
+          {
+            "en": "Cost per accepted finding connects model usage with useful outcomes."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-046",
+        "sourcePhraseId": "presentation-phrase-046",
+        "term": "The number itself is less important than the trend.",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 46,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Саме число менш важливе, ніж тенденція.",
+        "pronunciation": "/ðə ˈnʌmbər ɪtˈself ɪz les ɪmˈpɔːrtənt ðæn ðə trend/",
+        "transcription": "/ðə ˈnʌmbər ɪtˈself ɪz les ɪmˈpɔːrtənt ðæn ðə trend/",
+        "commonAlternatives": [
+          "The trend matters more",
+          "We should focus on direction",
+          "The movement is more important than one number"
+        ],
+        "examples": [
+          {
+            "en": "The number itself is less important than the trend over several PRs."
+          },
+          {
+            "en": "The trend shows whether the framework is improving."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-047",
+        "sourcePhraseId": "presentation-phrase-047",
+        "term": "We can track this over time.",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 47,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Ми можемо відстежувати це з часом.",
+        "pronunciation": "/wi kæn træk ðɪs ˈoʊvər taɪm/",
+        "transcription": "/wi kæn træk ðɪs ˈoʊvər taɪm/",
+        "commonAlternatives": [
+          "We can monitor this",
+          "We can measure this continuously",
+          "We can observe the trend"
+        ],
+        "examples": [
+          {
+            "en": "We can track this over time during the pilot."
+          },
+          {
+            "en": "We can track accepted findings and false positives over time."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-048",
+        "sourcePhraseId": "presentation-phrase-048",
+        "term": "This helps us avoid subjective claims.",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 48,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Це допомагає уникнути субʼєктивних тверджень.",
+        "pronunciation": "/ðɪs helps ʌs əˈvɔɪd səbˈdʒektɪv kleɪmz/",
+        "transcription": "/ðɪs helps ʌs əˈvɔɪd səbˈdʒektɪv kleɪmz/",
+        "commonAlternatives": [
+          "This makes it evidence-based",
+          "This reduces guesswork",
+          "This makes the discussion data-driven"
+        ],
+        "examples": [
+          {
+            "en": "This helps us avoid subjective claims like “AI feels faster.”"
+          },
+          {
+            "en": "Metrics help us make the discussion evidence-based."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-049",
+        "sourcePhraseId": "presentation-phrase-049",
+        "term": "Early results should be treated carefully.",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 49,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "До ранніх результатів треба ставитися обережно.",
+        "pronunciation": "/ˈɜːrli rɪˈzʌlts ʃʊd bi triːtɪd ˈkerfəli/",
+        "transcription": "/ˈɜːrli rɪˈzʌlts ʃʊd bi triːtɪd ˈkerfəli/",
+        "commonAlternatives": [
+          "Initial data is not final",
+          "Early numbers are directional",
+          "We should not overinterpret early results"
+        ],
+        "examples": [
+          {
+            "en": "Early results should be treated carefully because the sample size may be small."
+          },
+          {
+            "en": "Early results are useful, but they should not be overpromised."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-050",
+        "sourcePhraseId": "presentation-phrase-050",
+        "term": "The goal is measurable improvement, not perfect automation.",
+        "category": "Presentation Phrases",
+        "section": "Presenting Metrics and Results / Представлення метрик та результатів",
+        "sequence": 50,
+        "level": "B2",
+        "tag": "5. Metrics",
+        "meaning": "Ціль — вимірюване покращення, а не ідеальна автоматизація.",
+        "pronunciation": "/ðə ɡoʊl ɪz ˈmeʒərəbl ɪmˈpruːvmənt, nɑːt ˈpɜːrfɪkt ˌɔːtəˈmeɪʃən/",
+        "transcription": "/ðə ɡoʊl ɪz ˈmeʒərəbl ɪmˈpruːvmənt, nɑːt ˈpɜːrfɪkt ˌɔːtəˈmeɪʃən/",
+        "commonAlternatives": [
+          "The goal is improvement",
+          "We aim for practical value",
+          "We focus on measurable impact"
+        ],
+        "examples": [
+          {
+            "en": "The goal is measurable improvement, not perfect automation."
+          },
+          {
+            "en": "We want measurable improvement in review effort and rework reduction."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-051",
+        "sourcePhraseId": "presentation-phrase-051",
+        "term": "Please feel free to ask questions.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 51,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Будь ласка, не соромтеся ставити питання.",
+        "pronunciation": "/pliːz fiːl friː tə æsk ˈkwestʃənz/",
+        "transcription": "/pliːz fiːl friː tə æsk ˈkwestʃənz/",
+        "commonAlternatives": [
+          "Feel free to ask",
+          "Questions are welcome",
+          "Please jump in"
+        ],
+        "examples": [
+          {
+            "en": "Please feel free to ask questions at any time."
+          },
+          {
+            "en": "Please feel free to ask questions after each section."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-052",
+        "sourcePhraseId": "presentation-phrase-052",
+        "term": "I’ll pause here for questions.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 52,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Я тут зроблю паузу для питань.",
+        "pronunciation": "/aɪl pɔːz hɪr fər ˈkwestʃənz/",
+        "transcription": "/aɪl pɔːz hɪr fər ˈkwestʃənz/",
+        "commonAlternatives": [
+          "Let me pause here",
+          "I’ll stop here",
+          "Any questions so far?"
+        ],
+        "examples": [
+          {
+            "en": "I’ll pause here for questions before we move to metrics."
+          },
+          {
+            "en": "I’ll pause here in case anything is unclear."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-053",
+        "sourcePhraseId": "presentation-phrase-053",
+        "term": "That’s a good question.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 53,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Це хороше питання.",
+        "pronunciation": "/ðæts ə ɡʊd ˈkwestʃən/",
+        "transcription": "/ðæts ə ɡʊd ˈkwestʃən/",
+        "commonAlternatives": [
+          "Great question",
+          "Good point",
+          "That’s an important question"
+        ],
+        "examples": [
+          {
+            "en": "That’s a good question, especially from a cost perspective."
+          },
+          {
+            "en": "That’s a good question because it touches the main risk."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-054",
+        "sourcePhraseId": "presentation-phrase-054",
+        "term": "Let me clarify.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 54,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Дозвольте уточнити.",
+        "pronunciation": "/let miː ˈklærəfaɪ/",
+        "transcription": "/let miː ˈklærəfaɪ/",
+        "commonAlternatives": [
+          "Let me explain",
+          "Let me make it clearer",
+          "To clarify"
+        ],
+        "examples": [
+          {
+            "en": "Let me clarify: the orchestrator is event-driven, not always actively running."
+          },
+          {
+            "en": "Let me clarify: AI review is non-blocking in the pilot phase."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-055",
+        "sourcePhraseId": "presentation-phrase-055",
+        "term": "I don’t have the exact number yet.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 55,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "У мене поки немає точної цифри.",
+        "pronunciation": "/aɪ doʊnt hæv ði ɪɡˈzækt ˈnʌmbər jet/",
+        "transcription": "/aɪ doʊnt hæv ði ɪɡˈzækt ˈnʌmbər jet/",
+        "commonAlternatives": [
+          "I don’t have exact data yet",
+          "We still need to measure it",
+          "I can’t give an exact number yet"
+        ],
+        "examples": [
+          {
+            "en": "I don’t have the exact number yet, but we can collect it during the pilot."
+          },
+          {
+            "en": "I don’t have the exact number yet, so I would avoid making a strong claim."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-056",
+        "sourcePhraseId": "presentation-phrase-056",
+        "term": "We need to validate this with real PR data.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 56,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Нам потрібно перевірити це на реальних PR-даних.",
+        "pronunciation": "/wi niːd tə ˈvælədeɪt ðɪs wɪð ˈriːəl piː ɑːr ˈdeɪtə/",
+        "transcription": "/wi niːd tə ˈvælədeɪt ðɪs wɪð ˈriːəl piː ɑːr ˈdeɪtə/",
+        "commonAlternatives": [
+          "We need evidence",
+          "We need historical data",
+          "We need to test this in practice"
+        ],
+        "examples": [
+          {
+            "en": "We need to validate this with real PR data before making conclusions."
+          },
+          {
+            "en": "We need to validate the savings with a pilot."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-057",
+        "sourcePhraseId": "presentation-phrase-057",
+        "term": "I would separate this into two questions.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 57,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Я б розділив це на два питання.",
+        "pronunciation": "/aɪ wʊd ˈsepəreɪt ðɪs ˈɪntuː tuː ˈkwestʃənz/",
+        "transcription": "/aɪ wʊd ˈsepəreɪt ðɪs ˈɪntuː tuː ˈkwestʃənz/",
+        "commonAlternatives": [
+          "There are two parts here",
+          "I’d split this into",
+          "Let’s separate the concerns"
+        ],
+        "examples": [
+          {
+            "en": "I would separate this into two questions: token cost and engineering cost."
+          },
+          {
+            "en": "I would separate this into two questions: automation value and risk control."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-058",
+        "sourcePhraseId": "presentation-phrase-058",
+        "term": "Let me answer this from two perspectives.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 58,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Дозвольте відповісти з двох точок зору.",
+        "pronunciation": "/let miː ˈænsər ðɪs frəm tuː pərˈspektɪvz/",
+        "transcription": "/let miː ˈænsər ðɪs frəm tuː pərˈspektɪvz/",
+        "commonAlternatives": [
+          "I’ll answer in two parts",
+          "There are two angles",
+          "From one side... from another side..."
+        ],
+        "examples": [
+          {
+            "en": "Let me answer this from two perspectives: business value and engineering risk."
+          },
+          {
+            "en": "Let me answer this from two perspectives: cost and quality."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-059",
+        "sourcePhraseId": "presentation-phrase-059",
+        "term": "I suggest we take this as a follow-up action.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 59,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Я пропоную взяти це як follow-up дію.",
+        "pronunciation": "/aɪ səˈdʒest wi teɪk ðɪs æz ə ˈfɑːloʊ ʌp ˈækʃən/",
+        "transcription": "/aɪ səˈdʒest wi teɪk ðɪs æz ə ˈfɑːloʊ ʌp ˈækʃən/",
+        "commonAlternatives": [
+          "Let’s follow up on this",
+          "We can take it offline",
+          "This needs a separate discussion"
+        ],
+        "examples": [
+          {
+            "en": "I suggest we take this as a follow-up action and validate it with data."
+          },
+          {
+            "en": "I suggest we take this as a follow-up action after the pilot."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-060",
+        "sourcePhraseId": "presentation-phrase-060",
+        "term": "I can come back to this after the presentation.",
+        "category": "Presentation Phrases",
+        "section": "Managing Questions / Робота з питаннями",
+        "sequence": 60,
+        "level": "B2",
+        "tag": "6. Questions",
+        "meaning": "Я можу повернутися до цього після презентації.",
+        "pronunciation": "/aɪ kæn kʌm bæk tə ðɪs ˈæftər ðə ˌprezənˈteɪʃən/",
+        "transcription": "/aɪ kæn kʌm bæk tə ðɪs ˈæftər ðə ˌprezənˈteɪʃən/",
+        "commonAlternatives": [
+          "We can discuss it afterwards",
+          "I can follow up later",
+          "Let’s return to this later"
+        ],
+        "examples": [
+          {
+            "en": "I can come back to this after the presentation with more details."
+          },
+          {
+            "en": "I can come back to this after the presentation if we have time."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-061",
+        "sourcePhraseId": "presentation-phrase-061",
+        "term": "This is an assumption, not a final conclusion.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 61,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Це припущення, а не фінальний висновок.",
+        "pronunciation": "/ðɪs ɪz ən əˈsʌmpʃən, nɑːt ə ˈfaɪnəl kənˈkluːʒən/",
+        "transcription": "/ðɪs ɪz ən əˈsʌmpʃən, nɑːt ə ˈfaɪnəl kənˈkluːʒən/",
+        "commonAlternatives": [
+          "This is preliminary",
+          "This is not confirmed yet",
+          "This is an initial hypothesis"
+        ],
+        "examples": [
+          {
+            "en": "This is an assumption, not a final conclusion, and we need a pilot to validate it."
+          },
+          {
+            "en": "This is an assumption based on current workflow understanding."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-062",
+        "sourcePhraseId": "presentation-phrase-062",
+        "term": "We should be careful with this claim.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 62,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "З цим твердженням треба бути обережними.",
+        "pronunciation": "/wi ʃʊd bi ˈkerfəl wɪð ðɪs kleɪm/",
+        "transcription": "/wi ʃʊd bi ˈkerfəl wɪð ðɪs kleɪm/",
+        "commonAlternatives": [
+          "We should not overpromise",
+          "We should avoid strong claims",
+          "We should be cautious"
+        ],
+        "examples": [
+          {
+            "en": "We should be careful with this claim until we have enough data."
+          },
+          {
+            "en": "We should be careful with this claim because productivity is hard to measure."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-063",
+        "sourcePhraseId": "presentation-phrase-063",
+        "term": "The initial version should be lightweight.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 63,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Початкова версія має бути легкою.",
+        "pronunciation": "/ði ɪˈnɪʃəl ˈvɜːrʒən ʃʊd bi ˈlaɪtweɪt/",
+        "transcription": "/ði ɪˈnɪʃəl ˈvɜːrʒən ʃʊd bi ˈlaɪtweɪt/",
+        "commonAlternatives": [
+          "The first version should be simple",
+          "Start small",
+          "Keep the MVP lightweight"
+        ],
+        "examples": [
+          {
+            "en": "The initial version should be lightweight and non-blocking."
+          },
+          {
+            "en": "The initial version should focus on measurement, not full automation."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-064",
+        "sourcePhraseId": "presentation-phrase-064",
+        "term": "We can start in shadow mode.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 64,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Ми можемо почати в shadow mode.",
+        "pronunciation": "/wi kæn stɑːrt ɪn ˈʃædoʊ moʊd/",
+        "transcription": "/wi kæn stɑːrt ɪn ˈʃædoʊ moʊd/",
+        "commonAlternatives": [
+          "We can start silently",
+          "We can start without posting comments",
+          "We can test it in the background"
+        ],
+        "examples": [
+          {
+            "en": "We can start in shadow mode to measure quality without affecting developers."
+          },
+          {
+            "en": "We can start in shadow mode and compare agent findings with human reviews."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-065",
+        "sourcePhraseId": "presentation-phrase-065",
+        "term": "This needs more validation.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 65,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Це потребує додаткової перевірки.",
+        "pronunciation": "/ðɪs niːdz mɔːr ˌvæləˈdeɪʃən/",
+        "transcription": "/ðɪs niːdz mɔːr ˌvæləˈdeɪʃən/",
+        "commonAlternatives": [
+          "This needs more data",
+          "We need to validate it",
+          "We need to test it"
+        ],
+        "examples": [
+          {
+            "en": "This needs more validation before we roll it out widely."
+          },
+          {
+            "en": "This needs more validation on real pull requests."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-066",
+        "sourcePhraseId": "presentation-phrase-066",
+        "term": "We should not treat this as a replacement for human review.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 66,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Ми не повинні розглядати це як заміну людському ревʼю.",
+        "pronunciation": "/wi ʃʊd nɑːt triːt ðɪs æz ə rɪˈpleɪsmənt fər ˈhjuːmən rɪˈvjuː/",
+        "transcription": "/wi ʃʊd nɑːt triːt ðɪs æz ə rɪˈpleɪsmənt fər ˈhjuːmən rɪˈvjuː/",
+        "commonAlternatives": [
+          "This is not a replacement",
+          "Humans remain responsible",
+          "Human review is still required"
+        ],
+        "examples": [
+          {
+            "en": "We should not treat this as a replacement for human review."
+          },
+          {
+            "en": "We should treat it as a first-pass assistant for reviewers."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-067",
+        "sourcePhraseId": "presentation-phrase-067",
+        "term": "There are still open questions.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 67,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Ще залишаються відкриті питання.",
+        "pronunciation": "/ðer ɑːr stɪl ˈoʊpən ˈkwestʃənz/",
+        "transcription": "/ðer ɑːr stɪl ˈoʊpən ˈkwestʃənz/",
+        "commonAlternatives": [
+          "Some questions remain",
+          "We still need to decide",
+          "This is not fully resolved"
+        ],
+        "examples": [
+          {
+            "en": "There are still open questions around governance and rollout."
+          },
+          {
+            "en": "There are still open questions around exact measurement methodology."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-068",
+        "sourcePhraseId": "presentation-phrase-068",
+        "term": "This is a pilot, not a full rollout.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 68,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Це пілот, а не повне впровадження.",
+        "pronunciation": "/ðɪs ɪz ə ˈpaɪlət, nɑːt ə fʊl ˈroʊlaʊt/",
+        "transcription": "/ðɪs ɪz ə ˈpaɪlət, nɑːt ə fʊl ˈroʊlaʊt/",
+        "commonAlternatives": [
+          "This is an experiment",
+          "This is a controlled trial",
+          "This is an MVP"
+        ],
+        "examples": [
+          {
+            "en": "This is a pilot, not a full rollout, so we can learn safely."
+          },
+          {
+            "en": "This is a pilot focused on evidence and cost measurement."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-069",
+        "sourcePhraseId": "presentation-phrase-069",
+        "term": "The purpose is to learn quickly.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 69,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Мета — швидко навчитися.",
+        "pronunciation": "/ðə ˈpɜːrpəs ɪz tə lɜːrn ˈkwɪkli/",
+        "transcription": "/ðə ˈpɜːrpəs ɪz tə lɜːrn ˈkwɪkli/",
+        "commonAlternatives": [
+          "The goal is learning",
+          "We want fast feedback",
+          "We want to validate assumptions"
+        ],
+        "examples": [
+          {
+            "en": "The purpose is to learn quickly and adjust the framework."
+          },
+          {
+            "en": "The purpose is to learn quickly before scaling the approach."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-070",
+        "sourcePhraseId": "presentation-phrase-070",
+        "term": "We can refine this after the first results.",
+        "category": "Presentation Phrases",
+        "section": "Handling Uncertainty and Limitations / Невизначеність та обмеження",
+        "sequence": 70,
+        "level": "B2",
+        "tag": "7. Limitations",
+        "meaning": "Ми можемо уточнити це після перших результатів.",
+        "pronunciation": "/wi kæn rɪˈfaɪn ðɪs ˈæftər ðə fɜːrst rɪˈzʌlts/",
+        "transcription": "/wi kæn rɪˈfaɪn ðɪs ˈæftər ðə fɜːrst rɪˈzʌlts/",
+        "commonAlternatives": [
+          "We can improve it later",
+          "We can iterate",
+          "We can tune it after feedback"
+        ],
+        "examples": [
+          {
+            "en": "We can refine this after the first results from shadow mode."
+          },
+          {
+            "en": "We can refine the metrics after the first pilot."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-071",
+        "sourcePhraseId": "presentation-phrase-071",
+        "term": "Let me summarize the main points.",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 71,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Дозвольте підсумувати основні пункти.",
+        "pronunciation": "/let miː ˈsʌməraɪz ðə meɪn pɔɪnts/",
+        "transcription": "/let miː ˈsʌməraɪz ðə meɪn pɔɪnts/",
+        "commonAlternatives": [
+          "To summarize",
+          "Let me recap",
+          "In summary"
+        ],
+        "examples": [
+          {
+            "en": "Let me summarize the main points before we move to questions."
+          },
+          {
+            "en": "Let me summarize the main points: orchestration, memory, routing, and metrics."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-072",
+        "sourcePhraseId": "presentation-phrase-072",
+        "term": "The main takeaway is...",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 72,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Головний висновок — це...",
+        "pronunciation": "/ðə meɪn ˈteɪkəweɪ ɪz/",
+        "transcription": "/ðə meɪn ˈteɪkəweɪ ɪz/",
+        "commonAlternatives": [
+          "The key takeaway is",
+          "The main message is",
+          "The key conclusion is"
+        ],
+        "examples": [
+          {
+            "en": "The main takeaway is that cost optimization comes from controlled agent usage."
+          },
+          {
+            "en": "The main takeaway is that we need measurable outcomes, not assumptions."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-073",
+        "sourcePhraseId": "presentation-phrase-073",
+        "term": "To make this practical, I suggest...",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 73,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Щоб зробити це практичним, я пропоную...",
+        "pronunciation": "/tə meɪk ðɪs ˈpræktɪkəl, aɪ səˈdʒest/",
+        "transcription": "/tə meɪk ðɪs ˈpræktɪkəl, aɪ səˈdʒest/",
+        "commonAlternatives": [
+          "I recommend",
+          "The next step should be",
+          "My suggestion is"
+        ],
+        "examples": [
+          {
+            "en": "To make this practical, I suggest starting with a shadow-mode PR review pilot."
+          },
+          {
+            "en": "To make this practical, I suggest measuring cost per accepted finding."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-074",
+        "sourcePhraseId": "presentation-phrase-074",
+        "term": "The next step would be...",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 74,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Наступним кроком буде...",
+        "pronunciation": "/ðə nekst step wʊd biː/",
+        "transcription": "/ðə nekst step wʊd biː/",
+        "commonAlternatives": [
+          "The next step is",
+          "We should start with",
+          "The immediate next action is"
+        ],
+        "examples": [
+          {
+            "en": "The next step would be to define the PR review evaluation harness."
+          },
+          {
+            "en": "The next step would be to collect baseline metrics from historical PRs."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-075",
+        "sourcePhraseId": "presentation-phrase-075",
+        "term": "We can start small and scale gradually.",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 75,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Ми можемо почати з малого і масштабувати поступово.",
+        "pronunciation": "/wi kæn stɑːrt smɔːl ænd skeɪl ˈɡrædʒuəli/",
+        "transcription": "/wi kæn stɑːrt smɔːl ænd skeɪl ˈɡrædʒuəli/",
+        "commonAlternatives": [
+          "Start small",
+          "Scale later",
+          "Begin with an MVP"
+        ],
+        "examples": [
+          {
+            "en": "We can start small and scale gradually after we see real results."
+          },
+          {
+            "en": "We can start small with one repository and expand later."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-076",
+        "sourcePhraseId": "presentation-phrase-076",
+        "term": "I believe this is a low-risk way to validate the value.",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 76,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Я вважаю, що це низькоризиковий спосіб перевірити цінність.",
+        "pronunciation": "/aɪ bɪˈliːv ðɪs ɪz ə loʊ rɪsk weɪ tə ˈvælədeɪt ðə ˈvæljuː/",
+        "transcription": "/aɪ bɪˈliːv ðɪs ɪz ə loʊ rɪsk weɪ tə ˈvælədeɪt ðə ˈvæljuː/",
+        "commonAlternatives": [
+          "This is a safe approach",
+          "This reduces rollout risk",
+          "This is a controlled way to test it"
+        ],
+        "examples": [
+          {
+            "en": "I believe this is a low-risk way to validate the value before full automation."
+          },
+          {
+            "en": "I believe shadow mode is a low-risk way to validate the framework."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-077",
+        "sourcePhraseId": "presentation-phrase-077",
+        "term": "The goal is controlled adoption.",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 77,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Мета — контрольоване впровадження.",
+        "pronunciation": "/ðə ɡoʊl ɪz kənˈtroʊld əˈdɑːpʃən/",
+        "transcription": "/ðə ɡoʊl ɪz kənˈtroʊld əˈdɑːpʃən/",
+        "commonAlternatives": [
+          "The goal is safe rollout",
+          "The goal is gradual adoption",
+          "We need controlled scaling"
+        ],
+        "examples": [
+          {
+            "en": "The goal is controlled adoption based on data."
+          },
+          {
+            "en": "The goal is controlled adoption, not uncontrolled AI usage."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-078",
+        "sourcePhraseId": "presentation-phrase-078",
+        "term": "Thank you for your time.",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 78,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Дякую за ваш час.",
+        "pronunciation": "/θæŋk juː fər jɔːr taɪm/",
+        "transcription": "/θæŋk juː fər jɔːr taɪm/",
+        "commonAlternatives": [
+          "Thank you",
+          "Thanks for listening",
+          "I appreciate your time"
+        ],
+        "examples": [
+          {
+            "en": "Thank you for your time, and I’m happy to take questions."
+          },
+          {
+            "en": "Thank you for your time and attention."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-079",
+        "sourcePhraseId": "presentation-phrase-079",
+        "term": "I’m happy to take any questions.",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 79,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Я з радістю відповім на питання.",
+        "pronunciation": "/aɪm ˈhæpi tə teɪk ˈeni ˈkwestʃənz/",
+        "transcription": "/aɪm ˈhæpi tə teɪk ˈeni ˈkwestʃənz/",
+        "commonAlternatives": [
+          "Happy to answer questions",
+          "I’m open to questions",
+          "Let’s discuss"
+        ],
+        "examples": [
+          {
+            "en": "I’m happy to take any questions about the framework or metrics."
+          },
+          {
+            "en": "I’m happy to take any questions before we close."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-080",
+        "sourcePhraseId": "presentation-phrase-080",
+        "term": "Thanks again, and I’m looking forward to your feedback.",
+        "category": "Presentation Phrases",
+        "section": "Closing and Next Steps / Завершення та наступні кроки",
+        "sequence": 80,
+        "level": "B2",
+        "tag": "8. Closing",
+        "meaning": "Ще раз дякую, чекаю на ваш фідбек.",
+        "pronunciation": "/θæŋks əˈɡen, ænd aɪm ˈlʊkɪŋ ˈfɔːrwərd tə jɔːr ˈfiːdbæk/",
+        "transcription": "/θæŋks əˈɡen, ænd aɪm ˈlʊkɪŋ ˈfɔːrwərd tə jɔːr ˈfiːdbæk/",
+        "commonAlternatives": [
+          "Thanks again",
+          "I’d appreciate your feedback",
+          "Looking forward to feedback"
+        ],
+        "examples": [
+          {
+            "en": "Thanks again, and I’m looking forward to your feedback on the pilot approach."
+          },
+          {
+            "en": "Thanks again, and I’m looking forward to your feedback on the proposed metrics."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-081",
+        "sourcePhraseId": "presentation-phrase-081",
+        "term": "However,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 81,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "Однак...",
+        "pronunciation": "/haʊˈevər/",
+        "transcription": "/haʊˈevər/",
+        "commonAlternatives": [
+          "But",
+          "At the same time",
+          "Still"
+        ],
+        "examples": [
+          {
+            "en": "However, token cost is only one part of the total cost."
+          },
+          {
+            "en": "However, we should not overpromise productivity gains."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-082",
+        "sourcePhraseId": "presentation-phrase-082",
+        "term": "Therefore,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 82,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "Тому...",
+        "pronunciation": "/ˈðerfɔːr/",
+        "transcription": "/ˈðerfɔːr/",
+        "commonAlternatives": [
+          "So",
+          "As a result",
+          "For that reason"
+        ],
+        "examples": [
+          {
+            "en": "Therefore, we need an evaluation harness."
+          },
+          {
+            "en": "Therefore, agents should be event-driven."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-083",
+        "sourcePhraseId": "presentation-phrase-083",
+        "term": "In other words,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 83,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "Іншими словами...",
+        "pronunciation": "/ɪn ˈʌðər wɜːrdz/",
+        "transcription": "/ɪn ˈʌðər wɜːrdz/",
+        "commonAlternatives": [
+          "Put simply",
+          "To put it another way",
+          "Simply put"
+        ],
+        "examples": [
+          {
+            "en": "In other words, memory is also a cost optimization mechanism."
+          },
+          {
+            "en": "In other words, fewer repeated explanations means lower cost."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-084",
+        "sourcePhraseId": "presentation-phrase-084",
+        "term": "For example,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 84,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "Наприклад...",
+        "pronunciation": "/fər ɪɡˈzæmpəl/",
+        "transcription": "/fər ɪɡˈzæmpəl/",
+        "commonAlternatives": [
+          "For instance",
+          "A simple example is",
+          "One example would be"
+        ],
+        "examples": [
+          {
+            "en": "For example, a small UI PR should not trigger a deep architecture review."
+          },
+          {
+            "en": "For example, Figma data can be reused through Design Memory."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-085",
+        "sourcePhraseId": "presentation-phrase-085",
+        "term": "As a result,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 85,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "Як результат...",
+        "pronunciation": "/æz ə rɪˈzʌlt/",
+        "transcription": "/æz ə rɪˈzʌlt/",
+        "commonAlternatives": [
+          "Consequently",
+          "This means",
+          "This leads to"
+        ],
+        "examples": [
+          {
+            "en": "As a result, we reduce model calls and review effort."
+          },
+          {
+            "en": "As a result, reviewers can focus on higher-risk changes."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-086",
+        "sourcePhraseId": "presentation-phrase-086",
+        "term": "On the other hand,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 86,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "З іншого боку...",
+        "pronunciation": "/ɑːn ði ˈʌðər hænd/",
+        "transcription": "/ɑːn ði ˈʌðər hænd/",
+        "commonAlternatives": [
+          "At the same time",
+          "In contrast",
+          "Another angle is"
+        ],
+        "examples": [
+          {
+            "en": "On the other hand, complex DB changes need stronger review."
+          },
+          {
+            "en": "On the other hand, too much automation can create noise."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-087",
+        "sourcePhraseId": "presentation-phrase-087",
+        "term": "More importantly,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 87,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "Що важливіше...",
+        "pronunciation": "/mɔːr ɪmˈpɔːrtəntli/",
+        "transcription": "/mɔːr ɪmˈpɔːrtəntli/",
+        "commonAlternatives": [
+          "Even more important",
+          "The bigger point is",
+          "What matters more"
+        ],
+        "examples": [
+          {
+            "en": "More importantly, we need to measure accepted findings."
+          },
+          {
+            "en": "More importantly, we need to reduce rework, not just token usage."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-088",
+        "sourcePhraseId": "presentation-phrase-088",
+        "term": "To some extent,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 88,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "Певною мірою...",
+        "pronunciation": "/tə səm ɪkˈstent/",
+        "transcription": "/tə səm ɪkˈstent/",
+        "commonAlternatives": [
+          "Partly",
+          "In some cases",
+          "To a degree"
+        ],
+        "examples": [
+          {
+            "en": "To some extent, model cost can be controlled by routing."
+          },
+          {
+            "en": "To some extent, memory reduces repeated discovery."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-089",
+        "sourcePhraseId": "presentation-phrase-089",
+        "term": "In this case,...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 89,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "У цьому випадку...",
+        "pronunciation": "/ɪn ðɪs keɪs/",
+        "transcription": "/ɪn ðɪs keɪs/",
+        "commonAlternatives": [
+          "Here",
+          "For this scenario",
+          "In this situation"
+        ],
+        "examples": [
+          {
+            "en": "In this case, a cheaper model is probably enough."
+          },
+          {
+            "en": "In this case, we should escalate to a stronger model."
+          }
+        ]
+      },
+      {
+        "id": "presentation-word-090",
+        "sourcePhraseId": "presentation-phrase-090",
+        "term": "The point is...",
+        "category": "Presentation Phrases",
+        "section": "Useful Presentation Connectors / Корисні звʼязки між думками",
+        "sequence": 90,
+        "level": "B2",
+        "tag": "9. Connectors",
+        "meaning": "Суть у тому, що...",
+        "pronunciation": "/ðə pɔɪnt ɪz/",
+        "transcription": "/ðə pɔɪnt ɪz/",
+        "commonAlternatives": [
+          "The key point is",
+          "What I mean is",
+          "The message is"
+        ],
+        "examples": [
+          {
+            "en": "The point is not to automate everything."
+          },
+          {
+            "en": "The point is to automate repeatable parts and keep humans in control."
+          }
+        ]
+      }
+    ]
+  }
+}
