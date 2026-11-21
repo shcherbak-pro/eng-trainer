@@ -1,0 +1,27 @@
+
+> english-assessment-trainer-v2@2.0.0 build:site
+> npm run build && npm run build:v1 && npm run assemble && npm run check:site
+
+
+> english-assessment-trainer-v2@2.0.0 build
+> vite build
+
+X [ERROR] Cannot read directory "../../../../..": Access is denied.
+
+X [ERROR] Could not resolve "C:\\Users\\SerhiiShcherbak\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\vite.config.ts"
+
+failed to load config from C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\vite.config.ts
+error during build:
+Error: Build failed with 2 errors:
+error: Cannot read directory "../../../../..": Access is denied.
+error: Could not resolve "C:\\Users\\SerhiiShcherbak\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\vite.config.ts"
+    at failureErrorWithLog (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\node_modules\esbuild\lib\main.js:924:7)
+    at C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12)

@@ -1,0 +1,1060 @@
+{
+  "date": "2026-11-21T10:53:37.233Z",
+  "status": "PASS",
+  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
+  "rows": [
+    {
+      "group": "Original Astra baseline",
+      "engine": "chromium",
+      "version": "151.0.7922.34",
+      "total": 17,
+      "passed": 14,
+      "failed": 3,
+      "evidence": "../eng-v2-01-astra/browser-chromium.json",
+      "failures": [
+        {
+          "name": "failed-initial-read-preserves-populated-database",
+          "failure": "AssertionError [ERR_ASSERTION]: Unhandled application error\n+ actual - expected\n\n+ [\n+   'AbortError'\n+ ]\n- []\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:60"
+        },
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "failure": "AssertionError [ERR_ASSERTION]: Learning C++ must not mark distinct C# learned\n+ actual - expected\n\n  [\n    'review-cpp',\n+   'review-csharp'\n  ]\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:287:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:13"
+        },
+        {
+          "name": "built-in-duplicate-entry-consistency",
+          "failure": "AssertionError [ERR_ASSERTION]: An entry still unlearned in Focus is counted learned in its flashcard topic\n\n'1' !== '0'\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:307:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:363:13"
+        }
+      ],
+      "pageErrors": [
+        {
+          "name": "failed-initial-read-preserves-populated-database",
+          "error": "AbortError"
+        }
+      ],
+      "consoleErrors": [
+        {
+          "name": "content-failure-retry",
+          "error": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        }
+      ],
+      "failedRequests": []
+    },
+    {
+      "group": "Original Astra baseline",
+      "engine": "firefox",
+      "version": "153.0",
+      "total": 17,
+      "passed": 14,
+      "failed": 3,
+      "evidence": "../eng-v2-01-astra/browser-firefox.json",
+      "failures": [
+        {
+          "name": "failed-initial-read-preserves-populated-database",
+          "failure": "AssertionError [ERR_ASSERTION]: Unhandled application error\n+ actual - expected\n\n+ [\n+   'AbortError'\n+ ]\n- []\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:60"
+        },
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "failure": "AssertionError [ERR_ASSERTION]: Learning C++ must not mark distinct C# learned\n+ actual - expected\n\n  [\n    'review-cpp',\n+   'review-csharp'\n  ]\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:287:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:13"
+        },
+        {
+          "name": "built-in-duplicate-entry-consistency",
+          "failure": "AssertionError [ERR_ASSERTION]: An entry still unlearned in Focus is counted learned in its flashcard topic\n\n'1' !== '0'\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:307:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:363:13"
+        }
+      ],
+      "pageErrors": [
+        {
+          "name": "failed-initial-read-preserves-populated-database",
+          "error": "AbortError"
+        }
+      ],
+      "consoleErrors": [
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "failed-open-retry-and-unsaved-mode",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "learning-flows-and-native-speech-api",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "reset-after-failed-write-does-not-revive-progress",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "flashcard-swipe-shuffle-and-topic-reset",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "v1-representative-learning-with-own-storage",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        }
+      ],
+      "failedRequests": [
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "failed-open-retry-and-unsaved-mode",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "learning-flows-and-native-speech-api",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "reset-after-failed-write-does-not-revive-progress",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "flashcard-swipe-shuffle-and-topic-reset",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "v1-representative-learning-with-own-storage",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        }
+      ]
+    },
+    {
+      "group": "Fable RC1 unchanged suite (provided)",
+      "engine": "chromium",
+      "version": "151.0.7922.34",
+      "total": 17,
+      "passed": 16,
+      "failed": 1,
+      "evidence": "../eng-v2-01-rc1-fable/browser-chromium.json",
+      "failures": [
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-astra\\browser-review.mjs:287:128\n    at async file:///c:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "content-failure-retry",
+          "error": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        }
+      ],
+      "failedRequests": []
+    },
+    {
+      "group": "Fable RC1 unchanged suite (provided)",
+      "engine": "firefox",
+      "version": "153.0",
+      "total": 17,
+      "passed": 16,
+      "failed": 1,
+      "evidence": "../eng-v2-01-rc1-fable/browser-firefox.json",
+      "failures": [
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-astra\\browser-review.mjs:287:128\n    at async file:///c:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "failed-open-retry-and-unsaved-mode",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "learning-flows-and-native-speech-api",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "reset-after-failed-write-does-not-revive-progress",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "flashcard-swipe-shuffle-and-topic-reset",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "v1-representative-learning-with-own-storage",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        }
+      ],
+      "failedRequests": [
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "failed-open-retry-and-unsaved-mode",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "learning-flows-and-native-speech-api",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "reset-after-failed-write-does-not-revive-progress",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "flashcard-swipe-shuffle-and-topic-reset",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "v1-representative-learning-with-own-storage",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        }
+      ]
+    },
+    {
+      "group": "Astra RC1 unchanged suite",
+      "engine": "chromium",
+      "version": "151.0.7922.34",
+      "total": 17,
+      "passed": 16,
+      "failed": 1,
+      "evidence": "unchanged/browser-chromium.json",
+      "failures": [
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.original.mjs:287:128\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/browser-review.original.mjs:403:13"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "content-failure-retry",
+          "error": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        }
+      ],
+      "failedRequests": []
+    },
+    {
+      "group": "Astra RC1 unchanged suite",
+      "engine": "firefox",
+      "version": "153.0",
+      "total": 17,
+      "passed": 16,
+      "failed": 1,
+      "evidence": "unchanged/browser-firefox.json",
+      "failures": [
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.original.mjs:287:128\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/browser-review.original.mjs:403:13"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "failed-open-retry-and-unsaved-mode",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "learning-flows-and-native-speech-api",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "reset-after-failed-write-does-not-revive-progress",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "flashcard-swipe-shuffle-and-topic-reset",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "v1-representative-learning-with-own-storage",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        }
+      ],
+      "failedRequests": [
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "failed-open-retry-and-unsaved-mode",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "learning-flows-and-native-speech-api",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "reset-after-failed-write-does-not-revive-progress",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "flashcard-swipe-shuffle-and-topic-reset",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "v1-representative-learning-with-own-storage",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        }
+      ]
+    },
+    {
+      "group": "Astra RC1 corrected complete suite",
+      "engine": "chromium",
+      "version": "151.0.7922.34",
+      "total": 17,
+      "passed": 17,
+      "failed": 0,
+      "evidence": "corrected-final/browser-chromium.json",
+      "failures": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "content-failure-retry",
+          "error": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        }
+      ],
+      "failedRequests": [],
+      "unexpectedConsoleErrors": [],
+      "unexpectedFailedRequests": []
+    },
+    {
+      "group": "Astra RC1 corrected complete suite",
+      "engine": "firefox",
+      "version": "153.0",
+      "total": 17,
+      "passed": 17,
+      "failed": 0,
+      "evidence": "corrected-final/browser-firefox.json",
+      "failures": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "failed-open-retry-and-unsaved-mode",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "learning-flows-and-native-speech-api",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "reset-after-failed-write-does-not-revive-progress",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "flashcard-swipe-shuffle-and-topic-reset",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "v1-representative-learning-with-own-storage",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        }
+      ],
+      "failedRequests": [
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "artifact-paths-navigation-and-mobile-link",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "search-entire-corpus-and-transient-state",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "failed-open-retry-and-unsaved-mode",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "learning-flows-and-native-speech-api",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "distinct-entry-identities-with-similar-display-text",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "reset-after-failed-write-does-not-revive-progress",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "flashcard-swipe-shuffle-and-topic-reset",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        },
+        {
+          "name": "v1-representative-learning-with-own-storage",
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2",
+          "error": "NS_BINDING_ABORTED"
+        }
+      ],
+      "unexpectedConsoleErrors": [],
+      "unexpectedFailedRequests": []
+    },
+    {
+      "group": "Fable supplement (provided)",
+      "engine": "chromium",
+      "version": "151.0.7922.34",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "evidence": "../eng-v2-01-rc1-fable/identity-supplement-chromium.json",
+      "failures": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "group": "Fable supplement (provided)",
+      "engine": "firefox",
+      "version": "153.0",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "evidence": "../eng-v2-01-rc1-fable/identity-supplement-firefox.json",
+      "failures": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "distinct-similar-entries-stay-independent",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "distinct-similar-entries-stay-independent",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "phrase-and-linked-word-are-one-identity",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "phrase-and-linked-word-are-one-identity",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        }
+      ],
+      "failedRequests": []
+    },
+    {
+      "group": "Fable supplement (Astra rerun)",
+      "engine": "chromium",
+      "version": "151.0.7922.34",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "evidence": "fable-supplement/identity-supplement-chromium.json",
+      "failures": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "unexpectedConsoleErrors": [],
+      "unexpectedFailedRequests": []
+    },
+    {
+      "group": "Fable supplement (Astra rerun)",
+      "engine": "firefox",
+      "version": "153.0",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "evidence": "fable-supplement/identity-supplement-firefox.json",
+      "failures": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "distinct-similar-entries-stay-independent",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "distinct-similar-entries-stay-independent",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "phrase-and-linked-word-are-one-identity",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        },
+        {
+          "name": "phrase-and-linked-word-are-one-identity",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        }
+      ],
+      "failedRequests": [],
+      "unexpectedConsoleErrors": [],
+      "unexpectedFailedRequests": []
+    },
+    {
+      "group": "Additional independent Astra scenarios",
+      "engine": "chromium",
+      "version": "151.0.7922.34",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "evidence": "independent-final/independent-chromium.json",
+      "failures": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "unexpectedConsoleErrors": [],
+      "unexpectedFailedRequests": []
+    },
+    {
+      "group": "Additional independent Astra scenarios",
+      "engine": "firefox",
+      "version": "153.0",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "evidence": "independent-final/independent-firefox.json",
+      "failures": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        {
+          "name": "saved-560-card-order-resumes-and-appends-six-identities",
+          "error": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Material Symbols Rounded\" style:normal weight:400..700 stretch:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff2\"]"
+        }
+      ],
+      "failedRequests": [],
+      "unexpectedConsoleErrors": [],
+      "unexpectedFailedRequests": []
+    }
+  ],
+  "artifactFiles": 10,
+  "allTopicTotalsUnchanged": true,
+  "topics": 31
+}

@@ -1,0 +1,1525 @@
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\CHANGELOG.md" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\CHANGELOG.md"
+index 38ce8bf..0f3bb72 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\CHANGELOG.md"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\CHANGELOG.md"
+@@ -17,6 +17,12 @@
+ - Search text, the current page of each list, and the current practice prompt are no longer saved. They are kept while the app is open and start fresh after a reload.
+ - The saved theme is applied when the app has read its settings. Before that, the system theme is shown.
+ - The GitHub Pages workflow builds and publishes both applications as one site. Pull requests to `main` are checked and built without publishing.
++- Flashcards in v2 no longer join entries because their text is the same or similar. Each phrase is one card with its linked Word Index entry, and "I know it" marks only that phrase as learned. The All Vocabulary deck therefore has 566 cards instead of 560: six texts that the material lists under two ids are now two cards each.
++
++### Fixed
++
++- A flashcard could be counted as learned while the same entry was shown as not learned on the Phrases page or in the Focus List, and one answer could mark several entries as learned (review finding F1).
++- An aborted read of the saved progress showed the storage error screen but also left an unhandled error in the browser (review finding F2).
+ 
+ ## 2026-11-11
+ 
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\README.md" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\README.md"
+index 70d7d9f..d58e5c5 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\README.md"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\README.md"
+@@ -35,6 +35,8 @@ The **Flashcards** page shows one word or phrase at a time. The front has the En
+ - **All Vocabulary** studies every word and phrase once. **By Topic** studies one category. The learned status is shared between them and with the **Phrases** page.
+ - **Review learned vocabulary** lists learned items, where **Learn again** returns an item to the deck. **Reset progress** clears the learned items of the selected deck after a confirmation.
+ 
++Each phrase is one card, together with the Word Index entry that is linked to it. A card is learned exactly when its phrase is learned on the **Phrases** page and in the **Focus List**. If the material lists the same or a similar text as two entries (for example `consequently` in Conjunctions and `Consequently, …` in Advanced Linking Words), these are two cards with separate progress.
++
+ Items hidden on the Phrases or Words page are left out of the flashcards.
+ 
+ ## Listening practice
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\docs\\handoffs\\ENG-V2-01.md" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\handoffs\\ENG-V2-01.md"
+index c0ee903..7ecadc2 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\docs\\handoffs\\ENG-V2-01.md"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\handoffs\\ENG-V2-01.md"
+@@ -4,6 +4,8 @@ Preserve v1 as an independent application under `v1/`, turn the root application
+ 
+ Date: 2026-11-21. Status: implemented, development checks pass, **not tested in a browser**.
+ 
++> **Update, corrective iteration ENG-V2-01-RC1 (2026-11-21):** Astra's independent review (`docs/reviews/ENG-V2-01-ASTRA.md`) returned `CHANGES_REQUIRED` with findings F1 and F2. Both are corrected. See [section 10](#10-corrective-iteration-eng-v2-01-rc1). Sections 1 to 9 describe the first iteration and are kept as written; where section 10 gives a newer number or rule, section 10 applies.
++
+ ## 1. Branch and working tree
+ 
+ | Item | Value |
+@@ -272,3 +274,167 @@ The `deploy` job needs the `build` job. Deployments share the concurrency group
+ - [ ] A pull request to `main` runs the job and publishes nothing.
+ - [ ] After merge, one run on `main` uploads one artifact and makes one deployment that serves both applications.
+ - [ ] A manual run from a branch other than `main` does not deploy.
++
++## 10. Corrective iteration ENG-V2-01-RC1
++
++Date: 2026-11-21. Scope: the two confirmed findings of `docs/reviews/ENG-V2-01-ASTRA.md`, nothing else. Status: both corrected, checks pass, native-browser scenarios run in Chromium and Firefox. Ready for re-review.
++
++Not changed in this iteration: `v1/`, the module structure, the database schema, the workflow, dependencies and lockfiles. v2 still uses no `localStorage`. Astra's report and evidence under `docs/reviews/` were not edited.
++
++### 10.1 F1 — flashcard identity
++
++**Root cause.** `buildFlashcards` created cards by display text with punctuation and case removed. Phrases with the same normalized text shared one card, and a word-index entry could join a card by text. The card then carried several ids (`learnIds`): "I know it" saved all of them, and the card counted as learned when any one of them was learned. The Phrases page and the Focus List check one id each, so the views disagreed, and distinct entries such as `C++` and `C#` were learned together.
++
++**Correction.** Identity now comes from dataset ids and the explicit link only:
++
++| Rule | Detail |
++|---|---|
++| One phrase, one card | The card id is the phrase id. Phrases are never joined by text. |
++| Linked word-index entry | An entry whose `sourcePhraseId` names an existing phrase belongs to that phrase's card. This is the only way an entry joins a phrase. |
++| Word-index entry without a phrase | No `sourcePhraseId`, or one that names no phrase: the entry is its own card, and the card id is its word-index id. |
++| Learned | A card is learned exactly when its own id is in `learnedPhrases`. For a phrase card that is the phrase id, the same id the Phrases page and the Focus List use. A linked word-index id is never written as progress. |
++| Hidden | A card is left out when its phrase is hidden or one of its linked word-index entries is hidden. Unchanged. |
++| One id, one card | If the content ever repeats an id, the first entry keeps the card and the later one gets none, so two cards cannot share progress. A catalog test keeps the built-in content free of this. |
++
++The `Flashcard` type lost `phraseIds` and `learnIds`. It now has `phraseId` (one id or `null`) and `wordIds`. The page saves, relearns and resets with `card.id`. Text normalization is still used in one place, to decide whether a pronunciation hint differs from the term; it no longer takes part in identity.
++
++**Visible effect.** In the built-in content six texts exist under two phrase ids each. They were one card each and are now two cards each, so All Vocabulary has 566 cards instead of 560:
++
++| Text | Ids (category) |
++|---|---|
++| From my perspective, … | `phrase-005` (Start answer), `hedging-005-from-my-perspective` (Hedging Phrases) |
++| That being said, … | `phrase-013` (Contrast), `advanced-linking-008-that-being-said` (Advanced Linking Words) |
++| consequently / Consequently, … | `phrase-084` (Conjunctions), `advanced-linking-004-consequently` (Advanced Linking Words) |
++| As a result,... / As a result, … | `presentation-phrase-085` (Presentation Phrases), `advanced-linking-009-as-a-result` (Advanced Linking Words) |
++| More importantly,... / More importantly, … | `presentation-phrase-087` (Presentation Phrases), `advanced-linking-012-more-importantly` (Advanced Linking Words) |
++| To some extent,... / To some extent, … | `presentation-phrase-088` (Presentation Phrases), `hedging-008-to-some-extent` (Hedging Phrases) |
++
++All 566 word-index entries of the built-in content name an existing phrase, one entry per phrase, so every card is a phrase card today.
++
++### 10.2 F2 — aborted read transaction
++
++**Root cause.** `readAll` in `src/storage/database.ts` awaited the requests first and awaited `tx.done` only afterwards. When the transaction aborted, the request await rejected, the function left through `catch`, and the rejection of `tx.done` had no handler. A second gap had the same effect: a request issued just before a failing one was not tracked.
++
++**Correction.** The completion promise is tracked when the transaction is created, every request is tracked when it is issued, and one `Promise.all` awaits all of them. On failure, a shared helper `releaseAfterFailure` aborts the transaction if it is still open and attaches handlers to the promises of that one transaction. The first error is still the one reported, wrapped in `StorageError('read' | 'write')`. The write path uses the same helper; its behavior is unchanged.
++
++Unchanged and re-verified: the storage error screen, **Try again**, **Continue without saving**, and the rule that a failed read connects nothing to storage, so defaults cannot overwrite data that was not read.
++
++### 10.3 Changed files
++
++Compared with the SHA-256 inventory in Astra's `candidate.json` (127 files): 12 files changed, 115 unchanged, none under `v1/`.
++
++| File | Change |
++|---|---|
++| `src/features/flashcards/flashcards.ts` | Identity by id and `sourcePhraseId`; no text merging |
++| `src/features/flashcards/types.ts` | `phraseId` and `wordIds`; identity rules documented |
++| `src/features/flashcards/FlashcardsPage.svelte` | Three calls use `card.id` |
++| `src/storage/database.ts` | Read transaction handling; shared `releaseAfterFailure` |
++| `src/features/flashcards/flashcards.test.ts` | Updated and new tests, see 10.4 |
++| `src/features/flashcards/FlashcardsPage.test.ts` | Updated and new tests, see 10.4 |
++| `src/app/App.test.ts` | Four new tests, see 10.4 |
++| `src/state/progress.test.ts` | One new test |
++| `src/content/catalog.test.ts` | Two new tests |
++| `src/test/database.ts` | Helpers: asynchronous read abort, unhandled-rejection watcher |
++| `README.md`, `CHANGELOG.md` | Flashcard identity and the two fixes described |
++
++Also changed or added, outside that inventory: this handoff, and the new evidence folder `docs/reviews/eng-v2-01-rc1-fable/`.
++
++### 10.4 Regression tests
++
++`npm test` went from 96 to 118 tests.
++
++**Case A, shipped entries `phrase-084` and `advanced-linking-004-consequently`**
++
++- `App.test.ts`: mark the first learned, add the second to Focus, reload. Focus and Phrases show the second as not learned. Advanced Linking Words has 0 learned and an empty review list, Conjunctions and All Vocabulary have 1 learned (`consequently`). The database holds `learnedPhrases: ['phrase-084']` only.
++- `flashcards.test.ts`: the two are separate cards with one topic each; every built-in entry whose text exists under another id is its own card.
++
++**Case B, Astra's fixture `review-cpp` (`C++`) and `review-csharp` (`C#`)**
++
++- `App.test.ts`: two phrase cards and two flashcards. Learning `C++` saves only `review-cpp`. After a reload `C#` is still to learn on Phrases and on Flashcards, and can then be learned on its own.
++- `flashcards.test.ts`: entries that differ only in punctuation or case are separate cards; identical text under two ids is two cards.
++- `FlashcardsPage.test.ts`: the fixture entry `p4` is now `Good morning!` next to `p1` `Good morning`. Learning one leaves the other to learn, also after a reload.
++
++**Case C, explicit phrase and word-index link**
++
++- `flashcards.test.ts`: a linked entry joins its phrase card even when the texts differ; an entry with the same text and no link does not join; a link to a missing phrase makes a separate card; several entries linked to one phrase stay on that card; a phrase card is not learned through its word-index id; a card without a phrase is learned through its own id; repeated ids never produce two cards.
++- `App.test.ts`: "I know it" on the first built-in card saves the phrase id and no word-index id. Phrases shows it learned; unlearning it there returns it to the deck; hiding the linked word-index entry removes exactly that one card.
++- `catalog.test.ts`: phrase and word-index ids are unique together; every `sourcePhraseId` names an existing phrase.
++
++**F2**
++
++- `progress.test.ts`: a read transaction that is aborted asynchronously from a successful request (the same injection Astra used, on the in-memory IndexedDB). Startup rejects with `StorageError('read')`, no unhandled rejection occurs, the database is unchanged, a change made afterwards is not saved, and a second `initState()` loads the saved progress and settings. This test failed before the correction with one unhandled `DOMException`.
++- `App.test.ts`: the same abort at application level. The storage error screen appears, no unhandled rejection occurs, the database is unchanged, and **Try again** restores the saved screen, learned state and theme.
++
++**Existing tests that changed, and why.** Tests that asserted the old merging now assert the corrected rule: "merges the same text listed in two categories", "never shows the same vocabulary item twice" (it required unique texts), "keeps the learned status the same in every topic deck", and the page tests whose counts and learned ids followed from the merged `Good morning` card (3 cards and `['p1', 'p4']` became 4 cards and `['p1']`). No interaction, deck, hidden-state or reload test was removed. The page suite has 27 tests (was 26) and the logic suite 44 (was 30).
++
++### 10.5 Commands and results
++
++Windows 11, Node 24.18.0, npm 11.17.0. Logs: `docs/reviews/eng-v2-01-rc1-fable/logs/`.
++
++| Command | Result |
++|---|---|
++| `npm run check` | 207 files, 0 errors, 0 warnings |
++| `npm test` | 5 files, 118 tests passed, no unhandled errors |
++| `npm run check:v1` | 189 files, 0 errors, 0 warnings |
++| `npm run test:v1` | 3 files, 68 tests passed |
++| `npm run build:site` | v2 build (154 modules), v1 build (143 modules), assembly and structural check passed |
++
++`npm run build:site` includes `npm run build`. The browser runs below used the `site-dist/` produced by this run.
++
++### 10.6 Native browser outcomes
++
++Tooling: Astra's `browser-review.mjs` and `browser-support.mjs`, unmodified, with Playwright 1.62.1 installed in a temporary folder outside the repository. Browsers: Chromium 151.0.7922.34 and Firefox 153.0, headless, isolated contexts. Target: the assembled `site-dist/` served by Astra's static server. New evidence is in `docs/reviews/eng-v2-01-rc1-fable/`; Astra's evidence folder was not written to.
++
++Astra's full suite, 17 scenario groups per engine:
++
++| Scenario | Review | Now (both engines) |
++|---|---|---|
++| `failed-initial-read-preserves-populated-database` (F2) | FAIL | **PASS**. The first transaction is recorded as `readonly:abort`, no page error, no write, database unchanged, Retry loads the saved state |
++| `built-in-duplicate-entry-consistency` (F1) | FAIL | **PASS**. Focus shows the entry unlearned, topic learned count 0, review list empty, database `['phrase-084']` |
++| `distinct-entry-identities-with-similar-display-text` (F1) | FAIL | **FAIL as scripted, behavior corrected.** See below |
++| The other 14 groups | PASS | PASS |
++
++Totals: 16 of 17 in Chromium and 16 of 17 in Firefox, with no uncaught page error in any scenario.
++
++**The remaining FAIL.** That scenario presses "I know it" once and then waits for the heading "Deck complete" before it reads the database. The heading appeared in the review only because `C++` and `C#` were one card. With two cards the deck continues with `C#`, so the wait times out and the scenario never reaches its own assertion. Its recording shows the corrected behavior: `cardCount` is 2, and the only learned write is `["review-cpp"]` with the remaining sequence `["review-csharp"]`. The script was left as it is. For re-review, the wait in that scenario needs to target the next card instead of "Deck complete".
++
++To cover what that scenario could not reach, `docs/reviews/eng-v2-01-rc1-fable/identity-supplement.mjs` runs three scenarios with the same server, instrumentation and fixture. All three pass in both engines:
++
++| Supplemental scenario | What it asserts |
++|---|---|
++| `distinct-similar-entries-stay-independent` | Astra's `C++`/`C#` fixture: two cards; learning `C++` saves `['review-cpp']` and does not complete the deck; after reload only `C++` is learned on Phrases, Flashcards and in the review list; `C#` is then learned on its own; unlearning `C++` on Phrases returns only that card |
++| `built-in-duplicate-counts-agree-in-every-deck` | Case A in Focus, Advanced Linking Words (0 learned), Conjunctions (1), All Vocabulary (1 of 566); then learning the Focus entry from its own card saves exactly its id |
++| `phrase-and-linked-word-are-one-identity` | Case C: one answer saves the phrase id and no word-index id; Phrases agrees after reload; unlearning returns the card; hiding the linked word-index entry removes one card |
++
++Run it the same way as Astra's script:
++
++```text
++node docs/reviews/eng-v2-01-rc1-fable/identity-supplement.mjs <candidate-root> <tools-directory-containing-node_modules> <evidence-directory>
++```
++
++In Firefox the supplement records, and does not fail on, a console message about an interrupted download of the icon font from `fonts.gstatic.com` when a page is reloaded. Any other console error fails a supplemental scenario.
++
++Evidence files: `browser-chromium.json`, `browser-firefox.json` and `astra-suite-run.log` (Astra's suite), `identity-supplement-chromium.json` and `identity-supplement-firefox.json` (supplement), `artifact.json` (hashes of the tested `site-dist/`), two screenshots of the remaining FAIL, and `logs/`.
++
++### 10.7 Remaining limitations
++
++1. **Astra's `C++`/`C#` scenario still reports FAIL** for the reason in 10.6. The behavior it was written to check is verified by its own recording and by the supplement.
++2. **Six texts appear twice in All Vocabulary** (table in 10.1). This follows from treating separate ids as separate learning entries. The dataset has no field that declares two phrases to be one entry. If they should be one, the content needs an explicit link or the duplicates need to be removed from the content; neither is part of this iteration.
++3. **Phrase ids and word-index ids share one id space** in `learnedPhrases` and in card ids. The built-in content keeps them unique, a catalog test checks this, and the card builder refuses a second card for an id.
++4. **The unit-level read-abort regression uses the in-memory IndexedDB.** The abort itself is asynchronous and real for that implementation. The native check is Astra's scenario, which passes in both engines.
++5. Still not tested, as in the review: Safari and WebKit, real mobile devices, audible speech, natural quota exhaustion, abrupt termination during a write, several tabs, Node 22 on Ubuntu, an actual GitHub Actions run and a live Pages deployment.
++6. Sections 7 and 8 of this handoff still apply.
++
++### 10.8 Git state
++
++| Item | Value |
++|---|---|
++| Branch | `feature/eng-v2-01-modular-foundation`, local only |
++| HEAD | `45564ca` (unchanged) |
++| Index | empty; nothing staged |
++| Commits, stashes, pushes | none |
++| Tracked changes | 11 modified, 40 deleted (the old `src/App.svelte` and `src/lib/**`): the same 51 paths as at the review |
++| Untracked | `docs/`, `package-lock.json`, `scripts/`, `src/app/`, `src/content/`, `src/features/`, `src/shared/`, `src/state/`, `src/storage/`, `src/test/`, `v1/` |
++| Ignored build output | `dist/`, `v1/dist/`, `site-dist/`, both `node_modules/` |
++
++Both lockfiles are unchanged since the review and still have to be committed with the implementation.
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\app\\App.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\app\\App.test.ts"
+index 882a806..0774526 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\app\\App.test.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\app\\App.test.ts"
+@@ -1,7 +1,13 @@
+ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+ import realMaterials from '../../public/data/materials.json';
+ import { PAGE_LABELS } from './navigation';
+-import { readDatabase, resetDatabase, seedDatabase } from '../test/database';
++import {
++  abortReadTransactions,
++  readDatabase,
++  resetDatabase,
++  seedDatabase,
++  watchUnhandledRejections
++} from '../test/database';
+ 
+ /**
+  * Smoke tests of the application shell in jsdom: startup order, every screen
+@@ -16,6 +22,8 @@ type RunningApp = {
+ };
+ 
+ let running: RunningApp[] = [];
++/** Undo functions for failures injected by a test. They always run after the test. */
++let cleanups: (() => void)[] = [];
+ 
+ function text(root: ParentNode = document.body): string {
+   return (root.textContent ?? '').replace(/\s+/g, ' ').trim();
+@@ -76,6 +84,67 @@ function type(app: RunningApp, input: HTMLInputElement, value: string): void {
+   app.flush();
+ }
+ 
++function phraseCard(app: RunningApp, heading: string): HTMLElement {
++  const match = [...app.root.querySelectorAll<HTMLElement>('.phrase-card')].find((card) => text(card.querySelector('h3')!) === heading);
++  if (!match) throw new Error(`No phrase card "${heading}". Cards: ${[...app.root.querySelectorAll('.phrase-card h3')].map((item) => text(item)).join(' | ')}`);
++  return match;
++}
++
++function press(app: RunningApp, root: ParentNode, label: string): void {
++  // A text button can end with an icon name, for example "I know it arrow_forward".
++  const match = [...root.querySelectorAll<HTMLButtonElement>('button')].find(
++    (item) => item.getAttribute('aria-label') === label || text(item) === label || text(item).startsWith(`${label} `)
++  );
++  if (!match) throw new Error(`No button "${label}"`);
++  match.click();
++  app.flush();
++}
++
++function hasButton(root: ParentNode, label: string): boolean {
++  return root.querySelector(`button[aria-label="${label}"]`) !== null;
++}
++
++function choose(app: RunningApp, select: HTMLSelectElement, value: string): void {
++  select.value = value;
++  select.dispatchEvent(new Event('change', { bubbles: true }));
++  app.flush();
++}
++
++/** Selects a flashcard deck: a topic name, or "all" for All Vocabulary. */
++function openDeck(app: RunningApp, topic: string): void {
++  if (topic === 'all') {
++    press(app, app.root, 'All Vocabulary');
++    return;
++  }
++  press(app, app.root, 'By Topic');
++  choose(app, app.root.querySelector<HTMLSelectElement>('.flashcards-deck select')!, topic);
++}
++
++/** Learned and total card counts of the open deck, as its progress bar reports them. */
++function deckCounts(app: RunningApp): { learned: number; total: number } {
++  const bar = app.root.querySelector('[role="progressbar"]')!;
++  return { learned: Number(bar.getAttribute('aria-valuenow')), total: Number(bar.getAttribute('aria-valuemax')) };
++}
++
++function reviewedTexts(app: RunningApp): string[] {
++  return [...app.root.querySelectorAll('.flashcards-review__text strong')].map((item) => text(item));
++}
++
++function frontText(app: RunningApp): string {
++  return text(app.root.querySelector('.flashcard__term') ?? document.createElement('span'));
++}
++
++async function reload(app: RunningApp): Promise<RunningApp> {
++  await app.saved();
++  app.close();
++  running = running.filter((item) => item !== app);
++  window.location.hash = '';
++
++  const next = await startApp();
++  await ready(next);
++  return next;
++}
++
+ beforeEach(() => {
+   resetDatabase();
+   window.localStorage.clear();
+@@ -87,6 +156,8 @@ beforeEach(() => {
+ });
+ 
+ afterEach(() => {
++  cleanups.forEach((undo) => undo());
++  cleanups = [];
+   running.forEach((app) => app.close());
+   running = [];
+   vi.unstubAllGlobals();
+@@ -194,7 +265,178 @@ describe('application shell', () => {
+   });
+ });
+ 
++describe('learning identity across Phrases, Focus and Flashcards', () => {
++  it('keeps "consequently" and "Consequently, …" apart in every view, also after a reload', async () => {
++    let app = await startApp();
++    await ready(app);
++    open(app, 'phrases');
++    type(app, app.root.querySelector<HTMLInputElement>('.controls-filter-stack input')!, 'consequently');
++
++    // phrase-084 is learned. advanced-linking-004-consequently goes to the Focus List.
++    press(app, phraseCard(app, 'consequently'), 'Mark as learned');
++    press(app, phraseCard(app, 'Consequently, …'), 'Add to Focus List');
++
++    app = await reload(app);
++
++    open(app, 'favorites');
++    const focused = phraseCard(app, 'Consequently, …');
++    expect(focused.classList.contains('learned')).toBe(false);
++    expect(hasButton(focused, 'Mark as learned')).toBe(true);
++    expect(hasButton(focused, 'Mark as not learned')).toBe(false);
++
++    open(app, 'phrases');
++    type(app, app.root.querySelector<HTMLInputElement>('.controls-filter-stack input')!, 'consequently');
++    expect(phraseCard(app, 'consequently').classList.contains('learned')).toBe(true);
++    expect(phraseCard(app, 'Consequently, …').classList.contains('learned')).toBe(false);
++
++    open(app, 'flashcards');
++    openDeck(app, 'Advanced Linking Words');
++    expect(deckCounts(app).learned).toBe(0);
++    press(app, app.root, 'Review learned vocabulary');
++    expect(reviewedTexts(app)).toEqual([]);
++
++    openDeck(app, 'Conjunctions');
++    expect(deckCounts(app).learned).toBe(1);
++    expect(reviewedTexts(app)).toEqual(['consequently']);
++
++    openDeck(app, 'all');
++    expect(deckCounts(app)).toEqual({ learned: 1, total: realMaterials.phrases.length });
++    expect(reviewedTexts(app)).toEqual(['consequently']);
++
++    await app.saved();
++    const saved = await readDatabase();
++    expect(saved.progress.learnedPhrases).toEqual(['phrase-084']);
++    expect(saved.progress.favoritePhrases).toEqual(['advanced-linking-004-consequently']);
++  });
++
++  it('keeps distinct entries with similar-looking text independent: C++ and C#', async () => {
++    const fixture = {
++      ...realMaterials,
++      phrases: [
++        { id: 'review-cpp', category: 'Languages', phrase: 'C++', translation: 'Language C++', example: 'C++ templates' },
++        { id: 'review-csharp', category: 'Languages', phrase: 'C#', translation: 'Language C#', example: 'C# records' }
++      ],
++      wordIndex: [],
++      blocks: [{ id: 'review-languages', title: 'Languages', type: 'phraseCategory', category: 'Languages', description: '' }]
++    };
++    vi.stubGlobal(
++      'fetch',
++      vi.fn(async () => new Response(JSON.stringify(fixture), { status: 200 }))
++    );
++
++    let app = await startApp();
++    await ready(app);
++    open(app, 'phrases');
++    expect([...app.root.querySelectorAll('.phrase-card h3')].map((item) => text(item))).toEqual(['C++', 'C#']);
++
++    open(app, 'flashcards');
++    expect(deckCounts(app)).toEqual({ learned: 0, total: 2 });
++    expect(frontText(app)).toBe('C++');
++
++    press(app, app.root, 'I know it');
++    await waitFor(() => frontText(app) === 'C#', 'the next card');
++    expect(deckCounts(app)).toEqual({ learned: 1, total: 2 });
++    await app.saved();
++    expect((await readDatabase()).progress.learnedPhrases).toEqual(['review-cpp']);
++
++    app = await reload(app);
++
++    open(app, 'phrases');
++    expect(phraseCard(app, 'C++').classList.contains('learned')).toBe(true);
++    expect(phraseCard(app, 'C#').classList.contains('learned')).toBe(false);
++    expect(hasButton(phraseCard(app, 'C#'), 'Mark as learned')).toBe(true);
++
++    open(app, 'flashcards');
++    expect(deckCounts(app)).toEqual({ learned: 1, total: 2 });
++    expect(frontText(app)).toBe('C#');
++
++    // The other entry can be learned on its own.
++    press(app, app.root, 'I know it');
++    await waitFor(() => text(app.root).includes('Deck complete'), 'the completed deck');
++    await app.saved();
++    expect((await readDatabase()).progress.learnedPhrases).toEqual(['review-cpp', 'review-csharp']);
++  });
++
++  it('treats a phrase and its linked word-index entry as one learning identity: the phrase id', async () => {
++    const phrase = realMaterials.phrases[0];
++    const linkedWord = realMaterials.wordIndex.find((item) => item.sourcePhraseId === phrase.id)!;
++    expect(linkedWord).toBeDefined();
++
++    let app = await startApp();
++    await ready(app);
++    open(app, 'flashcards');
++    expect(deckCounts(app)).toEqual({ learned: 0, total: realMaterials.phrases.length });
++    expect(frontText(app)).toBe(phrase.phrase);
++
++    press(app, app.root, 'I know it');
++    await waitFor(() => frontText(app) === realMaterials.phrases[1].phrase, 'the next card');
++    await app.saved();
++
++    // One id is saved: the phrase id. The word-index id is not a second record of the same progress.
++    const saved = await readDatabase();
++    expect(saved.progress.learnedPhrases).toEqual([phrase.id]);
++    expect(JSON.stringify(saved)).not.toContain(linkedWord.id);
++
++    app = await reload(app);
++
++    // Learned on Flashcards means learned on Phrases.
++    open(app, 'phrases');
++    expect(phraseCard(app, phrase.phrase).classList.contains('learned')).toBe(true);
++
++    // Unlearned on Phrases means back in the flashcard deck.
++    press(app, phraseCard(app, phrase.phrase), 'Mark as not learned');
++    open(app, 'flashcards');
++    expect(deckCounts(app)).toEqual({ learned: 0, total: realMaterials.phrases.length });
++    await app.saved();
++    expect((await readDatabase()).progress.learnedPhrases).toEqual([]);
++
++    // Hiding the linked word-index entry takes exactly this one card out of the deck.
++    open(app, 'wordIndex');
++    type(app, app.root.querySelector<HTMLInputElement>('.controls-filter-stack input')!, linkedWord.term);
++    const wordButton = [...app.root.querySelectorAll<HTMLButtonElement>('.index-list button')].find(
++      (item) => text(item.querySelector('strong')!) === linkedWord.term
++    )!;
++    wordButton.click();
++    app.flush();
++    press(app, app.root.querySelector('.word-card')!, 'Hide item');
++    open(app, 'flashcards');
++    expect(deckCounts(app)).toEqual({ learned: 0, total: realMaterials.phrases.length - 1 });
++  });
++});
++
+ describe('loading and storage errors', () => {
++  it('handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state', async () => {
++    const seeded = {
++      progress: { learnedPhrases: [realMaterials.phrases[0].id] },
++      settings: { theme: 'dark', activePage: 'phrases' }
++    };
++    await seedDatabase(seeded);
++    const rejections = watchUnhandledRejections();
++    const removeFailure = abortReadTransactions();
++    cleanups.push(removeFailure);
++
++    const app = await startApp();
++    await waitFor(() => app.root.querySelector('.error-card') !== null, 'the storage error');
++    removeFailure();
++
++    expect(app.root.querySelector('.app-shell')).toBeNull();
++    expect(text(app.root)).toContain('Unable to open your saved progress');
++    expect(text(app.root)).toMatch(/IndexedDB read failed/);
++    expect(await rejections.stop()).toEqual([]);
++    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
++
++    [...app.root.querySelectorAll('button')].find((item) => text(item) === 'Try again')!.click();
++    await ready(app);
++
++    expect(text(app.root.querySelector('.hero h1')!)).toBe('Phrases');
++    expect(phraseCard(app, realMaterials.phrases[0].phrase).classList.contains('learned')).toBe(true);
++    expect(app.root.querySelector('.theme-toggle')!.getAttribute('aria-label')).toContain('Theme: Dark');
++    expect(app.root.querySelector('.storage-notice')).toBeNull();
++
++    await app.saved();
++    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
++  });
++
+   it('shows an error and a retry when the content cannot be loaded', async () => {
+     vi.stubGlobal(
+       'fetch',
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\content\\catalog.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\content\\catalog.test.ts"
+index 4079f72..fc905e4 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\content\\catalog.test.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\content\\catalog.test.ts"
+@@ -20,6 +20,21 @@ describe('built-in content catalog', () => {
+     }
+   });
+ 
++  it('uses ids that are unique across phrases and word-index entries together', () => {
++    // Flashcards take their id from a phrase or from a word-index entry, and the
++    // learned list holds those ids, so the two lists share one id space.
++    const ids = [...catalog.phrases, ...catalog.wordIndex].map((item) => item.id);
++
++    expect(duplicates(ids)).toEqual([]);
++  });
++
++  it('links word-index entries only to phrases that exist', () => {
++    const phraseIds = new Set(catalog.phrases.map((item) => item.id));
++    const broken = catalog.wordIndex.filter((item) => item.sourcePhraseId && !phraseIds.has(item.sourcePhraseId));
++
++    expect(broken.map((item) => item.id)).toEqual([]);
++  });
++
+   it('exposes all built-in material', () => {
+     const source = realMaterials as Materials;
+ 
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\FlashcardsPage.svelte" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\FlashcardsPage.svelte"
+index 9cf3133..55c487b 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\FlashcardsPage.svelte"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\FlashcardsPage.svelte"
+@@ -129,7 +129,7 @@
+         ? `End of the deck. Starting again with the ${plural(next.order.length, 'card')} you are still learning.`
+         : '';
+ 
+-      progress.saveFlashcardSession(targetDeckKey, next, choice === 'know' ? card.learnIds : []);
++      progress.saveFlashcardSession(targetDeckKey, next, choice === 'know' ? [card.id] : []);
+     };
+ 
+     busy = true;
+@@ -164,7 +164,7 @@
+   }
+ 
+   function learnAgain(card: Flashcard): void {
+-    progress.relearnFlashcards(card.learnIds);
++    progress.relearnFlashcards([card.id]);
+   }
+ 
+   function resetDeck(): void {
+@@ -179,7 +179,7 @@
+ 
+     progress.resetFlashcardDeck(
+       currentDeckKey,
+-      deck.learned.flatMap((card) => card.learnIds)
++      deck.learned.map((card) => card.id)
+     );
+     view = 'learn';
+     notice = '';
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\FlashcardsPage.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\FlashcardsPage.test.ts"
+index 9c3d0b3..381af0c 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\FlashcardsPage.test.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\FlashcardsPage.test.ts"
+@@ -18,13 +18,14 @@ const materials = {
+     { id: 'p1', category: 'Greetings', phrase: 'Good morning', translation: 'Доброго ранку', transcription: '/ɡʊd ˈmɔːrnɪŋ/', example: 'Good morning, team.' },
+     { id: 'p2', category: 'Greetings', phrase: 'See you later', translation: 'Побачимось пізніше' },
+     { id: 'p3', category: 'Work', phrase: 'dig into', translation: 'заглибитися' },
+-    { id: 'p4', category: 'Work', phrase: 'Good morning', translation: 'Доброго ранку' }
++    // Differs from p1 only in punctuation. It is a separate entry with its own progress.
++    { id: 'p4', category: 'Work', phrase: 'Good morning!', translation: 'Доброго ранку!' }
+   ],
+   wordIndex: [
+     { id: 'w1', sourcePhraseId: 'p1', term: 'Good morning', category: 'Greetings', meaning: 'Доброго ранку', pronunciation: '', examples: [{ en: 'Good morning, team.', ua: 'Доброго ранку, командо.' }] },
+     { id: 'w2', sourcePhraseId: 'p2', term: 'See you later', category: 'Greetings', meaning: 'Побачимось пізніше', pronunciation: '', examples: [] },
+     { id: 'w3', sourcePhraseId: 'p3', term: 'dig into', category: 'Work', meaning: 'заглибитися', pronunciation: '', examples: [] },
+-    { id: 'w4', sourcePhraseId: 'p4', term: 'Good morning', category: 'Work', meaning: 'Доброго ранку', pronunciation: '', examples: [] }
++    { id: 'w4', sourcePhraseId: 'p4', term: 'Good morning!', category: 'Work', meaning: 'Доброго ранку!', pronunciation: '', examples: [] }
+   ]
+ } as Materials;
+ 
+@@ -162,8 +163,8 @@ describe('Flashcards page', () => {
+     expect(page.root.querySelectorAll('.flashcard')).toHaveLength(1);
+     expect(frontText(page)).toBe('Good morning');
+     expect(text(page, '.flashcard__transcription')).toBe('/ɡʊd ˈmɔːrnɪŋ/');
+-    // 4 phrases + 4 word-index entries are 3 different vocabulary items.
+-    expect(stats(page)).toBe('3 remaining 0 learned Card 1 of 3');
++    // 4 phrases, each with its linked word-index entry, are 4 cards.
++    expect(stats(page)).toBe('4 remaining 0 learned Card 1 of 4');
+     expect(isFlipped(page)).toBe(false);
+   });
+ 
+@@ -189,9 +190,11 @@ describe('Flashcards page', () => {
+       click(page, 'I know it');
+       finishAnswer(page);
+ 
+-      expect(page.state().learnedPhrases).toEqual(['p1', 'p4']);
++      // Only the card's own id is saved: not the linked word-index id (w1) and
++      // not the similar-looking entry (p4).
++      expect(page.state().learnedPhrases).toEqual(['p1']);
+       expect(frontText(page)).toBe('See you later');
+-      expect(stats(page)).toBe('2 remaining 1 learned Card 1 of 2');
++      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
+     });
+ 
+     it('"Keep learning" keeps the card in the pool and brings it back later', async () => {
+@@ -202,17 +205,21 @@ describe('Flashcards page', () => {
+ 
+       expect(page.state().learnedPhrases).toEqual([]);
+       expect(frontText(page)).toBe('See you later');
+-      expect(stats(page)).toBe('3 remaining 0 learned Card 2 of 3');
++      expect(stats(page)).toBe('4 remaining 0 learned Card 2 of 4');
+ 
+       click(page, 'I know it');
+       finishAnswer(page);
++      expect(frontText(page)).toBe('dig into');
++      click(page, 'Keep learning');
++      finishAnswer(page);
++      expect(frontText(page)).toBe('Good morning!');
+       click(page, 'Keep learning');
+       finishAnswer(page);
+ 
+       // End of the deck: the cards still being learned come round again.
+       expect(frontText(page)).toBe('Good morning');
+-      expect(stats(page)).toBe('2 remaining 1 learned Card 1 of 2');
+-      expect(text(page, '[role="status"]')).toContain('Starting again with the 2 cards');
++      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
++      expect(text(page, '[role="status"]')).toContain('Starting again with the 3 cards');
+     });
+ 
+     it('always starts the next card on the front side', async () => {
+@@ -233,7 +240,7 @@ describe('Flashcards page', () => {
+       press(page, 'ArrowRight');
+       finishAnswer(page);
+ 
+-      expect(page.state().learnedPhrases).toEqual(['p1', 'p4']);
++      expect(page.state().learnedPhrases).toEqual(['p1']);
+       expect(frontText(page)).toBe('See you later');
+     });
+ 
+@@ -296,7 +303,7 @@ describe('Flashcards page', () => {
+       swipe(page, 160);
+       finishAnswer(page);
+ 
+-      expect(page.state().learnedPhrases).toEqual(['p1', 'p4']);
++      expect(page.state().learnedPhrases).toEqual(['p1']);
+       expect(frontText(page)).toBe('See you later');
+     });
+ 
+@@ -308,7 +315,7 @@ describe('Flashcards page', () => {
+ 
+       expect(page.state().learnedPhrases).toEqual([]);
+       expect(frontText(page)).toBe('See you later');
+-      expect(stats(page)).toBe('3 remaining 0 learned Card 2 of 3');
++      expect(stats(page)).toBe('4 remaining 0 learned Card 2 of 4');
+     });
+ 
+     it('does nothing when the swipe is too short', async () => {
+@@ -319,7 +326,7 @@ describe('Flashcards page', () => {
+ 
+       expect(page.state().learnedPhrases).toEqual([]);
+       expect(frontText(page)).toBe('Good morning');
+-      expect(stats(page)).toBe('3 remaining 0 learned Card 1 of 3');
++      expect(stats(page)).toBe('4 remaining 0 learned Card 1 of 4');
+     });
+ 
+     it('does nothing on a vertical move, so the page can scroll', async () => {
+@@ -350,29 +357,58 @@ describe('Flashcards page', () => {
+       selectTopic(page, 'Work');
+ 
+       expect(stats(page)).toBe('2 remaining 0 learned Card 1 of 2');
+-      expect(frontText(page)).toBe('Good morning');
++      expect(frontText(page)).toBe('dig into');
+ 
+       click(page, 'Keep learning');
+       finishAnswer(page);
+-      expect(frontText(page)).toBe('dig into');
++      expect(frontText(page)).toBe('Good morning!');
+     });
+ 
+-    it('shares the learned status between topic decks and All Vocabulary', async () => {
++    it('shares the learned status between a topic deck and All Vocabulary', async () => {
+       const page = await openPage();
+ 
+-      // "Good morning" is in both topics. Learn it in "Work".
++      // Learn "dig into" in its topic.
+       selectTopic(page, 'Work');
+       click(page, 'I know it');
+       finishAnswer(page);
++      expect(page.state().learnedPhrases).toEqual(['p3']);
+       expect(stats(page)).toBe('1 remaining 1 learned Card 1 of 1');
+ 
+-      selectTopic(page, 'Greetings');
++      click(page, 'All Vocabulary');
++      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
++
++      click(page, 'Review learned vocabulary');
++      expect(page.root.querySelectorAll('.flashcards-review__list li')).toHaveLength(1);
++      expect(text(page, '.flashcards-review__list')).toContain('dig into');
++    });
++
++    it('keeps entries that look alike apart: learning one does not mark the other', async () => {
++      const page = await openPage();
++
++      // "Good morning!" (p4, Work) looks like "Good morning" (p1, Greetings).
++      selectTopic(page, 'Work');
++      click(page, 'Keep learning');
++      finishAnswer(page);
++      expect(frontText(page)).toBe('Good morning!');
++      click(page, 'I know it');
++      finishAnswer(page);
++
++      expect(page.state().learnedPhrases).toEqual(['p4']);
+       expect(stats(page)).toBe('1 remaining 1 learned Card 1 of 1');
+-      expect(frontText(page)).toBe('See you later');
++
++      // "Good morning" is still to learn in its own topic and in All Vocabulary.
++      selectTopic(page, 'Greetings');
++      expect(stats(page)).toBe('2 remaining 0 learned Card 1 of 2');
++      expect(frontText(page)).toBe('Good morning');
+ 
+       click(page, 'All Vocabulary');
+-      expect(stats(page)).toBe('2 remaining 1 learned Card 1 of 2');
+-      expect(frontText(page)).toBe('See you later');
++      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
++      expect(frontText(page)).toBe('Good morning');
++
++      click(page, 'Review learned vocabulary');
++      expect(page.root.querySelectorAll('.flashcards-review__list li')).toHaveLength(1);
++      expect(text(page, '.flashcards-review__text')).toContain('Good morning!');
++      await page.saved();
+     });
+ 
+     it('shows a completed state when every card of the deck is learned', async () => {
+@@ -426,9 +462,14 @@ describe('Flashcards page', () => {
+       const reloaded = await openPage();
+ 
+       expect(reloaded.root.querySelector('select')!.value).toBe('Work');
+-      expect(reloaded.state().learnedPhrases).toEqual(['p3']);
+-      expect(frontText(reloaded)).toBe('Good morning');
++      expect(reloaded.state().learnedPhrases).toEqual(['p4']);
++      expect(frontText(reloaded)).toBe('dig into');
+       expect(stats(reloaded)).toBe('1 remaining 1 learned Card 1 of 1');
++
++      // The entry that only looks like the learned one is still to learn after the reload.
++      selectTopic(reloaded, 'Greetings');
++      expect(stats(reloaded)).toBe('2 remaining 0 learned Card 1 of 2');
++      expect(frontText(reloaded)).toBe('Good morning');
+     });
+ 
+     it('resumes in the middle of a round after a reload', async () => {
+@@ -443,7 +484,7 @@ describe('Flashcards page', () => {
+       const reloaded = await openPage();
+ 
+       expect(frontText(reloaded)).toBe('See you later');
+-      expect(stats(reloaded)).toBe('3 remaining 0 learned Card 2 of 3');
++      expect(stats(reloaded)).toBe('4 remaining 0 learned Card 2 of 4');
+     });
+ 
+     it('respects items already marked as learned on the Phrases page', async () => {
+@@ -451,10 +492,10 @@ describe('Flashcards page', () => {
+ 
+       const page = await openPage();
+ 
+-      expect(stats(page)).toBe('2 remaining 1 learned Card 1 of 2');
++      expect(stats(page)).toBe('3 remaining 1 learned Card 1 of 3');
+       click(page, 'I know it');
+       finishAnswer(page);
+-      expect(page.state().learnedPhrases).toEqual(['p2', 'p1', 'p4']);
++      expect(page.state().learnedPhrases).toEqual(['p2', 'p1']);
+       expect(page.state().favoritePhrases).toEqual(['p2']);
+     });
+   });
+@@ -473,12 +514,12 @@ describe('Flashcards page', () => {
+ 
+       expect(page.state().learnedPhrases).toEqual([]);
+       expect(page.root.querySelectorAll('.flashcards-review__list li')).toHaveLength(0);
+-      expect(stats(page)).toBe('3 remaining 0 learned');
++      expect(stats(page)).toBe('4 remaining 0 learned');
+ 
+       click(page, 'Back to flashcards');
+       // The restored card is reintroduced at the end of the review sequence.
+       expect(frontText(page)).toBe('See you later');
+-      expect(stats(page)).toBe('3 remaining 0 learned Card 1 of 3');
++      expect(stats(page)).toBe('4 remaining 0 learned Card 1 of 4');
+     });
+ 
+     it('resets the progress of the selected topic only after confirmation', async () => {
+@@ -487,8 +528,6 @@ describe('Flashcards page', () => {
+ 
+       // Learn "dig into" (Work) and "See you later" (Greetings).
+       selectTopic(page, 'Work');
+-      click(page, 'Keep learning');
+-      finishAnswer(page);
+       click(page, 'I know it');
+       finishAnswer(page);
+       selectTopic(page, 'Greetings');
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\flashcards.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\flashcards.test.ts"
+index 29045a5..b3aa5db 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\flashcards.test.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\flashcards.test.ts"
+@@ -52,21 +52,19 @@ describe('buildFlashcards', () => {
+   const cards = buildFlashcards(materials);
+   const byId = new Map(cards.map((card) => [card.id, card]));
+ 
+-  it('creates one card when a phrase and a word-index entry are the same item', () => {
+-    expect(cards.map((card) => card.id)).toEqual(['p1', 'p2', 'p4', 'w5']);
+-    expect(byId.get('p2')).toMatchObject({ phraseIds: ['p2'], wordIds: ['w2'] });
++  it('creates one card for a phrase and the word-index entry linked to it', () => {
++    expect(cards.map((card) => card.id)).toEqual(['p1', 'p2', 'p3', 'p4', 'w5']);
++    expect(byId.get('p2')).toMatchObject({ phraseId: 'p2', wordIds: ['w2'] });
+   });
+ 
+-  it('merges the same text listed in two categories into one card with both topics', () => {
+-    const card = byId.get('p1')!;
+-    expect(card.topics).toEqual(['Start answer', 'Hedging']);
+-    expect(card.phraseIds).toEqual(['p1', 'p3']);
+-    expect(card.wordIds).toEqual(['w1', 'w3']);
+-    expect(card.learnIds).toEqual(['p1', 'p3']);
++  it('keeps the same text listed under two ids as two cards, each with its own topic', () => {
++    // "From my perspective, …" and "From my perspective" differ only in punctuation.
++    expect(byId.get('p1')).toMatchObject({ phraseId: 'p1', wordIds: ['w1'], topics: ['Start answer'] });
++    expect(byId.get('p3')).toMatchObject({ phraseId: 'p3', wordIds: ['w3'], topics: ['Hedging'] });
+   });
+ 
+   it('keeps word-index entries without a phrase as their own cards', () => {
+-    expect(byId.get('w5')).toMatchObject({ text: 'standalone word', learnIds: ['w5'], topics: ['AI'] });
++    expect(byId.get('w5')).toMatchObject({ text: 'standalone word', phraseId: null, wordIds: ['w5'], topics: ['AI'] });
+   });
+ 
+   it('fills the card from both sources', () => {
+@@ -92,25 +90,178 @@ describe('buildFlashcards', () => {
+   });
+ });
+ 
++describe('card identity', () => {
++  const ids = (list: { id: string }[]) => list.map((card) => card.id);
++
++  it('does not join entries whose text differs only in punctuation or case', () => {
++    const cards = buildFlashcards({
++      phrases: [
++        phrase('review-cpp', 'C++', 'Languages'),
++        phrase('review-csharp', 'C#', 'Languages'),
++        phrase('lower', 'consequently', 'Conjunctions'),
++        phrase('upper', 'Consequently, …', 'Linking')
++      ],
++      wordIndex: []
++    });
++
++    expect(ids(cards)).toEqual(['review-cpp', 'review-csharp', 'lower', 'upper']);
++    expect(cards.map((card) => card.text)).toEqual(['C++', 'C#', 'consequently', 'Consequently, …']);
++    expect(cards.map((card) => card.topics)).toEqual([['Languages'], ['Languages'], ['Conjunctions'], ['Linking']]);
++  });
++
++  it('learning one of two similar-looking entries leaves the other one to learn', () => {
++    const cards = buildFlashcards({
++      phrases: [phrase('review-cpp', 'C++', 'Languages'), phrase('review-csharp', 'C#', 'Languages')],
++      wordIndex: []
++    });
++    const summary = summarizeDeck(cards, { ...noProgress, learnedPhrases: ['review-cpp'] });
++
++    expect(ids(summary.learned)).toEqual(['review-cpp']);
++    expect(ids(summary.learning)).toEqual(['review-csharp']);
++  });
++
++  it('does not join identical text listed under two phrase ids', () => {
++    const cards = buildFlashcards({
++      phrases: [phrase('a', 'That being said, …', 'Contrast'), phrase('b', 'That being said, …', 'Linking')],
++      wordIndex: [
++        word('wa', 'That being said, …', 'Contrast', { sourcePhraseId: 'a' }),
++        word('wb', 'That being said, …', 'Linking', { sourcePhraseId: 'b' })
++      ]
++    });
++
++    expect(cards.map((card) => [card.id, card.phraseId, card.wordIds, card.topics])).toEqual([
++      ['a', 'a', ['wa'], ['Contrast']],
++      ['b', 'b', ['wb'], ['Linking']]
++    ]);
++  });
++
++  it('joins a word-index entry to its phrase through sourcePhraseId only, also when the texts differ', () => {
++    const cards = buildFlashcards({
++      phrases: [phrase('p', 'dig into', 'AI')],
++      wordIndex: [word('w', 'to dig into something', 'AI', { sourcePhraseId: 'p' })]
++    });
++
++    expect(cards).toHaveLength(1);
++    expect(cards[0]).toMatchObject({ id: 'p', text: 'dig into', phraseId: 'p', wordIds: ['w'] });
++  });
++
++  it('does not join a word-index entry to a phrase because the text is the same', () => {
++    const cards = buildFlashcards({
++      phrases: [phrase('p', 'dig into', 'AI')],
++      wordIndex: [word('w', 'dig into', 'AI')]
++    });
++
++    expect(cards.map((card) => [card.id, card.phraseId, card.wordIds])).toEqual([
++      ['p', 'p', []],
++      ['w', null, ['w']]
++    ]);
++  });
++
++  it('makes a word-index entry its own card when its sourcePhraseId names no phrase', () => {
++    const cards = buildFlashcards({
++      phrases: [phrase('p', 'dig into', 'AI')],
++      wordIndex: [word('w', 'dig into', 'AI', { sourcePhraseId: 'removed-phrase' })]
++    });
++
++    expect(cards.map((card) => [card.id, card.phraseId, card.wordIds])).toEqual([
++      ['p', 'p', []],
++      ['w', null, ['w']]
++    ]);
++  });
++
++  it('keeps every word-index entry linked to one phrase on that phrase card', () => {
++    const cards = buildFlashcards({
++      phrases: [phrase('p', 'dig into', 'AI')],
++      wordIndex: [word('w1', 'dig into', 'AI', { sourcePhraseId: 'p' }), word('w2', 'dig', 'Verbs', { sourcePhraseId: 'p' })]
++    });
++
++    expect(cards).toHaveLength(1);
++    expect(cards[0]).toMatchObject({ id: 'p', phraseId: 'p', wordIds: ['w1', 'w2'], topics: ['AI', 'Verbs'] });
++  });
++
++  it('a phrase card is learned through the phrase id only, never through its linked word-index id', () => {
++    const cards = buildFlashcards({
++      phrases: [phrase('p', 'dig into', 'AI')],
++      wordIndex: [word('w', 'dig into', 'AI', { sourcePhraseId: 'p' })]
++    });
++
++    expect(ids(summarizeDeck(cards, { ...noProgress, learnedPhrases: ['w'] }).learned)).toEqual([]);
++    expect(ids(summarizeDeck(cards, { ...noProgress, learnedPhrases: ['p'] }).learned)).toEqual(['p']);
++  });
++
++  it('a card without a phrase is learned through its own word-index id', () => {
++    const cards = buildFlashcards({ phrases: [], wordIndex: [word('w', 'standalone', 'AI')] });
++
++    expect(ids(summarizeDeck(cards, { ...noProgress, learnedPhrases: ['w'] }).learned)).toEqual(['w']);
++  });
++
++  it('never creates two cards with one id', () => {
++    const cards = buildFlashcards({
++      phrases: [phrase('same', 'first', 'A'), phrase('same', 'second', 'B')],
++      wordIndex: [word('same', 'third', 'C'), word('own', 'fourth', 'C'), word('own', 'fifth', 'C')]
++    });
++
++    expect(cards.map((card) => [card.id, card.text])).toEqual([
++      ['same', 'first'],
++      ['own', 'fourth']
++    ]);
++  });
++});
++
+ describe('buildFlashcards with the real dataset', () => {
+   const real = realMaterials as unknown as Materials;
+   const cards = buildFlashcards(real);
++  const byId = new Map(cards.map((card) => [card.id, card]));
+ 
+-  it('never shows the same vocabulary item twice', () => {
++  it('creates exactly one card per phrase, in dataset order, with unique ids', () => {
+     const ids = cards.map((card) => card.id);
+-    const texts = cards.map((card) => card.text.toLowerCase());
+ 
+     expect(new Set(ids).size).toBe(ids.length);
+-    expect(new Set(texts).size).toBe(texts.length);
+-    expect(cards.length).toBeLessThanOrEqual(real.phrases.length);
+-    expect(cards.length).toBeGreaterThan(0);
++    expect(ids).toEqual(real.phrases.map((item) => item.id));
++    expect(cards.every((card) => card.phraseId === card.id)).toBe(true);
+   });
+ 
+   it('accounts for every phrase and word-index entry exactly once', () => {
+-    expect(cards.flatMap((card) => card.phraseIds).sort()).toEqual(real.phrases.map((item) => item.id).sort());
++    expect(cards.flatMap((card) => (card.phraseId ? [card.phraseId] : [])).sort()).toEqual(real.phrases.map((item) => item.id).sort());
+     expect(cards.flatMap((card) => card.wordIds).sort()).toEqual(real.wordIndex.map((item) => item.id).sort());
+   });
+ 
++  it('puts every word-index entry on the card of the phrase it names in sourcePhraseId', () => {
++    for (const item of real.wordIndex) {
++      expect(byId.get(item.sourcePhraseId ?? '')?.wordIds, item.id).toContain(item.id);
++    }
++  });
++
++  it('keeps "consequently" and "Consequently, …" as two cards with separate progress', () => {
++    const lower = byId.get('phrase-084')!;
++    const linking = byId.get('advanced-linking-004-consequently')!;
++
++    expect(lower).toMatchObject({ text: 'consequently', topics: ['Conjunctions'] });
++    expect(linking).toMatchObject({ text: 'Consequently, …', topics: ['Advanced Linking Words'] });
++
++    const progress = { ...noProgress, learnedPhrases: ['phrase-084'] };
++    const linkingDeck = summarizeDeck(filterDeck(cards, 'topic', 'Advanced Linking Words'), progress);
++    const conjunctionsDeck = summarizeDeck(filterDeck(cards, 'topic', 'Conjunctions'), progress);
++    const allDeck = summarizeDeck(cards, progress);
++
++    expect(linkingDeck.learned).toEqual([]);
++    expect(linkingDeck.learning).toContain(linking);
++    expect(conjunctionsDeck.learned).toEqual([lower]);
++    expect(allDeck.learned).toEqual([lower]);
++  });
++
++  it('shows every entry whose text also exists under another id as its own card', () => {
++    const plain = (text: string) => text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
++    const idsByText = new Map<string, string[]>();
++    for (const item of real.phrases) idsByText.set(plain(item.phrase), [...(idsByText.get(plain(item.phrase)) ?? []), item.id]);
++    const sharedText = [...idsByText.values()].filter((group) => group.length > 1).flat();
++
++    // The built-in content has such entries, and none of them is folded into another card.
++    expect(sharedText).toContain('phrase-084');
++    expect(sharedText).toContain('advanced-linking-004-consequently');
++    for (const id of sharedText) expect(byId.get(id)?.topics, id).toHaveLength(1);
++  });
++
+   it('gives every card a translation and at least one topic from the dataset categories', () => {
+     const categories = new Set(real.phrases.map((item) => item.category));
+ 
+@@ -127,13 +278,13 @@ describe('deck filtering', () => {
+   const cards = buildFlashcards(materials);
+ 
+   it('All Vocabulary contains every card once', () => {
+-    expect(filterDeck(cards, 'all', '').map((card) => card.id)).toEqual(['p1', 'p2', 'p4', 'w5']);
++    expect(filterDeck(cards, 'all', '').map((card) => card.id)).toEqual(['p1', 'p2', 'p3', 'p4', 'w5']);
+   });
+ 
+   it('By Topic contains only the cards of that topic', () => {
+     expect(getTopics(cards)).toEqual(['AI', 'Hedging', 'Start answer']);
+     expect(filterDeck(cards, 'topic', 'AI').map((card) => card.id)).toEqual(['p2', 'w5']);
+-    expect(filterDeck(cards, 'topic', 'Hedging').map((card) => card.id)).toEqual(['p1', 'p4']);
++    expect(filterDeck(cards, 'topic', 'Hedging').map((card) => card.id)).toEqual(['p3', 'p4']);
+     expect(filterDeck(cards, 'topic', 'Start answer').map((card) => card.id)).toEqual(['p1']);
+     expect(filterDeck(cards, 'topic', 'Unknown topic')).toEqual([]);
+   });
+@@ -150,36 +301,43 @@ describe('summarizeDeck', () => {
+ 
+   it('starts with every card in the learning pool', () => {
+     const summary = summarizeDeck(cards, noProgress);
+-    expect(ids(summary.learning)).toEqual(['p1', 'p2', 'p4', 'w5']);
++    expect(ids(summary.learning)).toEqual(['p1', 'p2', 'p3', 'p4', 'w5']);
+     expect(summary.learned).toEqual([]);
+     expect(summary.hiddenCount).toBe(0);
+   });
+ 
+   it('excludes learned cards from the learning pool', () => {
+     const summary = summarizeDeck(cards, { ...noProgress, learnedPhrases: ['p2'] });
+-    expect(ids(summary.learning)).toEqual(['p1', 'p4', 'w5']);
++    expect(ids(summary.learning)).toEqual(['p1', 'p3', 'p4', 'w5']);
+     expect(ids(summary.learned)).toEqual(['p2']);
+   });
+ 
+-  it('keeps the learned status the same in All Vocabulary and in every topic deck', () => {
+-    // The card was learned through its "Hedging" entry (phrase p3).
++  it('keeps the learned status the same in All Vocabulary and in the topic deck of the card, and nowhere else', () => {
++    // "From my perspective" (p3, Hedging) is learned. "From my perspective, …" (p1, Start answer) is not.
+     const progress = { ...noProgress, learnedPhrases: ['p3'] };
+ 
+-    expect(ids(summarizeDeck(filterDeck(cards, 'all', ''), progress).learned)).toEqual(['p1']);
+-    expect(ids(summarizeDeck(filterDeck(cards, 'topic', 'Hedging'), progress).learned)).toEqual(['p1']);
+-    expect(ids(summarizeDeck(filterDeck(cards, 'topic', 'Start answer'), progress).learned)).toEqual(['p1']);
++    expect(ids(summarizeDeck(filterDeck(cards, 'all', ''), progress).learned)).toEqual(['p3']);
++    expect(ids(summarizeDeck(filterDeck(cards, 'topic', 'Hedging'), progress).learned)).toEqual(['p3']);
++    expect(ids(summarizeDeck(filterDeck(cards, 'topic', 'Start answer'), progress).learned)).toEqual([]);
++    expect(ids(summarizeDeck(filterDeck(cards, 'topic', 'Start answer'), progress).learning)).toEqual(['p1']);
+     expect(ids(summarizeDeck(filterDeck(cards, 'topic', 'AI'), progress).learned)).toEqual([]);
+   });
+ 
+   it('leaves out items hidden on the Phrases or Words page', () => {
+     const summary = summarizeDeck(cards, { learnedPhrases: [], hiddenPhrases: ['p4'], hiddenWords: ['w5'] });
+-    expect(ids(summary.learning)).toEqual(['p1', 'p2']);
++    expect(ids(summary.learning)).toEqual(['p1', 'p2', 'p3']);
+     expect(summary.hiddenCount).toBe(2);
+   });
+ 
++  it('leaves out a phrase card when its linked word-index entry is hidden, and only that card', () => {
++    const summary = summarizeDeck(cards, { learnedPhrases: [], hiddenPhrases: [], hiddenWords: ['w3'] });
++    expect(ids(summary.learning)).toEqual(['p1', 'p2', 'p4', 'w5']);
++    expect(summary.hiddenCount).toBe(1);
++  });
++
+   it('ignores stale ids that are not in the dataset any more', () => {
+     const summary = summarizeDeck(cards, { learnedPhrases: ['removed'], hiddenPhrases: ['gone'], hiddenWords: [] });
+-    expect(summary.learning).toHaveLength(4);
++    expect(summary.learning).toHaveLength(5);
+   });
+ });
+ 
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\flashcards.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\flashcards.ts"
+index ed2eaec..a50ee9a 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\flashcards.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\flashcards.ts"
+@@ -17,8 +17,12 @@ export const SWIPE_THRESHOLD = 90;
+ /** Horizontal distance in pixels after which a pointer move becomes a drag. */
+ const DRAG_START_DISTANCE = 10;
+ 
+-/** Lower-cased text without punctuation, used to recognise the same item twice. */
+-export function normalizeTerm(value: unknown): string {
++/**
++ * Lower-cased text without punctuation. It is used only to tell whether a
++ * pronunciation hint says more than the term itself. It never decides which
++ * entries belong to one card: identity comes from dataset ids alone.
++ */
++function normalizeTerm(value: unknown): string {
+   return String(value ?? '')
+     .toLowerCase()
+     .replace(/[^\p{L}\p{N}]+/gu, ' ')
+@@ -49,29 +53,31 @@ function createCard(id: string, text: string): Flashcard {
+     examples: [],
+     alternatives: [],
+     topics: [],
+-    phraseIds: [],
+-    wordIds: [],
+-    learnIds: []
++    phraseId: null,
++    wordIds: []
+   };
+ }
+ 
+-function mergePhrase(card: Flashcard, phrase: Phrase): void {
+-  card.phraseIds.push(phrase.id);
++/** A card for exactly one phrase. */
++function createPhraseCard(phrase: Phrase): Flashcard {
++  const card = createCard(phrase.id, phrase.phrase);
++  const examples = cleanExamples(phrase.examples);
++
++  card.phraseId = phrase.id;
+   addTopic(card, phrase.category);
+-  card.translation ||= phrase.translation ?? '';
+-  card.transcription ||= phrase.transcription ?? '';
+-  card.section ??= phrase.section;
+-  card.level ??= phrase.level;
+-  card.tag ??= phrase.tag;
+-
+-  if (!card.alternatives.length) card.alternatives = normalizeAlternatives(phrase.commonAlternatives);
+-  if (!card.examples.length) {
+-    const examples = cleanExamples(phrase.examples);
+-    card.examples = examples.length ? examples : phrase.example ? [{ en: phrase.example }] : [];
+-  }
++  card.translation = phrase.translation ?? '';
++  card.transcription = phrase.transcription ?? '';
++  card.section = phrase.section;
++  card.level = phrase.level;
++  card.tag = phrase.tag;
++  card.alternatives = normalizeAlternatives(phrase.commonAlternatives);
++  card.examples = examples.length ? examples : phrase.example ? [{ en: phrase.example }] : [];
++
++  return card;
+ }
+ 
+-function mergeWord(card: Flashcard, word: WordIndexItem): void {
++/** Adds a word-index entry to the card it belongs to: its phrase's card, or its own. */
++function addWord(card: Flashcard, word: WordIndexItem): void {
+   const isFirstWord = card.wordIds.length === 0;
+   card.wordIds.push(word.id);
+   addTopic(card, word.category);
+@@ -102,48 +108,49 @@ function mergeWord(card: Flashcard, word: WordIndexItem): void {
+ /**
+  * Builds the flashcard list from the existing vocabulary data.
+  *
++ * - Every phrase is one card. The card id is the phrase id.
+  * - A word-index entry that points to a phrase (`sourcePhraseId`) joins that phrase's card.
+- * - Items with the same text (for example the same phrase listed in two categories)
+- *   share one card that belongs to both topics.
++ * - A word-index entry without a phrase in the dataset is its own card. The card id is its id.
++ * - Entries are never joined because their text is equal or similar. The same
++ *   text listed under two ids is two cards with separate progress.
+  * - Card ids come from the dataset ids, never from array positions.
+  */
+ export function buildFlashcards(materials: Pick<Materials, 'phrases' | 'wordIndex'>): Flashcard[] {
+   const cards: Flashcard[] = [];
+-  const cardByTerm = new Map<string, Flashcard>();
++  const cardById = new Map<string, Flashcard>();
+   const cardByPhraseId = new Map<string, Flashcard>();
+ 
++  // An id that is already a card is not used for a second card: two cards
++  // with one id would share their progress. The catalog tests keep the
++  // built-in content free of such ids.
++  const addCard = (card: Flashcard): void => {
++    cards.push(card);
++    cardById.set(card.id, card);
++  };
++
+   const phrases = Array.isArray(materials?.phrases) ? materials.phrases : [];
+   const words = Array.isArray(materials?.wordIndex) ? materials.wordIndex : [];
+ 
+   for (const phrase of phrases) {
+     if (!phrase || typeof phrase.id !== 'string' || !phrase.id || !phrase.phrase) continue;
++    if (cardById.has(phrase.id)) continue;
+ 
+-    const term = normalizeTerm(phrase.phrase) || phrase.id;
+-    let card = cardByTerm.get(term);
+-    if (!card) {
+-      card = createCard(phrase.id, phrase.phrase);
+-      cards.push(card);
+-      cardByTerm.set(term, card);
+-    }
++    const card = createPhraseCard(phrase);
++    addCard(card);
+     cardByPhraseId.set(phrase.id, card);
+-    mergePhrase(card, phrase);
+   }
+ 
+   for (const word of words) {
+     if (!word || typeof word.id !== 'string' || !word.id || !word.term) continue;
+ 
+-    const term = normalizeTerm(word.term) || word.id;
+-    let card = (word.sourcePhraseId ? cardByPhraseId.get(word.sourcePhraseId) : undefined) ?? cardByTerm.get(term);
++    // The explicit link is the only way a word-index entry joins a phrase.
++    let card = word.sourcePhraseId ? cardByPhraseId.get(word.sourcePhraseId) : undefined;
+     if (!card) {
++      if (cardById.has(word.id)) continue;
+       card = createCard(word.id, word.term);
+-      cards.push(card);
+-      cardByTerm.set(term, card);
++      addCard(card);
+     }
+-    mergeWord(card, word);
+-  }
+-
+-  for (const card of cards) {
+-    card.learnIds = card.phraseIds.length ? [...card.phraseIds] : [...card.wordIds];
++    addWord(card, word);
+   }
+ 
+   return cards;
+@@ -167,7 +174,12 @@ export function filterDeck(cards: Flashcard[], mode: FlashcardMode, topic: strin
+   return cards.filter((card) => card.topics.includes(topic));
+ }
+ 
+-/** Splits a deck into cards still being learned and cards already learned. */
++/**
++ * Splits a deck into cards still being learned and cards already learned.
++ *
++ * A card is learned when its own id is in the learned list. That is the same
++ * id and the same list the Phrases page and the Focus List use.
++ */
+ export function summarizeDeck(cards: Flashcard[], progress: FlashcardProgress): DeckSummary {
+   const learnedIds = new Set(progress.learnedPhrases);
+   const hiddenPhrases = new Set(progress.hiddenPhrases);
+@@ -177,11 +189,11 @@ export function summarizeDeck(cards: Flashcard[], progress: FlashcardProgress):
+ 
+   for (const card of cards) {
+     const hidden =
+-      card.phraseIds.some((id) => hiddenPhrases.has(id)) || card.wordIds.some((id) => hiddenWords.has(id));
++      (card.phraseId !== null && hiddenPhrases.has(card.phraseId)) || card.wordIds.some((id) => hiddenWords.has(id));
+ 
+     if (hidden) {
+       summary.hiddenCount += 1;
+-    } else if (card.learnIds.some((id) => learnedIds.has(id))) {
++    } else if (learnedIds.has(card.id)) {
+       summary.learned.push(card);
+     } else {
+       summary.learning.push(card);
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\types.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\types.ts"
+index dc36f4f..985111e 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\types.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\types.ts"
+@@ -7,11 +7,20 @@ export type { FlashcardMode, FlashcardSession };
+ /**
+  * One vocabulary item shown as a flashcard.
+  *
+- * Cards are derived from the existing `phrases` and `wordIndex` datasets.
+- * A phrase and the word-index entry that mirrors it become a single card.
++ * Identity comes from the dataset only:
++ * - every phrase is one card, and the card id is the phrase id;
++ * - a word-index entry that names a phrase in `sourcePhraseId` belongs to that
++ *   phrase's card;
++ * - a word-index entry without such a phrase is its own card, and the card id
++ *   is the word-index id.
++ *
++ * Two entries with different ids are never one card, however similar their
++ * text is. The card id is also the id saved as "learned", so a phrase is
++ * learned on the Flashcards page exactly when it is learned on the Phrases page
++ * and in the Focus List.
+  */
+ export type Flashcard = {
+-  /** Stable identifier: the phrase id, or the word-index id for word-only items. */
++  /** The phrase id, or the word-index id for a card without a phrase. */
+   id: string;
+   text: string;
+   translation: string;
+@@ -19,17 +28,15 @@ export type Flashcard = {
+   transcription: string;
+   examples: WordExample[];
+   alternatives: string[];
+-  /** Dataset categories this item belongs to. Usually one. */
++  /** Categories of the phrase and of its linked word-index entries. Usually one. */
+   topics: string[];
+   section?: string;
+   level?: string;
+   tag?: string;
+-  /** Phrase ids merged into this card. */
+-  phraseIds: string[];
+-  /** Word-index ids merged into this card. */
++  /** The phrase this card shows, or `null` for a word-index entry without a phrase. */
++  phraseId: string | null;
++  /** The word-index entries of this card: linked through `sourcePhraseId`, or the entry itself. */
+   wordIds: string[];
+-  /** Ids stored in the progress store when the card is marked as learned. */
+-  learnIds: string[];
+ };
+ 
+ /** The two answers a learner can give for a card. */
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\state\\progress.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\state\\progress.test.ts"
+index e4a4491..e8d961a 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\state\\progress.test.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\state\\progress.test.ts"
+@@ -1,6 +1,6 @@
+ import { get } from 'svelte/store';
+ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+-import { readDatabase, resetDatabase, seedDatabase } from '../test/database';
++import { abortReadTransactions, readDatabase, resetDatabase, seedDatabase, watchUnhandledRejections } from '../test/database';
+ 
+ /** Starts the state services from the database, the same way a page load does. */
+ async function loadState() {
+@@ -345,6 +345,44 @@ describe('storage failures', () => {
+     expect(await readDatabase()).toMatchObject({ progress: { learnedPhrases: ['phrase-001'] }, settings: { theme: 'dark' } });
+   });
+ 
++  it('handles a read transaction that aborts by itself: no unhandled rejection, no overwrite, and a retry loads the saved state', async () => {
++    const seeded = { progress: { learnedPhrases: ['phrase-001'] }, settings: { theme: 'dark', activePage: 'phrases' } };
++    await seedDatabase(seeded);
++    const rejections = watchUnhandledRejections();
++    const removeFailure = abortReadTransactions();
++
++    vi.resetModules();
++    const state = await import('./index');
++    const persistence = await import('./persistence');
++
++    let failure: unknown;
++    try {
++      await state.initState();
++    } catch (error) {
++      failure = error;
++    } finally {
++      removeFailure();
++    }
++
++    expect(failure).toMatchObject({ name: 'StorageError', operation: 'read' });
++    expect(String((failure as Error).message)).toMatch(/abort/i);
++    expect(await rejections.stop()).toEqual([]);
++
++    // Nothing was loaded and nothing is connected, so nothing can be overwritten.
++    expect(get(state.progress).learnedPhrases).toEqual([]);
++    state.progress.toggleLearnedPhrase('phrase-777');
++    await persistence.persistenceSettled();
++    expect(get(persistence.saveStatus).state).not.toBe('saved');
++    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
++
++    // "Try again" after the failure is gone: the saved state replaces what is in memory.
++    await state.initState();
++
++    expect(get(state.progress).learnedPhrases).toEqual(['phrase-001']);
++    expect(get(state.settings)).toMatchObject({ theme: 'dark', activePage: 'phrases' });
++    expect(await readDatabase()).toEqual({ ...seeded, learnPasses: {}, flashcardSessions: {} });
++  });
++
+   it('reports an initialization failure when the database cannot be opened', async () => {
+     vi.spyOn(indexedDB, 'open').mockImplementation(() => {
+       throw new DOMException('Simulated open failure', 'SecurityError');
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\storage\\database.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\storage\\database.ts"
+index b4ae85f..8d57148 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\storage\\database.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\storage\\database.ts"
+@@ -51,22 +51,70 @@ export interface AppStorage {
+   close(): void;
+ }
+ 
++/**
++ * Cleans up a transaction after its first failure has been caught.
++ *
++ * The caught error is the one that is reported to the caller, wrapped in a
++ * `StorageError`. What is released here are only the consequences of that same
++ * failure: the transaction is aborted if it is still open (a request that could
++ * not even be issued does not abort it by itself), and the other requests and
++ * the completion promise of this transaction, which now reject too, get a
++ * handler so they do not surface as unhandled rejections. Promises of other
++ * transactions are never touched.
++ */
++function releaseAfterFailure(
++  tx: IDBPTransaction<unknown, StoreName[], IDBTransactionMode> | undefined,
++  pending: Promise<unknown>[]
++): void {
++  if (!tx) return;
++
++  try {
++    tx.abort();
++  } catch {
++    // The transaction has already finished or was aborted by the browser.
++  }
++
++  for (const promise of [...pending, tx.done]) promise.catch(() => undefined);
++}
++
+ function createStorage(db: IDBPDatabase): AppStorage {
+   return {
+     async readAll() {
++      let tx: IDBPTransaction<unknown, StoreName[], 'readonly'> | undefined;
++      const pending: Promise<unknown>[] = [];
++
+       try {
+-        const tx = db.transaction(STORE_NAMES, 'readonly');
+-        const stores = await Promise.all(
+-          STORE_NAMES.map(async (name) => {
+-            const store = tx.objectStore(name);
+-            // Both lists are ordered by key, so keys and values line up.
+-            const [keys, values] = await Promise.all([store.getAllKeys(), store.getAll()]);
+-            return [name, new Map(keys.map((key, index) => [String(key), values[index] as unknown]))] as const;
+-          })
+-        );
+-        await tx.done;
+-        return Object.fromEntries(stores) as StoredRecords;
++        tx = db.transaction([...STORE_NAMES], 'readonly');
++        // The completion promise is tracked from the moment the transaction
++        // exists. It rejects when the transaction aborts, also when every
++        // request before the abort has succeeded.
++        pending.push(tx.done);
++
++        // Every request is tracked as soon as it is issued, and all of them are
++        // issued before the first await.
++        const track = <T>(request: Promise<T>): Promise<T> => {
++          pending.push(request);
++          return request;
++        };
++        const requests = STORE_NAMES.map((name) => {
++          const store = tx!.objectStore(name);
++          return { name, keys: track(store.getAllKeys()), values: track(store.getAll()) };
++        });
++
++        // One await for every request and for the completion of the
++        // transaction: whichever fails first is reported, and none of the
++        // promises is left without a handler.
++        await Promise.all(pending);
++
++        const records = {} as StoredRecords;
++        for (const { name, keys, values } of requests) {
++          // Both lists are ordered by key, so keys and values line up.
++          const [storeKeys, storeValues] = [await keys, await values];
++          records[name] = new Map(storeKeys.map((key, index) => [String(key), storeValues[index] as unknown]));
++        }
++        return records;
+       } catch (error) {
++        releaseAfterFailure(tx, pending);
+         throw new StorageError('read', error);
+       }
+     },
+@@ -88,15 +136,7 @@ function createStorage(db: IDBPDatabase): AppStorage {
+         pending.push(tx.done);
+         await Promise.all(pending);
+       } catch (error) {
+-        // A request that could not even be issued does not abort the
+-        // transaction by itself, so the requests before it are rolled back here.
+-        try {
+-          tx?.abort();
+-        } catch {
+-          // The transaction has already finished or was aborted by the browser.
+-        }
+-        // The first failure is the one reported; the rest are consequences of it.
+-        for (const promise of [...pending, tx?.done]) promise?.catch(() => undefined);
++        releaseAfterFailure(tx, pending);
+         throw new StorageError('write', error);
+       }
+     },
+diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\test\\database.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\test\\database.ts"
+index bbc876e..8742711 100644
+--- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\test\\database.ts"
++++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\test\\database.ts"
+@@ -4,6 +4,13 @@ import { DATABASE_NAME, DATABASE_VERSION, STORE_NAMES, type StoreName } from '..
+ 
+ export type SavedRecords = Partial<Record<StoreName, Record<string, unknown>>>;
+ 
++// The tests run in Node. Only this one event of `process` is used here, so the
++// project does not need the Node type definitions for it.
++declare const process: {
++  on(event: 'unhandledRejection', listener: (reason: unknown) => void): void;
++  off(event: 'unhandledRejection', listener: (reason: unknown) => void): void;
++};
++
+ /** Gives the next test a browser that has never opened the app. */
+ export function resetDatabase(): void {
+   globalThis.indexedDB = new IDBFactory();
+@@ -32,6 +39,53 @@ export async function seedDatabase(records: SavedRecords): Promise<void> {
+   db.close();
+ }
+ 
++/**
++ * Makes every read transaction abort by itself after its first `getAll` request
++ * has succeeded. This is an asynchronous abort of a real transaction, as a
++ * browser does it, not an exception thrown while the request is issued.
++ * Call the returned function to remove the failure.
++ */
++export function abortReadTransactions(): () => void {
++  const original = IDBObjectStore.prototype.getAll;
++
++  IDBObjectStore.prototype.getAll = function (this: IDBObjectStore, ...args: Parameters<IDBObjectStore['getAll']>) {
++    const request = original.apply(this, args);
++    const transaction = this.transaction;
++    request.addEventListener('success', () => {
++      try {
++        transaction.abort();
++      } catch {
++        // The transaction has already been aborted by an earlier request.
++      }
++    });
++    return request;
++  } as IDBObjectStore['getAll'];
++
++  return () => {
++    IDBObjectStore.prototype.getAll = original;
++  };
++}
++
++/**
++ * Collects promise rejections that nothing handled. `stop()` waits long enough
++ * for late ones to be reported and returns them.
++ */
++export function watchUnhandledRejections(): { stop: () => Promise<unknown[]> } {
++  const seen: unknown[] = [];
++  const onRejection = (reason: unknown): void => {
++    seen.push(reason);
++  };
++  process.on('unhandledRejection', onRejection);
++
++  return {
++    async stop() {
++      await new Promise((resolve) => setTimeout(resolve, 50));
++      process.off('unhandledRejection', onRejection);
++      return seen;
++    }
++  };
++}
++
+ /** Reads what is really saved in the database, bypassing the application. */
+ export async function readDatabase(): Promise<Record<StoreName, Record<string, unknown>>> {
+   const db = await open();

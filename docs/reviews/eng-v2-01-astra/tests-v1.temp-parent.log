@@ -1,0 +1,42 @@
+
+> english-assessment-trainer-v2@2.0.0 test:v1
+> npm --prefix v1 run test
+
+
+> english-assessment-trainer-v1@1.0.0 test
+> vitest run
+
+X [ERROR] Unexpected "<" in JSON
+
+    ../../../package.json:1:0:
+      1 │ <section class="card">
+        ╵ ^
+
+X [ERROR] Unexpected "<" in JSON
+
+    ../../../tsconfig.json:1:0:
+      1 │ <section class="card">
+        ╵ ^
+
+failed to load config from C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\vitest.config.ts
+
+⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯
+Error: Build failed with 2 errors:
+../../../package.json:1:0: ERROR: Unexpected "<" in JSON
+../../../tsconfig.json:1:0: ERROR: Unexpected "<" in JSON
+    at failureErrorWithLog (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\node_modules\esbuild\lib\main.js:924:7)
+    at C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter]
+}
+
+
+

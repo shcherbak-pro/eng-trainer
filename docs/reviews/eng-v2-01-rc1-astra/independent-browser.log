@@ -1,0 +1,34 @@
+chromium 151.0.7922.34
+FAIL chromium explicit-links-different-text-and-unlinked-equal-text
+locator.click: Timeout 12000ms exceeded.
+Call log:
+[2m  - waiting for locator('.phrase-card').filter({ has: getByRole('heading', { name: 'Same', exact: true }) }).getByRole('button', { name: 'Add to Focus List', exact: true })[22m
+
+    at C:\Users\SerhiiShcherbak\Desktop\Repos\eng-trainer\docs\reviews\eng-v2-01-rc1-astra\independent-browser.mjs:32:87
+    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:164:12
+PASS chromium completion-only-abort
+FAIL chromium sync-issue-failure
+AssertionError [ERR_ASSERTION]: Earlier request promises exist when issuing getAll throws
+
+7 !== 3
+
+    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:121:17
+    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:164:12
+PASS chromium saved-560-card-order-resumes-and-appends-six-identities
+firefox 153.0
+FAIL firefox explicit-links-different-text-and-unlinked-equal-text
+locator.click: Timeout 12000ms exceeded.
+Call log:
+[2m  - waiting for locator('.phrase-card').filter({ has: getByRole('heading', { name: 'Same', exact: true }) }).getByRole('button', { name: 'Add to Focus List', exact: true })[22m
+
+    at C:\Users\SerhiiShcherbak\Desktop\Repos\eng-trainer\docs\reviews\eng-v2-01-rc1-astra\independent-browser.mjs:32:87
+    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:164:12
+PASS firefox completion-only-abort
+FAIL firefox sync-issue-failure
+AssertionError [ERR_ASSERTION]: Earlier request promises exist when issuing getAll throws
+
+7 !== 3
+
+    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:121:17
+    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:164:12
+PASS firefox saved-560-card-order-resumes-and-appends-six-identities

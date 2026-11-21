@@ -1,0 +1,1224 @@
+{
+  "capturedAt": "2026-11-21T10:41:10.017Z",
+  "branch": "feature/eng-v2-01-modular-foundation",
+  "head": "45564ca608249b3a8a6ea48073589b17e6430ea1",
+  "originMain": "45564ca608249b3a8a6ea48073589b17e6430ea1",
+  "defaultBranch": "refs/remotes/origin/main",
+  "indexDiff": "",
+  "status": [
+    " M .github/workflows/deploy.yml",
+    " M .gitignore",
+    " M CHANGELOG.md",
+    " M README.md",
+    " M index.html",
+    " M package.json",
+    " D src/App.svelte",
+    " M src/app.css",
+    " D src/lib/components/AppShell.svelte",
+    " D src/lib/components/EmptyState.svelte",
+    " D src/lib/components/ExpansionPanel.svelte",
+    " D src/lib/components/FocusButton.svelte",
+    " D src/lib/components/HideButton.svelte",
+    " D src/lib/components/IconButton.svelte",
+    " D src/lib/components/IrregularVerbCard.svelte",
+    " D src/lib/components/LearnPassManager.svelte",
+    " D src/lib/components/MaterialIcon.svelte",
+    " D src/lib/components/PaginationControls.svelte",
+    " D src/lib/components/PhraseCard.svelte",
+    " D src/lib/components/SectionSpeechControl.svelte",
+    " D src/lib/components/SpeakButton.svelte",
+    " D src/lib/components/ThemeToggle.svelte",
+    " D src/lib/components/Toolbar.svelte",
+    " D src/lib/components/WordCard.svelte",
+    " D src/lib/pages/AnswersPage.svelte",
+    " D src/lib/pages/FlashcardsPage.svelte",
+    " D src/lib/pages/FlashcardsPage.test.ts",
+    " D src/lib/pages/FocusListPage.svelte",
+    " D src/lib/pages/IndexPage.svelte",
+    " D src/lib/pages/IrregularVerbsPage.svelte",
+    " D src/lib/pages/PatternsPage.svelte",
+    " D src/lib/pages/PhrasesPage.svelte",
+    " D src/lib/pages/PracticePage.svelte",
+    " D src/lib/pages/ReversePracticePage.svelte",
+    " D src/lib/pages/WordIndexPage.svelte",
+    " D src/lib/stores/progress.flashcards.test.ts",
+    " D src/lib/stores/progress.ts",
+    " D src/lib/stores/theme.ts",
+    " D src/lib/types/flashcards.ts",
+    " D src/lib/types/materials.ts",
+    " D src/lib/types/pagination.ts",
+    " D src/lib/utils/filters.ts",
+    " D src/lib/utils/flashcards.test.ts",
+    " D src/lib/utils/flashcards.ts",
+    " D src/lib/utils/sectionSpeech.ts",
+    " D src/lib/utils/speech.ts",
+    " D src/lib/utils/speechFormatters.ts",
+    " M src/main.ts",
+    " M tsconfig.json",
+    " M vite.config.ts",
+    " M vitest.config.ts",
+    "?? docs/handoffs/ENG-V2-01.md",
+    "?? docs/reviews/ENG-V2-01-ASTRA.md",
+    "?? docs/reviews/eng-v2-01-astra/actionlint.log",
+    "?? docs/reviews/eng-v2-01-astra/artifact.json",
+    "?? docs/reviews/eng-v2-01-astra/browser-chromium.json",
+    "?? docs/reviews/eng-v2-01-astra/browser-firefox.json",
+    "?? docs/reviews/eng-v2-01-astra/browser-review.mjs",
+    "?? docs/reviews/eng-v2-01-astra/browser-support.mjs",
+    "?? docs/reviews/eng-v2-01-astra/build-site.log",
+    "?? docs/reviews/eng-v2-01-astra/build-site.sandbox.log",
+    "?? docs/reviews/eng-v2-01-astra/build-site.temp-parent.log",
+    "?? docs/reviews/eng-v2-01-astra/candidate.json",
+    "?? docs/reviews/eng-v2-01-astra/check-v1.log",
+    "?? docs/reviews/eng-v2-01-astra/check-v1.sandbox.log",
+    "?? docs/reviews/eng-v2-01-astra/check-v1.temp-parent.log",
+    "?? docs/reviews/eng-v2-01-astra/check-v2.log",
+    "?? docs/reviews/eng-v2-01-astra/check-v2.sandbox.log",
+    "?? docs/reviews/eng-v2-01-astra/check-v2.temp-parent.log",
+    "?? docs/reviews/eng-v2-01-astra/chromium-built-in-duplicate-entry-consistency.png",
+    "?? docs/reviews/eng-v2-01-astra/chromium-distinct-entry-identities-with-similar-display-text.png",
+    "?? docs/reviews/eng-v2-01-astra/chromium-failed-initial-read-preserves-populated-database.png",
+    "?? docs/reviews/eng-v2-01-astra/chromium-mobile-link.png",
+    "?? docs/reviews/eng-v2-01-astra/final-preservation.json",
+    "?? docs/reviews/eng-v2-01-astra/firefox-built-in-duplicate-entry-consistency.png",
+    "?? docs/reviews/eng-v2-01-astra/firefox-distinct-entry-identities-with-similar-display-text.png",
+    "?? docs/reviews/eng-v2-01-astra/firefox-failed-initial-read-preserves-populated-database.png",
+    "?? docs/reviews/eng-v2-01-astra/firefox-mobile-link.png",
+    "?? docs/reviews/eng-v2-01-astra/install-v1.log",
+    "?? docs/reviews/eng-v2-01-astra/install-v2.log",
+    "?? docs/reviews/eng-v2-01-astra/isolation-probe.mjs",
+    "?? docs/reviews/eng-v2-01-astra/moved-source.diff",
+    "?? docs/reviews/eng-v2-01-astra/scope-probe.json",
+    "?? docs/reviews/eng-v2-01-astra/snapshot.mjs",
+    "?? docs/reviews/eng-v2-01-astra/source-audit.json",
+    "?? docs/reviews/eng-v2-01-astra/source-audit.mjs",
+    "?? docs/reviews/eng-v2-01-astra/tests-v1.log",
+    "?? docs/reviews/eng-v2-01-astra/tests-v1.sandbox.log",
+    "?? docs/reviews/eng-v2-01-astra/tests-v1.temp-parent.log",
+    "?? docs/reviews/eng-v2-01-astra/tests-v2.log",
+    "?? docs/reviews/eng-v2-01-astra/tests-v2.sandbox.log",
+    "?? docs/reviews/eng-v2-01-astra/tests-v2.temp-parent.log",
+    "?? docs/reviews/eng-v2-01-astra/tracked.diff",
+    "?? docs/reviews/eng-v2-01-rc1-fable/artifact.json",
+    "?? docs/reviews/eng-v2-01-rc1-fable/astra-suite-run.log",
+    "?? docs/reviews/eng-v2-01-rc1-fable/browser-chromium.json",
+    "?? docs/reviews/eng-v2-01-rc1-fable/browser-firefox.json",
+    "?? docs/reviews/eng-v2-01-rc1-fable/chromium-distinct-entry-identities-with-similar-display-text.png",
+    "?? docs/reviews/eng-v2-01-rc1-fable/chromium-mobile-link.png",
+    "?? docs/reviews/eng-v2-01-rc1-fable/firefox-distinct-entry-identities-with-similar-display-text.png",
+    "?? docs/reviews/eng-v2-01-rc1-fable/firefox-mobile-link.png",
+    "?? docs/reviews/eng-v2-01-rc1-fable/identity-supplement-chromium.json",
+    "?? docs/reviews/eng-v2-01-rc1-fable/identity-supplement-firefox.json",
+    "?? docs/reviews/eng-v2-01-rc1-fable/identity-supplement.mjs",
+    "?? docs/reviews/eng-v2-01-rc1-fable/logs/build-site.log",
+    "?? docs/reviews/eng-v2-01-rc1-fable/logs/check-v1.log",
+    "?? docs/reviews/eng-v2-01-rc1-fable/logs/check.log",
+    "?? docs/reviews/eng-v2-01-rc1-fable/logs/test-v1.log",
+    "?? docs/reviews/eng-v2-01-rc1-fable/logs/test.log",
+    "?? package-lock.json",
+    "?? scripts/assemble-site.mjs",
+    "?? scripts/check-site.mjs",
+    "?? src/app/App.svelte",
+    "?? src/app/App.test.ts",
+    "?? src/app/AppShell.svelte",
+    "?? src/app/ThemeToggle.svelte",
+    "?? src/app/navigation.ts",
+    "?? src/app/theme.ts",
+    "?? src/content/builtIn.ts",
+    "?? src/content/catalog.test.ts",
+    "?? src/content/catalog.ts",
+    "?? src/content/search.ts",
+    "?? src/content/types.ts",
+    "?? src/features/exercises/AnswersPage.svelte",
+    "?? src/features/exercises/PatternsPage.svelte",
+    "?? src/features/exercises/PracticePage.svelte",
+    "?? src/features/exercises/ReversePracticePage.svelte",
+    "?? src/features/flashcards/FlashcardsPage.svelte",
+    "?? src/features/flashcards/FlashcardsPage.test.ts",
+    "?? src/features/flashcards/flashcards.test.ts",
+    "?? src/features/flashcards/flashcards.ts",
+    "?? src/features/flashcards/types.ts",
+    "?? src/features/focus/FocusListPage.svelte",
+    "?? src/features/home/ExpansionPanel.svelte",
+    "?? src/features/home/IndexPage.svelte",
+    "?? src/features/home/LearnPassManager.svelte",
+    "?? src/features/vocabulary/IrregularVerbsPage.svelte",
+    "?? src/features/vocabulary/PhrasesPage.svelte",
+    "?? src/features/vocabulary/WordIndexPage.svelte",
+    "?? src/shared/entries/FocusButton.svelte",
+    "?? src/shared/entries/HideButton.svelte",
+    "?? src/shared/entries/IrregularVerbCard.svelte",
+    "?? src/shared/entries/PhraseCard.svelte",
+    "?? src/shared/entries/WordCard.svelte",
+    "?? src/shared/pagination.ts",
+    "?? src/shared/speech/SectionSpeechControl.svelte",
+    "?? src/shared/speech/SpeakButton.svelte",
+    "?? src/shared/speech/sectionSpeech.ts",
+    "?? src/shared/speech/speech.ts",
+    "?? src/shared/speech/speechFormatters.ts",
+    "?? src/shared/text.ts",
+    "?? src/shared/ui/EmptyState.svelte",
+    "?? src/shared/ui/IconButton.svelte",
+    "?? src/shared/ui/MaterialIcon.svelte",
+    "?? src/shared/ui/PaginationControls.svelte",
+    "?? src/state/index.ts",
+    "?? src/state/persistence.ts",
+    "?? src/state/progress.test.ts",
+    "?? src/state/progress.ts",
+    "?? src/state/settings.ts",
+    "?? src/state/viewState.ts",
+    "?? src/storage/database.ts",
+    "?? src/test/database.ts",
+    "?? src/test/setup.ts",
+    "?? v1/.gitignore",
+    "?? v1/README.md",
+    "?? v1/index.html",
+    "?? v1/package-lock.json",
+    "?? v1/package.json",
+    "?? v1/public/data/materials.json",
+    "?? v1/public/favicon.svg",
+    "?? v1/src/App.svelte",
+    "?? v1/src/app.css",
+    "?? v1/src/lib/components/AppShell.svelte",
+    "?? v1/src/lib/components/EmptyState.svelte",
+    "?? v1/src/lib/components/ExpansionPanel.svelte",
+    "?? v1/src/lib/components/FocusButton.svelte",
+    "?? v1/src/lib/components/HideButton.svelte",
+    "?? v1/src/lib/components/IconButton.svelte",
+    "?? v1/src/lib/components/IrregularVerbCard.svelte",
+    "?? v1/src/lib/components/LearnPassManager.svelte",
+    "?? v1/src/lib/components/MaterialIcon.svelte",
+    "?? v1/src/lib/components/PaginationControls.svelte",
+    "?? v1/src/lib/components/PhraseCard.svelte",
+    "?? v1/src/lib/components/SectionSpeechControl.svelte",
+    "?? v1/src/lib/components/SpeakButton.svelte",
+    "?? v1/src/lib/components/ThemeToggle.svelte",
+    "?? v1/src/lib/components/Toolbar.svelte",
+    "?? v1/src/lib/components/WordCard.svelte",
+    "?? v1/src/lib/pages/AnswersPage.svelte",
+    "?? v1/src/lib/pages/FlashcardsPage.svelte",
+    "?? v1/src/lib/pages/FlashcardsPage.test.ts",
+    "?? v1/src/lib/pages/FocusListPage.svelte",
+    "?? v1/src/lib/pages/IndexPage.svelte",
+    "?? v1/src/lib/pages/IrregularVerbsPage.svelte",
+    "?? v1/src/lib/pages/PatternsPage.svelte",
+    "?? v1/src/lib/pages/PhrasesPage.svelte",
+    "?? v1/src/lib/pages/PracticePage.svelte",
+    "?? v1/src/lib/pages/ReversePracticePage.svelte",
+    "?? v1/src/lib/pages/WordIndexPage.svelte",
+    "?? v1/src/lib/stores/progress.flashcards.test.ts",
+    "?? v1/src/lib/stores/progress.ts",
+    "?? v1/src/lib/stores/theme.ts",
+    "?? v1/src/lib/types/flashcards.ts",
+    "?? v1/src/lib/types/materials.ts",
+    "?? v1/src/lib/types/pagination.ts",
+    "?? v1/src/lib/utils/filters.ts",
+    "?? v1/src/lib/utils/flashcards.test.ts",
+    "?? v1/src/lib/utils/flashcards.ts",
+    "?? v1/src/lib/utils/sectionSpeech.ts",
+    "?? v1/src/lib/utils/speech.ts",
+    "?? v1/src/lib/utils/speechFormatters.ts",
+    "?? v1/src/main.ts",
+    "?? v1/src/vite-env.d.ts",
+    "?? v1/svelte.config.js",
+    "?? v1/tsconfig.json",
+    "?? v1/tsconfig.node.json",
+    "?? v1/vite.config.ts",
+    "?? v1/vitest.config.ts"
+  ],
+  "scratch": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb",
+  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
+  "originalSnapshot": "C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate",
+  "changes": [
+    {
+      "path": "CHANGELOG.md",
+      "before": "31cdac4192f649766b2b08f1d3494e4b1ef59fb10e23dbe318687d7168a7bac0",
+      "after": "82a3d070b83e9dd49400cddd605e813444e8da72aac5b50df48a4f7c234137b0"
+    },
+    {
+      "path": "README.md",
+      "before": "a1ac838f07d91cb120f9bf41fe6787646ae9391219efa8915fbf89e5825ca96a",
+      "after": "b0f4f531506a66423e0290214bc9e55041e9ac4b5d36b28320f5d891ad48e3d2"
+    },
+    {
+      "path": "docs/handoffs/ENG-V2-01.md",
+      "before": "c6c80ab0188a3fb6cc68c9b676e1f6cb48ae6e67128fe6171266e4cf7d35fbfc",
+      "after": "1b7a01955d8645f346401c98dc88a25427767f00c0494fd71ab6c552c294319b"
+    },
+    {
+      "path": "src/app/App.test.ts",
+      "before": "3d4d86db2c52fe016fd3452f82d6e7f79966462cb9f5142b24bd517c1adbaa84",
+      "after": "899b91c1f7ff52bb02ad41ea5c532071bc08d066a34487fb481f4c7d774ca7a6"
+    },
+    {
+      "path": "src/content/catalog.test.ts",
+      "before": "4a5bd6876af31a32e2dfd662eced207a066bb14c26e90dfb6d4e677f311750e7",
+      "after": "bdc5feeae608ed21f3a4102a95869112f9d62630c4083b47a37b1188716cb305"
+    },
+    {
+      "path": "src/features/flashcards/FlashcardsPage.svelte",
+      "before": "e748bae311876f5d5265b9522740540752b1cfeff7a3ecadddc06e4afd481b9d",
+      "after": "de269c458c607319f0028c6110d4d34f00a3a0e38322c24a855a9e3a724bbbc6"
+    },
+    {
+      "path": "src/features/flashcards/FlashcardsPage.test.ts",
+      "before": "9b83eaa2edf98c3cad542e6526334225d0c6782a0801919a24cad5e3d089bfd6",
+      "after": "f297b87741027a7984044a32f252c629011353bea77e007fb2cfd22677f3b9c0"
+    },
+    {
+      "path": "src/features/flashcards/flashcards.test.ts",
+      "before": "9a280ea5aeff7e3fff04eeede3a7d9c2af4245949c3daaf7ae819b9f33aa0f24",
+      "after": "50e8e0bc359addc19a9998fbf9536a8b821d5c5e532645de0882cc5a26d37e37"
+    },
+    {
+      "path": "src/features/flashcards/flashcards.ts",
+      "before": "32af6ca7384a6e6c1223692c6b4fa8bb06a0779778f944c098e75d6b5db7bb5a",
+      "after": "ee05f816fd623d2533ef4282955b665393ac3bdd5bf8244a223741eb936d71f1"
+    },
+    {
+      "path": "src/features/flashcards/types.ts",
+      "before": "c7548f631494ec07cc107b14231fc4876cfe4f3c9eccc778ab2cdf122cc998c7",
+      "after": "4d2ce1e8ea8af4dea3bb4ca1e1a07fa476c0321ae537b3363d96a244fd3d18dc"
+    },
+    {
+      "path": "src/state/progress.test.ts",
+      "before": "8708176d192311ed8acbb48cf09853c850e40940c233c1fb709f7c2021ae5c9f",
+      "after": "11245d6e6fca963b1779349ec59e189b0719a28dd06a98a11c131937964a83b5"
+    },
+    {
+      "path": "src/storage/database.ts",
+      "before": "eef93e39788c2c6ffea3537a63e409235e592fbe4d49327e8efb5cb6c02f9dc7",
+      "after": "9a31086a76e500fd54f874c86117f9e66fafb5055b23b91972b0c2bcf270eb3c"
+    },
+    {
+      "path": "src/test/database.ts",
+      "before": "460cf9cc831ac4a2014a1bf96a732fef14d5f6870ab608fb448caca7a815ca86",
+      "after": "f570815242f9f48f00e720e0bc8e8337177948953127bed0d2320ee237165be1"
+    }
+  ],
+  "originalImplementationFiles": 127,
+  "unchangedOriginalImplementationFiles": 114,
+  "implementationFiles": 127,
+  "inventory": [
+    {
+      "path": ".github/workflows/deploy.yml",
+      "bytes": 2948,
+      "sha256": "ac9904f08fe7e2c7dea8f5098bb1efa48a4ac876778ae8b6c3d92db44d242925"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 127,
+      "sha256": "124326c98a25170bc8eb2cfec02a691ce3a92e1196af951f1e5e00ae6525c782"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 4137,
+      "sha256": "82a3d070b83e9dd49400cddd605e813444e8da72aac5b50df48a4f7c234137b0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6482,
+      "sha256": "b0f4f531506a66423e0290214bc9e55041e9ac4b5d36b28320f5d891ad48e3d2"
+    },
+    {
+      "path": "docs/handoffs/ENG-V2-01.md",
+      "bytes": 33773,
+      "sha256": "1b7a01955d8645f346401c98dc88a25427767f00c0494fd71ab6c552c294319b"
+    },
+    {
+      "path": "docs/reviews/ENG-V2-01-ASTRA.md",
+      "bytes": 24651,
+      "sha256": "f40d40cccc3eb9292f8df0dcc4a06cf0f73983059557e5583b5603906b29dda2"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/actionlint.log",
+      "bytes": 125,
+      "sha256": "2eb9d639567c2eaf8230302532406310e3f365363a1e85d5a74cf8ecbfcfe781"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/artifact.json",
+      "bytes": 1255,
+      "sha256": "e7141ddd20a35f0a29430ef6744186a619585f8c7a585830a9ecf7730be77a46"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/browser-chromium.json",
+      "bytes": 139430,
+      "sha256": "47f7ad3b97d7494a974d9dc262c94e59d2ae985e104d32c5191c0f17176bba66"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/browser-firefox.json",
+      "bytes": 150094,
+      "sha256": "639aa75f4634892a64dee0491a41778ab9a98089dea2a89431b0e635db2b8c0f"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/browser-review.mjs",
+      "bytes": 37510,
+      "sha256": "4daaf1b1767aedc69a4d592e50747ed1e4ce5b3ce0bdda689f7829b5a81ddcd5"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/browser-support.mjs",
+      "bytes": 7755,
+      "sha256": "33782fbcd91f629883c7c437422876e7d9344e74bd3a689e5f1a8057e8ca749d"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/build-site.log",
+      "bytes": 1317,
+      "sha256": "b6184c53ba3621340c14c7708b9325e18feee86b7e874655248eacfafc2a6d7e"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/build-site.sandbox.log",
+      "bytes": 2012,
+      "sha256": "562a7e4ecb65b86c4185d43d3f65524596964b7c9334234e691d8b10d5f39182"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/build-site.temp-parent.log",
+      "bytes": 1962,
+      "sha256": "0e558a958f9bf01790c9561bc9051cda17b593bd0c768d252664cf36de13d773"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/candidate.json",
+      "bytes": 34285,
+      "sha256": "b80e0969cb2cb87d4cc379446a4c58ccd2a39df1d2aee3414e2acb280c32bdd6"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/check-v1.log",
+      "bytes": 371,
+      "sha256": "2778d3b6670f5e55d96823d9407222999d8d0db26b984706845450e8dc615310"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/check-v1.sandbox.log",
+      "bytes": 700,
+      "sha256": "77f2acd23adda6725a3ec58998c31640d6e6c6f7fc6a16fa1313ae481661a9e5"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/check-v1.temp-parent.log",
+      "bytes": 732,
+      "sha256": "3eaaaec3006751c378299b5158bdd6047f879ca84f51ea1a58a0e20242c73405"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/check-v2.log",
+      "bytes": 287,
+      "sha256": "8311fd80cb1d6ff180c37ebcd722c2176fcd24564b28c7b0cc2b6c57613d2e46"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/check-v2.sandbox.log",
+      "bytes": 940,
+      "sha256": "eccf6c32df596958e742786fd00ea7027d76875a5aaf4e891acb0fc6d449acbb"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/check-v2.temp-parent.log",
+      "bytes": 1005,
+      "sha256": "dc71f8739338278daeb6791585e4e865fc8b5a4c231af529cd8f464701579586"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/chromium-built-in-duplicate-entry-consistency.png",
+      "bytes": 118534,
+      "sha256": "965c4fb717a8b8572be7ff3e283612a4f28aeeaa809d1072447133e016205f37"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/chromium-distinct-entry-identities-with-similar-display-text.png",
+      "bytes": 233849,
+      "sha256": "d7763f65c6d7eacdb9aa65713c50e4f08760e94592dc77ef740e494a1eae8c70"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/chromium-failed-initial-read-preserves-populated-database.png",
+      "bytes": 230179,
+      "sha256": "d9342279a3f6b368b96f884e46630626c74dcecff72948959dcbb67fdd2dc56c"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/chromium-mobile-link.png",
+      "bytes": 37298,
+      "sha256": "b87d80a1bdfe4d1a0743b5fe2c86d40c0f310fd32c87c67ba3ce4ef18a7b5ede"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/final-preservation.json",
+      "bytes": 928,
+      "sha256": "0e34e4525c7d12582a8937d1ed93453043f8ccf6d7669754f72528a69175032d"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/firefox-built-in-duplicate-entry-consistency.png",
+      "bytes": 98733,
+      "sha256": "d1c9857eeee00011cc08382077b58242dffb0dc7c67ad92144d7a0b478eadd00"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/firefox-distinct-entry-identities-with-similar-display-text.png",
+      "bytes": 145508,
+      "sha256": "6bf5785144f4c51e5035cf9662d5846252ce693279062a1829031db3cccc9def"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/firefox-failed-initial-read-preserves-populated-database.png",
+      "bytes": 144385,
+      "sha256": "e3f87fdd66fca9dff9727dea99a1c06998c633651f2897f186ee1fe68e3efc08"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/firefox-mobile-link.png",
+      "bytes": 36833,
+      "sha256": "7a80b10d620589a4b49dbdcd31cbfd3327ce7c67523203def3b9ebaefe0aacfb"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/install-v1.log",
+      "bytes": 553,
+      "sha256": "d2433ee83d7d607ec789778d4ba0b23680e4777a62eb91c1a8a8ca8d2bbf44b3"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/install-v2.log",
+      "bytes": 553,
+      "sha256": "4f7aad41d52ed00358e9060d821eb29a05099d7c198113bbda8b288fb459fa0e"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/isolation-probe.mjs",
+      "bytes": 1410,
+      "sha256": "2d3931f29a6d0416189c8aa664c9243bf52a13eee58bc66d3fe8d1f09060945d"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/moved-source.diff",
+      "bytes": 108633,
+      "sha256": "0e10f57190488a73774949f46be68478f7207cd53994cae6fad9e78cc9bc2391"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/scope-probe.json",
+      "bytes": 2780,
+      "sha256": "e51e73c04aee1d37529a4cb5b1cec0db6abb077c849bd2b9484c7d7e66b42c37"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/snapshot.mjs",
+      "bytes": 2952,
+      "sha256": "6e498610daa8f84f8f4940e1c4338cfe68c5311fc00c3fc8954b4ae477cd2bfc"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/source-audit.json",
+      "bytes": 6430,
+      "sha256": "d30aa063431b7d2e1c13fc345a564802a1741e28b7ac132c245b727b4a0fbef8"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/source-audit.mjs",
+      "bytes": 4679,
+      "sha256": "4af5511007f036a1da9deda75894e11d400ec499de74591ed5064e593228304b"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/tests-v1.log",
+      "bytes": 1269,
+      "sha256": "f76578d83001e09916840d9c9a6ac953d6c44f1f5e85ff8eadc97e15de133997"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/tests-v1.sandbox.log",
+      "bytes": 2115,
+      "sha256": "d6c6cdb32aa8a70368694c9e1078f310550a536e15317cdbb3a52f1b9f9fb981"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/tests-v1.temp-parent.log",
+      "bytes": 2059,
+      "sha256": "a57168471a0540337aef09fb3981a025a35f3b2c2fc49886ee9eae63bdc665e9"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/tests-v2.log",
+      "bytes": 2814,
+      "sha256": "944780858acf383b5d0780ec538a5206401bd16bf72749fb74eae4fba75baa12"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/tests-v2.sandbox.log",
+      "bytes": 1995,
+      "sha256": "89cc259a25100274bf4953f57774c14e6fef32ac75c37aec98ba5688f2de9f69"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/tests-v2.temp-parent.log",
+      "bytes": 1941,
+      "sha256": "5debb6d0ea13b9d56735760864ecf5103219c637d75d24db851d4f6fa7f57cc5"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-astra/tracked.diff",
+      "bytes": 269087,
+      "sha256": "14de5957617c751912c6331e54efa5a9a0d51f771dc5c2155476deefc57da3a9"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/artifact.json",
+      "bytes": 1255,
+      "sha256": "b845a4db4d264104ac026c781fa337a3f9cd1bac196daef8db16959f79720f7b"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/astra-suite-run.log",
+      "bytes": 2770,
+      "sha256": "ced307c8644d29701d022d0eeb1744a961e786c716fd9e97d70ae1d3cfb7beac"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/browser-chromium.json",
+      "bytes": 139866,
+      "sha256": "361b81967279275106e2df0edf74e9298a2e3c44ce17b693ada144c1bb4b122f"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/browser-firefox.json",
+      "bytes": 150015,
+      "sha256": "ba9dd45e1bdb2ce889ef42e91a899b9a19e64384e07ec9ea4aa895d7ce851366"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/chromium-distinct-entry-identities-with-similar-display-text.png",
+      "bytes": 112825,
+      "sha256": "f06163655b51ce9d6896ca1ccf3562456ad797c3dc43797f5d1e6e9934355f00"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/chromium-mobile-link.png",
+      "bytes": 37298,
+      "sha256": "b87d80a1bdfe4d1a0743b5fe2c86d40c0f310fd32c87c67ba3ce4ef18a7b5ede"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/firefox-distinct-entry-identities-with-similar-display-text.png",
+      "bytes": 96317,
+      "sha256": "45902527c75f7bf016541e1493e9574bc307179562f0fa265a3e2c602ee3b0e2"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/firefox-mobile-link.png",
+      "bytes": 36833,
+      "sha256": "f73a5d516a0d418cc8c2aa91d24800092c8db7b6cafa35f873280f71a765b244"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/identity-supplement-chromium.json",
+      "bytes": 29946,
+      "sha256": "8f49a11f6fdd655f3ee65a23f4b01283a9d50f32c3b8858b0fdfaf48954d97f8"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/identity-supplement-firefox.json",
+      "bytes": 31213,
+      "sha256": "e1a5e909b72e4cdf990bb23c08f5bcd161379d9988726b29bc335d6e6f92c4de"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/identity-supplement.mjs",
+      "bytes": 15101,
+      "sha256": "58149e89bb77676d5aebfb26b5b8fdf89cb820c44e752219acbf69ee1231b7bd"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/logs/build-site.log",
+      "bytes": 1273,
+      "sha256": "a699475212fbdc22cb34e59c621462feb684b6b2d04e54201f321b7764b6c1ca"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/logs/check-v1.log",
+      "bytes": 323,
+      "sha256": "fb7603ce7f4bcbc6918811e2e3f1e3c2ebbec398d644ba26664cb915543a8c6a"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/logs/check.log",
+      "bytes": 242,
+      "sha256": "2a138bc90ac329ebe2b156209ad5d33b0cd6cc20daaccbdbace7db841dad9ecd"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/logs/test-v1.log",
+      "bytes": 1084,
+      "sha256": "3907ec342c9714b51e909e8b857ae41e091b40a1b16a2bedd63b51178fe2eabf"
+    },
+    {
+      "path": "docs/reviews/eng-v2-01-rc1-fable/logs/test.log",
+      "bytes": 2085,
+      "sha256": "f6b90218086285d47a59429f9d476b9183cd23c30e9a8026222b4aee8647f04f"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1467,
+      "sha256": "52af06105012a1bc22b33462b60a1f4d3d5b98b6df9472019fb8774b99d87320"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 59997,
+      "sha256": "052752ba17ced8e1ce86e6830f0d00578e40cf90ce20dcb9a84ac333208e4bf1"
+    },
+    {
+      "path": "package.json",
+      "bytes": 997,
+      "sha256": "b3afb27249bf149576e185bf6896f13edcd8eecd9d808f2b2f064992859a8518"
+    },
+    {
+      "path": "public/data/materials.json",
+      "bytes": 1569661,
+      "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 258,
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "path": "scripts/assemble-site.mjs",
+      "bytes": 1411,
+      "sha256": "72a393251559764925f06d39fb8ae75c51c21e09117aa51dcf549913410efb98"
+    },
+    {
+      "path": "scripts/check-site.mjs",
+      "bytes": 1968,
+      "sha256": "0e1c2c0e7f61a2c636c59538332302b86672e57b9b5a04f028ff6fa9b527efcf"
+    },
+    {
+      "path": "src/app.css",
+      "bytes": 33210,
+      "sha256": "49e50f2cd1fb975dcb3820f7107c2725b4789cdf70bdf9bd7e8c1f656037a6f4"
+    },
+    {
+      "path": "src/app/App.svelte",
+      "bytes": 6434,
+      "sha256": "c155d5ae2765279a2bd2278586e685a15e51c14b41817bcc8856e5e84d410d8e"
+    },
+    {
+      "path": "src/app/App.test.ts",
+      "bytes": 20239,
+      "sha256": "899b91c1f7ff52bb02ad41ea5c532071bc08d066a34487fb481f4c7d774ca7a6"
+    },
+    {
+      "path": "src/app/AppShell.svelte",
+      "bytes": 3797,
+      "sha256": "ea92fe3642abd3e0f39b2a5a7eae4d31eeaa0a967d923b07c5e447da4fe9e30f"
+    },
+    {
+      "path": "src/app/ThemeToggle.svelte",
+      "bytes": 1027,
+      "sha256": "d922a80647f49ea68e6c3e5eaf1c33a831412c2225ab516f371a25641f784529"
+    },
+    {
+      "path": "src/app/navigation.ts",
+      "bytes": 2443,
+      "sha256": "06ffe2d5f6834d3b1be62b262a720fd03845baa37ec9fded0afcddcd1db19480"
+    },
+    {
+      "path": "src/app/theme.ts",
+      "bytes": 1254,
+      "sha256": "0fbb05333ee0b7c35e82150be4440eb69c614b4ea5b8b5fa4a73035686dd6e29"
+    },
+    {
+      "path": "src/content/builtIn.ts",
+      "bytes": 813,
+      "sha256": "9a6ea7d71c4cee966296833c1b3cd56e64b77205d068a8b767c49431cfdc5426"
+    },
+    {
+      "path": "src/content/catalog.test.ts",
+      "bytes": 4192,
+      "sha256": "bdc5feeae608ed21f3a4102a95869112f9d62630c4083b47a37b1188716cb305"
+    },
+    {
+      "path": "src/content/catalog.ts",
+      "bytes": 4846,
+      "sha256": "7c43fe996b0bca189a62ca78cc8f62af7c7f3ca3020bb5debec439268db4a673"
+    },
+    {
+      "path": "src/content/search.ts",
+      "bytes": 923,
+      "sha256": "a216084389fd33633557b1ca11bd0db09fdbbcaefb1bb3541b8b54f2634f3fa6"
+    },
+    {
+      "path": "src/content/types.ts",
+      "bytes": 2229,
+      "sha256": "24bbadfbad0bf1142b046f53d81c0c3e65b1f194f97920f94f9f346132886680"
+    },
+    {
+      "path": "src/features/exercises/AnswersPage.svelte",
+      "bytes": 1387,
+      "sha256": "2ea09a79ec57dbbd784c243b0d8c892e6b071cfaffc8133219fca2dc5c0ebfd9"
+    },
+    {
+      "path": "src/features/exercises/PatternsPage.svelte",
+      "bytes": 1531,
+      "sha256": "897223ab6c2f0552a83d006fba3094b131dc5c5f78ce69c277c8c7924d6a7250"
+    },
+    {
+      "path": "src/features/exercises/PracticePage.svelte",
+      "bytes": 1052,
+      "sha256": "7038debd6807a91064205acadcfc017c5c5a1f7cb7383e980862e2ab4b3d655a"
+    },
+    {
+      "path": "src/features/exercises/ReversePracticePage.svelte",
+      "bytes": 3127,
+      "sha256": "f02c3018dca63fbed34df5c7ebb88f92dbcac05887184bea97fe15b52c6ca37e"
+    },
+    {
+      "path": "src/features/flashcards/FlashcardsPage.svelte",
+      "bytes": 18017,
+      "sha256": "de269c458c607319f0028c6110d4d34f00a3a0e38322c24a855a9e3a724bbbc6"
+    },
+    {
+      "path": "src/features/flashcards/FlashcardsPage.test.ts",
+      "bytes": 19995,
+      "sha256": "f297b87741027a7984044a32f252c629011353bea77e007fb2cfd22677f3b9c0"
+    },
+    {
+      "path": "src/features/flashcards/flashcards.test.ts",
+      "bytes": 19546,
+      "sha256": "50e8e0bc359addc19a9998fbf9536a8b821d5c5e532645de0882cc5a26d37e37"
+    },
+    {
+      "path": "src/features/flashcards/flashcards.ts",
+      "bytes": 10256,
+      "sha256": "ee05f816fd623d2533ef4282955b665393ac3bdd5bf8244a223741eb936d71f1"
+    },
+    {
+      "path": "src/features/flashcards/types.ts",
+      "bytes": 2205,
+      "sha256": "4d2ce1e8ea8af4dea3bb4ca1e1a07fa476c0321ae537b3363d96a244fd3d18dc"
+    },
+    {
+      "path": "src/features/focus/FocusListPage.svelte",
+      "bytes": 3525,
+      "sha256": "71c5aacef0644b728da151f93d9960527461c29f77e8f116d10585797feed357"
+    },
+    {
+      "path": "src/features/home/ExpansionPanel.svelte",
+      "bytes": 900,
+      "sha256": "53fa9127955fd34f3464d8f00aae8a3439879b835f33b07a9b889de42417e808"
+    },
+    {
+      "path": "src/features/home/IndexPage.svelte",
+      "bytes": 12129,
+      "sha256": "b7f58ce573ada3e6bd275c81372f67672bdb55fc8897ab0edbd3549a16635007"
+    },
+    {
+      "path": "src/features/home/LearnPassManager.svelte",
+      "bytes": 7589,
+      "sha256": "12fed4bb060e1d69bbae84652d3b51ede798522e01c5272198c1abb25b13b51e"
+    },
+    {
+      "path": "src/features/vocabulary/IrregularVerbsPage.svelte",
+      "bytes": 5445,
+      "sha256": "4a266755ed37905cda65273b29e02f91d6f03abbcb1b0cb6452a390133a63341"
+    },
+    {
+      "path": "src/features/vocabulary/PhrasesPage.svelte",
+      "bytes": 5396,
+      "sha256": "30d3bfc06630d342f538b6186c95f9b58b75bfad5749df117d3a3024b7f3f6dd"
+    },
+    {
+      "path": "src/features/vocabulary/WordIndexPage.svelte",
+      "bytes": 4852,
+      "sha256": "386ae871e120dd0b180ea57d4b91bb71d20ce3d6bde87c553e45874cbec256a2"
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 337,
+      "sha256": "65e5e4e092d70c73ded4e4215a9d98e07aa53a2003cbb7a53ccb7d2ff7f5319e"
+    },
+    {
+      "path": "src/shared/entries/FocusButton.svelte",
+      "bytes": 615,
+      "sha256": "8c14b20c9392f2c8f39ea3afc539b636df38b1911f3d787686a83a9df01553fe"
+    },
+    {
+      "path": "src/shared/entries/HideButton.svelte",
+      "bytes": 592,
+      "sha256": "30922bb892024effbe5242a7ec9d63efb9555c5d9046ca3c925b084c79f41e25"
+    },
+    {
+      "path": "src/shared/entries/IrregularVerbCard.svelte",
+      "bytes": 1593,
+      "sha256": "f40de3dd508408b6100018bbb4915b7a4d5cd7fb4ff287be5736344dee005cce"
+    },
+    {
+      "path": "src/shared/entries/PhraseCard.svelte",
+      "bytes": 2473,
+      "sha256": "f47e239842997e4eb20aa56af6ab71f7569e06408bf613a8bff80dfa61368744"
+    },
+    {
+      "path": "src/shared/entries/WordCard.svelte",
+      "bytes": 1631,
+      "sha256": "26fd88e24c0d75a2b87ea69a0391c5d403bf5f6d56ec43c8a5dccdbc6dcac205"
+    },
+    {
+      "path": "src/shared/pagination.ts",
+      "bytes": 431,
+      "sha256": "96fb0472d7c5b1c031a0fd5c6ccacdb54cb818a30cec99f2445edc198628da91"
+    },
+    {
+      "path": "src/shared/speech/SectionSpeechControl.svelte",
+      "bytes": 2057,
+      "sha256": "66638b5cb56fb06fbc6d112c6d44bbe0faabe61ef2fe2cfdb8f3ec2052a77937"
+    },
+    {
+      "path": "src/shared/speech/SpeakButton.svelte",
+      "bytes": 287,
+      "sha256": "1b8f35f2cc21f60dd8c40e6c4ac694eada4de07a97a7724c6d244dfea455f516"
+    },
+    {
+      "path": "src/shared/speech/sectionSpeech.ts",
+      "bytes": 3691,
+      "sha256": "122efdbadd35bbae1eb706516cc9d7cefb5e70725c6633f0e4e77bbf91bdc1cf"
+    },
+    {
+      "path": "src/shared/speech/speech.ts",
+      "bytes": 409,
+      "sha256": "34c785d86ccef5b334c467abe24439a2044b3701c7943591c6446eab01114fa0"
+    },
+    {
+      "path": "src/shared/speech/speechFormatters.ts",
+      "bytes": 2227,
+      "sha256": "4dba39bebcceba36454b217d3dc10e4724bc844df5d1a6fd2819820e24407d22"
+    },
+    {
+      "path": "src/shared/text.ts",
+      "bytes": 747,
+      "sha256": "0c1dd12fab6048b470495d704faacb2efab7325485324b25a5e978635aa5052d"
+    },
+    {
+      "path": "src/shared/ui/EmptyState.svelte",
+      "bytes": 209,
+      "sha256": "db01612378e05d3cde0e39ff7ddc2983227726d0eb6fd07190983602127b8c9f"
+    },
+    {
+      "path": "src/shared/ui/IconButton.svelte",
+      "bytes": 642,
+      "sha256": "1b16ce183ef3322acaff97557ec8c93f0f63eb24c64d46743b226d130357f452"
+    },
+    {
+      "path": "src/shared/ui/MaterialIcon.svelte",
+      "bytes": 134,
+      "sha256": "cdefc59d6f93038ca89a5354783d0f45dffdcd57da52b15b1d1154c6019c061f"
+    },
+    {
+      "path": "src/shared/ui/PaginationControls.svelte",
+      "bytes": 1963,
+      "sha256": "c6c2ceca857f1de2cb0f2e25d108359761d4cb911b94ccd98c51b0e88e25aa52"
+    },
+    {
+      "path": "src/state/index.ts",
+      "bytes": 1393,
+      "sha256": "da108d5f170dda6214cd1b86ffbfd3d68919fa14c5a752ee5a2eaa2f484f81df"
+    },
+    {
+      "path": "src/state/persistence.ts",
+      "bytes": 2848,
+      "sha256": "4405979d054d356e18456445463fcaea8c38e5ae231c574100e0b72a897b3225"
+    },
+    {
+      "path": "src/state/progress.test.ts",
+      "bytes": 19730,
+      "sha256": "11245d6e6fca963b1779349ec59e189b0719a28dd06a98a11c131937964a83b5"
+    },
+    {
+      "path": "src/state/progress.ts",
+      "bytes": 11626,
+      "sha256": "1d6ea61293eae8d244062d71662a8de969284b9b044473ac98a88157549cca7a"
+    },
+    {
+      "path": "src/state/settings.ts",
+      "bytes": 7393,
+      "sha256": "868e78b2fde28b9d69988131bbe892ac0c4d3f1cb47aa2acaa5fe677e8ddb222"
+    },
+    {
+      "path": "src/state/viewState.ts",
+      "bytes": 2232,
+      "sha256": "064daaa6127d867d2dfa69108754ab3cbf118f540a40d631bf5eec0fe6b77d30"
+    },
+    {
+      "path": "src/storage/database.ts",
+      "bytes": 6231,
+      "sha256": "9a31086a76e500fd54f874c86117f9e66fafb5055b23b91972b0c2bcf270eb3c"
+    },
+    {
+      "path": "src/test/database.ts",
+      "bytes": 3413,
+      "sha256": "f570815242f9f48f00e720e0bc8e8337177948953127bed0d2320ee237165be1"
+    },
+    {
+      "path": "src/test/setup.ts",
+      "bytes": 173,
+      "sha256": "ece0251eebea1785ed9d2320ed21aeed90212511fe95666099ac17fd335a41f9"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "bytes": 39,
+      "sha256": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92"
+    },
+    {
+      "path": "svelte.config.js",
+      "bytes": 120,
+      "sha256": "707dcfd53f6a2f8687e273925b680a90eb5eee7118335d4043a52fac83c98505"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 320,
+      "sha256": "c6e30f2bda19a962e0eb07c27f8a32fec5555135040add77fa854dbca9afee5f"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "bytes": 322,
+      "sha256": "0545d503eac171d76f4dc615ba6dd0f59fe8c3817134ccc8dc577d01bedbec51"
+    },
+    {
+      "path": "v1/.gitignore",
+      "bytes": 36,
+      "sha256": "5be6cc12007b524b88e4e431567aaa0cb36914234933f31ed3c94b6c81dbee1b"
+    },
+    {
+      "path": "v1/README.md",
+      "bytes": 1233,
+      "sha256": "bff26993872a4abf8fc89e7fe85b29c3a174bca81f9699b9ed42e045f74a90a0"
+    },
+    {
+      "path": "v1/index.html",
+      "bytes": 1803,
+      "sha256": "56bb6576cc437f03ba747a352d089000ef12533e281f4603adf35adb01f40cec"
+    },
+    {
+      "path": "v1/package-lock.json",
+      "bytes": 59258,
+      "sha256": "65937877d5140403636a1123df04d6c4ab81f409f9ed4148f1328cb6a5fd6cc9"
+    },
+    {
+      "path": "v1/package.json",
+      "bytes": 510,
+      "sha256": "a1020863bebc7e2b1a22fd9e7a7f2de1c48f13d7d4c652cb9dd553620519fb07"
+    },
+    {
+      "path": "v1/public/data/materials.json",
+      "bytes": 1569661,
+      "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+    },
+    {
+      "path": "v1/public/favicon.svg",
+      "bytes": 258,
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "path": "v1/src/App.svelte",
+      "bytes": 7599,
+      "sha256": "7c02369de10d98cab11d4cfafb4163546254dbb87bb9c112b98e76089c395113"
+    },
+    {
+      "path": "v1/src/app.css",
+      "bytes": 32646,
+      "sha256": "4c0ab9df6d24882665abc646f0de911f007e901cee2b6085c082b573fb1e6466"
+    },
+    {
+      "path": "v1/src/lib/components/AppShell.svelte",
+      "bytes": 2821,
+      "sha256": "b567224135e9ed19c06649a0a1f1ac8d0ff2081ddec543522bf21dd3d37d196a"
+    },
+    {
+      "path": "v1/src/lib/components/EmptyState.svelte",
+      "bytes": 209,
+      "sha256": "db01612378e05d3cde0e39ff7ddc2983227726d0eb6fd07190983602127b8c9f"
+    },
+    {
+      "path": "v1/src/lib/components/ExpansionPanel.svelte",
+      "bytes": 920,
+      "sha256": "8662907e3462c02fd83aa2a20ba8a0cf012d23a072861eef3cf3be9f0bf0d7fa"
+    },
+    {
+      "path": "v1/src/lib/components/FocusButton.svelte",
+      "bytes": 667,
+      "sha256": "dd61fb4534abe548c81d51b287aeeec8e97aee7b5037d860b3234b66d9155c47"
+    },
+    {
+      "path": "v1/src/lib/components/HideButton.svelte",
+      "bytes": 643,
+      "sha256": "b2b1ec684a64a86db2ba9207c77e9fd1aef616670306124313767404e79b85ee"
+    },
+    {
+      "path": "v1/src/lib/components/IconButton.svelte",
+      "bytes": 642,
+      "sha256": "1b16ce183ef3322acaff97557ec8c93f0f63eb24c64d46743b226d130357f452"
+    },
+    {
+      "path": "v1/src/lib/components/IrregularVerbCard.svelte",
+      "bytes": 1827,
+      "sha256": "08afef28d2c766120f243af8f4cd84b5348e957b16fa370bbb39ca71864e24e9"
+    },
+    {
+      "path": "v1/src/lib/components/LearnPassManager.svelte",
+      "bytes": 7792,
+      "sha256": "6e9701bc3f5ab37423edef3c7a765d2cc7016e4a9939b8f3c7215a1c365e442c"
+    },
+    {
+      "path": "v1/src/lib/components/MaterialIcon.svelte",
+      "bytes": 134,
+      "sha256": "cdefc59d6f93038ca89a5354783d0f45dffdcd57da52b15b1d1154c6019c061f"
+    },
+    {
+      "path": "v1/src/lib/components/PaginationControls.svelte",
+      "bytes": 2012,
+      "sha256": "1505b5df79fd5e94b1fd140020d0a2adbe09e7a55220097f3b1c7f5dd1a0d89c"
+    },
+    {
+      "path": "v1/src/lib/components/PhraseCard.svelte",
+      "bytes": 2717,
+      "sha256": "4e9d610ee5b72b0dc40e48decffdd2e5b4539867d6593c966556ad3d1aee907e"
+    },
+    {
+      "path": "v1/src/lib/components/SectionSpeechControl.svelte",
+      "bytes": 2174,
+      "sha256": "3dd0e447ef20eb4295d41943eb1334834310d98bc997503b072d8c4c3c0f7d97"
+    },
+    {
+      "path": "v1/src/lib/components/SpeakButton.svelte",
+      "bytes": 300,
+      "sha256": "f4008a32a9d306606d9c86b965fd3cabb696433cf72dee4bc0732427f7ba44e6"
+    },
+    {
+      "path": "v1/src/lib/components/ThemeToggle.svelte",
+      "bytes": 1081,
+      "sha256": "76082f696bbbc7638125f545bb9fa8b46e794f9f5a586cc09c7c0cdc93ed262d"
+    },
+    {
+      "path": "v1/src/lib/components/Toolbar.svelte",
+      "bytes": 228,
+      "sha256": "bc6916b29b8e586ac23481ebf8622250f6430011af5108dcd9976898451b5471"
+    },
+    {
+      "path": "v1/src/lib/components/WordCard.svelte",
+      "bytes": 1866,
+      "sha256": "fc2627ae28a6f654a2a9999746c031fac9e32d6b3cd016dbc519c44d9afc7d1b"
+    },
+    {
+      "path": "v1/src/lib/pages/AnswersPage.svelte",
+      "bytes": 1608,
+      "sha256": "cfdab0b16f6b9654b051f52a22c1ae32d816e0e3fee0b8543f0a2a1a449c7aeb"
+    },
+    {
+      "path": "v1/src/lib/pages/FlashcardsPage.svelte",
+      "bytes": 17980,
+      "sha256": "ea2e081e30aaf7b7ee189cf9f060fef779754b8f221913f7613f1955be05a46a"
+    },
+    {
+      "path": "v1/src/lib/pages/FlashcardsPage.test.ts",
+      "bytes": 17766,
+      "sha256": "0125537c950c22d4aee7e4ff26fef66ed9993cfc9f8dac53cba34adf0dee30d4"
+    },
+    {
+      "path": "v1/src/lib/pages/FocusListPage.svelte",
+      "bytes": 3534,
+      "sha256": "8b351585ac244b718082e45ec8cdb2e4967eac729490c2d91ae818bcb3e5f148"
+    },
+    {
+      "path": "v1/src/lib/pages/IndexPage.svelte",
+      "bytes": 12904,
+      "sha256": "c6f676108516fc2373e17b7e0d398fe6673d188a7f4349e8f56aabb18bc00ecc"
+    },
+    {
+      "path": "v1/src/lib/pages/IrregularVerbsPage.svelte",
+      "bytes": 6740,
+      "sha256": "8caa05e66707e91113b7063c12dd1b17107af54ad15824a45b29f95e5ea80e94"
+    },
+    {
+      "path": "v1/src/lib/pages/PatternsPage.svelte",
+      "bytes": 1749,
+      "sha256": "088a84b2bd0a6a5870ab323af693523c0b5e3e35d4108c154a83b30e35037dad"
+    },
+    {
+      "path": "v1/src/lib/pages/PhrasesPage.svelte",
+      "bytes": 6202,
+      "sha256": "5c31426ad85e6f639f4d9fed6e63fcc6fe0fb0a9f0aa23cee1c39d57bb51c259"
+    },
+    {
+      "path": "v1/src/lib/pages/PracticePage.svelte",
+      "bytes": 1074,
+      "sha256": "69063eb20ac279649559f2b6913ddca251ae4ce7d59c77c4eeb30267e5a4e04b"
+    },
+    {
+      "path": "v1/src/lib/pages/ReversePracticePage.svelte",
+      "bytes": 3245,
+      "sha256": "294b6e31de7e2e0e312e49da2c51e4cdd653c786560ef7081007e8137d1574a4"
+    },
+    {
+      "path": "v1/src/lib/pages/WordIndexPage.svelte",
+      "bytes": 5657,
+      "sha256": "384ccbd9965478067f90dd00543b61258ad76fc8571d55c8453030d577f610f6"
+    },
+    {
+      "path": "v1/src/lib/stores/progress.flashcards.test.ts",
+      "bytes": 6403,
+      "sha256": "313aed981edb7f55cda30ecb596febac3c210c58089a1394be27948f62279e0b"
+    },
+    {
+      "path": "v1/src/lib/stores/progress.ts",
+      "bytes": 17743,
+      "sha256": "4980fd17e7c5d0cb1dc0e592e8ca361369f1aec7120875a32c82da20add773a1"
+    },
+    {
+      "path": "v1/src/lib/stores/theme.ts",
+      "bytes": 2405,
+      "sha256": "63518d7973eeea0816d1217e57acf2f8e99532ce0b743737612ae14741c1ba04"
+    },
+    {
+      "path": "v1/src/lib/types/flashcards.ts",
+      "bytes": 1848,
+      "sha256": "919bdc4361e50769f17f4aff2c55b6ed2dc3dcbc6f1ee0fa0f86d189f62d83ec"
+    },
+    {
+      "path": "v1/src/lib/types/materials.ts",
+      "bytes": 2633,
+      "sha256": "0eb2a9c0a75337d684cd4834ccf8b531be7e86a7c8174591cdc3b400488996eb"
+    },
+    {
+      "path": "v1/src/lib/types/pagination.ts",
+      "bytes": 46,
+      "sha256": "3c09b88e6c189cf175183cb764c43b8148d7d008e67002e0c2235d95ffc777eb"
+    },
+    {
+      "path": "v1/src/lib/utils/filters.ts",
+      "bytes": 559,
+      "sha256": "14141487c2eaa1c3af5f82b2846df79265ebdebb969c09cfc3020ffe6fe15aa5"
+    },
+    {
+      "path": "v1/src/lib/utils/flashcards.test.ts",
+      "bytes": 12264,
+      "sha256": "b0704fd95ea04ae4db109334f8f63930f9b917865eb7ae67e7b866b85864db07"
+    },
+    {
+      "path": "v1/src/lib/utils/flashcards.ts",
+      "bytes": 9718,
+      "sha256": "e8d53be3e9b8e3af8493d5c265e3e643c7ec26407bc32198a62ea96321be74b9"
+    },
+    {
+      "path": "v1/src/lib/utils/sectionSpeech.ts",
+      "bytes": 3691,
+      "sha256": "122efdbadd35bbae1eb706516cc9d7cefb5e70725c6633f0e4e77bbf91bdc1cf"
+    },
+    {
+      "path": "v1/src/lib/utils/speech.ts",
+      "bytes": 409,
+      "sha256": "34c785d86ccef5b334c467abe24439a2044b3701c7943591c6446eab01114fa0"
+    },
+    {
+      "path": "v1/src/lib/utils/speechFormatters.ts",
+      "bytes": 2472,
+      "sha256": "aa5c3c78696b54143ae4b754b57e822fe6d9b636dd7081775c4398775f85b535"
+    },
+    {
+      "path": "v1/src/main.ts",
+      "bytes": 281,
+      "sha256": "5ad902d66440d463db121b8fe0643e9348cc53d7bbd49151c0c769def707dc27"
+    },
+    {
+      "path": "v1/src/vite-env.d.ts",
+      "bytes": 39,
+      "sha256": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92"
+    },
+    {
+      "path": "v1/svelte.config.js",
+      "bytes": 120,
+      "sha256": "707dcfd53f6a2f8687e273925b680a90eb5eee7118335d4043a52fac83c98505"
+    },
+    {
+      "path": "v1/tsconfig.json",
+      "bytes": 273,
+      "sha256": "35ac174ce27f92435217c5e6f5873cc7196da783629b2e48e0e71e3da4927b0f"
+    },
+    {
+      "path": "v1/tsconfig.node.json",
+      "bytes": 322,
+      "sha256": "0545d503eac171d76f4dc615ba6dd0f59fe8c3817134ccc8dc577d01bedbec51"
+    },
+    {
+      "path": "v1/vite.config.ts",
+      "bytes": 292,
+      "sha256": "2eeb37c716ea591c103b7ab6a836caeeb706d5358cac406c04bd2c077432edc1"
+    },
+    {
+      "path": "v1/vitest.config.ts",
+      "bytes": 451,
+      "sha256": "616cdd2977a068d40affe871422e9cf80f8b0bd3cfe8cc7009bfd2377555d2ba"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 656,
+      "sha256": "89bb026a9f2e980d3de98c51306e192b117e1ce56bb0c2ab3079381ac4a6cb49"
+    },
+    {
+      "path": "vitest.config.ts",
+      "bytes": 704,
+      "sha256": "7b424decdf1c5585e04682b248168b72eb10200022ff12690321a98f728d75e2"
+    }
+  ]
+}

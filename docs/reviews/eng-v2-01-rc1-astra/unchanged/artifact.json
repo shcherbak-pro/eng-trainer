@@ -1,0 +1,42 @@
+[
+  {
+    "path": "assets/index-ChYHRsBq.css",
+    "sha256": "549c866415293f842358d698920c4f72298e4a20fa5fed6d7492018d5641f8aa"
+  },
+  {
+    "path": "assets/index-CxUuAQO4.js",
+    "sha256": "fd0773ca672697da7b458a8daf497d0bb75fb6f3d4fa38cc8798ad5cee8f4e24"
+  },
+  {
+    "path": "data/materials.json",
+    "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+  },
+  {
+    "path": "favicon.svg",
+    "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+  },
+  {
+    "path": "index.html",
+    "sha256": "4ac9ba2d9e6b6b5b01c3101bb33a464a62386b1e14e85915fc9af1de4934088b"
+  },
+  {
+    "path": "v1/assets/index-Bod3ovET.css",
+    "sha256": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83"
+  },
+  {
+    "path": "v1/assets/index-C0A337ei.js",
+    "sha256": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913"
+  },
+  {
+    "path": "v1/data/materials.json",
+    "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+  },
+  {
+    "path": "v1/favicon.svg",
+    "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+  },
+  {
+    "path": "v1/index.html",
+    "sha256": "0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f"
+  }
+]

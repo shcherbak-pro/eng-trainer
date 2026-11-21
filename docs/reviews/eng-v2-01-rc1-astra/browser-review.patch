@@ -1,0 +1,43 @@
+diff --git a/docs/reviews/eng-v2-01-rc1-astra/browser-review.original.mjs b/docs/reviews/eng-v2-01-rc1-astra/browser-review.mjs
+index 02042e1..aabdc38 100644
+--- a/docs/reviews/eng-v2-01-rc1-astra/browser-review.original.mjs
++++ b/docs/reviews/eng-v2-01-rc1-astra/browser-review.mjs
+@@ -284,10 +284,36 @@ test('distinct-entry-identities-with-similar-display-text',async({page,context,r
+   await context.route('**/eng-trainer/data/materials.json',route=>route.fulfill({json:fixture}));
+   await ready(page,base+'#phrases');assert.equal(await page.locator('.phrase-card').count(),2);
+   await nav(page,'flashcards');record.cardText=await page.locator('.flashcard__term').innerText();record.cardCount=await page.getByRole('progressbar').getAttribute('aria-valuemax');
+-  await page.getByRole('button',{name:/^I know it/}).click();await page.getByRole('heading',{name:'Deck complete',exact:true}).waitFor();await settle(page);
++  // RC1: first observe two distinct IDs; completing only C++ cannot complete this deck.
++  assert.equal(record.cardText,'C++');assert.equal(record.cardCount,'2');
++  const counts=async()=>({learned:await page.getByRole('progressbar').getAttribute('aria-valuenow'),total:await page.getByRole('progressbar').getAttribute('aria-valuemax')});
++  assert.deepEqual(await counts(),{learned:'0',total:'2'});
++  await page.getByRole('button',{name:/^I know it/}).click();await page.locator('.flashcard__term').filter({hasText:/^C#$/}).waitFor();await settle(page);
++  assert.equal(await page.getByRole('heading',{name:'Deck complete',exact:true}).count(),0);
++  record.afterFirstCounts=await counts();assert.deepEqual(record.afterFirstCounts,{learned:'1',total:'2'});
+   record.stored=await readDatabase(page);
+-  await page.reload();await page.locator('.app-shell').waitFor();await nav(page,'phrases');record.learnedCards=await page.locator('.phrase-card.learned h3').allTextContents();
+   assert.deepEqual(record.stored.progress.learnedPhrases,['review-cpp'],'Learning C++ must not mark distinct C# learned');
++  assert.deepEqual(record.stored.flashcardSessions.all.order,['review-csharp']);
++  await page.reload();await page.locator('.app-shell').waitFor();await nav(page,'phrases');record.learnedCards=await page.locator('.phrase-card.learned h3').allTextContents();
++  assert.deepEqual(record.learnedCards,['C++']);
++  assert.equal(await phrase(page,'C#').getByRole('button',{name:'Mark as learned',exact:true}).count(),1);
++  assert.equal(await phrase(page,'C++').getByRole('button',{name:'Mark as not learned',exact:true}).count(),1);
++  await nav(page,'flashcards');assert.equal(await page.locator('.flashcard__term').innerText(),'C#');
++  assert.deepEqual(await counts(),{learned:'1',total:'2'});
++  await page.getByRole('button',{name:'Review learned vocabulary',exact:true}).click();
++  record.firstReview=await page.locator('.flashcards-review__text strong').allTextContents();assert.deepEqual(record.firstReview,['C++']);
++  await page.getByRole('button',{name:'Back to flashcards',exact:true}).first().click();
++  await page.getByRole('button',{name:/^I know it/}).click();await page.getByRole('heading',{name:'Deck complete',exact:true}).waitFor();await settle(page);
++  record.afterSecond=await readDatabase(page);assert.deepEqual(record.afterSecond.progress.learnedPhrases,['review-cpp','review-csharp']);
++  assert.deepEqual(await counts(),{learned:'2',total:'2'});
++  await page.reload();await page.locator('.app-shell').waitFor();
++  await page.getByRole('heading',{name:'Deck complete',exact:true}).waitFor();
++  assert.deepEqual(await counts(),{learned:'2',total:'2'});
++  await nav(page,'phrases');record.bothLearnedAfterReload=await page.locator('.phrase-card.learned h3').allTextContents();
++  assert.deepEqual(record.bothLearnedAfterReload,['C++','C#']);
++  await nav(page,'flashcards');await page.getByRole('button',{name:'Review learned vocabulary',exact:true}).first().click();
++  record.bothReviewedAfterReload=await page.locator('.flashcards-review__text strong').allTextContents();
++  assert.deepEqual(record.bothReviewedAfterReload,['C++','C#']);
+ });
+ 
+ test('built-in-duplicate-entry-consistency',async({page,record})=>{

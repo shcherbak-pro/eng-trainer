@@ -1,0 +1,34 @@
+
+> english-assessment-trainer-v2@2.0.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+X [ERROR] Unexpected "<" in JSON
+
+    ../../../package.json:1:0:
+      1 │ <section class="card">
+        ╵ ^
+
+X [ERROR] Unexpected "<" in JSON
+
+    ../../../tsconfig.json:1:0:
+      1 │ <section class="card">
+        ╵ ^
+
+failed to load config from c:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\v1\vite.config.ts
+X [ERROR] Unexpected "<" in JSON
+
+    ../../package.json:1:0:
+      1 │ <section class="card">
+        ╵ ^
+
+X [ERROR] Unexpected "<" in JSON
+
+    ../../tsconfig.json:1:0:
+      1 │ <section class="card">
+        ╵ ^
+
+failed to load config from c:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate\vite.config.ts
+Loading svelte-check in workspace: c:\Users\SerhiiShcherbak\AppData\Local\Temp\eng-v2-01-astra-JWjXDp\candidate
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
