@@ -1,0 +1,36 @@
+$ npm run test:v1
+
+> english-assessment-trainer-v2@2.0.0 test:v1
+> npm --prefix v1 run test
+
+
+> english-assessment-trainer-v1@1.0.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90m<review-copy>/candidate/v1[39m
+
+ [32m✓[39m src/lib/utils/flashcards.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m src/lib/stores/progress.flashcards.test.ts [2m([22m[2m12 tests[22m[2m)[22m[33m 1329[2mms[22m[39m
+   [33m[2m✓[22m[39m flashcard progress in localStorage[2m > [22mresets one deck without touching the others [33m 413[2mms[22m[39m
+ [32m✓[39m src/lib/pages/FlashcardsPage.test.ts [2m([22m[2m26 tests[22m[2m)[22m[33m 8739[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mshows one card with the English side first and the deck progress [33m 1148[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mkeyboard[2m > [22mignores shortcuts combined with modifier keys [33m 315[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mswipe[2m > [22mdoes nothing on a vertical move, so the page can scroll [33m 345[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mswipe[2m > [22mdoes not flip the card when a drag ends on it [33m 320[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mdecks[2m > [22mshows only the cards of the selected topic [33m 323[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mdecks[2m > [22mshares the learned status between topic decks and All Vocabulary [33m 364[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mdecks[2m > [22mshows a completed state when every card of the deck is learned [33m 401[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mdecks[2m > [22mshows an empty state when a topic has no cards to study [33m 403[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mdecks[2m > [22mfalls back to the first topic when the saved topic no longer exists [33m 329[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22msaved progress[2m > [22mcontinues with the same deck, card and counts after a reload [33m 697[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22msaved progress[2m > [22mresumes in the middle of a round after a reload [33m 733[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22msaved progress[2m > [22mrespects items already marked as learned on the Phrases page [33m 328[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mlearned vocabulary[2m > [22mlists learned cards and returns one to the deck with "Learn again" [33m 359[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m68 passed[39m[22m[90m (68)[39m
+[2m   Start at [22m 16:44:57
+[2m   Duration [22m 10.06s[2m (transform 991ms, setup 0ms, collect 1.13s, tests 10.11s, environment 1.30s, prepare 289ms)[22m
+
+[exit 0]

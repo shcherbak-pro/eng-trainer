@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import realMaterials from '../../public/data/materials.json';
+import { realMaterials } from '../test/content';
 import { createCatalog } from './catalog';
 import type { Materials } from './types';
 

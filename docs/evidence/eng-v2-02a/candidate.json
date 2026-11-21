@@ -1,0 +1,177 @@
+{
+  "baseline": "c84ef30d80ffbaae4ac0f3aa0fb7fe6090b8067b",
+  "head": "c84ef30d80ffbaae4ac0f3aa0fb7fe6090b8067b",
+  "branch": "feature/eng-v2-02a-content-packs",
+  "stagedFiles": [],
+  "changedTracked": [
+    ".gitignore",
+    "CHANGELOG.md",
+    "README.md",
+    "package.json",
+    "public/data/materials.json",
+    "scripts/check-site.mjs",
+    "src/app/App.test.ts",
+    "src/content/builtIn.ts",
+    "src/content/catalog.test.ts",
+    "src/content/types.ts",
+    "src/features/flashcards/flashcards.test.ts",
+    "tsconfig.json"
+  ],
+  "sourceFiles": [
+    {
+      "path": ".gitignore",
+      "sha256": "088c4786a7529f71e63d34d3135d848b542d9b945d2049ca25c443383bd5d382"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "10035adf7d24ad570128945fdc232612575ae98ea3645d99ebafad1faf88a78c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "645e4df2067214a041a547ffb72973f01f8713d28c06e4353b8fff38addd7139"
+    },
+    {
+      "path": "content/catalog.json",
+      "sha256": "f65fc15f62efdaecb31e6d93581c7e1f0494dc09bbae3227cf137818c3bd81c9"
+    },
+    {
+      "path": "content/packs/agent-framework.json",
+      "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+    },
+    {
+      "path": "content/packs/ai-certification-verbs-contextual.json",
+      "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+    },
+    {
+      "path": "content/packs/ai-certification.json",
+      "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+    },
+    {
+      "path": "content/packs/essential-100.json",
+      "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+    },
+    {
+      "path": "content/packs/hedging-and-linking.json",
+      "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+    },
+    {
+      "path": "content/packs/logical-200.json",
+      "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+    },
+    {
+      "path": "content/packs/personal-topics.json",
+      "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+    },
+    {
+      "path": "content/packs/presentations.json",
+      "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+    },
+    {
+      "path": "content/packs/speaking-foundations.json",
+      "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+    },
+    {
+      "path": "content/packs/speaking-practice.json",
+      "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+    },
+    {
+      "path": "content/packs/workplace-topics.json",
+      "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+    },
+    {
+      "path": "docs/architecture/BUILT-IN-CONTENT.md",
+      "sha256": "ed04bf4a2a6651cdbbff63cd2df0f3664b9e1bc861ee13f7bbcb748ad51aeb18"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02a/README.md",
+      "sha256": "891853abbead97dc983b04c3c9c329888ba0b249788d20ed6057e0358e825afc"
+    },
+    {
+      "path": "docs/evidence/eng-v2-02a/browser-check.mjs",
+      "sha256": "870ee49cb56b52d196338c1d2354803a97b0595d1b6fba34807998e17ed44f4c"
+    },
+    {
+      "path": "docs/handoffs/ENG-V2-02A.md",
+      "sha256": "32edc5f6e3dd1765b949c388b5571c81bff451acc9033a2e3f2c246451478e8d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "93d63ebf9affd6ebbbabf6be9fe011a2d5cfc4f6070cd3f4d1e5e3fa7d6216e0"
+    },
+    {
+      "path": "public/data/materials.json",
+      "deleted": true
+    },
+    {
+      "path": "scripts/check-site.mjs",
+      "sha256": "20e6f2f84d96cba114d416c423e3049c7221111cda407b1d9274b31b0a58595c"
+    },
+    {
+      "path": "scripts/content-build.mjs",
+      "sha256": "dcb970ddd949304b405b6b05b5ee768b80eb6794aaba5621bbc612872ef339f1"
+    },
+    {
+      "path": "scripts/content-build.test.mjs",
+      "sha256": "fc448f5f0b50ce97d30e9c6a991612a5e5c6530962a1544e80d586a1bbe33c6f"
+    },
+    {
+      "path": "scripts/generate-content.mjs",
+      "sha256": "f7147818bfcac4ec51a005e34925cc1f9e9c3ced33f76f059964174645cfb936"
+    },
+    {
+      "path": "scripts/verify-content-migration.mjs",
+      "sha256": "1a0e2d19beac21aa2c85ae6ca4bd94fa6add3a91e4253e2e708b717b1341316f"
+    },
+    {
+      "path": "src/app/App.test.ts",
+      "sha256": "589797d37702b3ee92dc25c3bd9cfb6b9c8637fba1f1a61946c618b5ee0b8507"
+    },
+    {
+      "path": "src/content/builtIn.test.ts",
+      "sha256": "a1195c5e8ea5ab543a852cd7b7e88ba94bcfc72013cec0ae3cf68436291618f6"
+    },
+    {
+      "path": "src/content/builtIn.ts",
+      "sha256": "44b6a1f256b919926ce2a88e15883ccec0a172a3b301350b3b597bc6dd05122e"
+    },
+    {
+      "path": "src/content/catalog.test.ts",
+      "sha256": "512a9b94e4816b5e5adf49f03815b2d3f5058b1db406f114fba034486755bac8"
+    },
+    {
+      "path": "src/content/packFormat.js",
+      "sha256": "a90ec34f5f1d2abb48c514c062942abb47d3e26e01781400217b6be310eae649"
+    },
+    {
+      "path": "src/content/packTypes.ts",
+      "sha256": "d189588502ce9cf3cf01c3fc12fdb5f57ff1a8a66c40797cb025b76c2a3976f2"
+    },
+    {
+      "path": "src/content/types.ts",
+      "sha256": "54c8b7018cc54eb385458c2a9eb2d3e26e3252cc4c4aa06acf2ff1421cb14d98"
+    },
+    {
+      "path": "src/features/flashcards/flashcards.test.ts",
+      "sha256": "9cf12211a2179828a414af467697004758102b569621082482d3cae64690a701"
+    },
+    {
+      "path": "src/test/content.ts",
+      "sha256": "ce1c84ade3a7c10c68c5a64b0579f18e25397a5d53cf2b6acb0dbcf19fe503d3"
+    },
+    {
+      "path": "src/test/fixtures/content-baseline.json",
+      "sha256": "5cd6b0519121bc71b816a6502a026116510023d4b72e4872dcec4a5d63d06af5"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "cb7f89add7dd1e107a527848001a8ae89f16f6e416855d0a98f56d306ea275c6"
+    }
+  ],
+  "unchanged": {
+    "v1": true,
+    "persistence": true,
+    "workflow": true,
+    "lockfiles": true
+  },
+  "excluded": "Generated evidence logs/JSON/screenshots and ignored build output (artifact.json inventories the build)"
+}

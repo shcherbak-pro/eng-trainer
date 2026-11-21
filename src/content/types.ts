@@ -66,7 +66,7 @@ export type WordIndexItem = {
   tag?: string;
   meaning: string;
   pronunciation: string;
-  transcription?: string;
+  transcription?: string | null;
   commonAlternatives?: string[] | string;
   examples: WordExample[];
 };

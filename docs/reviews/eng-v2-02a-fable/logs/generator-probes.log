@@ -1,0 +1,48 @@
+PASS  two independent trees and a rerun produce byte-identical outputs
+PASS  CRLF, 4-space and minified source formatting do not change generated names or bytes
+PASS  duplicate phrase id across packs  [exit 1] Error: Invalid built-in content: duplicate entry id phrase-001
+PASS  duplicate verb id across packs  [exit 1] Error: Invalid built-in content: duplicate entry id iv-006-become
+PASS  duplicate word id within a pack  [exit 1] Error: Invalid built-in content: duplicate entry id word-topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit
+PASS  word id equal to a block id  [exit 1] Error: Invalid built-in content: duplicate entry id start-answer
+PASS  duplicate pack order  [exit 1] Error: Invalid built-in content: duplicate pack order
+PASS  duplicate pack id under another filename  [exit 1] Error: Pack filename presentations-copy.json must match its id presentations
+PASS  filename differs from id  [exit 1] Error: Pack filename talks.json must match its id presentations
+PASS  pack schemaVersion 2  [exit 1] Error: Invalid built-in content: pack.schemaVersion must be 1
+PASS  catalog schemaVersion 2  [exit 1] Error: Invalid built-in content: descriptor.schemaVersion must be 1
+PASS  missing schemaVersion  [exit 1] Error: Invalid built-in content: pack.schemaVersion must be 1
+PASS  unknown envelope key  [exit 1] Error: Invalid built-in content: pack.description is unknown
+PASS  misspelled collection key  [exit 1] Error: Invalid built-in content: presentations.content.phrase is unknown
+PASS  uppercase / path-like pack id  [exit 1] Error: Invalid built-in content: pack.id must be a lowercase slug
+PASS  negative order  [exit 1] Error: Invalid built-in content: presentations.order must be a nonnegative integer
+PASS  fractional order  [exit 1] Error: Invalid built-in content: presentations.order must be a nonnegative integer
+PASS  empty content object  [exit 1] Error: Invalid built-in content: presentations is empty
+PASS  empty collections only  [exit 1] Error: Invalid built-in content: speaking-practice is empty
+PASS  missing required phrase field  [exit 1] Error: Invalid built-in content: presentations.phrases[3].translation must be a string
+PASS  wrong field type (examples not an array)  [exit 1] Error: Invalid built-in content: presentations.wordIndex[3].examples must be an array
+PASS  empty drill string  [exit 1] Error: Invalid built-in content: speaking-practice.drills[0] must be a nonempty string
+PASS  dangling sourcePhraseId  [exit 1] Error: Invalid built-in content: presentation-word-004.sourcePhraseId points to missing phrase no-such-phrase
+PASS  block → absent phrase category  [exit 1] Error: Invalid built-in content: start-answer has no phrases in No such category
+PASS  block → absent verb set  [exit 1] Error: Invalid built-in content: irregular-verbs-100 has no verbs in no-such-set
+PASS  unsupported block type  [exit 1] Error: Invalid built-in content: blocks[0].type is unsupported
+PASS  duplicate block id  [exit 1] Error: Invalid built-in content: duplicate entry id start-answer
+PASS  pack providing every verb of a referenced set removed  [exit 1] Error: Invalid built-in content: irregular-verbs-100 has no verbs in essential-100
+PASS  syntactically invalid JSON (trailing comma)  [exit 1] SyntaxError: Expected double-quoted property name in JSON at position 167365 (line 4602 column 1)
+PASS  UTF-8 byte-order mark  [exit 1] SyntaxError: Unexpected token '﻿', "﻿{
+PASS  missing catalog.json  [exit 1] Error: ENOENT: no such file or directory, open '<review-copy>\generator-probes\missing-catalog-json\content\catalog.json'
+PASS  changed translation regenerates a new content-addressed pack and removes the stale one  [exit 0] Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+PASS  an unrelated non-JSON file in content/packs is ignored  [exit 0] Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}  counts={"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+PASS  observe: a pack renamed to an upper-case .JSON extension (skipped by discovery)  [exit 1] Error: Invalid built-in content: agent-framework-vocabulary has no phrases in Agent Framework Vocabulary
+PASS  a JSON object with a duplicated key keeps the last value without an error  [exit 0] Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}  counts={"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+PASS  observe: authored pack agent-framework deleted  [exit 1] Error: Invalid built-in content: agent-framework-vocabulary has no phrases in Agent Framework Vocabulary
+PASS  observe: authored pack ai-certification-verbs-contextual deleted  [exit 1] Error: Invalid built-in content: ai-certification-verbs-contextual has no verbs in ai-certification-verbs-contextual
+PASS  observe: authored pack ai-certification deleted  [exit 1] Error: Invalid built-in content: ai-certification-vocabulary has no phrases in AI Certification Vocabulary
+PASS  observe: authored pack essential-100 deleted  [exit 1] Error: Invalid built-in content: irregular-verbs-100 has no verbs in essential-100
+PASS  observe: authored pack hedging-and-linking deleted  [exit 1] Error: Invalid built-in content: hedging-phrases has no phrases in Hedging Phrases
+PASS  observe: authored pack logical-200 deleted  [exit 1] Error: Invalid built-in content: irregular-verbs-logical-200 has no verbs in logical-200
+PASS  observe: authored pack personal-topics deleted  [exit 1] Error: Invalid built-in content: topic-tell-me-about-yourself has no phrases in Tell me about yourself
+PASS  observe: authored pack presentations deleted  [exit 1] Error: Invalid built-in content: presentation-phrases has no phrases in Presentation Phrases
+PASS  observe: authored pack speaking-foundations deleted  [exit 1] Error: Invalid built-in content: start-answer has no phrases in Start answer
+PASS  observe: authored pack speaking-practice deleted  [exit 1] Error: Invalid built-in content: answer-patterns has no patterns
+PASS  observe: authored pack workplace-topics deleted  [exit 1] Error: Invalid built-in content: topic-teamwork has no phrases in Teamwork
+PASS  cleanup removes stale hash-named packs but leaves unrelated files  unrelatedFileKept=true
+47/47 probes behaved as expected

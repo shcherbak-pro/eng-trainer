@@ -1,0 +1,2410 @@
+{
+  "schemaVersion": 1,
+  "id": "essential-100",
+  "title": "100 Irregular Verbs",
+  "order": 90,
+  "content": {
+    "irregularVerbs": [
+      {
+        "id": "iv-001-be",
+        "group": "Core state & experience",
+        "base": "be",
+        "pastSimple": "was/were",
+        "pastParticiple": "been",
+        "translation": "бути",
+        "transcription": "be /biː/ — was/were /wəz, wɜːr/ — been /bɪn/",
+        "examples": [
+          {
+            "en": "I try to be clear during online meetings.",
+            "ua": "Я намагаюся бути чітким під час онлайн-зустрічей."
+          },
+          {
+            "en": "The requirements were unclear at first, but we have been able to clarify them.",
+            "ua": "Спочатку вимоги були нечіткими, але ми змогли їх уточнити."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-002-have",
+        "group": "Core state & experience",
+        "base": "have",
+        "pastSimple": "had",
+        "pastParticiple": "had",
+        "translation": "мати",
+        "transcription": "have /hæv/ — had /hæd/ — had /hæd/",
+        "examples": [
+          {
+            "en": "I have enough context to estimate the task.",
+            "ua": "У мене є достатньо контексту, щоб оцінити задачу."
+          },
+          {
+            "en": "We had a short call and have had several updates since then.",
+            "ua": "У нас був короткий дзвінок, і з того часу ми мали кілька апдейтів."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-003-do",
+        "group": "Core state & experience",
+        "base": "do",
+        "pastSimple": "did",
+        "pastParticiple": "done",
+        "translation": "робити, виконувати",
+        "transcription": "do /duː/ — did /dɪd/ — done /dʌn/",
+        "examples": [
+          {
+            "en": "We need to do a quick check before the release.",
+            "ua": "Нам потрібно зробити швидку перевірку перед релізом."
+          },
+          {
+            "en": "We did the analysis yesterday, and the main part has been done.",
+            "ua": "Ми зробили аналіз учора, і основну частину вже виконано."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-004-make",
+        "group": "Core state & experience",
+        "base": "make",
+        "pastSimple": "made",
+        "pastParticiple": "made",
+        "translation": "робити, створювати, приймати рішення",
+        "transcription": "make /meɪk/ — made /meɪd/ — made /meɪd/",
+        "examples": [
+          {
+            "en": "We need to make a decision based on the current information.",
+            "ua": "Нам потрібно прийняти рішення на основі поточної інформації."
+          },
+          {
+            "en": "The team made a workaround, and we have made good progress.",
+            "ua": "Команда зробила обхідне рішення, і ми досягли хорошого прогресу."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-005-get",
+        "group": "Core state & experience",
+        "base": "get",
+        "pastSimple": "got",
+        "pastParticiple": "got/gotten",
+        "translation": "отримувати, ставати",
+        "transcription": "get /ɡet/ — got /ɡɑːt/ — got/gotten /ɡɑːt, ˈɡɑːtən/",
+        "examples": [
+          {
+            "en": "I try to get feedback as early as possible.",
+            "ua": "Я намагаюся отримати фідбек якомога раніше."
+          },
+          {
+            "en": "We got useful comments from the client, and we have gotten more context.",
+            "ua": "Ми отримали корисні коментарі від клієнта і отримали більше контексту."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-006-become",
+        "group": "Core state & experience",
+        "base": "become",
+        "pastSimple": "became",
+        "pastParticiple": "become",
+        "translation": "ставати",
+        "transcription": "become /bɪˈkʌm/ — became /bɪˈkeɪm/ — become /bɪˈkʌm/",
+        "examples": [
+          {
+            "en": "The task can become more complicated if the requirements change.",
+            "ua": "Задача може стати складнішою, якщо вимоги зміняться."
+          },
+          {
+            "en": "The issue became clearer after we looked into the logs.",
+            "ua": "Проблема стала чіткішою після того, як ми розібралися з логами."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-007-feel",
+        "group": "Core state & experience",
+        "base": "feel",
+        "pastSimple": "felt",
+        "pastParticiple": "felt",
+        "translation": "відчувати",
+        "transcription": "feel /fiːl/ — felt /felt/ — felt /felt/",
+        "examples": [
+          {
+            "en": "I feel more confident when I use clear speaking patterns.",
+            "ua": "Я почуваюся впевненіше, коли використовую чіткі мовні патерни."
+          },
+          {
+            "en": "The client felt better after we explained the next steps.",
+            "ua": "Клієнт почувався краще після того, як ми пояснили наступні кроки."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-008-mean",
+        "group": "Core state & experience",
+        "base": "mean",
+        "pastSimple": "meant",
+        "pastParticiple": "meant",
+        "translation": "означати, мати на увазі",
+        "transcription": "mean /miːn/ — meant /ment/ — meant /ment/",
+        "examples": [
+          {
+            "en": "Could you clarify what you mean by “urgent”?",
+            "ua": "Можеш уточнити, що ти маєш на увазі під “терміново”?"
+          },
+          {
+            "en": "The client meant a different workflow, so we clarified it.",
+            "ua": "Клієнт мав на увазі інший workflow, тому ми це уточнили."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-009-know",
+        "group": "Core state & experience",
+        "base": "know",
+        "pastSimple": "knew",
+        "pastParticiple": "known",
+        "translation": "знати",
+        "transcription": "know /noʊ/ — knew /nuː/ — known /noʊn/",
+        "examples": [
+          {
+            "en": "I know the main risks, but I need more details.",
+            "ua": "Я знаю основні ризики, але мені потрібно більше деталей."
+          },
+          {
+            "en": "We knew the deadline was tight, and the risk was known from the beginning.",
+            "ua": "Ми знали, що дедлайн був стислим, і ризик був відомий з початку."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-010-think",
+        "group": "Core state & experience",
+        "base": "think",
+        "pastSimple": "thought",
+        "pastParticiple": "thought",
+        "translation": "думати, вважати",
+        "transcription": "think /θɪŋk/ — thought /θɔːt/ — thought /θɔːt/",
+        "examples": [
+          {
+            "en": "I think AI should support people, not replace them.",
+            "ua": "Я вважаю, що AI має підтримувати людей, а не замінювати їх."
+          },
+          {
+            "en": "We thought the task was simple, but it required more testing.",
+            "ua": "Ми думали, що задача проста, але вона потребувала більше тестування."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-011-understand",
+        "group": "Core state & experience",
+        "base": "understand",
+        "pastSimple": "understood",
+        "pastParticiple": "understood",
+        "translation": "розуміти",
+        "transcription": "understand /ˌʌndərˈstænd/ — understood /ˌʌndərˈstʊd/ — understood /ˌʌndərˈstʊd/",
+        "examples": [
+          {
+            "en": "I need to understand the root cause before making changes.",
+            "ua": "Мені потрібно зрозуміти першопричину перед тим, як робити зміни."
+          },
+          {
+            "en": "We understood the issue after the client gave us an example.",
+            "ua": "Ми зрозуміли проблему після того, як клієнт дав нам приклад."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-012-say",
+        "group": "Communication & meetings",
+        "base": "say",
+        "pastSimple": "said",
+        "pastParticiple": "said",
+        "translation": "казати",
+        "transcription": "say /seɪ/ — said /sed/ — said /sed/",
+        "examples": [
+          {
+            "en": "I would start by saying that communication is essential.",
+            "ua": "Я б почав з того, що комунікація є необхідною."
+          },
+          {
+            "en": "The client said the timeline was too optimistic.",
+            "ua": "Клієнт сказав, що таймлайн був занадто оптимістичним."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-013-tell",
+        "group": "Communication & meetings",
+        "base": "tell",
+        "pastSimple": "told",
+        "pastParticiple": "told",
+        "translation": "розповідати, казати комусь",
+        "transcription": "tell /tel/ — told /toʊld/ — told /toʊld/",
+        "examples": [
+          {
+            "en": "I try to tell the client about risks as early as possible.",
+            "ua": "Я намагаюся повідомляти клієнта про ризики якомога раніше."
+          },
+          {
+            "en": "We told the team about the blocker during the meeting.",
+            "ua": "Ми повідомили команду про блокер під час зустрічі."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-014-speak",
+        "group": "Communication & meetings",
+        "base": "speak",
+        "pastSimple": "spoke",
+        "pastParticiple": "spoken",
+        "translation": "говорити",
+        "transcription": "speak /spiːk/ — spoke /spoʊk/ — spoken /ˈspoʊkən/",
+        "examples": [
+          {
+            "en": "I want to speak more clearly during the assessment.",
+            "ua": "Я хочу говорити чіткіше під час асесменту."
+          },
+          {
+            "en": "We spoke with the client, and the key points have been spoken through.",
+            "ua": "Ми поговорили з клієнтом, і ключові моменти були проговорені."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-015-hear",
+        "group": "Communication & meetings",
+        "base": "hear",
+        "pastSimple": "heard",
+        "pastParticiple": "heard",
+        "translation": "чути",
+        "transcription": "hear /hɪr/ — heard /hɜːrd/ — heard /hɜːrd/",
+        "examples": [
+          {
+            "en": "Can you hear me clearly?",
+            "ua": "Мене добре чути?"
+          },
+          {
+            "en": "I heard the question, but I need a second to think.",
+            "ua": "Я почув питання, але мені потрібна секунда, щоб подумати."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-016-read",
+        "group": "Communication & meetings",
+        "base": "read",
+        "pastSimple": "read",
+        "pastParticiple": "read",
+        "translation": "читати",
+        "transcription": "read /riːd/ — read /red/ — read /red/",
+        "examples": [
+          {
+            "en": "I need to read the requirements before estimation.",
+            "ua": "Мені потрібно прочитати вимоги перед оцінкою."
+          },
+          {
+            "en": "I read the document yesterday and have read the comments as well.",
+            "ua": "Я прочитав документ учора і також прочитав коментарі."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-017-write",
+        "group": "Communication & meetings",
+        "base": "write",
+        "pastSimple": "wrote",
+        "pastParticiple": "written",
+        "translation": "писати",
+        "transcription": "write /raɪt/ — wrote /roʊt/ — written /ˈrɪtən/",
+        "examples": [
+          {
+            "en": "I usually write a short summary after the meeting.",
+            "ua": "Я зазвичай пишу короткий підсумок після зустрічі."
+          },
+          {
+            "en": "I wrote the meeting notes, and the action items have been written clearly.",
+            "ua": "Я написав нотатки зустрічі, і action items були написані чітко."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-018-send",
+        "group": "Communication & meetings",
+        "base": "send",
+        "pastSimple": "sent",
+        "pastParticiple": "sent",
+        "translation": "надсилати",
+        "transcription": "send /send/ — sent /sent/ — sent /sent/",
+        "examples": [
+          {
+            "en": "I will send the summary after the call.",
+            "ua": "Я надішлю підсумок після дзвінка."
+          },
+          {
+            "en": "We sent the update in the morning and have sent the final version now.",
+            "ua": "Ми надіслали апдейт вранці і зараз надіслали фінальну версію."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-019-show",
+        "group": "Communication & meetings",
+        "base": "show",
+        "pastSimple": "showed",
+        "pastParticiple": "shown",
+        "translation": "показувати",
+        "transcription": "show /ʃoʊ/ — showed /ʃoʊd/ — shown /ʃoʊn/",
+        "examples": [
+          {
+            "en": "Let me show you the issue on my screen.",
+            "ua": "Дозвольте показати проблему на моєму екрані."
+          },
+          {
+            "en": "The demo showed the main problem, and the results have shown the same behavior.",
+            "ua": "Демо показало основну проблему, і результати показали таку саму поведінку."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-020-see",
+        "group": "Communication & meetings",
+        "base": "see",
+        "pastSimple": "saw",
+        "pastParticiple": "seen",
+        "translation": "бачити, розуміти",
+        "transcription": "see /siː/ — saw /sɔː/ — seen /siːn/",
+        "examples": [
+          {
+            "en": "I can see your screen now.",
+            "ua": "Зараз я бачу твій екран."
+          },
+          {
+            "en": "We saw the issue during the demo, and similar behavior has been seen before.",
+            "ua": "Ми побачили проблему під час демо, і схожу поведінку вже бачили раніше."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-021-meet",
+        "group": "Communication & meetings",
+        "base": "meet",
+        "pastSimple": "met",
+        "pastParticiple": "met",
+        "translation": "зустрічатися, відповідати вимогам",
+        "transcription": "meet /miːt/ — met /met/ — met /met/",
+        "examples": [
+          {
+            "en": "We need to meet the deadline without reducing quality.",
+            "ua": "Нам потрібно вкластися в дедлайн без зниження якості."
+          },
+          {
+            "en": "We met with the client and have met the main requirement.",
+            "ua": "Ми зустрілися з клієнтом і виконали основну вимогу."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-022-hold",
+        "group": "Communication & meetings",
+        "base": "hold",
+        "pastSimple": "held",
+        "pastParticiple": "held",
+        "translation": "проводити, тримати",
+        "transcription": "hold /hoʊld/ — held /held/ — held /held/",
+        "examples": [
+          {
+            "en": "We can hold a short meeting to align on priorities.",
+            "ua": "Ми можемо провести коротку зустріч, щоб узгодити пріоритети."
+          },
+          {
+            "en": "The team held a quick sync and has held the discussion open for follow-up.",
+            "ua": "Команда провела короткий sync і залишила обговорення відкритим для follow-up."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-023-ring",
+        "group": "Communication & meetings",
+        "base": "ring",
+        "pastSimple": "rang",
+        "pastParticiple": "rung",
+        "translation": "дзвонити, дзвеніти",
+        "transcription": "ring /rɪŋ/ — rang /ræŋ/ — rung /rʌŋ/",
+        "examples": [
+          {
+            "en": "I usually ring the client only when the issue is urgent.",
+            "ua": "Я зазвичай телефоную клієнту тільки коли проблема термінова."
+          },
+          {
+            "en": "The phone rang during the meeting, but I kept speaking.",
+            "ua": "Телефон задзвонив під час зустрічі, але я продовжив говорити."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-024-build",
+        "group": "Work, tasks & delivery",
+        "base": "build",
+        "pastSimple": "built",
+        "pastParticiple": "built",
+        "translation": "будувати, створювати",
+        "transcription": "build /bɪld/ — built /bɪlt/ — built /bɪlt/",
+        "examples": [
+          {
+            "en": "We need to build a solution that is easy to maintain.",
+            "ua": "Нам потрібно створити рішення, яке легко підтримувати."
+          },
+          {
+            "en": "The team built a prototype and has built confidence in the approach.",
+            "ua": "Команда створила прототип і здобула впевненість у підході."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-025-choose",
+        "group": "Work, tasks & delivery",
+        "base": "choose",
+        "pastSimple": "chose",
+        "pastParticiple": "chosen",
+        "translation": "обирати",
+        "transcription": "choose /tʃuːz/ — chose /tʃoʊz/ — chosen /ˈtʃoʊzən/",
+        "examples": [
+          {
+            "en": "We need to choose the most reliable approach.",
+            "ua": "Нам потрібно обрати найбільш надійний підхід."
+          },
+          {
+            "en": "We chose the safer option, and the final approach has been chosen.",
+            "ua": "Ми обрали безпечніший варіант, і фінальний підхід був обраний."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-026-deal",
+        "group": "Work, tasks & delivery",
+        "base": "deal",
+        "pastSimple": "dealt",
+        "pastParticiple": "dealt",
+        "translation": "мати справу, вирішувати",
+        "transcription": "deal /diːl/ — dealt /delt/ — dealt /delt/",
+        "examples": [
+          {
+            "en": "I often deal with client requests and technical issues.",
+            "ua": "Я часто маю справу з клієнтськими запитами та технічними проблемами."
+          },
+          {
+            "en": "We dealt with the blocker and moved forward.",
+            "ua": "Ми розібралися з блокером і рушили далі."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-027-find",
+        "group": "Work, tasks & delivery",
+        "base": "find",
+        "pastSimple": "found",
+        "pastParticiple": "found",
+        "translation": "знаходити",
+        "transcription": "find /faɪnd/ — found /faʊnd/ — found /faʊnd/",
+        "examples": [
+          {
+            "en": "We need to find the root cause before changing the code.",
+            "ua": "Нам потрібно знайти першопричину перед зміною коду."
+          },
+          {
+            "en": "We found the issue in the API response.",
+            "ua": "Ми знайшли проблему в API-відповіді."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-028-keep",
+        "group": "Work, tasks & delivery",
+        "base": "keep",
+        "pastSimple": "kept",
+        "pastParticiple": "kept",
+        "translation": "тримати, зберігати",
+        "transcription": "keep /kiːp/ — kept /kept/ — kept /kept/",
+        "examples": [
+          {
+            "en": "Regular updates help keep the team aligned.",
+            "ua": "Регулярні апдейти допомагають тримати команду узгодженою."
+          },
+          {
+            "en": "We kept the client updated during the investigation.",
+            "ua": "Ми тримали клієнта в курсі під час розслідування."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-029-lead",
+        "group": "Work, tasks & delivery",
+        "base": "lead",
+        "pastSimple": "led",
+        "pastParticiple": "led",
+        "translation": "вести, керувати",
+        "transcription": "lead /liːd/ — led /led/ — led /led/",
+        "examples": [
+          {
+            "en": "A good team lead should lead by example.",
+            "ua": "Хороший тімлід має вести власним прикладом."
+          },
+          {
+            "en": "The discussion led to a better solution.",
+            "ua": "Обговорення привело до кращого рішення."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-030-leave",
+        "group": "Work, tasks & delivery",
+        "base": "leave",
+        "pastSimple": "left",
+        "pastParticiple": "left",
+        "translation": "залишати, покидати",
+        "transcription": "leave /liːv/ — left /left/ — left /left/",
+        "examples": [
+          {
+            "en": "I will leave a comment with the main risks.",
+            "ua": "Я залишу коментар з основними ризиками."
+          },
+          {
+            "en": "The client left feedback, and we have left a note in the ticket.",
+            "ua": "Клієнт залишив фідбек, і ми залишили нотатку в тікеті."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-031-let",
+        "group": "Work, tasks & delivery",
+        "base": "let",
+        "pastSimple": "let",
+        "pastParticiple": "let",
+        "translation": "дозволяти, повідомляти",
+        "transcription": "let /let/ — let /let/ — let /let/",
+        "examples": [
+          {
+            "en": "Please let me know if there are any blockers.",
+            "ua": "Будь ласка, дай мені знати, якщо є блокери."
+          },
+          {
+            "en": "We let the client know about the delay.",
+            "ua": "Ми повідомили клієнта про затримку."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-032-put",
+        "group": "Work, tasks & delivery",
+        "base": "put",
+        "pastSimple": "put",
+        "pastParticiple": "put",
+        "translation": "класти, ставити",
+        "transcription": "put /pʊt/ — put /pʊt/ — put /pʊt/",
+        "examples": [
+          {
+            "en": "We should put the main risks into the summary.",
+            "ua": "Нам слід додати основні ризики в підсумок."
+          },
+          {
+            "en": "We put the task on hold until the requirements are clear.",
+            "ua": "Ми поставили задачу на паузу, поки вимоги не будуть чіткими."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-033-set",
+        "group": "Work, tasks & delivery",
+        "base": "set",
+        "pastSimple": "set",
+        "pastParticiple": "set",
+        "translation": "встановлювати, налаштовувати",
+        "transcription": "set /set/ — set /set/ — set /set/",
+        "examples": [
+          {
+            "en": "We need to set a realistic deadline.",
+            "ua": "Нам потрібно встановити реалістичний дедлайн."
+          },
+          {
+            "en": "We set up a meeting and have set clear expectations.",
+            "ua": "Ми організували зустріч і встановили чіткі очікування."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-034-take",
+        "group": "Work, tasks & delivery",
+        "base": "take",
+        "pastSimple": "took",
+        "pastParticiple": "taken",
+        "translation": "брати, займати час",
+        "transcription": "take /teɪk/ — took /tʊk/ — taken /ˈteɪkən/",
+        "examples": [
+          {
+            "en": "This task may take longer if the requirements are unclear.",
+            "ua": "Ця задача може зайняти більше часу, якщо вимоги нечіткі."
+          },
+          {
+            "en": "It took two days, and the final decision has been taken.",
+            "ua": "Це зайняло два дні, і фінальне рішення було прийнято."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-035-teach",
+        "group": "Work, tasks & delivery",
+        "base": "teach",
+        "pastSimple": "taught",
+        "pastParticiple": "taught",
+        "translation": "навчати",
+        "transcription": "teach /tiːtʃ/ — taught /tɔːt/ — taught /tɔːt/",
+        "examples": [
+          {
+            "en": "Senior developers can teach juniors how to avoid common mistakes.",
+            "ua": "Senior-розробники можуть навчати junior-ів уникати типових помилок."
+          },
+          {
+            "en": "My mentor taught me to clarify requirements early.",
+            "ua": "Мій ментор навчив мене уточнювати вимоги рано."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-036-give",
+        "group": "Work, tasks & delivery",
+        "base": "give",
+        "pastSimple": "gave",
+        "pastParticiple": "given",
+        "translation": "давати",
+        "transcription": "give /ɡɪv/ — gave /ɡeɪv/ — given /ˈɡɪvən/",
+        "examples": [
+          {
+            "en": "I try to give clear updates during meetings.",
+            "ua": "Я намагаюся давати чіткі апдейти під час зустрічей."
+          },
+          {
+            "en": "The client gave us useful feedback, and more details have been given.",
+            "ua": "Клієнт дав нам корисний фідбек, і було надано більше деталей."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-037-run",
+        "group": "Work, tasks & delivery",
+        "base": "run",
+        "pastSimple": "ran",
+        "pastParticiple": "run",
+        "translation": "бігти, запускати, керувати",
+        "transcription": "run /rʌn/ — ran /ræn/ — run /rʌn/",
+        "examples": [
+          {
+            "en": "We need to run tests before the release.",
+            "ua": "Нам потрібно запустити тести перед релізом."
+          },
+          {
+            "en": "We ran into a problem, but the tests have run successfully now.",
+            "ua": "Ми зіткнулися з проблемою, але зараз тести пройшли успішно."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-038-go",
+        "group": "Movement & process flow",
+        "base": "go",
+        "pastSimple": "went",
+        "pastParticiple": "gone",
+        "translation": "йти, рухатися",
+        "transcription": "go /ɡoʊ/ — went /went/ — gone /ɡɔːn/",
+        "examples": [
+          {
+            "en": "Let’s go through the agenda one by one.",
+            "ua": "Давайте пройдемося по порядку денному пункт за пунктом."
+          },
+          {
+            "en": "The project went well, but some time has gone into testing.",
+            "ua": "Проєкт пройшов добре, але частина часу пішла на тестування."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-039-come",
+        "group": "Movement & process flow",
+        "base": "come",
+        "pastSimple": "came",
+        "pastParticiple": "come",
+        "translation": "приходити, приходити до ідеї",
+        "transcription": "come /kʌm/ — came /keɪm/ — come /kʌm/",
+        "examples": [
+          {
+            "en": "We need to come up with a practical solution.",
+            "ua": "Нам потрібно придумати практичне рішення."
+          },
+          {
+            "en": "The idea came from the team discussion.",
+            "ua": "Ідея прийшла з командного обговорення."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-040-bring",
+        "group": "Movement & process flow",
+        "base": "bring",
+        "pastSimple": "brought",
+        "pastParticiple": "brought",
+        "translation": "приносити, піднімати тему",
+        "transcription": "bring /brɪŋ/ — brought /brɔːt/ — brought /brɔːt/",
+        "examples": [
+          {
+            "en": "I want to bring up one risk before we move on.",
+            "ua": "Я хочу підняти один ризик перед тим, як ми підемо далі."
+          },
+          {
+            "en": "The discussion brought more clarity to the task.",
+            "ua": "Обговорення внесло більше ясності в задачу."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-041-catch",
+        "group": "Movement & process flow",
+        "base": "catch",
+        "pastSimple": "caught",
+        "pastParticiple": "caught",
+        "translation": "ловити, помічати",
+        "transcription": "catch /kætʃ/ — caught /kɔːt/ — caught /kɔːt/",
+        "examples": [
+          {
+            "en": "Code review helps catch mistakes early.",
+            "ua": "Code review допомагає рано помічати помилки."
+          },
+          {
+            "en": "We caught the bug before production.",
+            "ua": "Ми зловили баг до продакшену."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-042-drive",
+        "group": "Movement & process flow",
+        "base": "drive",
+        "pastSimple": "drove",
+        "pastParticiple": "driven",
+        "translation": "керувати, рухати вперед",
+        "transcription": "drive /draɪv/ — drove /droʊv/ — driven /ˈdrɪvən/",
+        "examples": [
+          {
+            "en": "Clear ownership can drive the project forward.",
+            "ua": "Чітка відповідальність може рухати проєкт уперед."
+          },
+          {
+            "en": "The client’s feedback drove several changes in the design.",
+            "ua": "Фідбек клієнта спричинив кілька змін у дизайні."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-043-fly",
+        "group": "Movement & process flow",
+        "base": "fly",
+        "pastSimple": "flew",
+        "pastParticiple": "flown",
+        "translation": "летіти",
+        "transcription": "fly /flaɪ/ — flew /fluː/ — flown /floʊn/",
+        "examples": [
+          {
+            "en": "Sometimes people fly to meet important clients in person.",
+            "ua": "Іноді люди летять, щоб зустрітися з важливими клієнтами особисто."
+          },
+          {
+            "en": "He flew to the workshop last month.",
+            "ua": "Він летів на воркшоп минулого місяця."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-044-ride",
+        "group": "Movement & process flow",
+        "base": "ride",
+        "pastSimple": "rode",
+        "pastParticiple": "ridden",
+        "translation": "їхати верхи/на транспорті",
+        "transcription": "ride /raɪd/ — rode /roʊd/ — ridden /ˈrɪdən/",
+        "examples": [
+          {
+            "en": "I usually ride a bike to clear my mind after work.",
+            "ua": "Я зазвичай їжджу на велосипеді, щоб очистити голову після роботи."
+          },
+          {
+            "en": "I rode to the office when the weather was good.",
+            "ua": "Я їздив в офіс, коли погода була хороша."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-045-rise",
+        "group": "Movement & process flow",
+        "base": "rise",
+        "pastSimple": "rose",
+        "pastParticiple": "risen",
+        "translation": "підніматися, зростати",
+        "transcription": "rise /raɪz/ — rose /roʊz/ — risen /ˈrɪzən/",
+        "examples": [
+          {
+            "en": "Risk can rise if we skip testing.",
+            "ua": "Ризик може зрости, якщо ми пропустимо тестування."
+          },
+          {
+            "en": "The number of issues rose after the release.",
+            "ua": "Кількість проблем зросла після релізу."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-046-sit",
+        "group": "Movement & process flow",
+        "base": "sit",
+        "pastSimple": "sat",
+        "pastParticiple": "sat",
+        "translation": "сидіти",
+        "transcription": "sit /sɪt/ — sat /sæt/ — sat /sæt/",
+        "examples": [
+          {
+            "en": "I prefer to sit close to the screen during online calls.",
+            "ua": "Я віддаю перевагу сидіти близько до екрану під час онлайн-дзвінків."
+          },
+          {
+            "en": "We sat together and discussed the root cause.",
+            "ua": "Ми сіли разом і обговорили першопричину."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-047-stand",
+        "group": "Movement & process flow",
+        "base": "stand",
+        "pastSimple": "stood",
+        "pastParticiple": "stood",
+        "translation": "стояти, відстоювати",
+        "transcription": "stand /stænd/ — stood /stʊd/ — stood /stʊd/",
+        "examples": [
+          {
+            "en": "It is important to stand up for your principles.",
+            "ua": "Важливо відстоювати свої принципи."
+          },
+          {
+            "en": "The team stood by the decision because it was safer.",
+            "ua": "Команда підтримала рішення, тому що воно було безпечнішим."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-048-throw",
+        "group": "Movement & process flow",
+        "base": "throw",
+        "pastSimple": "threw",
+        "pastParticiple": "thrown",
+        "translation": "кидати, викидати",
+        "transcription": "throw /θroʊ/ — threw /θruː/ — thrown /θroʊn/",
+        "examples": [
+          {
+            "en": "We should not throw away useful feedback.",
+            "ua": "Нам не слід відкидати корисний фідбек."
+          },
+          {
+            "en": "The exception threw an error during testing.",
+            "ua": "Виняток викинув помилку під час тестування."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-049-slide",
+        "group": "Movement & process flow",
+        "base": "slide",
+        "pastSimple": "slid",
+        "pastParticiple": "slid",
+        "translation": "ковзати, зміщуватися",
+        "transcription": "slide /slaɪd/ — slid /slɪd/ — slid /slɪd/",
+        "examples": [
+          {
+            "en": "The timeline can slide if we add more scope.",
+            "ua": "Таймлайн може зсунутися, якщо ми додамо більше scope."
+          },
+          {
+            "en": "The deadline slid by one week because of missing details.",
+            "ua": "Дедлайн зсунувся на тиждень через відсутні деталі."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-050-swim",
+        "group": "Movement & process flow",
+        "base": "swim",
+        "pastSimple": "swam",
+        "pastParticiple": "swum",
+        "translation": "плавати",
+        "transcription": "swim /swɪm/ — swam /swæm/ — swum /swʌm/",
+        "examples": [
+          {
+            "en": "I sometimes swim to switch off after work.",
+            "ua": "Я іноді плаваю, щоб відключитися після роботи."
+          },
+          {
+            "en": "I swam twice last week to reduce stress.",
+            "ua": "Минулого тижня я плавав двічі, щоб зменшити стрес."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-051-buy",
+        "group": "Money, resources & ownership",
+        "base": "buy",
+        "pastSimple": "bought",
+        "pastParticiple": "bought",
+        "translation": "купувати",
+        "transcription": "buy /baɪ/ — bought /bɔːt/ — bought /bɔːt/",
+        "examples": [
+          {
+            "en": "The company may buy a tool if it improves productivity.",
+            "ua": "Компанія може купити інструмент, якщо він покращує продуктивність."
+          },
+          {
+            "en": "We bought time by delivering a temporary workaround.",
+            "ua": "Ми виграли час, доставивши тимчасове обхідне рішення."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-052-cost",
+        "group": "Money, resources & ownership",
+        "base": "cost",
+        "pastSimple": "cost",
+        "pastParticiple": "cost",
+        "translation": "коштувати",
+        "transcription": "cost /kɔːst/ — cost /kɔːst/ — cost /kɔːst/",
+        "examples": [
+          {
+            "en": "This approach may cost more time in the long run.",
+            "ua": "Цей підхід може коштувати більше часу у довгостроковій перспективі."
+          },
+          {
+            "en": "The delay cost us one extra day.",
+            "ua": "Затримка коштувала нам одного додаткового дня."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-053-sell",
+        "group": "Money, resources & ownership",
+        "base": "sell",
+        "pastSimple": "sold",
+        "pastParticiple": "sold",
+        "translation": "продавати, переконувати",
+        "transcription": "sell /sel/ — sold /soʊld/ — sold /soʊld/",
+        "examples": [
+          {
+            "en": "A good presentation can sell the idea to stakeholders.",
+            "ua": "Хороша презентація може переконати стейкхолдерів у цій ідеї."
+          },
+          {
+            "en": "The team sold the approach by explaining the benefits clearly.",
+            "ua": "Команда переконала в підході, чітко пояснивши переваги."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-054-spend",
+        "group": "Money, resources & ownership",
+        "base": "spend",
+        "pastSimple": "spent",
+        "pastParticiple": "spent",
+        "translation": "витрачати, проводити час",
+        "transcription": "spend /spend/ — spent /spent/ — spent /spent/",
+        "examples": [
+          {
+            "en": "We should spend more time on testing.",
+            "ua": "Нам слід витратити більше часу на тестування."
+          },
+          {
+            "en": "We spent two hours looking into the issue.",
+            "ua": "Ми витратили дві години, розбираючись з проблемою."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-055-lend",
+        "group": "Money, resources & ownership",
+        "base": "lend",
+        "pastSimple": "lent",
+        "pastParticiple": "lent",
+        "translation": "позичати, надавати підтримку",
+        "transcription": "lend /lend/ — lent /lent/ — lent /lent/",
+        "examples": [
+          {
+            "en": "Senior teammates can lend support when the task is unclear.",
+            "ua": "Senior teammates можуть надати підтримку, коли задача нечітка."
+          },
+          {
+            "en": "My colleague lent me a hand with the investigation.",
+            "ua": "Мій колега допоміг мені з розслідуванням."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-056-pay",
+        "group": "Money, resources & ownership",
+        "base": "pay",
+        "pastSimple": "paid",
+        "pastParticiple": "paid",
+        "translation": "платити, звертати увагу",
+        "transcription": "pay /peɪ/ — paid /peɪd/ — paid /peɪd/",
+        "examples": [
+          {
+            "en": "We need to pay attention to edge cases.",
+            "ua": "Нам потрібно звернути увагу на edge cases."
+          },
+          {
+            "en": "We paid more attention to testing after the incident.",
+            "ua": "Після інциденту ми приділили більше уваги тестуванню."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-057-feed",
+        "group": "Money, resources & ownership",
+        "base": "feed",
+        "pastSimple": "fed",
+        "pastParticiple": "fed",
+        "translation": "годувати, подавати дані",
+        "transcription": "feed /fiːd/ — fed /fed/ — fed /fed/",
+        "examples": [
+          {
+            "en": "We should feed AI tools with enough context.",
+            "ua": "Ми повинні подавати AI-інструментам достатньо контексту."
+          },
+          {
+            "en": "The system fed the model with outdated data.",
+            "ua": "Система подала моделі застарілі дані."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-058-bear",
+        "group": "Money, resources & ownership",
+        "base": "bear",
+        "pastSimple": "bore",
+        "pastParticiple": "borne",
+        "translation": "нести, витримувати",
+        "transcription": "bear /ber/ — bore /bɔːr/ — borne /bɔːrn/",
+        "examples": [
+          {
+            "en": "The team should bear responsibility for the final decision.",
+            "ua": "Команда має нести відповідальність за фінальне рішення."
+          },
+          {
+            "en": "The client bore the extra cost after the scope changed.",
+            "ua": "Клієнт поніс додаткові витрати після зміни scope."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-059-break",
+        "group": "Problems, risk & change",
+        "base": "break",
+        "pastSimple": "broke",
+        "pastParticiple": "broken",
+        "translation": "ламати, порушувати",
+        "transcription": "break /breɪk/ — broke /broʊk/ — broken /ˈbroʊkən/",
+        "examples": [
+          {
+            "en": "A small change can break existing functionality.",
+            "ua": "Маленька зміна може зламати існуючу функціональність."
+          },
+          {
+            "en": "The build broke yesterday, but it has been fixed now.",
+            "ua": "Білд зламався вчора, але зараз його виправлено."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-060-fall",
+        "group": "Problems, risk & change",
+        "base": "fall",
+        "pastSimple": "fell",
+        "pastParticiple": "fallen",
+        "translation": "падати, відставати",
+        "transcription": "fall /fɔːl/ — fell /fel/ — fallen /ˈfɔːlən/",
+        "examples": [
+          {
+            "en": "The project may fall behind schedule without regular updates.",
+            "ua": "Проєкт може відстати від графіка без регулярних апдейтів."
+          },
+          {
+            "en": "We fell behind schedule, but we have not fallen too far.",
+            "ua": "Ми відстали від графіка, але не надто сильно."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-061-forget",
+        "group": "Problems, risk & change",
+        "base": "forget",
+        "pastSimple": "forgot",
+        "pastParticiple": "forgotten",
+        "translation": "забувати",
+        "transcription": "forget /fərˈɡet/ — forgot /fərˈɡɑːt/ — forgotten /fərˈɡɑːtən/",
+        "examples": [
+          {
+            "en": "It is easy to forget small details under pressure.",
+            "ua": "Легко забути дрібні деталі під тиском."
+          },
+          {
+            "en": "We forgot to update the documentation, but it has not been forgotten now.",
+            "ua": "Ми забули оновити документацію, але зараз про це не забуто."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-062-hide",
+        "group": "Problems, risk & change",
+        "base": "hide",
+        "pastSimple": "hid",
+        "pastParticiple": "hidden",
+        "translation": "ховати",
+        "transcription": "hide /haɪd/ — hid /hɪd/ — hidden /ˈhɪdən/",
+        "examples": [
+          {
+            "en": "We should not hide risks from the client.",
+            "ua": "Нам не слід приховувати ризики від клієнта."
+          },
+          {
+            "en": "The bug hid in an edge case and remained hidden during testing.",
+            "ua": "Баг сховався в edge case і залишався прихованим під час тестування."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-063-hit",
+        "group": "Problems, risk & change",
+        "base": "hit",
+        "pastSimple": "hit",
+        "pastParticiple": "hit",
+        "translation": "вдарити, зіткнутися",
+        "transcription": "hit /hɪt/ — hit /hɪt/ — hit /hɪt/",
+        "examples": [
+          {
+            "en": "We may hit a blocker if the API is not ready.",
+            "ua": "Ми можемо зіткнутися з блокером, якщо API не готовий."
+          },
+          {
+            "en": "We hit a small issue during testing.",
+            "ua": "Ми зіткнулися з невеликою проблемою під час тестування."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-064-lose",
+        "group": "Problems, risk & change",
+        "base": "lose",
+        "pastSimple": "lost",
+        "pastParticiple": "lost",
+        "translation": "втрачати",
+        "transcription": "lose /luːz/ — lost /lɔːst/ — lost /lɔːst/",
+        "examples": [
+          {
+            "en": "If we do not communicate clearly, we may lose context.",
+            "ua": "Якщо ми не будемо чітко комунікувати, ми можемо втратити контекст."
+          },
+          {
+            "en": "The team lost time because the requirements were unclear.",
+            "ua": "Команда втратила час, тому що вимоги були нечіткими."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-065-mistake",
+        "group": "Problems, risk & change",
+        "base": "mistake",
+        "pastSimple": "mistook",
+        "pastParticiple": "mistaken",
+        "translation": "помилятися, приймати одне за інше",
+        "transcription": "mistake /mɪˈsteɪk/ — mistook /mɪˈstʊk/ — mistaken /mɪˈsteɪkən/",
+        "examples": [
+          {
+            "en": "People may mistake a quick fix for a long-term solution.",
+            "ua": "Люди можуть помилково прийняти quick fix за довгострокове рішення."
+          },
+          {
+            "en": "I mistook the old requirement for the latest one.",
+            "ua": "Я помилково прийняв стару вимогу за останню."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-066-overcome",
+        "group": "Problems, risk & change",
+        "base": "overcome",
+        "pastSimple": "overcame",
+        "pastParticiple": "overcome",
+        "translation": "подолати",
+        "transcription": "overcome /ˌoʊvərˈkʌm/ — overcame /ˌoʊvərˈkeɪm/ — overcome /ˌoʊvərˈkʌm/",
+        "examples": [
+          {
+            "en": "A team can overcome difficulties if people stay aligned.",
+            "ua": "Команда може подолати труднощі, якщо люди залишаються узгодженими."
+          },
+          {
+            "en": "We overcame the blocker by simplifying the solution.",
+            "ua": "Ми подолали блокер, спростивши рішення."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-067-quit",
+        "group": "Problems, risk & change",
+        "base": "quit",
+        "pastSimple": "quit",
+        "pastParticiple": "quit",
+        "translation": "покидати, припиняти",
+        "transcription": "quit /kwɪt/ — quit /kwɪt/ — quit /kwɪt/",
+        "examples": [
+          {
+            "en": "We should not quit when the task becomes challenging.",
+            "ua": "Нам не слід здаватися, коли задача стає складною."
+          },
+          {
+            "en": "The process quit unexpectedly during the test.",
+            "ua": "Процес несподівано завершився під час тесту."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-068-seek",
+        "group": "Problems, risk & change",
+        "base": "seek",
+        "pastSimple": "sought",
+        "pastParticiple": "sought",
+        "translation": "шукати",
+        "transcription": "seek /siːk/ — sought /sɔːt/ — sought /sɔːt/",
+        "examples": [
+          {
+            "en": "I seek feedback to improve my communication skills.",
+            "ua": "Я шукаю фідбек, щоб покращити свої комунікаційні навички."
+          },
+          {
+            "en": "We sought clarification before starting the implementation.",
+            "ua": "Ми шукали уточнення перед початком реалізації."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-069-shake",
+        "group": "Problems, risk & change",
+        "base": "shake",
+        "pastSimple": "shook",
+        "pastParticiple": "shaken",
+        "translation": "трясти, похитнути",
+        "transcription": "shake /ʃeɪk/ — shook /ʃʊk/ — shaken /ˈʃeɪkən/",
+        "examples": [
+          {
+            "en": "Unexpected changes can shake the team’s confidence.",
+            "ua": "Неочікувані зміни можуть похитнути впевненість команди."
+          },
+          {
+            "en": "The incident shook client trust, so we followed up quickly.",
+            "ua": "Інцидент похитнув довіру клієнта, тому ми швидко зробили follow-up."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-070-sink",
+        "group": "Problems, risk & change",
+        "base": "sink",
+        "pastSimple": "sank",
+        "pastParticiple": "sunk",
+        "translation": "тонути, провалюватися",
+        "transcription": "sink /sɪŋk/ — sank /sæŋk/ — sunk /sʌŋk/",
+        "examples": [
+          {
+            "en": "A project can sink if risks are ignored.",
+            "ua": "Проєкт може провалитися, якщо ризики ігноруються."
+          },
+          {
+            "en": "The old approach sank because it was too complex.",
+            "ua": "Старий підхід провалився, тому що був занадто складним."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-071-split",
+        "group": "Problems, risk & change",
+        "base": "split",
+        "pastSimple": "split",
+        "pastParticiple": "split",
+        "translation": "розділяти",
+        "transcription": "split /splɪt/ — split /splɪt/ — split /splɪt/",
+        "examples": [
+          {
+            "en": "We can split the task into smaller parts.",
+            "ua": "Ми можемо розділити задачу на менші частини."
+          },
+          {
+            "en": "We split the work between two developers.",
+            "ua": "Ми розділили роботу між двома розробниками."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-072-spread",
+        "group": "Problems, risk & change",
+        "base": "spread",
+        "pastSimple": "spread",
+        "pastParticiple": "spread",
+        "translation": "поширювати",
+        "transcription": "spread /spred/ — spread /spred/ — spread /spred/",
+        "examples": [
+          {
+            "en": "Bad communication can spread confusion across the team.",
+            "ua": "Погана комунікація може поширити плутанину в команді."
+          },
+          {
+            "en": "The issue spread to another module after the update.",
+            "ua": "Проблема поширилася на інший модуль після оновлення."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-073-strike",
+        "group": "Problems, risk & change",
+        "base": "strike",
+        "pastSimple": "struck",
+        "pastParticiple": "struck",
+        "translation": "вражати, ударяти, виникати",
+        "transcription": "strike /straɪk/ — struck /strʌk/ — struck /strʌk/",
+        "examples": [
+          {
+            "en": "The idea may strike us during the discussion.",
+            "ua": "Ідея може прийти до нас під час обговорення."
+          },
+          {
+            "en": "It struck me that we needed more context.",
+            "ua": "Мені спало на думку, що нам потрібно більше контексту."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-074-tear",
+        "group": "Problems, risk & change",
+        "base": "tear",
+        "pastSimple": "tore",
+        "pastParticiple": "torn",
+        "translation": "рвати, розривати",
+        "transcription": "tear /ter/ — tore /tɔːr/ — torn /tɔːrn/",
+        "examples": [
+          {
+            "en": "Constant context switching can tear attention away from deep work.",
+            "ua": "Постійне перемикання контексту може відривати увагу від глибокої роботи."
+          },
+          {
+            "en": "The old process was torn apart during the review.",
+            "ua": "Старий процес був розібраний на частини під час рев’ю."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-075-begin",
+        "group": "Time, progress & change",
+        "base": "begin",
+        "pastSimple": "began",
+        "pastParticiple": "begun",
+        "translation": "починати",
+        "transcription": "begin /bɪˈɡɪn/ — began /bɪˈɡæn/ — begun /bɪˈɡʌn/",
+        "examples": [
+          {
+            "en": "I would begin by clarifying the requirements.",
+            "ua": "Я б почав з уточнення вимог."
+          },
+          {
+            "en": "We began testing yesterday, and the review has begun as well.",
+            "ua": "Ми почали тестування вчора, і рев’ю також почалося."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-076-grow",
+        "group": "Time, progress & change",
+        "base": "grow",
+        "pastSimple": "grew",
+        "pastParticiple": "grown",
+        "translation": "рости, розвиватися",
+        "transcription": "grow /ɡroʊ/ — grew /ɡruː/ — grown /ɡroʊn/",
+        "examples": [
+          {
+            "en": "I want to grow professionally and improve my English.",
+            "ua": "Я хочу професійно розвиватися і покращувати англійську."
+          },
+          {
+            "en": "The team grew stronger after solving several difficult problems.",
+            "ua": "Команда стала сильнішою після вирішення кількох складних проблем."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-077-win",
+        "group": "Time, progress & change",
+        "base": "win",
+        "pastSimple": "won",
+        "pastParticiple": "won",
+        "translation": "вигравати, здобувати",
+        "transcription": "win /wɪn/ — won /wʌn/ — won /wʌn/",
+        "examples": [
+          {
+            "en": "Clear communication can win client trust.",
+            "ua": "Чітка комунікація може здобути довіру клієнта."
+          },
+          {
+            "en": "We won the client’s confidence by being transparent.",
+            "ua": "Ми здобули довіру клієнта завдяки прозорості."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-078-wear",
+        "group": "Time, progress & change",
+        "base": "wear",
+        "pastSimple": "wore",
+        "pastParticiple": "worn",
+        "translation": "носити",
+        "transcription": "wear /wer/ — wore /wɔːr/ — worn /wɔːrn/",
+        "examples": [
+          {
+            "en": "I try to wear comfortable clothes when I work from home.",
+            "ua": "Я намагаюся носити зручний одяг, коли працюю з дому."
+          },
+          {
+            "en": "He wore a headset during the call, so the sound was clearer.",
+            "ua": "Він був у гарнітурі під час дзвінка, тому звук був чіткішим."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-079-wake",
+        "group": "Time, progress & change",
+        "base": "wake",
+        "pastSimple": "woke",
+        "pastParticiple": "woken",
+        "translation": "прокидатися, пробуджувати",
+        "transcription": "wake /weɪk/ — woke /woʊk/ — woken /ˈwoʊkən/",
+        "examples": [
+          {
+            "en": "I usually wake up early before important meetings.",
+            "ua": "Я зазвичай прокидаюся рано перед важливими зустрічами."
+          },
+          {
+            "en": "The issue woke the team up to the need for better testing.",
+            "ua": "Ця проблема змусила команду усвідомити потребу в кращому тестуванні."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-080-freeze",
+        "group": "Time, progress & change",
+        "base": "freeze",
+        "pastSimple": "froze",
+        "pastParticiple": "frozen",
+        "translation": "замерзати, зависати",
+        "transcription": "freeze /friːz/ — froze /froʊz/ — frozen /ˈfroʊzən/",
+        "examples": [
+          {
+            "en": "The app may freeze if it runs out of memory.",
+            "ua": "Додаток може зависнути, якщо йому не вистачить пам’яті."
+          },
+          {
+            "en": "The screen froze during the demo.",
+            "ua": "Екран завис під час демо."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-081-light",
+        "group": "Time, progress & change",
+        "base": "light",
+        "pastSimple": "lit",
+        "pastParticiple": "lit",
+        "translation": "запалювати, освітлювати",
+        "transcription": "light /laɪt/ — lit /lɪt/ — lit /lɪt/",
+        "examples": [
+          {
+            "en": "A clear example can light up the whole idea.",
+            "ua": "Чіткий приклад може прояснити всю ідею."
+          },
+          {
+            "en": "The explanation lit up the problem for the team.",
+            "ua": "Пояснення прояснило проблему для команди."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-082-shut",
+        "group": "Time, progress & change",
+        "base": "shut",
+        "pastSimple": "shut",
+        "pastParticiple": "shut",
+        "translation": "закривати, вимикати",
+        "transcription": "shut /ʃʌt/ — shut /ʃʌt/ — shut /ʃʌt/",
+        "examples": [
+          {
+            "en": "I shut down distractions when I need deep focus.",
+            "ua": "Я вимикаю відволікання, коли мені потрібен глибокий фокус."
+          },
+          {
+            "en": "The system shut down unexpectedly during testing.",
+            "ua": "Система несподівано вимкнулася під час тестування."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-083-cut",
+        "group": "Everyday actions & physical context",
+        "base": "cut",
+        "pastSimple": "cut",
+        "pastParticiple": "cut",
+        "translation": "різати, скорочувати",
+        "transcription": "cut /kʌt/ — cut /kʌt/ — cut /kʌt/",
+        "examples": [
+          {
+            "en": "We can cut unnecessary steps from the process.",
+            "ua": "Ми можемо скоротити зайві кроки в процесі."
+          },
+          {
+            "en": "The team cut the scope to meet the deadline.",
+            "ua": "Команда скоротила scope, щоб вкластися в дедлайн."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-084-draw",
+        "group": "Everyday actions & physical context",
+        "base": "draw",
+        "pastSimple": "drew",
+        "pastParticiple": "drawn",
+        "translation": "малювати, робити висновок",
+        "transcription": "draw /drɔː/ — drew /druː/ — drawn /drɔːn/",
+        "examples": [
+          {
+            "en": "We can draw a conclusion after the analysis.",
+            "ua": "Ми можемо зробити висновок після аналізу."
+          },
+          {
+            "en": "The diagram drew attention to the main issue.",
+            "ua": "Діаграма привернула увагу до основної проблеми."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-085-drink",
+        "group": "Everyday actions & physical context",
+        "base": "drink",
+        "pastSimple": "drank",
+        "pastParticiple": "drunk",
+        "translation": "пити",
+        "transcription": "drink /drɪŋk/ — drank /dræŋk/ — drunk /drʌŋk/",
+        "examples": [
+          {
+            "en": "I usually drink coffee before morning meetings.",
+            "ua": "Я зазвичай п’ю каву перед ранковими зустрічами."
+          },
+          {
+            "en": "I drank water before the assessment to feel more comfortable.",
+            "ua": "Я випив води перед асесментом, щоб почуватися комфортніше."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-086-eat",
+        "group": "Everyday actions & physical context",
+        "base": "eat",
+        "pastSimple": "ate",
+        "pastParticiple": "eaten",
+        "translation": "їсти",
+        "transcription": "eat /iːt/ — ate /eɪt/ — eaten /ˈiːtən/",
+        "examples": [
+          {
+            "en": "I try to eat before long meetings so I can focus.",
+            "ua": "Я намагаюся поїсти перед довгими зустрічами, щоб краще фокусуватися."
+          },
+          {
+            "en": "I ate quickly before the call started.",
+            "ua": "Я швидко поїв перед початком дзвінка."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-087-sleep",
+        "group": "Everyday actions & physical context",
+        "base": "sleep",
+        "pastSimple": "slept",
+        "pastParticiple": "slept",
+        "translation": "спати",
+        "transcription": "sleep /sliːp/ — slept /slept/ — slept /slept/",
+        "examples": [
+          {
+            "en": "Good sleep helps me speak more clearly.",
+            "ua": "Хороший сон допомагає мені говорити чіткіше."
+          },
+          {
+            "en": "I slept well before the interview.",
+            "ua": "Я добре поспав перед інтерв’ю."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-088-beat",
+        "group": "Everyday actions & physical context",
+        "base": "beat",
+        "pastSimple": "beat",
+        "pastParticiple": "beaten",
+        "translation": "бити, перевершувати",
+        "transcription": "beat /biːt/ — beat /biːt/ — beaten /ˈbiːtən/",
+        "examples": [
+          {
+            "en": "A structured answer can beat a complicated answer.",
+            "ua": "Структурована відповідь може бути кращою за складну відповідь."
+          },
+          {
+            "en": "We beat the deadline by finishing early.",
+            "ua": "Ми випередили дедлайн, завершивши раніше."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-089-bend",
+        "group": "Everyday actions & physical context",
+        "base": "bend",
+        "pastSimple": "bent",
+        "pastParticiple": "bent",
+        "translation": "згинати, адаптувати",
+        "transcription": "bend /bend/ — bent /bent/ — bent /bent/",
+        "examples": [
+          {
+            "en": "Sometimes we need to bend the plan without breaking the goal.",
+            "ua": "Іноді нам потрібно адаптувати план, не порушуючи мету."
+          },
+          {
+            "en": "We bent the process slightly to support the client’s request.",
+            "ua": "Ми трохи адаптували процес, щоб підтримати запит клієнта."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-090-bite",
+        "group": "Everyday actions & physical context",
+        "base": "bite",
+        "pastSimple": "bit",
+        "pastParticiple": "bitten",
+        "translation": "кусати",
+        "transcription": "bite /baɪt/ — bit /bɪt/ — bitten /ˈbɪtən/",
+        "examples": [
+          {
+            "en": "A small bug can bite us later if we ignore it.",
+            "ua": "Маленький баг може створити проблеми пізніше, якщо ми його проігноруємо."
+          },
+          {
+            "en": "The team was bitten by the same issue twice.",
+            "ua": "Команда двічі постраждала від тієї самої проблеми."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-091-bleed",
+        "group": "Everyday actions & physical context",
+        "base": "bleed",
+        "pastSimple": "bled",
+        "pastParticiple": "bled",
+        "translation": "кровоточити, витікати",
+        "transcription": "bleed /bliːd/ — bled /bled/ — bled /bled/",
+        "examples": [
+          {
+            "en": "Poor scope control can bleed time from the project.",
+            "ua": "Поганий контроль scope може витягувати час з проєкту."
+          },
+          {
+            "en": "The task bled into the next sprint.",
+            "ua": "Задача перетекла в наступний спринт."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-092-blow",
+        "group": "Everyday actions & physical context",
+        "base": "blow",
+        "pastSimple": "blew",
+        "pastParticiple": "blown",
+        "translation": "дути, зірвати",
+        "transcription": "blow /bloʊ/ — blew /bluː/ — blown /bloʊn/",
+        "examples": [
+          {
+            "en": "A serious blocker can blow the timeline.",
+            "ua": "Серйозний блокер може зірвати таймлайн."
+          },
+          {
+            "en": "The unexpected issue blew our original estimate.",
+            "ua": "Неочікувана проблема зірвала нашу початкову оцінку."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-093-burn",
+        "group": "Everyday actions & physical context",
+        "base": "burn",
+        "pastSimple": "burnt",
+        "pastParticiple": "burnt",
+        "translation": "горіти, вигорати",
+        "transcription": "burn /bɜːrn/ — burnt /bɜːrnt/ — burnt /bɜːrnt/",
+        "examples": [
+          {
+            "en": "People can burn out if they work under pressure for too long.",
+            "ua": "Люди можуть вигоріти, якщо занадто довго працюють під тиском."
+          },
+          {
+            "en": "The team burnt a lot of time on unclear requirements.",
+            "ua": "Команда витратила багато часу на нечіткі вимоги."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-094-burst",
+        "group": "Everyday actions & physical context",
+        "base": "burst",
+        "pastSimple": "burst",
+        "pastParticiple": "burst",
+        "translation": "лопатися, раптово виникати",
+        "transcription": "burst /bɜːrst/ — burst /bɜːrst/ — burst /bɜːrst/",
+        "examples": [
+          {
+            "en": "Unexpected requests can burst into the sprint at the last moment.",
+            "ua": "Неочікувані запити можуть раптово з’явитися в спринті в останній момент."
+          },
+          {
+            "en": "Several issues burst out after the release.",
+            "ua": "Кілька проблем раптово з’явилися після релізу."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-095-dig",
+        "group": "Everyday actions & physical context",
+        "base": "dig",
+        "pastSimple": "dug",
+        "pastParticiple": "dug",
+        "translation": "копати, глибше розбиратися",
+        "transcription": "dig /dɪɡ/ — dug /dʌɡ/ — dug /dʌɡ/",
+        "examples": [
+          {
+            "en": "We need to dig into the issue before making changes.",
+            "ua": "Нам потрібно глибше розібратися з проблемою перед змінами."
+          },
+          {
+            "en": "We dug into the logs and found the root cause.",
+            "ua": "Ми глибше розібралися з логами і знайшли першопричину."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-096-fight",
+        "group": "Everyday actions & physical context",
+        "base": "fight",
+        "pastSimple": "fought",
+        "pastParticiple": "fought",
+        "translation": "боротися",
+        "transcription": "fight /faɪt/ — fought /fɔːt/ — fought /fɔːt/",
+        "examples": [
+          {
+            "en": "We should fight the root cause, not just the symptoms.",
+            "ua": "Нам слід боротися з першопричиною, а не лише з симптомами."
+          },
+          {
+            "en": "The team fought through several blockers.",
+            "ua": "Команда пройшла через кілька блокерів."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-097-fit",
+        "group": "Everyday actions & physical context",
+        "base": "fit",
+        "pastSimple": "fit",
+        "pastParticiple": "fit",
+        "translation": "підходити, вміщуватися",
+        "transcription": "fit /fɪt/ — fit /fɪt/ — fit /fɪt/",
+        "examples": [
+          {
+            "en": "The solution should fit the current architecture.",
+            "ua": "Рішення має підходити до поточної архітектури."
+          },
+          {
+            "en": "The new component fit the design without major changes.",
+            "ua": "Новий компонент підійшов до дизайну без значних змін."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-098-hang",
+        "group": "Everyday actions & physical context",
+        "base": "hang",
+        "pastSimple": "hung",
+        "pastParticiple": "hung",
+        "translation": "висіти, зависати",
+        "transcription": "hang /hæŋ/ — hung /hʌŋ/ — hung /hʌŋ/",
+        "examples": [
+          {
+            "en": "The app can hang if the request takes too long.",
+            "ua": "Додаток може зависнути, якщо запит виконується занадто довго."
+          },
+          {
+            "en": "The process hung during the deployment.",
+            "ua": "Процес завис під час деплою."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-099-lay",
+        "group": "Everyday actions & physical context",
+        "base": "lay",
+        "pastSimple": "laid",
+        "pastParticiple": "laid",
+        "translation": "класти, закладати основу",
+        "transcription": "lay /leɪ/ — laid /leɪd/ — laid /leɪd/",
+        "examples": [
+          {
+            "en": "Good planning can lay the foundation for successful delivery.",
+            "ua": "Хороше планування може закласти основу для успішної доставки."
+          },
+          {
+            "en": "We laid out the action plan during the meeting.",
+            "ua": "Ми виклали план дій під час зустрічі."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      },
+      {
+        "id": "iv-100-shoot",
+        "group": "Everyday actions & physical context",
+        "base": "shoot",
+        "pastSimple": "shot",
+        "pastParticiple": "shot",
+        "translation": "стріляти, надсилати швидко",
+        "transcription": "shoot /ʃuːt/ — shot /ʃɑːt/ — shot /ʃɑːt/",
+        "examples": [
+          {
+            "en": "I can shoot you a quick message after the call.",
+            "ua": "Я можу швидко написати тобі повідомлення після дзвінка."
+          },
+          {
+            "en": "I shot a quick update to the team.",
+            "ua": "Я швидко надіслав апдейт команді."
+          }
+        ],
+        "verbSet": "essential-100",
+        "commonAlternatives": [
+          "high-frequency irregular verb",
+          "context-based practice"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1361 @@
+{
+  "baseline": "c84ef30d80ffbaae4ac0f3aa0fb7fe6090b8067b",
+  "originalBytes": 1533856,
+  "originalSha256": "d206ce3294f3ce5ff7fcd60f74e4bbf27998dd9e2b5be5428b2c418b881f6a4d",
+  "topLevelKeys": [
+    "phrases",
+    "patterns",
+    "answers",
+    "drills",
+    "meta",
+    "blocks",
+    "wordIndex",
+    "irregularVerbs"
+  ],
+  "sourcePacks": [
+    {
+      "file": "speaking-foundations.json",
+      "id": "speaking-foundations",
+      "order": 10,
+      "title": "Speaking foundations",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "phrases": 89,
+        "wordIndex": 89
+      }
+    },
+    {
+      "file": "presentations.json",
+      "id": "presentations",
+      "order": 20,
+      "title": "Presentations",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "phrases": 90,
+        "wordIndex": 90
+      }
+    },
+    {
+      "file": "agent-framework.json",
+      "id": "agent-framework",
+      "order": 30,
+      "title": "Agent framework",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "phrases": 81,
+        "wordIndex": 81
+      }
+    },
+    {
+      "file": "hedging-and-linking.json",
+      "id": "hedging-and-linking",
+      "order": 40,
+      "title": "Hedging and linking",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "phrases": 24,
+        "wordIndex": 24
+      }
+    },
+    {
+      "file": "personal-topics.json",
+      "id": "personal-topics",
+      "order": 50,
+      "title": "Personal speaking topics",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "phrases": 45,
+        "wordIndex": 45
+      }
+    },
+    {
+      "file": "workplace-topics.json",
+      "id": "workplace-topics",
+      "order": 60,
+      "title": "Workplace speaking topics",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "phrases": 120,
+        "wordIndex": 120
+      }
+    },
+    {
+      "file": "ai-certification.json",
+      "id": "ai-certification",
+      "order": 70,
+      "title": "AI certification",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "phrases": 117,
+        "wordIndex": 117
+      }
+    },
+    {
+      "file": "speaking-practice.json",
+      "id": "speaking-practice",
+      "order": 80,
+      "title": "Speaking practice",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "patterns": 7,
+        "answers": 6,
+        "drills": 15
+      }
+    },
+    {
+      "file": "essential-100.json",
+      "id": "essential-100",
+      "order": 90,
+      "title": "100 Irregular Verbs",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "irregularVerbs": 100
+      }
+    },
+    {
+      "file": "logical-200.json",
+      "id": "logical-200",
+      "order": 100,
+      "title": "200 Irregular Verbs — Logical Groups",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "irregularVerbs": 200
+      }
+    },
+    {
+      "file": "ai-certification-verbs-contextual.json",
+      "id": "ai-certification-verbs-contextual",
+      "order": 110,
+      "title": "AI Certification Verbs — Contextual",
+      "envelopeKeys": [
+        "schemaVersion",
+        "id",
+        "title",
+        "order",
+        "content"
+      ],
+      "counts": {
+        "irregularVerbs": 39
+      }
+    }
+  ],
+  "source": {
+    "label": "source",
+    "collections": {
+      "phrases": {
+        "before": 566,
+        "after": 566,
+        "exactSerialized": 566,
+        "keyOrderOnly": 0,
+        "valueDiffs": 0,
+        "firstDiffs": [],
+        "withId": 566,
+        "withoutId": 0,
+        "withoutIdBefore": 0,
+        "orderedIdsEqual": true,
+        "uniqueIds": true,
+        "sha256Before": "5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5",
+        "sha256After": "5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5"
+      },
+      "patterns": {
+        "before": 7,
+        "after": 7,
+        "exactSerialized": 7,
+        "keyOrderOnly": 0,
+        "valueDiffs": 0,
+        "firstDiffs": [],
+        "withId": 0,
+        "withoutId": 7,
+        "withoutIdBefore": 7,
+        "orderedIdsEqual": true,
+        "uniqueIds": true,
+        "sha256Before": "1edaf33bea16c91c29bcbb40ca24e18d0823ff0c3918a928810f2ea7834ac9bf",
+        "sha256After": "1edaf33bea16c91c29bcbb40ca24e18d0823ff0c3918a928810f2ea7834ac9bf"
+      },
+      "answers": {
+        "before": 6,
+        "after": 6,
+        "exactSerialized": 6,
+        "keyOrderOnly": 0,
+        "valueDiffs": 0,
+        "firstDiffs": [],
+        "withId": 0,
+        "withoutId": 6,
+        "withoutIdBefore": 6,
+        "orderedIdsEqual": true,
+        "uniqueIds": true,
+        "sha256Before": "a9d3fa8e57220ff5558b809de9bc313fabc6b776a10a60ea577398d911a464db",
+        "sha256After": "a9d3fa8e57220ff5558b809de9bc313fabc6b776a10a60ea577398d911a464db"
+      },
+      "drills": {
+        "before": 15,
+        "after": 15,
+        "exactSerialized": 15,
+        "keyOrderOnly": 0,
+        "valueDiffs": 0,
+        "firstDiffs": [],
+        "withId": 0,
+        "withoutId": 15,
+        "withoutIdBefore": 15,
+        "orderedIdsEqual": true,
+        "uniqueIds": true,
+        "sha256Before": "d2baeb109cc6bcb09d3ca725e73078b35e3c4a6f977e812a78c2c1b4b28fd9fe",
+        "sha256After": "d2baeb109cc6bcb09d3ca725e73078b35e3c4a6f977e812a78c2c1b4b28fd9fe"
+      },
+      "blocks": {
+        "before": 39,
+        "after": 39,
+        "exactSerialized": 39,
+        "keyOrderOnly": 0,
+        "valueDiffs": 0,
+        "firstDiffs": [],
+        "withId": 39,
+        "withoutId": 0,
+        "withoutIdBefore": 0,
+        "orderedIdsEqual": true,
+        "uniqueIds": true,
+        "sha256Before": "e751b8ea0992fa56af11b00a85b1889d5916e7f6a7c1ce2943eb53a0aa4d5f0f",
+        "sha256After": "e751b8ea0992fa56af11b00a85b1889d5916e7f6a7c1ce2943eb53a0aa4d5f0f"
+      },
+      "wordIndex": {
+        "before": 566,
+        "after": 566,
+        "exactSerialized": 566,
+        "keyOrderOnly": 0,
+        "valueDiffs": 0,
+        "firstDiffs": [],
+        "withId": 566,
+        "withoutId": 0,
+        "withoutIdBefore": 0,
+        "orderedIdsEqual": true,
+        "uniqueIds": true,
+        "sha256Before": "c298edca2a8dec946306a9a2a23db652679d6e9217d08e17e3a604ba7832a06b",
+        "sha256After": "c298edca2a8dec946306a9a2a23db652679d6e9217d08e17e3a604ba7832a06b"
+      },
+      "irregularVerbs": {
+        "before": 339,
+        "after": 339,
+        "exactSerialized": 339,
+        "keyOrderOnly": 0,
+        "valueDiffs": 0,
+        "firstDiffs": [],
+        "withId": 339,
+        "withoutId": 0,
+        "withoutIdBefore": 0,
+        "orderedIdsEqual": true,
+        "uniqueIds": true,
+        "sha256Before": "7eb6097b147ca5c419205c1a8997862b253000a2d94225240bec304cbec5b084",
+        "sha256After": "7eb6097b147ca5c419205c1a8997862b253000a2d94225240bec304cbec5b084"
+      }
+    },
+    "metaExact": true,
+    "wholeCatalogDeepEqual": true
+  },
+  "inventoryOriginal": {
+    "fields": {
+      "phrases": {
+        "category": 566,
+        "phrase": 566,
+        "example": 360,
+        "translation": 566,
+        "level": 566,
+        "tag": 566,
+        "id": 566,
+        "section": 477,
+        "sequence": 477,
+        "transcription": 460,
+        "commonAlternatives": 477,
+        "examples": 460
+      },
+      "patterns": {
+        "title": 7,
+        "formula": 7,
+        "use": 7,
+        "example": 7,
+        "translation": 7,
+        "transcription": 7,
+        "commonAlternatives": 7,
+        "tag": 7,
+        "level": 7
+      },
+      "answers": {
+        "topic": 6,
+        "question": 6,
+        "answer": 6,
+        "translation": 6
+      },
+      "drills": {},
+      "blocks": {
+        "id": 39,
+        "title": 39,
+        "category": 31,
+        "type": 39,
+        "description": 39,
+        "icon": 39,
+        "tag": 39,
+        "itemsCount": 39,
+        "priority": 39,
+        "verbSet": 3
+      },
+      "wordIndex": {
+        "id": 566,
+        "sourcePhraseId": 566,
+        "term": 566,
+        "category": 566,
+        "level": 566,
+        "tag": 566,
+        "meaning": 566,
+        "pronunciation": 566,
+        "examples": 566,
+        "section": 477,
+        "sequence": 477,
+        "transcription": 477,
+        "commonAlternatives": 477
+      },
+      "irregularVerbs": {
+        "id": 339,
+        "group": 339,
+        "base": 339,
+        "pastSimple": 339,
+        "pastParticiple": 339,
+        "translation": 339,
+        "transcription": 339,
+        "examples": 339,
+        "verbSet": 339,
+        "commonAlternatives": 339
+      }
+    },
+    "cyrillicStrings": 3802,
+    "nonNfcStrings": 0
+  },
+  "inventorySource": {
+    "fields": {
+      "phrases": {
+        "category": 566,
+        "phrase": 566,
+        "example": 360,
+        "translation": 566,
+        "level": 566,
+        "tag": 566,
+        "id": 566,
+        "section": 477,
+        "sequence": 477,
+        "transcription": 460,
+        "commonAlternatives": 477,
+        "examples": 460
+      },
+      "patterns": {
+        "title": 7,
+        "formula": 7,
+        "use": 7,
+        "example": 7,
+        "translation": 7,
+        "transcription": 7,
+        "commonAlternatives": 7,
+        "tag": 7,
+        "level": 7
+      },
+      "answers": {
+        "topic": 6,
+        "question": 6,
+        "answer": 6,
+        "translation": 6
+      },
+      "drills": {},
+      "blocks": {
+        "id": 39,
+        "title": 39,
+        "category": 31,
+        "type": 39,
+        "description": 39,
+        "icon": 39,
+        "tag": 39,
+        "itemsCount": 39,
+        "priority": 39,
+        "verbSet": 3
+      },
+      "wordIndex": {
+        "id": 566,
+        "sourcePhraseId": 566,
+        "term": 566,
+        "category": 566,
+        "level": 566,
+        "tag": 566,
+        "meaning": 566,
+        "pronunciation": 566,
+        "examples": 566,
+        "section": 477,
+        "sequence": 477,
+        "transcription": 477,
+        "commonAlternatives": 477
+      },
+      "irregularVerbs": {
+        "id": 339,
+        "group": 339,
+        "base": 339,
+        "pastSimple": 339,
+        "pastParticiple": 339,
+        "translation": 339,
+        "transcription": 339,
+        "examples": 339,
+        "verbSet": 339,
+        "commonAlternatives": 339
+      }
+    },
+    "cyrillicStrings": 3802,
+    "nonNfcStrings": 0
+  },
+  "relationships": {
+    "linksBefore": 566,
+    "linksAfter": 566,
+    "identical": true,
+    "allTargetsExist": true,
+    "phrasesWithExactlyOneLinkedWord": 566,
+    "crossPackLinks": 0,
+    "linksWhoseTextDiffers": 0
+  },
+  "rc1DuplicatePairs": [
+    {
+      "ids": [
+        "phrase-005",
+        "hedging-005-from-my-perspective"
+      ],
+      "texts": [
+        "From my perspective, …",
+        "From my perspective, …"
+      ],
+      "categories": [
+        "Start answer",
+        "Hedging Phrases"
+      ],
+      "packs": [
+        "speaking-foundations",
+        "hedging-and-linking"
+      ],
+      "positionsKept": true,
+      "linkedWords": [
+        [
+          "word-phrase-005"
+        ],
+        [
+          "word-hedging-005-from-my-perspective"
+        ]
+      ]
+    },
+    {
+      "ids": [
+        "phrase-013",
+        "advanced-linking-008-that-being-said"
+      ],
+      "texts": [
+        "That being said, …",
+        "That being said, …"
+      ],
+      "categories": [
+        "Contrast",
+        "Advanced Linking Words"
+      ],
+      "packs": [
+        "speaking-foundations",
+        "hedging-and-linking"
+      ],
+      "positionsKept": true,
+      "linkedWords": [
+        [
+          "word-phrase-013"
+        ],
+        [
+          "word-advanced-linking-008-that-being-said"
+        ]
+      ]
+    },
+    {
+      "ids": [
+        "phrase-084",
+        "advanced-linking-004-consequently"
+      ],
+      "texts": [
+        "consequently",
+        "Consequently, …"
+      ],
+      "categories": [
+        "Conjunctions",
+        "Advanced Linking Words"
+      ],
+      "packs": [
+        "speaking-foundations",
+        "hedging-and-linking"
+      ],
+      "positionsKept": true,
+      "linkedWords": [
+        [
+          "word-phrase-084"
+        ],
+        [
+          "word-advanced-linking-004-consequently"
+        ]
+      ]
+    },
+    {
+      "ids": [
+        "presentation-phrase-085",
+        "advanced-linking-009-as-a-result"
+      ],
+      "texts": [
+        "As a result,...",
+        "As a result, …"
+      ],
+      "categories": [
+        "Presentation Phrases",
+        "Advanced Linking Words"
+      ],
+      "packs": [
+        "presentations",
+        "hedging-and-linking"
+      ],
+      "positionsKept": true,
+      "linkedWords": [
+        [
+          "presentation-word-085"
+        ],
+        [
+          "word-advanced-linking-009-as-a-result"
+        ]
+      ]
+    },
+    {
+      "ids": [
+        "presentation-phrase-087",
+        "advanced-linking-012-more-importantly"
+      ],
+      "texts": [
+        "More importantly,...",
+        "More importantly, …"
+      ],
+      "categories": [
+        "Presentation Phrases",
+        "Advanced Linking Words"
+      ],
+      "packs": [
+        "presentations",
+        "hedging-and-linking"
+      ],
+      "positionsKept": true,
+      "linkedWords": [
+        [
+          "presentation-word-087"
+        ],
+        [
+          "word-advanced-linking-012-more-importantly"
+        ]
+      ]
+    },
+    {
+      "ids": [
+        "presentation-phrase-088",
+        "hedging-008-to-some-extent"
+      ],
+      "texts": [
+        "To some extent,...",
+        "To some extent, …"
+      ],
+      "categories": [
+        "Presentation Phrases",
+        "Hedging Phrases"
+      ],
+      "packs": [
+        "presentations",
+        "hedging-and-linking"
+      ],
+      "positionsKept": true,
+      "linkedWords": [
+        [
+          "presentation-word-088"
+        ],
+        [
+          "word-hedging-008-to-some-extent"
+        ]
+      ]
+    }
+  ],
+  "equalDisplayTextPhraseGroups": [
+    [
+      "phrase-005",
+      "hedging-005-from-my-perspective"
+    ],
+    [
+      "phrase-013",
+      "advanced-linking-008-that-being-said"
+    ],
+    [
+      "phrase-084",
+      "advanced-linking-004-consequently"
+    ],
+    [
+      "presentation-phrase-085",
+      "advanced-linking-009-as-a-result"
+    ],
+    [
+      "presentation-phrase-087",
+      "advanced-linking-012-more-importantly"
+    ],
+    [
+      "presentation-phrase-088",
+      "hedging-008-to-some-extent"
+    ]
+  ],
+  "blocks": [
+    {
+      "id": "start-answer",
+      "type": "phraseCategory",
+      "category": "Start answer",
+      "itemsCount": 6,
+      "targets": 6
+    },
+    {
+      "id": "structure",
+      "type": "phraseCategory",
+      "category": "Structure",
+      "itemsCount": 5,
+      "targets": 5
+    },
+    {
+      "id": "word-index",
+      "type": "wordIndex",
+      "itemsCount": 566,
+      "targets": 566
+    },
+    {
+      "id": "reverse-practice",
+      "type": "reversePractice",
+      "itemsCount": 566,
+      "targets": 1132
+    },
+    {
+      "id": "irregular-verbs-100",
+      "type": "irregularVerbs",
+      "verbSet": "essential-100",
+      "itemsCount": 100,
+      "targets": 100
+    },
+    {
+      "id": "irregular-verbs-logical-200",
+      "type": "irregularVerbs",
+      "verbSet": "logical-200",
+      "itemsCount": 200,
+      "targets": 200
+    },
+    {
+      "id": "contrast",
+      "type": "phraseCategory",
+      "category": "Contrast",
+      "itemsCount": 6,
+      "targets": 6
+    },
+    {
+      "id": "ending",
+      "type": "phraseCategory",
+      "category": "Ending",
+      "itemsCount": 3,
+      "targets": 3
+    },
+    {
+      "id": "ai-coding-tools",
+      "type": "phraseCategory",
+      "category": "AI / Coding tools",
+      "itemsCount": 9,
+      "targets": 9
+    },
+    {
+      "id": "lack-not-enough",
+      "type": "phraseCategory",
+      "category": "Lack / Not enough",
+      "itemsCount": 6,
+      "targets": 6
+    },
+    {
+      "id": "speed-difficulty-clarity",
+      "type": "phraseCategory",
+      "category": "Speed / Difficulty / Clarity",
+      "itemsCount": 10,
+      "targets": 10
+    },
+    {
+      "id": "time-estimates",
+      "type": "phraseCategory",
+      "category": "Time estimates",
+      "itemsCount": 8,
+      "targets": 8
+    },
+    {
+      "id": "online-meetings",
+      "type": "phraseCategory",
+      "category": "Online meetings",
+      "itemsCount": 12,
+      "targets": 12
+    },
+    {
+      "id": "compare-difference",
+      "type": "phraseCategory",
+      "category": "Compare / Difference",
+      "itemsCount": 6,
+      "targets": 6
+    },
+    {
+      "id": "conduct-vs-carry-out",
+      "type": "phraseCategory",
+      "category": "Conduct vs Carry out",
+      "itemsCount": 5,
+      "targets": 5
+    },
+    {
+      "id": "modals",
+      "type": "phraseCategory",
+      "category": "Modals",
+      "itemsCount": 3,
+      "targets": 3
+    },
+    {
+      "id": "conjunctions",
+      "type": "phraseCategory",
+      "category": "Conjunctions",
+      "itemsCount": 5,
+      "targets": 5
+    },
+    {
+      "id": "otherwise",
+      "type": "phraseCategory",
+      "category": "Otherwise",
+      "itemsCount": 3,
+      "targets": 3
+    },
+    {
+      "id": "informal-phrases",
+      "type": "phraseCategory",
+      "category": "Informal phrases",
+      "itemsCount": 2,
+      "targets": 2
+    },
+    {
+      "id": "presentation-phrases",
+      "type": "phraseCategory",
+      "category": "Presentation Phrases",
+      "itemsCount": 90,
+      "targets": 90
+    },
+    {
+      "id": "agent-framework-vocabulary",
+      "type": "phraseCategory",
+      "category": "Agent Framework Vocabulary",
+      "itemsCount": 81,
+      "targets": 81
+    },
+    {
+      "id": "hedging-phrases",
+      "type": "phraseCategory",
+      "category": "Hedging Phrases",
+      "itemsCount": 12,
+      "targets": 12
+    },
+    {
+      "id": "advanced-linking-words",
+      "type": "phraseCategory",
+      "category": "Advanced Linking Words",
+      "itemsCount": 12,
+      "targets": 12
+    },
+    {
+      "id": "topic-tell-me-about-yourself",
+      "type": "phraseCategory",
+      "category": "Tell me about yourself",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-hobbies",
+      "type": "phraseCategory",
+      "category": "Hobbies",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-work-life-balance",
+      "type": "phraseCategory",
+      "category": "Work-Life Balance",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-teamwork",
+      "type": "phraseCategory",
+      "category": "Teamwork",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-stress-management",
+      "type": "phraseCategory",
+      "category": "Stress Management",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-time-management",
+      "type": "phraseCategory",
+      "category": "Time Management",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-leadership",
+      "type": "phraseCategory",
+      "category": "Leadership",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-remote-work",
+      "type": "phraseCategory",
+      "category": "Remote Work",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-career-growth",
+      "type": "phraseCategory",
+      "category": "Career Growth",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-communication-in-distributed-teams",
+      "type": "phraseCategory",
+      "category": "Communication in Distributed Teams",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "topic-conflict-resolution-team-problems",
+      "type": "phraseCategory",
+      "category": "Conflict Resolution / Team Problems",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "answer-patterns",
+      "type": "patterns",
+      "itemsCount": 7,
+      "targets": 7
+    },
+    {
+      "id": "ready-answers",
+      "type": "answers",
+      "itemsCount": 6,
+      "targets": 6
+    },
+    {
+      "id": "practice-mode",
+      "type": "practice",
+      "itemsCount": 15,
+      "targets": 15
+    },
+    {
+      "id": "ai-certification-vocabulary",
+      "type": "phraseCategory",
+      "category": "AI Certification Vocabulary",
+      "itemsCount": 117,
+      "targets": 117
+    },
+    {
+      "id": "ai-certification-verbs-contextual",
+      "type": "irregularVerbs",
+      "verbSet": "ai-certification-verbs-contextual",
+      "itemsCount": 39,
+      "targets": 39
+    }
+  ],
+  "blocksWithoutTargets": [],
+  "phraseCategories": 31,
+  "wordCategories": 31,
+  "generated": [
+    {
+      "dir": "<root>\\public\\data",
+      "materialsJsonPresent": false,
+      "manifestBytes": 18677,
+      "manifestSha256": "189f4720137c476c14395795cc76c178ba5a0f69538d5f37eb0ff095d07049f2",
+      "packFilesOnDisk": 11,
+      "packs": [
+        {
+          "id": "speaking-foundations",
+          "order": 10,
+          "url": "packs/speaking-foundations.378bea01a015d76e.json",
+          "bytes": 111770,
+          "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+        },
+        {
+          "id": "presentations",
+          "order": 20,
+          "url": "packs/presentations.2cd234cc3c91ce8d.json",
+          "bytes": 179620,
+          "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+        },
+        {
+          "id": "agent-framework",
+          "order": 30,
+          "url": "packs/agent-framework.30b26432f0ecf993.json",
+          "bytes": 133718,
+          "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+        },
+        {
+          "id": "hedging-and-linking",
+          "order": 40,
+          "url": "packs/hedging-and-linking.06c92cc29e38d601.json",
+          "bytes": 32554,
+          "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+        },
+        {
+          "id": "personal-topics",
+          "order": 50,
+          "url": "packs/personal-topics.03c1443a2cc176cf.json",
+          "bytes": 145090,
+          "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+        },
+        {
+          "id": "workplace-topics",
+          "order": 60,
+          "url": "packs/workplace-topics.dad3daa8ab78823e.json",
+          "bytes": 367402,
+          "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+        },
+        {
+          "id": "ai-certification",
+          "order": 70,
+          "url": "packs/ai-certification.a743e81dde1bc943.json",
+          "bytes": 294755,
+          "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+        },
+        {
+          "id": "speaking-practice",
+          "order": 80,
+          "url": "packs/speaking-practice.30d81bc404256cb8.json",
+          "bytes": 16057,
+          "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+        },
+        {
+          "id": "essential-100",
+          "order": 90,
+          "url": "packs/essential-100.3a71b8e1e38939e1.json",
+          "bytes": 93477,
+          "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+        },
+        {
+          "id": "logical-200",
+          "order": 100,
+          "url": "packs/logical-200.7dea9a714b2c308b.json",
+          "bytes": 181013,
+          "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+        },
+        {
+          "id": "ai-certification-verbs-contextual",
+          "order": 110,
+          "url": "packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+          "bytes": 36070,
+          "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+        }
+      ],
+      "published": {
+        "label": "published:<root>\\public\\data",
+        "collections": {
+          "phrases": {
+            "before": 566,
+            "after": 566,
+            "exactSerialized": 566,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 566,
+            "withoutId": 0,
+            "withoutIdBefore": 0,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5",
+            "sha256After": "5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5"
+          },
+          "patterns": {
+            "before": 7,
+            "after": 7,
+            "exactSerialized": 7,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 0,
+            "withoutId": 7,
+            "withoutIdBefore": 7,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "1edaf33bea16c91c29bcbb40ca24e18d0823ff0c3918a928810f2ea7834ac9bf",
+            "sha256After": "1edaf33bea16c91c29bcbb40ca24e18d0823ff0c3918a928810f2ea7834ac9bf"
+          },
+          "answers": {
+            "before": 6,
+            "after": 6,
+            "exactSerialized": 6,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 0,
+            "withoutId": 6,
+            "withoutIdBefore": 6,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "a9d3fa8e57220ff5558b809de9bc313fabc6b776a10a60ea577398d911a464db",
+            "sha256After": "a9d3fa8e57220ff5558b809de9bc313fabc6b776a10a60ea577398d911a464db"
+          },
+          "drills": {
+            "before": 15,
+            "after": 15,
+            "exactSerialized": 15,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 0,
+            "withoutId": 15,
+            "withoutIdBefore": 15,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "d2baeb109cc6bcb09d3ca725e73078b35e3c4a6f977e812a78c2c1b4b28fd9fe",
+            "sha256After": "d2baeb109cc6bcb09d3ca725e73078b35e3c4a6f977e812a78c2c1b4b28fd9fe"
+          },
+          "blocks": {
+            "before": 39,
+            "after": 39,
+            "exactSerialized": 39,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 39,
+            "withoutId": 0,
+            "withoutIdBefore": 0,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "e751b8ea0992fa56af11b00a85b1889d5916e7f6a7c1ce2943eb53a0aa4d5f0f",
+            "sha256After": "e751b8ea0992fa56af11b00a85b1889d5916e7f6a7c1ce2943eb53a0aa4d5f0f"
+          },
+          "wordIndex": {
+            "before": 566,
+            "after": 566,
+            "exactSerialized": 566,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 566,
+            "withoutId": 0,
+            "withoutIdBefore": 0,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "c298edca2a8dec946306a9a2a23db652679d6e9217d08e17e3a604ba7832a06b",
+            "sha256After": "c298edca2a8dec946306a9a2a23db652679d6e9217d08e17e3a604ba7832a06b"
+          },
+          "irregularVerbs": {
+            "before": 339,
+            "after": 339,
+            "exactSerialized": 339,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 339,
+            "withoutId": 0,
+            "withoutIdBefore": 0,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "7eb6097b147ca5c419205c1a8997862b253000a2d94225240bec304cbec5b084",
+            "sha256After": "7eb6097b147ca5c419205c1a8997862b253000a2d94225240bec304cbec5b084"
+          }
+        },
+        "metaExact": true,
+        "wholeCatalogDeepEqual": true
+      },
+      "totalBytes": 1610203
+    },
+    {
+      "dir": "<root>\\site-dist\\data",
+      "materialsJsonPresent": false,
+      "manifestBytes": 18677,
+      "manifestSha256": "189f4720137c476c14395795cc76c178ba5a0f69538d5f37eb0ff095d07049f2",
+      "packFilesOnDisk": 11,
+      "packs": [
+        {
+          "id": "speaking-foundations",
+          "order": 10,
+          "url": "packs/speaking-foundations.378bea01a015d76e.json",
+          "bytes": 111770,
+          "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+        },
+        {
+          "id": "presentations",
+          "order": 20,
+          "url": "packs/presentations.2cd234cc3c91ce8d.json",
+          "bytes": 179620,
+          "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+        },
+        {
+          "id": "agent-framework",
+          "order": 30,
+          "url": "packs/agent-framework.30b26432f0ecf993.json",
+          "bytes": 133718,
+          "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+        },
+        {
+          "id": "hedging-and-linking",
+          "order": 40,
+          "url": "packs/hedging-and-linking.06c92cc29e38d601.json",
+          "bytes": 32554,
+          "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+        },
+        {
+          "id": "personal-topics",
+          "order": 50,
+          "url": "packs/personal-topics.03c1443a2cc176cf.json",
+          "bytes": 145090,
+          "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+        },
+        {
+          "id": "workplace-topics",
+          "order": 60,
+          "url": "packs/workplace-topics.dad3daa8ab78823e.json",
+          "bytes": 367402,
+          "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+        },
+        {
+          "id": "ai-certification",
+          "order": 70,
+          "url": "packs/ai-certification.a743e81dde1bc943.json",
+          "bytes": 294755,
+          "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+        },
+        {
+          "id": "speaking-practice",
+          "order": 80,
+          "url": "packs/speaking-practice.30d81bc404256cb8.json",
+          "bytes": 16057,
+          "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+        },
+        {
+          "id": "essential-100",
+          "order": 90,
+          "url": "packs/essential-100.3a71b8e1e38939e1.json",
+          "bytes": 93477,
+          "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+        },
+        {
+          "id": "logical-200",
+          "order": 100,
+          "url": "packs/logical-200.7dea9a714b2c308b.json",
+          "bytes": 181013,
+          "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+        },
+        {
+          "id": "ai-certification-verbs-contextual",
+          "order": 110,
+          "url": "packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+          "bytes": 36070,
+          "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+        }
+      ],
+      "published": {
+        "label": "published:<root>\\site-dist\\data",
+        "collections": {
+          "phrases": {
+            "before": 566,
+            "after": 566,
+            "exactSerialized": 566,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 566,
+            "withoutId": 0,
+            "withoutIdBefore": 0,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5",
+            "sha256After": "5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5"
+          },
+          "patterns": {
+            "before": 7,
+            "after": 7,
+            "exactSerialized": 7,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 0,
+            "withoutId": 7,
+            "withoutIdBefore": 7,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "1edaf33bea16c91c29bcbb40ca24e18d0823ff0c3918a928810f2ea7834ac9bf",
+            "sha256After": "1edaf33bea16c91c29bcbb40ca24e18d0823ff0c3918a928810f2ea7834ac9bf"
+          },
+          "answers": {
+            "before": 6,
+            "after": 6,
+            "exactSerialized": 6,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 0,
+            "withoutId": 6,
+            "withoutIdBefore": 6,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "a9d3fa8e57220ff5558b809de9bc313fabc6b776a10a60ea577398d911a464db",
+            "sha256After": "a9d3fa8e57220ff5558b809de9bc313fabc6b776a10a60ea577398d911a464db"
+          },
+          "drills": {
+            "before": 15,
+            "after": 15,
+            "exactSerialized": 15,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 0,
+            "withoutId": 15,
+            "withoutIdBefore": 15,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "d2baeb109cc6bcb09d3ca725e73078b35e3c4a6f977e812a78c2c1b4b28fd9fe",
+            "sha256After": "d2baeb109cc6bcb09d3ca725e73078b35e3c4a6f977e812a78c2c1b4b28fd9fe"
+          },
+          "blocks": {
+            "before": 39,
+            "after": 39,
+            "exactSerialized": 39,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 39,
+            "withoutId": 0,
+            "withoutIdBefore": 0,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "e751b8ea0992fa56af11b00a85b1889d5916e7f6a7c1ce2943eb53a0aa4d5f0f",
+            "sha256After": "e751b8ea0992fa56af11b00a85b1889d5916e7f6a7c1ce2943eb53a0aa4d5f0f"
+          },
+          "wordIndex": {
+            "before": 566,
+            "after": 566,
+            "exactSerialized": 566,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 566,
+            "withoutId": 0,
+            "withoutIdBefore": 0,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "c298edca2a8dec946306a9a2a23db652679d6e9217d08e17e3a604ba7832a06b",
+            "sha256After": "c298edca2a8dec946306a9a2a23db652679d6e9217d08e17e3a604ba7832a06b"
+          },
+          "irregularVerbs": {
+            "before": 339,
+            "after": 339,
+            "exactSerialized": 339,
+            "keyOrderOnly": 0,
+            "valueDiffs": 0,
+            "firstDiffs": [],
+            "withId": 339,
+            "withoutId": 0,
+            "withoutIdBefore": 0,
+            "orderedIdsEqual": true,
+            "uniqueIds": true,
+            "sha256Before": "7eb6097b147ca5c419205c1a8997862b253000a2d94225240bec304cbec5b084",
+            "sha256After": "7eb6097b147ca5c419205c1a8997862b253000a2d94225240bec304cbec5b084"
+          }
+        },
+        "metaExact": true,
+        "wholeCatalogDeepEqual": true
+      },
+      "totalBytes": 1610203
+    }
+  ],
+  "frozenFixtureDerivedFromRelease": {
+    "commit": true,
+    "meta": true,
+    "phrases": true,
+    "patterns": true,
+    "answers": true,
+    "drills": true,
+    "blocks": true,
+    "wordIndex": true,
+    "irregularVerbs": true,
+    "sourcePhraseLinks": true
+  },
+  "v1": {
+    "trackedDiffAgainstBaseline": "(none)",
+    "untrackedSourceFiles": "(none)",
+    "monolithEolNormalizedEqual": true,
+    "monolithJsonEqual": true,
+    "monolithWorkingTreeHasCrlf": true
+  },
+  "failures": [],
+  "verdict": "PASS"
+}

@@ -1,0 +1,43 @@
+{
+  "commit": "c84ef30d80ffbaae4ac0f3aa0fb7fe6090b8067b",
+  "source": "public/data/materials.json",
+  "metaSha256": "00035fea20eaf08ba923bd2777293084ff0fce5a76ea066fda8517f989de21e7",
+  "collections": {
+    "phrases": {
+      "count": 566,
+      "sha256": "5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5",
+      "idsSha256": "740f7513af8550ac0e4b4ecadaf1091ddcd8aa625a3b6da2af2f1b97cf74fa7e"
+    },
+    "patterns": {
+      "count": 7,
+      "sha256": "1edaf33bea16c91c29bcbb40ca24e18d0823ff0c3918a928810f2ea7834ac9bf"
+    },
+    "answers": {
+      "count": 6,
+      "sha256": "a9d3fa8e57220ff5558b809de9bc313fabc6b776a10a60ea577398d911a464db"
+    },
+    "drills": {
+      "count": 15,
+      "sha256": "d2baeb109cc6bcb09d3ca725e73078b35e3c4a6f977e812a78c2c1b4b28fd9fe"
+    },
+    "blocks": {
+      "count": 39,
+      "sha256": "e751b8ea0992fa56af11b00a85b1889d5916e7f6a7c1ce2943eb53a0aa4d5f0f",
+      "idsSha256": "e1e9ac67eaea76e3303bc095b8589e03c05e889fbe4aa86224d509a8b2db3f68"
+    },
+    "wordIndex": {
+      "count": 566,
+      "sha256": "c298edca2a8dec946306a9a2a23db652679d6e9217d08e17e3a604ba7832a06b",
+      "idsSha256": "964d04bec7a0dc41588a37422cbc966194eb7719a9425453036e10c37623198d"
+    },
+    "irregularVerbs": {
+      "count": 339,
+      "sha256": "7eb6097b147ca5c419205c1a8997862b253000a2d94225240bec304cbec5b084",
+      "idsSha256": "5e584919ae196de2a85ac9928785a035a5433193edb8fc1a056d18867c28342d"
+    }
+  },
+  "sourcePhraseLinks": {
+    "count": 566,
+    "sha256": "91b4c8821afe1b4eabaea06b55b902e20b4d8d9c4971db975ab9c6468d5c8c4d"
+  }
+}

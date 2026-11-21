@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "id": "speaking-practice",
+  "title": "Speaking practice",
+  "order": 80,
+  "content": {
+    "patterns": [
+      {
+        "title": "STAR — behavioural answers",
+        "formula": "Situation → Task → Action → Result",
+        "use": "Best for behavioural questions, teamwork stories, conflicts, leadership and problem-solving.",
+        "example": "I used the STAR framework to describe a difficult release: I explained the situation, my task, the actions I took, and the final result.",
+        "translation": "Я використав STAR, щоб описати складний реліз: пояснив ситуацію, свою задачу, дії, які виконав, і фінальний результат.",
+        "transcription": "/ˌsɪtʃuˈeɪʃən tæsk ˈækʃən rɪˈzʌlt/",
+        "commonAlternatives": [
+          "Context → Responsibility → Steps → Outcome",
+          "Problem → Action → Result"
+        ],
+        "tag": "framework",
+        "level": "B2"
+      },
+      {
+        "title": "PREP — opinion answers",
+        "formula": "Point → Reason → Example → Point again",
+        "use": "Best for opinion questions about remote work, AI, teamwork, hobbies or career growth.",
+        "example": "From my perspective, remote work can be very effective. The reason is that it gives people more focus time. For example, I can plan deep work better at home. Overall, remote work works well with clear communication.",
+        "translation": "З моєї точки зору, віддалена робота може бути дуже ефективною. Причина в тому, що вона дає людям більше часу для фокусу. Наприклад, вдома я можу краще планувати глибоку роботу. Загалом, remote work добре працює з чіткою комунікацією.",
+        "transcription": "/pɔɪnt ˈriːzən ɪɡˈzæmpəl pɔɪnt/",
+        "commonAlternatives": [
+          "Opinion → Reason → Example → Conclusion",
+          "Main idea → Support → Example → Summary"
+        ],
+        "tag": "framework",
+        "level": "B2"
+      },
+      {
+        "title": "OREO — discussion answers",
+        "formula": "Opinion → Reason → Example → Opinion",
+        "use": "Best for discussion-style questions where you need to explain your view clearly.",
+        "example": "In my opinion, work-life balance is important. The reason is that people need energy to work well. For example, hobbies help me recharge. That is why I believe balance improves long-term productivity.",
+        "translation": "На мою думку, work-life balance важливий. Причина в тому, що людям потрібна енергія, щоб добре працювати. Наприклад, хобі допомагають мені відновитися. Саме тому я вважаю, що баланс покращує довгострокову продуктивність.",
+        "transcription": "/əˈpɪnjən ˈriːzən ɪɡˈzæmpəl əˈpɪnjən/",
+        "commonAlternatives": [
+          "View → Explanation → Example → View again",
+          "Position → Reason → Example → Conclusion"
+        ],
+        "tag": "framework",
+        "level": "B2"
+      },
+      {
+        "title": "Sandwich — feedback and weaknesses",
+        "formula": "Positive → Challenge → Positive",
+        "use": "Best for strengths, weaknesses, feedback, difficult situations and balanced answers.",
+        "example": "I usually start with what went well, then explain the challenge, and finish with what I learned from the situation.",
+        "translation": "Я зазвичай починаю з того, що було добре, потім пояснюю виклик і завершую тим, чого навчився з ситуації.",
+        "transcription": "/ˈpɑːzətɪv ˈtʃælɪndʒ ˈpɑːzətɪv/",
+        "commonAlternatives": [
+          "Strength → Issue → Learning",
+          "Good point → Problem → Improvement"
+        ],
+        "tag": "framework",
+        "level": "B2"
+      },
+      {
+        "title": "PPF — career journey",
+        "formula": "Past → Present → Future",
+        "use": "Best for tell-me-about-yourself, career growth, motivation and professional development.",
+        "example": "In the past, I focused on .NET and Angular. At the moment, I am developing AI-native engineering skills. In the future, I want to use AI to improve delivery and quality.",
+        "translation": "У минулому я фокусувався на .NET і Angular. Зараз я розвиваю AI-native engineering skills. У майбутньому я хочу використовувати AI для покращення delivery і quality.",
+        "transcription": "/pæst ˈprezənt ˈfjuːtʃər/",
+        "commonAlternatives": [
+          "Background → Current focus → Next step",
+          "Experience → Current role → Future goal"
+        ],
+        "tag": "framework",
+        "level": "B2"
+      },
+      {
+        "title": "SEE — analytical answers",
+        "formula": "Statement → Evidence → Explain",
+        "use": "Best for analytical questions, metrics, AI value, cost optimization and technical decisions.",
+        "example": "A clear baseline is important. For example, historical PR data can show review time and accepted findings. This helps us measure improvement instead of relying on opinions.",
+        "translation": "Чіткий baseline важливий. Наприклад, історичні PR-дані можуть показати час рев’ю та прийняті зауваження. Це допомагає вимірювати покращення замість того, щоб спиратися на думки.",
+        "transcription": "/ˈsteɪtmənt ˈevədəns ɪkˈspleɪn/",
+        "commonAlternatives": [
+          "Claim → Proof → Explanation",
+          "Point → Evidence → Meaning"
+        ],
+        "tag": "framework",
+        "level": "B2+"
+      },
+      {
+        "title": "Universal speaking formula",
+        "formula": "Opening → Main idea → Example → Reflection → Conclusion",
+        "use": "Best as a safe structure for almost any assessment answer.",
+        "example": "I would start with the main idea, then give a practical example, reflect on what it means, and finish with a clear conclusion.",
+        "translation": "Я б почав з головної ідеї, потім навів практичний приклад, пояснив, що це означає, і завершив чітким висновком.",
+        "transcription": "/ˈoʊpənɪŋ meɪn aɪˈdiːə ɪɡˈzæmpəl rɪˈflekʃən kənˈkluːʒən/",
+        "commonAlternatives": [
+          "Start → Explain → Example → Lesson → Finish",
+          "Intro → Point → Example → Reflection → Summary"
+        ],
+        "tag": "framework",
+        "level": "B2"
+      }
+    ],
+    "answers": [
+      {
+        "topic": "AI at work",
+        "question": "How can AI help people at work?",
+        "answer": "I would start by saying that AI can be very useful at work. First of all, it can save time by automating routine tasks. On top of that, it can help people come up with ideas faster and explore information more efficiently. That being said, AI can make mistakes, so we should always verify the results. Overall, I think AI should support people, not replace them.",
+        "translation": "Я б почав з того, що AI може бути дуже корисним на роботі. Перш за все, він може економити час, автоматизуючи рутинні задачі. Крім того, він може допомагати людям швидше придумувати ідеї та ефективніше досліджувати інформацію. Але при цьому AI може помилятися, тому ми завжди повинні перевіряти результати. Загалом, я думаю, що AI має підтримувати людей, а не замінювати їх."
+      },
+      {
+        "topic": "AI coding tools",
+        "question": "How can AI coding tools help developers?",
+        "answer": "From my perspective, AI coding tools can be very useful for developers. First of all, they can help explore the codebase, explain what is happening under the hood, and suggest possible improvements. On top of that, they can save time on routine tasks, especially when a developer needs to dig into a problem quickly. That being said, I would not auto-accept every change. AI can make mistakes or even introduce a bug, so it is important to verify the results and combine automation with human review.",
+        "translation": "З моєї точки зору, AI-інструменти для кодування можуть бути дуже корисними для розробників. Перш за все, вони можуть допомогти дослідити кодову базу, пояснити, що відбувається “під капотом”, і запропонувати можливі покращення. Крім того, вони можуть економити час на рутинних задачах, особливо коли розробнику потрібно швидко розібратися з проблемою. Але при цьому я б не приймав кожну зміну автоматично. AI може помилятися або навіть внести баг, тому важливо перевіряти результати і поєднувати автоматизацію з людською перевіркою."
+      },
+      {
+        "topic": "Teamwork",
+        "question": "What makes a good team?",
+        "answer": "Let me start by saying that a good team is not only about technical skills. What matters most is clear communication, trust, and responsibility. If the team communicates regularly, it is easier to stay aligned and avoid misunderstandings. On top of that, supportive teammates can help each other when someone runs into a problem. Overall, I think teamwork works best when people respect each other and focus on the solution.",
+        "translation": "Дозвольте почати з того, що хороша команда — це не лише про технічні навички. Найважливіше — це чітка комунікація, довіра і відповідальність. Якщо команда регулярно комунікує, легше залишатися узгодженими і уникати непорозумінь. Крім того, підтримуючі teammates можуть допомагати одне одному, коли хтось стикається з проблемою. Загалом, я думаю, що командна робота найкраще працює, коли люди поважають одне одного і фокусуються на рішенні."
+      },
+      {
+        "topic": "Difficult clients",
+        "question": "How do you deal with difficult clients?",
+        "answer": "I would start by saying that difficult clients are often difficult because expectations are not clear. In this situation, I try to stay calm and ask specific questions. First of all, I clarify what the client actually needs. Then I point out what we can realistically do and follow up with a written summary. That being said, I try to give the client the benefit of the doubt. Overall, clear communication is the best way to reduce tension.",
+        "translation": "Я б почав з того, що складні клієнти часто складні тому, що очікування нечіткі. У такій ситуації я намагаюся залишатися спокійним і ставити конкретні питання. Перш за все, я уточнюю, що саме потрібно клієнту. Потім я вказую, що ми реально можемо зробити, і роблю follow-up письмовим підсумком. Але при цьому я намагаюся давати клієнту кредит довіри. Загалом, чітка комунікація — найкращий спосіб знизити напругу."
+      },
+      {
+        "topic": "Problem-solving",
+        "question": "What do you do when you run into a problem?",
+        "answer": "When we run into a problem, I think it is important not to panic. First of all, we need to look into the issue and understand the root cause. After that, we can come up with a practical solution and decide who is responsible for each step. If the deadline is tight, I would prioritize the most important tasks. Overall, a calm and structured approach usually works best.",
+        "translation": "Коли ми стикаємося з проблемою, я думаю, важливо не панікувати. Перш за все, нам потрібно розібратися з проблемою і зрозуміти першопричину. Після цього ми можемо придумати практичне рішення і вирішити, хто відповідає за кожен крок. Якщо дедлайн tight, я б пріоритезував найважливіші задачі. Загалом, спокійний і структурований підхід зазвичай працює найкраще."
+      },
+      {
+        "topic": "Online meetings",
+        "question": "How do you usually handle online meetings?",
+        "answer": "Let me start by saying that online meetings should be structured and focused. At the beginning, I like to clarify the main goal and agenda. During the meeting, I try to ask questions if something is unclear and make sure everyone stays aligned. If we run into technical issues, for example if someone is breaking up, I ask them to repeat or reconnect. At the end, I usually summarize the next steps and follow up with meeting notes.",
+        "translation": "Дозвольте почати з того, що онлайн-зустрічі мають бути структурованими і сфокусованими. На початку я люблю уточнити головну мету і agenda. Під час зустрічі я намагаюся ставити питання, якщо щось неясно, і переконатися, що всі залишаються узгодженими. Якщо ми стикаємося з технічними проблемами, наприклад якщо когось погано чути, я прошу повторити або перепідключитися. Наприкінці я зазвичай підсумовую наступні кроки і роблю follow-up з нотатками зустрічі."
+      }
+    ],
+    "drills": [
+      "How can AI help people at work?",
+      "What are the risks of using AI coding tools?",
+      "Tell me about a time you solved a difficult problem.",
+      "How do you deal with difficult clients?",
+      "What makes a good team?",
+      "What makes a good team leader?",
+      "How would you compare remote work and office work?",
+      "What is more important: speed or quality?",
+      "How do you estimate a task?",
+      "What do you do when requirements are unclear?",
+      "How do you handle online meetings?",
+      "What do you do if you run into a blocker?",
+      "Can AI replace developers?",
+      "What are the pros and cons of automation?",
+      "Describe your ideal colleague."
+    ]
+  }
+}

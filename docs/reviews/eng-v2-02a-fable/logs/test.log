@@ -1,0 +1,69 @@
+$ npm test
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ preserves all baseline record values, array order, identities, metadata and explicit links (9.539ms)
+✔ generation is deterministic and generated files equal the validated source catalog (70.3173ms)
+✔ explicit order preserves each collection even when pack discovery order changes (3.4296ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (13.0856ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (20.625ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (2.5021ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (0.5821ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (19.2685ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (1.2723ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (37.2452ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 379.988
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90m<review-copy>/candidate[39m
+
+ [32m✓[39m src/features/flashcards/flashcards.test.ts [2m([22m[2m44 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m src/content/catalog.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 333[2mms[22m[39m
+   [33m[2m✓[22m[39m built-in content catalog[2m > [22mfinds every phrase, word and verb by its own text, wherever it is in the catalog [33m 323[2mms[22m[39m
+ [32m✓[39m src/state/progress.test.ts [2m([22m[2m26 tests[22m[2m)[22m[33m 2688[2mms[22m[39m
+   [33m[2m✓[22m[39m learning state in IndexedDB[2m > [22mreturns items to the learning pool with "Learn again" [33m 375[2mms[22m[39m
+   [33m[2m✓[22m[39m learning state in IndexedDB[2m > [22mresets one deck without touching the others [33m 345[2mms[22m[39m
+ [32m✓[39m src/content/builtIn.test.ts [2m([22m[2m10 tests[22m[2m)[22m[33m 3467[2mms[22m[39m
+   [33m[2m✓[22m[39m complete search through the loaded shared catalog[2m > [22mmatches a direct field-by-field oracle for every searchable field across all packs [33m 3131[2mms[22m[39m
+ [32m✓[39m src/features/flashcards/FlashcardsPage.test.ts [2m([22m[2m27 tests[22m[2m)[22m[33m 6516[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mshows one card with the English side first and the deck progress [33m 937[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mflips the card on tap and shows the translation and example [33m 338[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22msaved progress[2m > [22mcontinues with the same deck, card and counts after a reload [33m 339[2mms[22m[39m
+   [33m[2m✓[22m[39m Flashcards page[2m > [22mlearned vocabulary[2m > [22mlists learned cards and returns one to the deck with "Learn again" [33m 366[2mms[22m[39m
+ [32m✓[39m src/app/App.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 8859[2mms[22m[39m
+   [33m[2m✓[22m[39m application shell[2m > [22mpreserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry [33m 1670[2mms[22m[39m
+   [33m[2m✓[22m[39m application shell[2m > [22mloads the built-in content from its own base path and shows the index [33m 361[2mms[22m[39m
+   [33m[2m✓[22m[39m application shell[2m > [22mlinks to the preserved v1 application [33m 306[2mms[22m[39m
+   [33m[2m✓[22m[39m application shell[2m > [22mrenders every screen from the catalog [33m 440[2mms[22m[39m
+   [33m[2m✓[22m[39m application shell[2m > [22msearches the whole catalog, not only the items shown on the current page [33m 337[2mms[22m[39m
+   [33m[2m✓[22m[39m application shell[2m > [22mopens the saved screen and keeps progress and preferences after a reload [33m 584[2mms[22m[39m
+   [33m[2m✓[22m[39m learning identity across Phrases, Focus and Flashcards[2m > [22mkeeps "consequently" and "Consequently, …" apart in every view, also after a reload [33m 567[2mms[22m[39m
+   [33m[2m✓[22m[39m learning identity across Phrases, Focus and Flashcards[2m > [22mkeeps distinct entries with similar-looking text independent: C++ and C# [33m 1030[2mms[22m[39m
+   [33m[2m✓[22m[39m learning identity across Phrases, Focus and Flashcards[2m > [22mtreats a phrase and its linked word-index entry as one learning identity: the phrase id [33m 1088[2mms[22m[39m
+   [33m[2m✓[22m[39m loading and storage errors[2m > [22mhandles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state [33m 498[2mms[22m[39m
+   [33m[2m✓[22m[39m loading and storage errors[2m > [22mshows an error and a retry when the content cannot be loaded [33m 516[2mms[22m[39m
+   [33m[2m✓[22m[39m loading and storage errors[2m > [22mstops with a visible error when the saved state cannot be opened, and can continue without saving [33m 624[2mms[22m[39m
+   [33m[2m✓[22m[39m loading and storage errors[2m > [22mshows a notice when a change cannot be saved, until saving succeeds [33m 571[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m6 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[32m129 passed[39m[22m[90m (129)[39m
+[2m   Start at [22m 16:44:35
+[2m   Duration [22m 10.45s[2m (transform 1.47s, setup 238ms, collect 2.25s, tests 21.92s, environment 3.50s, prepare 708ms)[22m
+
+[exit 0]

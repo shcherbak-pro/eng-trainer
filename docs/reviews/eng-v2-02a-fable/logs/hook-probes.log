@@ -1,0 +1,252 @@
+== clean npm run build
+
+> english-assessment-trainer-v2@2.0.0 prebuild
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 build
+> vite build
+
+[36mvite v6.4.3 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 155 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  1.59 kB[22m[1m[22m[2m │ gzip:  0.78 kB[22m
+[2mdist/[22m[35massets/index-ChYHRsBq.css  [39m[1m[2m 28.28 kB[22m[1m[22m[2m │ gzip:  6.41 kB[22m
+[2mdist/[22m[36massets/index-CZazVQkb.js   [39m[1m[2m152.63 kB[22m[1m[22m[2m │ gzip: 50.50 kB[22m
+[32m✓ built in 1.62s[39m
+exit 0
+dist/index.html=ce17ed12865ba7d8 manifest=189f4720137c476c
+== invalid source (duplicate phrase id across packs)
+
+> english-assessment-trainer-v2@2.0.0 prebuild
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+<review-copy>/hooks/src/content/packFormat.js:17
+  if (!condition) throw new Error(`Invalid built-in content: ${message}`);
+                        ^
+
+Error: Invalid built-in content: duplicate entry id phrase-001
+    at require (<review-copy>/hooks/src/content/packFormat.js:17:25)
+    at assembleMaterials (<review-copy>/hooks/src/content/packFormat.js:192:7)
+    at buildContent (<review-copy>/hooks/scripts/content-build.mjs:19:21)
+    at async <review-copy>/hooks/scripts/generate-content.mjs:8:30
+
+Node.js v24.18.0
+npm run build -> exit 1; dist unchanged=yes; manifest unchanged=yes
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+<review-copy>/hooks/src/content/packFormat.js:17
+  if (!condition) throw new Error(`Invalid built-in content: ${message}`);
+                        ^
+
+Error: Invalid built-in content: duplicate entry id phrase-001
+    at require (<review-copy>/hooks/src/content/packFormat.js:17:25)
+    at assembleMaterials (<review-copy>/hooks/src/content/packFormat.js:192:7)
+    at buildContent (<review-copy>/hooks/scripts/content-build.mjs:19:21)
+    at async <review-copy>/hooks/scripts/generate-content.mjs:8:30
+
+Node.js v24.18.0
+npm test -> exit 1; dist unchanged=yes; manifest unchanged=yes
+
+> english-assessment-trainer-v2@2.0.0 precheck
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+<review-copy>/hooks/src/content/packFormat.js:17
+  if (!condition) throw new Error(`Invalid built-in content: ${message}`);
+                        ^
+
+Error: Invalid built-in content: duplicate entry id phrase-001
+    at require (<review-copy>/hooks/src/content/packFormat.js:17:25)
+    at assembleMaterials (<review-copy>/hooks/src/content/packFormat.js:192:7)
+    at buildContent (<review-copy>/hooks/scripts/content-build.mjs:19:21)
+    at async <review-copy>/hooks/scripts/generate-content.mjs:8:30
+
+Node.js v24.18.0
+npm run check -> exit 1; dist unchanged=yes; manifest unchanged=yes
+
+> english-assessment-trainer-v2@2.0.0 predev
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+<review-copy>/hooks/src/content/packFormat.js:17
+  if (!condition) throw new Error(`Invalid built-in content: ${message}`);
+                        ^
+
+Error: Invalid built-in content: duplicate entry id phrase-001
+    at require (<review-copy>/hooks/src/content/packFormat.js:17:25)
+    at assembleMaterials (<review-copy>/hooks/src/content/packFormat.js:192:7)
+    at buildContent (<review-copy>/hooks/scripts/content-build.mjs:19:21)
+    at async <review-copy>/hooks/scripts/generate-content.mjs:8:30
+
+Node.js v24.18.0
+npm run dev -> exit 1 (124 would mean the dev server started)
+== valid content edit, then DIRECT vite build (bypasses the generation hook)
+[36mvite v6.4.3 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 155 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  1.59 kB[22m[1m[22m[2m │ gzip:  0.78 kB[22m
+[2mdist/[22m[35massets/index-ChYHRsBq.css  [39m[1m[2m 28.28 kB[22m[1m[22m[2m │ gzip:  6.41 kB[22m
+[2mdist/[22m[36massets/index-CZazVQkb.js   [39m[1m[2m152.63 kB[22m[1m[22m[2m │ gzip: 50.50 kB[22m
+[32m✓ built in 1.40s[39m
+npx vite build -> exit 0
+marker in dist/data: 0 file(s) (0 = stale content published)
+
+> english-assessment-trainer-v2@2.0.0 build:v1
+> npm --prefix v1 run build
+
+
+> english-assessment-trainer-v1@1.0.0 build
+> vite build
+
+[36mvite v6.4.3 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 143 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  1.93 kB[22m[1m[22m[2m │ gzip:  0.85 kB[22m
+[2mdist/[22m[35massets/index-Bod3ovET.css  [39m[1m[2m 27.85 kB[22m[1m[22m[2m │ gzip:  6.33 kB[22m
+[2mdist/[22m[36massets/index-C0A337ei.js   [39m[1m[2m138.55 kB[22m[1m[22m[2m │ gzip: 45.43 kB[22m
+[32m✓ built in 1.25s[39m
+
+> english-assessment-trainer-v2@2.0.0 assemble
+> node scripts/assemble-site.mjs
+
+Assembled site-dist/ (v2) and site-dist/v1/ (v1).
+
+> english-assessment-trainer-v2@2.0.0 check:site
+> node scripts/check-site.mjs
+
+v2 content: verified manifest and all 11 pack hashes, identities, counts and links.
+site-dist check passed: both entry pages, their assets and data are in place.
+assemble + check:site on the stale build -> exit 0
+
+> english-assessment-trainer-v2@2.0.0 prebuild
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 build
+> vite build
+
+[36mvite v6.4.3 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 155 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  1.59 kB[22m[1m[22m[2m │ gzip:  0.78 kB[22m
+[2mdist/[22m[35massets/index-ChYHRsBq.css  [39m[1m[2m 28.28 kB[22m[1m[22m[2m │ gzip:  6.41 kB[22m
+[2mdist/[22m[36massets/index-CZazVQkb.js   [39m[1m[2m152.63 kB[22m[1m[22m[2m │ gzip: 50.50 kB[22m
+[32m✓ built in 1.32s[39m
+npm run build -> exit 0; marker in dist/data: 1 file(s)
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✖ preserves all baseline record values, array order, identities, metadata and explicit links (6.4254ms)
+✔ generation is deterministic and generated files equal the validated source catalog (89.7112ms)
+✔ explicit order preserves each collection even when pack discovery order changes (4.4628ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (9.727ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (16.9978ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (2.292ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (0.9008ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (17.2946ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (1.2223ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (44.4232ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 484.8166
+
+✖ failing tests:
+
+test at scripts\content-build.test.mjs:15:1
+✖ preserves all baseline record values, array order, identities, metadata and explicit links (6.4254ms)
+  AssertionError [ERR_ASSERTION]: phrases: complete records and order
+  + actual - expected
+  
+  + '2454e2c40abb30dcae59d4de6c2c62653213887533bc477f72fd289c5f92d1e1'
+  - '5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5'
+  
+      at TestContext.<anonymous> (<review-copy>/hooks/scripts/content-build.test.mjs:20:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '2454e2c40abb30dcae59d4de6c2c62653213887533bc477f72fd289c5f92d1e1',
+    expected: '5005a1d00f0aa3197fb76992a2a3a6aef7573d97a33d11a347d311473c132cd5',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+npm test with an intentional content edit -> exit 1 (frozen migration fingerprints)
+✖ preserves all baseline record values, array order, identities, metadata and explicit links (6.4254ms)
+✖ failing tests:
+✖ preserves all baseline record values, array order, identities, metadata and explicit links (6.4254ms)
+== restore
+
+> english-assessment-trainer-v2@2.0.0 prebuild
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 build
+> vite build
+
+[36mvite v6.4.3 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 155 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  1.59 kB[22m[1m[22m[2m │ gzip:  0.78 kB[22m
+[2mdist/[22m[35massets/index-ChYHRsBq.css  [39m[1m[2m 28.28 kB[22m[1m[22m[2m │ gzip:  6.41 kB[22m
+[2mdist/[22m[36massets/index-CZazVQkb.js   [39m[1m[2m152.63 kB[22m[1m[22m[2m │ gzip: 50.50 kB[22m
+[32m✓ built in 1.20s[39m
+restored npm run build -> exit 0; manifest restored=yes

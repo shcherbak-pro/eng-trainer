@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import realMaterials from '../../public/data/materials.json';
+import { createContentFetch, manifest, realMaterials } from '../test/content';
+import type { Materials } from '../content/types';
 import { PAGE_LABELS } from './navigation';
 import {
   abortReadTransactions,
@@ -151,7 +152,7 @@ beforeEach(() => {
   window.location.hash = '';
   vi.stubGlobal(
     'fetch',
-    vi.fn(async () => new Response(JSON.stringify(realMaterials), { status: 200 }))
+    vi.fn(createContentFetch())
   );
 });
 
@@ -165,13 +166,58 @@ afterEach(() => {
 });
 
 describe('application shell', () => {
+  it('preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry', async () => {
+    const first = realMaterials.phrases[0];
+    const last = realMaterials.phrases[realMaterials.phrases.length - 1];
+    const word = realMaterials.wordIndex[realMaterials.wordIndex.length - 1];
+    const verb = realMaterials.irregularVerbs[realMaterials.irregularVerbs.length - 1];
+    const stored = {
+      progress: {
+        learnedPhrases: [first.id], favoritePhrases: [first.id, last.id],
+        favoriteWords: [word.id], favoriteIrregular: [verb.id],
+        hiddenPhrases: [realMaterials.phrases[1].id], hiddenWords: [word.id], hiddenIrregular: [verb.id],
+        favoriteBlocks: ['ai-certification-vocabulary'], selectedLearnPassId: 'legacy-pass'
+      },
+      settings: { activePage: 'favorites', theme: 'dark' },
+      learnPasses: {
+        'legacy-pass': { id: 'legacy-pass', name: 'Saved pass', description: '', blockIds: ['start-answer', 'ai-certification-vocabulary'], createdAt: '2026-11-20', updatedAt: '2026-11-20' }
+      },
+      flashcardSessions: { all: { order: [last.id, first.id], index: 1 } }
+    };
+    await seedDatabase(stored);
+    const fetchContent = createContentFetch();
+    vi.stubGlobal('fetch', vi.fn((input: RequestInfo | URL, init?: RequestInit) =>
+      String(input).endsWith(manifest.packs[1].url)
+        ? Promise.resolve(new Response('Pack unavailable', { status: 503 }))
+        : fetchContent(input, init)
+    ));
+    const app = await startApp();
+    await waitFor(() => app.root.querySelector('.error-card') !== null, 'the pack error');
+    expect(app.root.querySelector('.app-shell')).toBeNull();
+    expect(await readDatabase()).toEqual(stored);
+    vi.stubGlobal('fetch', vi.fn(createContentFetch()));
+    press(app, app.root, 'Try again');
+    await ready(app);
+    expect(phraseCard(app, first.phrase).classList.contains('learned')).toBe(true);
+    expect(phraseCard(app, last.phrase).classList.contains('learned')).toBe(false);
+    await app.saved();
+    expect(await readDatabase()).toEqual(stored);
+    const reloaded = await reload(app);
+    expect(phraseCard(reloaded, first.phrase).classList.contains('learned')).toBe(true);
+    expect(await readDatabase()).toEqual(stored);
+  });
+
   it('loads the built-in content from its own base path and shows the index', async () => {
     const app = await startApp();
     expect(text(app.root)).toContain('Loading training materials');
 
     await ready(app);
 
-    expect(fetch).toHaveBeenCalledWith('/eng-trainer/data/materials.json', { cache: 'no-store' });
+    expect(fetch).toHaveBeenCalledWith('/eng-trainer/data/manifest.json', { cache: 'no-store' });
+    expect(fetch).toHaveBeenCalledTimes(manifest.packs.length + 1);
+    for (const pack of manifest.packs) {
+      expect(fetch).toHaveBeenCalledWith(`/eng-trainer/data/${pack.url}`, { cache: 'no-store' });
+    }
     expect(text(app.root.querySelector('.hero')!)).toContain(`${realMaterials.phrases.length} phrases`);
     expect(text(app.root)).toContain('Learning blocks');
     expect(app.root.querySelector('.storage-notice')).toBeNull();
@@ -321,7 +367,7 @@ describe('learning identity across Phrases, Focus and Flashcards', () => {
     };
     vi.stubGlobal(
       'fetch',
-      vi.fn(async () => new Response(JSON.stringify(fixture), { status: 200 }))
+      vi.fn(createContentFetch(fixture as Materials))
     );
 
     let app = await startApp();
@@ -447,11 +493,11 @@ describe('loading and storage errors', () => {
     await waitFor(() => app.root.querySelector('.error-card') !== null, 'the content error');
 
     expect(text(app.root)).toContain('Unable to start the app');
-    expect(text(app.root)).toContain('/eng-trainer/data/materials.json');
+    expect(text(app.root)).toContain('/eng-trainer/data/manifest.json');
 
     vi.stubGlobal(
       'fetch',
-      vi.fn(async () => new Response(JSON.stringify(realMaterials), { status: 200 }))
+      vi.fn(createContentFetch())
     );
     [...app.root.querySelectorAll('button')].find((item) => text(item) === 'Try again')!.click();
     await ready(app);

@@ -1,0 +1,92 @@
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ preserves all baseline record values, array order, identities, metadata and explicit links (7.268ms)
+✔ generation is deterministic and generated files equal the validated source catalog (50.5418ms)
+✔ explicit order preserves each collection even when pack discovery order changes (2.2512ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (10.5308ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (17.37ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (2.166ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (0.6512ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (19.9764ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (1.1415ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (43.8715ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 302.5747
+
+ RUN  v3.2.7 <repo>
+
+ ✓ src/features/flashcards/flashcards.test.ts (44 tests) 143ms
+ ✓ src/content/catalog.test.ts (8 tests) 756ms
+   ✓ built-in content catalog > finds every phrase, word and verb by its own text, wherever it is in the catalog  733ms
+ ✓ src/state/progress.test.ts (26 tests) 4064ms
+   ✓ learning state in IndexedDB > keeps learned items, the review sequence and the selected deck after a reload  330ms
+   ✓ learning state in IndexedDB > does not mark anything as learned when a card is kept in the learning pool  308ms
+   ✓ learning state in IndexedDB > returns items to the learning pool with "Learn again"  661ms
+   ✓ learning state in IndexedDB > resets one deck without touching the others  370ms
+ ❯ src/content/builtIn.test.ts (10 tests | 1 failed) 5742ms
+   ✓ built-in pack loading > waits for every pack, preserves source order despite response order, and searches the last pack immediately 170ms
+   ✓ built-in pack loading > rejects the complete load for a pack http failure, then retries all content successfully 86ms
+   ✓ built-in pack loading > rejects the complete load for a pack json failure, then retries all content successfully 58ms
+   ✓ built-in pack loading > rejects the complete load for a pack metadata failure, then retries all content successfully 87ms
+   ✓ built-in pack loading > rejects the complete load for a pack counts failure, then retries all content successfully 70ms
+   ✓ built-in pack loading > rejects the complete load for a pack duplicate failure, then retries all content successfully 81ms
+   ✓ built-in pack loading > rejects the complete load for a pack reference failure, then retries all content successfully 68ms
+   ✓ built-in pack loading > rejects the complete load for a pack schema failure, then retries all content successfully 74ms
+   ✓ built-in pack loading > rejects unsafe manifest paths before issuing any pack requests 3ms
+   × complete search through the loaded shared catalog > matches a direct field-by-field oracle for every searchable field across all packs 5043ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ✓ src/features/flashcards/FlashcardsPage.test.ts (27 tests) 7470ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1695ms
+   ✓ Flashcards page > flips the card on tap and shows the translation and example  396ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  319ms
+ ✓ src/app/App.test.ts (14 tests) 8557ms
+   ✓ application shell > preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry  2553ms
+   ✓ application shell > loads the built-in content from its own base path and shows the index  372ms
+   ✓ application shell > links to the preserved v1 application  326ms
+   ✓ application shell > renders every screen from the catalog  660ms
+   ✓ application shell > searches the whole catalog, not only the items shown on the current page  387ms
+   ✓ application shell > opens the saved screen and keeps progress and preferences after a reload  646ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps "consequently" and "Consequently, …" apart in every view, also after a reload  661ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps distinct entries with similar-looking text independent: C++ and C#  908ms
+   ✓ learning identity across Phrases, Focus and Flashcards > treats a phrase and its linked word-index entry as one learning identity: the phrase id  689ms
+   ✓ loading and storage errors > handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state  328ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/content/builtIn.test.ts > complete search through the loaded shared catalog > matches a direct field-by-field oracle for every searchable field across all packs
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/content/builtIn.test.ts:76:3
+     74| 
+     75| describe('complete search through the loaded shared catalog', () => {
+     76|   it('matches a direct field-by-field oracle for every searchable fiel…
+       |   ^
+     77|     vi.stubGlobal('fetch', vi.fn(createContentFetch()));
+     78|     const catalog = await loadBuiltInCatalog();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 5 passed (6)
+      Tests  1 failed | 128 passed (129)
+   Start at  16:17:45
+   Duration  10.45s (transform 2.21s, setup 312ms, collect 3.63s, tests 26.73s, environment 3.52s, prepare 775ms)
+

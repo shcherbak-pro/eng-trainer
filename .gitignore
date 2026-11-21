@@ -5,3 +5,7 @@ dist/
 
 # Assembled GitHub Pages site (v2 build + v1 build), see scripts/assemble-site.mjs
 site-dist/
+
+# Generated from content/ by npm run content:generate (also run before build/dev/check/test).
+/public/data/manifest.json
+/public/data/packs/

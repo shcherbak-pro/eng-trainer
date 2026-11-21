@@ -1,0 +1,460 @@
+{
+  "siteData": "<candidate>\\site-dist\\data",
+  "requests": [
+    "/eng-trainer/data/manifest.json",
+    "/eng-trainer/data/packs/speaking-foundations.378bea01a015d76e.json",
+    "/eng-trainer/data/packs/presentations.2cd234cc3c91ce8d.json",
+    "/eng-trainer/data/packs/agent-framework.30b26432f0ecf993.json",
+    "/eng-trainer/data/packs/hedging-and-linking.06c92cc29e38d601.json",
+    "/eng-trainer/data/packs/personal-topics.03c1443a2cc176cf.json",
+    "/eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json",
+    "/eng-trainer/data/packs/ai-certification.a743e81dde1bc943.json",
+    "/eng-trainer/data/packs/speaking-practice.30d81bc404256cb8.json",
+    "/eng-trainer/data/packs/essential-100.3a71b8e1e38939e1.json",
+    "/eng-trainer/data/packs/logical-200.7dea9a714b2c308b.json",
+    "/eng-trainer/data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json"
+  ],
+  "uniqueQueries": 57078,
+  "stats": {
+    "searchPhrases": {
+      "queries": 57078,
+      "nonEmpty": 36321,
+      "emptyResults": 20757,
+      "mismatches": 0
+    },
+    "searchWords": {
+      "queries": 57078,
+      "nonEmpty": 38058,
+      "emptyResults": 19020,
+      "mismatches": 0
+    },
+    "searchVerbs": {
+      "queries": 57078,
+      "nonEmpty": 8733,
+      "emptyResults": 48345,
+      "mismatches": 0
+    },
+    "searchBlocks": {
+      "queries": 57078,
+      "nonEmpty": 3425,
+      "emptyResults": 53653,
+      "mismatches": 0
+    }
+  },
+  "mismatches": [],
+  "flashcards": {
+    "cards": 566,
+    "topics": 31
+  },
+  "probes": [
+    {
+      "pack": "speaking-foundations",
+      "kind": "phrases",
+      "position": "first",
+      "id": "phrase-001",
+      "query": "I WOULD START BY SAYING THAT …",
+      "found": true
+    },
+    {
+      "pack": "speaking-foundations",
+      "kind": "phrases",
+      "position": "middle",
+      "id": "phrase-045",
+      "query": "THE MORE …, THE EASIER …",
+      "found": true
+    },
+    {
+      "pack": "speaking-foundations",
+      "kind": "phrases",
+      "position": "last",
+      "id": "phrase-089",
+      "query": "THERE WE GO.",
+      "found": true
+    },
+    {
+      "pack": "speaking-foundations",
+      "kind": "wordIndex",
+      "position": "first",
+      "id": "word-phrase-001",
+      "query": "I WOULD START BY SAYING THAT …",
+      "found": true
+    },
+    {
+      "pack": "speaking-foundations",
+      "kind": "wordIndex",
+      "position": "middle",
+      "id": "word-phrase-045",
+      "query": "THE MORE …, THE EASIER …",
+      "found": true
+    },
+    {
+      "pack": "speaking-foundations",
+      "kind": "wordIndex",
+      "position": "last",
+      "id": "word-phrase-089",
+      "query": "THERE WE GO.",
+      "found": true
+    },
+    {
+      "pack": "presentations",
+      "kind": "phrases",
+      "position": "first",
+      "id": "presentation-phrase-001",
+      "query": "GOOD MORNING EVERYONE, THANK YOU FOR JOINING.",
+      "found": true
+    },
+    {
+      "pack": "presentations",
+      "kind": "phrases",
+      "position": "middle",
+      "id": "presentation-phrase-046",
+      "query": "THE NUMBER ITSELF IS LESS IMPORTANT THAN THE TREND.",
+      "found": true
+    },
+    {
+      "pack": "presentations",
+      "kind": "phrases",
+      "position": "last",
+      "id": "presentation-phrase-090",
+      "query": "THE POINT IS...",
+      "found": true
+    },
+    {
+      "pack": "presentations",
+      "kind": "wordIndex",
+      "position": "first",
+      "id": "presentation-word-001",
+      "query": "GOOD MORNING EVERYONE, THANK YOU FOR JOINING.",
+      "found": true
+    },
+    {
+      "pack": "presentations",
+      "kind": "wordIndex",
+      "position": "middle",
+      "id": "presentation-word-046",
+      "query": "THE NUMBER ITSELF IS LESS IMPORTANT THAN THE TREND.",
+      "found": true
+    },
+    {
+      "pack": "presentations",
+      "kind": "wordIndex",
+      "position": "last",
+      "id": "presentation-word-090",
+      "query": "THE POINT IS...",
+      "found": true
+    },
+    {
+      "pack": "agent-framework",
+      "kind": "phrases",
+      "position": "first",
+      "id": "agent-vocab-001",
+      "query": "COST OPTIMIZATION",
+      "found": true
+    },
+    {
+      "pack": "agent-framework",
+      "kind": "phrases",
+      "position": "middle",
+      "id": "agent-vocab-041",
+      "query": "ESCALATE",
+      "found": true
+    },
+    {
+      "pack": "agent-framework",
+      "kind": "phrases",
+      "position": "last",
+      "id": "agent-vocab-081",
+      "query": "THE FRAMEWORK HELPS CONTROL AI COST WHILE IMPROVING REVIEW QUALITY, REDUCING REWORK, AND PRESERVING ENGINEERING KNOWLEDGE.",
+      "found": true
+    },
+    {
+      "pack": "agent-framework",
+      "kind": "wordIndex",
+      "position": "first",
+      "id": "word-agent-vocab-001",
+      "query": "COST OPTIMIZATION",
+      "found": true
+    },
+    {
+      "pack": "agent-framework",
+      "kind": "wordIndex",
+      "position": "middle",
+      "id": "word-agent-vocab-041",
+      "query": "ESCALATE",
+      "found": true
+    },
+    {
+      "pack": "agent-framework",
+      "kind": "wordIndex",
+      "position": "last",
+      "id": "word-agent-vocab-081",
+      "query": "THE FRAMEWORK HELPS CONTROL AI COST WHILE IMPROVING REVIEW QUALITY, REDUCING REWORK, AND PRESERVING ENGINEERING KNOWLEDGE.",
+      "found": true
+    },
+    {
+      "pack": "hedging-and-linking",
+      "kind": "phrases",
+      "position": "first",
+      "id": "hedging-001-i-would-say",
+      "query": "I WOULD SAY …",
+      "found": true
+    },
+    {
+      "pack": "hedging-and-linking",
+      "kind": "phrases",
+      "position": "middle",
+      "id": "advanced-linking-001-moreover",
+      "query": "MOREOVER, …",
+      "found": true
+    },
+    {
+      "pack": "hedging-and-linking",
+      "kind": "phrases",
+      "position": "last",
+      "id": "advanced-linking-012-more-importantly",
+      "query": "MORE IMPORTANTLY, …",
+      "found": true
+    },
+    {
+      "pack": "hedging-and-linking",
+      "kind": "wordIndex",
+      "position": "first",
+      "id": "word-hedging-001-i-would-say",
+      "query": "I WOULD SAY …",
+      "found": true
+    },
+    {
+      "pack": "hedging-and-linking",
+      "kind": "wordIndex",
+      "position": "middle",
+      "id": "word-advanced-linking-001-moreover",
+      "query": "MOREOVER, …",
+      "found": true
+    },
+    {
+      "pack": "hedging-and-linking",
+      "kind": "wordIndex",
+      "position": "last",
+      "id": "word-advanced-linking-012-more-importantly",
+      "query": "MORE IMPORTANTLY, …",
+      "found": true
+    },
+    {
+      "pack": "personal-topics",
+      "kind": "phrases",
+      "position": "first",
+      "id": "topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+      "query": "I AM A SOFTWARE ENGINEER WITH PRACTICAL EXPERIENCE IN .NET, ANGULAR, AND CLOUD-BASED SOLUTIONS.",
+      "found": true
+    },
+    {
+      "pack": "personal-topics",
+      "kind": "phrases",
+      "position": "middle",
+      "id": "topic-hobbies-008-my-hobbies-make-me-more-crea",
+      "query": "MY HOBBIES MAKE ME MORE CREATIVE AT WORK.",
+      "found": true
+    },
+    {
+      "pack": "personal-topics",
+      "kind": "phrases",
+      "position": "last",
+      "id": "topic-work-life-balance-015-for-me-balance-is-about-sust",
+      "query": "FOR ME, BALANCE IS ABOUT SUSTAINABILITY, NOT AVOIDING HARD WORK.",
+      "found": true
+    },
+    {
+      "pack": "personal-topics",
+      "kind": "wordIndex",
+      "position": "first",
+      "id": "word-topic-tell-me-about-yourself-001-i-am-a-software-engineer-wit",
+      "query": "I AM A SOFTWARE ENGINEER WITH PRACTICAL EXPERIENCE IN .NET, ANGULAR, AND CLOUD-BASED SOLUTIONS.",
+      "found": true
+    },
+    {
+      "pack": "personal-topics",
+      "kind": "wordIndex",
+      "position": "middle",
+      "id": "word-topic-hobbies-008-my-hobbies-make-me-more-crea",
+      "query": "MY HOBBIES MAKE ME MORE CREATIVE AT WORK.",
+      "found": true
+    },
+    {
+      "pack": "personal-topics",
+      "kind": "wordIndex",
+      "position": "last",
+      "id": "word-topic-work-life-balance-015-for-me-balance-is-about-sust",
+      "query": "FOR ME, BALANCE IS ABOUT SUSTAINABILITY, NOT AVOIDING HARD WORK.",
+      "found": true
+    },
+    {
+      "pack": "workplace-topics",
+      "kind": "phrases",
+      "position": "first",
+      "id": "topic-teamwork-001-good-teamwork-starts-with-tr",
+      "query": "GOOD TEAMWORK STARTS WITH TRUST AND CLEAR COMMUNICATION.",
+      "found": true
+    },
+    {
+      "pack": "workplace-topics",
+      "kind": "phrases",
+      "position": "middle",
+      "id": "topic-remote-work-001-remote-work-gives-people-mor",
+      "query": "REMOTE WORK GIVES PEOPLE MORE FLEXIBILITY, BUT IT ALSO REQUIRES DISCIPLINE.",
+      "found": true
+    },
+    {
+      "pack": "workplace-topics",
+      "kind": "phrases",
+      "position": "last",
+      "id": "topic-conflict-resolution-team-probl-015-good-conflict-resolution-can",
+      "query": "GOOD CONFLICT RESOLUTION CAN ACTUALLY STRENGTHEN TRUST IN THE TEAM.",
+      "found": true
+    },
+    {
+      "pack": "workplace-topics",
+      "kind": "wordIndex",
+      "position": "first",
+      "id": "word-topic-teamwork-001-good-teamwork-starts-with-tr",
+      "query": "GOOD TEAMWORK STARTS WITH TRUST AND CLEAR COMMUNICATION.",
+      "found": true
+    },
+    {
+      "pack": "workplace-topics",
+      "kind": "wordIndex",
+      "position": "middle",
+      "id": "word-topic-remote-work-001-remote-work-gives-people-mor",
+      "query": "REMOTE WORK GIVES PEOPLE MORE FLEXIBILITY, BUT IT ALSO REQUIRES DISCIPLINE.",
+      "found": true
+    },
+    {
+      "pack": "workplace-topics",
+      "kind": "wordIndex",
+      "position": "last",
+      "id": "word-topic-conflict-resolution-team-probl-015-good-conflict-resolution-can",
+      "query": "GOOD CONFLICT RESOLUTION CAN ACTUALLY STRENGTHEN TRUST IN THE TEAM.",
+      "found": true
+    },
+    {
+      "pack": "ai-certification",
+      "kind": "phrases",
+      "position": "first",
+      "id": "ai-certification-phrase-001",
+      "query": "STRONG CANDIDATE FOR THE FIRST DEPLOYMENT",
+      "found": true
+    },
+    {
+      "pack": "ai-certification",
+      "kind": "phrases",
+      "position": "middle",
+      "id": "ai-certification-phrase-062",
+      "query": "AUDITABILITY",
+      "found": true
+    },
+    {
+      "pack": "ai-certification",
+      "kind": "phrases",
+      "position": "last",
+      "id": "ai-certification-phrase-121",
+      "query": "FIND, VALIDATE, TEST, REMEDIATE, PROVE",
+      "found": true
+    },
+    {
+      "pack": "ai-certification",
+      "kind": "wordIndex",
+      "position": "first",
+      "id": "ai-certification-word-001",
+      "query": "STRONG CANDIDATE FOR THE FIRST DEPLOYMENT",
+      "found": true
+    },
+    {
+      "pack": "ai-certification",
+      "kind": "wordIndex",
+      "position": "middle",
+      "id": "ai-certification-word-062",
+      "query": "AUDITABILITY",
+      "found": true
+    },
+    {
+      "pack": "ai-certification",
+      "kind": "wordIndex",
+      "position": "last",
+      "id": "ai-certification-word-121",
+      "query": "FIND, VALIDATE, TEST, REMEDIATE, PROVE",
+      "found": true
+    },
+    {
+      "pack": "essential-100",
+      "kind": "irregularVerbs",
+      "position": "first",
+      "id": "iv-001-be",
+      "query": "BEEN",
+      "found": true
+    },
+    {
+      "pack": "essential-100",
+      "kind": "irregularVerbs",
+      "position": "middle",
+      "id": "iv-051-buy",
+      "query": "BOUGHT",
+      "found": true
+    },
+    {
+      "pack": "essential-100",
+      "kind": "irregularVerbs",
+      "position": "last",
+      "id": "iv-100-shoot",
+      "query": "SHOT",
+      "found": true
+    },
+    {
+      "pack": "logical-200",
+      "kind": "irregularVerbs",
+      "position": "first",
+      "id": "iv200-001-bet",
+      "query": "BET",
+      "found": true
+    },
+    {
+      "pack": "logical-200",
+      "kind": "irregularVerbs",
+      "position": "middle",
+      "id": "iv200-101-drive",
+      "query": "DRIVEN",
+      "found": true
+    },
+    {
+      "pack": "logical-200",
+      "kind": "irregularVerbs",
+      "position": "last",
+      "id": "iv200-200-undertake",
+      "query": "UNDERTAKEN",
+      "found": true
+    },
+    {
+      "pack": "ai-certification-verbs-contextual",
+      "kind": "irregularVerbs",
+      "position": "first",
+      "id": "iv-ai-certification-001-proceed",
+      "query": "PROCEEDED",
+      "found": true
+    },
+    {
+      "pack": "ai-certification-verbs-contextual",
+      "kind": "irregularVerbs",
+      "position": "middle",
+      "id": "iv-ai-certification-020-retry",
+      "query": "RETRIED",
+      "found": true
+    },
+    {
+      "pack": "ai-certification-verbs-contextual",
+      "kind": "irregularVerbs",
+      "position": "last",
+      "id": "iv-ai-certification-039-escalate",
+      "query": "ESCALATED",
+      "found": true
+    }
+  ],
+  "durationMs": 51178
+}

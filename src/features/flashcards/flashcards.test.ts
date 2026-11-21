@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import realMaterials from '../../../public/data/materials.json';
+import { realMaterials } from '../../test/content';
 import type { Materials, Phrase, WordIndexItem } from '../../content/types';
 import type { FlashcardProgress } from './types';
 import {

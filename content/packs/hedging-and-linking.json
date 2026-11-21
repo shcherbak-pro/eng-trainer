@@ -1,0 +1,1116 @@
+{
+  "schemaVersion": 1,
+  "id": "hedging-and-linking",
+  "title": "Hedging and linking",
+  "order": 40,
+  "content": {
+    "phrases": [
+      {
+        "id": "hedging-001-i-would-say",
+        "category": "Hedging Phrases",
+        "phrase": "I would say …",
+        "translation": "Я б сказав…",
+        "transcription": "/aɪ wʊd seɪ/",
+        "commonAlternatives": [
+          "I’d say",
+          "I would probably say",
+          "My first thought is"
+        ],
+        "examples": [
+          {
+            "en": "I would say …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-002-i-suppose",
+        "category": "Hedging Phrases",
+        "phrase": "I suppose …",
+        "translation": "Я припускаю…",
+        "transcription": "/aɪ səˈpoʊz/",
+        "commonAlternatives": [
+          "I think it is possible",
+          "It seems possible",
+          "I assume"
+        ],
+        "examples": [
+          {
+            "en": "I suppose …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-003-i-guess",
+        "category": "Hedging Phrases",
+        "phrase": "I guess …",
+        "translation": "Думаю…",
+        "transcription": "/aɪ ɡes/",
+        "commonAlternatives": [
+          "I think",
+          "I feel that",
+          "I would imagine"
+        ],
+        "examples": [
+          {
+            "en": "I guess …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-004-in-my-opinion",
+        "category": "Hedging Phrases",
+        "phrase": "In my opinion, …",
+        "translation": "На мою думку…",
+        "transcription": "/ɪn maɪ əˈpɪnjən/",
+        "commonAlternatives": [
+          "From my point of view",
+          "The way I see it",
+          "Personally"
+        ],
+        "examples": [
+          {
+            "en": "In my opinion, …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-005-from-my-perspective",
+        "category": "Hedging Phrases",
+        "phrase": "From my perspective, …",
+        "translation": "З моєї точки зору…",
+        "transcription": "/frəm maɪ pərˈspektɪv/",
+        "commonAlternatives": [
+          "From my point of view",
+          "As I see it",
+          "In my view"
+        ],
+        "examples": [
+          {
+            "en": "From my perspective, …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-006-it-seems-to-me-that",
+        "category": "Hedging Phrases",
+        "phrase": "It seems to me that …",
+        "translation": "Мені здається, що…",
+        "transcription": "/ɪt siːmz tə miː ðæt/",
+        "commonAlternatives": [
+          "It looks like",
+          "It appears that",
+          "I get the impression that"
+        ],
+        "examples": [
+          {
+            "en": "It seems to me that …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-007-i-tend-to-think-that",
+        "category": "Hedging Phrases",
+        "phrase": "I tend to think that …",
+        "translation": "Я схильний думати, що…",
+        "transcription": "/aɪ tend tə θɪŋk ðæt/",
+        "commonAlternatives": [
+          "I usually think that",
+          "My view is that",
+          "I would lean toward saying"
+        ],
+        "examples": [
+          {
+            "en": "I tend to think that …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-008-to-some-extent",
+        "category": "Hedging Phrases",
+        "phrase": "To some extent, …",
+        "translation": "Певною мірою…",
+        "transcription": "/tə səm ɪkˈstent/",
+        "commonAlternatives": [
+          "Partly",
+          "In some cases",
+          "To a degree"
+        ],
+        "examples": [
+          {
+            "en": "To some extent, …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-009-i-am-not-completely-sure-but",
+        "category": "Hedging Phrases",
+        "phrase": "I am not completely sure, but …",
+        "translation": "Я не повністю впевнений, але…",
+        "transcription": "/aɪ am nɑːt kəmˈpliːtli ʃʊr bʌt/",
+        "commonAlternatives": [
+          "I cannot say for sure, but",
+          "I may be wrong, but",
+          "My assumption is"
+        ],
+        "examples": [
+          {
+            "en": "I am not completely sure, but …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-010-in-many-cases",
+        "category": "Hedging Phrases",
+        "phrase": "In many cases, …",
+        "translation": "У багатьох випадках…",
+        "transcription": "/ɪn ˈmeni ˈkeɪsɪz/",
+        "commonAlternatives": [
+          "Often",
+          "Quite often",
+          "In a lot of situations"
+        ],
+        "examples": [
+          {
+            "en": "In many cases, …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-011-it-depends-on-the-situation",
+        "category": "Hedging Phrases",
+        "phrase": "It depends on the situation.",
+        "translation": "Це залежить від ситуації.",
+        "transcription": "/ɪt dɪˈpendz ɑːn ðə ˌsɪtʃuˈeɪʃən/",
+        "commonAlternatives": [
+          "It depends",
+          "The answer depends on context",
+          "It varies"
+        ],
+        "examples": [
+          {
+            "en": "It depends on the situation.",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "hedging-012-i-would-probably-choose",
+        "category": "Hedging Phrases",
+        "phrase": "I would probably choose …",
+        "translation": "Я б, мабуть, обрав…",
+        "transcription": "/aɪ wʊd ˈprɑːbəbli choose/",
+        "commonAlternatives": [
+          "I would likely choose",
+          "My choice would be",
+          "I would go with"
+        ],
+        "examples": [
+          {
+            "en": "I would probably choose …",
+            "ua": ""
+          }
+        ],
+        "section": "Hedging Phrases",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "hedging"
+      },
+      {
+        "id": "advanced-linking-001-moreover",
+        "category": "Advanced Linking Words",
+        "phrase": "Moreover, …",
+        "translation": "Більше того…",
+        "transcription": "/mɔːrˈoʊvər/",
+        "commonAlternatives": [
+          "Furthermore",
+          "On top of that",
+          "In addition"
+        ],
+        "examples": [
+          {
+            "en": "Moreover, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-002-nevertheless",
+        "category": "Advanced Linking Words",
+        "phrase": "Nevertheless, …",
+        "translation": "Тим не менш…",
+        "transcription": "/ˌnevərðəˈles/",
+        "commonAlternatives": [
+          "Still",
+          "Even so",
+          "Despite that"
+        ],
+        "examples": [
+          {
+            "en": "Nevertheless, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-003-in-addition-to-that",
+        "category": "Advanced Linking Words",
+        "phrase": "In addition to that, …",
+        "translation": "На додаток до цього…",
+        "transcription": "/ɪn əˈdɪʃən tə ðæt/",
+        "commonAlternatives": [
+          "Additionally",
+          "Also",
+          "On top of that"
+        ],
+        "examples": [
+          {
+            "en": "In addition to that, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-004-consequently",
+        "category": "Advanced Linking Words",
+        "phrase": "Consequently, …",
+        "translation": "Як наслідок…",
+        "transcription": "/ˈkɑːnsəkwentli/",
+        "commonAlternatives": [
+          "As a result",
+          "Therefore",
+          "For that reason"
+        ],
+        "examples": [
+          {
+            "en": "Consequently, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-005-nonetheless",
+        "category": "Advanced Linking Words",
+        "phrase": "Nonetheless, …",
+        "translation": "Тим не менш…",
+        "transcription": "/ˌnʌnðəˈles/",
+        "commonAlternatives": [
+          "Nevertheless",
+          "Still",
+          "Even so"
+        ],
+        "examples": [
+          {
+            "en": "Nonetheless, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-006-to-put-it-another-way",
+        "category": "Advanced Linking Words",
+        "phrase": "To put it another way, …",
+        "translation": "Іншими словами…",
+        "transcription": "/tə pʊt ɪt əˈnʌðər weɪ/",
+        "commonAlternatives": [
+          "In other words",
+          "Simply put",
+          "Put simply"
+        ],
+        "examples": [
+          {
+            "en": "To put it another way, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-007-furthermore",
+        "category": "Advanced Linking Words",
+        "phrase": "Furthermore, …",
+        "translation": "Крім того…",
+        "transcription": "/ˈfɜːrðərmɔːr/",
+        "commonAlternatives": [
+          "Moreover",
+          "In addition",
+          "What is more"
+        ],
+        "examples": [
+          {
+            "en": "Furthermore, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-008-that-being-said",
+        "category": "Advanced Linking Words",
+        "phrase": "That being said, …",
+        "translation": "Водночас / зважаючи на це…",
+        "transcription": "/ðæt biːɪŋ said/",
+        "commonAlternatives": [
+          "However",
+          "At the same time",
+          "Still"
+        ],
+        "examples": [
+          {
+            "en": "That being said, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-009-as-a-result",
+        "category": "Advanced Linking Words",
+        "phrase": "As a result, …",
+        "translation": "Як результат…",
+        "transcription": "/as a rɪˈzʌlt/",
+        "commonAlternatives": [
+          "Consequently",
+          "Therefore",
+          "This means that"
+        ],
+        "examples": [
+          {
+            "en": "As a result, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-010-in-contrast",
+        "category": "Advanced Linking Words",
+        "phrase": "In contrast, …",
+        "translation": "На відміну від цього…",
+        "transcription": "/ɪn ˈkɑːntræst/",
+        "commonAlternatives": [
+          "On the other hand",
+          "Unlike that",
+          "By comparison"
+        ],
+        "examples": [
+          {
+            "en": "In contrast, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-011-for-instance",
+        "category": "Advanced Linking Words",
+        "phrase": "For instance, …",
+        "translation": "Наприклад…",
+        "transcription": "/fər ˈɪnstəns/",
+        "commonAlternatives": [
+          "For example",
+          "A simple example is",
+          "One example would be"
+        ],
+        "examples": [
+          {
+            "en": "For instance, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "linking"
+      },
+      {
+        "id": "advanced-linking-012-more-importantly",
+        "category": "Advanced Linking Words",
+        "phrase": "More importantly, …",
+        "translation": "Що важливіше…",
+        "transcription": "/mɔːr importantly/",
+        "commonAlternatives": [
+          "The bigger point is",
+          "What matters more",
+          "Even more important"
+        ],
+        "examples": [
+          {
+            "en": "More importantly, …",
+            "ua": ""
+          }
+        ],
+        "section": "Advanced Linking Words",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "linking"
+      }
+    ],
+    "wordIndex": [
+      {
+        "id": "word-hedging-001-i-would-say",
+        "sourcePhraseId": "hedging-001-i-would-say",
+        "term": "I would say …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Я б сказав…",
+        "pronunciation": "/aɪ wʊd seɪ/",
+        "transcription": "/aɪ wʊd seɪ/",
+        "commonAlternatives": [
+          "I’d say",
+          "I would probably say",
+          "My first thought is"
+        ],
+        "examples": [
+          {
+            "en": "I would say …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-002-i-suppose",
+        "sourcePhraseId": "hedging-002-i-suppose",
+        "term": "I suppose …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Я припускаю…",
+        "pronunciation": "/aɪ səˈpoʊz/",
+        "transcription": "/aɪ səˈpoʊz/",
+        "commonAlternatives": [
+          "I think it is possible",
+          "It seems possible",
+          "I assume"
+        ],
+        "examples": [
+          {
+            "en": "I suppose …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-003-i-guess",
+        "sourcePhraseId": "hedging-003-i-guess",
+        "term": "I guess …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Думаю…",
+        "pronunciation": "/aɪ ɡes/",
+        "transcription": "/aɪ ɡes/",
+        "commonAlternatives": [
+          "I think",
+          "I feel that",
+          "I would imagine"
+        ],
+        "examples": [
+          {
+            "en": "I guess …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-004-in-my-opinion",
+        "sourcePhraseId": "hedging-004-in-my-opinion",
+        "term": "In my opinion, …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "На мою думку…",
+        "pronunciation": "/ɪn maɪ əˈpɪnjən/",
+        "transcription": "/ɪn maɪ əˈpɪnjən/",
+        "commonAlternatives": [
+          "From my point of view",
+          "The way I see it",
+          "Personally"
+        ],
+        "examples": [
+          {
+            "en": "In my opinion, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-005-from-my-perspective",
+        "sourcePhraseId": "hedging-005-from-my-perspective",
+        "term": "From my perspective, …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "З моєї точки зору…",
+        "pronunciation": "/frəm maɪ pərˈspektɪv/",
+        "transcription": "/frəm maɪ pərˈspektɪv/",
+        "commonAlternatives": [
+          "From my point of view",
+          "As I see it",
+          "In my view"
+        ],
+        "examples": [
+          {
+            "en": "From my perspective, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-006-it-seems-to-me-that",
+        "sourcePhraseId": "hedging-006-it-seems-to-me-that",
+        "term": "It seems to me that …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Мені здається, що…",
+        "pronunciation": "/ɪt siːmz tə miː ðæt/",
+        "transcription": "/ɪt siːmz tə miː ðæt/",
+        "commonAlternatives": [
+          "It looks like",
+          "It appears that",
+          "I get the impression that"
+        ],
+        "examples": [
+          {
+            "en": "It seems to me that …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-007-i-tend-to-think-that",
+        "sourcePhraseId": "hedging-007-i-tend-to-think-that",
+        "term": "I tend to think that …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Я схильний думати, що…",
+        "pronunciation": "/aɪ tend tə θɪŋk ðæt/",
+        "transcription": "/aɪ tend tə θɪŋk ðæt/",
+        "commonAlternatives": [
+          "I usually think that",
+          "My view is that",
+          "I would lean toward saying"
+        ],
+        "examples": [
+          {
+            "en": "I tend to think that …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-008-to-some-extent",
+        "sourcePhraseId": "hedging-008-to-some-extent",
+        "term": "To some extent, …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Певною мірою…",
+        "pronunciation": "/tə səm ɪkˈstent/",
+        "transcription": "/tə səm ɪkˈstent/",
+        "commonAlternatives": [
+          "Partly",
+          "In some cases",
+          "To a degree"
+        ],
+        "examples": [
+          {
+            "en": "To some extent, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-009-i-am-not-completely-sure-but",
+        "sourcePhraseId": "hedging-009-i-am-not-completely-sure-but",
+        "term": "I am not completely sure, but …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Я не повністю впевнений, але…",
+        "pronunciation": "/aɪ am nɑːt kəmˈpliːtli ʃʊr bʌt/",
+        "transcription": "/aɪ am nɑːt kəmˈpliːtli ʃʊr bʌt/",
+        "commonAlternatives": [
+          "I cannot say for sure, but",
+          "I may be wrong, but",
+          "My assumption is"
+        ],
+        "examples": [
+          {
+            "en": "I am not completely sure, but …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-010-in-many-cases",
+        "sourcePhraseId": "hedging-010-in-many-cases",
+        "term": "In many cases, …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "У багатьох випадках…",
+        "pronunciation": "/ɪn ˈmeni ˈkeɪsɪz/",
+        "transcription": "/ɪn ˈmeni ˈkeɪsɪz/",
+        "commonAlternatives": [
+          "Often",
+          "Quite often",
+          "In a lot of situations"
+        ],
+        "examples": [
+          {
+            "en": "In many cases, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-011-it-depends-on-the-situation",
+        "sourcePhraseId": "hedging-011-it-depends-on-the-situation",
+        "term": "It depends on the situation.",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Це залежить від ситуації.",
+        "pronunciation": "/ɪt dɪˈpendz ɑːn ðə ˌsɪtʃuˈeɪʃən/",
+        "transcription": "/ɪt dɪˈpendz ɑːn ðə ˌsɪtʃuˈeɪʃən/",
+        "commonAlternatives": [
+          "It depends",
+          "The answer depends on context",
+          "It varies"
+        ],
+        "examples": [
+          {
+            "en": "It depends on the situation.",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-hedging-012-i-would-probably-choose",
+        "sourcePhraseId": "hedging-012-i-would-probably-choose",
+        "term": "I would probably choose …",
+        "category": "Hedging Phrases",
+        "section": "Hedging Phrases",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "hedging",
+        "meaning": "Я б, мабуть, обрав…",
+        "pronunciation": "/aɪ wʊd ˈprɑːbəbli choose/",
+        "transcription": "/aɪ wʊd ˈprɑːbəbli choose/",
+        "commonAlternatives": [
+          "I would likely choose",
+          "My choice would be",
+          "I would go with"
+        ],
+        "examples": [
+          {
+            "en": "I would probably choose …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-001-moreover",
+        "sourcePhraseId": "advanced-linking-001-moreover",
+        "term": "Moreover, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 1,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Більше того…",
+        "pronunciation": "/mɔːrˈoʊvər/",
+        "transcription": "/mɔːrˈoʊvər/",
+        "commonAlternatives": [
+          "Furthermore",
+          "On top of that",
+          "In addition"
+        ],
+        "examples": [
+          {
+            "en": "Moreover, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-002-nevertheless",
+        "sourcePhraseId": "advanced-linking-002-nevertheless",
+        "term": "Nevertheless, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 2,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Тим не менш…",
+        "pronunciation": "/ˌnevərðəˈles/",
+        "transcription": "/ˌnevərðəˈles/",
+        "commonAlternatives": [
+          "Still",
+          "Even so",
+          "Despite that"
+        ],
+        "examples": [
+          {
+            "en": "Nevertheless, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-003-in-addition-to-that",
+        "sourcePhraseId": "advanced-linking-003-in-addition-to-that",
+        "term": "In addition to that, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 3,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "На додаток до цього…",
+        "pronunciation": "/ɪn əˈdɪʃən tə ðæt/",
+        "transcription": "/ɪn əˈdɪʃən tə ðæt/",
+        "commonAlternatives": [
+          "Additionally",
+          "Also",
+          "On top of that"
+        ],
+        "examples": [
+          {
+            "en": "In addition to that, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-004-consequently",
+        "sourcePhraseId": "advanced-linking-004-consequently",
+        "term": "Consequently, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 4,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Як наслідок…",
+        "pronunciation": "/ˈkɑːnsəkwentli/",
+        "transcription": "/ˈkɑːnsəkwentli/",
+        "commonAlternatives": [
+          "As a result",
+          "Therefore",
+          "For that reason"
+        ],
+        "examples": [
+          {
+            "en": "Consequently, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-005-nonetheless",
+        "sourcePhraseId": "advanced-linking-005-nonetheless",
+        "term": "Nonetheless, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 5,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Тим не менш…",
+        "pronunciation": "/ˌnʌnðəˈles/",
+        "transcription": "/ˌnʌnðəˈles/",
+        "commonAlternatives": [
+          "Nevertheless",
+          "Still",
+          "Even so"
+        ],
+        "examples": [
+          {
+            "en": "Nonetheless, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-006-to-put-it-another-way",
+        "sourcePhraseId": "advanced-linking-006-to-put-it-another-way",
+        "term": "To put it another way, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 6,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Іншими словами…",
+        "pronunciation": "/tə pʊt ɪt əˈnʌðər weɪ/",
+        "transcription": "/tə pʊt ɪt əˈnʌðər weɪ/",
+        "commonAlternatives": [
+          "In other words",
+          "Simply put",
+          "Put simply"
+        ],
+        "examples": [
+          {
+            "en": "To put it another way, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-007-furthermore",
+        "sourcePhraseId": "advanced-linking-007-furthermore",
+        "term": "Furthermore, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 7,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Крім того…",
+        "pronunciation": "/ˈfɜːrðərmɔːr/",
+        "transcription": "/ˈfɜːrðərmɔːr/",
+        "commonAlternatives": [
+          "Moreover",
+          "In addition",
+          "What is more"
+        ],
+        "examples": [
+          {
+            "en": "Furthermore, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-008-that-being-said",
+        "sourcePhraseId": "advanced-linking-008-that-being-said",
+        "term": "That being said, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 8,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Водночас / зважаючи на це…",
+        "pronunciation": "/ðæt biːɪŋ said/",
+        "transcription": "/ðæt biːɪŋ said/",
+        "commonAlternatives": [
+          "However",
+          "At the same time",
+          "Still"
+        ],
+        "examples": [
+          {
+            "en": "That being said, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-009-as-a-result",
+        "sourcePhraseId": "advanced-linking-009-as-a-result",
+        "term": "As a result, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 9,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Як результат…",
+        "pronunciation": "/as a rɪˈzʌlt/",
+        "transcription": "/as a rɪˈzʌlt/",
+        "commonAlternatives": [
+          "Consequently",
+          "Therefore",
+          "This means that"
+        ],
+        "examples": [
+          {
+            "en": "As a result, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-010-in-contrast",
+        "sourcePhraseId": "advanced-linking-010-in-contrast",
+        "term": "In contrast, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 10,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "На відміну від цього…",
+        "pronunciation": "/ɪn ˈkɑːntræst/",
+        "transcription": "/ɪn ˈkɑːntræst/",
+        "commonAlternatives": [
+          "On the other hand",
+          "Unlike that",
+          "By comparison"
+        ],
+        "examples": [
+          {
+            "en": "In contrast, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-011-for-instance",
+        "sourcePhraseId": "advanced-linking-011-for-instance",
+        "term": "For instance, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 11,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Наприклад…",
+        "pronunciation": "/fər ˈɪnstəns/",
+        "transcription": "/fər ˈɪnstəns/",
+        "commonAlternatives": [
+          "For example",
+          "A simple example is",
+          "One example would be"
+        ],
+        "examples": [
+          {
+            "en": "For instance, …",
+            "ua": ""
+          }
+        ]
+      },
+      {
+        "id": "word-advanced-linking-012-more-importantly",
+        "sourcePhraseId": "advanced-linking-012-more-importantly",
+        "term": "More importantly, …",
+        "category": "Advanced Linking Words",
+        "section": "Advanced Linking Words",
+        "sequence": 12,
+        "level": "B2",
+        "tag": "linking",
+        "meaning": "Що важливіше…",
+        "pronunciation": "/mɔːr importantly/",
+        "transcription": "/mɔːr importantly/",
+        "commonAlternatives": [
+          "The bigger point is",
+          "What matters more",
+          "Even more important"
+        ],
+        "examples": [
+          {
+            "en": "More importantly, …",
+            "ua": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -96,12 +96,23 @@ src/
   features/    Screens: home, vocabulary, flashcards, exercises, focus
   shared/      Components and helpers used by several features (ui, entries, speech)
   test/        Test setup (in-memory IndexedDB) and database helpers
-public/data/   Built-in learning material (materials.json)
-scripts/       Site assembly and its structural check
+content/       Authored built-in content: course descriptor and thematic JSON packs
+public/data/   Generated manifest and content-addressed packs (ignored by Git)
+scripts/       Content generation/validation, site assembly and artifact checks
 v1/            The preserved v1 application (independent project)
 ```
 
 IndexedDB is used through [`idb`](https://github.com/jakearchibald/idb), a small promise wrapper. Only `src/storage/database.ts` imports it.
+
+### Built-in content
+
+Edit the thematic JSON files in [`content/packs/`](content/packs/) and the course metadata/navigation in [`content/catalog.json`](content/catalog.json). The v2 monolithic `materials.json` has been removed. v1 retains its own independent file.
+
+`npm run content:generate` validates the source and produces `public/data/manifest.json` and hashed files under `public/data/packs/`. It also runs automatically before `npm run dev`, `npm run check`, `npm test`, and `npm run build`. Generated files must not be edited or committed. After editing pack sources while the dev server is running, restart `npm run dev` to regenerate them.
+
+The shared catalog loads every listed pack before the app becomes ready. Search includes all built-in material immediately, regardless of which screens have been opened. IDs, explicit word-to-phrase links, and original entry order are preserved; IndexedDB needs no migration.
+
+See [the pack format and authoring rules](docs/architecture/BUILT-IN-CONTENT.md) and [ENG-V2-02A review handoff](docs/handoffs/ENG-V2-02A.md). `npm run verify:content` compares the new sources and generated catalog against the released ENG-V2-01 Git object, including complete records, order, links, and v1 preservation.
 
 ### Deployment
 

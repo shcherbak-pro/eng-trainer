@@ -3,6 +3,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readGeneratedContent } from './content-build.mjs';
 
 const site = join(dirname(fileURLToPath(import.meta.url)), '..', 'site-dist');
 
@@ -16,7 +17,7 @@ const problems = [];
 for (const app of apps) {
   const indexPath = join(app.dir, 'index.html');
   const assetsDir = join(app.dir, 'assets');
-  const dataPath = join(app.dir, 'data', 'materials.json');
+  const dataPath = join(app.dir, 'data', app.name === 'v2' ? 'manifest.json' : 'materials.json');
 
   for (const path of [indexPath, assetsDir, dataPath, join(app.dir, 'favicon.svg')]) {
     if (!existsSync(path)) problems.push(`${app.name}: missing ${path}`);
@@ -40,6 +41,14 @@ for (const app of apps) {
       problems.push(`${app.name}: ${url} is referenced but not in the build`);
     }
   }
+}
+
+try {
+  const { manifest } = await readGeneratedContent(join(site, 'data'));
+  if (existsSync(join(site, 'data', 'materials.json'))) problems.push('v2: obsolete monolithic materials.json is still published');
+  console.log(`v2 content: verified manifest and all ${manifest.packs.length} pack hashes, identities, counts and links.`);
+} catch (error) {
+  problems.push(`v2 content: ${error.message}`);
 }
 
 if (problems.length) {
