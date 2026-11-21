@@ -1,7 +1,7 @@
 {
   "date": "2026-11-21T10:53:37.233Z",
   "status": "PASS",
-  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
   "rows": [
     {
       "group": "Original Astra baseline",
@@ -14,15 +14,15 @@
       "failures": [
         {
           "name": "failed-initial-read-preserves-populated-database",
-          "failure": "AssertionError [ERR_ASSERTION]: Unhandled application error\n+ actual - expected\n\n+ [\n+   'AbortError'\n+ ]\n- []\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:60"
+          "failure": "AssertionError [ERR_ASSERTION]: Unhandled application error\n+ actual - expected\n\n+ [\n+   'AbortError'\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:60"
         },
         {
           "name": "distinct-entry-identities-with-similar-display-text",
-          "failure": "AssertionError [ERR_ASSERTION]: Learning C++ must not mark distinct C# learned\n+ actual - expected\n\n  [\n    'review-cpp',\n+   'review-csharp'\n  ]\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:287:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:13"
+          "failure": "AssertionError [ERR_ASSERTION]: Learning C++ must not mark distinct C# learned\n+ actual - expected\n\n  [\n    'review-cpp',\n+   'review-csharp'\n  ]\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:287:10\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:13"
         },
         {
           "name": "built-in-duplicate-entry-consistency",
-          "failure": "AssertionError [ERR_ASSERTION]: An entry still unlearned in Focus is counted learned in its flashcard topic\n\n'1' !== '0'\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:307:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:363:13"
+          "failure": "AssertionError [ERR_ASSERTION]: An entry still unlearned in Focus is counted learned in its flashcard topic\n\n'1' !== '0'\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:307:10\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:363:13"
         }
       ],
       "pageErrors": [
@@ -50,15 +50,15 @@
       "failures": [
         {
           "name": "failed-initial-read-preserves-populated-database",
-          "failure": "AssertionError [ERR_ASSERTION]: Unhandled application error\n+ actual - expected\n\n+ [\n+   'AbortError'\n+ ]\n- []\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:60"
+          "failure": "AssertionError [ERR_ASSERTION]: Unhandled application error\n+ actual - expected\n\n+ [\n+   'AbortError'\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:60"
         },
         {
           "name": "distinct-entry-identities-with-similar-display-text",
-          "failure": "AssertionError [ERR_ASSERTION]: Learning C++ must not mark distinct C# learned\n+ actual - expected\n\n  [\n    'review-cpp',\n+   'review-csharp'\n  ]\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:287:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:13"
+          "failure": "AssertionError [ERR_ASSERTION]: Learning C++ must not mark distinct C# learned\n+ actual - expected\n\n  [\n    'review-cpp',\n+   'review-csharp'\n  ]\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:287:10\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:13"
         },
         {
           "name": "built-in-duplicate-entry-consistency",
-          "failure": "AssertionError [ERR_ASSERTION]: An entry still unlearned in Focus is counted learned in its flashcard topic\n\n'1' !== '0'\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:307:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:363:13"
+          "failure": "AssertionError [ERR_ASSERTION]: An entry still unlearned in Focus is counted learned in its flashcard topic\n\n'1' !== '0'\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:307:10\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:363:13"
         }
       ],
       "pageErrors": [
@@ -263,7 +263,7 @@
       "failures": [
         {
           "name": "distinct-entry-identities-with-similar-display-text",
-          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-astra\\browser-review.mjs:287:128\n    at async file:///c:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13"
+          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at <repo>\\docs\\reviews\\eng-v2-01-astra\\browser-review.mjs:287:128\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13"
         }
       ],
       "pageErrors": [],
@@ -286,7 +286,7 @@
       "failures": [
         {
           "name": "distinct-entry-identities-with-similar-display-text",
-          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-astra\\browser-review.mjs:287:128\n    at async file:///c:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13"
+          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at <repo>\\docs\\reviews\\eng-v2-01-astra\\browser-review.mjs:287:128\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13"
         }
       ],
       "pageErrors": [],
@@ -477,7 +477,7 @@
       "failures": [
         {
           "name": "distinct-entry-identities-with-similar-display-text",
-          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.original.mjs:287:128\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/browser-review.original.mjs:403:13"
+          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at <repo>\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.original.mjs:287:128\n    at async file:///<repo>/docs/reviews/eng-v2-01-rc1-astra/browser-review.original.mjs:403:13"
         }
       ],
       "pageErrors": [],
@@ -500,7 +500,7 @@
       "failures": [
         {
           "name": "distinct-entry-identities-with-similar-display-text",
-          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.original.mjs:287:128\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/browser-review.original.mjs:403:13"
+          "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at <repo>\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.original.mjs:287:128\n    at async file:///<repo>/docs/reviews/eng-v2-01-rc1-astra/browser-review.original.mjs:403:13"
         }
       ],
       "pageErrors": [],

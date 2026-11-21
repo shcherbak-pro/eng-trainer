@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
-  "original": "C:\\Users\\SerhiiShcherbak\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
+  "original": "<review-temp>\\candidate",
   "phraseCount": 566,
   "wordCount": 566,
   "oldCards": 560,

@@ -172,8 +172,8 @@
   "indexDiff": "",
   "baselineTree": "218bf6a092e01d0194df21e455e1c13b60cde1d0",
   "priorFeatureTree": "218bf6a092e01d0194df21e455e1c13b60cde1d0",
-  "scratch": "C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp",
-  "candidate": "C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate",
+  "scratch": "<review-temp>",
+  "candidate": "<review-temp>\\candidate",
   "inventory": [
     {
       "path": ".github/workflows/deploy.yml",
@@ -1025,5 +1025,5 @@
       "result": "identical-text"
     }
   ],
-  "relocatedCandidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-JWjXDp\\candidate"
+  "relocatedCandidate": "<repo>\\.astra-review-JWjXDp\\candidate"
 }

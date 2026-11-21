@@ -3,7 +3,7 @@
   "engine": "chromium",
   "version": "151.0.7922.34",
   "origin": "http://127.0.0.1:55352",
-  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
   "results": [
     {
       "name": "artifact-paths-navigation-and-mobile-link",
@@ -2064,7 +2064,7 @@
         "C++",
         "C#"
       ],
-      "failure": "locator.click: Error: strict mode violation: getByRole('button', { name: 'Review learned vocabulary', exact: true }) resolved to 2 elements:\n    1) <button type=\"button\" title=\"Review learned vocabulary\" class=\"btn secondary btn--icon-only\" aria-label=\"Review learned vocabulary\">…</button> aka getByRole('button', { name: 'Review learned vocabulary', description: 'Review learned vocabulary' })\n    2) <button type=\"button\" class=\"btn primary\">Review learned vocabulary</button> aka getByText('Review learned vocabulary')\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Review learned vocabulary', exact: true })\u001b[22m\n\n    at C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.mjs:314:109\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/browser-review.mjs:429:13",
+      "failure": "locator.click: Error: strict mode violation: getByRole('button', { name: 'Review learned vocabulary', exact: true }) resolved to 2 elements:\n    1) <button type=\"button\" title=\"Review learned vocabulary\" class=\"btn secondary btn--icon-only\" aria-label=\"Review learned vocabulary\">…</button> aka getByRole('button', { name: 'Review learned vocabulary', description: 'Review learned vocabulary' })\n    2) <button type=\"button\" class=\"btn primary\">Review learned vocabulary</button> aka getByText('Review learned vocabulary')\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Review learned vocabulary', exact: true })\u001b[22m\n\n    at <repo>\\docs\\reviews\\eng-v2-01-rc1-astra\\browser-review.mjs:314:109\n    at async file:///<repo>/docs/reviews/eng-v2-01-rc1-astra/browser-review.mjs:429:13",
       "probeAtEnd": {
         "opens": [
           "eng-trainer-v2"

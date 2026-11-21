@@ -3,7 +3,7 @@
   "engine": "chromium",
   "version": "151.0.7922.34",
   "origin": "http://127.0.0.1:60448",
-  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-JWjXDp\\candidate",
+  "candidate": "<repo>\\.astra-review-JWjXDp\\candidate",
   "results": [
     {
       "name": "artifact-paths-navigation-and-mobile-link",
@@ -835,7 +835,7 @@
         "learnPasses": {},
         "flashcardSessions": {}
       },
-      "failure": "AssertionError [ERR_ASSERTION]: Unhandled application error\n+ actual - expected\n\n+ [\n+   'AbortError'\n+ ]\n- []\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:60",
+      "failure": "AssertionError [ERR_ASSERTION]: Unhandled application error\n+ actual - expected\n\n+ [\n+   'AbortError'\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:60",
       "probeAtEnd": {
         "opens": [
           "eng-trainer-v2",
@@ -1928,7 +1928,7 @@
         "C++",
         "C#"
       ],
-      "failure": "AssertionError [ERR_ASSERTION]: Learning C++ must not mark distinct C# learned\n+ actual - expected\n\n  [\n    'review-cpp',\n+   'review-csharp'\n  ]\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:287:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:13",
+      "failure": "AssertionError [ERR_ASSERTION]: Learning C++ must not mark distinct C# learned\n+ actual - expected\n\n  [\n    'review-cpp',\n+   'review-csharp'\n  ]\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:287:10\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:305:13",
       "probeAtEnd": {
         "opens": [
           "eng-trainer-v2"
@@ -1996,7 +1996,7 @@
           "flashcardTopic": "Advanced Linking Words"
         }
       },
-      "failure": "AssertionError [ERR_ASSERTION]: An entry still unlearned in Focus is counted learned in its flashcard topic\n\n'1' !== '0'\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:307:10\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:363:13",
+      "failure": "AssertionError [ERR_ASSERTION]: An entry still unlearned in Focus is counted learned in its flashcard topic\n\n'1' !== '0'\n\n    at file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:307:10\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:363:13",
       "probeAtEnd": {
         "opens": [
           "eng-trainer-v2",

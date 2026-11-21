@@ -8,7 +8,7 @@ The complete corrected browser suite passes **17/17 scenario groups in Chromium 
 
 | Item | Independently observed value |
 |---|---|
-| Repository | `C:\Users\SerhiiShcherbak\Desktop\Repos\eng-trainer` |
+| Repository | `<repo>` |
 | Branch | `feature/eng-v2-01-modular-foundation` |
 | HEAD and locally recorded `origin/main` | `45564ca608249b3a8a6ea48073589b17e6430ea1` |
 | Default branch reference | `refs/remotes/origin/main` |

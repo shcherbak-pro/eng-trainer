@@ -6,5 +6,5 @@
 > english-assessment-trainer-v1@1.0.0 check
 > svelte-check --tsconfig ./tsconfig.json
 
-1795256118115 START "c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\v1"
+1795256118115 START "<repo>\\v1"
 1795256118118 COMPLETED 189 FILES 0 ERRORS 0 WARNINGS 0 FILES_WITH_PROBLEMS

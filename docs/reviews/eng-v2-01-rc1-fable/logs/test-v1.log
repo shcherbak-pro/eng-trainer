@@ -7,7 +7,7 @@
 > vitest run
 
 
- RUN  v3.2.7 c:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/v1
+ RUN  v3.2.7 <repo>/v1
 
  ✓ src/lib/utils/flashcards.test.ts (30 tests) 40ms
  ✓ src/lib/stores/progress.flashcards.test.ts (12 tests) 1626ms

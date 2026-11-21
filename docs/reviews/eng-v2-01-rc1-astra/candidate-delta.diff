@@ -1,7 +1,7 @@
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\CHANGELOG.md" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\CHANGELOG.md"
+diff --git "a/<review-temp>\\candidate\\CHANGELOG.md" "b/<repo>\\CHANGELOG.md"
 index 38ce8bf..0f3bb72 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\CHANGELOG.md"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\CHANGELOG.md"
+--- "a/<review-temp>\\candidate\\CHANGELOG.md"
++++ "b/<repo>\\CHANGELOG.md"
 @@ -17,6 +17,12 @@
  - Search text, the current page of each list, and the current practice prompt are no longer saved. They are kept while the app is open and start fresh after a reload.
  - The saved theme is applied when the app has read its settings. Before that, the system theme is shown.
@@ -15,10 +15,10 @@ index 38ce8bf..0f3bb72 100644
  
  ## 2026-11-11
  
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\README.md" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\README.md"
+diff --git "a/<review-temp>\\candidate\\README.md" "b/<repo>\\README.md"
 index 70d7d9f..d58e5c5 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\README.md"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\README.md"
+--- "a/<review-temp>\\candidate\\README.md"
++++ "b/<repo>\\README.md"
 @@ -35,6 +35,8 @@ The **Flashcards** page shows one word or phrase at a time. The front has the En
  - **All Vocabulary** studies every word and phrase once. **By Topic** studies one category. The learned status is shared between them and with the **Phrases** page.
  - **Review learned vocabulary** lists learned items, where **Learn again** returns an item to the deck. **Reset progress** clears the learned items of the selected deck after a confirmation.
@@ -28,10 +28,10 @@ index 70d7d9f..d58e5c5 100644
  Items hidden on the Phrases or Words page are left out of the flashcards.
  
  ## Listening practice
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\docs\\handoffs\\ENG-V2-01.md" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\handoffs\\ENG-V2-01.md"
+diff --git "a/<review-temp>\\candidate\\docs\\handoffs\\ENG-V2-01.md" "b/<repo>\\docs\\handoffs\\ENG-V2-01.md"
 index c0ee903..7ecadc2 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\docs\\handoffs\\ENG-V2-01.md"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\handoffs\\ENG-V2-01.md"
+--- "a/<review-temp>\\candidate\\docs\\handoffs\\ENG-V2-01.md"
++++ "b/<repo>\\docs\\handoffs\\ENG-V2-01.md"
 @@ -4,6 +4,8 @@ Preserve v1 as an independent application under `v1/`, turn the root application
  
  Date: 2026-11-21. Status: implemented, development checks pass, **not tested in a browser**.
@@ -209,10 +209,10 @@ index c0ee903..7ecadc2 100644
 +| Ignored build output | `dist/`, `v1/dist/`, `site-dist/`, both `node_modules/` |
 +
 +Both lockfiles are unchanged since the review and still have to be committed with the implementation.
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\app\\App.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\app\\App.test.ts"
+diff --git "a/<review-temp>\\candidate\\src\\app\\App.test.ts" "b/<repo>\\src\\app\\App.test.ts"
 index 882a806..0774526 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\app\\App.test.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\app\\App.test.ts"
+--- "a/<review-temp>\\candidate\\src\\app\\App.test.ts"
++++ "b/<repo>\\src\\app\\App.test.ts"
 @@ -1,7 +1,13 @@
  import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
  import realMaterials from '../../public/data/materials.json';
@@ -493,10 +493,10 @@ index 882a806..0774526 100644
    it('shows an error and a retry when the content cannot be loaded', async () => {
      vi.stubGlobal(
        'fetch',
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\content\\catalog.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\content\\catalog.test.ts"
+diff --git "a/<review-temp>\\candidate\\src\\content\\catalog.test.ts" "b/<repo>\\src\\content\\catalog.test.ts"
 index 4079f72..fc905e4 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\content\\catalog.test.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\content\\catalog.test.ts"
+--- "a/<review-temp>\\candidate\\src\\content\\catalog.test.ts"
++++ "b/<repo>\\src\\content\\catalog.test.ts"
 @@ -20,6 +20,21 @@ describe('built-in content catalog', () => {
      }
    });
@@ -519,10 +519,10 @@ index 4079f72..fc905e4 100644
    it('exposes all built-in material', () => {
      const source = realMaterials as Materials;
  
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\FlashcardsPage.svelte" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\FlashcardsPage.svelte"
+diff --git "a/<review-temp>\\candidate\\src\\features\\flashcards\\FlashcardsPage.svelte" "b/<repo>\\src\\features\\flashcards\\FlashcardsPage.svelte"
 index 9cf3133..55c487b 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\FlashcardsPage.svelte"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\FlashcardsPage.svelte"
+--- "a/<review-temp>\\candidate\\src\\features\\flashcards\\FlashcardsPage.svelte"
++++ "b/<repo>\\src\\features\\flashcards\\FlashcardsPage.svelte"
 @@ -129,7 +129,7 @@
          ? `End of the deck. Starting again with the ${plural(next.order.length, 'card')} you are still learning.`
          : '';
@@ -550,10 +550,10 @@ index 9cf3133..55c487b 100644
      );
      view = 'learn';
      notice = '';
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\FlashcardsPage.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\FlashcardsPage.test.ts"
+diff --git "a/<review-temp>\\candidate\\src\\features\\flashcards\\FlashcardsPage.test.ts" "b/<repo>\\src\\features\\flashcards\\FlashcardsPage.test.ts"
 index 9c3d0b3..381af0c 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\FlashcardsPage.test.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\FlashcardsPage.test.ts"
+--- "a/<review-temp>\\candidate\\src\\features\\flashcards\\FlashcardsPage.test.ts"
++++ "b/<repo>\\src\\features\\flashcards\\FlashcardsPage.test.ts"
 @@ -18,13 +18,14 @@ const materials = {
      { id: 'p1', category: 'Greetings', phrase: 'Good morning', translation: 'Доброго ранку', transcription: '/ɡʊd ˈmɔːrnɪŋ/', example: 'Good morning, team.' },
      { id: 'p2', category: 'Greetings', phrase: 'See you later', translation: 'Побачимось пізніше' },
@@ -787,10 +787,10 @@ index 9c3d0b3..381af0c 100644
        click(page, 'I know it');
        finishAnswer(page);
        selectTopic(page, 'Greetings');
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\flashcards.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\flashcards.test.ts"
+diff --git "a/<review-temp>\\candidate\\src\\features\\flashcards\\flashcards.test.ts" "b/<repo>\\src\\features\\flashcards\\flashcards.test.ts"
 index 29045a5..b3aa5db 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\flashcards.test.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\flashcards.test.ts"
+--- "a/<review-temp>\\candidate\\src\\features\\flashcards\\flashcards.test.ts"
++++ "b/<repo>\\src\\features\\flashcards\\flashcards.test.ts"
 @@ -52,21 +52,19 @@ describe('buildFlashcards', () => {
    const cards = buildFlashcards(materials);
    const byId = new Map(cards.map((card) => [card.id, card]));
@@ -1075,10 +1075,10 @@ index 29045a5..b3aa5db 100644
    });
  });
  
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\flashcards.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\flashcards.ts"
+diff --git "a/<review-temp>\\candidate\\src\\features\\flashcards\\flashcards.ts" "b/<repo>\\src\\features\\flashcards\\flashcards.ts"
 index ed2eaec..a50ee9a 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\flashcards.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\flashcards.ts"
+--- "a/<review-temp>\\candidate\\src\\features\\flashcards\\flashcards.ts"
++++ "b/<repo>\\src\\features\\flashcards\\flashcards.ts"
 @@ -17,8 +17,12 @@ export const SWIPE_THRESHOLD = 90;
  /** Horizontal distance in pixels after which a pointer move becomes a drag. */
  const DRAG_START_DISTANCE = 10;
@@ -1241,10 +1241,10 @@ index ed2eaec..a50ee9a 100644
        summary.learned.push(card);
      } else {
        summary.learning.push(card);
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\types.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\types.ts"
+diff --git "a/<review-temp>\\candidate\\src\\features\\flashcards\\types.ts" "b/<repo>\\src\\features\\flashcards\\types.ts"
 index dc36f4f..985111e 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\features\\flashcards\\types.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\features\\flashcards\\types.ts"
+--- "a/<review-temp>\\candidate\\src\\features\\flashcards\\types.ts"
++++ "b/<repo>\\src\\features\\flashcards\\types.ts"
 @@ -7,11 +7,20 @@ export type { FlashcardMode, FlashcardSession };
  /**
   * One vocabulary item shown as a flashcard.
@@ -1291,10 +1291,10 @@ index dc36f4f..985111e 100644
  };
  
  /** The two answers a learner can give for a card. */
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\state\\progress.test.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\state\\progress.test.ts"
+diff --git "a/<review-temp>\\candidate\\src\\state\\progress.test.ts" "b/<repo>\\src\\state\\progress.test.ts"
 index e4a4491..e8d961a 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\state\\progress.test.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\state\\progress.test.ts"
+--- "a/<review-temp>\\candidate\\src\\state\\progress.test.ts"
++++ "b/<repo>\\src\\state\\progress.test.ts"
 @@ -1,6 +1,6 @@
  import { get } from 'svelte/store';
  import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -1348,10 +1348,10 @@ index e4a4491..e8d961a 100644
    it('reports an initialization failure when the database cannot be opened', async () => {
      vi.spyOn(indexedDB, 'open').mockImplementation(() => {
        throw new DOMException('Simulated open failure', 'SecurityError');
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\storage\\database.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\storage\\database.ts"
+diff --git "a/<review-temp>\\candidate\\src\\storage\\database.ts" "b/<repo>\\src\\storage\\database.ts"
 index b4ae85f..8d57148 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\storage\\database.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\storage\\database.ts"
+--- "a/<review-temp>\\candidate\\src\\storage\\database.ts"
++++ "b/<repo>\\src\\storage\\database.ts"
 @@ -51,22 +51,70 @@ export interface AppStorage {
    close(): void;
  }
@@ -1451,10 +1451,10 @@ index b4ae85f..8d57148 100644
          throw new StorageError('write', error);
        }
      },
-diff --git "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\test\\database.ts" "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\test\\database.ts"
+diff --git "a/<review-temp>\\candidate\\src\\test\\database.ts" "b/<repo>\\src\\test\\database.ts"
 index bbc876e..8742711 100644
---- "a/C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate\\src\\test\\database.ts"
-+++ "b/C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\src\\test\\database.ts"
+--- "a/<review-temp>\\candidate\\src\\test\\database.ts"
++++ "b/<repo>\\src\\test\\database.ts"
 @@ -4,6 +4,13 @@ import { DATABASE_NAME, DATABASE_VERSION, STORE_NAMES, type StoreName } from '..
  
  export type SavedRecords = Partial<Record<StoreName, Record<string, unknown>>>;

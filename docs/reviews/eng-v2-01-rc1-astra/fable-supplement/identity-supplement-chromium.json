@@ -3,7 +3,7 @@
   "engine": "chromium",
   "version": "151.0.7922.34",
   "origin": "http://127.0.0.1:53227",
-  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
   "results": [
     {
       "name": "distinct-similar-entries-stay-independent",

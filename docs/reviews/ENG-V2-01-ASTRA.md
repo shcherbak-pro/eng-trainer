@@ -8,7 +8,7 @@ The clean installs, existing static checks, existing unit suites, combined produ
 
 | Item | Observed value |
 |---|---|
-| Repository | `C:\Users\SerhiiShcherbak\Desktop\Repos\eng-trainer` — `shcherbak-pro/eng-trainer` |
+| Repository | `<repo>` — `shcherbak-pro/eng-trainer` |
 | Branch | `feature/eng-v2-01-modular-foundation` |
 | HEAD / implementation baseline / locally recorded `origin/main` | `45564ca608249b3a8a6ea48073589b17e6430ea1` |
 | Default branch reference | `refs/remotes/origin/main` |

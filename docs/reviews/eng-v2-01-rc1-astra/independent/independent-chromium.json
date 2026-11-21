@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21T10:48:59.671Z",
-  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
   "engine": "chromium",
   "version": "151.0.7922.34",
   "results": [
@@ -9,7 +9,7 @@
       "status": "FAIL",
       "errors": [],
       "consoleErrors": [],
-      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.phrase-card').filter({ has: getByRole('heading', { name: 'Same', exact: true }) }).getByRole('button', { name: 'Add to Focus List', exact: true })\u001b[22m\n\n    at C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-rc1-astra\\independent-browser.mjs:32:87\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:164:12",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.phrase-card').filter({ has: getByRole('heading', { name: 'Same', exact: true }) }).getByRole('button', { name: 'Add to Focus List', exact: true })\u001b[22m\n\n    at <repo>\\docs\\reviews\\eng-v2-01-rc1-astra\\independent-browser.mjs:32:87\n    at async file:///<repo>/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:164:12",
       "elapsedMs": 12424
     },
     {
@@ -241,7 +241,7 @@
           "unhandled": []
         }
       },
-      "error": "AssertionError [ERR_ASSERTION]: Earlier request promises exist when issuing getAll throws\n\n7 !== 3\n\n    at file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:121:17\n    at async file:///C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:164:12",
+      "error": "AssertionError [ERR_ASSERTION]: Earlier request promises exist when issuing getAll throws\n\n7 !== 3\n\n    at file:///<repo>/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:121:17\n    at async file:///<repo>/docs/reviews/eng-v2-01-rc1-astra/independent-browser.mjs:164:12",
       "elapsedMs": 489
     },
     {

@@ -6,7 +6,7 @@
 > english-assessment-trainer-v1@1.0.0 check
 > svelte-check --tsconfig ./tsconfig.json
 
-Loading svelte-check in workspace: c:\Users\SerhiiShcherbak\Desktop\Repos\eng-trainer\.astra-review-JWjXDp\candidate\v1
+Loading svelte-check in workspace: <repo>\.astra-review-JWjXDp\candidate\v1
 Getting Svelte diagnostics...
 
 svelte-check found 0 errors and 0 warnings

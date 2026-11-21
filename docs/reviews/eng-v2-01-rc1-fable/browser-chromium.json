@@ -3,7 +3,7 @@
   "engine": "chromium",
   "version": "151.0.7922.34",
   "origin": "http://127.0.0.1:49169",
-  "candidate": "c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer",
+  "candidate": "<repo>",
   "results": [
     {
       "name": "artifact-paths-navigation-and-mobile-link",
@@ -2013,7 +2013,7 @@
       "failedRequests": [],
       "cardText": "C++",
       "cardCount": "2",
-      "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\docs\\reviews\\eng-v2-01-astra\\browser-review.mjs:287:128\n    at async file:///c:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13",
+      "failure": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible\u001b[22m\n\n    at <repo>\\docs\\reviews\\eng-v2-01-astra\\browser-review.mjs:287:128\n    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13",
       "probeAtEnd": {
         "opens": [
           "eng-trainer-v2"

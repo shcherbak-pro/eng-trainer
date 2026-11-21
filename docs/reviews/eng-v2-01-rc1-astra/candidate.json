@@ -226,9 +226,9 @@
     "?? v1/vite.config.ts",
     "?? v1/vitest.config.ts"
   ],
-  "scratch": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb",
-  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
-  "originalSnapshot": "C:\\Users\\SERHII~1\\AppData\\Local\\Temp\\eng-v2-01-astra-JWjXDp\\candidate",
+  "scratch": "<repo>\\.astra-review-rc1-ER04Gb",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
+  "originalSnapshot": "<review-temp>\\candidate",
   "changes": [
     {
       "path": "CHANGELOG.md",

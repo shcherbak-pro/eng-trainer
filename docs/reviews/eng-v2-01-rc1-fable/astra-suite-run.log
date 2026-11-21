@@ -14,8 +14,8 @@ locator.waitFor: Timeout 12000ms exceeded.
 Call log:
 [2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible[22m
 
-    at c:\Users\SerhiiShcherbak\Desktop\Repos\eng-trainer\docs\reviews\eng-v2-01-astra\browser-review.mjs:287:128
-    at async file:///c:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13
+    at <repo>\docs\reviews\eng-v2-01-astra\browser-review.mjs:287:128
+    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13
 PASS chromium built-in-duplicate-entry-consistency
 PASS chromium missing-optional-records-do-not-write-defaults
 PASS chromium reset-after-failed-write-does-not-revive-progress
@@ -38,8 +38,8 @@ locator.waitFor: Timeout 12000ms exceeded.
 Call log:
 [2m  - waiting for getByRole('heading', { name: 'Deck complete', exact: true }) to be visible[22m
 
-    at c:\Users\SerhiiShcherbak\Desktop\Repos\eng-trainer\docs\reviews\eng-v2-01-astra\browser-review.mjs:287:128
-    at async file:///c:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13
+    at <repo>\docs\reviews\eng-v2-01-astra\browser-review.mjs:287:128
+    at async file:///<repo>/docs/reviews/eng-v2-01-astra/browser-review.mjs:403:13
 PASS firefox built-in-duplicate-entry-consistency
 PASS firefox missing-optional-records-do-not-write-defaults
 PASS firefox reset-after-failed-write-does-not-revive-progress

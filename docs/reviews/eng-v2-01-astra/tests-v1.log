@@ -7,7 +7,7 @@
 > vitest run
 
 
- RUN  v3.2.7 C:/Users/SerhiiShcherbak/Desktop/Repos/eng-trainer/.astra-review-JWjXDp/candidate/v1
+ RUN  v3.2.7 <repo>/.astra-review-JWjXDp/candidate/v1
 
  ✓ src/lib/utils/flashcards.test.ts (30 tests) 112ms
  ✓ src/lib/stores/progress.flashcards.test.ts (12 tests) 2305ms

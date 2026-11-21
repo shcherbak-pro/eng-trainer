@@ -3,7 +3,7 @@
   "engine": "chromium",
   "version": "151.0.7922.34",
   "origin": "http://127.0.0.1:58356",
-  "candidate": "c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer",
+  "candidate": "<repo>",
   "results": [
     {
       "name": "distinct-similar-entries-stay-independent",

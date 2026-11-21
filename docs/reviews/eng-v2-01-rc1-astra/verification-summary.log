@@ -1,7 +1,7 @@
 {
   "date": "2026-11-21T10:53:37.233Z",
   "status": "PASS",
-  "candidate": "C:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer\\.astra-review-rc1-ER04Gb\\candidate",
+  "candidate": "<repo>\\.astra-review-rc1-ER04Gb\\candidate",
   "rows": [
     {
       "group": "Original Astra baseline",

@@ -3,7 +3,7 @@
   "engine": "firefox",
   "version": "153.0",
   "origin": "http://127.0.0.1:58356",
-  "candidate": "c:\\Users\\SerhiiShcherbak\\Desktop\\Repos\\eng-trainer",
+  "candidate": "<repo>",
   "results": [
     {
       "name": "distinct-similar-entries-stay-independent",
