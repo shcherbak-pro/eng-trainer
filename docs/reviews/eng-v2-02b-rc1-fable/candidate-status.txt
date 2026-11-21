@@ -1,0 +1,143 @@
+ M CHANGELOG.md
+ M README.md
+ M src/app.css
+ M src/app/App.svelte
+ M src/app/App.test.ts
+ M src/app/AppShell.svelte
+ M src/app/navigation.ts
+ M src/content/catalog.ts
+ M src/content/types.ts
+ M src/features/flashcards/FlashcardsPage.svelte
+ M src/features/flashcards/flashcards.test.ts
+ M src/features/flashcards/flashcards.ts
+ M src/features/flashcards/types.ts
+ M src/features/vocabulary/IrregularVerbsPage.svelte
+ M src/features/vocabulary/PhrasesPage.svelte
+ M src/features/vocabulary/WordIndexPage.svelte
+ M src/state/index.ts
+ M src/state/progress.test.ts
+ M src/state/progress.ts
+ M src/state/settings.ts
+ M src/storage/database.ts
+?? docs/architecture/USER-COLLECTIONS.md
+?? docs/evidence/eng-v2-02b-rc1/README.md
+?? docs/evidence/eng-v2-02b-rc1/artifact.json
+?? docs/evidence/eng-v2-02b-rc1/baseline-browser/browser-chromium.json
+?? docs/evidence/eng-v2-02b-rc1/baseline-browser/browser-firefox.json
+?? docs/evidence/eng-v2-02b-rc1/baseline-browser/chromium-collections.png
+?? docs/evidence/eng-v2-02b-rc1/baseline-browser/chromium-mobile.png
+?? docs/evidence/eng-v2-02b-rc1/baseline-browser/chromium-synthetic-export.json
+?? docs/evidence/eng-v2-02b-rc1/baseline-browser/firefox-collections.png
+?? docs/evidence/eng-v2-02b-rc1/baseline-browser/firefox-mobile.png
+?? docs/evidence/eng-v2-02b-rc1/baseline-browser/firefox-synthetic-export.json
+?? docs/evidence/eng-v2-02b-rc1/browser-check.mjs
+?? docs/evidence/eng-v2-02b-rc1/browser/browser-chromium.json
+?? docs/evidence/eng-v2-02b-rc1/browser/browser-firefox.json
+?? docs/evidence/eng-v2-02b-rc1/browser/chromium-F1-all-delete-learn-reload-restore.png
+?? docs/evidence/eng-v2-02b-rc1/browser/chromium-F1-topic-delete-learn-reload-restore.png
+?? docs/evidence/eng-v2-02b-rc1/browser/chromium-synthetic-export.json
+?? docs/evidence/eng-v2-02b-rc1/browser/firefox-F1-all-delete-learn-reload-restore.png
+?? docs/evidence/eng-v2-02b-rc1/browser/firefox-F1-topic-delete-learn-reload-restore.png
+?? docs/evidence/eng-v2-02b-rc1/browser/firefox-synthetic-export.json
+?? docs/evidence/eng-v2-02b-rc1/candidate-delta.json
+?? docs/evidence/eng-v2-02b-rc1/collect-evidence.mjs
+?? docs/evidence/eng-v2-02b-rc1/git-status.txt
+?? docs/evidence/eng-v2-02b-rc1/logs/baseline-browser.log
+?? docs/evidence/eng-v2-02b-rc1/logs/browser.log
+?? docs/evidence/eng-v2-02b-rc1/logs/build-site.log
+?? docs/evidence/eng-v2-02b-rc1/logs/check-v1.log
+?? docs/evidence/eng-v2-02b-rc1/logs/check.log
+?? docs/evidence/eng-v2-02b-rc1/logs/test-v1.log
+?? docs/evidence/eng-v2-02b-rc1/logs/test.log
+?? docs/evidence/eng-v2-02b-rc1/logs/verify-content.log
+?? docs/evidence/eng-v2-02b-rc1/sanitization.json
+?? docs/evidence/eng-v2-02b/README.md
+?? docs/evidence/eng-v2-02b/artifact.json
+?? docs/evidence/eng-v2-02b/browser-check.mjs
+?? docs/evidence/eng-v2-02b/browser/browser-chromium.json
+?? docs/evidence/eng-v2-02b/browser/browser-firefox.json
+?? docs/evidence/eng-v2-02b/browser/chromium-collections.png
+?? docs/evidence/eng-v2-02b/browser/chromium-mobile.png
+?? docs/evidence/eng-v2-02b/browser/chromium-synthetic-export.json
+?? docs/evidence/eng-v2-02b/browser/firefox-collections.png
+?? docs/evidence/eng-v2-02b/browser/firefox-mobile.png
+?? docs/evidence/eng-v2-02b/browser/firefox-synthetic-export.json
+?? docs/evidence/eng-v2-02b/candidate.json
+?? docs/evidence/eng-v2-02b/git-status.txt
+?? docs/evidence/eng-v2-02b/logs/browser.log
+?? docs/evidence/eng-v2-02b/logs/build-site.log
+?? docs/evidence/eng-v2-02b/logs/check-v1.log
+?? docs/evidence/eng-v2-02b/logs/check.log
+?? docs/evidence/eng-v2-02b/logs/test-v1.log
+?? docs/evidence/eng-v2-02b/logs/test.log
+?? docs/evidence/eng-v2-02b/logs/verify-content.log
+?? docs/handoffs/ENG-V2-02B.md
+?? docs/releases/ENG-V2-02A.md
+?? docs/releases/eng-v2-02a-production/artifact-inventory.json
+?? docs/releases/eng-v2-02a-production/browser-chromium.json
+?? docs/releases/eng-v2-02a-production/browser-firefox.json
+?? docs/releases/eng-v2-02a-production/chromium-v1-focus.png
+?? docs/releases/eng-v2-02a-production/chromium-v2-focus.png
+?? docs/releases/eng-v2-02a-production/firefox-v1-focus.png
+?? docs/releases/eng-v2-02a-production/firefox-v2-focus.png
+?? docs/releases/eng-v2-02a-production/github-release.json
+?? docs/releases/eng-v2-02a-production/navigation-observation.json
+?? docs/releases/eng-v2-02a-production/production-content.json
+?? docs/releases/eng-v2-02a-production/smoke.mjs
+?? docs/reviews/ENG-V2-02B-FABLE.md
+?? docs/reviews/eng-v2-02b-fable/browser-review.mjs
+?? docs/reviews/eng-v2-02b-fable/browser/browser-chromium.json
+?? docs/reviews/eng-v2-02b-fable/browser/browser-firefox.json
+?? docs/reviews/eng-v2-02b-fable/browser/chromium-collections-390.png
+?? docs/reviews/eng-v2-02b-fable/browser/firefox-collections-390.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/chromium-candidate-320-collections-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/chromium-candidate-320-phrases-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/chromium-candidate-390-collections-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/chromium-candidate-390-phrases-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/chromium-released-320-collections-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/chromium-released-320-phrases-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/chromium-released-390-collections-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/chromium-released-390-phrases-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/firefox-candidate-320-collections-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/firefox-candidate-320-phrases-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/firefox-candidate-390-collections-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/firefox-candidate-390-phrases-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/firefox-released-320-collections-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/firefox-released-320-phrases-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/firefox-released-390-collections-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/firefox-released-390-phrases-end.png
+?? docs/reviews/eng-v2-02b-fable/browser/mobile-bottom/mobile-bottom-probe.json
+?? docs/reviews/eng-v2-02b-fable/candidate-status.txt
+?? docs/reviews/eng-v2-02b-fable/candidate.sha256
+?? docs/reviews/eng-v2-02b-fable/collect-evidence.mjs
+?? docs/reviews/eng-v2-02b-fable/integration/collections-review.test.ts
+?? docs/reviews/eng-v2-02b-fable/logs/baseline-build.log
+?? docs/reviews/eng-v2-02b-fable/logs/baseline-install.log
+?? docs/reviews/eng-v2-02b-fable/logs/browser-final.log
+?? docs/reviews/eng-v2-02b-fable/logs/build-site.log
+?? docs/reviews/eng-v2-02b-fable/logs/check-v1.log
+?? docs/reviews/eng-v2-02b-fable/logs/check.log
+?? docs/reviews/eng-v2-02b-fable/logs/command-summary.txt
+?? docs/reviews/eng-v2-02b-fable/logs/diff-check.log
+?? docs/reviews/eng-v2-02b-fable/logs/install-v1.log
+?? docs/reviews/eng-v2-02b-fable/logs/install-v2.log
+?? docs/reviews/eng-v2-02b-fable/logs/integration.log
+?? docs/reviews/eng-v2-02b-fable/logs/mobile-bottom-probe.log
+?? docs/reviews/eng-v2-02b-fable/logs/parser-probes.log
+?? docs/reviews/eng-v2-02b-fable/logs/test-v1.log
+?? docs/reviews/eng-v2-02b-fable/logs/test.log
+?? docs/reviews/eng-v2-02b-fable/logs/verify-content.log
+?? docs/reviews/eng-v2-02b-fable/logs/workspace-build.log
+?? docs/reviews/eng-v2-02b-fable/mobile-bottom-probe.mjs
+?? docs/reviews/eng-v2-02b-fable/parser-probes.mjs
+?? docs/reviews/eng-v2-02b-fable/results/integration.json
+?? docs/reviews/eng-v2-02b-fable/results/parser-probes.json
+?? src/collections/format.test.ts
+?? src/collections/format.ts
+?? src/collections/service.test.ts
+?? src/collections/service.ts
+?? src/content/userCatalog.ts
+?? src/features/collections/CollectionsPage.svelte
+?? src/features/collections/retainedLearning.test.ts
+?? src/shared/ui/CollectionFilter.svelte
+?? src/test/collections.ts

@@ -1,6 +1,13 @@
 # Changelog
 
-## Unreleased — ENG-V2-02A (2026-11-21)
+## Unreleased — ENG-V2-02B (2026-11-21)
+
+- Add local user collections with CSV/native JSON validation, preview, duplicate acknowledgment, atomic import, rename, confirmed removal and JSON export.
+- Upgrade IndexedDB to version 2 by adding collection and entry stores while preserving all existing records. Handle blocked/failed upgrades and transactional import failures visibly.
+- Include imported vocabulary in the shared catalog, search, collection/topic filters, flashcards and Focus. Preserve explicit relationships and independent learning identities.
+- Make native JSON reimports idempotent and retain deleted collections' progress for restoration with the original IDs. Add focused parser, migration, rollback, catalog and browser checks.
+
+## 2026-11-21 — ENG-V2-02A
 
 - Split v2 built-in learning material into 11 thematic JSON packs and a course descriptor. Build generation validates content and emits a central manifest with content-addressed pack URLs.
 - Load every built-in pack through the shared catalog before the app becomes ready. Missing or invalid packs use the existing error and retry flow.

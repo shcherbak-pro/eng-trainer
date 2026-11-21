@@ -1,0 +1,60 @@
+ M CHANGELOG.md
+ M README.md
+ M src/app.css
+ M src/app/App.svelte
+ M src/app/App.test.ts
+ M src/app/AppShell.svelte
+ M src/app/navigation.ts
+ M src/content/catalog.ts
+ M src/content/types.ts
+ M src/features/flashcards/FlashcardsPage.svelte
+ M src/features/flashcards/flashcards.ts
+ M src/features/flashcards/types.ts
+ M src/features/vocabulary/PhrasesPage.svelte
+ M src/features/vocabulary/WordIndexPage.svelte
+ M src/state/index.ts
+ M src/state/progress.test.ts
+ M src/state/settings.ts
+ M src/storage/database.ts
+?? docs/architecture/USER-COLLECTIONS.md
+?? docs/evidence/eng-v2-02b/README.md
+?? docs/evidence/eng-v2-02b/artifact.json
+?? docs/evidence/eng-v2-02b/browser-check.mjs
+?? docs/evidence/eng-v2-02b/browser/browser-chromium.json
+?? docs/evidence/eng-v2-02b/browser/browser-firefox.json
+?? docs/evidence/eng-v2-02b/browser/chromium-collections.png
+?? docs/evidence/eng-v2-02b/browser/chromium-mobile.png
+?? docs/evidence/eng-v2-02b/browser/chromium-synthetic-export.json
+?? docs/evidence/eng-v2-02b/browser/firefox-collections.png
+?? docs/evidence/eng-v2-02b/browser/firefox-mobile.png
+?? docs/evidence/eng-v2-02b/browser/firefox-synthetic-export.json
+?? docs/evidence/eng-v2-02b/candidate.json
+?? docs/evidence/eng-v2-02b/git-status.txt
+?? docs/evidence/eng-v2-02b/logs/browser.log
+?? docs/evidence/eng-v2-02b/logs/build-site.log
+?? docs/evidence/eng-v2-02b/logs/check-v1.log
+?? docs/evidence/eng-v2-02b/logs/check.log
+?? docs/evidence/eng-v2-02b/logs/test-v1.log
+?? docs/evidence/eng-v2-02b/logs/test.log
+?? docs/evidence/eng-v2-02b/logs/verify-content.log
+?? docs/handoffs/ENG-V2-02B.md
+?? docs/releases/ENG-V2-02A.md
+?? docs/releases/eng-v2-02a-production/artifact-inventory.json
+?? docs/releases/eng-v2-02a-production/browser-chromium.json
+?? docs/releases/eng-v2-02a-production/browser-firefox.json
+?? docs/releases/eng-v2-02a-production/chromium-v1-focus.png
+?? docs/releases/eng-v2-02a-production/chromium-v2-focus.png
+?? docs/releases/eng-v2-02a-production/firefox-v1-focus.png
+?? docs/releases/eng-v2-02a-production/firefox-v2-focus.png
+?? docs/releases/eng-v2-02a-production/github-release.json
+?? docs/releases/eng-v2-02a-production/navigation-observation.json
+?? docs/releases/eng-v2-02a-production/production-content.json
+?? docs/releases/eng-v2-02a-production/smoke.mjs
+?? src/collections/format.test.ts
+?? src/collections/format.ts
+?? src/collections/service.test.ts
+?? src/collections/service.ts
+?? src/content/userCatalog.ts
+?? src/features/collections/CollectionsPage.svelte
+?? src/shared/ui/CollectionFilter.svelte
+?? src/test/collections.ts

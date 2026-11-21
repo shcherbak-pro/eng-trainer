@@ -1,0 +1,44 @@
+{
+  "rc1-all": {
+    "runs": 3000,
+    "steps": 60,
+    "violations": 0,
+    "sample": [],
+    "reimportsWhereThePersistedCursorWasARemovedCard": 1217
+  },
+  "mutant-all-pre-RC1 (save the visible session directly)": {
+    "answer-order": 800,
+    "absent-id-lost": 5010,
+    "absent-relative-order": 1156
+  },
+  "mutant-all-absent IDs moved to the end": {
+    "answer-order": 1188
+  },
+  "mutant-all-cursor index not remapped": {
+    "cursor": 1334
+  },
+  "mutant-all-learned/hidden known cards retained": {
+    "answer-order": 4025
+  },
+  "rc1-topic": {
+    "runs": 3000,
+    "steps": 60,
+    "violations": 0,
+    "sample": [],
+    "reimportsWhereThePersistedCursorWasARemovedCard": 2074
+  },
+  "mutant-topic-pre-RC1 (save the visible session directly)": {
+    "answer-order": 718,
+    "absent-id-lost": 1954,
+    "absent-relative-order": 1023
+  },
+  "mutant-topic-absent IDs moved to the end": {
+    "answer-order": 988
+  },
+  "mutant-topic-cursor index not remapped": {
+    "cursor": 1084
+  },
+  "mutant-topic-learned/hidden known cards retained": {
+    "answer-order": 3955
+  }
+}

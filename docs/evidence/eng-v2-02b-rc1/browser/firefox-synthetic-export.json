@@ -1,0 +1,51 @@
+{
+  "format": "eng-trainer-vocabulary",
+  "version": 1,
+  "collection": {
+    "id": "user:00000000-0000-4000-8000-000000000001",
+    "name": "RC1 collection X",
+    "description": "Synthetic restoration fixture"
+  },
+  "entries": [
+    {
+      "id": "user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000001",
+      "kind": "word",
+      "english": "RC1 bank",
+      "translation": "банк",
+      "topic": "Start answer",
+      "examples": []
+    },
+    {
+      "id": "user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000002",
+      "kind": "phrase",
+      "english": "RC1 bank",
+      "translation": "берег",
+      "topic": "Start answer",
+      "examples": []
+    },
+    {
+      "id": "user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000003",
+      "kind": "phrase",
+      "english": "RC1 learned phrase",
+      "translation": "вивчена фраза",
+      "topic": "Start answer",
+      "examples": []
+    },
+    {
+      "id": "user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000004",
+      "kind": "word",
+      "english": "RC1 hidden word",
+      "translation": "приховане слово",
+      "topic": "Start answer",
+      "examples": []
+    },
+    {
+      "id": "user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000005",
+      "kind": "phrase",
+      "english": "RC1 hidden phrase",
+      "translation": "прихована фраза",
+      "topic": "Start answer",
+      "examples": []
+    }
+  ]
+}

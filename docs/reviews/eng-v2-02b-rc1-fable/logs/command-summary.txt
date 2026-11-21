@@ -1,0 +1,9 @@
+install v2 -> exit 0
+install v1 -> exit 0
+npm run check -> exit 0
+npm run test -> exit 0
+npm run check:v1 -> exit 0
+npm run test:v1 -> exit 0
+npm run build:site -> exit 0
+npm run verify:content -> exit 0
+diff --check -> exit 0

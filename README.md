@@ -43,6 +43,14 @@ Items hidden on the Phrases or Words page are left out of the flashcards.
 
 For phrases, words, irregular verbs, and Focus List items, the app can read the visible materials aloud. You can choose the number of repeats and use the feature for passive listening or pronunciation practice.
 
+## Your vocabulary collections
+
+Open **Collections** to import CSV UTF-8 or native JSON, review the proposed entries and possible duplicates, then confirm the import. CSV headers are `english,translation,topic,example` with optional `kind` (`word` or `phrase`); only English and translation are required. Files are limited to 2 MiB and collections to 1,000 entries. Invalid entries or conflicting IDs block the whole import.
+
+Imported content is saved locally in IndexedDB and joins the existing search, Phrases/Words, Flashcards and Focus functionality. Collection and topic filters let you narrow what you study. Collections can be renamed, exported as JSON, or removed after confirmation. Reimporting an unchanged native export creates no duplicates.
+
+Removing a collection retains its progress under the original IDs, so importing the same native JSON restores it. Export a content backup before removing a collection; JSON exports do not contain learning progress. Reset progress does not remove vocabulary collections. See [the format, migration and deletion policy](docs/architecture/USER-COLLECTIONS.md).
+
 ## Personal progress
 
 Learning state is saved in the browser, in the IndexedDB database `eng-trainer-v2`. This includes learned and hidden items, the Focus List, Learn Passes and the selected pass, flashcard progress, the theme, speech repeats, list filters, page sizes, and expanded panels.
@@ -90,10 +98,11 @@ The link from v2 to v1 works in the assembled site. In the v2 dev server it lead
 ```text
 src/
   app/         Application shell: startup, navigation, loading and error screens, theme
-  content/     Content catalog: the one interface to the built-in learning material, with search
+  content/     Shared built-in/user content catalog and search
+  collections/ Validated CSV/native JSON import, transactional collection service and export
   storage/     IndexedDB adapter: database, object stores, transactions
   state/       Progress and settings services, the save queue, in-memory view state
-  features/    Screens: home, vocabulary, flashcards, exercises, focus
+  features/    Screens: home, vocabulary, flashcards, exercises, focus, collections
   shared/      Components and helpers used by several features (ui, entries, speech)
   test/        Test setup (in-memory IndexedDB) and database helpers
 content/       Authored built-in content: course descriptor and thematic JSON packs
@@ -110,7 +119,7 @@ Edit the thematic JSON files in [`content/packs/`](content/packs/) and the cours
 
 `npm run content:generate` validates the source and produces `public/data/manifest.json` and hashed files under `public/data/packs/`. It also runs automatically before `npm run dev`, `npm run check`, `npm test`, and `npm run build`. Generated files must not be edited or committed. After editing pack sources while the dev server is running, restart `npm run dev` to regenerate them.
 
-The shared catalog loads every listed pack before the app becomes ready. Search includes all built-in material immediately, regardless of which screens have been opened. IDs, explicit word-to-phrase links, and original entry order are preserved; IndexedDB needs no migration.
+The shared catalog loads every listed pack before the app becomes ready. Search includes all built-in material immediately, regardless of which screens have been opened. IDs, explicit word-to-phrase links, and original entry order are preserved. The built-in pack migration itself did not change IndexedDB; ENG-V2-02B adds user collections through database version 2.
 
 See [the pack format and authoring rules](docs/architecture/BUILT-IN-CONTENT.md) and [ENG-V2-02A review handoff](docs/handoffs/ENG-V2-02A.md). `npm run verify:content` compares the new sources and generated catalog against the released ENG-V2-01 Git object, including complete records, order, links, and v1 preservation.
 

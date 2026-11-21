@@ -1,0 +1,642 @@
+[
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "build": "released",
+    "viewport": "390x844",
+    "page": "phrases",
+    "scrollTo-instant": {
+      "scrollY": 2940,
+      "scrollHeightMinusViewport": 2940,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 2940,
+      "scrollHeightMinusViewport": 2940,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 2940,
+      "scrollHeightMinusViewport": 2940,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "build": "released",
+    "viewport": "390x844",
+    "page": "collections",
+    "scrollTo-instant": {
+      "scrollY": 3977,
+      "scrollHeightMinusViewport": 3977,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 3977,
+      "scrollHeightMinusViewport": 3977,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 3977,
+      "scrollHeightMinusViewport": 3977,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "build": "released",
+    "viewport": "320x640",
+    "page": "phrases",
+    "scrollTo-instant": {
+      "scrollY": 3380,
+      "scrollHeightMinusViewport": 3380,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 3380,
+      "scrollHeightMinusViewport": 3380,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 3380,
+      "scrollHeightMinusViewport": 3380,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "build": "released",
+    "viewport": "320x640",
+    "page": "collections",
+    "scrollTo-instant": {
+      "scrollY": 4854,
+      "scrollHeightMinusViewport": 4854,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 4854,
+      "scrollHeightMinusViewport": 4854,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 4854,
+      "scrollHeightMinusViewport": 4854,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "build": "candidate",
+    "viewport": "390x844",
+    "page": "phrases",
+    "scrollTo-instant": {
+      "scrollY": 2998,
+      "scrollHeightMinusViewport": 2998,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 2998,
+      "scrollHeightMinusViewport": 2998,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 2998,
+      "scrollHeightMinusViewport": 2998,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "build": "candidate",
+    "viewport": "390x844",
+    "page": "collections",
+    "scrollTo-instant": {
+      "scrollY": 604,
+      "scrollHeightMinusViewport": 604,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 604,
+      "scrollHeightMinusViewport": 604,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 604,
+      "scrollHeightMinusViewport": 604,
+      "scrollMaxY": null,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "build": "candidate",
+    "viewport": "320x640",
+    "page": "phrases",
+    "scrollTo-instant": {
+      "scrollY": 3438,
+      "scrollHeightMinusViewport": 3438,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 3438,
+      "scrollHeightMinusViewport": 3438,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 3438,
+      "scrollHeightMinusViewport": 3438,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "build": "candidate",
+    "viewport": "320x640",
+    "page": "collections",
+    "scrollTo-instant": {
+      "scrollY": 984,
+      "scrollHeightMinusViewport": 984,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 984,
+      "scrollHeightMinusViewport": 984,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 984,
+      "scrollHeightMinusViewport": 984,
+      "scrollMaxY": null,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "firefox",
+    "version": "153.0",
+    "build": "released",
+    "viewport": "390x844",
+    "page": "phrases",
+    "scrollTo-instant": {
+      "scrollY": 2939,
+      "scrollHeightMinusViewport": 2939,
+      "scrollMaxY": 2939,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 2939,
+      "scrollHeightMinusViewport": 2939,
+      "scrollMaxY": 2939,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 2939,
+      "scrollHeightMinusViewport": 2939,
+      "scrollMaxY": 2939,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "firefox",
+    "version": "153.0",
+    "build": "released",
+    "viewport": "390x844",
+    "page": "collections",
+    "scrollTo-instant": {
+      "scrollY": 3975,
+      "scrollHeightMinusViewport": 3975,
+      "scrollMaxY": 3975,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 3975,
+      "scrollHeightMinusViewport": 3975,
+      "scrollMaxY": 3975,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 3975,
+      "scrollHeightMinusViewport": 3975,
+      "scrollMaxY": 3975,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 746,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "firefox",
+    "version": "153.0",
+    "build": "released",
+    "viewport": "320x640",
+    "page": "phrases",
+    "scrollTo-instant": {
+      "scrollY": 3378,
+      "scrollHeightMinusViewport": 3378,
+      "scrollMaxY": 3378,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 3378,
+      "scrollHeightMinusViewport": 3378,
+      "scrollMaxY": 3378,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 3378,
+      "scrollHeightMinusViewport": 3378,
+      "scrollMaxY": 3378,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "firefox",
+    "version": "153.0",
+    "build": "released",
+    "viewport": "320x640",
+    "page": "collections",
+    "scrollTo-instant": {
+      "scrollY": 4852,
+      "scrollHeightMinusViewport": 4852,
+      "scrollMaxY": 4852,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 4852,
+      "scrollHeightMinusViewport": 4852,
+      "scrollMaxY": 4852,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 4852,
+      "scrollHeightMinusViewport": 4852,
+      "scrollMaxY": 4852,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 542,
+      "footerVisibleAboveNav": false,
+      "pageWrapMarginBottom": "98px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "firefox",
+    "version": "153.0",
+    "build": "candidate",
+    "viewport": "390x844",
+    "page": "phrases",
+    "scrollTo-instant": {
+      "scrollY": 2997,
+      "scrollHeightMinusViewport": 2997,
+      "scrollMaxY": 2997,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 2997,
+      "scrollHeightMinusViewport": 2997,
+      "scrollMaxY": 2997,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 2997,
+      "scrollHeightMinusViewport": 2997,
+      "scrollMaxY": 2997,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "firefox",
+    "version": "153.0",
+    "build": "candidate",
+    "viewport": "390x844",
+    "page": "collections",
+    "scrollTo-instant": {
+      "scrollY": 605,
+      "scrollHeightMinusViewport": 605,
+      "scrollMaxY": 605,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 605,
+      "scrollHeightMinusViewport": 605,
+      "scrollMaxY": 605,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 605,
+      "scrollHeightMinusViewport": 605,
+      "scrollMaxY": 605,
+      "navTop": 727,
+      "navHeight": 117,
+      "footerBottom": 688,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "firefox",
+    "version": "153.0",
+    "build": "candidate",
+    "viewport": "320x640",
+    "page": "phrases",
+    "scrollTo-instant": {
+      "scrollY": 3436,
+      "scrollHeightMinusViewport": 3436,
+      "scrollMaxY": 3436,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 3436,
+      "scrollHeightMinusViewport": 3436,
+      "scrollMaxY": 3436,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 3436,
+      "scrollHeightMinusViewport": 3436,
+      "scrollMaxY": 3436,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    }
+  },
+  {
+    "engine": "firefox",
+    "version": "153.0",
+    "build": "candidate",
+    "viewport": "320x640",
+    "page": "collections",
+    "scrollTo-instant": {
+      "scrollY": 985,
+      "scrollHeightMinusViewport": 985,
+      "scrollMaxY": 985,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "End-key": {
+      "scrollY": 985,
+      "scrollHeightMinusViewport": 985,
+      "scrollMaxY": 985,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    },
+    "wheel": {
+      "scrollY": 985,
+      "scrollHeightMinusViewport": 985,
+      "scrollMaxY": 985,
+      "navTop": 523,
+      "navHeight": 117,
+      "footerBottom": 484,
+      "footerVisibleAboveNav": true,
+      "pageWrapMarginBottom": "156px",
+      "bodyOverflowX": "visible"
+    }
+  }
+]

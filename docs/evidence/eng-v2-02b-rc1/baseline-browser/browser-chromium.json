@@ -1,0 +1,84 @@
+{
+  "engine": "chromium",
+  "version": "151.0.7922.34",
+  "isolatedSyntheticStorage": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "name": "migration-import-search-progress-export-delete-reimport",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "collectionId": "user:4231cbbc-0f5a-41ed-9528-8bed9260aeb2",
+      "entryIds": [
+        "user:4231cbbc-0f5a-41ed-9528-8bed9260aeb2:entry:0b921313-a877-417f-930c-3a165d091faf",
+        "user:4231cbbc-0f5a-41ed-9528-8bed9260aeb2:entry:8c7d00e9-ea2e-4123-8e2e-28ce1002d8f9",
+        "user:4231cbbc-0f5a-41ed-9528-8bed9260aeb2:entry:7473595c-57a4-45c4-bf47-2683d21df333",
+        "user:4231cbbc-0f5a-41ed-9528-8bed9260aeb2:entry:3269b1c2-5170-4da4-a05c-65e39af09ae2"
+      ],
+      "migratedFromVersion": 1,
+      "databaseVersion": 2,
+      "noStartupWrites": true,
+      "searchAndFilters": true,
+      "duplicateIdentities": true,
+      "safeText": true,
+      "progressAndSavedDeckRestored": true,
+      "nativeReimportNoOp": true,
+      "deleteAndRestorePolicy": true,
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "name": "invalid-files-and-native-id-conflicts-do-not-write",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "invalidFiles": [
+        "bad.csv",
+        "partial.csv",
+        "bad.json",
+        "big.csv"
+      ],
+      "idConflictBlocked": true,
+      "noPartialImport": true,
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "name": "transaction-abort-and-quota-failure-are-visible-and-retryable",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "abortRolledBack": true,
+      "quotaRolledBack": true,
+      "retrySucceeded": true,
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "name": "blocked-upgrade-recovers-with-old-records-preserved",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "blockedUpgradeReported": true,
+      "retryPreservedEveryRecord": true,
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "name": "v1-remains-independent-after-v2-import",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "requests": [
+        "/eng-trainer/v1/",
+        "/eng-trainer/v1/assets/index-C0A337ei.js",
+        "/eng-trainer/v1/assets/index-Bod3ovET.css",
+        "/eng-trainer/v1/data/materials.json"
+      ],
+      "v1LocalStoragePreserved": true,
+      "v2Untouched": true,
+      "status": "PASS"
+    }
+  ]
+}

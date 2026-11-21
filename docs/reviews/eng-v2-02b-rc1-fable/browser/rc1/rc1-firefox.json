@@ -1,0 +1,207 @@
+{
+  "engine": "firefox",
+  "version": "153.0",
+  "results": [
+    {
+      "engine": "firefox",
+      "name": "F1-all-shared-deck-lifecycle",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "collectionKeyB": "collection:[\"user:a11ce002-cafe-4abc-8abc-000000000000\",\"all\"]",
+      "initial": {
+        "length": 574,
+        "index": 4,
+        "aIds": 5,
+        "current": "Same text",
+        "head": [
+          "phrase-001",
+          "001#1",
+          "phrase-002",
+          "phrase-003",
+          "001#2",
+          "001#3",
+          "phrase-004",
+          "002#1",
+          "002#2",
+          "001#5",
+          "phrase-005",
+          "002#3",
+          "001#6",
+          "phrase-006"
+        ]
+      },
+      "heroCounts": {
+        "withA": {
+          "phrases": 570,
+          "words": 571,
+          "verbs": 339,
+          "focus": 0,
+          "hidden": 0
+        },
+        "withoutA": {
+          "phrases": 567,
+          "words": 568,
+          "verbs": 339,
+          "focus": 0,
+          "hidden": 0
+        }
+      },
+      "cursorAfterDelete": {
+        "before": "Same text",
+        "after": "Before going into details, I’d say that …"
+      },
+      "cycleWhileAbsent": [
+        "Before going into details, I’d say that …"
+      ],
+      "reimportMessage": "Imported 6 entries. 0 identical entries were already present.",
+      "cycleAfterReimport": [
+        "The first thing I’d say is that …",
+        "Before going into details, I’d say that …",
+        "alphatwo",
+        "From my perspective, …",
+        "In my experience, …",
+        "Alpha offtopic phrase",
+        "First of all, …",
+        "On top of that, …"
+      ],
+      "final": {
+        "length": 575,
+        "aIds": 5,
+        "learned": 1
+      },
+      "unhandled": [],
+      "status": "PASS",
+      "checkedOperations": {
+        "answers": 18,
+        "shuffles": 1,
+        "resets": 1
+      },
+      "blockedExternal": [],
+      "seconds": 15.7
+    },
+    {
+      "engine": "firefox",
+      "name": "F1-topic-shared-deck-lifecycle",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "collectionKeyB": "collection:[\"user:a11ce002-cafe-4abc-8abc-000000000000\",\"topic:Structure\"]",
+      "initial": {
+        "length": 12,
+        "index": 2,
+        "aIds": 4,
+        "current": "Bravo structure phrase",
+        "head": [
+          "002#3",
+          "001#5",
+          "002#2",
+          "phrase-011",
+          "001#3",
+          "001#1",
+          "phrase-010",
+          "001#2",
+          "phrase-008",
+          "phrase-009",
+          "002#1",
+          "phrase-007"
+        ]
+      },
+      "heroCounts": {
+        "withA": {
+          "phrases": 570,
+          "words": 571,
+          "verbs": 339,
+          "focus": 0,
+          "hidden": 0
+        },
+        "withoutA": {
+          "phrases": 567,
+          "words": 568,
+          "verbs": 339,
+          "focus": 0,
+          "hidden": 0
+        }
+      },
+      "cursorAfterDelete": {
+        "before": "Bravo structure phrase",
+        "after": "Bravo structure phrase"
+      },
+      "cycleWhileAbsent": [
+        "Bravo structure phrase",
+        "What matters most is …",
+        "Another important point is that …",
+        "On top of that, …",
+        "In addition, …",
+        "Same text",
+        "First of all, …",
+        "bravoword"
+      ],
+      "reimportMessage": "Imported 6 entries. 0 identical entries were already present.",
+      "cycleAfterReimport": [
+        "In addition, …",
+        "Same text",
+        "Another important point is that …",
+        "What matters most is …",
+        "Bravo structure phrase",
+        "Same text",
+        "bravoword",
+        "charlieone",
+        "charlietwo",
+        "alphatwo",
+        "First of all, …",
+        "On top of that, …",
+        "Alpha structure phrase",
+        "Same text"
+      ],
+      "final": {
+        "length": 13,
+        "aIds": 4,
+        "learned": 1
+      },
+      "unhandled": [],
+      "status": "PASS",
+      "checkedOperations": {
+        "answers": 36,
+        "shuffles": 2,
+        "resets": 1
+      },
+      "blockedExternal": [],
+      "seconds": 21.5
+    },
+    {
+      "engine": "firefox",
+      "name": "F1-cursor-on-removed-card-without-answers",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "before": "Alpha structure phrase",
+      "whileAbsent": "Before going into details, I’d say that …",
+      "afterReimport": "Alpha structure phrase",
+      "status": "PASS",
+      "checkedOperations": {
+        "answers": 0,
+        "shuffles": 0,
+        "resets": 0
+      },
+      "blockedExternal": [],
+      "seconds": 4.4
+    },
+    {
+      "engine": "firefox",
+      "name": "F2-hidden-state-mixed-types-filters-delete-reimport",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "unhideVerbsShownForStaleIdOnly": false,
+      "heroHiddenWithA": 7,
+      "heroHiddenWithoutA": 5,
+      "builtInWordVisibleAgain": true,
+      "unhandled": [],
+      "status": "PASS",
+      "checkedOperations": {
+        "answers": 0,
+        "shuffles": 0,
+        "resets": 0
+      },
+      "blockedExternal": [],
+      "seconds": 12.4
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+PASS csv: BOM, CRLF, quoted comma, doubled quotes, multiline field
+PASS csv: semicolon delimiter with quoted semicolon and literal comma
+PASS csv: comma file whose data contains semicolons stays comma-delimited
+PASS csv: headers ignore case and surrounding whitespace, columns in any order
+PASS csv: quoted header names
+PASS csv: lone CR line endings
+PASS csv: LF without trailing newline
+PASS csv: empty and whitespace-only records are ignored
+PASS csv: tab inside a field is kept (not a control-character error)
+PASS csv: surrounding field whitespace is trimmed
+PASS csv: empty kind defaults to word; phrase kept
+PASS csv: example column becomes one example without translation
+PASS csv: formula-like and HTML-like text is kept literally
+PASS csv: same text with different meanings gets distinct IDs (no text dedup)
+PASS csv: collection ID and entry IDs use the native lowercase UUID namespace
+PASS csv: two parses of the same file propose different collection IDs
+PASS csv: missing translation header
+PASS csv: missing english header
+PASS csv: duplicate header (case-insensitive)
+PASS csv: unsupported header
+PASS csv: empty header cell
+PASS csv: empty file
+PASS csv: BOM-only file
+PASS csv: header only
+PASS csv: header followed only by empty records
+PASS csv: unclosed quote
+PASS csv: quote inside an unquoted field
+PASS csv: text after a closing quote
+PASS csv: whitespace before an opening quote (strict RFC 4180)
+PASS csv: whitespace after a closing quote (strict RFC 4180)
+PASS csv: fewer fields than headers -> record issue with record number
+PASS csv: more fields than headers (trailing delimiter) -> record issue
+PASS csv: empty required english -> record issue
+PASS csv: empty required translation -> record issue
+PASS csv: invalid kind -> record issue
+PASS csv: kind is case-sensitive (Phrase rejected)
+PASS csv: NUL / BEL control characters -> record issue
+PASS csv: every invalid record is reported, valid ones are not imported implicitly
+PASS csv: record numbers count non-empty records, not physical lines (empty lines and multiline fields shift them)
+PASS csv: english 300 chars accepted
+PASS csv: english 301 chars -> issue
+PASS csv: translation 2000 accepted / 2001 -> issue
+PASS csv: topic 100 accepted / 101 -> issue
+PASS csv: example 4000 accepted / 4001 -> issue
+PASS csv: lengths are measured after trimming
+PASS csv: exactly 1,000 records accepted
+PASS csv: 1,001 records rejected
+PASS csv: 1,000 records plus 500 empty lines accepted
+PASS csv: 1,001 records where one has a field-count error still rejected by count
+PASS size: exactly 2 MiB (2,097,152 bytes) passes the byte check (319.3 ms)
+PASS size: 2 MiB + 1 byte rejected
+PASS size: limit counts UTF-8 bytes, not characters (1,048,577 Cyrillic chars)
+PASS size: the leading BOM counts toward the byte limit in parseImport
+PASS pathological: ~2 MiB of commas in one record (an all-empty record is ignored) (64.4 ms)
+PASS pathological: ~2 MiB of "x," fields in one record
+PASS pathological: ~2 MiB of double quotes (one quoted field of escaped quotes) (62.3 ms)
+PASS pathological: odd number of double quotes (unclosed)
+PASS pathological: ~2 MiB of newlines (148.3 ms)
+PASS pathological: ~1M tiny records stop early at the entry limit
+PASS pathological: one ~2 MiB quoted field (106.9 ms)
+PASS pathological: header line with ~2 MiB of semicolons (an empty record) (60.6 ms)
+PASS name: upper-case .CSV extension accepted
+PASS name: unsupported extension rejected
+PASS name: no extension rejected
+PASS name: 256-character file name rejected
+PASS name: ".csv" alone -> default collection name
+PASS name: CSV collection name truncated to 100 UTF-16 units
+PASS name: truncation can split a surrogate pair (emoji at the 100th unit)
+PASS json: minimal valid file; optional topic/examples/description default
+PASS json: invalid syntax
+PASS json: top-level array
+PASS json: version 2
+PASS json: version "1" (string)
+PASS json: other format marker
+PASS json: unknown envelope field
+PASS json: unknown collection field (whole file rejected)
+PASS json: missing collection
+PASS json: missing collection name
+PASS json: whitespace-only collection name
+PASS json: collection name 100 accepted
+PASS json: collection name 101 rejected
+PASS json: description 1000 accepted / 1001 rejected
+PASS json: entries not an array
+PASS json: empty entries
+PASS json: exactly 1,000 entries accepted
+PASS json: 1,001 entries rejected
+PASS json: built-in style collection ID rejected
+PASS json: upper-case UUID collection ID rejected
+PASS json: collection ID with trailing text rejected
+PASS json: built-in entry ID (phrase-001) -> issue
+PASS json: entry ID of another collection -> issue
+PASS json: entry ID with upper-case UUID -> issue
+PASS json: non-string entry ID -> issue
+PASS json: duplicate entry IDs -> issue
+PASS json: same English text with different meanings and IDs accepted
+PASS json: word -> phrase link in the same file accepted
+PASS json: link declared before its phrase accepted (order-independent)
+PASS json: several words linked to one phrase accepted
+PASS json: link to a word -> issue
+PASS json: self-link -> issue
+PASS json: phrase with sourcePhraseId -> issue
+PASS json: link to built-in phrase-001 -> issue
+PASS json: link to another collection -> issue
+PASS json: dangling same-collection link -> issue
+PASS json: null sourcePhraseId -> issue
+PASS json: unknown entry field -> issue
+PASS json: kind verb -> issue
+PASS json: number as translation -> issue
+PASS json: array as topic -> issue
+PASS json: null topic/examples treated as absent (lenient)
+PASS json: five examples accepted / six -> issue
+PASS json: example without en -> issue
+PASS json: example with ua instead of translation -> issue
+PASS json: example translation optional, empty allowed
+PASS json: values are trimmed
+PASS json: control character in english -> issue
+PASS json: lone surrogate accepted and re-serialized as an escape
+PASS json: duplicate JSON keys — last value wins (JSON.parse semantics)
+PASS json: __proto__ key in envelope rejected; Object.prototype untouched
+PASS json: __proto__ key in collection rejected; Object.prototype untouched
+PASS json: __proto__ key in entry rejected; Object.prototype untouched
+PASS json: __proto__ key in example rejected; Object.prototype untouched
+PASS json: constructor / prototype keys rejected
+PASS json: ~2 MiB of nested arrays handled without crashing (130 ms)
+PASS export: serialize -> parse -> serialize is byte-identical, links and order kept
+PASS export: serializer rejects invalid collection metadata
+
+126/126 parser probes behaved as expected. Slowest: 319.3 ms, 148.3 ms, 130 ms, 106.9 ms, 64.4 ms, 62.3 ms

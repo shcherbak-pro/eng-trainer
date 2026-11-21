@@ -1,0 +1,45 @@
+{
+  "policy": "Only new RC1 logs: replace local repo/user/temp paths and strip ANSI. Original evidence is unchanged.",
+  "files": [
+    {
+      "path": "logs/check.log",
+      "rawSha256": "7834eac57acc1daa2561e5c4522fb8825138ec9d2e517be64fbf9d2eeb9680a2",
+      "publishedSha256": "d057f22f712e7c6f2987df7d41e058e4b88e0559acbe1a67bf677cd1998e8e85"
+    },
+    {
+      "path": "logs/test.log",
+      "rawSha256": "86463ee813e6eb11c46b07350263587abd379feb186d716da21a960bc0688c5a",
+      "publishedSha256": "9d8dd553443209da97ab73c9dbeedd46fad272c5b8a00a1bd684d1f019ad7d5c"
+    },
+    {
+      "path": "logs/check-v1.log",
+      "rawSha256": "f9c87fd4bd1d6cd69b8a7562d99b6985ca2c663c9ece9ff7ef1c2466682f383a",
+      "publishedSha256": "46f334755ed39b785963821d25efed23dee3123ae61f225481312424c88627f7"
+    },
+    {
+      "path": "logs/test-v1.log",
+      "rawSha256": "805c5c8b032833fb2ab9a7353591e7e520523e936e632d5bb329b32261627f7a",
+      "publishedSha256": "26247765dc7129ca1ee99a1178f17061a64ec2f03da3df0a0e25fbc8dd4def13"
+    },
+    {
+      "path": "logs/build-site.log",
+      "rawSha256": "96b870ff2f0391190a327a76f73f98a405684f7803880ffd88a86630e21823ee",
+      "publishedSha256": "96b870ff2f0391190a327a76f73f98a405684f7803880ffd88a86630e21823ee"
+    },
+    {
+      "path": "logs/verify-content.log",
+      "rawSha256": "d7433e2da6e9aaa34351314e9b6d18c6c1cfdc2e0795953456f3a8eb74788514",
+      "publishedSha256": "d7433e2da6e9aaa34351314e9b6d18c6c1cfdc2e0795953456f3a8eb74788514"
+    },
+    {
+      "path": "logs/browser.log",
+      "rawSha256": "aca686385b34ec4050f817abf132d110e75d18b56f7aff66c2285064fd83a1c8",
+      "publishedSha256": "aca686385b34ec4050f817abf132d110e75d18b56f7aff66c2285064fd83a1c8"
+    },
+    {
+      "path": "logs/baseline-browser.log",
+      "rawSha256": "1e2decf43ebaa532d7946dd02acc3cc7b5897b03a1af4d531024dd18f50fdecf",
+      "publishedSha256": "1e2decf43ebaa532d7946dd02acc3cc7b5897b03a1af4d531024dd18f50fdecf"
+    }
+  ]
+}

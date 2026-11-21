@@ -1,0 +1,131 @@
+{
+  "engine": "firefox",
+  "version": "153.0",
+  "results": [
+    {
+      "engine": "firefox",
+      "name": "ui-keyboard-and-responsive-layout",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "tabOrderFromFileInput": [
+        "input[text]:Collection name",
+        "input[checkbox]:I reviewed these possible dupl",
+        "div:Import entries",
+        "button[button]:Cancel import",
+        "button[button]:Rename LLLLLLLLLLLLLLLLLLLLLLL",
+        "button[button]:Export LLLLLLLLLLLLLLLLLLLLLLL",
+        "button[button]:Remove LLLLLLLLLLLLLLLLLLLLLLL",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)",
+        "a:Open the previous version (v1)"
+      ],
+      "keyboardImport": "Imported 5 entries. 0 identical entries were already present.",
+      "focusBeforeChoosingFile": "input[file]",
+      "focusAfterError": "input[file]",
+      "focusAfterPreviewAppears": "body",
+      "focusAfterOneTabFromThere": "input:Collection name",
+      "focusAfterRenameOpens": "Rename LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL",
+      "layout": {
+        "1440x1000": {
+          "docOverflow": 0,
+          "overflowing": [],
+          "navButtons": 11,
+          "navRows": 2,
+          "minNavHeight": 42,
+          "navInside": true,
+          "desktopNavClipped": false,
+          "collectionsInNav": true,
+          "lastActionClickable": true,
+          "pageEndAboveNav": null,
+          "bottomGeometry": null
+        },
+        "1000x900": {
+          "docOverflow": 0,
+          "overflowing": [],
+          "navButtons": 11,
+          "navRows": 2,
+          "minNavHeight": 42,
+          "navInside": true,
+          "desktopNavClipped": false,
+          "collectionsInNav": true,
+          "lastActionClickable": true,
+          "pageEndAboveNav": null,
+          "bottomGeometry": null
+        },
+        "390x844": {
+          "docOverflow": 0,
+          "overflowing": [
+            "svelte-1huuhsz",
+            "THEAD",
+            "TR",
+            "svelte-1huuhsz",
+            "svelte-1huuhsz"
+          ],
+          "navButtons": 8,
+          "navRows": 2,
+          "minNavHeight": 48,
+          "navInside": true,
+          "desktopNavClipped": null,
+          "collectionsInNav": true,
+          "lastActionClickable": true,
+          "pageEndAboveNav": true,
+          "bottomGeometry": {
+            "innerHeight": 844,
+            "scrollY": 2295,
+            "maxScroll": 2295,
+            "navTop": 727,
+            "navHeight": 117,
+            "lastCardBottom": 597,
+            "footerBottom": 688
+          },
+          "lastCardButtonClickable": true
+        },
+        "320x640": {
+          "docOverflow": 0,
+          "overflowing": [
+            "svelte-1huuhsz",
+            "THEAD",
+            "TR",
+            "svelte-1huuhsz",
+            "svelte-1huuhsz"
+          ],
+          "navButtons": 8,
+          "navRows": 2,
+          "minNavHeight": 48,
+          "navInside": true,
+          "desktopNavClipped": null,
+          "collectionsInNav": true,
+          "lastActionClickable": true,
+          "pageEndAboveNav": true,
+          "bottomGeometry": {
+            "innerHeight": 640,
+            "scrollY": 2804,
+            "maxScroll": 2804,
+            "navTop": 523,
+            "navHeight": 117,
+            "lastCardBottom": 373,
+            "footerBottom": 484
+          },
+          "lastCardButtonClickable": true
+        }
+      },
+      "mobileNav": [
+        "Index -> Index",
+        "Phrases -> Phrases",
+        "Words -> Words",
+        "Flashcards -> Flashcards",
+        "Reverse -> Reverse",
+        "Verbs -> Verbs",
+        "Focus -> Focus",
+        "Collections -> Collections"
+      ],
+      "status": "PASS",
+      "seconds": 8.7,
+      "blockedExternal": []
+    }
+  ]
+}

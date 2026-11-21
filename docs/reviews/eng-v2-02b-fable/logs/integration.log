@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 <review-copy>
+
+ ✓ src/review-fable/collections-review.test.ts (10 tests) 18502ms
+   ✓ built-in catalog is unchanged by user collections > keeps every built-in record, order and search result while three collections are loaded  18379ms
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  20:10:28
+   Duration  20.12s (transform 386ms, setup 63ms, collect 758ms, tests 18.50s, environment 444ms, prepare 99ms)
+
