@@ -1,0 +1,282 @@
+{
+  "beforeFiles": 33,
+  "afterFiles": 33,
+  "identical": 31,
+  "delta": [
+    {
+      "file": "assets/index-BIsJEtZg.js",
+      "before": "9e55bf8b2df08c083597f53df1a91dd3528a0b023cf0a6452ada505666eca9ff",
+      "after": null
+    },
+    {
+      "file": "assets/index-CggR75Uk.js",
+      "before": null,
+      "after": "b465abcfa985f6b794512cd1ede91f621f3d5bbe09b2d4563b45e06f448cc942"
+    },
+    {
+      "file": "index.html",
+      "before": "cb488245caca76d340d370107870a12bf32f21941eb57415cb7d2e5aef733b92",
+      "after": "8b0a649046637a4efaf91cb0a3a771cd356fd99cfbe5ebb599bcf7cc1abcf520"
+    }
+  ],
+  "unchanged": [
+    {
+      "file": "assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+      "sha256": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682"
+    },
+    {
+      "file": "assets/eng-trainer-sans-greek-FkV9qZ7r.woff2",
+      "sha256": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670"
+    },
+    {
+      "file": "assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+      "sha256": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d"
+    },
+    {
+      "file": "assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+      "sha256": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4"
+    },
+    {
+      "file": "assets/index-DFaGuSQ9.css",
+      "sha256": "0bcf9d7e2ce5ced1df5ba74dc2287219661b8286e449c8eb33e97bce6462d3fe"
+    },
+    {
+      "file": "assets/literata-latin-Cedbco83.woff2",
+      "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58"
+    },
+    {
+      "file": "assets/literata-latin-italic-Ckc1vdjp.woff2",
+      "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265"
+    },
+    {
+      "file": "data/manifest.json",
+      "sha256": "db99f2172b7c30c9ada8299ab2c3f463c4fe600b39878b150e321b3e5e57776b"
+    },
+    {
+      "file": "data/packs/agent-framework.30b26432f0ecf993.json",
+      "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+    },
+    {
+      "file": "data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+      "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+    },
+    {
+      "file": "data/packs/ai-certification.a743e81dde1bc943.json",
+      "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+    },
+    {
+      "file": "data/packs/conditionals.1c6e8e33d50795c2.json",
+      "sha256": "1c6e8e33d50795c2119dfea8880ecd9c8403b388d6630c0d3cb59d41fd8b7aba"
+    },
+    {
+      "file": "data/packs/essential-100.3a71b8e1e38939e1.json",
+      "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+    },
+    {
+      "file": "data/packs/hedging-and-linking.06c92cc29e38d601.json",
+      "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+    },
+    {
+      "file": "data/packs/interview-english.b1b80134e0f24ef7.json",
+      "sha256": "b1b80134e0f24ef7af11d67166a8c085f14fe9e1ebc9a18ada214b3f69fa7fae"
+    },
+    {
+      "file": "data/packs/logical-200.7dea9a714b2c308b.json",
+      "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+    },
+    {
+      "file": "data/packs/personal-topics.03c1443a2cc176cf.json",
+      "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+    },
+    {
+      "file": "data/packs/presentations.2cd234cc3c91ce8d.json",
+      "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+    },
+    {
+      "file": "data/packs/small-talk.9223c920eb6387cd.json",
+      "sha256": "9223c920eb6387cd0de76b09f144f4e62543b42327abbf776e1720dc4dc19bbf"
+    },
+    {
+      "file": "data/packs/speaking-foundations.378bea01a015d76e.json",
+      "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+    },
+    {
+      "file": "data/packs/speaking-practice.30d81bc404256cb8.json",
+      "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+    },
+    {
+      "file": "data/packs/workplace-topics.dad3daa8ab78823e.json",
+      "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+    },
+    {
+      "file": "favicon.svg",
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "file": "fonts/FONTLOG-EngTrainerSans.txt",
+      "sha256": "4bef97c323a80b8dca8b3ef48da47dac36c9eb7dd2c10ceda198c9ce82fe8a27"
+    },
+    {
+      "file": "fonts/OFL-EngTrainerSans.txt",
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "file": "fonts/OFL-Literata.txt",
+      "sha256": "5b52638039d9f63fe82bab2ccea1cf0312d275c49e6f1cf7e36361c256b4ce92"
+    },
+    {
+      "file": "v1/assets/index-Bod3ovET.css",
+      "sha256": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83"
+    },
+    {
+      "file": "v1/assets/index-C0A337ei.js",
+      "sha256": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913"
+    },
+    {
+      "file": "v1/data/materials.json",
+      "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+    },
+    {
+      "file": "v1/favicon.svg",
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "file": "v1/index.html",
+      "sha256": "0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f"
+    }
+  ],
+  "rc2Artifacts": [
+    {
+      "file": "assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+      "sha256": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682"
+    },
+    {
+      "file": "assets/eng-trainer-sans-greek-FkV9qZ7r.woff2",
+      "sha256": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670"
+    },
+    {
+      "file": "assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+      "sha256": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d"
+    },
+    {
+      "file": "assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+      "sha256": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4"
+    },
+    {
+      "file": "assets/index-CggR75Uk.js",
+      "sha256": "b465abcfa985f6b794512cd1ede91f621f3d5bbe09b2d4563b45e06f448cc942"
+    },
+    {
+      "file": "assets/index-DFaGuSQ9.css",
+      "sha256": "0bcf9d7e2ce5ced1df5ba74dc2287219661b8286e449c8eb33e97bce6462d3fe"
+    },
+    {
+      "file": "assets/literata-latin-Cedbco83.woff2",
+      "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58"
+    },
+    {
+      "file": "assets/literata-latin-italic-Ckc1vdjp.woff2",
+      "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265"
+    },
+    {
+      "file": "data/manifest.json",
+      "sha256": "db99f2172b7c30c9ada8299ab2c3f463c4fe600b39878b150e321b3e5e57776b"
+    },
+    {
+      "file": "data/packs/agent-framework.30b26432f0ecf993.json",
+      "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+    },
+    {
+      "file": "data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+      "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+    },
+    {
+      "file": "data/packs/ai-certification.a743e81dde1bc943.json",
+      "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+    },
+    {
+      "file": "data/packs/conditionals.1c6e8e33d50795c2.json",
+      "sha256": "1c6e8e33d50795c2119dfea8880ecd9c8403b388d6630c0d3cb59d41fd8b7aba"
+    },
+    {
+      "file": "data/packs/essential-100.3a71b8e1e38939e1.json",
+      "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+    },
+    {
+      "file": "data/packs/hedging-and-linking.06c92cc29e38d601.json",
+      "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+    },
+    {
+      "file": "data/packs/interview-english.b1b80134e0f24ef7.json",
+      "sha256": "b1b80134e0f24ef7af11d67166a8c085f14fe9e1ebc9a18ada214b3f69fa7fae"
+    },
+    {
+      "file": "data/packs/logical-200.7dea9a714b2c308b.json",
+      "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+    },
+    {
+      "file": "data/packs/personal-topics.03c1443a2cc176cf.json",
+      "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+    },
+    {
+      "file": "data/packs/presentations.2cd234cc3c91ce8d.json",
+      "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+    },
+    {
+      "file": "data/packs/small-talk.9223c920eb6387cd.json",
+      "sha256": "9223c920eb6387cd0de76b09f144f4e62543b42327abbf776e1720dc4dc19bbf"
+    },
+    {
+      "file": "data/packs/speaking-foundations.378bea01a015d76e.json",
+      "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+    },
+    {
+      "file": "data/packs/speaking-practice.30d81bc404256cb8.json",
+      "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+    },
+    {
+      "file": "data/packs/workplace-topics.dad3daa8ab78823e.json",
+      "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+    },
+    {
+      "file": "favicon.svg",
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "file": "fonts/FONTLOG-EngTrainerSans.txt",
+      "sha256": "4bef97c323a80b8dca8b3ef48da47dac36c9eb7dd2c10ceda198c9ce82fe8a27"
+    },
+    {
+      "file": "fonts/OFL-EngTrainerSans.txt",
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "file": "fonts/OFL-Literata.txt",
+      "sha256": "5b52638039d9f63fe82bab2ccea1cf0312d275c49e6f1cf7e36361c256b4ce92"
+    },
+    {
+      "file": "index.html",
+      "sha256": "8b0a649046637a4efaf91cb0a3a771cd356fd99cfbe5ebb599bcf7cc1abcf520"
+    },
+    {
+      "file": "v1/assets/index-Bod3ovET.css",
+      "sha256": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83"
+    },
+    {
+      "file": "v1/assets/index-C0A337ei.js",
+      "sha256": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913"
+    },
+    {
+      "file": "v1/data/materials.json",
+      "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+    },
+    {
+      "file": "v1/favicon.svg",
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "file": "v1/index.html",
+      "sha256": "0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+chromium {"before":true,"resized":true,"excess":0.375,"refocused":true,"errors":[]}
+firefox {"before":true,"resized":true,"excess":0.399993896484375,"refocused":true,"errors":[]}
+
+[exit 0]

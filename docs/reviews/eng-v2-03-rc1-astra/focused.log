@@ -1,0 +1,24 @@
+chromium before matrix-390-100 {"checks":28,"failures":[],"clipped":28}
+chromium before matrix-320-200 {"checks":28,"failures":[],"clipped":28}
+chromium rc1 matrix-320-100 {"checks":28,"failures":[],"clipped":0}
+chromium rc1 matrix-320-200 {"checks":28,"failures":[],"clipped":0}
+chromium rc1 matrix-390-100 {"checks":28,"failures":[],"clipped":0}
+chromium rc1 matrix-390-200 {"checks":28,"failures":[],"clipped":0}
+chromium rc1 search-memory {"checks":2,"failures":[],"clipped":0}
+chromium rc1 focused-width-text-reflow {"checks":5,"failures":[],"clipped":0}
+chromium rc1 focused-height-reflow {"checks":3,"failures":[],"clipped":0}
+chromium rc1 manual-scroll-and-vertical-focus {"checks":2,"failures":[],"clipped":0}
+chromium rc1 deferred-focus-and-unmount {"checks":2,"failures":[],"clipped":0}
+firefox before matrix-390-100 {"checks":28,"failures":[],"clipped":28}
+firefox before matrix-320-200 {"checks":28,"failures":[],"clipped":28}
+firefox rc1 matrix-320-100 {"checks":28,"failures":[],"clipped":0}
+firefox rc1 matrix-320-200 {"checks":28,"failures":[],"clipped":0}
+firefox rc1 matrix-390-100 {"checks":28,"failures":[],"clipped":0}
+firefox rc1 matrix-390-200 {"checks":28,"failures":[],"clipped":0}
+firefox rc1 search-memory {"checks":2,"failures":[],"clipped":0}
+firefox rc1 focused-width-text-reflow {"checks":5,"failures":[],"clipped":0}
+firefox rc1 focused-height-reflow {"checks":3,"failures":[],"clipped":0}
+firefox rc1 manual-scroll-and-vertical-focus {"checks":2,"failures":[],"clipped":0}
+firefox rc1 deferred-focus-and-unmount {"checks":2,"failures":[],"clipped":0}
+
+[exit 0]

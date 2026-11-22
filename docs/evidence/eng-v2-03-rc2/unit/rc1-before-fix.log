@@ -1,0 +1,25 @@
+ ✓ src/features/topics/revealFocusedChip.test.ts > focused situation revelation lifecycle > does not scroll an old target after focus moves outside the strip 7ms
+ ✓ src/features/topics/revealFocusedChip.test.ts > focused situation revelation lifecycle > leaves a manually scrolled, selected but unfocused chip alone on resize 1ms
+ ✓ src/features/topics/revealFocusedChip.test.ts > focused situation revelation lifecycle > cancels and disconnects on destroy, including callbacks delivered before DOM removal 1ms
+ × src/features/topics/revealFocusedChip.test.ts > focused situation revelation after viewport-height changes (RC2) > reveals the keyboard-focused chip when only the viewport height changes 39ms
+ × src/features/topics/revealFocusedChip.test.ts > focused situation revelation after viewport-height changes (RC2) > reveals again after the height is restored and reduced once more 6ms
+ ✓ src/features/topics/revealFocusedChip.test.ts > focused situation revelation after viewport-height changes (RC2) > neither reveals a chip nor takes focus while Search has focus 3ms
+ ✓ src/features/topics/revealFocusedChip.test.ts > focused situation revelation after viewport-height changes (RC2) > keeps the manual scroll position of a selected chip that does not have focus 1ms
+ ✓ src/features/topics/revealFocusedChip.test.ts > focused situation revelation after viewport-height changes (RC2) > does not reveal or measure the former owner when focus moves to another chip first 3ms
+ ✓ src/features/topics/revealFocusedChip.test.ts > focused situation revelation after viewport-height changes (RC2) > cancels queued resize work on destroy and stops listening 3ms
+ × src/features/topics/revealFocusedChip.test.ts > focused situation revelation after viewport-height changes (RC2) > coalesces a burst of resize events into one reveal, without a follow-up loop 3ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: expected [] to have a length of 1 but got +0
+- Expected
++ Received
+    176|     expect(live()).toHaveLength(1);
+AssertionError: expected [] to deeply equal [ [ { top: 116, …(1) } ], …(1) ]
+- Expected
++ Received
+AssertionError: expected [] to have a length of 1 but got +0
+- Expected
++ Received
+    255|     expect(live()).toHaveLength(1);
+    257|     expect(scrollBy).toHaveBeenCalledExactlyOnceWith({ top: 116, behav…
+ Test Files  1 failed (1)
+      Tests  3 failed | 7 passed (10)

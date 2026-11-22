@@ -1,0 +1,706 @@
+{
+  "preserved": true,
+  "changes": [
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "before": "21b216cdf8ad074aa0e411c45d2efa4909bb937d169543b4fd8d1cd1420f69fc",
+      "after": "2f601f77cafcbbc4b41de4aa720cab5f2cb43274cfae651e140af06d0d5b3cc5"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.test.ts",
+      "before": "c8abda151df2121f8f08e9d2ebda8fea2ea2e8e9bca4260ce70b20a71b8118aa",
+      "after": "c307cacd7620f01a8881661d52cf6ea387e77968e4be8dbc8d395a0e91f57d93"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.ts",
+      "before": "c7cbf6ff33f29942f04c1b409e58a681e96c3c58e8c502768068e5f83954e0d0",
+      "after": "818794dff77322b9dd502e67dfac67ec066511b8b67ab58255c87f3e393c02ef"
+    }
+  ],
+  "rc1HandoffBytesPreservedAsPrefix": 38402,
+  "unchangedCandidateEntries": 1610,
+  "candidateEntries": 1613,
+  "substantiveFingerprintAfter": "e862d40228c7338e07610c1c33fae1afdbcf2d07b25f80512aaf07db7bd88044",
+  "main": {
+    "head": "03f1267f1ef4287580227ce5db67615988c98177",
+    "branch": "main",
+    "files": 1332,
+    "untracked": 92,
+    "unchanged": true
+  },
+  "rc1Review": {
+    "files": 619,
+    "unchanged": true
+  },
+  "historicalReview": {
+    "files": 506,
+    "unchanged": true
+  },
+  "implementationRc1Evidence": {
+    "files": 286,
+    "unchanged": true
+  },
+  "gitExcludeUnchanged": true,
+  "rc2PublicEvidence": [
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/.gitignore",
+      "sha256": "04e59f5cc75e578a7492cd2c14ddf16487d1af09e188a7cc01224a61b1b3855f"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/README.md",
+      "sha256": "03dad5a9290f049f9b08aa5aac9504450adb5af91a19ab0ddcaa6b2f7d879639"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/artifacts.json",
+      "sha256": "a81d9f21786f4842b1a54731298af311d989002c93c4e28096284bf47b35c0f0"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/artifacts.mjs",
+      "sha256": "b700b608a64c5400a2a7b24707f9957f007ba3428f038c16c60bb5800b083217"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/browser-support.mjs",
+      "sha256": "0e4b6bb6d1640d0076b17e70a4945b7e14c389a401433195bc6c558cf1dcfa98"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/shots/rc1-chromium-height-only-480-refocused.png",
+      "sha256": "b53df5a8476582bd4a52fb0cbd665143110c14a1ecc627825a90c01e3a2625a2"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/shots/rc1-chromium-height-only-480.png",
+      "sha256": "fe6136dabbf3a6963836f16260fb6f19bcfc73d18479a8bbb7c5bf9e9e114381"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/shots/rc1-firefox-height-only-480-refocused.png",
+      "sha256": "1954cb1f839c18d09926857fcd1b1c22cd76de07ca08aef4af22b6af12fc86a5"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/shots/rc1-firefox-height-only-480.png",
+      "sha256": "f3c08d6a3567a7fff008cac1e279708986bb9d606798f14dcfc81b9c75d13c59"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/viewport-resize.json",
+      "sha256": "734578c65406e0cf29ec091d106c6bee5231b57137d8968f78d78e08368c3fbc"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/viewport-resize.log",
+      "sha256": "98893c408607ba608129f6c29430296d389eb9dc2341b50663a25c42317abd43"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/shots/rc1-chromium-height-only-480-refocused.png",
+      "sha256": "b53df5a8476582bd4a52fb0cbd665143110c14a1ecc627825a90c01e3a2625a2"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/shots/rc1-chromium-height-only-480.png",
+      "sha256": "cdd6e70729bbc346f04ea2f3689d5fe9007d56e069e3a75265f92a08e0f31641"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/shots/rc1-firefox-height-only-480-refocused.png",
+      "sha256": "1954cb1f839c18d09926857fcd1b1c22cd76de07ca08aef4af22b6af12fc86a5"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/shots/rc1-firefox-height-only-480.png",
+      "sha256": "99fef1c0f96c272ab39c1c0c93bc3b0c8b62da80ef97cee099d3581e49686f20"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/viewport-resize.json",
+      "sha256": "5289da70185b824b118bd04d2060cadbcad664026fb7707d3087f7cdde6d62da"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/viewport-resize.log",
+      "sha256": "83d31ec809966a604f465157c6a9fe6fe3ead69cdfdaaf461c058aba3d22e837"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/viewport-resize.mjs",
+      "sha256": "4a55be6de637a3cb22568dee56c5a149dc49b41a15e68cbc87898b28b550431b"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/baseline.json",
+      "sha256": "a19e4a9e3c2b388ea828b23f90c85ca0cbc617da4659a5fda1dfa6c057a8da8d"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/budget.json",
+      "sha256": "185ed98606f1b1cd1f52082c071734b937c801286ba80c457b0d53b0e0844118"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/budget.mjs",
+      "sha256": "84e867988a2519898f9a477895b4bdeeeaaebe78c3326c8dda50d0aca70742e9"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/commands.json",
+      "sha256": "d7fac437adc82e1c0d270686ba96d482f0e52ca2cdd5dd39e8c78346b226d0b7"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/build-site.log",
+      "sha256": "a4230456faf9618e4cc2aa84353e71efe87e6e80429245e1d5c69db60ce42fe2"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/build.log",
+      "sha256": "125405a52688a29afb1872d4a1b0890eab53b3732ae01c4df9249c4b81ca31f9"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/check-v1.log",
+      "sha256": "14cdb25a7e789b8d0947927cfb26eddb61237af5be9706c5762ae26591752abf"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/check.log",
+      "sha256": "05ee387ab8c9e6c3a6c572c2beee7090ab6ef1f5429838818910c25e53bce424"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/diff-check.log",
+      "sha256": "20f35d17f1fe3e7f2eb373ee7d43b7869de43ccae2b5c3f130fb72374654d66e"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/new-files-whitespace.log",
+      "sha256": "1ce55cd9b94e7ada386424e8d90175ea8ba4348d0f052e0e667077e1e68d9e02"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test-v1.log",
+      "sha256": "3ca451d5e9d556361c1f491c7e2a7519d02b783e763c1a3e8c6d54b8e6c7848d"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "sha256": "b3105c14e64297521218e249188b82f752fdea5072457616ebad6c210561ef16"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/verify-content.log",
+      "sha256": "a1ff6b9a9dd1403000e80bb93fbb9fd4197c4f993637b352a6d60b8419a7b1f3"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/final-audit.mjs",
+      "sha256": "ef0c5c14297a3d44f6f8485f9c6e013418f29289c3d8e3cecc2edff2360753da"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-after.txt",
+      "sha256": "4d4d95026015e03bebca05d6408e2a5b60fa41a25b7467857affdda6cce3a042"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-before.txt",
+      "sha256": "d05fceb85095d1acf28a3d2a7ca387b8789e750d2e39e3a85beaeefba5f50d46"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize.mjs",
+      "sha256": "81d0cf0525b93729475b3747f47b3ccd1a0fa4c0c403cbf4e17b7e23c78bfc63"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/rc1.json",
+      "sha256": "e6158e2bdae27c9c0d00fa67bef3549a5e454f8d8a05c2d6e8dcf5c03fad48d7"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/rc2.json",
+      "sha256": "0bcb7426250c24b889bf6dbdac6579aef0464d6c59434a216b0b4306b4678b13"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-decisive-320-200-480-again.png",
+      "sha256": "fe6136dabbf3a6963836f16260fb6f19bcfc73d18479a8bbb7c5bf9e9e114381"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-decisive-320-200-480.png",
+      "sha256": "fe6136dabbf3a6963836f16260fb6f19bcfc73d18479a8bbb7c5bf9e9e114381"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-decisive-320-200-before.png",
+      "sha256": "032ee9251794034fec5ff8bb9275f45f7da842400491bfe274a450034f769641"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-enlarged-390-200-resized.png",
+      "sha256": "5bb9fcadab89f202255b8cf9cc32bd7469f3f555ed43eb11981965342f336cf3"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-normal-320-100-resized.png",
+      "sha256": "9b3db55a3c9ad66ddbf104c2188c76be1d3feca608be729d6d698b2cbd56dc9c"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-decisive-320-200-480-again.png",
+      "sha256": "f3c08d6a3567a7fff008cac1e279708986bb9d606798f14dcfc81b9c75d13c59"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-decisive-320-200-480.png",
+      "sha256": "f3c08d6a3567a7fff008cac1e279708986bb9d606798f14dcfc81b9c75d13c59"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-decisive-320-200-before.png",
+      "sha256": "33cc2c8758c68e37ae141a6a3c778cd91a5893684f035b4e1343ef0366af39c6"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-enlarged-390-200-resized.png",
+      "sha256": "6aa91d074d5cb3c2fca5cbaaa59129ae14900dcbb4cf4b097c185f49a312c435"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-normal-320-100-resized.png",
+      "sha256": "0d5763175cff00e0cf1603252ce6ad617fed38dbf2f22cbad7a9bdd285dac8c1"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-decisive-320-200-480-again.png",
+      "sha256": "cdd6e70729bbc346f04ea2f3689d5fe9007d56e069e3a75265f92a08e0f31641"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-decisive-320-200-480.png",
+      "sha256": "cdd6e70729bbc346f04ea2f3689d5fe9007d56e069e3a75265f92a08e0f31641"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-decisive-320-200-before.png",
+      "sha256": "032ee9251794034fec5ff8bb9275f45f7da842400491bfe274a450034f769641"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-enlarged-390-200-resized.png",
+      "sha256": "1a48b81aa363e73090771b30b41a5c465e63574cfb48eca2f7366c4b1184a33e"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-normal-320-100-resized.png",
+      "sha256": "cf643ee697054aad0975bd80f6e7e2d69b86d4b56668dbacfd85dac536ee56d1"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-decisive-320-200-480-again.png",
+      "sha256": "99fef1c0f96c272ab39c1c0c93bc3b0c8b62da80ef97cee099d3581e49686f20"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-decisive-320-200-480.png",
+      "sha256": "99fef1c0f96c272ab39c1c0c93bc3b0c8b62da80ef97cee099d3581e49686f20"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-decisive-320-200-before.png",
+      "sha256": "33cc2c8758c68e37ae141a6a3c778cd91a5893684f035b4e1343ef0366af39c6"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-enlarged-390-200-resized.png",
+      "sha256": "43d3323e4dac604a2e38cdb389c0ebd47a8f8b5cb616e64e94e01524876c8cb3"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-normal-320-100-resized.png",
+      "sha256": "c36bf0358561eb89087334f7887df358a7e1371f0aec806a4256d3c713e155aa"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/results.json",
+      "sha256": "7625a90c10270819550ba5a21ed9739d73af1857b73efcbd5184b4ede7d2eddf"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-answers.png",
+      "sha256": "4af66f276b3b5b54bbbe94b3f8029759d3c08251176707e3016258b513132eb7"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-collections.png",
+      "sha256": "4a43106eb3e6ce05724848abe3d7959e8dc616fd89ae5160901503a3e22b3da8"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-favorites.png",
+      "sha256": "12245bb4d4e14d3cb399273cccfa28ce1865091dfddb80664767d666b15430e9"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-flashcards.png",
+      "sha256": "ac279d07a208611990a2984d455f73e235fce3a4307866bbc166bcfa809b7ba4"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-index.png",
+      "sha256": "13296cad96098ded551a62134c7672dd2a46b8f96ee3dba7c900444b2756577a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-irregularVerbs.png",
+      "sha256": "ecd26a962b26184581f1a504f82f84f033ca9b4d90571897ec08b2c117db543a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-patterns.png",
+      "sha256": "31a0f7b1ccf6be6b41b9df237cac81883ea10ac40ec4e623b794595407b1a5ac"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-phrases.png",
+      "sha256": "ea34b23b26a577222e44db4a1245ac52b25df3e279b6be648326382900434482"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-practice.png",
+      "sha256": "49e77b7c98a022738f797ade4b3c33c5ab94b44037f4ab8ddc388e385b838778"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-reverse.png",
+      "sha256": "8f0d1f0a63f1e99468390d3aa8f40007dfdc3152b4ba0b373084160f2c217c4f"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-settings.png",
+      "sha256": "55816c1322c79c4cef8e2715cc23bf8e313c70c1b5c37e712fda8f7fd97d184c"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-topic-conditionals.png",
+      "sha256": "7b4b468c568d35ffde4033489b4f8de76980d1d7c36329232d51b4fd1c2a404d"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-topic-interview-english.png",
+      "sha256": "c32f62935a01321d36133c972c2e10984c092102bb6a2af3c62aa49e018db1b1"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-topic-small-talk.png",
+      "sha256": "ab53acbd38f196f8a59c0fd5533414d414b750c6019b74ef940d229f0d1d11a3"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-wordIndex.png",
+      "sha256": "efb9bb78d6a923b4c55a9c2767af8a68035a6f3330595ef10db27796bdf4c63a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-index.png",
+      "sha256": "206908492cb54414b3063013ecaac793b2e9bdbfc4625acb5b7706fd3c585e33"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-phrases.png",
+      "sha256": "814d4b4c428e725e848014d9080b6294fd7c194aa7bd7a1eaa80eaa97c177056"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-topic-conditionals.png",
+      "sha256": "5e23e0122cc39ff80fefda09fdb084750bc186a67489bd4e1a0a3071e6d6a8d2"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-topic-interview-english.png",
+      "sha256": "870a7e53188d1f7dc1091deabd99b7256f96f7489d3f696ad850e0f8fb5651ef"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-topic-small-talk.png",
+      "sha256": "d9057cca2684ab6e3f384c747be0ca64af34d457db6060197619b507827b87f1"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-answers.png",
+      "sha256": "fe25e7cfa5ef07f7ff573cbf72ba96a64351416bc5d65fa4f999845a143a2fa4"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-collections.png",
+      "sha256": "07a111ef70100da2d9e7d3a31263172901232a8e91fefe574174d3010a24d2a5"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-conditionals-final-subsection.png",
+      "sha256": "d06b533d48707f8e9337d36dffd089076336a15b291acf08016910b1333e8d93"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-content-error.png",
+      "sha256": "f884f45d9ea04f064520c8c2941a475c21ee62afb270cdda53184391604d62d8"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-enlarged-index.png",
+      "sha256": "7ec04657c62fa2fcf2147824abd3937efc77330f4ab3d7f98d703cef116a809d"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "sha256": "ab64fa0a8b472ec19162d37ae847ae491d6b9b76a2625572b937a26f20949217"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "sha256": "80dd588f45f00855b268de65f4a26117faba084fd6bc8e2ad525e1a8a5460a15"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-favorites.png",
+      "sha256": "a27750c6ed3ae6497f6a3f783eb3fb0ed289098b0c65641c6c9a3b575c6a53e4"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-flashcards.png",
+      "sha256": "796c2e4d87ab67ee877d46badbff1d8bb81eae0f7bfeca6437352521d6bceb69"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-home-details.png",
+      "sha256": "3d24b01d55dd54f8b970a750cc565a10a9ac6ab5b77b2e833a2ba62d8257c51d"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-home-start.png",
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-index.png",
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-interview-final-category.png",
+      "sha256": "7c9f2bbe1a7e8a8251b04f51aaf1360282b638937af84e8ebc0bc73fee817af9"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-irregularVerbs.png",
+      "sha256": "5e621ab4f77fbe331864c563d2b4c9b769d6307e8369382e71de37a11aefde92"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-patterns.png",
+      "sha256": "aaca914551508934baa1eb105c1de583d331eedb251ff7256578598f88c27b75"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-phrases.png",
+      "sha256": "d4753e106d471be52ebbf00efc678e0ab0ff8d695fefec3cd763aee3c9baf4e1"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-practice.png",
+      "sha256": "20cf31fb955905d207c51c157d69a20213071f09207ee19148025a0c835a6144"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-reverse.png",
+      "sha256": "916f513a22e6c8d88f5146ed7e34cc7794ae64e6701dc9d35e7c23eaef029fb1"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-settings.png",
+      "sha256": "d0498064e52b29820bc2a34b356612e23fa7cb4d8e136a68d2b9f42957e8e905"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-small-talk-traveling.png",
+      "sha256": "c30313bd86d4d58d1e07249c27248ac8dada42a3a5877154a738bb3df2b18476"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-topic-conditionals.png",
+      "sha256": "c36fed98e05bbfb0838b232d8c620d14620d30a448735e24213a708a799e3311"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-topic-interview-english.png",
+      "sha256": "365bc17e39ce787bf7a399574bacf977cee6538af3e6703f67d2626a7a4df608"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-topic-small-talk.png",
+      "sha256": "e3f0f7fb03f3616662c94905d922578ae98682b4b47942e0920210813762428c"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-wordIndex.png",
+      "sha256": "578ceebc09fec711954e09cb2ba7d75b09d72c088a5e725e1ec08e90d133834e"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-answers.png",
+      "sha256": "5ce33374e55e331c70c2b350a200b51fe9e0483ef60ec6fe1312c6a1cf323df6"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-collections.png",
+      "sha256": "23269fce407a27f1747264b53227d1d3e4d94bdb5ecd31d5561dbfa3a51f3694"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-favorites.png",
+      "sha256": "c7c062c2400293d4ecfc6d29aad837108b8284ca1c57b58bb08c6651fbe35bd8"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-flashcards.png",
+      "sha256": "05f7d5cdbed501011624409891c0b64101059630903bac73b828720ef590148a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-index.png",
+      "sha256": "a839d930bcbd58378804121f60773ddcc857c4f38d649ad8408e0b7e2badda73"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-irregularVerbs.png",
+      "sha256": "8de31e69878e467cd5f504d1d3f341acfc866afd37de2d5ba86f5c1e18f8076f"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-patterns.png",
+      "sha256": "c39c6bab55b68848432a82d25ac321097b2b55524cf2f7b316a682fabe5a31ae"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-phrases.png",
+      "sha256": "ad277fa03275437d936e0fecf7492793252a57c67f1d4349849ede55d0448bc6"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-practice.png",
+      "sha256": "6432300d37446c7eb2cca75ad5908b31c3378f8a568d3f59220bcb2be073fd61"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-reverse.png",
+      "sha256": "5cf7157e0d22967e896ed1fbd8baae6a7e74004051a5c3785c68fa36bc04692d"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-settings.png",
+      "sha256": "946b6ee376471b57e757335f87b0740066655458c93fe362772e0018c91724cb"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-topic-conditionals.png",
+      "sha256": "a970abfbfb47b7e735548fc21ccd23f3856a1ff3f99ad815d6f06df80af7320c"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-topic-interview-english.png",
+      "sha256": "6bdcac539b629e4e22f2b18c7ca4f9bae826e0dc67a91b3fdd45b2f758c99f38"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-topic-small-talk.png",
+      "sha256": "eb4c966f6203890f692bbcd76fdb5c237901f8f2a7281059cbeaf4f2458b09ce"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-wordIndex.png",
+      "sha256": "562b9ceb0107d6db7fab8b8721ae669e500e3d6df65031eb16adefdecde34145"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-index.png",
+      "sha256": "f428f0595d603ff17a875ebb69a660ed08b4bafdcce2fd7fbdce68d3c7684870"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-phrases.png",
+      "sha256": "602e5aa105529ba47fae6deada2628b2f13b09ea195e6058b7532f91e36ecd99"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-topic-conditionals.png",
+      "sha256": "056f8a3e1f278ce8d2c2ecb30791f46e1b16518caf2516516337eb9c68d26e4a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-topic-interview-english.png",
+      "sha256": "31a937a0a4b09fc134f0a1b2970367706a65d9edd95128c0f84e4a667677b61c"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-topic-small-talk.png",
+      "sha256": "005c84d8c67dede93576defbc2dfc59349fbd479024550bfedc9278015fc3a0f"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-answers.png",
+      "sha256": "c59c168c175d63e6351bd0102c38b78dc9d675fabd2daae48dbc044dc10d9436"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-collections.png",
+      "sha256": "8987a5314af53cccc9528a951c48a17400cceeb2905a6c712de01c8a0beaab79"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-conditionals-final-subsection.png",
+      "sha256": "0c747bce53d4bd3621a6e66e25e1b6b0735c11bbb41d8cdcc6a1964a02c7b0b2"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-content-error.png",
+      "sha256": "2abfc5741665b9d6dd954c9be78dab14399206af523b7be3d88dd9e36c2b5ca0"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-enlarged-index.png",
+      "sha256": "43f565bfb88b1e561b9503809f6998ceee04c98d52274c9e3e3752cfdd91f5b8"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "sha256": "7fe8736e6f323c56537531a3684953a05b7add8ea2b31c7d374855bc3a574135"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "sha256": "9009de4c177c8c3795221d19a17c54016fc2a156527c71830e16f465b39c23ff"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-favorites.png",
+      "sha256": "8ae111bd3966adae82186602ec41e01655ecafcc6c43fc286cc191aedbe7ffd3"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-flashcards.png",
+      "sha256": "515209150ab3f26adc396eedc8c7467a5d5533aa2b4c062559151685105e9b5a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-home-details.png",
+      "sha256": "6ea09a51ab5152b2a72528fe04c0ebaadccc63ec6e4b6467544481db882e951a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-home-start.png",
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-index.png",
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-interview-final-category.png",
+      "sha256": "b5ee3ed9089bd2a723b79c2b8f600ba5ada8105814e17763ed9eb50fd957b75d"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-irregularVerbs.png",
+      "sha256": "35e323252bdaa5ea79e0d63c1db6a473ac2e13471c486b2c3825406e37403755"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-patterns.png",
+      "sha256": "0930e92ca1a15ea38420818b6b593788dea3c951a5bf77a6113cc5ea599193d2"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-phrases.png",
+      "sha256": "8b42ae8a4aeb6c31ac150ae5456e115ac060836d87ce3626e38e7aa53a861af5"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-practice.png",
+      "sha256": "711a938478360bf6ea42d69fbaadcf5f7f8ea3cfdbff34ccefbb481d27052ae7"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-reverse.png",
+      "sha256": "2186ce2171602c162cf6a7d11b0141593ef96ebb908a6aa0b6f042611a97be5a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-settings.png",
+      "sha256": "453c328b9a82455e69516b999346c1c45ac24a7ed05bfe999e0cbe262922f46b"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-small-talk-traveling.png",
+      "sha256": "d3d91257cfb2ad4266ec1717861b55dea81364d5b7af9176c8649596b20315ce"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-topic-conditionals.png",
+      "sha256": "e58f5841d195af19268df27c6565446ff3e211f7dc247b84c09a7389e1cc9ed6"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-topic-interview-english.png",
+      "sha256": "d5a3cdc9ee21b314b784435ec579baa7fd5a68ccd2fb56d5039424cc4ba62413"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-topic-small-talk.png",
+      "sha256": "c43298b076b42b35b1022e9757a96782f69875d802b16b45978d88b6c7e2abc0"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-wordIndex.png",
+      "sha256": "afa7582c5d8bd64edcc88b5173da80fb60cc2c6c7b502093fa18431aa538b507"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/prepare-runners.mjs",
+      "sha256": "a956bbb5bf039f4c9cf2d04e60802a7f2df2c7373c0a8f08fa2cca1206170204"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/preserve.mjs",
+      "sha256": "28dcbc14494ae7f4526471abdd4e671a6741eba4960d681b2c0bc3694c478295"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/focused-chips.mjs",
+      "sha256": "519f0cfb008a11d8c192ad38f9129ab3bf1b364ba9acd9a79f68fc586a42ed94"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/rc2.json",
+      "sha256": "bfdf7c1a53aed8f37ce0855ce9e731a8187c42101228fcc879fe58c7260299aa"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-focused-reflow-200-percent.png",
+      "sha256": "7f42e02862a6cc4ce6d0f44a18dfbac9cd747226b17aa93ac29ddde4a49073c2"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-matrix-320-100-selected-2.png",
+      "sha256": "4e96d9d32104d12ca940f8323c40509cb9c457cec1b556153e0e8156d7b2a6fb"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-matrix-320-200-selected-3.png",
+      "sha256": "c2042840e1b74eee723c12b6cfd573e583c4a72e7a2ac278962264124fe3e948"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-matrix-390-100-selected-2.png",
+      "sha256": "04822248a17affa17f1ba54e14a3f7e1c95e3bcfb10285444424f49daafac696"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-matrix-390-200-selected-3.png",
+      "sha256": "8c6bc681c0ff72b61d922d0ebc1c64ac959799b1e038087dabaee1c388fc2ed4"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-focused-reflow-200-percent.png",
+      "sha256": "b1a613b33b6d0fa14e2df34f61447b3f52b131ea98dbf0ddff4bb06a1a988974"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-matrix-320-100-selected-2.png",
+      "sha256": "69cf9f2faaf75b1cd9ca1b8531d9baeeeada8f8de00d77a961d83e999fd604b8"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-matrix-320-200-selected-3.png",
+      "sha256": "cd359e5d33a753502eed3bc34cd8338f74e6f3cba54e5a5732e7c9664836d308"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-matrix-390-100-selected-2.png",
+      "sha256": "046cd3c74055b915b1e460d9d2376644d8884cab063d17098d74216c7b78bb5f"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-matrix-390-200-selected-3.png",
+      "sha256": "e281b643be0bc13109bf437fa3c6e824fdba1cd2f9b061d7a69a52981e94dd2d"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/runner-adaptations.json",
+      "sha256": "d10886f956d6617f5f51a47abdaaf384c7367096e311cc25d9c79f8d0343f35a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/summarize.mjs",
+      "sha256": "be701ae9da1f3a6371307442b609504917d15cb70a7c45bc118bac6a70f3326a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/summary.json",
+      "sha256": "9b2c12559ef4e78143cbab9d5b3d0293d6cec79b2b2dec70b0b8d1a8b75509dc"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/unit/rc1-before-fix.log",
+      "sha256": "d774075c1a3f8507b5bc341004909a1298135d734cb1d46e31cd22f57681a28a"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/unit/rc2-after-fix.log",
+      "sha256": "f7fd74572eb716a94cd7b569848445895e781f46aca7101be8b4f5434f0f246e"
+    }
+  ]
+}

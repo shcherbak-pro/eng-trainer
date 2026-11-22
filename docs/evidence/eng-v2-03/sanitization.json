@@ -1,0 +1,197 @@
+{
+  "rule": "Machine paths are replaced with <repo> and <user-home>, the account name with <user>; ANSI color codes are removed from logs.",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "9b7d4329a19b1095d4d977b2473b4150cb8539255aa7682e77247672a2b9e857"
+    },
+    {
+      "path": "artifact.json",
+      "sha256": "2226b709917dd060b4a2f5dbdbbd50a1fcda51b7af333e35dc187a685f896f0c"
+    },
+    {
+      "path": "browser-check.mjs",
+      "sha256": "b63f0c71eed46b36c4793c602fc83c2ed909087771be432060e32be45b038c09"
+    },
+    {
+      "path": "browser/results.json",
+      "sha256": "ad56e2003196d870db5c5dcae9e4e61a25ae3aea33b959afb971e2f45abb2bbe"
+    },
+    {
+      "path": "browser/screenshots.json",
+      "sha256": "55acbcac4fd392adb03d8ff5f21a268826f1a30a607db321ea723b491c0d2482"
+    },
+    {
+      "path": "budget-and-markup.json",
+      "sha256": "33430c2eda6b5ffc4448bf224392ea408de64bae90a183e3a108694fc3899833"
+    },
+    {
+      "path": "collect-evidence.mjs",
+      "sha256": "5a62fc4679067e96f75bb235585c9d952b57ce493df694bee630d773463b3047"
+    },
+    {
+      "path": "commands.json",
+      "sha256": "06dc6a4903ae17f096a42e2735b67f511cb1b9c0c2e082b8bcfb1f207f67ca1c"
+    },
+    {
+      "path": "compare-builds.mjs",
+      "sha256": "80db699d18ecdc0dfdfa545188e6c65a3d6e09a016e4ddbe2805a48fb1d3f0a7"
+    },
+    {
+      "path": "content-totals.json",
+      "sha256": "67d0f3ec92ce2e9337de1ccfdb0fcb9c4d1083a10d70de09f62aa72b0140565e"
+    },
+    {
+      "path": "git-status.txt",
+      "sha256": "9c140308dc8fb1f25d9d04666c4037d05960e5d97ea6bd0519237bd7f446407f"
+    },
+    {
+      "path": "id-mapping.json",
+      "sha256": "75f8878ae919072d6a7ed419acec76e460562bb7419e812b83616d1724904774"
+    },
+    {
+      "path": "logs/build-site.log",
+      "sha256": "8a4a6a0509dfca6efd0258819b3032f35e2ec321749bbdbe16f4c5974d3fb464"
+    },
+    {
+      "path": "logs/build.log",
+      "sha256": "b1b3c6ab4e2493db42975954f8906164f05007c878d819768608890746a42a7e"
+    },
+    {
+      "path": "logs/check-v1.log",
+      "sha256": "00fc853284628bcfcb990a1ee94d2b18d73256639411f84eded1cfef9d6c8cca"
+    },
+    {
+      "path": "logs/check.log",
+      "sha256": "89c050bfb26b03ee51c9d709c3e57bd51d85adcde1aa03ebd2f8a10118329a8b"
+    },
+    {
+      "path": "logs/diff-check.log",
+      "sha256": "20f35d17f1fe3e7f2eb373ee7d43b7869de43ccae2b5c3f130fb72374654d66e"
+    },
+    {
+      "path": "logs/new-files-whitespace.log",
+      "sha256": "cedff8b85e30e6b2c292683cf4dfb273cdd20fbff9ef68d07d6b8ffa9cbabda7"
+    },
+    {
+      "path": "logs/test-v1.log",
+      "sha256": "7b0d0bbc609cd398aa6199ea1bd5eeca74e07b8d17fe4652f96d51f02fb94cb8"
+    },
+    {
+      "path": "logs/test.log",
+      "sha256": "e6c421b3f2e06ed3fce4f029979457a70ceffe3af96a10bfd2e4ce63c84efa71"
+    },
+    {
+      "path": "logs/verify-content.log",
+      "sha256": "a1ff6b9a9dd1403000e80bb93fbb9fd4197c4f993637b352a6d60b8419a7b1f3"
+    },
+    {
+      "path": "preservation.json",
+      "sha256": "20e6af45e09a47b55dff06cfdf6b01e0271f1c925dd764f801561d440ff743d5"
+    },
+    {
+      "path": "run-commands.mjs",
+      "sha256": "5e92f91f61eeac2c7f6827465adf96d9a7599bf0cf0c5f7e3133a9c096246c34"
+    },
+    {
+      "path": "sanitize.mjs",
+      "sha256": "91bf266d842d51c1463464b28195e9bea32183743f1098d09b0886f09d7d0ea8"
+    },
+    {
+      "path": "screenshots/chromium-desktop-index.png",
+      "sha256": "13296cad96098ded551a62134c7672dd2a46b8f96ee3dba7c900444b2756577a"
+    },
+    {
+      "path": "screenshots/chromium-desktop-topic-interview-english.png",
+      "sha256": "c32f62935a01321d36133c972c2e10984c092102bb6a2af3c62aa49e018db1b1"
+    },
+    {
+      "path": "screenshots/chromium-narrow-index.png",
+      "sha256": "206908492cb54414b3063013ecaac793b2e9bdbfc4625acb5b7706fd3c585e33"
+    },
+    {
+      "path": "screenshots/chromium-narrow-topic-small-talk.png",
+      "sha256": "59c6c6fffe8a1c86a27548e43fc9f532f5fb60e6fb45433d116eaddbee972692"
+    },
+    {
+      "path": "screenshots/chromium-phone-collections.png",
+      "sha256": "07a111ef70100da2d9e7d3a31263172901232a8e91fefe574174d3010a24d2a5"
+    },
+    {
+      "path": "screenshots/chromium-phone-conditionals-final-subsection.png",
+      "sha256": "891f68291fb683a1a1e5cdc3eaf5e6cc014a948ce407dd769ddff58e2e25b5ef"
+    },
+    {
+      "path": "screenshots/chromium-phone-content-error.png",
+      "sha256": "f884f45d9ea04f064520c8c2941a475c21ee62afb270cdda53184391604d62d8"
+    },
+    {
+      "path": "screenshots/chromium-phone-enlarged-topic-small-talk.png",
+      "sha256": "5bdc7bc5d0ee233f3e2fa7ab1d045ff6e50348e70060c2215698fa283b65b321"
+    },
+    {
+      "path": "screenshots/chromium-phone-flashcards.png",
+      "sha256": "796c2e4d87ab67ee877d46badbff1d8bb81eae0f7bfeca6437352521d6bceb69"
+    },
+    {
+      "path": "screenshots/chromium-phone-home-details.png",
+      "sha256": "3d24b01d55dd54f8b970a750cc565a10a9ac6ab5b77b2e833a2ba62d8257c51d"
+    },
+    {
+      "path": "screenshots/chromium-phone-index.png",
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "path": "screenshots/chromium-phone-interview-final-category.png",
+      "sha256": "7c9f2bbe1a7e8a8251b04f51aaf1360282b638937af84e8ebc0bc73fee817af9"
+    },
+    {
+      "path": "screenshots/chromium-phone-irregularVerbs.png",
+      "sha256": "5e621ab4f77fbe331864c563d2b4c9b769d6307e8369382e71de37a11aefde92"
+    },
+    {
+      "path": "screenshots/chromium-phone-phrases.png",
+      "sha256": "d4753e106d471be52ebbf00efc678e0ab0ff8d695fefec3cd763aee3c9baf4e1"
+    },
+    {
+      "path": "screenshots/chromium-phone-settings.png",
+      "sha256": "d0498064e52b29820bc2a34b356612e23fa7cb4d8e136a68d2b9f42957e8e905"
+    },
+    {
+      "path": "screenshots/chromium-phone-small-talk-traveling.png",
+      "sha256": "d6658539e9207271bf5552489b82c98c2546d5711e28f8283bd4f37f3764cc2a"
+    },
+    {
+      "path": "screenshots/chromium-phone-topic-conditionals.png",
+      "sha256": "c36fed98e05bbfb0838b232d8c620d14620d30a448735e24213a708a799e3311"
+    },
+    {
+      "path": "screenshots/chromium-phone-topic-interview-english.png",
+      "sha256": "365bc17e39ce787bf7a399574bacf977cee6538af3e6703f67d2626a7a4df608"
+    },
+    {
+      "path": "screenshots/chromium-phone-topic-small-talk.png",
+      "sha256": "72d0ea4d8f20508779afadf74dad5dc80a5c6370c98434c5a684cc5d709294d3"
+    },
+    {
+      "path": "screenshots/firefox-desktop-index.png",
+      "sha256": "a839d930bcbd58378804121f60773ddcc857c4f38d649ad8408e0b7e2badda73"
+    },
+    {
+      "path": "screenshots/firefox-phone-home-details.png",
+      "sha256": "6ea09a51ab5152b2a72528fe04c0ebaadccc63ec6e4b6467544481db882e951a"
+    },
+    {
+      "path": "screenshots/firefox-phone-index.png",
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "path": "screenshots/firefox-phone-topic-small-talk.png",
+      "sha256": "7706719bc9d00000b9005a15a962a6df15907545e3a078e6e8ca213d70c09e97"
+    },
+    {
+      "path": "v1-preservation.json",
+      "sha256": "bffa9d1312e290eb2a8330677ffcd2ac1bbaf302b2a89561c8b307db1996a25c"
+    }
+  ]
+}

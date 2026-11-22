@@ -1,0 +1,4 @@
+# Local preservation copies and disposable compiler fixtures; evidence summaries stay visible.
+runtime/
+candidate-snapshot/
+candidate.patch

@@ -1,0 +1,18 @@
+$ npm run check
+
+> english-assessment-trainer-v2@2.0.0 precheck
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 14 built-in packs: {"phrases":638,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":12,"drills":15,"topics":3}
+
+> english-assessment-trainer-v2@2.0.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+1795360249652 START "<repo>"
+1795360249654 COMPLETED 266 FILES 0 ERRORS 0 WARNINGS 0 FILES_WITH_PROBLEMS
+
+[exit 0]

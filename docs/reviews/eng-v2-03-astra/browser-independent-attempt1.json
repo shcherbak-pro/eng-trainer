@@ -1,0 +1,287 @@
+{
+  "syntheticProfiles": true,
+  "speech": "Invocation only; no audible speech",
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "scenarios": [
+        {
+          "name": "same-name-topic-and-persistence",
+          "version": "candidate",
+          "pass": false,
+          "errors": [],
+          "failure": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText(/Collection change was not saved/) to be visible\u001b[22m\n\n    at <worktree>\\docs\\reviews\\eng-v2-03-astra\\browser-independent.mjs:120:61\n    at async scenario (<worktree>\\docs\\reviews\\eng-v2-03-astra\\browser-independent.mjs:105:71)\n    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:110:3"
+        },
+        {
+          "name": "routing-chips-language-and-rows",
+          "version": "candidate",
+          "pass": false,
+          "errors": [],
+          "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(facts.left>=0&&facts.right<=facts.width+1)\n\n    at file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:198:40\n    at async scenario (file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:105:71)\n    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:191:3"
+        },
+        {
+          "name": "malformed-pack-retry-and-loading",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "noPartialCatalog": true,
+            "noLearningWrites": true,
+            "recovery": true
+          }
+        },
+        {
+          "name": "learn-pass-filter-independence",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "limited": {
+              "vocabulary": "2 / 638 <1%",
+              "stats": {
+                "Topics completed": "0 / 34",
+                "In Focus": "0",
+                "Words learned": "1 / 566",
+                "Phrases learned": "2 / 638",
+                "Remaining vocabulary": "636",
+                "Words": "566",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "0"
+              },
+              "topicCards": [
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                }
+              ]
+            },
+            "filtersDoNotChangeTotals": true
+          }
+        },
+        {
+          "name": "ordinary-dialog-paths-baseline",
+          "version": "baseline",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "outcomes": [
+              {
+                "action": "confirm",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "confirm",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "history",
+                "errors": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "ordinary-dialog-paths-candidate",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "outcomes": [
+              {
+                "action": "confirm",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "confirm",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "history",
+                "errors": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "firefox": {
+      "version": "159.0",
+      "scenarios": [
+        {
+          "name": "same-name-topic-and-persistence",
+          "version": "candidate",
+          "pass": false,
+          "errors": [],
+          "failure": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText(/Collection change was not saved/) to be visible\u001b[22m\n\n    at <worktree>\\docs\\reviews\\eng-v2-03-astra\\browser-independent.mjs:120:61\n    at async scenario (<worktree>\\docs\\reviews\\eng-v2-03-astra\\browser-independent.mjs:105:71)\n    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:110:3"
+        },
+        {
+          "name": "routing-chips-language-and-rows",
+          "version": "candidate",
+          "pass": false,
+          "errors": [],
+          "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(facts.left>=0&&facts.right<=facts.width+1)\n\n    at file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:198:40\n    at async scenario (file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:105:71)\n    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:191:3"
+        },
+        {
+          "name": "malformed-pack-retry-and-loading",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "noPartialCatalog": true,
+            "noLearningWrites": true,
+            "recovery": true
+          }
+        },
+        {
+          "name": "learn-pass-filter-independence",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "limited": {
+              "vocabulary": "2 / 638 <1%",
+              "stats": {
+                "Topics completed": "0 / 34",
+                "In Focus": "0",
+                "Words learned": "1 / 566",
+                "Phrases learned": "2 / 638",
+                "Remaining vocabulary": "636",
+                "Words": "566",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "0"
+              },
+              "topicCards": [
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                }
+              ]
+            },
+            "filtersDoNotChangeTotals": true
+          }
+        },
+        {
+          "name": "ordinary-dialog-paths-baseline",
+          "version": "baseline",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "outcomes": [
+              {
+                "action": "confirm",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "confirm",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "history",
+                "errors": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "ordinary-dialog-paths-candidate",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "outcomes": [
+              {
+                "action": "confirm",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "confirm",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "history",
+                "errors": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "pass": false
+}

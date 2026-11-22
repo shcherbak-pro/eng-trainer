@@ -1,0 +1,77 @@
+{
+  "mainCheckout": {
+    "branch": "main",
+    "head": "03f1267f1ef4287580227ce5db67615988c98177",
+    "trackedChanges": [],
+    "staged": [],
+    "untrackedBefore": 92,
+    "untrackedNow": 92,
+    "sameUntrackedSet": true,
+    "allUnchanged": true,
+    "changed": []
+  },
+  "releasedPacks": [
+    {
+      "id": "speaking-foundations",
+      "url": "packs/speaking-foundations.378bea01a015d76e.json",
+      "unchanged": true
+    },
+    {
+      "id": "presentations",
+      "url": "packs/presentations.2cd234cc3c91ce8d.json",
+      "unchanged": true
+    },
+    {
+      "id": "agent-framework",
+      "url": "packs/agent-framework.30b26432f0ecf993.json",
+      "unchanged": true
+    },
+    {
+      "id": "hedging-and-linking",
+      "url": "packs/hedging-and-linking.06c92cc29e38d601.json",
+      "unchanged": true
+    },
+    {
+      "id": "personal-topics",
+      "url": "packs/personal-topics.03c1443a2cc176cf.json",
+      "unchanged": true
+    },
+    {
+      "id": "workplace-topics",
+      "url": "packs/workplace-topics.dad3daa8ab78823e.json",
+      "unchanged": true
+    },
+    {
+      "id": "ai-certification",
+      "url": "packs/ai-certification.a743e81dde1bc943.json",
+      "unchanged": true
+    },
+    {
+      "id": "speaking-practice",
+      "url": "packs/speaking-practice.30d81bc404256cb8.json",
+      "unchanged": true
+    },
+    {
+      "id": "essential-100",
+      "url": "packs/essential-100.3a71b8e1e38939e1.json",
+      "unchanged": true
+    },
+    {
+      "id": "logical-200",
+      "url": "packs/logical-200.7dea9a714b2c308b.json",
+      "unchanged": true
+    },
+    {
+      "id": "ai-certification-verbs-contextual",
+      "url": "packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+      "unchanged": true
+    }
+  ],
+  "worktree": {
+    "branch": "feature/eng-v2-03-learning-topics",
+    "base": "03f1267f1ef4287580227ce5db67615988c98177",
+    "head": "03f1267f1ef4287580227ce5db67615988c98177",
+    "staged": []
+  },
+  "pass": true
+}

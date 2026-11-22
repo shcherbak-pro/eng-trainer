@@ -1,0 +1,212 @@
+{
+  "sourceSha256": "9a87e052a42df5cb38780b0418fb3fc0ac1f27c1455d4cc0da7c8c8918d7d8fa",
+  "baseline": "03f1267f1ef4287580227ce5db67615988c98177",
+  "c84ef30EqualsReleased": true,
+  "editorial": [
+    {
+      "topic": "Conditionals",
+      "heading": "Zero Conditional",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Conditionals",
+      "heading": "First Conditional",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Conditionals",
+      "heading": "Second Conditional",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Conditionals",
+      "heading": "Third Conditional",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Conditionals",
+      "heading": "Mixed Conditionals — Past condition, present result",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Conditionals",
+      "heading": "Mixed Conditionals — General condition, past result",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Small Talk",
+      "heading": "Meeting new people",
+      "practiceItems": 6,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Small Talk",
+      "heading": "Before a work meeting",
+      "practiceItems": 6,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Small Talk",
+      "heading": "Coffee and lunch breaks",
+      "practiceItems": 6,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Small Talk",
+      "heading": "Free time and weekends",
+      "practiceItems": 6,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Small Talk",
+      "heading": "Conferences and events",
+      "practiceItems": 6,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Small Talk",
+      "heading": "Traveling",
+      "practiceItems": 6,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Interview English",
+      "heading": "Comparing concepts",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Interview English",
+      "heading": "Explaining how something works",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Interview English",
+      "heading": "Defining a concept",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Interview English",
+      "heading": "Describing a process",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Interview English",
+      "heading": "Discussing options and trade-offs",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    },
+    {
+      "topic": "Interview English",
+      "heading": "Describing experience and solving problems",
+      "practiceItems": 3,
+      "exactRequiredText": true
+    }
+  ],
+  "practiceItems": 72,
+  "translatedQuestions": 12,
+  "structures": 6,
+  "translatedModelAnswers": 6,
+  "links": 566,
+  "records": 1622,
+  "packs": 14,
+  "packChecks": [
+    {
+      "id": "agent-framework",
+      "url": "packs/agent-framework.30b26432f0ecf993.json",
+      "unchanged": true
+    },
+    {
+      "id": "ai-certification-verbs-contextual",
+      "url": "packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+      "unchanged": true
+    },
+    {
+      "id": "ai-certification",
+      "url": "packs/ai-certification.a743e81dde1bc943.json",
+      "unchanged": true
+    },
+    {
+      "id": "essential-100",
+      "url": "packs/essential-100.3a71b8e1e38939e1.json",
+      "unchanged": true
+    },
+    {
+      "id": "hedging-and-linking",
+      "url": "packs/hedging-and-linking.06c92cc29e38d601.json",
+      "unchanged": true
+    },
+    {
+      "id": "logical-200",
+      "url": "packs/logical-200.7dea9a714b2c308b.json",
+      "unchanged": true
+    },
+    {
+      "id": "personal-topics",
+      "url": "packs/personal-topics.03c1443a2cc176cf.json",
+      "unchanged": true
+    },
+    {
+      "id": "presentations",
+      "url": "packs/presentations.2cd234cc3c91ce8d.json",
+      "unchanged": true
+    },
+    {
+      "id": "speaking-foundations",
+      "url": "packs/speaking-foundations.378bea01a015d76e.json",
+      "unchanged": true
+    },
+    {
+      "id": "speaking-practice",
+      "url": "packs/speaking-practice.30d81bc404256cb8.json",
+      "unchanged": true
+    },
+    {
+      "id": "workplace-topics",
+      "url": "packs/workplace-topics.dad3daa8ab78823e.json",
+      "unchanged": true
+    }
+  ],
+  "mutations": [
+    {
+      "name": "changed original field",
+      "candidatePreservationRejected": true,
+      "independentPreservationRejected": true
+    },
+    {
+      "name": "deleted original record",
+      "candidatePreservationRejected": true,
+      "independentPreservationRejected": true
+    },
+    {
+      "name": "changed explicit link",
+      "candidatePreservationRejected": true,
+      "independentPreservationRejected": true
+    },
+    {
+      "name": "reordered originals",
+      "candidatePreservationRejected": true,
+      "independentPreservationRejected": true
+    },
+    {
+      "name": "moved original into a new pack",
+      "candidatePreservationRejected": true,
+      "independentPreservationRejected": true
+    },
+    {
+      "name": "changed ID-less released answer",
+      "candidatePreservationRejected": true,
+      "independentPreservationRejected": true
+    }
+  ],
+  "documentationMappingInspected": true
+}

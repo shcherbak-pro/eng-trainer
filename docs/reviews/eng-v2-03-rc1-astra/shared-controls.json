@@ -1,0 +1,432 @@
+{
+  "method": "Fresh 320x844 contexts, 200% actual text; hide a synthetic-state item, toggle Show hidden, compare styles with authenticated original.",
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "results": [
+        {
+          "route": "phrases",
+          "builds": {
+            "before": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.171875,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            },
+            "rc1": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.171875,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            }
+          },
+          "unchanged": true
+        },
+        {
+          "route": "wordIndex",
+          "builds": {
+            "before": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.171875,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            },
+            "rc1": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.171875,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            }
+          },
+          "unchanged": true
+        },
+        {
+          "route": "irregularVerbs",
+          "builds": {
+            "before": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.171875,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            },
+            "rc1": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.171875,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            }
+          },
+          "unchanged": true
+        },
+        {
+          "route": "topic/small-talk",
+          "builds": {
+            "before": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.171875,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            },
+            "rc1": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.171875,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            }
+          },
+          "unchanged": true
+        }
+      ]
+    },
+    "firefox": {
+      "version": "159.0",
+      "results": [
+        {
+          "route": "phrases",
+          "builds": {
+            "before": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.1666717529297,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            },
+            "rc1": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.1666717529297,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            }
+          },
+          "unchanged": true
+        },
+        {
+          "route": "wordIndex",
+          "builds": {
+            "before": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.1666717529297,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            },
+            "rc1": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.1666717529297,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            }
+          },
+          "unchanged": true
+        },
+        {
+          "route": "irregularVerbs",
+          "builds": {
+            "before": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.1666717529297,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            },
+            "rc1": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.1666717529297,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            }
+          },
+          "unchanged": true
+        },
+        {
+          "route": "topic/small-talk",
+          "builds": {
+            "before": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.1666717529297,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            },
+            "rc1": {
+              "facts": {
+                "selected": "true",
+                "type": "button",
+                "situationRuleApplies": false,
+                "styles": {
+                  "whiteSpace": "nowrap",
+                  "paddingTop": "0px",
+                  "paddingBottom": "0px",
+                  "minHeight": "44px",
+                  "fontSize": "28px",
+                  "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+                  "flexGrow": "0",
+                  "flexShrink": "1",
+                  "maxWidth": "none"
+                },
+                "width": 221.1666717529297,
+                "height": 44,
+                "pageOverflow": 0
+              },
+              "errors": [],
+              "togglesPassed": true
+            }
+          },
+          "unchanged": true
+        }
+      ]
+    }
+  },
+  "passed": true
+}

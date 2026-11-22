@@ -1,0 +1,64 @@
+{
+  "capturedBeforeApplicationEdits": true,
+  "head": "03f1267f1ef4287580227ce5db67615988c98177",
+  "branch": "feature/eng-v2-03-learning-topics",
+  "staged": "",
+  "candidateEntries": 1613,
+  "candidateEqualsAstraFinalRc1Record": true,
+  "substantiveRc1Fingerprint": "01c6ec10666ed943fbb3804101637cd00458ed60a8caaf319586e84e44e7039c",
+  "fullCandidateFingerprintExcludingRc1Review": "e35c25bb3b30e4fd08dcfd9f6341de25f195c6bcd2faa77091d490c995a4a501",
+  "rc1ReviewAdditions": {
+    "files": 619,
+    "treeDigest": "ac23dcb2f462c83d8c9903a3dd7b358d95e3cfdbaff4170d8b711714ad0ca3c5",
+    "reportSha256": "a84ded52d82b6d4236f9f69e8fe55c4010cb08987feddd165b1f7d31912eb3cf"
+  },
+  "historicalReviewIncludingIgnored": {
+    "files": 506,
+    "treeDigest": "78be192765093500a5738f295e8e0a9f645b891759ebb8b3ad02eafdfb330802"
+  },
+  "implementationRc1IncludingIgnored": {
+    "files": 286,
+    "treeDigest": "9057ba06c5ef3513f713659f26629fd41eb7a15c9d1e383384e9839d4aeb031b"
+  },
+  "main": {
+    "head": "03f1267f1ef4287580227ce5db67615988c98177",
+    "branch": "main",
+    "files": 1332,
+    "untracked": 92,
+    "equalsAstraFinalRc1Record": true
+  },
+  "rc1Build": {
+    "indexSha256": "cb488245caca76d340d370107870a12bf32f21941eb57415cb7d2e5aef733b92",
+    "files": 33,
+    "treeDigest": "c5b768dc8022e16c22de49cadd57ee85ff892c2fd117e5879a47d848b7693f3c",
+    "bundles": [
+      {
+        "file": "assets/index-BIsJEtZg.js",
+        "sha256": "9e55bf8b2df08c083597f53df1a91dd3528a0b023cf0a6452ada505666eca9ff",
+        "gzip9Bytes": 87860,
+        "measuredByAstra": 87860
+      },
+      {
+        "file": "assets/index-DFaGuSQ9.css",
+        "sha256": "0bcf9d7e2ce5ced1df5ba74dc2287219661b8286e449c8eb33e97bce6462d3fe",
+        "gzip9Bytes": 8749,
+        "measuredByAstra": 8749
+      }
+    ],
+    "copiedTo": "docs/evidence/eng-v2-03-rc2/local/rc1-site"
+  },
+  "rc1Sources": [
+    {
+      "file": "src/features/topics/revealFocusedChip.ts",
+      "sha256": "c7cbf6ff33f29942f04c1b409e58a681e96c3c58e8c502768068e5f83954e0d0"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.test.ts",
+      "sha256": "c8abda151df2121f8f08e9d2ebda8fea2ea2e8e9bca4260ce70b20a71b8118aa"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "sha256": "21b216cdf8ad074aa0e411c45d2efa4909bb937d169543b4fd8d1cd1420f69fc"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+$ npm run build
+
+> english-assessment-trainer-v2@2.0.0 prebuild
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 14 built-in packs: {"phrases":638,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":12,"drills":15,"topics":3}
+
+> english-assessment-trainer-v2@2.0.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 185 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                          1.32 kB │ gzip:  0.66 kB
+dist/assets/eng-trainer-sans-greek-FkV9qZ7r.woff2       14.50 kB
+dist/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2    18.41 kB
+dist/assets/eng-trainer-sans-latin-WBnKszXN.woff2       28.83 kB
+dist/assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2   60.14 kB
+dist/assets/literata-latin-Cedbco83.woff2               85.67 kB
+dist/assets/literata-latin-italic-Ckc1vdjp.woff2        88.76 kB
+dist/assets/index-DFaGuSQ9.css                          48.25 kB │ gzip:  8.81 kB
+dist/assets/index-CggR75Uk.js                          266.75 kB │ gzip: 87.95 kB
+✓ built in 1.55s
+
+[exit 0]

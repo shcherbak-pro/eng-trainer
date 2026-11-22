@@ -1,0 +1,81 @@
+{
+  "note": "Every other byte of each copy equals its original. The originals were not modified.",
+  "copies": [
+    {
+      "original": "docs/reviews/eng-v2-03-rc1-astra/browser-support.mjs",
+      "originalSha256": "48444a1be6d66b74fbd7691b4e3a99a6a8adab36d47d9f343d537c401eaa26de",
+      "copy": "docs/evidence/eng-v2-03-rc2/astra-probe/browser-support.mjs",
+      "copySha256": "0e4b6bb6d1640d0076b17e70a4945b7e14c389a401433195bc6c558cf1dcfa98",
+      "why": "Output location only: Astra's review folder must not be written.",
+      "substitutions": [
+        {
+          "find": "export const out = path.resolve('docs/reviews/eng-v2-03-rc1-astra');",
+          "replace": "export const out = path.resolve(process.env.RC2_PROBE_OUT);"
+        }
+      ]
+    },
+    {
+      "original": "docs/reviews/eng-v2-03-rc1-astra/viewport-resize.mjs",
+      "originalSha256": "1d7fb48621616893aab690a3475571ca760071d46994f1f13eaa38611edfebe5",
+      "copy": "docs/evidence/eng-v2-03-rc2/astra-probe/viewport-resize.mjs",
+      "copySha256": "4a55be6de637a3cb22568dee56c5a149dc49b41a15e68cbc87898b28b550431b",
+      "why": "Build location only: the same probe runs against the authenticated RC1 copy and against RC2.",
+      "substitutions": [
+        {
+          "find": "const site = await serve('site-dist');",
+          "replace": "const site = await serve(process.env.RC2_PROBE_SITE);"
+        }
+      ]
+    },
+    {
+      "original": "docs/evidence/eng-v2-03-rc1/focused-chips.mjs",
+      "originalSha256": "b25897fda9727d947c3a878a4ba0ec67cfa80b7a94f0c2939762d028cf633fff",
+      "copy": "docs/evidence/eng-v2-03-rc2/rc1-runner/focused-chips.mjs",
+      "copySha256": "519f0cfb008a11d8c192ad38f9129ab3bf1b364ba9acd9a79f68fc586a42ed94",
+      "why": "Output location only: the RC1 evidence folder must not be written.",
+      "substitutions": [
+        {
+          "find": "const out = path.resolve('docs/evidence/eng-v2-03-rc1');",
+          "replace": "const out = path.resolve(process.env.RC2_FOCUSED_OUT);"
+        }
+      ]
+    },
+    {
+      "original": "docs/evidence/eng-v2-03-rc1/budget.mjs",
+      "originalSha256": "4b19bb3281fd300d5a0e0fb63985915d2762e76d2623cf1610436ad1d222ba9e",
+      "copy": "docs/evidence/eng-v2-03-rc2/budget.mjs",
+      "copySha256": "84e867988a2519898f9a477895b4bdeeeaaebe78c3326c8dda50d0aca70742e9",
+      "why": "Same measurement code; the compared builds become the authenticated RC1 copy and RC2, with matching labels and output.",
+      "substitutions": [
+        {
+          "find": "// Established cold-load response BODY method, applied to the reviewed snapshot and RC1.",
+          "replace": "// Established cold-load response BODY method (copied from RC1), applied to the authenticated RC1 copy and RC2."
+        },
+        {
+          "find": "// No rebuild of earlier milestones. node docs/evidence/eng-v2-03-rc1/budget.mjs",
+          "replace": "// No rebuild of earlier milestones. node docs/evidence/eng-v2-03-rc2/budget.mjs"
+        },
+        {
+          "find": "const out = path.resolve('docs/evidence/eng-v2-03-rc1');",
+          "replace": "const out = path.resolve('docs/evidence/eng-v2-03-rc2');"
+        },
+        {
+          "find": "Object.entries({ reviewed: path.join(out, 'local/reviewed-site'), rc1: path.resolve('site-dist') })",
+          "replace": "Object.entries({ rc1: path.join(out, 'local/rc1-site'), rc2: path.resolve('site-dist') })"
+        },
+        {
+          "find": "[key, entry.rc1[key] - entry.reviewed[key]]",
+          "replace": "[key, entry.rc2[key] - entry.rc1[key]]"
+        },
+        {
+          "find": "{ reviewed: entry.reviewed.total, rc1: entry.rc1.total, code: entry.rc1.code, withinBudget: entry.rc1.withinBudget }",
+          "replace": "{ rc1: entry.rc1.total, rc2: entry.rc2.total, code: entry.rc2.code, withinBudget: entry.rc2.withinBudget }"
+        },
+        {
+          "find": "route.rc1.withinBudget && route.rc1.errors.length === 0",
+          "replace": "route.rc2.withinBudget && route.rc2.errors.length === 0"
+        }
+      ]
+    }
+  ]
+}

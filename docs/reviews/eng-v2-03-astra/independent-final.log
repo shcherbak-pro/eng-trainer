@@ -1,0 +1,34 @@
+
+ RUN  v3.2.7 <worktree>
+
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent identity and set oracle > exhausts the 16 learned subsets of four explicit canonical identities, including linked topics and same text 11ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent identity and set oracle > counts existing non-phrase Focus entries and excludes unavailable favorites 8ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent identity and set oracle > handles empty catalogs, ghosts and cards without topics 0ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent identity and set oracle > derives actual card counts independently from IDs; supporting content creates no cards 6ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent legacy search oracle > preserves original matches and order in all four shared search domains 3422ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > unknown topic key 15ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > unknown subsection key 11ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > malformed question translation 8ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > malformed filter 9ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > malformed answer label 11ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > malformed optional answer ID 8ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > duplicate topic ID 8ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > duplicate topic title 7ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > duplicate answer ID 7ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > answer ID collides with phrase 7ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > non-category block 10ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > wrong category block 4ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > missing phrase 3ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > wrong category phrase 5ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > duplicate coverage 9ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > unlisted phrase in category 6ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > answerId is an existing phrase 16ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > supports absent topic/answer optional fields and separate pack/topic/record namespaces 3ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Actual collection service with exact same-name topic > joins Conditionals, survives hidden/removal/reimport, and publishes no failed transaction 122ms
+
+ Test Files  1 passed (1)
+      Tests  24 passed (24)
+   Start at  13:41:47
+   Duration  5.50s (transform 580ms, setup 36ms, collect 1.10s, tests 3.72s, environment 362ms, prepare 76ms)
+
+JSON report written to <worktree>/docs/reviews/eng-v2-03-astra/independent-final.json

@@ -1,0 +1,65 @@
+$ npm test
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 14 built-in packs: {"phrases":638,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":12,"drills":15,"topics":3}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ legacy projection preserves all baseline record values, array order, identities, metadata and explicit links (17.1139ms)
+✔ the projection detects a changed or added legacy record and validation rejects a moved one (84.0333ms)
+✔ the eleven released packs are byte-identical: their content-addressed URLs are unchanged (0.4188ms)
+✔ ENG-V2-03 adds exactly three topic packs after the released ones, with derived totals (0.4456ms)
+✔ learning topics: every reference is explicit and checked (91.1836ms)
+✔ learning topic records have a strict shape; packs without topics stay valid (1.6658ms)
+✔ generation is deterministic and generated files equal the validated source catalog (60.2186ms)
+✔ explicit order preserves each collection even when pack discovery order changes (2.5507ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (10.5096ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (18.4434ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (2.2876ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (1.1316ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (25.4702ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (2.0224ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (53.2665ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 609.7788
+X [ERROR] Cannot read directory "../../../../..": Access is denied.
+
+X [ERROR] Could not resolve "<repo>\\vitest.config.ts"
+
+failed to load config from <repo>\vitest.config.ts
+
+⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯
+Error: Build failed with 2 errors:
+error: Cannot read directory "../../../../..": Access is denied.
+error: Could not resolve "<repo>\\vitest.config.ts"
+    at failureErrorWithLog (<repo>\node_modules\esbuild\lib\main.js:1467:15)
+    at <repo>\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (<repo>\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (<repo>\node_modules\esbuild\lib\main.js:924:7)
+    at <repo>\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (<repo>\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (<repo>\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (<repo>\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter]
+}
+
+
+
+
+[exit 1]

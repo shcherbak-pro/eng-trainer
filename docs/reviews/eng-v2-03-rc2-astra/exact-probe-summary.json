@@ -1,0 +1,34 @@
+[
+  {
+    "build": "rc1",
+    "engine": "chromium",
+    "version": "159.0.8154.6",
+    "exit": 1,
+    "resizedComplete": false,
+    "clippedPixels": 36.890625
+  },
+  {
+    "build": "rc1",
+    "engine": "firefox",
+    "version": "159.0",
+    "exit": 1,
+    "resizedComplete": false,
+    "clippedPixels": 36.499969482421875
+  },
+  {
+    "build": "rc2",
+    "engine": "chromium",
+    "version": "159.0.8154.6",
+    "exit": 0,
+    "resizedComplete": true,
+    "clippedPixels": 0.375
+  },
+  {
+    "build": "rc2",
+    "engine": "firefox",
+    "version": "159.0",
+    "exit": 0,
+    "resizedComplete": true,
+    "clippedPixels": 0.399993896484375
+  }
+]

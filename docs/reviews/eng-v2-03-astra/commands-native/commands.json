@@ -1,0 +1,96 @@
+{
+  "platform": "win32",
+  "node": "v24.18.0",
+  "commands": [
+    {
+      "name": "check",
+      "command": "npm run check",
+      "exitCode": 0,
+      "seconds": 7,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}"
+      ]
+    },
+    {
+      "name": "test",
+      "command": "npm test",
+      "exitCode": 0,
+      "seconds": 23.9,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "ℹ tests 15",
+        "ℹ pass 15",
+        "ℹ fail 0",
+        "Test Files  28 passed (28)",
+        "Tests  335 passed (335)"
+      ]
+    },
+    {
+      "name": "check-v1",
+      "command": "npm run check:v1",
+      "exitCode": 0,
+      "seconds": 6.2,
+      "highlights": []
+    },
+    {
+      "name": "test-v1",
+      "command": "npm run test:v1",
+      "exitCode": 0,
+      "seconds": 10.4,
+      "highlights": [
+        "Test Files  3 passed (3)",
+        "Tests  68 passed (68)"
+      ]
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "exitCode": 0,
+      "seconds": 4.6,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "✓ built in 1.73s"
+      ]
+    },
+    {
+      "name": "build-site",
+      "command": "npm run build:site",
+      "exitCode": 0,
+      "seconds": 9.9,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "✓ built in 1.60s",
+        "✓ built in 1.20s",
+        "v2 fonts: 6 self-hosted font files, licences and FONTLOG published, no Google Fonts references, no replaced subsets.",
+        "v2 content: verified manifest and all 14 pack hashes, identities, counts and links.",
+        "site-dist check passed: both entry pages, their assets and data are in place."
+      ]
+    },
+    {
+      "name": "verify-content",
+      "command": "npm run verify:content",
+      "exitCode": 0,
+      "seconds": 1.4,
+      "highlights": [
+        "\"exactContentAndOrderMatch\": true,",
+        "\"v1Unchanged\": true"
+      ]
+    },
+    {
+      "name": "diff-check",
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "exitCode": 0,
+      "seconds": 0.2,
+      "highlights": []
+    },
+    {
+      "name": "new-files-whitespace",
+      "command": "(built-in check of untracked text files)",
+      "exitCode": 0,
+      "seconds": 0,
+      "highlights": [
+        "100 files, 0 problems"
+      ]
+    }
+  ]
+}

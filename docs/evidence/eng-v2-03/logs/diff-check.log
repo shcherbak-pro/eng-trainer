@@ -1,0 +1,4 @@
+$ git -c core.whitespace=cr-at-eol diff --check
+warning: in the working copy of 'scripts/verify-content-migration.mjs', LF will be replaced by CRLF the next time Git touches it
+
+[exit 0]

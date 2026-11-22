@@ -1,0 +1,18 @@
+[
+  {
+    "version": "baseline",
+    "mode": "original press/open, press/confirm, goTo/Home, each flushSync, no await or focus manipulation",
+    "errors": [
+      "TypeError: Cannot read properties of null (reading 'contains')\n    at sync (<worktree>\\docs\\reviews\\eng-v2-03-astra\\runtime\\baseline\\src\\shared\\ui\\ConfirmDialog.svelte:49:88)"
+    ],
+    "homeRendered": true
+  },
+  {
+    "version": "candidate",
+    "mode": "original press/open, press/confirm, goTo/Home, each flushSync, no await or focus manipulation",
+    "errors": [
+      "TypeError: Cannot read properties of null (reading 'contains')\n    at sync (<worktree>\\src\\shared\\ui\\ConfirmDialog.svelte:49:88)"
+    ],
+    "homeRendered": true
+  }
+]

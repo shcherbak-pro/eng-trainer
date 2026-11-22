@@ -1,0 +1,188 @@
+## feature/eng-v2-03-learning-topics
+ M content/catalog.json
+ M docs/architecture/BUILT-IN-CONTENT.md
+ M scripts/content-build.test.mjs
+ M scripts/verify-content-migration.mjs
+ M src/app.css
+ M src/app/App.svelte
+ M src/app/App.test.ts
+ M src/app/AppShell.svelte
+ M src/app/navigation.test.ts
+ M src/app/navigation.ts
+ M src/collections/service.test.ts
+ M src/content/builtIn.test.ts
+ M src/content/catalog.ts
+ M src/content/descriptionLanguage.test.ts
+ M src/content/descriptionLanguage.ts
+ M src/content/packFormat.js
+ M src/content/types.ts
+ M src/features/exercises/AnswersPage.svelte
+ M src/features/exercises/PatternsPage.svelte
+ M src/features/focus/FocusListPage.svelte
+ M src/features/home/IndexPage.svelte
+ M src/features/vocabulary/PhrasesPage.svelte
+ M src/shared/entries/PhraseCard.svelte
+ M src/state/viewState.ts
+?? content/packs/conditionals.json
+?? content/packs/interview-english.json
+?? content/packs/small-talk.json
+?? docs/evidence/eng-v2-03/README.md
+?? docs/evidence/eng-v2-03/artifact.json
+?? docs/evidence/eng-v2-03/browser-check.mjs
+?? docs/evidence/eng-v2-03/browser/results.json
+?? docs/evidence/eng-v2-03/browser/screenshots.json
+?? docs/evidence/eng-v2-03/budget-and-markup.json
+?? docs/evidence/eng-v2-03/collect-evidence.mjs
+?? docs/evidence/eng-v2-03/commands.json
+?? docs/evidence/eng-v2-03/compare-builds.mjs
+?? docs/evidence/eng-v2-03/content-totals.json
+?? docs/evidence/eng-v2-03/git-status.txt
+?? docs/evidence/eng-v2-03/id-mapping.json
+?? docs/evidence/eng-v2-03/logs/build-site.log
+?? docs/evidence/eng-v2-03/logs/build.log
+?? docs/evidence/eng-v2-03/logs/check-v1.log
+?? docs/evidence/eng-v2-03/logs/check.log
+?? docs/evidence/eng-v2-03/logs/diff-check.log
+?? docs/evidence/eng-v2-03/logs/new-files-whitespace.log
+?? docs/evidence/eng-v2-03/logs/test-v1.log
+?? docs/evidence/eng-v2-03/logs/test.log
+?? docs/evidence/eng-v2-03/logs/verify-content.log
+?? docs/evidence/eng-v2-03/preservation.json
+?? docs/evidence/eng-v2-03/run-commands.mjs
+?? docs/evidence/eng-v2-03/sanitization.json
+?? docs/evidence/eng-v2-03/sanitize.mjs
+?? docs/evidence/eng-v2-03/screenshots/chromium-desktop-index.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-desktop-topic-interview-english.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-narrow-index.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-narrow-topic-small-talk.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-collections.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-conditionals-final-subsection.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-content-error.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-enlarged-topic-small-talk.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-flashcards.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-home-details.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-index.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-interview-final-category.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-irregularVerbs.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-phrases.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-settings.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-small-talk-traveling.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-conditionals.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-interview-english.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-small-talk.png
+?? docs/evidence/eng-v2-03/screenshots/firefox-desktop-index.png
+?? docs/evidence/eng-v2-03/screenshots/firefox-phone-home-details.png
+?? docs/evidence/eng-v2-03/screenshots/firefox-phone-index.png
+?? docs/evidence/eng-v2-03/screenshots/firefox-phone-topic-small-talk.png
+?? docs/evidence/eng-v2-03/v1-preservation.json
+?? docs/handoffs/ENG-V2-03.md
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/content/catalog.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/content/packs/conditionals.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/content/packs/interview-english.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/content/packs/small-talk.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/architecture/BUILT-IN-CONTENT.md
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/README.md
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/artifact.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/browser-check.mjs
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/browser/results.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/browser/screenshots.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/budget-and-markup.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/collect-evidence.mjs
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/commands.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/compare-builds.mjs
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/content-totals.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/git-status.txt
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/id-mapping.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/build-site.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/build.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/check-v1.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/check.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/diff-check.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/new-files-whitespace.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/test-v1.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/test.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/logs/verify-content.log
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/preservation.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/run-commands.mjs
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/sanitization.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/sanitize.mjs
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-desktop-index.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-desktop-topic-interview-english.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-narrow-index.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-narrow-topic-small-talk.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-collections.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-conditionals-final-subsection.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-content-error.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-enlarged-topic-small-talk.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-flashcards.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-home-details.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-index.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-interview-final-category.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-irregularVerbs.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-phrases.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-settings.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-small-talk-traveling.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-conditionals.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-interview-english.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-small-talk.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/firefox-desktop-index.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/firefox-phone-home-details.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/firefox-phone-index.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/screenshots/firefox-phone-topic-small-talk.png
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/evidence/eng-v2-03/v1-preservation.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/docs/handoffs/ENG-V2-03.md
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/scripts/content-build.test.mjs
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/scripts/verify-content-migration.mjs
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/app.css
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/app/App.home.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/app/App.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/app/App.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/app/AppHeader.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/app/AppShell.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/app/navigation.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/app/navigation.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/collections/service.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/content/builtIn.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/content/catalog.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/content/descriptionLanguage.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/content/descriptionLanguage.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/content/packFormat.js
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/content/topics.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/content/types.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/exercises/AnswersPage.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/exercises/PatternsPage.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/focus/FocusListPage.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/home/HomeOverview.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/home/IndexPage.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/home/TopicCards.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/home/homeStats.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/home/homeStats.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/topics/TopicPage.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/topics/topicView.test.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/topics/topicView.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/features/vocabulary/PhrasesPage.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/shared/entries/AnswerCard.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/shared/entries/PatternCard.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/shared/entries/PhraseCard.svelte
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/state/viewState.ts
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/test/fixtures/eng-v2-03-editorial.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/test/fixtures/legacy-pack-urls.json
+?? docs/reviews/eng-v2-03-astra/candidate-snapshot/src/test/legacyProjection.js
+?? docs/reviews/eng-v2-03-astra/candidate.patch
+?? docs/reviews/eng-v2-03-astra/preservation-before.json
+?? docs/reviews/eng-v2-03-astra/preserve.mjs
+?? src/app/App.home.test.ts
+?? src/app/AppHeader.svelte
+?? src/content/topics.test.ts
+?? src/features/home/HomeOverview.svelte
+?? src/features/home/TopicCards.svelte
+?? src/features/home/homeStats.test.ts
+?? src/features/home/homeStats.ts
+?? src/features/topics/TopicPage.svelte
+?? src/features/topics/topicView.test.ts
+?? src/features/topics/topicView.ts
+?? src/shared/entries/AnswerCard.svelte
+?? src/shared/entries/PatternCard.svelte
+?? src/test/fixtures/eng-v2-03-editorial.json
+?? src/test/fixtures/legacy-pack-urls.json
+?? src/test/legacyProjection.js

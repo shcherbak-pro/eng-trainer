@@ -1,0 +1,3 @@
+chromium: before=true, resized=false, refocused=true, clipped outline pixels=36.890625, application errors=0
+firefox: before=true, resized=false, refocused=true, clipped outline pixels=36.499969482421875, application errors=0
+[exit 1]

@@ -1,0 +1,478 @@
+
+ RUN  v3.2.7 <worktree>
+
+ ✓ src/app/App.test.ts > application shell > preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry 3727ms
+ ✓ src/app/App.test.ts > application shell > loads the built-in content from its own base path and shows the index 649ms
+ ✓ src/app/App.test.ts > application shell > links to the preserved v1 application 553ms
+ ✓ src/app/App.test.ts > application shell > renders every screen from the catalog 1003ms
+ ✓ src/app/App.test.ts > application shell > searches the whole catalog, not only the items shown on the current page 615ms
+ ✓ src/app/App.test.ts > application shell > opens the saved screen and keeps progress and preferences after a reload 1102ms
+ ✓ src/app/App.test.ts > application shell > does not write anything while starting with existing saved state 541ms
+ ✓ src/app/App.test.ts > learning identity across Phrases, Focus and Flashcards > keeps "consequently" and "Consequently, …" apart in every view, also after a reload 1372ms
+ ✓ src/app/App.test.ts > learning identity across Phrases, Focus and Flashcards > keeps distinct entries with similar-looking text independent: C++ and C# 1503ms
+ ✓ src/app/App.test.ts > learning identity across Phrases, Focus and Flashcards > treats a phrase and its linked word-index entry as one learning identity: the phrase id 1465ms
+ ✓ src/app/App.test.ts > loading and storage errors > handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state 569ms
+ ✓ src/app/App.test.ts > loading and storage errors > shows an error and a retry when the content cannot be loaded 498ms
+ ✓ src/app/App.test.ts > loading and storage errors > stops with a visible error when the saved state cannot be opened, and can continue without saving 522ms
+ ✓ src/app/App.test.ts > loading and storage errors > shows a notice when a change cannot be saved, until saving succeeds 468ms
+ ✓ src/app/App.test.ts > blocked database upgrade at start-up (F4) > keeps the waiting guidance on "Check again" and continues by itself when the other tab closes 286ms
+ ✓ src/app/App.test.ts > blocked database upgrade at start-up (F4) > keeps "Continue without saving" in charge when the database opens later 617ms
+ ✓ src/app/App.test.ts > Settings and Reset progress > asks before resetting; Cancel changes nothing; the theme and imported collections stay 475ms
+ ✓ src/app/App.test.ts > language of study text and translations > marks built-in Ukrainian as uk, leaves imported translations unmarked, and protects English study text from translation 533ms
+ ✓ src/app/App.test.ts > language of learning block descriptions (RC1, F5) > marks English and Ukrainian descriptions by their actual language in Focus, Home and the Verbs set note 558ms
+ ✓ src/app/App.test.ts > hiding an entry from a list > keeps keyboard users in place: focus moves to the entry that took its place, and Undo returns it to the restored entry 486ms
+ ✓ src/app/App.test.ts > navigation > opens More as a sheet from a button, with links to Collections, Settings and the previous version 269ms
+ ✓ src/app/App.test.ts > navigation > marks the current screen in every navigation and moves focus to the new heading 410ms
+ ✓ src/app/App.home.test.ts > shared header (ENG-V2-03) > appears once on every screen, links Eng Trainer to Home and carries no counts; each page keeps its own h1 in main 961ms
+ ✓ src/app/App.home.test.ts > shared header (ENG-V2-03) > keeps the brand, without a link, on start-up and error screens 237ms
+ ✓ src/app/App.home.test.ts > shared header (ENG-V2-03) > shows statistics on Home only 580ms
+ ✓ src/app/App.home.test.ts > Home statistics (ENG-V2-03) > shows Your progress, then Library overview, then the learning topics and the existing practice access 236ms
+ ✓ src/app/App.home.test.ts > Home statistics (ENG-V2-03) > 6: Learn, Learn again, Undo and Reset update Home at once and match after a reload 1469ms
+ ✓ src/app/App.home.test.ts > Home statistics (ENG-V2-03) > 9: showing Home writes no summary: navigation only saves the open screen, as before 421ms
+ ✓ src/app/App.home.test.ts > Home statistics (ENG-V2-03) > 10: search, filters, pages and chips leave Home totals unchanged; Hide keeps the inventory 633ms
+ ✓ src/app/App.home.test.ts > learning topic screens (ENG-V2-03) > opens from a Home card or a deep link, as a Library screen with a visible heading 446ms
+ ✓ src/app/App.home.test.ts > learning topic screens (ENG-V2-03) > shows Conditionals as rules with examples, the Mixed Conditionals group and the usage note 363ms
+ ✓ src/app/App.home.test.ts > learning topic screens (ENG-V2-03) > filters Small Talk by situation chips together with search, in memory only, without touching progress 876ms
+ ✓ src/app/App.home.test.ts > learning topic screens (ENG-V2-03) > shows each interview category with its questions, structure, frames, labelled model answer and translation 432ms
+ ✓ src/app/App.home.test.ts > learning topic screens (ENG-V2-03) > keeps learned state, Focus and Hide on practice rows, shared with every other view 581ms
+ ✓ src/app/App.home.test.ts > learning topic screens (ENG-V2-03) > links the Phrases screen to a topic when its category is chosen, and respects the Learn Pass 427ms
+ ✓ src/app/App.home.test.ts > learning topic screens (ENG-V2-03) > opens the topic deck from "Practice this topic" even when a user collection was the selected filter 554ms
+ ✓ src/app/App.home.test.ts > learning topic screens (ENG-V2-03) > offers only the topics of the active Learn Pass 506ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > shows one card with the English side first and the deck progress 483ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > flips the card on tap and shows the translation and example 296ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > buttons > "I know it" marks the card as learned and moves on 284ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > buttons > "Keep learning" keeps the card in the pool and brings it back later 344ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > buttons > always starts the next card on the front side 345ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > keyboard > ArrowRight means "I know it" 399ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > keyboard > ArrowLeft means "Keep learning" 353ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > keyboard > Enter and Space flip the card 392ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > keyboard > leaves Enter and Space to a focused button 434ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > keyboard > does not answer while the topic selector is being used 340ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > keyboard > ignores shortcuts combined with modifier keys 326ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > swipe > right marks the card as learned and moves on 322ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > swipe > left keeps the card in the learning pool and moves on 246ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > swipe > does nothing when the swipe is too short 299ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > swipe > does nothing on a vertical move, so the page can scroll 393ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > swipe > does not flip the card when a drag ends on it 268ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > decks > shows only the cards of the selected topic 259ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > decks > shares the learned status between a topic deck and All Vocabulary 336ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > decks > keeps entries that look alike apart: learning one does not mark the other 335ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > decks > shows a completed state when every card of the deck is learned 379ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > decks > shows an empty state when a topic has no cards to study 263ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > decks > falls back to the first topic when the saved topic no longer exists 231ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > saved progress > continues with the same deck, card and counts after a reload 574ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > saved progress > resumes in the middle of a round after a reload 486ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > saved progress > respects items already marked as learned on the Phrases page 193ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > learned vocabulary > lists learned cards and returns one to the deck with "Learn again" 282ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > learned vocabulary > offers Undo after "Learn again", which restores only that card's learned flag 238ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts > Flashcards page > learned vocabulary > resets the progress of the selected topic only after confirmation 334ms
+ ✓ src/features/collections/CollectionsPage.test.ts > import help > shows formats, encoding, required columns, limits and the example without writing anything 467ms
+ ✓ src/features/collections/CollectionsPage.test.ts > file selection (F3) and validation feedback > keeps the picker usable while reading, focuses the review, and writes nothing until the import is confirmed 400ms
+ ✓ src/features/collections/CollectionsPage.test.ts > file selection (F3) and validation feedback > explains how to fix a rejected file, offers the template, focuses the summary and writes nothing 566ms
+ ✓ src/features/collections/CollectionsPage.test.ts > file selection (F3) and validation feedback > lets only the latest selection update the page, and a cancelled selection never reappears 530ms
+ ✓ src/features/collections/CollectionsPage.test.ts > file selection (F3) and validation feedback > accepts the same file name again after it has been corrected 424ms
+ ✓ src/features/collections/CollectionsPage.test.ts > saving and managing collections > reports success only after the import transaction, then exports with a readable Cyrillic file name (F6) 537ms
+ ✓ src/features/collections/CollectionsPage.test.ts > saving and managing collections > shows a rename conflict next to the form, with a reload action and no storage advice (F5) 505ms
+ ✓ src/features/collections/CollectionsPage.test.ts > focus once the final import plan is ready (RC1, F3) > focuses the named issue summary for a missing translation, and saves nothing 374ms
+ ✓ src/features/collections/CollectionsPage.test.ts > focus once the final import plan is ready (RC1, F3) > focuses the named issue summary for an invalid kind, and saves nothing 471ms
+ ✓ src/features/collections/CollectionsPage.test.ts > focus once the final import plan is ready (RC1, F3) > focuses the issue summary for a native file that would change an existing entry 435ms
+ ✓ src/features/collections/CollectionsPage.test.ts > focus once the final import plan is ready (RC1, F3) > focuses the review heading for an importable file, also when duplicates only need acknowledging 393ms
+ ✓ src/features/collections/CollectionsPage.test.ts > focus once the final import plan is ready (RC1, F3) > a superseded result with problems never takes focus from the newer preview 471ms
+ ✓ src/features/collections/CollectionsPage.test.ts > focus once the final import plan is ready (RC1, F3) > a superseded importable result never takes focus from the newer issue summary 494ms
+ ✓ src/features/collections/CollectionsPage.test.ts > focus once the final import plan is ready (RC1, F3) > a Cancel after the result has rendered, but before focus moves, keeps the cancelled result from taking focus 421ms
+ ✓ src/features/collections/CollectionsPage.test.ts > study text in the import preview (RC1, F5) > keeps the English example out of browser translation, but not its label 345ms
+stderr | src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > ordinary Learn again then Undo restores exactly the saved state, also after a reload
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > ordinary Learn again then Undo restores exactly the saved state, also after a reload 526ms
+stderr | src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > Learn again, then answering another card, then Undo keeps the newer answer and both deck records
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > Learn again, then answering another card, then Undo keeps the newer answer and both deck records 370ms
+stderr | src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > an older Undo cannot override a newer "Keep learning" on the same card, also after a reload
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > an older Undo cannot override a newer "Keep learning" on the same card, also after a reload 368ms
+stderr | src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > a retained Learn again callback cannot bring back progress after Reset confirmed in Settings
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > a retained Learn again callback cannot bring back progress after Reset confirmed in Settings 359ms
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > applies an Undo at most once, even when its callback is invoked again after a newer Learn again 203ms
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > after a storage failure, retrying saves the newer answer and never the stale Undo 167ms
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > keyboard focus around Learn again and its Undo (F2) > moves focus to the card that took the row’s place, then to the list heading 193ms
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > keyboard focus around Learn again and its Undo (F2) > Undo from the message returns focus to the restored card’s row 216ms
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > keyboard focus around Learn again and its Undo (F2) > Undo while the learned list is closed focuses the button that opens it 216ms
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > keyboard focus around Learn again and its Undo (F2) > does not move focus when the message simply expires 173ms
+ ✓ src/features/flashcards/learnAgainUndo.test.ts > keyboard focus around Learn again and its Undo (F2) > after a confirmed deck reset removes its opener, focus goes to the current card 171ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > starts with defaults when nothing is saved, and saves nothing on its own 83ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > keeps learned items, the review sequence and the selected deck after a reload 149ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > does not mark anything as learned when a card is kept in the learning pool 123ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > does not store the same learned id twice 49ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > returns items to the learning pool with "Learn again" 85ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > resets one deck without touching the others 91ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > keeps hidden items, the Focus List, Learn Passes and preferences after a reload 107ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > hiding a phrase also removes it from the Focus List and from learned items 94ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > deletes a Learn Pass from the database and falls back to the default pass 99ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > keeps search text, page numbers and the practice prompt in memory only 112ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > repairs malformed saved records and keeps the rest of the saved data 70ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > skips a saved review sequence that is an array 76ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > skips a saved review sequence that is a string 50ms
+ ✓ src/state/progress.test.ts > learning state in IndexedDB > skips a saved review sequence that is null 72ms
+ ✓ src/state/progress.test.ts > storage boundaries > uses the dedicated v2 database 70ms
+ ✓ src/state/progress.test.ts > storage boundaries > never reads or writes localStorage, so v1 data is neither used nor changed 80ms
+ ✓ src/state/progress.test.ts > storage boundaries > "Reset progress" clears the v2 learning state and keeps the theme 182ms
+ ✓ src/state/progress.test.ts > storage failures > reports "saved" only after the transaction has completed 95ms
+ ✓ src/state/progress.test.ts > storage failures > saves one user action that touches several records in one transaction 105ms
+ ✓ src/state/progress.test.ts > storage failures > does not start with defaults when the saved state cannot be read 109ms
+ ✓ src/state/progress.test.ts > storage failures > handles a read transaction that aborts by itself: no unhandled rejection, no overwrite, and a retry loads the saved state 161ms
+ ✓ src/state/progress.test.ts > storage failures > reports an initialization failure when the database cannot be opened 93ms
+ ✓ src/state/progress.test.ts > storage failures > reports a failed write, keeps the change unsaved and saves it on retry 100ms
+ ✓ src/state/progress.test.ts > storage failures > saves none of the records of a transaction that fails halfway 77ms
+ ✓ src/state/progress.test.ts > storage failures > saves earlier failed changes together with the next change 87ms
+ ✓ src/state/progress.test.ts > storage failures > says that nothing is saved when the app runs without storage 98ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent identity and set oracle > exhausts the 16 learned subsets of four explicit canonical identities, including linked topics and same text 10ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent identity and set oracle > counts existing non-phrase Focus entries and excludes unavailable favorites 9ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent identity and set oracle > handles empty catalogs, ghosts and cards without topics 0ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent identity and set oracle > derives actual card counts independently from IDs; supporting content creates no cards 6ms
+ × docs/reviews/eng-v2-03-astra/independent.test.ts > Independent legacy search oracle > preserves original matches and order in all four shared search domains 3430ms
+   → work: expected [ 'iv-024-build', …(25) ] to deeply equal [ 'iv-004-make', 'iv-008-mean', …(46) ]
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > unknown topic key 21ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > unknown subsection key 10ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > malformed question translation 11ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > malformed filter 10ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > malformed answer label 12ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > malformed optional answer ID 9ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > duplicate topic ID 10ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > duplicate topic title 10ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > duplicate answer ID 8ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > answer ID collides with phrase 5ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > non-category block 7ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > wrong category block 7ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > missing phrase 4ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > wrong category phrase 5ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > duplicate coverage 5ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > unlisted phrase in category 8ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > answerId is an existing phrase 6ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Independent malformed fixtures at generation and runtime boundaries > supports absent topic/answer optional fields and separate pack/topic/record namespaces 1ms
+ ✓ docs/reviews/eng-v2-03-astra/independent.test.ts > Actual collection service with exact same-name topic > joins Conditionals, survives hidden/removal/reimport, and publishes no failed transaction 94ms
+ ✓ src/features/collections/retainedLearning.test.ts > retained collection learning state > restores all order after deletion, answers and reload 529ms
+ ✓ src/features/collections/retainedLearning.test.ts > retained collection learning state > restores topic:Synthetic topic order after deletion, answers and reload 507ms
+ ✓ src/features/collections/retainedLearning.test.ts > retained collection learning state > preserves absent slots during shuffle and explicit reset of an available deck 198ms
+ ✓ src/features/collections/retainedLearning.test.ts > retained collection learning state > unhides only available words and restores hidden IDs after reimport 547ms
+ ✓ src/features/collections/retainedLearning.test.ts > retained collection learning state > unhides only available phrases and restores hidden IDs after reimport 610ms
+ ✓ src/shared/entries/hideUndoValidity.test.ts > Hide Undo validity (F1) > a retained Hide Undo stays invalid after Reset, also when the same entry is hidden again 411ms
+ ✓ src/shared/entries/hideUndoValidity.test.ts > Hide Undo validity (F1) > Show and newer choices on the same entry make an older Hide Undo stale 231ms
+ ✓ src/shared/entries/hideUndoValidity.test.ts > Hide Undo validity (F1) > applies a Hide Undo at most once 212ms
+ ✓ src/shared/entries/hideUndoValidity.test.ts > Hide Undo validity (F1) > a valid Undo still restores exactly what this Hide removed 235ms
+ ✓ src/shared/entries/hideUndoValidity.test.ts > Hide Undo validity (F1) > after a storage failure, retrying saves the newest choice and never the stale Undo 275ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > waits for every pack, preserves source order despite response order, and searches the last pack immediately 150ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > rejects the complete load for a pack http failure, then retries all content successfully 41ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > rejects the complete load for a pack json failure, then retries all content successfully 27ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > rejects the complete load for a pack metadata failure, then retries all content successfully 34ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > rejects the complete load for a pack counts failure, then retries all content successfully 26ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > rejects the complete load for a pack duplicate failure, then retries all content successfully 29ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > rejects the complete load for a pack reference failure, then retries all content successfully 32ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > rejects the complete load for a pack schema failure, then retries all content successfully 43ms
+ ✓ src/content/builtIn.test.ts > built-in pack loading > rejects unsafe manifest paths before issuing any pack requests 1ms
+ ✓ src/content/builtIn.test.ts > complete search through the loaded shared catalog > matches a direct field-by-field oracle for every searchable field across all packs 3154ms
+ ✓ src/features/exercises/studyText.test.ts > study text and browser translation > Answers: English questions and answers are protected; the introduction is not 408ms
+ ✓ src/features/exercises/studyText.test.ts > study text and browser translation > Speaking prompts: the current prompt and every listed prompt are protected; the hint and headings are not 256ms
+ ✓ src/features/exercises/studyText.test.ts > study text and browser translation > Reverse practice: the prompt is the exercise and is protected, whatever its language; labels are not 213ms
+ ✓ src/shared/entries/hideUndo.test.ts > Hide and Undo > Undo reverses only what hiding changed for this entry, through entry-level operations 244ms
+ ✓ src/shared/entries/hideUndo.test.ts > Hide and Undo > does not add Focus or learned state that the entry did not have, and keeps a permanent "Show" action 190ms
+ ✓ src/features/home/LearnPassManager.test.ts > deleting a Learn Pass (F2) > keeps focus on the opener when cancelled, then moves to the next pass and finally to Create a Learn Pass 273ms
+ ✓ src/features/home/LearnPassManager.test.ts > deleting a Learn Pass (F2) > after deleting the last pass in the list, focus goes to the pass before it 166ms
+ ✓ src/state/undoValidity.test.ts > Undo validity > is valid once: a second use is refused 94ms
+ ✓ src/state/undoValidity.test.ts > Undo validity > expires on newer intent for the same entry, even when the stored value does not change 72ms
+ ✓ src/state/undoValidity.test.ts > Undo validity > stays valid when a different entry changes 93ms
+ ✓ src/state/undoValidity.test.ts > Undo validity > expires a Hide Undo on any newer change of that entry: Show, Focus, learned, or another Hide 90ms
+ ✓ src/state/undoValidity.test.ts > Undo validity > keys hidden and Focus state by kind: hiding a word does not expire the Undo of a phrase with the same id 89ms
+ ✓ src/state/undoValidity.test.ts > Undo validity > expires every earlier Undo on Reset, even when the entry later returns to the same values 95ms
+ ✓ src/state/undoValidity.test.ts > Undo validity > expires every earlier Undo when the saved state is loaded again 92ms
+ ✓ src/state/undoValidity.test.ts > Undo validity > treats a deck reset as newer intent for every card of the deck, learned or not 98ms
+ ✓ src/content/catalog.test.ts > built-in content catalog > gives every entry that progress can refer to a unique id 2ms
+ ✓ src/content/catalog.test.ts > built-in content catalog > uses ids that are unique across phrases and word-index entries together 1ms
+ ✓ src/content/catalog.test.ts > built-in content catalog > links word-index entries only to phrases that exist 0ms
+ ✓ src/content/catalog.test.ts > built-in content catalog > exposes all built-in material 1ms
+ ✓ src/content/catalog.test.ts > built-in content catalog > returns everything for an empty query 0ms
+ ✓ src/content/catalog.test.ts > built-in content catalog > finds every phrase, word and verb by its own text, wherever it is in the catalog 467ms
+ ✓ src/content/catalog.test.ts > built-in content catalog > searches translations, examples, categories and tags, not only the headword 1ms
+ ✓ src/content/catalog.test.ts > built-in content catalog > does not match a query across two different fields 5ms
+ ✓ src/state/reset.test.ts > Reset progress (confirmation copy derived from the operation) > names every learning-state field and every preference except the theme 114ms
+ ✓ src/state/reset.test.ts > Reset progress (confirmation copy derived from the operation) > clears exactly what the summary lists, and keeps the theme and the imported collections 210ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > imports atomically, joins shared search and reloads with stable identities and order 19ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > round-trips native export and treats repeated import as an exact no-op 8ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > blocks conflicting IDs without changing any data 8ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > requires acknowledgment of possible duplicates and keeps separate meanings and IDs 10ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > only joins phrase and word identities through an explicit valid link 17ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > renames without changing IDs, and preserves progress on deletion and reimport 11ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > rejects stale previews after a rename, including imports with nothing new 7ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > rejects a concurrent collection update in the storage transaction 8ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > rejects invalid records instead of importing the valid subset 2ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > cannot import in the continue-without-saving mode 1ms
+ ✓ src/collections/service.test.ts > collection persistence and catalog > preserves catalog ordering after appending to an older collection and reloading 13ms
+ ✓ src/collections/service.test.ts > transaction and migration guarantees > reports a blocked upgrade and safely retries after the old connection closes 1ms
+ ✓ src/collections/service.test.ts > transaction and migration guarantees > rolls back a failed schema upgrade without losing version-1 records 4ms
+ ✓ src/collections/service.test.ts > transaction and migration guarantees > upgrades a real version-1 schema, preserving every existing record without startup writes 1ms
+ ✓ src/collections/service.test.ts > transaction and migration guarantees > rolls back after requests succeed but the native transaction aborts 70ms
+ ✓ src/collections/service.test.ts > transaction and migration guarantees > reports quota failure and rolls back metadata written before the failing entry 5ms
+ ✓ src/collections/service.test.ts > transaction and migration guarantees > rolls back a failed deletion without changing progress or the live catalog 5ms
+ ✓ src/collections/service.test.ts > transaction and migration guarantees > refuses corrupt saved entries rather than silently dropping data 3ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > implements every editorial item exactly, with the documented ID mapping, in source order 5ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > has the agreed counts: 18 conditional examples, 36 Small Talk phrases and 18 interview frames 1ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > keeps the supporting material: rules, notes, situations, questions, structures and model answers 1ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > uses English for every label, rule and note, and Ukrainian for every translation 3ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > gives every practice item a stable, namespaced, unique ID; no released ID changes and no text is merged 2ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > makes only the 72 practice items learnable: one card each, with the phrase ID 6ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > adds the three topics to the flashcard topic selector; subsections and situations are not topics 3ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > opens each topic from its own phrase-category block with an English description 1ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > finds new items through the shared phrase search by English, Ukrainian, topic and situation 27ms
+ ✓ src/content/topics.test.ts > learning topic content (ENG-V2-03) > keeps every released search result and its order when results are projected onto released IDs 86ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics selectors > 1: counts a phrase and its explicitly linked word once; a same-text word with its own ID stays independent 2ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics selectors > 2: advances both topics of a card in two topics, counting the card once globally 1ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics selectors > 3: keeps a hidden, unlearned item in the denominator, so its topic is not complete 0ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics selectors > 8: handles empty sets and learned IDs that no longer exist without false completion 0ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics selectors > shows whole percentages rounded down: never 100% until everything is learned, "<1%" for a start 0ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics selectors > 10: derives totals from the whole catalog, so search, filters and pages cannot change them 17ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics selectors > describes the real library: one card per phrase, the three new topics included, nothing summed 11ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics selectors > counts Focus entries that are in the catalog, as the navigation does 4ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics with imported collections > 4: retained learned IDs of a removed collection stop counting, and count again after a native reimport 30ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics with imported collections > 5: importing a new unlearned item lowers coverage without clearing any learned state 15ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics with imported collections > 7: a failed import or a failed removal leaves every count unchanged 23ms
+ ✓ src/features/home/homeStats.test.ts > Home statistics with imported collections > 9: computing statistics writes nothing 48ms
+ ✓ src/storage/openStorage.test.ts > blocked database upgrade (F4) > keeps waiting with guidance and continues by itself when the other tab closes 29ms
+ ✓ src/storage/openStorage.test.ts > blocked database upgrade (F4) > lets a retry join the waiting request: one IndexedDB request, and only the latest caller gets the connection 27ms
+ ✓ src/storage/openStorage.test.ts > blocked database upgrade (F4) > closes a connection that opens after the caller gave up, so a late result cannot take over 66ms
+ ✓ src/storage/openStorage.test.ts > blocked database upgrade (F4) > keeps the released behaviour for callers without a waiting handler: the blocked upgrade fails visibly 2ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards > creates one card for a phrase and the word-index entry linked to it 2ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards > keeps the same text listed under two ids as two cards, each with its own topic 1ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards > keeps word-index entries without a phrase as their own cards 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards > fills the card from both sources 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards > does not show a pronunciation that only repeats the term 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards > ignores malformed entries instead of failing 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > does not join entries whose text differs only in punctuation or case 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > learning one of two similar-looking entries leaves the other one to learn 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > does not join identical text listed under two phrase ids 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > joins a word-index entry to its phrase through sourcePhraseId only, also when the texts differ 1ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > does not join a word-index entry to a phrase because the text is the same 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > makes a word-index entry its own card when its sourcePhraseId names no phrase 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > keeps every word-index entry linked to one phrase on that phrase card 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > a phrase card is learned through the phrase id only, never through its linked word-index id 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > a card without a phrase is learned through its own word-index id 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > card identity > never creates two cards with one id 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards with the real dataset > creates exactly one card per phrase, in dataset order, with unique ids 1ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards with the real dataset > accounts for every phrase and word-index entry exactly once 1ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards with the real dataset > puts every word-index entry on the card of the phrase it names in sourcePhraseId 10ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards with the real dataset > keeps "consequently" and "Consequently, …" as two cards with separate progress 1ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards with the real dataset > shows every entry whose text also exists under another id as its own card 2ms
+ ✓ src/features/flashcards/flashcards.test.ts > buildFlashcards with the real dataset > gives every card a translation and at least one topic from the dataset categories 28ms
+ ✓ src/features/flashcards/flashcards.test.ts > deck filtering > All Vocabulary contains every card once 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > deck filtering > By Topic contains only the cards of that topic 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > deck filtering > uses a separate storage key per deck 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > summarizeDeck > starts with every card in the learning pool 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > summarizeDeck > excludes learned cards from the learning pool 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > summarizeDeck > keeps the learned status the same in All Vocabulary and in the topic deck of the card, and nowhere else 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > summarizeDeck > leaves out items hidden on the Phrases or Words page 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > summarizeDeck > leaves out a phrase card when its linked word-index entry is hidden, and only that card 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > summarizeDeck > ignores stale ids that are not in the dataset any more 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > starts in deck order at the first card 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > removes a known card and shows the next one 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > keeps a card that is still being learned and shows it again on the next round 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > finishes when the last card is known 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > keeps a single remaining card on screen when it is still being learned 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > ignores an answer for a card that is not in the sequence 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > drops saved cards that left the deck and keeps the position on the same card 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > adds cards that are new or marked "Learn again" at the end 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > recovers from malformed saved sequences 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > review sequence > shuffles without losing or duplicating cards 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > temporarily unavailable user cards > hides absent cards while retaining their order after an answer and restore 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > temporarily unavailable user cards > removes only learned/hidden known cards and appends genuinely new IDs 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > temporarily unavailable user cards > wraps to the first available card, not a ghost before it 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > temporarily unavailable user cards > keeps an exhausted deck empty on screen but restores absent cards later 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > temporarily unavailable user cards > shuffles available slots without moving absent cards and keeps the visible cursor 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > temporarily unavailable user cards > does not duplicate slots and leaves sessions with no absent cards unchanged 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > input mapping > maps keyboard keys to actions 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > input mapping > maps a swipe to an answer only after the threshold 0ms
+ ✓ src/features/flashcards/flashcards.test.ts > input mapping > treats only clearly horizontal moves as a swipe so vertical scrolling keeps working 0ms
+ ✓ src/collections/serviceErrors.test.ts > collection errors are typed, and the advice fits the failure (F5) > reports a change made in another tab as a conflict, without storage-space advice 20ms
+ ✓ src/collections/serviceErrors.test.ts > collection errors are typed, and the advice fits the failure (F5) > suggests freeing storage space only when the browser refused to store more data 3ms
+ ✓ src/collections/serviceErrors.test.ts > collection errors are typed, and the advice fits the failure (F5) > reports other failed transactions as "not saved" without blaming storage space 2ms
+ ✓ src/collections/serviceErrors.test.ts > collection errors are typed, and the advice fits the failure (F5) > separates unavailable storage, stale previews and validation 7ms
+ ✓ src/collections/importErrors.test.ts > typed import errors (messages unchanged) > names the exact missing column and offers the template 2ms
+ ✓ src/collections/importErrors.test.ts > typed import errors (messages unchanged) > lists unsupported or repeated columns 1ms
+ ✓ src/collections/importErrors.test.ts > typed import errors (messages unchanged) > separates unsupported files, damaged JSON and JSON that is not an eng-trainer export 1ms
+ ✓ src/collections/importErrors.test.ts > typed import errors (messages unchanged) > states the limits that were exceeded 14ms
+ ✓ src/collections/importErrors.test.ts > typed import errors (messages unchanged) > recognizes empty files, header-only files and other encodings 1ms
+ ✓ src/collections/importErrors.test.ts > typed import errors (messages unchanged) > reports a quoting problem with the parser's record number 0ms
+ ✓ src/collections/importErrors.test.ts > record-level issues > names the record and the column, counting records rather than lines 1ms
+ ✓ src/collections/importErrors.test.ts > record-level issues > describes field-count mismatches without inventing a column 0ms
+ ✓ src/collections/importErrors.test.ts > record-level issues > uses entry numbers and JSON field names for native files 0ms
+ ✓ src/collections/importErrors.test.ts > record-level issues > keeps whole-import validation: an invalid record is reported, never silently dropped 1ms
+ ✓ src/collections/importGuide.test.ts > import help examples > uses the agreed minimal example, and the real parser accepts it 2ms
+ ✓ src/collections/importGuide.test.ts > import help examples > downloads the same text as the displayed and copied example, with a UTF-8 byte order mark 0ms
+ ✓ src/collections/importGuide.test.ts > import help examples > describes the detailed example exactly as the parser reads it: explicit phrase, quoting and defaults 0ms
+ ✓ src/collections/importGuide.test.ts > import help examples > accepts the semicolon variant that the help text mentions 0ms
+ ✓ src/collections/importGuide.test.ts > import help examples > states the columns, kinds and default that the parser enforces 0ms
+ ✓ src/collections/importGuide.test.ts > import help examples > reads the limits from the import contract and keeps its boundaries 18ms
+ ✓ src/collections/importGuide.test.ts > native JSON reference > is produced by the real exporter and imports cleanly 1ms
+ ✓ src/collections/importGuide.test.ts > native JSON reference > never shares identities: every reference gets new collection and entry IDs 0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > reads UTF-8 BOM, quoted commas, quotes, multiline examples and CRLF 2ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > supports semicolons, case-insensitive headers and optional columns 0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > rejects malformed quoting: english,translation
+"broken,x 1ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > rejects malformed quoting: english,translation
+a"b,x 0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > rejects malformed quoting: english,translation
+"a"bad,x 0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > rejects invalid headers or empty files: english,other
+x,y 0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > rejects invalid headers or empty files: english,translation,translation
+x,y,z 0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > rejects invalid headers or empty files: english,translation,unknown
+x,y,z 0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > rejects invalid headers or empty files:  0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > reports invalid records without silently accepting a partial import 1ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > retains distinct IDs for identical text and multiple meanings 0ms
+ ✓ src/collections/format.test.ts > CSV vocabulary imports > handles a trailing empty field and quoted delimiters 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > round-trips IDs, kinds, topics, examples and explicit links exactly 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > rejects invalid envelopes: null 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > rejects invalid envelopes: %j 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > rejects invalid envelopes: {} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > rejects invalid envelopes: {"format":"eng-trainer-vocabulary","version":2,"collection":{"id":"user:00000000-0000-4000-8000-000000000001","name":"Synthetic vocabulary","description":"Local test data"},"entries":[{"id":"user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000001","kind":"word","english":"Example 1","translation":"Переклад 1","topic":"Synthetic topic","examples":[{"en":"This is example 1.","translation":"Це приклад 1."}]},{"id":"user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000002","kind":"phrase","english":"Example 2","translation":"Переклад 2","topic":"Synthetic topic","examples":[{"en":"This is example 2.","translation":"Це приклад 2."}]}]} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > rejects invalid envelopes: {"format":"other","version":1,"collection":{"id":"user:00000000-0000-4000-8000-000000000001","name":"Synthetic vocabulary","description":"Local test data"},"entries":[{"id":"user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000001","kind":"word","english":"Example 1","translation":"Переклад 1","topic":"Synthetic topic","examples":[{"en":"This is example 1.","translation":"Це приклад 1."}]},{"id":"user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000002","kind":"phrase","english":"Example 2","translation":"Переклад 2","topic":"Synthetic topic","examples":[{"en":"This is example 2.","translation":"Це приклад 2."}]}]} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > rejects invalid envelopes: {"format":"eng-trainer-vocabulary","version":1,"collection":{"id":"user:00000000-0000-4000-8000-000000000001","name":"Synthetic vocabulary","description":"Local test data"},"entries":[{"id":"user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000001","kind":"word","english":"Example 1","translation":"Переклад 1","topic":"Synthetic topic","examples":[{"en":"This is example 1.","translation":"Це приклад 1."}]},{"id":"user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000002","kind":"phrase","english":"Example 2","translation":"Переклад 2","topic":"Synthetic topic","examples":[{"en":"This is example 2.","translation":"Це приклад 2."}]}],"unsupported":true} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > rejects invalid JSON and unsupported file extensions 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"english":""} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"translation":4} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"english":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"kind":"verb"} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"id":"phrase-001"} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"id":"__proto__"} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"topic":["topic"]} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"english":"bad\u0000text"} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"examples":[{"en":""}]} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"examples":[{"en":"example","html":true}]} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"sourcePhraseId":"phrase-001"} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > reports invalid entries: {"kind":"phrase","sourcePhraseId":"user:00000000-0000-4000-8000-000000000001:entry:00000000-0000-4000-8000-000000000002"} 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > rejects duplicate IDs and dangling links 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > keeps HTML-looking text as inert strings 0ms
+ ✓ src/collections/format.test.ts > native vocabulary JSON > limits file bytes and record count before persistence 6ms
+ ✓ src/collections/fileName.test.ts > export file names (F6) > keeps Cyrillic letters and digits 5ms
+ ✓ src/collections/fileName.test.ts > export file names (F6) > gives different Ukrainian names different files 1ms
+ ✓ src/collections/fileName.test.ts > export file names (F6) > replaces path separators and reserved characters 1ms
+ ✓ src/collections/fileName.test.ts > export file names (F6) > removes control characters and falls back when nothing usable remains 0ms
+ ✓ src/collections/fileName.test.ts > export file names (F6) > limits the name to 80 characters without splitting a character 1ms
+ ✓ src/collections/fileName.test.ts > export file names (F6) > protects Windows device names 0ms
+ ✓ src/features/topics/topicView.test.ts > topic screen view model > shows every subsection and practice row in topic order without filters 2ms
+ ✓ src/features/topics/topicView.test.ts > topic screen view model > shows one situation for a selected chip, and everything for "All" or an unknown chip 1ms
+ ✓ src/features/topics/topicView.test.ts > topic screen view model > combines a situation chip with the shared search, and leaves out subsections without a match 1ms
+ ✓ src/features/topics/topicView.test.ts > topic screen view model > leaves hidden rows out unless hidden items are shown, keeping the subsection itself 0ms
+ ✓ src/features/topics/topicView.test.ts > topic screen view model > puts a group heading on the first visible subsection of the group only 0ms
+ ✓ src/features/topics/topicView.test.ts > topic screen view model > resolves each interview subsection to its model answer 0ms
+ ✓ src/features/topics/topicView.test.ts > topic screen view model > recognizes bracket placeholders as literal teaching text 0ms
+ ✓ src/app/navigation.test.ts > route mapping to the five destinations > keeps every released hash route, adds Settings, and places each screen in exactly one destination 1ms
+ ✓ src/app/navigation.test.ts > route mapping to the five destinations > puts the speaking prompts (#practice) inside the Practice group, under its own name 0ms
+ ✓ src/app/navigation.test.ts > route mapping to the five destinations > always offers Focus, Collections and Settings, and only the screens a Learn Pass makes available 1ms
+ ✓ src/app/navigation.test.ts > learning topic addresses (ENG-V2-03) > uses #topic/<id>, which cannot collide with a released page id 1ms
+ ✓ src/app/navigation.test.ts > learning topic addresses (ENG-V2-03) > places topic screens in the Library and titles them by the topic, without a new destination 1ms
+ ✓ src/app/navigation.test.ts > learning topic addresses (ENG-V2-03) > offers a topic screen only when the active Learn Pass contains its block, and opens it from that block 1ms
+ ✓ src/content/descriptionLanguage.test.ts > language of built-in block descriptions (RC1, F5) > classifies every built-in learning block, and nothing else 1ms
+ ✓ src/content/descriptionLanguage.test.ts > language of built-in block descriptions (RC1, F5) > agrees with the text that was classified: English descriptions are English, Ukrainian ones Ukrainian 2ms
+ ✓ src/content/descriptionLanguage.test.ts > language of built-in block descriptions (RC1, F5) > leaves an unknown block unclassified instead of guessing 0ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  docs/reviews/eng-v2-03-astra/independent.test.ts > Independent legacy search oracle > preserves original matches and order in all four shared search domains
+AssertionError: work: expected [ 'iv-024-build', …(25) ] to deeply equal [ 'iv-004-make', 'iv-008-mean', …(46) ]
+
+- Expected
++ Received
+
+@@ -1,8 +1,6 @@
+  [
+-   "iv-004-make",
+-   "iv-008-mean",
+    "iv-024-build",
+    "iv-025-choose",
+    "iv-026-deal",
+    "iv-027-find",
+    "iv-028-keep",
+@@ -13,24 +11,10 @@
+    "iv-033-set",
+    "iv-034-take",
+    "iv-035-teach",
+    "iv-036-give",
+    "iv-037-run",
+-   "iv-043-fly",
+-   "iv-044-ride",
+-   "iv-050-swim",
+-   "iv-051-buy",
+-   "iv-071-split",
+-   "iv-074-tear",
+-   "iv-078-wear",
+-   "iv-093-burn",
+-   "iv200-038-dream",
+-   "iv200-113-lie",
+-   "iv200-129-wake",
+-   "iv200-153-grow",
+-   "iv200-160-plead",
+-   "iv200-171-sit",
+    "iv-ai-certification-001-proceed",
+    "iv-ai-certification-002-deploy",
+    "iv-ai-certification-003-release",
+    "iv-ai-certification-004-launch",
+    "iv-ai-certification-005-expand",
+@@ -39,12 +23,6 @@
+    "iv-ai-certification-008-automate",
+    "iv-ai-certification-009-generate",
+    "iv-ai-certification-010-remediate",
+    "iv-ai-certification-011-recover",
+    "iv-ai-certification-012-resume",
+-   "iv-ai-certification-013-validate",
+-   "iv-ai-certification-016-measure",
+-   "iv-ai-certification-022-flag",
+-   "iv-ai-certification-027-synthesize",
+-   "iv-ai-certification-035-restrict",
+-   "iv-ai-certification-039-escalate",
+  ]
+
+ ❯ docs/reviews/eng-v2-03-astra/independent.test.ts:86:94
+     84|       for (const query of queries) {
+     85|         const expected = items.filter((v: any) => fields(v).some((f: a…
+     86|         expect(search(query).filter((v: any) => ids.has(v.id)).map((v:…
+       |                                                                                              ^
+     87|       }
+     88|     }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 28 passed (29)
+      Tests  1 failed | 358 passed (359)
+   Start at  13:39:30
+   Duration  91.19s (transform 3.13s, setup 806ms, collect 4.87s, tests 63.77s, environment 12.68s, prepare 2.05s)
+
+JSON report written to <worktree>/docs/reviews/eng-v2-03-astra/independent-tests.json

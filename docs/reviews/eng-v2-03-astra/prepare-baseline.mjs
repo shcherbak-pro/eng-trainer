@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { execFileSync, spawnSync } from 'node:child_process';
+const root = process.cwd();
+const review = path.join(root, 'docs/reviews/eng-v2-03-astra');
+const dest = path.join(review, 'runtime/baseline');
+if (fs.existsSync(dest)) throw new Error('Baseline already extracted');
+fs.mkdirSync(dest, { recursive: true });
+const archive = path.join(review, 'runtime/baseline.tar');
+execFileSync('git', ['archive', '--format=tar', `--output=${archive}`, '03f1267', 'content', 'public', 'scripts', 'src', 'index.html', 'package.json', 'package-lock.json', 'svelte.config.js', 'tsconfig.json', 'tsconfig.node.json', 'vite.config.ts', 'vitest.config.ts']);
+execFileSync('tar', ['-xf', archive, '-C', dest]);
+fs.symlinkSync(path.join(root, 'node_modules'), path.join(dest, 'node_modules'), 'junction');
+const result = spawnSync('npm run build', { shell: true, cwd: dest, encoding: 'utf8' });
+fs.writeFileSync(path.join(review, 'baseline-build.log'), `${result.stdout ?? ''}${result.stderr ?? ''}`.replaceAll(root, '<worktree>'));
+console.log('baseline build', result.status);
+process.exitCode = result.status ?? 1;

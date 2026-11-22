@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 <repo>
+
+ ✓ docs/reviews/eng-v2-03-rc2-astra/independent.test.ts (24 tests) 2959ms
+   ✓ Independent legacy search oracle > preserves original matches and order in all four shared search domains  2775ms
+
+ Test Files  1 passed (1)
+      Tests  24 passed (24)
+   Start at  18:26:44
+   Duration  4.81s (transform 441ms, setup 74ms, collect 804ms, tests 2.96s, environment 631ms, prepare 93ms)
+
+JSON report written to <repo>/docs/reviews/eng-v2-03-rc2-astra/independent.json
+
+[exit 0]

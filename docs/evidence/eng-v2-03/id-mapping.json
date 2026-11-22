@@ -1,0 +1,553 @@
+{
+  "rule": "catalog ID = pack ID + the editorial source ID without its short prefix (cond-, small-, interview-)",
+  "items": [
+    {
+      "topic": "Conditionals",
+      "subsection": "Zero Conditional",
+      "subsectionKey": "zero-conditional",
+      "sourceId": "cond-zero-01",
+      "catalogId": "conditionals-zero-01"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Zero Conditional",
+      "subsectionKey": "zero-conditional",
+      "sourceId": "cond-zero-02",
+      "catalogId": "conditionals-zero-02"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Zero Conditional",
+      "subsectionKey": "zero-conditional",
+      "sourceId": "cond-zero-03",
+      "catalogId": "conditionals-zero-03"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "First Conditional",
+      "subsectionKey": "first-conditional",
+      "sourceId": "cond-first-01",
+      "catalogId": "conditionals-first-01"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "First Conditional",
+      "subsectionKey": "first-conditional",
+      "sourceId": "cond-first-02",
+      "catalogId": "conditionals-first-02"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "First Conditional",
+      "subsectionKey": "first-conditional",
+      "sourceId": "cond-first-03",
+      "catalogId": "conditionals-first-03"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Second Conditional",
+      "subsectionKey": "second-conditional",
+      "sourceId": "cond-second-01",
+      "catalogId": "conditionals-second-01"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Second Conditional",
+      "subsectionKey": "second-conditional",
+      "sourceId": "cond-second-02",
+      "catalogId": "conditionals-second-02"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Second Conditional",
+      "subsectionKey": "second-conditional",
+      "sourceId": "cond-second-03",
+      "catalogId": "conditionals-second-03"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Third Conditional",
+      "subsectionKey": "third-conditional",
+      "sourceId": "cond-third-01",
+      "catalogId": "conditionals-third-01"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Third Conditional",
+      "subsectionKey": "third-conditional",
+      "sourceId": "cond-third-02",
+      "catalogId": "conditionals-third-02"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Third Conditional",
+      "subsectionKey": "third-conditional",
+      "sourceId": "cond-third-03",
+      "catalogId": "conditionals-third-03"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Mixed Conditionals — Past condition, present result",
+      "subsectionKey": "mixed-past-to-present",
+      "sourceId": "cond-mixed-past-01",
+      "catalogId": "conditionals-mixed-past-01"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Mixed Conditionals — Past condition, present result",
+      "subsectionKey": "mixed-past-to-present",
+      "sourceId": "cond-mixed-past-02",
+      "catalogId": "conditionals-mixed-past-02"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Mixed Conditionals — Past condition, present result",
+      "subsectionKey": "mixed-past-to-present",
+      "sourceId": "cond-mixed-past-03",
+      "catalogId": "conditionals-mixed-past-03"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Mixed Conditionals — General condition, past result",
+      "subsectionKey": "mixed-general-to-past",
+      "sourceId": "cond-mixed-present-01",
+      "catalogId": "conditionals-mixed-present-01"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Mixed Conditionals — General condition, past result",
+      "subsectionKey": "mixed-general-to-past",
+      "sourceId": "cond-mixed-present-02",
+      "catalogId": "conditionals-mixed-present-02"
+    },
+    {
+      "topic": "Conditionals",
+      "subsection": "Mixed Conditionals — General condition, past result",
+      "subsectionKey": "mixed-general-to-past",
+      "sourceId": "cond-mixed-present-03",
+      "catalogId": "conditionals-mixed-present-03"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Meeting new people",
+      "subsectionKey": "meeting-new-people",
+      "sourceId": "small-meet-01",
+      "catalogId": "small-talk-meet-01"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Meeting new people",
+      "subsectionKey": "meeting-new-people",
+      "sourceId": "small-meet-02",
+      "catalogId": "small-talk-meet-02"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Meeting new people",
+      "subsectionKey": "meeting-new-people",
+      "sourceId": "small-meet-03",
+      "catalogId": "small-talk-meet-03"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Meeting new people",
+      "subsectionKey": "meeting-new-people",
+      "sourceId": "small-meet-04",
+      "catalogId": "small-talk-meet-04"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Meeting new people",
+      "subsectionKey": "meeting-new-people",
+      "sourceId": "small-meet-05",
+      "catalogId": "small-talk-meet-05"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Meeting new people",
+      "subsectionKey": "meeting-new-people",
+      "sourceId": "small-meet-06",
+      "catalogId": "small-talk-meet-06"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Before a work meeting",
+      "subsectionKey": "before-a-meeting",
+      "sourceId": "small-meeting-01",
+      "catalogId": "small-talk-meeting-01"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Before a work meeting",
+      "subsectionKey": "before-a-meeting",
+      "sourceId": "small-meeting-02",
+      "catalogId": "small-talk-meeting-02"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Before a work meeting",
+      "subsectionKey": "before-a-meeting",
+      "sourceId": "small-meeting-03",
+      "catalogId": "small-talk-meeting-03"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Before a work meeting",
+      "subsectionKey": "before-a-meeting",
+      "sourceId": "small-meeting-04",
+      "catalogId": "small-talk-meeting-04"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Before a work meeting",
+      "subsectionKey": "before-a-meeting",
+      "sourceId": "small-meeting-05",
+      "catalogId": "small-talk-meeting-05"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Before a work meeting",
+      "subsectionKey": "before-a-meeting",
+      "sourceId": "small-meeting-06",
+      "catalogId": "small-talk-meeting-06"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Coffee and lunch breaks",
+      "subsectionKey": "coffee-and-lunch",
+      "sourceId": "small-coffee-01",
+      "catalogId": "small-talk-coffee-01"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Coffee and lunch breaks",
+      "subsectionKey": "coffee-and-lunch",
+      "sourceId": "small-coffee-02",
+      "catalogId": "small-talk-coffee-02"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Coffee and lunch breaks",
+      "subsectionKey": "coffee-and-lunch",
+      "sourceId": "small-coffee-03",
+      "catalogId": "small-talk-coffee-03"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Coffee and lunch breaks",
+      "subsectionKey": "coffee-and-lunch",
+      "sourceId": "small-coffee-04",
+      "catalogId": "small-talk-coffee-04"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Coffee and lunch breaks",
+      "subsectionKey": "coffee-and-lunch",
+      "sourceId": "small-coffee-05",
+      "catalogId": "small-talk-coffee-05"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Coffee and lunch breaks",
+      "subsectionKey": "coffee-and-lunch",
+      "sourceId": "small-coffee-06",
+      "catalogId": "small-talk-coffee-06"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Free time and weekends",
+      "subsectionKey": "free-time-and-weekends",
+      "sourceId": "small-weekend-01",
+      "catalogId": "small-talk-weekend-01"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Free time and weekends",
+      "subsectionKey": "free-time-and-weekends",
+      "sourceId": "small-weekend-02",
+      "catalogId": "small-talk-weekend-02"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Free time and weekends",
+      "subsectionKey": "free-time-and-weekends",
+      "sourceId": "small-weekend-03",
+      "catalogId": "small-talk-weekend-03"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Free time and weekends",
+      "subsectionKey": "free-time-and-weekends",
+      "sourceId": "small-weekend-04",
+      "catalogId": "small-talk-weekend-04"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Free time and weekends",
+      "subsectionKey": "free-time-and-weekends",
+      "sourceId": "small-weekend-05",
+      "catalogId": "small-talk-weekend-05"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Free time and weekends",
+      "subsectionKey": "free-time-and-weekends",
+      "sourceId": "small-weekend-06",
+      "catalogId": "small-talk-weekend-06"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Conferences and events",
+      "subsectionKey": "conferences-and-events",
+      "sourceId": "small-event-01",
+      "catalogId": "small-talk-event-01"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Conferences and events",
+      "subsectionKey": "conferences-and-events",
+      "sourceId": "small-event-02",
+      "catalogId": "small-talk-event-02"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Conferences and events",
+      "subsectionKey": "conferences-and-events",
+      "sourceId": "small-event-03",
+      "catalogId": "small-talk-event-03"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Conferences and events",
+      "subsectionKey": "conferences-and-events",
+      "sourceId": "small-event-04",
+      "catalogId": "small-talk-event-04"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Conferences and events",
+      "subsectionKey": "conferences-and-events",
+      "sourceId": "small-event-05",
+      "catalogId": "small-talk-event-05"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Conferences and events",
+      "subsectionKey": "conferences-and-events",
+      "sourceId": "small-event-06",
+      "catalogId": "small-talk-event-06"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Traveling",
+      "subsectionKey": "traveling",
+      "sourceId": "small-travel-01",
+      "catalogId": "small-talk-travel-01"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Traveling",
+      "subsectionKey": "traveling",
+      "sourceId": "small-travel-02",
+      "catalogId": "small-talk-travel-02"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Traveling",
+      "subsectionKey": "traveling",
+      "sourceId": "small-travel-03",
+      "catalogId": "small-talk-travel-03"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Traveling",
+      "subsectionKey": "traveling",
+      "sourceId": "small-travel-04",
+      "catalogId": "small-talk-travel-04"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Traveling",
+      "subsectionKey": "traveling",
+      "sourceId": "small-travel-05",
+      "catalogId": "small-talk-travel-05"
+    },
+    {
+      "topic": "Small Talk",
+      "subsection": "Traveling",
+      "subsectionKey": "traveling",
+      "sourceId": "small-travel-06",
+      "catalogId": "small-talk-travel-06"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Comparing concepts",
+      "subsectionKey": "comparing-concepts",
+      "sourceId": "interview-compare-01",
+      "catalogId": "interview-english-compare-01"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Comparing concepts",
+      "subsectionKey": "comparing-concepts",
+      "sourceId": "interview-compare-02",
+      "catalogId": "interview-english-compare-02"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Comparing concepts",
+      "subsectionKey": "comparing-concepts",
+      "sourceId": "interview-compare-03",
+      "catalogId": "interview-english-compare-03"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Explaining how something works",
+      "subsectionKey": "explaining-how-it-works",
+      "sourceId": "interview-explain-01",
+      "catalogId": "interview-english-explain-01"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Explaining how something works",
+      "subsectionKey": "explaining-how-it-works",
+      "sourceId": "interview-explain-02",
+      "catalogId": "interview-english-explain-02"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Explaining how something works",
+      "subsectionKey": "explaining-how-it-works",
+      "sourceId": "interview-explain-03",
+      "catalogId": "interview-english-explain-03"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Defining a concept",
+      "subsectionKey": "defining-a-concept",
+      "sourceId": "interview-define-01",
+      "catalogId": "interview-english-define-01"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Defining a concept",
+      "subsectionKey": "defining-a-concept",
+      "sourceId": "interview-define-02",
+      "catalogId": "interview-english-define-02"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Defining a concept",
+      "subsectionKey": "defining-a-concept",
+      "sourceId": "interview-define-03",
+      "catalogId": "interview-english-define-03"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Describing a process",
+      "subsectionKey": "describing-a-process",
+      "sourceId": "interview-process-01",
+      "catalogId": "interview-english-process-01"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Describing a process",
+      "subsectionKey": "describing-a-process",
+      "sourceId": "interview-process-02",
+      "catalogId": "interview-english-process-02"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Describing a process",
+      "subsectionKey": "describing-a-process",
+      "sourceId": "interview-process-03",
+      "catalogId": "interview-english-process-03"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Discussing options and trade-offs",
+      "subsectionKey": "discussing-options",
+      "sourceId": "interview-options-01",
+      "catalogId": "interview-english-options-01"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Discussing options and trade-offs",
+      "subsectionKey": "discussing-options",
+      "sourceId": "interview-options-02",
+      "catalogId": "interview-english-options-02"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Discussing options and trade-offs",
+      "subsectionKey": "discussing-options",
+      "sourceId": "interview-options-03",
+      "catalogId": "interview-english-options-03"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Describing experience and solving problems",
+      "subsectionKey": "describing-experience",
+      "sourceId": "interview-experience-01",
+      "catalogId": "interview-english-experience-01"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Describing experience and solving problems",
+      "subsectionKey": "describing-experience",
+      "sourceId": "interview-experience-02",
+      "catalogId": "interview-english-experience-02"
+    },
+    {
+      "topic": "Interview English",
+      "subsection": "Describing experience and solving problems",
+      "subsectionKey": "describing-experience",
+      "sourceId": "interview-experience-03",
+      "catalogId": "interview-english-experience-03"
+    }
+  ],
+  "answers": [
+    {
+      "subsection": "Comparing concepts",
+      "answerId": "interview-english-answer-compare"
+    },
+    {
+      "subsection": "Explaining how something works",
+      "answerId": "interview-english-answer-explain"
+    },
+    {
+      "subsection": "Defining a concept",
+      "answerId": "interview-english-answer-define"
+    },
+    {
+      "subsection": "Describing a process",
+      "answerId": "interview-english-answer-process"
+    },
+    {
+      "subsection": "Discussing options and trade-offs",
+      "answerId": "interview-english-answer-options"
+    },
+    {
+      "subsection": "Describing experience and solving problems",
+      "answerId": "interview-english-answer-experience"
+    }
+  ],
+  "blocks": [
+    {
+      "topic": "Conditionals",
+      "blockId": "topic-conditionals",
+      "address": "#topic/conditionals"
+    },
+    {
+      "topic": "Small Talk",
+      "blockId": "topic-small-talk",
+      "address": "#topic/small-talk"
+    },
+    {
+      "topic": "Interview English",
+      "blockId": "topic-interview-english",
+      "address": "#topic/interview-english"
+    }
+  ],
+  "reuse": "No editorial item equals released vocabulary text, so every item is a new phrase record. Near matches (for example \"The main difference is that …\", \"For example,…\", \"As a result, …\") stay separate. One typical question equals a released speaking prompt; neither is a card."
+}

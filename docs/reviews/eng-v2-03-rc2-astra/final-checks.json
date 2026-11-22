@@ -1,0 +1,1138 @@
+{
+  "verdict": "READY_FOR_PR",
+  "F1_RC1": "CLOSED",
+  "staticDelta": {
+    "onlyResizeListenerRegistrationRemovalAndComments": true,
+    "previousTestsPreserved": 3,
+    "newTests": 7,
+    "callbackTargetAndCaptureMatch": true,
+    "calculationsAndGuardsUnchanged": true
+  },
+  "preservation": true,
+  "allRunnerAdaptationsVerified": true,
+  "builtArtifactHashesVerified": true,
+  "projectGateExitCodes": [
+    {
+      "name": "check",
+      "exitCode": 0
+    },
+    {
+      "name": "test",
+      "exitCode": 0
+    },
+    {
+      "name": "check-v1",
+      "exitCode": 0
+    },
+    {
+      "name": "test-v1",
+      "exitCode": 0
+    },
+    {
+      "name": "build",
+      "exitCode": 0
+    },
+    {
+      "name": "build-site",
+      "exitCode": 0
+    },
+    {
+      "name": "verify-content",
+      "exitCode": 0
+    },
+    {
+      "name": "diff-check",
+      "exitCode": 0
+    },
+    {
+      "name": "new-files-whitespace",
+      "exitCode": 0
+    }
+  ],
+  "independentTests": 24,
+  "implementationBrowser": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "passed": 12,
+      "total": 12
+    },
+    "firefox": {
+      "version": "159.0",
+      "passed": 12,
+      "total": 12
+    }
+  },
+  "focused": {
+    "chromium": {
+      "beforeScenarios": 2,
+      "beforeMeasurements": 56,
+      "beforeClipped": 56,
+      "beforeOtherFailures": 0,
+      "rc2Scenarios": 9,
+      "rc2Passed": 9,
+      "rc2Measurements": 126,
+      "rc2Clipped": 0,
+      "rc2OtherFailures": 0
+    },
+    "firefox": {
+      "beforeScenarios": 2,
+      "beforeMeasurements": 56,
+      "beforeClipped": 56,
+      "beforeOtherFailures": 0,
+      "rc2Scenarios": 9,
+      "rc2Passed": 9,
+      "rc2Measurements": 126,
+      "rc2Clipped": 0,
+      "rc2OtherFailures": 0
+    }
+  },
+  "exactProbe": [
+    {
+      "build": "rc1",
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "exit": 1,
+      "resizedComplete": false,
+      "clippedPixels": 36.890625
+    },
+    {
+      "build": "rc1",
+      "engine": "firefox",
+      "version": "159.0",
+      "exit": 1,
+      "resizedComplete": false,
+      "clippedPixels": 36.499969482421875
+    },
+    {
+      "build": "rc2",
+      "engine": "chromium",
+      "version": "159.0.8154.6",
+      "exit": 0,
+      "resizedComplete": true,
+      "clippedPixels": 0.375
+    },
+    {
+      "build": "rc2",
+      "engine": "firefox",
+      "version": "159.0",
+      "exit": 0,
+      "resizedComplete": true,
+      "clippedPixels": 0.399993896484375
+    }
+  ],
+  "heightSequence": {
+    "chromium": [
+      {
+        "build": "rc1",
+        "width": 320,
+        "textPercent": 200,
+        "targetHeight": 480,
+        "failures": [],
+        "visibilityFailures": [
+          "shrink",
+          "second-shrink"
+        ],
+        "observations": 4
+      },
+      {
+        "build": "rc1",
+        "width": 320,
+        "textPercent": 100,
+        "targetHeight": 443,
+        "failures": [],
+        "visibilityFailures": [
+          "shrink",
+          "second-shrink"
+        ],
+        "observations": 4
+      },
+      {
+        "build": "rc1",
+        "width": 390,
+        "textPercent": 200,
+        "targetHeight": 747,
+        "failures": [],
+        "visibilityFailures": [
+          "shrink",
+          "second-shrink"
+        ],
+        "observations": 4
+      },
+      {
+        "build": "rc2",
+        "width": 320,
+        "textPercent": 200,
+        "targetHeight": 480,
+        "failures": [],
+        "visibilityFailures": [],
+        "observations": 4
+      },
+      {
+        "build": "rc2",
+        "width": 320,
+        "textPercent": 100,
+        "targetHeight": 443,
+        "failures": [],
+        "visibilityFailures": [],
+        "observations": 4
+      },
+      {
+        "build": "rc2",
+        "width": 390,
+        "textPercent": 200,
+        "targetHeight": 747,
+        "failures": [],
+        "visibilityFailures": [],
+        "observations": 4
+      }
+    ],
+    "firefox": [
+      {
+        "build": "rc1",
+        "width": 320,
+        "textPercent": 200,
+        "targetHeight": 480,
+        "failures": [],
+        "visibilityFailures": [
+          "shrink",
+          "second-shrink"
+        ],
+        "observations": 4
+      },
+      {
+        "build": "rc1",
+        "width": 320,
+        "textPercent": 100,
+        "targetHeight": 443,
+        "failures": [],
+        "visibilityFailures": [
+          "shrink",
+          "second-shrink"
+        ],
+        "observations": 4
+      },
+      {
+        "build": "rc1",
+        "width": 390,
+        "textPercent": 200,
+        "targetHeight": 747,
+        "failures": [],
+        "visibilityFailures": [
+          "shrink",
+          "second-shrink"
+        ],
+        "observations": 4
+      },
+      {
+        "build": "rc2",
+        "width": 320,
+        "textPercent": 200,
+        "targetHeight": 480,
+        "failures": [],
+        "visibilityFailures": [],
+        "observations": 4
+      },
+      {
+        "build": "rc2",
+        "width": 320,
+        "textPercent": 100,
+        "targetHeight": 443,
+        "failures": [],
+        "visibilityFailures": [],
+        "observations": 4
+      },
+      {
+        "build": "rc2",
+        "width": 390,
+        "textPercent": 200,
+        "targetHeight": 747,
+        "failures": [],
+        "visibilityFailures": [],
+        "observations": 4
+      }
+    ]
+  },
+  "lifecycle": {
+    "chromium": {
+      "passed": true,
+      "assertions": 19,
+      "listenerRecords": [
+        {
+          "id": 1,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 2,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 3,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 4,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 5
+        },
+        {
+          "id": 5,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 23
+        }
+      ],
+      "nativeCorrectiveScrolls": 1,
+      "correctiveScrollsOneSecondLater": 1
+    },
+    "firefox": {
+      "passed": true,
+      "assertions": 19,
+      "listenerRecords": [
+        {
+          "id": 1,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 2,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 3,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 4,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 5
+        },
+        {
+          "id": 5,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 26
+        }
+      ],
+      "nativeCorrectiveScrolls": 2,
+      "correctiveScrollsOneSecondLater": 2
+    }
+  },
+  "worstBudget": {
+    "engine": "firefox",
+    "route": "wordIndex",
+    "code": 97280,
+    "fonts": 193052,
+    "content": 240899,
+    "other": 209,
+    "total": 531440
+  },
+  "publicTextFiles": 56,
+  "untrackedTextFilesChecked": 183,
+  "trackedWhitespaceExit": 0,
+  "whitespace": [],
+  "privacy": [],
+  "missingLinks": [],
+  "artifacts": [
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/.gitignore",
+      "sha256": "04e59f5cc75e578a7492cd2c14ddf16487d1af09e188a7cc01224a61b1b3855f"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/artifacts.json",
+      "sha256": "b9c5904d6d72afc81e2e4607a868e09aaa727f2c8f04573a064ad300afe17889"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/authenticate-artifacts.mjs",
+      "sha256": "c0ef80eb5a999e152a434f7ae25fb2508bb47f412623d0f233ad6b350e7ccaec"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/browser-support.mjs",
+      "sha256": "a7a2efd104c1c84ac51cac65aba78e364cc8f7690176f90b4d13e03ea4db852e"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/browser.log",
+      "sha256": "32993b417f2bc4f0711a9ac7c51f07591345148c265a164687db0efa48aae2d0"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/budget.json",
+      "sha256": "185ed98606f1b1cd1f52082c071734b937c801286ba80c457b0d53b0e0844118"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/budget.log",
+      "sha256": "04085b2a939b1fdffc004d4485d1019869d8533f16f9088e64535fccd4df2c68"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/budget.mjs",
+      "sha256": "7b0ccba90df92b4c40cb4a7f3719de6cb1218ea84815dbf782814b0a89dc412d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/commands.json",
+      "sha256": "3fbcfd2d7ee805632cc0bf821caa9a43f3d16c68432081df9f9c39dc49ef2967"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/build-site.log",
+      "sha256": "073cc737fca994dce109c49d7aa300154b45aec1d806afb3b3c56036241f2fde"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/build.log",
+      "sha256": "715cccc1cf354989f336171cf0b7224318b246708ab9c8748c4e5923ce677717"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/check-v1.log",
+      "sha256": "4340c591cf26d4767f86b7e988d0e8c697ef5a41538fe193a813eb3e61b5035b"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/check.log",
+      "sha256": "9ef3d6ca6245ddd9ca2c06f56563dee35923371eb8f85038412fe723cff33ca7"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/diff-check.log",
+      "sha256": "20f35d17f1fe3e7f2eb373ee7d43b7869de43ccae2b5c3f130fb72374654d66e"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/new-files-whitespace.log",
+      "sha256": "224b27c44509ec787fb823ebf6ab122ed62a7cb01a80824315ff1266a7d8e266"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test-v1.log",
+      "sha256": "2b0c282bbf6b7442511ec382f25d62b85d212d7f5b383357ef8220f043dd7572"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "sha256": "c090a029d0a0095c16a0ed58da5ffaf7e7f16b88d296f887017e0ace11e4aae0"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/verify-content.log",
+      "sha256": "a1ff6b9a9dd1403000e80bb93fbb9fd4197c4f993637b352a6d60b8419a7b1f3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/event-lifecycle.json",
+      "sha256": "7e5edffbca0794816f6a33afe6612a04c0240895902baa1d95867a888cc8afbd"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/event-lifecycle.mjs",
+      "sha256": "ac954b2794c655f7784ee97aea1b72c5c454223e8916d6d972a82068f772c412"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-probe/browser-support.mjs",
+      "sha256": "44be0a43776dd18e851b3ded4f021d5eaa9e2efbb7c493a4b110f8cc5118caab"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-probe/viewport-resize.mjs",
+      "sha256": "5f145da4dacc8549720207452bfa84f31a2e90315d3c8f91202aaad20ce3a4fe"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-probe-summary.json",
+      "sha256": "5130acbee5fbc61613937cce4deb17f5c8f55bb0ca6df5c31384a9107837e557"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/run.log",
+      "sha256": "ab7b94ac1a164e2987e9211fe92000f6483c199885b53f1482ac9091701da57b"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/shots/rc1-chromium-height-only-480-refocused.png",
+      "sha256": "b53df5a8476582bd4a52fb0cbd665143110c14a1ecc627825a90c01e3a2625a2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/shots/rc1-chromium-height-only-480.png",
+      "sha256": "fe6136dabbf3a6963836f16260fb6f19bcfc73d18479a8bbb7c5bf9e9e114381"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/shots/rc1-firefox-height-only-480-refocused.png",
+      "sha256": "1954cb1f839c18d09926857fcd1b1c22cd76de07ca08aef4af22b6af12fc86a5"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/shots/rc1-firefox-height-only-480.png",
+      "sha256": "f3c08d6a3567a7fff008cac1e279708986bb9d606798f14dcfc81b9c75d13c59"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/viewport-resize.json",
+      "sha256": "781f164b2f1967d1501852e767f72b1f6af731d711009bf793a031fc40ad9c06"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/viewport-resize.log",
+      "sha256": "98893c408607ba608129f6c29430296d389eb9dc2341b50663a25c42317abd43"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/run.log",
+      "sha256": "c29f109b69bde87942ba5176bd4ed2e68b576338b11168d53f2fd3ad6e7f70fd"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/shots/rc1-chromium-height-only-480-refocused.png",
+      "sha256": "b53df5a8476582bd4a52fb0cbd665143110c14a1ecc627825a90c01e3a2625a2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/shots/rc1-chromium-height-only-480.png",
+      "sha256": "cdd6e70729bbc346f04ea2f3689d5fe9007d56e069e3a75265f92a08e0f31641"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/shots/rc1-firefox-height-only-480-refocused.png",
+      "sha256": "1954cb1f839c18d09926857fcd1b1c22cd76de07ca08aef4af22b6af12fc86a5"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/shots/rc1-firefox-height-only-480.png",
+      "sha256": "99fef1c0f96c272ab39c1c0c93bc3b0c8b62da80ef97cee099d3581e49686f20"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/viewport-resize.json",
+      "sha256": "8ed28ad39e457324fb692d46e408154e8107392229081ecb432c704681eca4b3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/viewport-resize.log",
+      "sha256": "83d31ec809966a604f465157c6a9fe6fe3ead69cdfdaaf461c058aba3d22e837"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/final-audit.mjs",
+      "sha256": "500da95e2726aaf2de23ac17337bed2ad871cfc24828ec3d2088240f1313b62d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/focused.json",
+      "sha256": "453b3f1b4eeea381141ccf00a738b4883ea0a746b0c758e18e391bc74a0b5fdd"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/focused.log",
+      "sha256": "2425976078256797e0d3d01d07f279aeec0071aca1e7bf21a2dfcbccc5607db2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/focused.mjs",
+      "sha256": "2d50f6732c4d75374c4dab24525e1c88c6cb1497ff8b6b1b003ca31288b003df"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/gates.log",
+      "sha256": "299a0e8d57540d844c3db5ac6deb36b40fb2fa75334cae03bb5f1f9a8c5c802d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-after.txt",
+      "sha256": "c3f43b3f22669118f6c7aea614de1dff9632fd5cc9ca2d70e2e53d192533c94a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-before.txt",
+      "sha256": "26d28903c5bdb48c0d24739a316c3365f1e37abd0a9346f0e5ee51515074432d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-sequence.json",
+      "sha256": "86c5bb119e35e59b8a328fc363c9eaace9ebc6bd5755d0285817f09da4786c41"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-sequence.mjs",
+      "sha256": "8691dd50d2b9a1609763ae17e40ab200b67124676f542a540ed349a54984e9b4"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-320-100-second-shrink.png",
+      "sha256": "5bd69d796aefaa361feefcc394ac1469940df003bcd4114d5524f298a4802015"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-320-100-shrink.png",
+      "sha256": "5bd69d796aefaa361feefcc394ac1469940df003bcd4114d5524f298a4802015"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-320-200-second-shrink.png",
+      "sha256": "fe6136dabbf3a6963836f16260fb6f19bcfc73d18479a8bbb7c5bf9e9e114381"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-320-200-shrink.png",
+      "sha256": "fe6136dabbf3a6963836f16260fb6f19bcfc73d18479a8bbb7c5bf9e9e114381"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-390-200-second-shrink.png",
+      "sha256": "5bb9fcadab89f202255b8cf9cc32bd7469f3f555ed43eb11981965342f336cf3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-390-200-shrink.png",
+      "sha256": "5bb9fcadab89f202255b8cf9cc32bd7469f3f555ed43eb11981965342f336cf3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-320-100-second-shrink.png",
+      "sha256": "0d5763175cff00e0cf1603252ce6ad617fed38dbf2f22cbad7a9bdd285dac8c1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-320-100-shrink.png",
+      "sha256": "0d5763175cff00e0cf1603252ce6ad617fed38dbf2f22cbad7a9bdd285dac8c1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-320-200-second-shrink.png",
+      "sha256": "f3c08d6a3567a7fff008cac1e279708986bb9d606798f14dcfc81b9c75d13c59"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-320-200-shrink.png",
+      "sha256": "f3c08d6a3567a7fff008cac1e279708986bb9d606798f14dcfc81b9c75d13c59"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-390-200-second-shrink.png",
+      "sha256": "6aa91d074d5cb3c2fca5cbaaa59129ae14900dcbb4cf4b097c185f49a312c435"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-390-200-shrink.png",
+      "sha256": "6aa91d074d5cb3c2fca5cbaaa59129ae14900dcbb4cf4b097c185f49a312c435"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-320-100-second-shrink.png",
+      "sha256": "cf643ee697054aad0975bd80f6e7e2d69b86d4b56668dbacfd85dac536ee56d1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-320-100-shrink.png",
+      "sha256": "cf643ee697054aad0975bd80f6e7e2d69b86d4b56668dbacfd85dac536ee56d1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-320-200-second-shrink.png",
+      "sha256": "cdd6e70729bbc346f04ea2f3689d5fe9007d56e069e3a75265f92a08e0f31641"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-320-200-shrink.png",
+      "sha256": "cdd6e70729bbc346f04ea2f3689d5fe9007d56e069e3a75265f92a08e0f31641"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-390-200-second-shrink.png",
+      "sha256": "1a48b81aa363e73090771b30b41a5c465e63574cfb48eca2f7366c4b1184a33e"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-390-200-shrink.png",
+      "sha256": "1a48b81aa363e73090771b30b41a5c465e63574cfb48eca2f7366c4b1184a33e"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-320-100-second-shrink.png",
+      "sha256": "c36bf0358561eb89087334f7887df358a7e1371f0aec806a4256d3c713e155aa"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-320-100-shrink.png",
+      "sha256": "c36bf0358561eb89087334f7887df358a7e1371f0aec806a4256d3c713e155aa"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-320-200-second-shrink.png",
+      "sha256": "99fef1c0f96c272ab39c1c0c93bc3b0c8b62da80ef97cee099d3581e49686f20"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-320-200-shrink.png",
+      "sha256": "99fef1c0f96c272ab39c1c0c93bc3b0c8b62da80ef97cee099d3581e49686f20"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-390-200-second-shrink.png",
+      "sha256": "43d3323e4dac604a2e38cdb389c0ebd47a8f8b5cb616e64e94e01524876c8cb3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-390-200-shrink.png",
+      "sha256": "43d3323e4dac604a2e38cdb389c0ebd47a8f8b5cb616e64e94e01524876c8cb3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/results.json",
+      "sha256": "c821a9ee393e7327d56b5212a5ee2b6d218792fc812e65e2c3859b746b6461c3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-answers.png",
+      "sha256": "4af66f276b3b5b54bbbe94b3f8029759d3c08251176707e3016258b513132eb7"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-collections.png",
+      "sha256": "4a43106eb3e6ce05724848abe3d7959e8dc616fd89ae5160901503a3e22b3da8"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-favorites.png",
+      "sha256": "12245bb4d4e14d3cb399273cccfa28ce1865091dfddb80664767d666b15430e9"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-flashcards.png",
+      "sha256": "ac279d07a208611990a2984d455f73e235fce3a4307866bbc166bcfa809b7ba4"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-index.png",
+      "sha256": "13296cad96098ded551a62134c7672dd2a46b8f96ee3dba7c900444b2756577a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-irregularVerbs.png",
+      "sha256": "ecd26a962b26184581f1a504f82f84f033ca9b4d90571897ec08b2c117db543a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-patterns.png",
+      "sha256": "31a0f7b1ccf6be6b41b9df237cac81883ea10ac40ec4e623b794595407b1a5ac"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-phrases.png",
+      "sha256": "ea34b23b26a577222e44db4a1245ac52b25df3e279b6be648326382900434482"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-practice.png",
+      "sha256": "49e77b7c98a022738f797ade4b3c33c5ab94b44037f4ab8ddc388e385b838778"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-reverse.png",
+      "sha256": "660dd6f3f6d65737c68c73ec138c4e12b03d0b0afc6ac1d6f198aabe26b60bad"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-settings.png",
+      "sha256": "55816c1322c79c4cef8e2715cc23bf8e313c70c1b5c37e712fda8f7fd97d184c"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-topic-conditionals.png",
+      "sha256": "7b4b468c568d35ffde4033489b4f8de76980d1d7c36329232d51b4fd1c2a404d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-topic-interview-english.png",
+      "sha256": "c32f62935a01321d36133c972c2e10984c092102bb6a2af3c62aa49e018db1b1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-topic-small-talk.png",
+      "sha256": "ab53acbd38f196f8a59c0fd5533414d414b750c6019b74ef940d229f0d1d11a3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-wordIndex.png",
+      "sha256": "efb9bb78d6a923b4c55a9c2767af8a68035a6f3330595ef10db27796bdf4c63a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-index.png",
+      "sha256": "206908492cb54414b3063013ecaac793b2e9bdbfc4625acb5b7706fd3c585e33"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-phrases.png",
+      "sha256": "814d4b4c428e725e848014d9080b6294fd7c194aa7bd7a1eaa80eaa97c177056"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-topic-conditionals.png",
+      "sha256": "5e23e0122cc39ff80fefda09fdb084750bc186a67489bd4e1a0a3071e6d6a8d2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-topic-interview-english.png",
+      "sha256": "870a7e53188d1f7dc1091deabd99b7256f96f7489d3f696ad850e0f8fb5651ef"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-topic-small-talk.png",
+      "sha256": "d9057cca2684ab6e3f384c747be0ca64af34d457db6060197619b507827b87f1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-answers.png",
+      "sha256": "fe25e7cfa5ef07f7ff573cbf72ba96a64351416bc5d65fa4f999845a143a2fa4"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-collections.png",
+      "sha256": "07a111ef70100da2d9e7d3a31263172901232a8e91fefe574174d3010a24d2a5"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-conditionals-final-subsection.png",
+      "sha256": "d06b533d48707f8e9337d36dffd089076336a15b291acf08016910b1333e8d93"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-content-error.png",
+      "sha256": "f884f45d9ea04f064520c8c2941a475c21ee62afb270cdda53184391604d62d8"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-enlarged-index.png",
+      "sha256": "7ec04657c62fa2fcf2147824abd3937efc77330f4ab3d7f98d703cef116a809d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "sha256": "ab64fa0a8b472ec19162d37ae847ae491d6b9b76a2625572b937a26f20949217"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "sha256": "80dd588f45f00855b268de65f4a26117faba084fd6bc8e2ad525e1a8a5460a15"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-favorites.png",
+      "sha256": "a27750c6ed3ae6497f6a3f783eb3fb0ed289098b0c65641c6c9a3b575c6a53e4"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-flashcards.png",
+      "sha256": "796c2e4d87ab67ee877d46badbff1d8bb81eae0f7bfeca6437352521d6bceb69"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-home-details.png",
+      "sha256": "3d24b01d55dd54f8b970a750cc565a10a9ac6ab5b77b2e833a2ba62d8257c51d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-home-start.png",
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-index.png",
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-interview-final-category.png",
+      "sha256": "7c9f2bbe1a7e8a8251b04f51aaf1360282b638937af84e8ebc0bc73fee817af9"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-irregularVerbs.png",
+      "sha256": "5e621ab4f77fbe331864c563d2b4c9b769d6307e8369382e71de37a11aefde92"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-patterns.png",
+      "sha256": "aaca914551508934baa1eb105c1de583d331eedb251ff7256578598f88c27b75"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-phrases.png",
+      "sha256": "d4753e106d471be52ebbf00efc678e0ab0ff8d695fefec3cd763aee3c9baf4e1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-practice.png",
+      "sha256": "20cf31fb955905d207c51c157d69a20213071f09207ee19148025a0c835a6144"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-reverse.png",
+      "sha256": "d45cac17b0eee876067ed7253ebe383be444d86e75c02927e5b4f64e88cb1747"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-settings.png",
+      "sha256": "d0498064e52b29820bc2a34b356612e23fa7cb4d8e136a68d2b9f42957e8e905"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-small-talk-traveling.png",
+      "sha256": "c30313bd86d4d58d1e07249c27248ac8dada42a3a5877154a738bb3df2b18476"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-topic-conditionals.png",
+      "sha256": "c36fed98e05bbfb0838b232d8c620d14620d30a448735e24213a708a799e3311"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-topic-interview-english.png",
+      "sha256": "365bc17e39ce787bf7a399574bacf977cee6538af3e6703f67d2626a7a4df608"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-topic-small-talk.png",
+      "sha256": "e3f0f7fb03f3616662c94905d922578ae98682b4b47942e0920210813762428c"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-wordIndex.png",
+      "sha256": "578ceebc09fec711954e09cb2ba7d75b09d72c088a5e725e1ec08e90d133834e"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-answers.png",
+      "sha256": "5ce33374e55e331c70c2b350a200b51fe9e0483ef60ec6fe1312c6a1cf323df6"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-collections.png",
+      "sha256": "23269fce407a27f1747264b53227d1d3e4d94bdb5ecd31d5561dbfa3a51f3694"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-favorites.png",
+      "sha256": "c7c062c2400293d4ecfc6d29aad837108b8284ca1c57b58bb08c6651fbe35bd8"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-flashcards.png",
+      "sha256": "05f7d5cdbed501011624409891c0b64101059630903bac73b828720ef590148a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-index.png",
+      "sha256": "a839d930bcbd58378804121f60773ddcc857c4f38d649ad8408e0b7e2badda73"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-irregularVerbs.png",
+      "sha256": "8de31e69878e467cd5f504d1d3f341acfc866afd37de2d5ba86f5c1e18f8076f"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-patterns.png",
+      "sha256": "c39c6bab55b68848432a82d25ac321097b2b55524cf2f7b316a682fabe5a31ae"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-phrases.png",
+      "sha256": "ad277fa03275437d936e0fecf7492793252a57c67f1d4349849ede55d0448bc6"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-practice.png",
+      "sha256": "6432300d37446c7eb2cca75ad5908b31c3378f8a568d3f59220bcb2be073fd61"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-reverse.png",
+      "sha256": "e043d0a5b75756a627fb0ed01eb19662416e14079f914c568f6bba8e2f3b48f2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-settings.png",
+      "sha256": "946b6ee376471b57e757335f87b0740066655458c93fe362772e0018c91724cb"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-topic-conditionals.png",
+      "sha256": "a970abfbfb47b7e735548fc21ccd23f3856a1ff3f99ad815d6f06df80af7320c"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-topic-interview-english.png",
+      "sha256": "6bdcac539b629e4e22f2b18c7ca4f9bae826e0dc67a91b3fdd45b2f758c99f38"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-topic-small-talk.png",
+      "sha256": "eb4c966f6203890f692bbcd76fdb5c237901f8f2a7281059cbeaf4f2458b09ce"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-wordIndex.png",
+      "sha256": "562b9ceb0107d6db7fab8b8721ae669e500e3d6df65031eb16adefdecde34145"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-index.png",
+      "sha256": "f428f0595d603ff17a875ebb69a660ed08b4bafdcce2fd7fbdce68d3c7684870"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-phrases.png",
+      "sha256": "602e5aa105529ba47fae6deada2628b2f13b09ea195e6058b7532f91e36ecd99"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-topic-conditionals.png",
+      "sha256": "056f8a3e1f278ce8d2c2ecb30791f46e1b16518caf2516516337eb9c68d26e4a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-topic-interview-english.png",
+      "sha256": "31a937a0a4b09fc134f0a1b2970367706a65d9edd95128c0f84e4a667677b61c"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-topic-small-talk.png",
+      "sha256": "005c84d8c67dede93576defbc2dfc59349fbd479024550bfedc9278015fc3a0f"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-answers.png",
+      "sha256": "c59c168c175d63e6351bd0102c38b78dc9d675fabd2daae48dbc044dc10d9436"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-collections.png",
+      "sha256": "8987a5314af53cccc9528a951c48a17400cceeb2905a6c712de01c8a0beaab79"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-conditionals-final-subsection.png",
+      "sha256": "c7c73629cfec4df397b87082f19091f9cdc590e17c612c4beb9a1e5c9139d9c3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-content-error.png",
+      "sha256": "2abfc5741665b9d6dd954c9be78dab14399206af523b7be3d88dd9e36c2b5ca0"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-enlarged-index.png",
+      "sha256": "43f565bfb88b1e561b9503809f6998ceee04c98d52274c9e3e3752cfdd91f5b8"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "sha256": "7fe8736e6f323c56537531a3684953a05b7add8ea2b31c7d374855bc3a574135"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "sha256": "9009de4c177c8c3795221d19a17c54016fc2a156527c71830e16f465b39c23ff"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-favorites.png",
+      "sha256": "8ae111bd3966adae82186602ec41e01655ecafcc6c43fc286cc191aedbe7ffd3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-flashcards.png",
+      "sha256": "515209150ab3f26adc396eedc8c7467a5d5533aa2b4c062559151685105e9b5a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-home-details.png",
+      "sha256": "6ea09a51ab5152b2a72528fe04c0ebaadccc63ec6e4b6467544481db882e951a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-home-start.png",
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-index.png",
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-interview-final-category.png",
+      "sha256": "b5ee3ed9089bd2a723b79c2b8f600ba5ada8105814e17763ed9eb50fd957b75d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-irregularVerbs.png",
+      "sha256": "35e323252bdaa5ea79e0d63c1db6a473ac2e13471c486b2c3825406e37403755"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-patterns.png",
+      "sha256": "0930e92ca1a15ea38420818b6b593788dea3c951a5bf77a6113cc5ea599193d2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-phrases.png",
+      "sha256": "8b42ae8a4aeb6c31ac150ae5456e115ac060836d87ce3626e38e7aa53a861af5"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-practice.png",
+      "sha256": "711a938478360bf6ea42d69fbaadcf5f7f8ea3cfdbff34ccefbb481d27052ae7"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-reverse.png",
+      "sha256": "35038571059bdb1a193d8a6202f10d6df3ccfe45ee2042852b8a3099334f3d01"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-settings.png",
+      "sha256": "453c328b9a82455e69516b999346c1c45ac24a7ed05bfe999e0cbe262922f46b"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-small-talk-traveling.png",
+      "sha256": "d3d91257cfb2ad4266ec1717861b55dea81364d5b7af9176c8649596b20315ce"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-topic-conditionals.png",
+      "sha256": "e58f5841d195af19268df27c6565446ff3e211f7dc247b84c09a7389e1cc9ed6"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-topic-interview-english.png",
+      "sha256": "d5a3cdc9ee21b314b784435ec579baa7fd5a68ccd2fb56d5039424cc4ba62413"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-topic-small-talk.png",
+      "sha256": "c43298b076b42b35b1022e9757a96782f69875d802b16b45978d88b6c7e2abc0"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-wordIndex.png",
+      "sha256": "afa7582c5d8bd64edcc88b5173da80fb60cc2c6c7b502093fa18431aa538b507"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/independent.json",
+      "sha256": "b493f80a458b1a82ee0668b75d9bb70d9e2601714a486274e1550f0bf8d8dcc2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/independent.log",
+      "sha256": "58d9417be1e8cfe27900ec328d308394b28e3b437b90288a214b12243c0aec4c"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/independent.test.ts",
+      "sha256": "b2a5eaa5f2a814242d36312f634c025b737608eaaf4c423e70abd8f21201cf33"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/prepare-runners.mjs",
+      "sha256": "2acd72acf837071c6970f86751db630b0b169795703b3974d062168a6a5c535f"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "sha256": "e23e8d6021d22399fc8e0368fe7aa8634f9c787ce0aee1bad9c4f4d50e403127"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "sha256": "5e0f40f50435d99c221fd3a11a480163554f076dacbd63a1436c5e9de1a2c2b1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preserve.mjs",
+      "sha256": "2067a82280216faaf3267d3d3f8a63187fbe7a16303eca8c52678bc57228e3e6"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication-build.log",
+      "sha256": "60b4475ce1a4fd6c389017e642c3a5294ecf7bdcd17c139e10f20ab5576252c1"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "sha256": "ddf353a9d18c9ef278d209291cde94269efc6a7f3b96415a6da2f270886dc04d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/README.md",
+      "sha256": "0556e7c822c1f86e53ccedba495724b397bf63b522ad80ae690dac109d66837d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/run-exact-probe.mjs",
+      "sha256": "5c680476d763939379e6f8d02520f393c7ee40b4ff31a2d937209777bb10a71a"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/run.mjs",
+      "sha256": "bb8feab4d47898113a5d8facfe7ffc5ac4e5101878ebc52e1c20709333b86041"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/runner-adaptations.json",
+      "sha256": "7ca42af66914a8898dd634911220596f9232e80e2657ba153c936c1e05b9d883"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/scope.json",
+      "sha256": "5d90a2f5f9efece45edf5263c87576494c1762738570e007b775f9eeae46962e"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/before-chromium-matrix-320-200-selected-3.png",
+      "sha256": "dfca207b89a85e1933be7f51b3f660ea091ae3a569cbaf73ca6cb84ed51764b0"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/before-chromium-matrix-390-100-selected-2.png",
+      "sha256": "1a836675b5204ab77ca89daf2d776485773156a89d1b8943f38f0532e8e878d2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/before-firefox-matrix-320-200-selected-3.png",
+      "sha256": "a9e9ceffdd6c6e702fbf4910d37866ae0d4a87d6b4808aaa9c0f3683adcd13b8"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/before-firefox-matrix-390-100-selected-2.png",
+      "sha256": "bed60022de563eeefe883af8b8cdac16ca366bd7991daeaeb94c04270f5681b3"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-focused-height-reflow-height-640.png",
+      "sha256": "63857db6f0dbc1a12ecb5b6416e6f00218fc1c562ae1989d1af8848d35140990"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-focused-width-text-reflow-wrapped.png",
+      "sha256": "7f42e02862a6cc4ce6d0f44a18dfbac9cd747226b17aa93ac29ddde4a49073c2"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-matrix-320-100-selected-2.png",
+      "sha256": "4e96d9d32104d12ca940f8323c40509cb9c457cec1b556153e0e8156d7b2a6fb"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-matrix-320-200-selected-3.png",
+      "sha256": "c2042840e1b74eee723c12b6cfd573e583c4a72e7a2ac278962264124fe3e948"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-matrix-390-100-selected-2.png",
+      "sha256": "04822248a17affa17f1ba54e14a3f7e1c95e3bcfb10285444424f49daafac696"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-matrix-390-200-selected-3.png",
+      "sha256": "8c6bc681c0ff72b61d922d0ebc1c64ac959799b1e038087dabaee1c388fc2ed4"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-focused-height-reflow-height-640.png",
+      "sha256": "863cb33394c7b8ef01c5e09be4f4d2fb1618acecfa8852d841f1ba750886e4cc"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-focused-width-text-reflow-wrapped.png",
+      "sha256": "b1a613b33b6d0fa14e2df34f61447b3f52b131ea98dbf0ddff4bb06a1a988974"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-matrix-320-100-selected-2.png",
+      "sha256": "69cf9f2faaf75b1cd9ca1b8531d9baeeeada8f8de00d77a961d83e999fd604b8"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-matrix-320-200-selected-3.png",
+      "sha256": "cd359e5d33a753502eed3bc34cd8338f74e6f3cba54e5a5732e7c9664836d308"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-matrix-390-100-selected-2.png",
+      "sha256": "046cd3c74055b915b1e460d9d2376644d8884cab063d17098d74216c7b78bb5f"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-matrix-390-200-selected-3.png",
+      "sha256": "e281b643be0bc13109bf437fa3c6e824fdba1cd2f9b061d7a69a52981e94dd2d"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/tools.json",
+      "sha256": "1a6e5d9c9356ed459f1fddd4cfb0b23e77b523b14d20b0a4d4c4a7717d8a8df4"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/vitest.config.ts",
+      "sha256": "bef325b6c6a01f11c153bc16349b1ffed26fdc74affa7e563b2fac9fefd36477"
+    },
+    {
+      "file": "docs/reviews/ENG-V2-03-RC2-ASTRA.md",
+      "sha256": "250e82690c129ebc99d97b6f974e14b76acc94d350f3bf6bb3d377eb81bc452b"
+    }
+  ]
+}

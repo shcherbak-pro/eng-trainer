@@ -1,0 +1,27 @@
+chromium routes-phone: pass
+chromium routes-narrow: pass
+chromium routes-desktop: pass
+chromium topic-conditionals: pass
+chromium topic-small-talk: pass
+chromium topic-interview: pass
+chromium search-and-focus: pass
+chromium home-counts: pass
+chromium import-remove-reimport: pass
+chromium keyboard: pass
+chromium enlarged-text: pass
+chromium startup-and-v1: pass
+firefox routes-phone: pass
+firefox routes-narrow: pass
+firefox routes-desktop: pass
+firefox topic-conditionals: pass
+firefox topic-small-talk: pass
+firefox topic-interview: pass
+firefox search-and-focus: pass
+firefox home-counts: pass
+firefox import-remove-reimport: pass
+firefox keyboard: pass
+firefox enlarged-text: pass
+firefox startup-and-v1: pass
+{"chromium":{"version":"159.0.8154.6","passed":12,"total":12},"firefox":{"version":"159.0","passed":12,"total":12}}
+
+[exit 0]
