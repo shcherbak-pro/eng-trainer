@@ -1,0 +1,37 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Reverse practice" [level=1]
+  - navigation "Practice sections":
+    - list:
+      - listitem:
+        - link "Flashcards":
+          - /url: "#flashcards"
+      - listitem:
+        - link "Reverse practice":
+          - /url: "#reverse"
+      - listitem:
+        - link "Speaking prompts":
+          - /url: "#practice"
+  - paragraph: Read the Ukrainian meaning, say the English phrase aloud or type it, then check.
+  - article:
+    - paragraph: Phrase
+    - heading "Лідер має захищати команду від зайвого шуму." [level=2]
+    - text: Your answer in English
+    - textbox "Your answer in English":
+      - /placeholder: Type the English phrase…
+    - button "Check answer"
+    - button "Show answer"
+    - button "Next phrase"
+    - status
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

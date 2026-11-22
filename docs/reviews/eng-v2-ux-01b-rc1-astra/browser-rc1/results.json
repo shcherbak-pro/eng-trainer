@@ -1,0 +1,769 @@
+{
+  "startedAt": "2026-11-22T02:03:23.073Z",
+  "base": "http://127.0.0.1:4183/eng-trainer/",
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "scenarios": {
+        "f2-learn-again-focus": {
+          "status": "PASS",
+          "afterFirst": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm learn-again",
+            "label": null,
+            "text": "Learn again",
+            "cardId": "phrase-002",
+            "passDelete": null
+          },
+          "afterUndo": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm learn-again",
+            "label": null,
+            "text": "Learn again",
+            "cardId": "phrase-001",
+            "passDelete": null
+          },
+          "afterLast": {
+            "tag": "H2",
+            "id": "review-title",
+            "cls": "panel__title",
+            "label": null,
+            "text": "Learned vocabulary",
+            "cardId": null,
+            "passDelete": null
+          },
+          "undoWithListClosed": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm ",
+            "label": "Review learned vocabulary (1)",
+            "text": "Review learned vocabulary (1)",
+            "cardId": null,
+            "passDelete": null
+          },
+          "afterExpiry": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm ",
+            "label": "Back to flashcards",
+            "text": "Back to flashcards",
+            "cardId": null,
+            "passDelete": null
+          }
+        },
+        "f2-confirmation-fallbacks": {
+          "status": "PASS",
+          "dialogStart": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--md",
+            "label": null,
+            "text": "Cancel",
+            "cardId": null,
+            "passDelete": null
+          },
+          "afterEscape": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--quiet btn--icon",
+            "label": "Delete Alpha pass",
+            "text": "",
+            "cardId": null,
+            "passDelete": "alpha"
+          },
+          "afterFirstDelete": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--quiet btn--icon",
+            "label": "Delete Beta pass",
+            "text": "",
+            "cardId": null,
+            "passDelete": "beta"
+          },
+          "afterLastDelete": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm ",
+            "label": null,
+            "text": "Create a Learn Pass",
+            "cardId": null,
+            "passDelete": null
+          },
+          "afterUnhideAll": {
+            "tag": "INPUT",
+            "id": null,
+            "cls": "",
+            "label": null,
+            "text": "",
+            "cardId": null,
+            "passDelete": null
+          },
+          "afterDeckReset": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "flashcard__surface",
+            "label": "Front of the card: I would start by saying that …. Press to show the translation.",
+            "text": "Start answer B2 I would start by saying that … Say it aloud, then tap to see the",
+            "cardId": null,
+            "passDelete": null
+          }
+        },
+        "f3-returned-issues-focus": {
+          "status": "PASS",
+          "cases": {
+            "missing translation": {
+              "cls": "notice notice--error review__problems",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "role": "alert",
+              "tabindex": "-1"
+            },
+            "invalid kind": {
+              "cls": "notice notice--error review__problems",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "role": "alert",
+              "tabindex": "-1"
+            },
+            "native identity conflict": {
+              "cls": "notice notice--error review__problems",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "role": "alert",
+              "tabindex": "-1"
+            },
+            "valid": {
+              "tag": "H3",
+              "id": "review-title",
+              "cls": "review__title",
+              "label": null,
+              "text": "Review “valid.csv”",
+              "cardId": null,
+              "passDelete": null
+            },
+            "wholeFile": {
+              "tag": "DIV",
+              "id": null,
+              "cls": "notice notice--error ",
+              "label": null,
+              "text": "Missing column: “translation” The first row must name the columns. “english” and",
+              "cardId": null,
+              "passDelete": null
+            }
+          }
+        },
+        "f4-font-family-loaded": {
+          "status": "PASS",
+          "faces": [
+            {
+              "family": "Eng Trainer Sans",
+              "status": "loaded",
+              "unicodeRange": "U+301, U+400-45F, U+490-491, U+4B0-4B1, "
+            },
+            {
+              "family": "Eng Trainer Sans",
+              "status": "loaded",
+              "unicodeRange": "U+370-377, U+37A-37F, U+384-38A, U+38C, "
+            },
+            {
+              "family": "Eng Trainer Sans",
+              "status": "loaded",
+              "unicodeRange": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2"
+            },
+            {
+              "family": "Eng Trainer Sans",
+              "status": "loaded",
+              "unicodeRange": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2"
+            }
+          ],
+          "glyphs": {
+            "chars": "English іїєґІЇЄҐʼɪəˈːʊðɑæʃɔɜʌɡˌŋʒθ",
+            "missing": []
+          },
+          "reservedFamilyDeclared": false,
+          "bodyFont": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+          "fontRequests": [
+            "eng-trainer-sans-latin-WBnKszXN.woff2",
+            "literata-latin-Cedbco83.woff2",
+            "eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+            "eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+            "eng-trainer-sans-greek-FkV9qZ7r.woff2"
+          ]
+        },
+        "f5-language-and-translation": {
+          "status": "PASS",
+          "focusBlocks": [
+            {
+              "text": "Початок відповіді: фрази для м’якого і впевненого ",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "100 popular irregular verbs grouped by everyday/wo",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "homeBlocks": [
+            {
+              "text": "Початок відповіді: фрази для м’якого і впевненого ",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "Фрази для структури відповіді: first of all, on to",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "Алфавітний індекс слів і фраз. Натисни на фразу, щ",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "Зворотня вправа: бачиш український переклад і згад",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "100 popular irregular verbs grouped by everyday/wo",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "text": "200 irregular verbs grouped by change pattern: sam",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "answers": [
+            {
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How can AI coding tools help developers?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What do you do when you run into a problem?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you usually handle online meetings?",
+              "lang": "en",
+              "translate": false
+            }
+          ],
+          "answersIntro": [
+            {
+              "text": "Assessment-style answers with translation, transcr",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "hint": [
+            {
+              "text": "Choose “Random prompt” to get a speaking task.",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "prompt": [
+            {
+              "text": "What are the pros and cons of automation?",
+              "lang": "en",
+              "translate": false
+            }
+          ],
+          "prompts": [
+            {
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What are the risks of using AI coding tools?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "Tell me about a time you solved a difficult proble",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What makes a good team leader?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How would you compare remote work and office work?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What is more important: speed or quality?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you estimate a task?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What do you do when requirements are unclear?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you handle online meetings?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What do you do if you run into a blocker?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "Can AI replace developers?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What are the pros and cons of automation?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "Describe your ideal colleague.",
+              "lang": "en",
+              "translate": false
+            }
+          ],
+          "reverse": [
+            {
+              "text": "обґрунтування відповіді даними з джерел",
+              "lang": "uk",
+              "translate": false
+            }
+          ],
+          "preview": [
+            {
+              "label": true,
+              "example": false,
+              "exampleLang": "en"
+            }
+          ]
+        }
+      },
+      "log": []
+    },
+    "firefox": {
+      "version": "159.0",
+      "scenarios": {
+        "f2-learn-again-focus": {
+          "status": "PASS",
+          "afterFirst": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm learn-again",
+            "label": null,
+            "text": "Learn again",
+            "cardId": "phrase-002",
+            "passDelete": null
+          },
+          "afterUndo": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm learn-again",
+            "label": null,
+            "text": "Learn again",
+            "cardId": "phrase-001",
+            "passDelete": null
+          },
+          "afterLast": {
+            "tag": "H2",
+            "id": "review-title",
+            "cls": "panel__title",
+            "label": null,
+            "text": "Learned vocabulary",
+            "cardId": null,
+            "passDelete": null
+          },
+          "undoWithListClosed": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm ",
+            "label": "Review learned vocabulary (1)",
+            "text": "Review learned vocabulary (1)",
+            "cardId": null,
+            "passDelete": null
+          },
+          "afterExpiry": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm ",
+            "label": "Back to flashcards",
+            "text": "Back to flashcards",
+            "cardId": null,
+            "passDelete": null
+          }
+        },
+        "f2-confirmation-fallbacks": {
+          "status": "PASS",
+          "dialogStart": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--md",
+            "label": null,
+            "text": "Cancel",
+            "cardId": null,
+            "passDelete": null
+          },
+          "afterEscape": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--quiet btn--icon",
+            "label": "Delete Alpha pass",
+            "text": "",
+            "cardId": null,
+            "passDelete": "alpha"
+          },
+          "afterFirstDelete": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--quiet btn--icon",
+            "label": "Delete Beta pass",
+            "text": "",
+            "cardId": null,
+            "passDelete": "beta"
+          },
+          "afterLastDelete": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "btn btn--secondary btn--sm ",
+            "label": null,
+            "text": "Create a Learn Pass",
+            "cardId": null,
+            "passDelete": null
+          },
+          "afterUnhideAll": {
+            "tag": "INPUT",
+            "id": null,
+            "cls": "",
+            "label": null,
+            "text": "",
+            "cardId": null,
+            "passDelete": null
+          },
+          "afterDeckReset": {
+            "tag": "BUTTON",
+            "id": null,
+            "cls": "flashcard__surface",
+            "label": "Front of the card: I would start by saying that …. Press to show the translation.",
+            "text": "Start answer B2 I would start by saying that … Say it aloud, then tap to see the",
+            "cardId": null,
+            "passDelete": null
+          }
+        },
+        "f3-returned-issues-focus": {
+          "status": "PASS",
+          "cases": {
+            "missing translation": {
+              "cls": "notice notice--error review__problems",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "role": "alert",
+              "tabindex": "-1"
+            },
+            "invalid kind": {
+              "cls": "notice notice--error review__problems",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "role": "alert",
+              "tabindex": "-1"
+            },
+            "native identity conflict": {
+              "cls": "notice notice--error review__problems",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "role": "alert",
+              "tabindex": "-1"
+            },
+            "valid": {
+              "tag": "H3",
+              "id": "review-title",
+              "cls": "review__title",
+              "label": null,
+              "text": "Review “valid.csv”",
+              "cardId": null,
+              "passDelete": null
+            },
+            "wholeFile": {
+              "tag": "DIV",
+              "id": null,
+              "cls": "notice notice--error ",
+              "label": null,
+              "text": "Missing column: “translation” The first row must name the columns. “english” and",
+              "cardId": null,
+              "passDelete": null
+            }
+          }
+        },
+        "f4-font-family-loaded": {
+          "status": "PASS",
+          "faces": [
+            {
+              "family": "Eng Trainer Sans",
+              "status": "loaded",
+              "unicodeRange": "U+301, U+400-45F, U+490-491, U+4B0-4B1, "
+            },
+            {
+              "family": "Eng Trainer Sans",
+              "status": "loaded",
+              "unicodeRange": "U+370-377, U+37A-37F, U+384-38A, U+38C, "
+            },
+            {
+              "family": "Eng Trainer Sans",
+              "status": "loaded",
+              "unicodeRange": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2"
+            },
+            {
+              "family": "Eng Trainer Sans",
+              "status": "loaded",
+              "unicodeRange": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2"
+            }
+          ],
+          "glyphs": {
+            "chars": "English іїєґІЇЄҐʼɪəˈːʊðɑæʃɔɜʌɡˌŋʒθ",
+            "missing": []
+          },
+          "reservedFamilyDeclared": false,
+          "bodyFont": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+          "fontRequests": [
+            "eng-trainer-sans-latin-WBnKszXN.woff2",
+            "literata-latin-Cedbco83.woff2",
+            "eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+            "eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+            "eng-trainer-sans-greek-FkV9qZ7r.woff2"
+          ]
+        },
+        "f5-language-and-translation": {
+          "status": "PASS",
+          "focusBlocks": [
+            {
+              "text": "Початок відповіді: фрази для м’якого і впевненого ",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "100 popular irregular verbs grouped by everyday/wo",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "homeBlocks": [
+            {
+              "text": "Початок відповіді: фрази для м’якого і впевненого ",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "Фрази для структури відповіді: first of all, on to",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "Алфавітний індекс слів і фраз. Натисни на фразу, щ",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "Зворотня вправа: бачиш український переклад і згад",
+              "lang": "uk",
+              "translate": true
+            },
+            {
+              "text": "100 popular irregular verbs grouped by everyday/wo",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "text": "200 irregular verbs grouped by change pattern: sam",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "answers": [
+            {
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How can AI coding tools help developers?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What do you do when you run into a problem?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you usually handle online meetings?",
+              "lang": "en",
+              "translate": false
+            }
+          ],
+          "answersIntro": [
+            {
+              "text": "Assessment-style answers with translation, transcr",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "hint": [
+            {
+              "text": "Choose “Random prompt” to get a speaking task.",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "prompt": [
+            {
+              "text": "What are the pros and cons of automation?",
+              "lang": "en",
+              "translate": false
+            }
+          ],
+          "prompts": [
+            {
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What are the risks of using AI coding tools?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "Tell me about a time you solved a difficult proble",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What makes a good team leader?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How would you compare remote work and office work?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What is more important: speed or quality?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you estimate a task?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What do you do when requirements are unclear?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "How do you handle online meetings?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What do you do if you run into a blocker?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "Can AI replace developers?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "What are the pros and cons of automation?",
+              "lang": "en",
+              "translate": false
+            },
+            {
+              "text": "Describe your ideal colleague.",
+              "lang": "en",
+              "translate": false
+            }
+          ],
+          "reverse": [
+            {
+              "text": "Хороша командна робота починається з довіри та чіт",
+              "lang": "uk",
+              "translate": false
+            }
+          ],
+          "preview": [
+            {
+              "label": true,
+              "example": false,
+              "exampleLang": "en"
+            }
+          ]
+        }
+      },
+      "log": []
+    }
+  },
+  "finishedAt": "2026-11-22T02:04:10.402Z"
+}

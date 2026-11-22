@@ -1,0 +1,399 @@
+{
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": {
+        "learn-again-same-card-new-intent": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: Old Undo must not overwrite the newer Keep learning decision\n    at run.route (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:55:207)\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:53:2",
+          "saved": {
+            "learnedPhrases": [
+              "agent-vocab-001"
+            ]
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "learn-again-keyboard-focus": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: Learn again must put focus at a logical surviving control\n    at run.route (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:59:155)\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:57:2",
+          "afterAction": {
+            "tag": "BODY",
+            "id": "",
+            "text": "Skip to content English Assessment Trainer B1+ → B2 Speaking Playbook  Home Library PhrasesWordsVerb",
+            "cls": ""
+          },
+          "afterUndo": {
+            "tag": "BODY",
+            "id": "",
+            "text": "Skip to content English Assessment Trainer B1+ → B2 Speaking Playbook  Home Library PhrasesWordsVerb",
+            "cls": ""
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "invalid-record-error-focus": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: Invalid-record selection should focus the error summary\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:98:158\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:97:2",
+          "focus": {
+            "tag": "H3",
+            "id": "review-title",
+            "text": "Review “invalid-record.csv”",
+            "cls": "review__title"
+          },
+          "error": "Nothing can be imported until these problems are fixed in the file:\n\nRecord 2, column “translation”: Translation is required.\n\nRecords are counted from the header row (record 1). Blank lines are skipped, and a quoted value can span several lines.\n\nChoose the corrected file",
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "study-text-translation-protection": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: English study questions and prompts must opt out of browser translation\n+ actual - expected\n\n+ [\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How can AI help people at work?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How can AI coding tools help developers?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'What makes a good team?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How do you deal with difficult clients?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'What do you do when you run into a problem?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How do you usually handle online meetings?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How do you handle online meetings?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How can AI help people at work?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What are the risks of using AI coding tools?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'Tell me about a time you solved a difficult problem.',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How do you deal with difficult clients?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What makes a good team?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What makes a good team leader?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How would you compare remote work and office work?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What is more important: speed or quality?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How do you estimate a task?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What do you do when requirements are unclear?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How do you handle online meetings?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What do you do if you run into a blocker?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'Can AI replace developers?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What are the pros and cons of automation?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'Describe your ideal colleague.',\n+     translate: true\n+   }\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:156:542\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:155:2",
+          "unprotected": [
+            {
+              "route": "answers",
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How can AI coding tools help developers?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "What do you do when you run into a problem?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How do you usually handle online meetings?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How do you handle online meetings?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What are the risks of using AI coding tools?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "Tell me about a time you solved a difficult problem.",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What makes a good team leader?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How would you compare remote work and office work?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What is more important: speed or quality?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How do you estimate a task?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What do you do when requirements are unclear?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How do you handle online meetings?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What do you do if you run into a blocker?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "Can AI replace developers?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What are the pros and cons of automation?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "Describe your ideal colleague.",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "english-block-language": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: English block description must not be labelled Ukrainian\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:159:237\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:158:2",
+          "block": {
+            "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+            "lang": "uk"
+          },
+          "errors": [],
+          "unhandledRejections": []
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": {
+        "learn-again-same-card-new-intent": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: Old Undo must not overwrite the newer Keep learning decision\n    at run.route (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:55:207)\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:53:2",
+          "saved": {
+            "learnedPhrases": [
+              "agent-vocab-001"
+            ]
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "learn-again-keyboard-focus": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: Learn again must put focus at a logical surviving control\n    at run.route (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:59:155)\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:57:2",
+          "afterAction": {
+            "tag": "BODY",
+            "id": "",
+            "text": "Skip to content English Assessment Trainer B1+ → B2 Speaking Playbook  Home Library PhrasesWordsVerb",
+            "cls": ""
+          },
+          "afterUndo": {
+            "tag": "BODY",
+            "id": "",
+            "text": "Skip to content English Assessment Trainer B1+ → B2 Speaking Playbook  Home Library PhrasesWordsVerb",
+            "cls": ""
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "invalid-record-error-focus": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: Invalid-record selection should focus the error summary\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:98:158\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:97:2",
+          "focus": {
+            "tag": "H3",
+            "id": "review-title",
+            "text": "Review “invalid-record.csv”",
+            "cls": "review__title"
+          },
+          "error": "Nothing can be imported until these problems are fixed in the file:\n\nRecord 2, column “translation”: Translation is required.\n\nRecords are counted from the header row (record 1). Blank lines are skipped, and a quoted value can span several lines.\n\nChoose the corrected file",
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "study-text-translation-protection": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: English study questions and prompts must opt out of browser translation\n+ actual - expected\n\n+ [\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How can AI help people at work?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How can AI coding tools help developers?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'What makes a good team?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How do you deal with difficult clients?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'What do you do when you run into a problem?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How do you usually handle online meetings?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How do you handle online meetings?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How can AI help people at work?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What are the risks of using AI coding tools?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'Tell me about a time you solved a difficult problem.',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How do you deal with difficult clients?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What makes a good team?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What makes a good team leader?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How would you compare remote work and office work?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What is more important: speed or quality?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How do you estimate a task?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What do you do when requirements are unclear?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'How do you handle online meetings?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What do you do if you run into a blocker?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'Can AI replace developers?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What are the pros and cons of automation?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'Describe your ideal colleague.',\n+     translate: true\n+   }\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:156:542\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:155:2",
+          "unprotected": [
+            {
+              "route": "answers",
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How can AI coding tools help developers?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "What do you do when you run into a problem?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How do you usually handle online meetings?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How do you handle online meetings?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What are the risks of using AI coding tools?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "Tell me about a time you solved a difficult problem.",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What makes a good team leader?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How would you compare remote work and office work?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What is more important: speed or quality?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How do you estimate a task?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What do you do when requirements are unclear?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "How do you handle online meetings?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What do you do if you run into a blocker?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "Can AI replace developers?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What are the pros and cons of automation?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "Describe your ideal colleague.",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "english-block-language": {
+          "status": "FAIL",
+          "failure": "AssertionError [ERR_ASSERTION]: English block description must not be labelled Ukrainian\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:159:237\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:158:2",
+          "block": {
+            "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+            "lang": "uk"
+          },
+          "errors": [],
+          "unhandledRejections": []
+        }
+      }
+    }
+  },
+  "definition": "Fresh nonpersistent native contexts; synthetic data; clipboard calls stubbed; localhost gzip response BODY bytes, headers excluded. No owner profiles."
+}

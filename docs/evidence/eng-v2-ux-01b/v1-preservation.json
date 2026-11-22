@@ -1,0 +1,34 @@
+{
+  "comparedWith": "The released ENG-V2-02B artifact (v1/ folder), kept locally under .git/eng-v2-02b-release/artifact/v1",
+  "note": "This Windows checkout converts text files to CRLF (core.autocrlf=true); the release was built with LF. Built JavaScript and CSS must be byte-identical.",
+  "files": [
+    {
+      "path": "assets/index-Bod3ovET.css",
+      "byteIdentical": true,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "assets/index-C0A337ei.js",
+      "byteIdentical": true,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "data/materials.json",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "favicon.svg",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "index.html",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    }
+  ],
+  "currentFiles": 5,
+  "sourceDiffLines": 0,
+  "pass": true
+}

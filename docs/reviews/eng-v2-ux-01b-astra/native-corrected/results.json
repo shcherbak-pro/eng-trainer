@@ -1,0 +1,485 @@
+{
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": {
+        "reset-dialog-contract": {
+          "status": "PASS",
+          "before": {
+            "flashcardSessions": {
+              "all": {
+                "order": [
+                  "agent-vocab-003",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+                ],
+                "index": 1
+              }
+            },
+            "learnPasses": {
+              "review": {
+                "id": "review",
+                "name": "Review pass",
+                "blockIds": [
+                  "start-answer"
+                ],
+                "createdAt": "2026-01-01",
+                "updatedAt": "2026-01-01"
+              }
+            },
+            "progress": {
+              "favoriteBlocks": [
+                "start-answer"
+              ],
+              "favoriteIrregular": [
+                "iv-ai-certification-002-deploy"
+              ],
+              "favoritePhrases": [
+                "agent-vocab-003"
+              ],
+              "favoriteWords": [
+                "word-agent-vocab-002"
+              ],
+              "hiddenIrregular": [
+                "iv-ai-certification-001-proceed"
+              ],
+              "hiddenPhrases": [
+                "agent-vocab-002",
+                "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+              ],
+              "hiddenWords": [
+                "word-agent-vocab-001"
+              ],
+              "learnedPhrases": [
+                "agent-vocab-001"
+              ]
+            },
+            "settings": {
+              "activePage": "settings",
+              "speechRepeatCount": 50,
+              "theme": "dark"
+            },
+            "userCollections": {
+              "user:11111111-1111-4111-8111-111111111111": {
+                "id": "user:11111111-1111-4111-8111-111111111111",
+                "name": "Мої слова",
+                "description": "",
+                "version": 1,
+                "createdAt": "2026-11-22T00:29:12.293Z",
+                "updatedAt": "2026-11-22T00:29:12.293Z",
+                "revision": 1,
+                "lastImport": {
+                  "fileName": "reset.json",
+                  "format": "json",
+                  "importedAt": "2026-11-22T00:29:12.293Z",
+                  "added": 3,
+                  "skipped": 0
+                }
+              }
+            },
+            "userEntries": {
+              "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                "kind": "phrase",
+                "english": "Astra equal",
+                "translation": "один",
+                "topic": "Astra",
+                "examples": [],
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 0
+              },
+              "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222",
+                "kind": "word",
+                "english": "Astra equal",
+                "translation": "два",
+                "topic": "Astra",
+                "examples": [],
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 1
+              },
+              "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222",
+                "kind": "word",
+                "english": "linked word",
+                "translation": "три",
+                "topic": "Astra",
+                "examples": [],
+                "sourcePhraseId": "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 2
+              }
+            }
+          },
+          "initialFocus": {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Cancel",
+            "cls": "btn btn--secondary btn--md"
+          },
+          "tabStops": [
+            {
+              "tag": "BUTTON",
+              "inside": true,
+              "documentFocused": true
+            },
+            {
+              "tag": "BODY",
+              "inside": false,
+              "documentFocused": false
+            },
+            {
+              "tag": "BUTTON",
+              "inside": true,
+              "documentFocused": true
+            },
+            {
+              "tag": "BUTTON",
+              "inside": true,
+              "documentFocused": true
+            },
+            {
+              "tag": "BODY",
+              "inside": false,
+              "documentFocused": false
+            },
+            {
+              "tag": "BUTTON",
+              "inside": true,
+              "documentFocused": true
+            }
+          ],
+          "dialog": "Reset all learning progress?\n\nThis clears:\n\nPhrases you marked as learned\nHidden phrases, words and verbs\nYour Focus list\nYour Learn passes and the selected pass\nYour place in every flashcard deck\nPreferences: filters, list sizes, open panels, deck choice, listening repeats and the last page you opened\n\nThese stay: your imported vocabulary collections, your theme, the built-in study material.\n\nThis cannot be undone.\n\nCancel\nReset progress",
+          "after": {
+            "flashcardSessions": {},
+            "learnPasses": {},
+            "progress": {
+              "favoriteBlocks": [],
+              "favoriteIrregular": [],
+              "favoritePhrases": [],
+              "favoriteWords": [],
+              "hiddenIrregular": [],
+              "hiddenPhrases": [],
+              "hiddenWords": [],
+              "learnedPhrases": []
+            },
+            "settings": {
+              "activePage": "index",
+              "speechRepeatCount": 10,
+              "theme": "dark"
+            },
+            "userCollections": {
+              "user:11111111-1111-4111-8111-111111111111": {
+                "id": "user:11111111-1111-4111-8111-111111111111",
+                "name": "Мої слова",
+                "description": "",
+                "version": 1,
+                "createdAt": "2026-11-22T00:29:12.293Z",
+                "updatedAt": "2026-11-22T00:29:12.293Z",
+                "revision": 1,
+                "lastImport": {
+                  "fileName": "reset.json",
+                  "format": "json",
+                  "importedAt": "2026-11-22T00:29:12.293Z",
+                  "added": 3,
+                  "skipped": 0
+                }
+              }
+            },
+            "userEntries": {
+              "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                "kind": "phrase",
+                "english": "Astra equal",
+                "translation": "один",
+                "topic": "Astra",
+                "examples": [],
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 0
+              },
+              "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222",
+                "kind": "word",
+                "english": "Astra equal",
+                "translation": "два",
+                "topic": "Astra",
+                "examples": [],
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 1
+              },
+              "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222",
+                "kind": "word",
+                "english": "linked word",
+                "translation": "три",
+                "topic": "Astra",
+                "examples": [],
+                "sourcePhraseId": "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 2
+              }
+            }
+          },
+          "resetLearnedWrites": 1,
+          "errors": []
+        },
+        "actual-template-and-examples": {
+          "status": "PASS",
+          "saved": [
+            {
+              "english": "reliable",
+              "translation": "надійний",
+              "kind": "word"
+            },
+            {
+              "english": "improve",
+              "translation": "покращувати",
+              "kind": "word"
+            }
+          ],
+          "errors": []
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": {
+        "reset-dialog-contract": {
+          "status": "PASS",
+          "before": {
+            "flashcardSessions": {
+              "all": {
+                "order": [
+                  "agent-vocab-003",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+                ],
+                "index": 1
+              }
+            },
+            "learnPasses": {
+              "review": {
+                "id": "review",
+                "name": "Review pass",
+                "blockIds": [
+                  "start-answer"
+                ],
+                "createdAt": "2026-01-01",
+                "updatedAt": "2026-01-01"
+              }
+            },
+            "progress": {
+              "favoriteBlocks": [
+                "start-answer"
+              ],
+              "favoriteIrregular": [
+                "iv-ai-certification-002-deploy"
+              ],
+              "favoritePhrases": [
+                "agent-vocab-003"
+              ],
+              "favoriteWords": [
+                "word-agent-vocab-002"
+              ],
+              "hiddenIrregular": [
+                "iv-ai-certification-001-proceed"
+              ],
+              "hiddenPhrases": [
+                "agent-vocab-002",
+                "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+              ],
+              "hiddenWords": [
+                "word-agent-vocab-001"
+              ],
+              "learnedPhrases": [
+                "agent-vocab-001"
+              ]
+            },
+            "settings": {
+              "activePage": "settings",
+              "speechRepeatCount": 50,
+              "theme": "dark"
+            },
+            "userCollections": {
+              "user:11111111-1111-4111-8111-111111111111": {
+                "id": "user:11111111-1111-4111-8111-111111111111",
+                "name": "Мої слова",
+                "description": "",
+                "version": 1,
+                "createdAt": "2026-11-22T00:29:18.192Z",
+                "updatedAt": "2026-11-22T00:29:18.192Z",
+                "revision": 1,
+                "lastImport": {
+                  "fileName": "reset.json",
+                  "format": "json",
+                  "importedAt": "2026-11-22T00:29:18.192Z",
+                  "added": 3,
+                  "skipped": 0
+                }
+              }
+            },
+            "userEntries": {
+              "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                "kind": "phrase",
+                "english": "Astra equal",
+                "translation": "один",
+                "topic": "Astra",
+                "examples": [],
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 0
+              },
+              "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222",
+                "kind": "word",
+                "english": "Astra equal",
+                "translation": "два",
+                "topic": "Astra",
+                "examples": [],
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 1
+              },
+              "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222",
+                "kind": "word",
+                "english": "linked word",
+                "translation": "три",
+                "topic": "Astra",
+                "examples": [],
+                "sourcePhraseId": "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 2
+              }
+            }
+          },
+          "initialFocus": {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Cancel",
+            "cls": "btn btn--secondary btn--md"
+          },
+          "tabStops": [
+            {
+              "tag": "BUTTON",
+              "inside": true,
+              "documentFocused": true
+            },
+            {
+              "tag": "BODY",
+              "inside": false,
+              "documentFocused": true
+            },
+            {
+              "tag": "DIALOG",
+              "inside": true,
+              "documentFocused": true
+            },
+            {
+              "tag": "BUTTON",
+              "inside": true,
+              "documentFocused": true
+            },
+            {
+              "tag": "BUTTON",
+              "inside": true,
+              "documentFocused": true
+            },
+            {
+              "tag": "BUTTON",
+              "inside": true,
+              "documentFocused": true
+            }
+          ],
+          "dialog": "Reset all learning progress?\n\nThis clears:\n\nPhrases you marked as learned\nHidden phrases, words and verbs\nYour Focus list\nYour Learn passes and the selected pass\nYour place in every flashcard deck\nPreferences: filters, list sizes, open panels, deck choice, listening repeats and the last page you opened\n\nThese stay: your imported vocabulary collections, your theme, the built-in study material.\n\nThis cannot be undone.\n\nCancel\nReset progress",
+          "after": {
+            "flashcardSessions": {},
+            "learnPasses": {},
+            "progress": {
+              "favoriteBlocks": [],
+              "favoriteIrregular": [],
+              "favoritePhrases": [],
+              "favoriteWords": [],
+              "hiddenIrregular": [],
+              "hiddenPhrases": [],
+              "hiddenWords": [],
+              "learnedPhrases": []
+            },
+            "settings": {
+              "activePage": "index",
+              "speechRepeatCount": 10,
+              "theme": "dark"
+            },
+            "userCollections": {
+              "user:11111111-1111-4111-8111-111111111111": {
+                "id": "user:11111111-1111-4111-8111-111111111111",
+                "name": "Мої слова",
+                "description": "",
+                "version": 1,
+                "createdAt": "2026-11-22T00:29:18.192Z",
+                "updatedAt": "2026-11-22T00:29:18.192Z",
+                "revision": 1,
+                "lastImport": {
+                  "fileName": "reset.json",
+                  "format": "json",
+                  "importedAt": "2026-11-22T00:29:18.192Z",
+                  "added": 3,
+                  "skipped": 0
+                }
+              }
+            },
+            "userEntries": {
+              "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                "kind": "phrase",
+                "english": "Astra equal",
+                "translation": "один",
+                "topic": "Astra",
+                "examples": [],
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 0
+              },
+              "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222",
+                "kind": "word",
+                "english": "Astra equal",
+                "translation": "два",
+                "topic": "Astra",
+                "examples": [],
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 1
+              },
+              "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222": {
+                "id": "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222",
+                "kind": "word",
+                "english": "linked word",
+                "translation": "три",
+                "topic": "Astra",
+                "examples": [],
+                "sourcePhraseId": "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                "collectionId": "user:11111111-1111-4111-8111-111111111111",
+                "position": 2
+              }
+            }
+          },
+          "resetLearnedWrites": 1,
+          "errors": []
+        },
+        "actual-template-and-examples": {
+          "status": "PASS",
+          "saved": [
+            {
+              "english": "reliable",
+              "translation": "надійний",
+              "kind": "word"
+            },
+            {
+              "english": "improve",
+              "translation": "покращувати",
+              "kind": "word"
+            }
+          ],
+          "errors": []
+        }
+      }
+    }
+  },
+  "definition": "Fresh nonpersistent native contexts; synthetic data; clipboard calls stubbed; localhost gzip response BODY bytes, headers excluded. No owner profiles."
+}

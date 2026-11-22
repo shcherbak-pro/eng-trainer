@@ -1,0 +1,7 @@
+date: 2026-11-22T01:37:09Z
+node: v24.18.0
+npm: 11.17.0
+git HEAD: f14dd4e33de2dfcbd8b80e1b72dbfec4326823d3
+branch: feature/eng-v2-ux-01b-spoken-line
+python: Python 3.14.7
+font tools: brotli==1.2.1 fonttools==4.68.0 zopfli==0.4.3 

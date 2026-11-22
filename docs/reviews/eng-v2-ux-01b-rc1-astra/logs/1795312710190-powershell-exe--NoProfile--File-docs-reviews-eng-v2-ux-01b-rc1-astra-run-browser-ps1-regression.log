@@ -1,0 +1,34 @@
+chromium PASS layout-phone-light
+chromium PASS layout-phone-dark
+chromium PASS layout-narrow-light
+chromium PASS layout-narrow-dark
+chromium PASS layout-desktop-light
+chromium PASS layout-desktop-dark
+chromium PASS flashcard-answers-reachable
+chromium PASS reflow-large-text-and-font-fallbacks
+chromium PASS keyboard-and-focus
+chromium PASS reduced-motion
+chromium PASS collections-import-journey
+chromium PASS blocked-upgrade-wait
+chromium PASS blocked-upgrade-continue
+chromium PASS safeguards
+chromium PASS content-error-screen
+chromium PASS v1-isolation
+firefox PASS layout-phone-light
+firefox PASS layout-phone-dark
+firefox PASS layout-narrow-light
+firefox PASS layout-narrow-dark
+firefox PASS layout-desktop-light
+firefox PASS layout-desktop-dark
+firefox PASS flashcard-answers-reachable
+firefox PASS reflow-large-text-and-font-fallbacks
+firefox PASS keyboard-and-focus
+firefox PASS reduced-motion
+firefox PASS collections-import-journey
+firefox PASS blocked-upgrade-wait
+firefox PASS blocked-upgrade-continue
+firefox PASS safeguards
+firefox PASS content-error-screen
+firefox PASS v1-isolation
+{"chromium":{"version":"159.0.8154.6","pass":16,"fail":0,"logByScenario":{"reflow-large-text-and-font-fallbacks":6,"content-error-screen":1,"v1-isolation":2}},"firefox":{"version":"159.0","pass":16,"fail":0,"logByScenario":{"reflow-large-text-and-font-fallbacks":6,"v1-isolation":1}},"measurementLog":0}
+

@@ -1,0 +1,120 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Patterns" [level=1]
+  - navigation "Library sections":
+    - list:
+      - listitem:
+        - link "Phrases":
+          - /url: "#phrases"
+      - listitem:
+        - link "Words":
+          - /url: "#wordIndex"
+      - listitem:
+        - link "Verbs":
+          - /url: "#irregularVerbs"
+      - listitem:
+        - link "Patterns":
+          - /url: "#patterns"
+      - listitem:
+        - link "Answers":
+          - /url: "#answers"
+    - link "Import words":
+      - /url: "#collections"
+  - paragraph: Structured frameworks for B2 to C1 speaking answers, with use cases, examples, transcription and alternatives.
+  - list:
+    - listitem:
+      - paragraph: B2 framework
+      - heading "STAR — behavioural answers" [level=2]
+      - paragraph: Situation → Task → Action → Result
+      - paragraph: /ˌsɪtʃuˈeɪʃən tæsk ˈækʃən rɪˈzʌlt/
+      - paragraph:
+        - strong: "Use:"
+        - text: Best for behavioural questions, teamwork stories, conflicts, leadership and problem-solving.
+      - paragraph: "I used the STAR framework to describe a difficult release: I explained the situation, my task, the actions I took, and the final result."
+      - paragraph: "Я використав STAR, щоб описати складний реліз: пояснив ситуацію, свою задачу, дії, які виконав, і фінальний результат."
+      - paragraph: "Also said: Context → Responsibility → Steps → Outcome; Problem → Action → Result"
+      - button "Listen to example"
+    - listitem:
+      - paragraph: B2 framework
+      - heading "PREP — opinion answers" [level=2]
+      - paragraph: Point → Reason → Example → Point again
+      - paragraph: /pɔɪnt ˈriːzən ɪɡˈzæmpəl pɔɪnt/
+      - paragraph:
+        - strong: "Use:"
+        - text: Best for opinion questions about remote work, AI, teamwork, hobbies or career growth.
+      - paragraph: From my perspective, remote work can be very effective. The reason is that it gives people more focus time. For example, I can plan deep work better at home. Overall, remote work works well with clear communication.
+      - paragraph: З моєї точки зору, віддалена робота може бути дуже ефективною. Причина в тому, що вона дає людям більше часу для фокусу. Наприклад, вдома я можу краще планувати глибоку роботу. Загалом, remote work добре працює з чіткою комунікацією.
+      - paragraph: "Also said: Opinion → Reason → Example → Conclusion; Main idea → Support → Example → Summary"
+      - button "Listen to example"
+    - listitem:
+      - paragraph: B2 framework
+      - heading "OREO — discussion answers" [level=2]
+      - paragraph: Opinion → Reason → Example → Opinion
+      - paragraph: /əˈpɪnjən ˈriːzən ɪɡˈzæmpəl əˈpɪnjən/
+      - paragraph:
+        - strong: "Use:"
+        - text: Best for discussion-style questions where you need to explain your view clearly.
+      - paragraph: In my opinion, work-life balance is important. The reason is that people need energy to work well. For example, hobbies help me recharge. That is why I believe balance improves long-term productivity.
+      - paragraph: На мою думку, work-life balance важливий. Причина в тому, що людям потрібна енергія, щоб добре працювати. Наприклад, хобі допомагають мені відновитися. Саме тому я вважаю, що баланс покращує довгострокову продуктивність.
+      - paragraph: "Also said: View → Explanation → Example → View again; Position → Reason → Example → Conclusion"
+      - button "Listen to example"
+    - listitem:
+      - paragraph: B2 framework
+      - heading "Sandwich — feedback and weaknesses" [level=2]
+      - paragraph: Positive → Challenge → Positive
+      - paragraph: /ˈpɑːzətɪv ˈtʃælɪndʒ ˈpɑːzətɪv/
+      - paragraph:
+        - strong: "Use:"
+        - text: Best for strengths, weaknesses, feedback, difficult situations and balanced answers.
+      - paragraph: I usually start with what went well, then explain the challenge, and finish with what I learned from the situation.
+      - paragraph: Я зазвичай починаю з того, що було добре, потім пояснюю виклик і завершую тим, чого навчився з ситуації.
+      - paragraph: "Also said: Strength → Issue → Learning; Good point → Problem → Improvement"
+      - button "Listen to example"
+    - listitem:
+      - paragraph: B2 framework
+      - heading "PPF — career journey" [level=2]
+      - paragraph: Past → Present → Future
+      - paragraph: /pæst ˈprezənt ˈfjuːtʃər/
+      - paragraph:
+        - strong: "Use:"
+        - text: Best for tell-me-about-yourself, career growth, motivation and professional development.
+      - paragraph: In the past, I focused on .NET and Angular. At the moment, I am developing AI-native engineering skills. In the future, I want to use AI to improve delivery and quality.
+      - paragraph: У минулому я фокусувався на .NET і Angular. Зараз я розвиваю AI-native engineering skills. У майбутньому я хочу використовувати AI для покращення delivery і quality.
+      - paragraph: "Also said: Background → Current focus → Next step; Experience → Current role → Future goal"
+      - button "Listen to example"
+    - listitem:
+      - paragraph: B2+ framework
+      - heading "SEE — analytical answers" [level=2]
+      - paragraph: Statement → Evidence → Explain
+      - paragraph: /ˈsteɪtmənt ˈevədəns ɪkˈspleɪn/
+      - paragraph:
+        - strong: "Use:"
+        - text: Best for analytical questions, metrics, AI value, cost optimization and technical decisions.
+      - paragraph: A clear baseline is important. For example, historical PR data can show review time and accepted findings. This helps us measure improvement instead of relying on opinions.
+      - paragraph: Чіткий baseline важливий. Наприклад, історичні PR-дані можуть показати час рев’ю та прийняті зауваження. Це допомагає вимірювати покращення замість того, щоб спиратися на думки.
+      - paragraph: "Also said: Claim → Proof → Explanation; Point → Evidence → Meaning"
+      - button "Listen to example"
+    - listitem:
+      - paragraph: B2 framework
+      - heading "Universal speaking formula" [level=2]
+      - paragraph: Opening → Main idea → Example → Reflection → Conclusion
+      - paragraph: /ˈoʊpənɪŋ meɪn aɪˈdiːə ɪɡˈzæmpəl rɪˈflekʃən kənˈkluːʒən/
+      - paragraph:
+        - strong: "Use:"
+        - text: Best as a safe structure for almost any assessment answer.
+      - paragraph: I would start with the main idea, then give a practical example, reflect on what it means, and finish with a clear conclusion.
+      - paragraph: Я б почав з головної ідеї, потім навів практичний приклад, пояснив, що це означає, і завершив чітким висновком.
+      - paragraph: "Also said: Start → Explain → Example → Lesson → Finish; Intro → Point → Example → Reflection → Summary"
+      - button "Listen to example"
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

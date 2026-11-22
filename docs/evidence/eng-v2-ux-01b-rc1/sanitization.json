@@ -1,0 +1,160 @@
+{
+  "policy": "New RC1 logs, results and scripts: local repository, user and temporary paths replaced with <repo>, <user-home>, <user> and <run>; terminal colour codes removed. Screenshots show synthetic or built-in data only.",
+  "files": [
+    {
+      "path": "logs/astra-independent-tests.log",
+      "rawSha256": "ccb094ba1d5a5e141b31ce9cebc7f621663ceb4121d6dad464d27b93fa424daa",
+      "publishedSha256": "f20999328a83a11ff73252bd7564a8da55beabc94b2103503e5651b373de9a4c"
+    },
+    {
+      "path": "logs/browser-astra-font-adjusted.log",
+      "rawSha256": "ed6f874df13f861e79c046206121155f7239d8c6069a31d6d1bd945e6a38b6f9",
+      "publishedSha256": "ed6f874df13f861e79c046206121155f7239d8c6069a31d6d1bd945e6a38b6f9"
+    },
+    {
+      "path": "logs/browser-astra.log",
+      "rawSha256": "9290eca851a62d732c821d618873a43a3e1506ba74feb72159a9481542c1504c",
+      "publishedSha256": "9290eca851a62d732c821d618873a43a3e1506ba74feb72159a9481542c1504c"
+    },
+    {
+      "path": "logs/browser-rc1.log",
+      "rawSha256": "d544b419274a6d1d37d73e8ad99c64fe32b9982924ff055ae324beff19ef7ce9",
+      "publishedSha256": "d544b419274a6d1d37d73e8ad99c64fe32b9982924ff055ae324beff19ef7ce9"
+    },
+    {
+      "path": "logs/browser-regression.log",
+      "rawSha256": "c0bceb9b16c0724e29a6a256c28b8e00bec286bd5c9e286010be60cd66fbfc9d",
+      "publishedSha256": "c0bceb9b16c0724e29a6a256c28b8e00bec286bd5c9e286010be60cd66fbfc9d"
+    },
+    {
+      "path": "logs/build-site.log",
+      "rawSha256": "da89d438dc5220f02e31a0f7fde5a044ee62dfa84d6e4f22a3bb7d88bc381de2",
+      "publishedSha256": "bded3cb7f7a42c3f9e1ddc8a037726316ca59cc5e866f950a6cf5454dcc809eb"
+    },
+    {
+      "path": "logs/build.log",
+      "rawSha256": "c2a621ddc0f5374b18f352145765ec5662e9f9b4ff3772c8f614dad69b61054b",
+      "publishedSha256": "57b69e890112125cf351ce664818a1126b509b6d864663d9ccab0c07e52c7e70"
+    },
+    {
+      "path": "logs/check-v1.log",
+      "rawSha256": "cbcb24d340cc38a45ff004fac9dd30e225c0996a449ff342c1d67484ff191adc",
+      "publishedSha256": "cf3161e9032425bd8c3dba921404ce3dca5b8a137b277e9a2cc2c8b393072995"
+    },
+    {
+      "path": "logs/check.log",
+      "rawSha256": "7c575d59a9ae49bedf40c295d28dfc560f6d2f1d8da42bccdac61ac0c8c3a574",
+      "publishedSha256": "86806c615086f9aa755cfe1941032975dc97a67e04dd54efbd961a26830ef5f5"
+    },
+    {
+      "path": "logs/diff-check.log",
+      "rawSha256": "c51aa17c8f8c34eed65d1b4d8972366e2eb79f57f1def0671b8d450c39672991",
+      "publishedSha256": "c51aa17c8f8c34eed65d1b4d8972366e2eb79f57f1def0671b8d450c39672991"
+    },
+    {
+      "path": "logs/environment.txt",
+      "rawSha256": "26d6cc34a6d3bcc8be6621109f2830fdc5908fe0a7283f810996aee4129b6731",
+      "publishedSha256": "26d6cc34a6d3bcc8be6621109f2830fdc5908fe0a7283f810996aee4129b6731"
+    },
+    {
+      "path": "logs/exit-codes.txt",
+      "rawSha256": "953c9bf55e400b09b12583c7a0d7c8239a5de7cbe623255687f71866065970df",
+      "publishedSha256": "953c9bf55e400b09b12583c7a0d7c8239a5de7cbe623255687f71866065970df"
+    },
+    {
+      "path": "logs/font-check.log",
+      "rawSha256": "de5da8168179a666adaa3d64593bc45c60e25b4d1147c1a4d7c7fe2168c1bb96",
+      "publishedSha256": "de5da8168179a666adaa3d64593bc45c60e25b4d1147c1a4d7c7fe2168c1bb96"
+    },
+    {
+      "path": "logs/test-v1.log",
+      "rawSha256": "572da7ab0a0454ccce7807183cd64394087186ba5b3a27d170d1bebaaaabede9",
+      "publishedSha256": "08027e10f41144704863ea72378505bf81fb5baa63636a2b9e87b9bddd4f91f0"
+    },
+    {
+      "path": "logs/test.log",
+      "rawSha256": "9685383386a397a04021a235fb0f8f2a03546ba1872181e33d3615786042f455",
+      "publishedSha256": "731f691289cecfa5da7fc09f748223367f15cfca1a0a4372ca3b70dffefceda2"
+    },
+    {
+      "path": "logs/verify-content.log",
+      "rawSha256": "eb27b6677ecfec1dae1901d384d3fd3a55ceb45b1cdbeefbf45a36ec6ebdf009",
+      "publishedSha256": "eb27b6677ecfec1dae1901d384d3fd3a55ceb45b1cdbeefbf45a36ec6ebdf009"
+    },
+    {
+      "path": "browser/regression-results.json",
+      "rawSha256": "40ecb0c01ceec4c23b1a24c06b51d2fe44860e91d0db1ee3e3152ecd9f22e36e",
+      "publishedSha256": "40ecb0c01ceec4c23b1a24c06b51d2fe44860e91d0db1ee3e3152ecd9f22e36e"
+    },
+    {
+      "path": "browser/astra-unchanged-results.json",
+      "rawSha256": "b1269a19236a29068920c24f093121b3e1cc82d91127f2a1f340f0004529c23e",
+      "publishedSha256": "b1269a19236a29068920c24f093121b3e1cc82d91127f2a1f340f0004529c23e"
+    },
+    {
+      "path": "browser/astra-font-adjusted-results.json",
+      "rawSha256": "57dc3aafaea8c14df9f831c0c1f662c67fd74f9c511b63b13c77e5382303ab64",
+      "publishedSha256": "57dc3aafaea8c14df9f831c0c1f662c67fd74f9c511b63b13c77e5382303ab64"
+    },
+    {
+      "path": "browser/rc1-results.json",
+      "rawSha256": "2f7ab0a78aa1a0de9f7c004c7125df415e13604930f3b64f7bd663b15daae4a3",
+      "publishedSha256": "2f7ab0a78aa1a0de9f7c004c7125df415e13604930f3b64f7bd663b15daae4a3"
+    },
+    {
+      "path": "browser/astra-font-adjustment.diff",
+      "rawSha256": "006faca46096899803bbaa60d2ed9a81f96aa5ad0e1135461a0fb8f4562a2155",
+      "publishedSha256": "4b0166b2653b1b2a20c16dd9ba5db6c1a22c5ae1abcec5b5f0f92699d4c01dd7"
+    },
+    {
+      "path": "fonts/font-check.json",
+      "rawSha256": "70ccc185340bb1bc7d0b78c53fe3f7c9d17f369e0fecc345809ed2ad463ffe46",
+      "publishedSha256": "70ccc185340bb1bc7d0b78c53fe3f7c9d17f369e0fecc345809ed2ad463ffe46"
+    },
+    {
+      "path": "scripts/rc1-browser-check.mjs",
+      "rawSha256": "0897cc842930f9fa6c213c2f6ae7bb246a8660b8441f52703907b98e9b28c05b",
+      "publishedSha256": "0897cc842930f9fa6c213c2f6ae7bb246a8660b8441f52703907b98e9b28c05b"
+    },
+    {
+      "path": "scripts/compare-before-after.cjs",
+      "rawSha256": "aecd8b40d0b0e793d104c80fa9b2dbabdccde4214c8e6a0868d7f727b211e020",
+      "publishedSha256": "aecd8b40d0b0e793d104c80fa9b2dbabdccde4214c8e6a0868d7f727b211e020"
+    },
+    {
+      "path": "scripts/reconstruct-reviewed.mjs",
+      "rawSha256": "3f44b889218c9816e240eac7e8d798ede5c2fa95129c4ed7a757fb20c0b7ebec",
+      "publishedSha256": "3f44b889218c9816e240eac7e8d798ede5c2fa95129c4ed7a757fb20c0b7ebec"
+    },
+    {
+      "path": "scripts/prepare-lf.cjs",
+      "rawSha256": "8f4653f7c427c7d8feaefda6193e304774ac9574e0c8c425f1ef1037447963aa",
+      "publishedSha256": "8f4653f7c427c7d8feaefda6193e304774ac9574e0c8c425f1ef1037447963aa"
+    },
+    {
+      "path": "scripts/split-endings.cjs",
+      "rawSha256": "fe1c413a719d99e678ccad2e3246891d0664317e3d892775586a3880131704c8",
+      "publishedSha256": "fe1c413a719d99e678ccad2e3246891d0664317e3d892775586a3880131704c8"
+    },
+    {
+      "path": "scripts/collect-rc1.mjs",
+      "rawSha256": "8de78c97b944cc47bcafe108f53996cc75f9406b964859766cee9318fd2d85a3",
+      "publishedSha256": "8de78c97b944cc47bcafe108f53996cc75f9406b964859766cee9318fd2d85a3"
+    },
+    {
+      "path": "scripts/final-run.sh",
+      "rawSha256": "2a2d62f8fb90c4513ebea166c716bbf8fc3a0275683add533bd5c94548192987",
+      "publishedSha256": "6eb727d408b6052b0259eea98209e9b0987da29e352670ae05d4eb64665e6cd6"
+    },
+    {
+      "path": "before-after/summary.json",
+      "rawSha256": "c37922d8aea8c2862b32a552680e04ee2c41571a195a4c8a4c60e02d5033d2cf",
+      "publishedSha256": "c37922d8aea8c2862b32a552680e04ee2c41571a195a4c8a4c60e02d5033d2cf"
+    },
+    {
+      "path": "before-after/reviewed-reconstruction.json",
+      "rawSha256": "f6e3540abd5a308a848913ef73f887a4d1a4307f4c7cd9034f42e1953b09817c",
+      "publishedSha256": "f6e3540abd5a308a848913ef73f887a4d1a4307f4c7cd9034f42e1953b09817c"
+    }
+  ]
+}

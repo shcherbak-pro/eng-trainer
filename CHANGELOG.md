@@ -1,5 +1,43 @@
 # Changelog
 
+## Unreleased — ENG-V2-UX-01B-RC1 (2026-11-22)
+
+Corrections from Astra's independent review of ENG-V2-UX-01B:
+
+- **F1:** An Undo can no longer override newer intent. Every learned, Focus and Hide/Show action records an in-memory revision for the stored entry state it touches, also when nothing stored changes ("Keep learning" on an unlearned card). Reset and every reload start a new generation. An Undo is used at most once and restores only what its own action changed. Nothing new is saved.
+- **F2:** Keyboard focus is kept in place when a control disappears:
+  - Learn again moves focus to the next learned card, else the list heading.
+  - Undo returns focus to the restored entry.
+  - Deleting a Learn Pass moves focus to the next pass, else "Create a Learn Pass".
+  - Deck reset and Unhide all have defined targets too.
+  - An expiring message never moves focus.
+- **F3:** A file that is read but has blocking problems (a missing value, an invalid kind, an identity conflict) now focuses the named summary of those problems instead of the review heading.
+- **F4:** The interface font is served as **Eng Trainer Sans**, a renamed OFL derivative of the four Source Sans 3 subsets. Only the font names changed. The licence and a FONTLOG are published with it, and the preparation script is `scripts/fonts/derive_eng_trainer_sans.py`.
+- **F5:**
+  - Learning-block descriptions are marked with their actual language, from a table keyed by block id.
+  - English Answers questions, speaking prompts, the Reverse practice prompt and import-preview examples are kept out of browser translation.
+
+## Unreleased — ENG-V2-UX-01B (2026-11-22)
+
+- Redesign v2 in the approved "Spoken Line" direction:
+  - Design tokens for light and dark themes.
+  - Self-hosted Literata for English study text and Source Sans 3 for the interface, Ukrainian text and transcriptions, both under the SIL Open Font License, with no Google Fonts requests.
+  - A bundled SVG icon set replaces the 3.1 MB Material Symbols font.
+  - Shared buttons, fields, notices, dialogs and messages with 44-pixel targets and a visible focus ring.
+- Replace the banner and the long navigation with five destinations (Home, Library, Practice, Focus, More): a bar at the bottom of the screen on phones, a side navigation on wide screens. Every earlier `#` address still works. Add a Settings screen (`#settings`) and an **Import words** link in the Library.
+- Show Phrases, Words, Verbs and the Focus list as compact rows, with the first entry within 250 pixels of the top on a 390 × 844 phone. **Hide** offers **Undo**. **Unhide all**, Learn Pass deletion and deck reset ask for confirmation in an accessible dialog. **Reset learning progress** moves from Home to Settings, and its confirmation lists what it clears and what it keeps.
+- Keep the flashcard answer buttons on the first screen on phones and desktops. **Learn again** offers **Undo**.
+- Add "How to prepare your file" to Collections: formats, required columns, limits, a short example, **Download CSV template**, **Copy example** and more format details. Import errors name the problem, the missing column, and the record or entry. The template is offered when it helps.
+- Resolve review findings F3–F6:
+  - F3: focus moves to the review or the error summary. The latest file selection wins, **Cancel** stops reading, and the same corrected file can be chosen again.
+  - F4: a blocked upgrade keeps its guidance, recovers by itself, and never starts competing attempts. A late connection is closed when you continue without saving.
+  - F5: conflicts, unavailable storage, quota and other storage failures get separate messages next to the action.
+  - F6: export file names keep Cyrillic collection names.
+- Mark English study text as `lang="en"` and `translate="no"` and built-in translations as Ukrainian. Imported translations are not assumed to be Ukrainian.
+- Theme transitions start only after the saved theme is applied. The theme is still saved only in IndexedDB.
+- `check:site` also verifies the self-hosted fonts and their licences, and rejects Google Fonts references.
+- The database schema and version, identities, saved learning state, built-in content and v1 are unchanged.
+
 ## Unreleased — ENG-V2-02B (2026-11-21)
 
 - Add local user collections with CSV/native JSON validation, preview, duplicate acknowledgment, atomic import, rename, confirmed removal and JSON export.

@@ -1,0 +1,7 @@
+[
+  {
+    "command": "node node_modules/vitest/vitest.mjs run --config docs/reviews/eng-v2-ux-01b-astra/vitest.config.ts",
+    "exitCode": 1,
+    "seconds": 6.781
+  }
+]

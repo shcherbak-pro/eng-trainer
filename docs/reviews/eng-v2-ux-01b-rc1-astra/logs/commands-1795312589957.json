@@ -1,0 +1,50 @@
+[
+  {
+    "command": "npm.cmd run check",
+    "exitCode": 1,
+    "seconds": 9.136,
+    "log": "1795312589957-npm-cmd-run-check.log"
+  },
+  {
+    "command": "npm.cmd test",
+    "exitCode": 1,
+    "seconds": 3.161,
+    "log": "1795312589957-npm-cmd-test.log"
+  },
+  {
+    "command": "npm.cmd run check:v1",
+    "exitCode": 0,
+    "seconds": 5.97,
+    "log": "1795312589957-npm-cmd-run-check-v1.log"
+  },
+  {
+    "command": "npm.cmd run test:v1",
+    "exitCode": 1,
+    "seconds": 2.676,
+    "log": "1795312589957-npm-cmd-run-test-v1.log"
+  },
+  {
+    "command": "npm.cmd run build:site",
+    "exitCode": 1,
+    "seconds": 3.783,
+    "log": "1795312589957-npm-cmd-run-build-site.log"
+  },
+  {
+    "command": "npm.cmd run verify:content",
+    "exitCode": 0,
+    "seconds": 1.941,
+    "log": "1795312589957-npm-cmd-run-verify-content.log"
+  },
+  {
+    "command": "git -c core.whitespace=cr-at-eol diff --check",
+    "exitCode": 0,
+    "seconds": 0.917,
+    "log": "1795312589957-git--c-core-whitespace-cr-at-eol-diff---check.log"
+  },
+  {
+    "command": "node node_modules/vitest/vitest.mjs run --config docs/reviews/eng-v2-ux-01b-astra/vitest.config.ts",
+    "exitCode": 1,
+    "seconds": 1.229,
+    "log": "1795312589957-node-node_modules-vitest-vitest-mjs-run---config-docs-reviews-eng-v2-ux-01b-astra-vitest-config-ts.log"
+  }
+]

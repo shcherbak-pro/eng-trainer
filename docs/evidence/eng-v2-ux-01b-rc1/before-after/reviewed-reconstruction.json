@@ -1,0 +1,129 @@
+{
+  "files": 696,
+  "reconstructed": [
+    {
+      "path": "public/fonts/OFL-SourceSans3.txt",
+      "from": "renamed licence file"
+    },
+    {
+      "path": "scripts/check-site.mjs",
+      "from": "HEAD + captured diff (CRLF)"
+    },
+    {
+      "path": "src/app/App.test.ts",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/assets/fonts/README.md",
+      "from": "recorded pre-RC1 text"
+    },
+    {
+      "path": "src/assets/fonts/source-sans-3-cyrillic.woff2",
+      "from": "verified original font"
+    },
+    {
+      "path": "src/assets/fonts/source-sans-3-greek.woff2",
+      "from": "verified original font"
+    },
+    {
+      "path": "src/assets/fonts/source-sans-3-latin-ext.woff2",
+      "from": "verified original font"
+    },
+    {
+      "path": "src/assets/fonts/source-sans-3-latin.woff2",
+      "from": "verified original font"
+    },
+    {
+      "path": "src/content/catalog.ts",
+      "from": "HEAD (CRLF)"
+    },
+    {
+      "path": "src/features/collections/CollectionsPage.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/features/collections/CollectionsPage.test.ts",
+      "from": "RC1 replacements reversed"
+    },
+    {
+      "path": "src/features/exercises/AnswersPage.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/features/exercises/PracticePage.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/features/exercises/ReversePracticePage.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/features/flashcards/FlashcardsPage.svelte",
+      "from": "recorded pre-RC1 text"
+    },
+    {
+      "path": "src/features/focus/FocusListPage.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/features/home/IndexPage.svelte",
+      "from": "recorded pre-RC1 text"
+    },
+    {
+      "path": "src/features/home/LearnPassManager.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/features/vocabulary/IrregularVerbsPage.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/features/vocabulary/PhrasesPage.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/features/vocabulary/WordIndexPage.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/shared/entries/HideButton.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/shared/ui/ConfirmDialog.svelte",
+      "from": "recorded pre-RC1 text"
+    },
+    {
+      "path": "src/shared/ui/IconButton.svelte",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/shared/ui/Notice.svelte",
+      "from": "recorded pre-RC1 text"
+    },
+    {
+      "path": "src/shared/ui/ToastRegion.svelte",
+      "from": "recorded pre-RC1 text"
+    },
+    {
+      "path": "src/shared/ui/toast.ts",
+      "from": "recorded pre-RC1 text"
+    },
+    {
+      "path": "src/state/progress.ts",
+      "from": "HEAD + captured diff"
+    },
+    {
+      "path": "src/styles/fonts.css",
+      "from": "RC1 replacements reversed"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "from": "RC1 replacements reversed"
+    }
+  ],
+  "mismatches": [],
+  "treeSha256": "1df5517c9fedb1ef909d74e4788e5f943c40a34ca7f6e8d65f47c9c39b5e0231",
+  "reviewTreeSha256": "1df5517c9fedb1ef909d74e4788e5f943c40a34ca7f6e8d65f47c9c39b5e0231",
+  "identical": true
+}

@@ -1,0 +1,269 @@
+## feature/eng-v2-ux-01b-spoken-line
+ M CHANGELOG.md
+ M README.md
+ M docs/architecture/USER-COLLECTIONS.md
+ M index.html
+ M scripts/check-site.mjs
+ M src/app.css
+ M src/app/App.svelte
+ M src/app/App.test.ts
+ M src/app/AppShell.svelte
+ M src/app/ThemeToggle.svelte
+ M src/app/navigation.ts
+ M src/app/theme.ts
+ M src/collections/format.ts
+ M src/collections/service.ts
+ M src/features/collections/CollectionsPage.svelte
+ M src/features/collections/retainedLearning.test.ts
+ M src/features/exercises/AnswersPage.svelte
+ M src/features/exercises/PatternsPage.svelte
+ M src/features/exercises/PracticePage.svelte
+ M src/features/exercises/ReversePracticePage.svelte
+ M src/features/flashcards/FlashcardsPage.svelte
+ M src/features/flashcards/FlashcardsPage.test.ts
+ M src/features/focus/FocusListPage.svelte
+ M src/features/home/ExpansionPanel.svelte
+ M src/features/home/IndexPage.svelte
+ M src/features/home/LearnPassManager.svelte
+ M src/features/vocabulary/IrregularVerbsPage.svelte
+ M src/features/vocabulary/PhrasesPage.svelte
+ M src/features/vocabulary/WordIndexPage.svelte
+ M src/shared/entries/FocusButton.svelte
+ M src/shared/entries/HideButton.svelte
+ M src/shared/entries/IrregularVerbCard.svelte
+ M src/shared/entries/PhraseCard.svelte
+ M src/shared/entries/WordCard.svelte
+ M src/shared/speech/SectionSpeechControl.svelte
+ M src/shared/speech/SpeakButton.svelte
+ M src/shared/text.ts
+ M src/shared/ui/CollectionFilter.svelte
+ M src/shared/ui/EmptyState.svelte
+ M src/shared/ui/IconButton.svelte
+ D src/shared/ui/MaterialIcon.svelte
+ M src/shared/ui/PaginationControls.svelte
+ M src/state/index.ts
+ M src/state/progress.ts
+ M src/state/settings.ts
+ M src/storage/database.ts
+?? docs/design/ENG-V2-UX-01A.md
+?? docs/design/eng-v2-ux-01a/audit/data/aria/desktop-index.yml
+?? docs/design/eng-v2-ux-01a/audit/data/aria/desktop-phrases.yml
+?? docs/design/eng-v2-ux-01a/audit/data/aria/desktop-wordIndex.yml
+?? docs/design/eng-v2-ux-01a/audit/data/aria/mobile-collections.yml
+?? docs/design/eng-v2-ux-01a/audit/data/aria/mobile-flashcards.yml
+?? docs/design/eng-v2-ux-01a/audit/data/contrast-concept-b.txt
+?? docs/design/eng-v2-ux-01a/audit/data/contrast-current.txt
+?? docs/design/eng-v2-ux-01a/audit/data/glyph-coverage.txt
+?? docs/design/eng-v2-ux-01a/audit/data/icon-font-and-filmstrip.json
+?? docs/design/eng-v2-ux-01a/audit/data/production-audit.json
+?? docs/design/eng-v2-ux-01a/audit/data/theme-flash-and-f3.json
+?? docs/design/eng-v2-ux-01a/audit/screenshots/01-mobile-phrases-first-screen.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/02-mobile-index-first-screen.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/03-desktop-phrases.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/04-mobile-flashcards.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/05-desktop-flashcards-1440x900.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/06-mobile-import-preview-table.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/07-f4-blocked-upgrade.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/08-f4-retry-while-still-blocked.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/09-f5-stale-write-message.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/10-content-error-copy.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/11-icon-font-still-loading.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/12a-theme-flash-252ms.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/12b-theme-flash-385ms.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/12c-theme-flash-485ms.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/13-320px-verbs-overflow.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/14-mobile-word-index.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/15-amber-focus-ring.png
+?? docs/design/eng-v2-ux-01a/audit/screenshots/16-mobile-dark-phrases.png
+?? docs/design/eng-v2-ux-01a/audit/scripts/contrast-concept-b.mjs
+?? docs/design/eng-v2-ux-01a/audit/scripts/contrast-current.mjs
+?? docs/design/eng-v2-ux-01a/audit/scripts/glyph-coverage.mjs
+?? docs/design/eng-v2-ux-01a/audit/scripts/icon-font-and-filmstrip.mjs
+?? docs/design/eng-v2-ux-01a/audit/scripts/production-audit.mjs
+?? docs/design/eng-v2-ux-01a/audit/scripts/render-concepts.mjs
+?? docs/design/eng-v2-ux-01a/audit/scripts/theme-flash-and-f3.mjs
+?? docs/design/eng-v2-ux-01a/concepts/a-clear-desk.html
+?? docs/design/eng-v2-ux-01a/concepts/b-spoken-line.html
+?? docs/design/eng-v2-ux-01a/concepts/c-lexicon.html
+?? docs/design/eng-v2-ux-01a/concepts/renders/a1-library.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/a2-flashcards.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/a3-flashcards-dark.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/a4-desktop.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/b1-library.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/b2-session-front.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/b3-session-back-dark.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/b4-home.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/b5-import-review.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/b6-blocked.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/b7-reset-dialog.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/b8-desktop.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/c1-entries.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/c2-drill.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/c3-entries-dark.png
+?? docs/design/eng-v2-ux-01a/concepts/renders/c4-desktop.png
+?? docs/evidence/eng-v2-ux-01b/README.md
+?? docs/evidence/eng-v2-ux-01b/artifact.json
+?? docs/evidence/eng-v2-ux-01b/browser-check.mjs
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-answers.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-collections.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-favorites.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-flashcards.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-index.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-irregularVerbs.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-patterns.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-phrases.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-practice.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-reverse.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-settings.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/chromium-wordIndex.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-answers.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-collections.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-favorites.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-flashcards.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-index.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-irregularVerbs.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-patterns.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-phrases.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-practice.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-reverse.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-settings.yml
+?? docs/evidence/eng-v2-ux-01b/browser/aria/firefox-wordIndex.yml
+?? docs/evidence/eng-v2-ux-01b/browser/results.json
+?? docs/evidence/eng-v2-ux-01b/browser/screenshots.json
+?? docs/evidence/eng-v2-ux-01b/candidate.json
+?? docs/evidence/eng-v2-ux-01b/collect-evidence.mjs
+?? docs/evidence/eng-v2-ux-01b/first-load.json
+?? docs/evidence/eng-v2-ux-01b/git-status.txt
+?? docs/evidence/eng-v2-ux-01b/logs/browser.log
+?? docs/evidence/eng-v2-ux-01b/logs/build-site.log
+?? docs/evidence/eng-v2-ux-01b/logs/build.log
+?? docs/evidence/eng-v2-ux-01b/logs/check-v1.log
+?? docs/evidence/eng-v2-ux-01b/logs/check.log
+?? docs/evidence/eng-v2-ux-01b/logs/diff-check.log
+?? docs/evidence/eng-v2-ux-01b/logs/environment.txt
+?? docs/evidence/eng-v2-ux-01b/logs/exit-codes.txt
+?? docs/evidence/eng-v2-ux-01b/logs/test-v1.log
+?? docs/evidence/eng-v2-ux-01b/logs/test.log
+?? docs/evidence/eng-v2-ux-01b/logs/verify-content.log
+?? docs/evidence/eng-v2-ux-01b/preservation.json
+?? docs/evidence/eng-v2-ux-01b/sanitization.json
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-desktop-dark-wordIndex.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-desktop-flashcards-front.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-desktop-hide-undo-toast.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-desktop-light-phrases.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-desktop-reset-dialog.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-desktop-unhide-dialog.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-narrow-dark-phrases.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-narrow-light-irregularVerbs.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-narrow-text200-settings.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-blocked-wait.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-collections-conflict.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-collections-error.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-collections-help.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-collections-remove-dialog.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-collections-review.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-content-error.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-dark-phrases.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-flashcards-back.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-flashcards-front.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-fonts-failed.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-fonts-slow.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-keyboard-focus.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-light-collections.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-light-favorites.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-light-index.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-light-phrases.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-light-settings.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-light-wordIndex.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/chromium-phone-more-sheet.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/firefox-desktop-dark-flashcards.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/firefox-phone-blocked-continue.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/firefox-phone-collections-error.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/firefox-phone-flashcards-front.png
+?? docs/evidence/eng-v2-ux-01b/screenshots/firefox-phone-light-phrases.png
+?? docs/evidence/eng-v2-ux-01b/v1-preservation.json
+?? docs/handoffs/ENG-V2-UX-01B.md
+?? docs/releases/ENG-V2-02A.md
+?? docs/releases/ENG-V2-02B-PRODUCTION.md
+?? docs/releases/eng-v2-02a-production/artifact-inventory.json
+?? docs/releases/eng-v2-02a-production/browser-chromium.json
+?? docs/releases/eng-v2-02a-production/browser-firefox.json
+?? docs/releases/eng-v2-02a-production/chromium-v1-focus.png
+?? docs/releases/eng-v2-02a-production/chromium-v2-focus.png
+?? docs/releases/eng-v2-02a-production/firefox-v1-focus.png
+?? docs/releases/eng-v2-02a-production/firefox-v2-focus.png
+?? docs/releases/eng-v2-02a-production/github-release.json
+?? docs/releases/eng-v2-02a-production/navigation-observation.json
+?? docs/releases/eng-v2-02a-production/production-content.json
+?? docs/releases/eng-v2-02a-production/smoke.mjs
+?? docs/releases/eng-v2-02b-production/artifact-inventory.json
+?? docs/releases/eng-v2-02b-production/browser-support.mjs
+?? docs/releases/eng-v2-02b-production/build-site.log
+?? docs/releases/eng-v2-02b-production/catalog-smoke.mjs
+?? docs/releases/eng-v2-02b-production/catalog/browser-chromium.json
+?? docs/releases/eng-v2-02b-production/catalog/browser-firefox.json
+?? docs/releases/eng-v2-02b-production/catalog/chromium-v1-focus.png
+?? docs/releases/eng-v2-02b-production/catalog/firefox-v1-focus.png
+?? docs/releases/eng-v2-02b-production/catalog/production-content.json
+?? docs/releases/eng-v2-02b-production/collections-smoke.mjs
+?? docs/releases/eng-v2-02b-production/collections/browser-chromium.json
+?? docs/releases/eng-v2-02b-production/collections/browser-firefox.json
+?? docs/releases/eng-v2-02b-production/collections/chromium-collections.png
+?? docs/releases/eng-v2-02b-production/collections/chromium-mobile.png
+?? docs/releases/eng-v2-02b-production/collections/chromium-synthetic-export.json
+?? docs/releases/eng-v2-02b-production/collections/firefox-collections.png
+?? docs/releases/eng-v2-02b-production/collections/firefox-mobile.png
+?? docs/releases/eng-v2-02b-production/collections/firefox-synthetic-export.json
+?? docs/releases/eng-v2-02b-production/github-release.json
+?? docs/releases/eng-v2-02b-production/preservation.json
+?? docs/releases/eng-v2-02b-production/retained-learning-smoke.mjs
+?? docs/releases/eng-v2-02b-production/retained-learning/browser-chromium.json
+?? docs/releases/eng-v2-02b-production/retained-learning/browser-firefox.json
+?? docs/releases/eng-v2-02b-production/retained-learning/chromium-F1-all-delete-learn-reload-restore.png
+?? docs/releases/eng-v2-02b-production/retained-learning/chromium-F1-topic-delete-learn-reload-restore.png
+?? docs/releases/eng-v2-02b-production/retained-learning/chromium-synthetic-export.json
+?? docs/releases/eng-v2-02b-production/retained-learning/firefox-F1-all-delete-learn-reload-restore.png
+?? docs/releases/eng-v2-02b-production/retained-learning/firefox-F1-topic-delete-learn-reload-restore.png
+?? docs/releases/eng-v2-02b-production/retained-learning/firefox-synthetic-export.json
+?? docs/releases/eng-v2-02b-production/smoke.log
+?? docs/releases/eng-v2-02b-production/smoke.mjs
+?? docs/releases/eng-v2-02b-production/verification-summary.json
+?? docs/reviews/eng-v2-ux-01b-astra/candidate-before.json
+?? docs/reviews/eng-v2-ux-01b-astra/capture.mjs
+?? docs/reviews/eng-v2-ux-01b-astra/verify-commands.mjs
+?? public/fonts/OFL-Literata.txt
+?? public/fonts/OFL-SourceSans3.txt
+?? src/app/navigation.test.ts
+?? src/assets/fonts/README.md
+?? src/assets/fonts/literata-latin-italic.woff2
+?? src/assets/fonts/literata-latin.woff2
+?? src/assets/fonts/source-sans-3-cyrillic.woff2
+?? src/assets/fonts/source-sans-3-greek.woff2
+?? src/assets/fonts/source-sans-3-latin-ext.woff2
+?? src/assets/fonts/source-sans-3-latin.woff2
+?? src/collections/fileName.test.ts
+?? src/collections/fileName.ts
+?? src/collections/importErrors.test.ts
+?? src/collections/importGuide.test.ts
+?? src/collections/importGuide.ts
+?? src/collections/serviceErrors.test.ts
+?? src/features/collections/CollectionsPage.test.ts
+?? src/features/collections/ImportHelp.svelte
+?? src/features/collections/importFeedback.ts
+?? src/features/settings/SettingsPage.svelte
+?? src/shared/download.ts
+?? src/shared/entries/EntryExamples.svelte
+?? src/shared/entries/hideUndo.test.ts
+?? src/shared/ui/Button.svelte
+?? src/shared/ui/ConfirmDialog.svelte
+?? src/shared/ui/Icon.svelte
+?? src/shared/ui/Notice.svelte
+?? src/shared/ui/SearchField.svelte
+?? src/shared/ui/ToastRegion.svelte
+?? src/shared/ui/icons.ts
+?? src/shared/ui/toast.ts
+?? src/state/reset.test.ts
+?? src/storage/openStorage.test.ts
+?? src/styles/base.css
+?? src/styles/fonts.css
+?? src/styles/tokens.css

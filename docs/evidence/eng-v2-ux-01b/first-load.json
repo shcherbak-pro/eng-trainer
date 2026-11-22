@@ -1,0 +1,100 @@
+{
+  "definition": "Cold cache, one route per fresh context, 390 x 844, until the network is idle. Sizes are gzip -9 of the built files (fonts: WOFF2 as served). The local server sends uncompressed files; GitHub Pages compresses text.",
+  "budget": {
+    "appCodeGzip": 102400,
+    "firstScreenFonts": 204800,
+    "totalGzip": 563200,
+    "thirdPartyRequests": 0
+  },
+  "result": {
+    "appCodeGzip": 86700,
+    "worstFirstScreenFonts": 193128,
+    "worstTotalGzip": 510131,
+    "hosts": [
+      "127.0.0.1:4179"
+    ],
+    "pass": true
+  },
+  "parts": {
+    "htmlGzip": 648,
+    "cssGzip": 7865,
+    "jsGzip": 78187,
+    "cssRaw": 41642,
+    "jsRaw": 236805,
+    "allFontFiles": [
+      {
+        "path": "assets/literata-latin-Cedbco83.woff2",
+        "bytes": 85672
+      },
+      {
+        "path": "assets/literata-latin-italic-Ckc1vdjp.woff2",
+        "bytes": 88756
+      },
+      {
+        "path": "assets/source-sans-3-cyrillic-BMDVbyM7.woff2",
+        "bytes": 18496
+      },
+      {
+        "path": "assets/source-sans-3-greek-Cc-u-6OI.woff2",
+        "bytes": 14528
+      },
+      {
+        "path": "assets/source-sans-3-latin-Bo_j9asI.woff2",
+        "bytes": 28872
+      },
+      {
+        "path": "assets/source-sans-3-latin-ext-C8iNium2.woff2",
+        "bytes": 60088
+      }
+    ],
+    "contentGzip": 230303,
+    "contentRaw": 1610203
+  },
+  "routes": {
+    "#index": {
+      "requests": 18,
+      "hosts": [
+        "127.0.0.1:4179"
+      ],
+      "fonts": [
+        "source-sans-3-latin-Bo_j9asI.woff2",
+        "literata-latin-Cedbco83.woff2",
+        "source-sans-3-cyrillic-BMDVbyM7.woff2"
+      ],
+      "fontBytes": 133040,
+      "gzipEstimateBytes": 450043
+    },
+    "#phrases": {
+      "requests": 18,
+      "hosts": [
+        "127.0.0.1:4179"
+      ],
+      "fonts": [
+        "source-sans-3-latin-Bo_j9asI.woff2",
+        "literata-latin-Cedbco83.woff2",
+        "source-sans-3-cyrillic-BMDVbyM7.woff2"
+      ],
+      "fontBytes": 133040,
+      "gzipEstimateBytes": 450043
+    },
+    "#wordIndex": {
+      "requests": 19,
+      "hosts": [
+        "127.0.0.1:4179"
+      ],
+      "fonts": [
+        "source-sans-3-latin-Bo_j9asI.woff2",
+        "literata-latin-Cedbco83.woff2",
+        "source-sans-3-cyrillic-BMDVbyM7.woff2",
+        "source-sans-3-latin-ext-C8iNium2.woff2"
+      ],
+      "fontBytes": 193128,
+      "gzipEstimateBytes": 510131
+    }
+  },
+  "before": {
+    "source": "docs/design/ENG-V2-UX-01A.md §1.10 (production, 21 November 2026)",
+    "iconFontBytes": 3132808,
+    "note": "The icon font was 91 % of the first-load bytes; the app JavaScript was 59 KB, CSS 8 KB, manifest and packs 241 KB as transferred."
+  }
+}

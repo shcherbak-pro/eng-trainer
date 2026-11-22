@@ -1,0 +1,13 @@
+{
+  "original": "docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs",
+  "originalSha256": "d8f1396a071eab1f8e042a09b174672ac0afec6517798d825bfed7b439baffda",
+  "adjustedSha256": "8a5467a013cdeaca6eb5c652a711ca868e38f24543531e47bb0fa02a25c2e077",
+  "onlyChange": "Expected font family Source Sans 3 → Eng Trainer Sans; assertions unchanged",
+  "differences": [
+    {
+      "line": 131,
+      "before": "  await page.addStyleTag({content:'html {font-size:100% !important}'});d.glyphs=await page.evaluate(async()=>{const chars='English іїєґІЇЄҐʼɪəˈːʊðɑæʃɔɜʌɡˌŋʒθ';await document.fonts.load('40px \"Source Sans 3\"',chars);const c=document.createElement('canvas').getContext('2d'),missing=[];for(const ch of chars){const widths=['monospace','serif','cursive'].map(f=>{c.font=`40px \"Source Sans 3\", ${f}`;return c.measureText(ch).width;});if(Math.max(...widths)-Math.min(...widths)>.01)missing.push(ch);}return {chars,missing};});assert.deepEqual(d.glyphs.missing,[]);",
+      "after": "  await page.addStyleTag({content:'html {font-size:100% !important}'});d.glyphs=await page.evaluate(async()=>{const chars='English іїєґІЇЄҐʼɪəˈːʊðɑæʃɔɜʌɡˌŋʒθ';await document.fonts.load('40px \"Eng Trainer Sans\"',chars);const c=document.createElement('canvas').getContext('2d'),missing=[];for(const ch of chars){const widths=['monospace','serif','cursive'].map(f=>{c.font=`40px \"Eng Trainer Sans\", ${f}`;return c.measureText(ch).width;});if(Math.max(...widths)-Math.min(...widths)>.01)missing.push(ch);}return {chars,missing};});assert.deepEqual(d.glyphs.missing,[]);"
+    }
+  ]
+}

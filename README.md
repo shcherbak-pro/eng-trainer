@@ -14,15 +14,29 @@ ShcherbakPro English Trainer is a responsive learning app for English speaking a
 - irregular verbs with 3 forms, translation, transcription, and examples
 - pronunciation and listening practice with browser speech synthesis
 
+## Finding your way
+
+The app has five main destinations. On phones they form the bar at the bottom of the screen; on wide screens they are in the side navigation.
+
+| Destination | Screens (address) |
+|---|---|
+| **Home** | Learn Passes, topics, learning blocks, phrase or word of the day (`#index`) |
+| **Library** | Phrases (`#phrases`), Words (`#wordIndex`), Verbs (`#irregularVerbs`), Patterns (`#patterns`), Answers (`#answers`), and an **Import words** link to Collections |
+| **Practice** | Flashcards (`#flashcards`), Reverse practice (`#reverse`), Speaking prompts (`#practice`) |
+| **Focus** | Your Focus list (`#favorites`) |
+| **More** | Collections (`#collections`), Settings (`#settings`), and the previous version (v1) |
+
+All earlier addresses still work, so saved links and the last opened page continue to open the same screens. **Settings** holds the theme, the number of listening repeats, a link to your collections, and **Reset learning progress…**. The reset asks for confirmation and lists exactly what it clears and what it keeps.
+
 ## Focus tools
 
 The app includes several tools to keep learning focused:
 
 - **Learn Passes** — create focused learning tracks and show only selected materials.
 - **Focus List** — save important words, phrases, verbs, or learning blocks for repeated practice.
-- **Hide / Unhide** — remove learned items from normal lists without deleting them.
-- **Tag Cloud** — filter materials by topic tags.
-- **Phrase / Word of the Day** — get a random item for quick daily practice.
+- **Hide / Show** — remove learned items from normal lists without deleting them. A message offers **Undo** right after hiding, and **Show hidden** brings hidden items back into view with a **Show** button on each. **Unhide all** asks for confirmation first.
+- **Topics** — filter learning blocks by topic on Home.
+- **Phrase or word of the day** — get a random item for quick daily practice.
 - **Pagination** — control how many items are shown on each page.
 
 ## Flashcards
@@ -33,7 +47,7 @@ The **Flashcards** page shows one word or phrase at a time. The front has the En
 - **Swipe left**, press **Keep learning**, or press the left arrow key to keep the item. It comes back on the next round.
 - **Enter** or **Space** flips the card.
 - **All Vocabulary** studies every word and phrase once. **By Topic** studies one category. The learned status is shared between them and with the **Phrases** page.
-- **Review learned vocabulary** lists learned items, where **Learn again** returns an item to the deck. **Reset progress** clears the learned items of the selected deck after a confirmation.
+- **Review learned vocabulary** lists learned items, where **Learn again** returns an item to the deck; the message that follows offers **Undo**. **Reset progress** for the selected deck is in that list and on the **Deck complete** screen, and it asks for confirmation first.
 
 Each phrase is one card, together with the Word Index entry that is linked to it. A card is learned exactly when its phrase is learned on the **Phrases** page and in the **Focus List**. If the material lists the same or a similar text as two entries (for example `consequently` in Conjunctions and `Consequently, …` in Advanced Linking Words), these are two cards with separate progress.
 
@@ -45,9 +59,11 @@ For phrases, words, irregular verbs, and Focus List items, the app can read the 
 
 ## Your vocabulary collections
 
-Open **Collections** to import CSV UTF-8 or native JSON, review the proposed entries and possible duplicates, then confirm the import. CSV headers are `english,translation,topic,example` with optional `kind` (`word` or `phrase`); only English and translation are required. Files are limited to 2 MiB and collections to 1,000 entries. Invalid entries or conflicting IDs block the whole import.
+Open **Collections** (from **More**, or **Import words** in the Library) to import CSV UTF-8 or native JSON, review the proposed entries and possible duplicates, then confirm the import. CSV headers are `english,translation,topic,example` with optional `kind` (`word` or `phrase`); only English and translation are required. Files are limited to 2 MiB and collections to 1,000 entries. Invalid entries or conflicting IDs block the whole import.
 
-Imported content is saved locally in IndexedDB and joins the existing search, Phrases/Words, Flashcards and Focus functionality. Collection and topic filters let you narrow what you study. Collections can be renamed, exported as JSON, or removed after confirmation. Reimporting an unchanged native export creates no duplicates.
+Next to the file picker, **How to prepare your file** shows the formats, the required columns, the limits and a short example. **Download CSV template** saves exactly that example as `eng-trainer-vocabulary-template.csv` (UTF-8), and **Copy example** copies the same text. **More format details** explains separators, optional columns, quoting, spreadsheet export and the native JSON structure. Error messages name the missing column, the record or entry and the field, and offer the template when it helps.
+
+Imported content is saved locally in IndexedDB and joins the existing search, Phrases/Words, Flashcards and Focus functionality. Collection and topic filters let you narrow what you study. Collections can be renamed, exported as JSON, or removed after confirmation. An export is named after the collection, including Cyrillic names (for example `Мої-слова-2026-11-22.json`). Reimporting an unchanged native export creates no duplicates.
 
 Removing a collection retains its progress under the original IDs, so importing the same native JSON restores it. Export a content backup before removing a collection; JSON exports do not contain learning progress. Reset progress does not remove vocabulary collections. See [the format, migration and deletion policy](docs/architecture/USER-COLLECTIONS.md).
 
@@ -57,7 +73,9 @@ Learning state is saved in the browser, in the IndexedDB database `eng-trainer-v
 
 Search text, the current page of a list, and the current practice prompt are not saved. They start fresh after a reload.
 
-If the browser cannot save a change, the app shows a notice with a **Try saving again** button. If the saved progress cannot be opened at all, the app stops and offers to try again or to continue without saving.
+If the browser cannot save a change, the app shows a notice with a **Try saving again** button. If another eng-trainer tab keeps an older version of the saved data open, the app explains how to close it, keeps waiting, and opens by itself once the other tab is closed; **Check again** never starts a competing attempt, and **Continue without saving** stays in effect even if the other tab closes later. If the saved progress cannot be opened at all, the app stops and offers to try again or to continue without saving.
+
+The theme is saved in IndexedDB like the other preferences, so it is applied once the app has read its settings. Until then the system theme is shown; colour transitions are switched on only after that, so the change is not animated. The app uses no `localStorage` and no cookies.
 
 ## Two versions
 
@@ -66,7 +84,13 @@ If the browser cannot save a change, the app shows a notice with a **Try saving 
 | v2 (current) | https://shcherbak-pro.github.io/eng-trainer/ | repository root | IndexedDB `eng-trainer-v2` |
 | v1 (preserved) | https://shcherbak-pro.github.io/eng-trainer/v1/ | [`v1/`](v1/) | `localStorage` |
 
-The two versions are separate applications. They do not share code, data files, or progress. v2 starts with empty progress and does not read v1 data. A link at the bottom of every v2 screen opens v1.
+The two versions are separate applications. They do not share code, data files, or progress. v2 starts with empty progress and does not read v1 data. v2 links to v1 from the side navigation on wide screens, from **More** on phones, and from **Settings**.
+
+## Fonts and icons
+
+v2 serves its own fonts; it makes no requests to Google Fonts or any other font service. English study text uses **Literata**. The interface, Ukrainian text and transcriptions use **Eng Trainer Sans**, which covers every IPA symbol in the material. Eng Trainer Sans is the Source Sans 3 design under its own name: Source Sans 3 reserves the name “Source”, and web subsets count as modified versions, so only the font names were changed (glyphs, metrics and shaping are identical). Both typefaces are published under the SIL Open Font License 1.1; the licences and the derivative's FONTLOG are served at `/eng-trainer/fonts/`. The font files are split by script (`unicode-range`), so a page loads only the subsets it uses, and text appears at once in a system font if a font is slow or missing. Provenance and checksums are in [`src/assets/fonts/README.md`](src/assets/fonts/README.md); the renamed files are prepared by [`scripts/fonts/derive_eng_trainer_sans.py`](scripts/fonts/derive_eng_trainer_sans.py), which the build does not run.
+
+Icons are a small bundled SVG set (`src/shared/ui/icons.ts`), not an icon font.
 
 ## Development
 
@@ -102,8 +126,10 @@ src/
   collections/ Validated CSV/native JSON import, transactional collection service and export
   storage/     IndexedDB adapter: database, object stores, transactions
   state/       Progress and settings services, the save queue, in-memory view state
-  features/    Screens: home, vocabulary, flashcards, exercises, focus, collections
+  features/    Screens: home, vocabulary, flashcards, exercises, focus, collections, settings
   shared/      Components and helpers used by several features (ui, entries, speech)
+  styles/      Design tokens (colours, type, spacing, light and dark), font faces, base styles
+  assets/      Self-hosted font files and their provenance
   test/        Test setup (in-memory IndexedDB) and database helpers
 content/       Authored built-in content: course descriptor and thematic JSON packs
 public/data/   Generated manifest and content-addressed packs (ignored by Git)

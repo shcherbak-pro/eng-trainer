@@ -1,0 +1,47 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Speaking prompts" [level=1]
+  - navigation "Practice sections":
+    - list:
+      - listitem:
+        - link "Flashcards":
+          - /url: "#flashcards"
+      - listitem:
+        - link "Reverse practice":
+          - /url: "#reverse"
+      - listitem:
+        - link "Speaking prompts":
+          - /url: "#practice"
+  - article:
+    - paragraph: Choose “Random prompt” to get a speaking task.
+    - paragraph: "Suggested flow: think for 10 seconds, speak for 60 seconds, then repeat with a better structure."
+    - button "Random prompt"
+  - heading "All prompts" [level=2]
+  - list:
+    - listitem: How can AI help people at work?
+    - listitem: What are the risks of using AI coding tools?
+    - listitem: Tell me about a time you solved a difficult problem.
+    - listitem: How do you deal with difficult clients?
+    - listitem: What makes a good team?
+    - listitem: What makes a good team leader?
+    - listitem: How would you compare remote work and office work?
+    - listitem: "What is more important: speed or quality?"
+    - listitem: How do you estimate a task?
+    - listitem: What do you do when requirements are unclear?
+    - listitem: How do you handle online meetings?
+    - listitem: What do you do if you run into a blocker?
+    - listitem: Can AI replace developers?
+    - listitem: What are the pros and cons of automation?
+    - listitem: Describe your ideal colleague.
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

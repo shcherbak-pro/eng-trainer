@@ -1,0 +1,58 @@
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ preserves all baseline record values, array order, identities, metadata and explicit links (7.0106ms)
+✔ generation is deterministic and generated files equal the validated source catalog (87.2195ms)
+✔ explicit order preserves each collection even when pack discovery order changes (5.7535ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (17.5203ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (36.5724ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (7.1504ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (1.9204ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (38.3573ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (2.1774ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (87.224ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 457.2116
+
+X [ERROR] Cannot read directory "../../..": Access is denied.
+
+X [ERROR] Could not resolve "<repo>\\vitest.config.ts"
+
+failed to load config from <repo>\vitest.config.ts
+
+⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯
+Error: Build failed with 2 errors:
+error: Cannot read directory "../../..": Access is denied.
+error: Could not resolve "<repo>\\vitest.config.ts"
+    at failureErrorWithLog (<repo>\node_modules\esbuild\lib\main.js:1467:15)
+    at <repo>\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (<repo>\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (<repo>\node_modules\esbuild\lib\main.js:924:7)
+    at <repo>\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (<repo>\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (<repo>\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (<repo>\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter]
+}
+
+
+

@@ -1,0 +1,102 @@
+{
+  "tools": {
+    "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]\r\n4.68.0\r\n1.2.1"
+  },
+  "reproduced": [
+    {
+      "file": "eng-trainer-sans-cyrillic.woff2",
+      "candidate": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682",
+      "reproduced": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682"
+    },
+    {
+      "file": "eng-trainer-sans-greek.woff2",
+      "candidate": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670",
+      "reproduced": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670"
+    },
+    {
+      "file": "eng-trainer-sans-latin-ext.woff2",
+      "candidate": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d",
+      "reproduced": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d"
+    },
+    {
+      "file": "eng-trainer-sans-latin.woff2",
+      "candidate": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4",
+      "reproduced": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4"
+    }
+  ],
+  "allReproducedIdentical": true,
+  "invariants": [
+    {
+      "path": "src/assets/fonts/literata-latin.woff2",
+      "original": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58",
+      "actual": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58"
+    },
+    {
+      "path": "src/assets/fonts/literata-latin-italic.woff2",
+      "original": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265",
+      "actual": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265"
+    },
+    {
+      "path": "public/fonts/OFL-Literata.txt",
+      "original": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+      "actual": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "src/state/persistence.ts",
+      "original": "4f2e8a703f63315c3ddc91fc6845147f9c98e446b08d2dbdacbc686379de9d51",
+      "actual": "4f2e8a703f63315c3ddc91fc6845147f9c98e446b08d2dbdacbc686379de9d51"
+    },
+    {
+      "path": "src/state/index.ts",
+      "original": "d878ced6d699c5313275a5d4bfe7306220abdba72986f1f92b502d8fe5fdee32",
+      "actual": "d878ced6d699c5313275a5d4bfe7306220abdba72986f1f92b502d8fe5fdee32"
+    },
+    {
+      "path": "src/storage/database.ts",
+      "original": "14eab95bc6de32814a6451705fa238aafc65f40950f9b8bb0140b44af8b87a2e",
+      "actual": "14eab95bc6de32814a6451705fa238aafc65f40950f9b8bb0140b44af8b87a2e"
+    },
+    {
+      "path": "src/features/flashcards/flashcards.ts",
+      "original": "40e3155a5668b46890d72002cedbe446542b101818fe2dbe712dc340360a72bf",
+      "actual": "40e3155a5668b46890d72002cedbe446542b101818fe2dbe712dc340360a72bf"
+    },
+    {
+      "path": "src/collections/format.ts",
+      "original": "28844fdade7e081cd859745a6959814c4e18871a5c5d4a5e400f990711f3f041",
+      "actual": "28844fdade7e081cd859745a6959814c4e18871a5c5d4a5e400f990711f3f041"
+    },
+    {
+      "path": "src/collections/service.ts",
+      "original": "fdc10799323b56c0757373f0452a4de0d08e251b6b22ee6e49bacb04d2413d93",
+      "actual": "fdc10799323b56c0757373f0452a4de0d08e251b6b22ee6e49bacb04d2413d93"
+    }
+  ],
+  "invariantsAllMatch": true,
+  "lineEndings": [
+    {
+      "path": "src/features/flashcards/FlashcardsPage.svelte",
+      "originalHashVerified": true,
+      "before": {
+        "crlf": 318,
+        "bareLF": 206
+      },
+      "after": {
+        "crlf": 567,
+        "bareLF": 0
+      }
+    },
+    {
+      "path": "src/features/home/IndexPage.svelte",
+      "originalHashVerified": true,
+      "before": {
+        "crlf": 195,
+        "bareLF": 95
+      },
+      "after": {
+        "crlf": 291,
+        "bareLF": 0
+      }
+    }
+  ]
+}

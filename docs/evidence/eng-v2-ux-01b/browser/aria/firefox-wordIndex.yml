@@ -1,0 +1,139 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Words" [level=1]
+  - navigation "Library sections":
+    - list:
+      - listitem:
+        - link "Phrases":
+          - /url: "#phrases"
+      - listitem:
+        - link "Words":
+          - /url: "#wordIndex"
+      - listitem:
+        - link "Verbs":
+          - /url: "#irregularVerbs"
+      - listitem:
+        - link "Patterns":
+          - /url: "#patterns"
+      - listitem:
+        - link "Answers":
+          - /url: "#answers"
+    - link "Import words":
+      - /url: "#collections"
+  - text: Search words
+  - searchbox "Search words"
+  - text: Category
+  - combobox "Category":
+    - option "All categories" [selected]
+    - option "Advanced Linking Words"
+    - option "Agent Framework Vocabulary"
+    - option "AI / Coding tools"
+    - option "AI Certification Vocabulary"
+    - option "Career Growth"
+    - option "Communication in Distributed Teams"
+    - option "Compare / Difference"
+    - option "Conduct vs Carry out"
+    - option "Conflict Resolution / Team Problems"
+    - option "Conjunctions"
+    - option "Contrast"
+    - option "Ending"
+    - option "Hedging Phrases"
+    - option "Hobbies"
+    - option "Informal phrases"
+    - option "Lack / Not enough"
+    - option "Leadership"
+    - option "Modals"
+    - option "Online meetings"
+    - option "Otherwise"
+    - option "Presentation Phrases"
+    - option "Remote Work"
+    - option "Speed / Difficulty / Clarity"
+    - option "Start answer"
+    - option "Stress Management"
+    - option "Structure"
+    - option "Teamwork"
+    - option "Tell me about yourself"
+    - option "Time estimates"
+    - option "Time Management"
+    - option "Work-Life Balance"
+  - status: 566 words
+  - button "Listen to this page"
+  - text: Repeats
+  - combobox "Repeats":
+    - option "10×" [selected]
+    - option "20×"
+    - option "50×"
+  - text: Reads the words on this page with their translations and examples.
+  - heading "Word list" [level=2]
+  - list:
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "A balanced person usually makes better decisions." [level=3]
+        - paragraph: Збалансована людина зазвичай приймає кращі рішення.
+        - paragraph: B2 Work-Life Balance
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "A calm conversation usually works better than emotional messages." [level=3]
+        - paragraph: Спокійна розмова зазвичай працює краще, ніж емоційні повідомлення.
+        - paragraph: /a calm conversation usually wɜːrks better ðæn emotional messages/
+        - paragraph: B2 Conflict Resolution / Team Problems
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "A flexible schedule can support balance if people are responsible." [level=3]
+        - paragraph: Гнучкий графік може підтримувати баланс, якщо люди відповідальні.
+        - paragraph: /a flexible schedule can support ˈbæləns if ˈpiːpəl ɑːr responsible/
+        - paragraph: B2 Work-Life Balance
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "A good hobby should not feel like another task." [level=3]
+        - paragraph: Хороше хобі не повинно відчуватися як ще одна задача.
+        - paragraph: /a good hobby ʃʊd nɑːt feel like əˈnʌðər tæsk/
+        - paragraph: B2 Hobbies
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "A good leader creates clarity when the situation is uncertain." [level=3]
+        - paragraph: Хороший лідер створює ясність, коли ситуація невизначена.
+        - paragraph: /a good ˈliːdər creates ˈklerəti wen ðə ˌsɪtʃuˈeɪʃən ɪz uncertain/
+        - paragraph: B2 Leadership
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+  - navigation "Word pages":
+    - text: Show
+    - combobox "Show":
+      - option "5" [selected]
+      - option "10"
+      - option "20"
+      - option "All"
+    - button "Previous page" [disabled]
+    - text: 1–5 of 566
+    - button "Next page"
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

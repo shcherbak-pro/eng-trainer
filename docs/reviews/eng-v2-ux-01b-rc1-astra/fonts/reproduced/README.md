@@ -1,0 +1,3 @@
+Publication note, 22 November 2026: the four reproduced Eng Trainer Sans verification binaries remain unchanged in the reviewer's local workspace and are intentionally excluded from Git. The byte-identical application copies are published under [src/assets/fonts](../../../../../src/assets/fonts/), with their licenses and FONTLOG under [public/fonts](../../../../../public/fonts/).
+
+The exact SHA-256 comparisons remain in [source-font-invariants.json](../../source-font-invariants.json) and [equivalence.json](../equivalence.json). See the [review instructions](../../README.md) and [publication record](../../../ENG-V2-UX-01B-PUBLICATION.md). Reproduce into a new output directory to preserve historical results.

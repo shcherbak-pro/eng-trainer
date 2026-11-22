@@ -1,0 +1,610 @@
+{
+  "browser-original": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": 22,
+      "pass": 21,
+      "failures": [
+        {
+          "name": "long-content-reflow-and-glyphs",
+          "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'E',\n+   'n',\n+   'g',\n+   'l',\n+   'i',\n+   's',\n+   'h',\n+   ' ',\n+   'і',\n+   'ї',\n+   'є',\n+   'ґ',\n+   'І',\n+   'Ї',\n+   'Є',\n+   'Ґ',\n+   'ʼ',\n+   'ɪ',\n+   'ə',\n+   'ˈ',\n+   'ː',\n+   'ʊ',\n+   'ð',\n+   'ɑ',\n+   'æ',\n+   'ʃ',\n+   'ɔ',\n+   'ɜ',\n+   'ʌ',\n+   'ɡ',\n+   'ˌ',\n+   'ŋ',\n+   'ʒ',\n+   'θ'\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:131:529\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:129:2"
+        }
+      ],
+      "errors": [],
+      "bytes": {
+        "status": "PASS",
+        "requests": [
+          {
+            "url": "/eng-trainer/",
+            "type": "document",
+            "encodedBodyBytes": 650
+          },
+          {
+            "url": "/eng-trainer/assets/index-DnO5WmGI.css",
+            "type": "stylesheet",
+            "encodedBodyBytes": 7863
+          },
+          {
+            "url": "/eng-trainer/assets/index-IEkZVKR-.js",
+            "type": "script",
+            "encodedBodyBytes": 80255
+          },
+          {
+            "url": "/eng-trainer/data/manifest.json",
+            "type": "fetch",
+            "encodedBodyBytes": 4204
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+            "type": "font",
+            "encodedBodyBytes": 28832
+          },
+          {
+            "url": "/eng-trainer/data/packs/speaking-foundations.378bea01a015d76e.json",
+            "type": "fetch",
+            "encodedBodyBytes": 19976
+          },
+          {
+            "url": "/eng-trainer/data/packs/presentations.2cd234cc3c91ce8d.json",
+            "type": "fetch",
+            "encodedBodyBytes": 27199
+          },
+          {
+            "url": "/eng-trainer/data/packs/agent-framework.30b26432f0ecf993.json",
+            "type": "fetch",
+            "encodedBodyBytes": 20397
+          },
+          {
+            "url": "/eng-trainer/data/packs/hedging-and-linking.06c92cc29e38d601.json",
+            "type": "fetch",
+            "encodedBodyBytes": 3353
+          },
+          {
+            "url": "/eng-trainer/data/packs/personal-topics.03c1443a2cc176cf.json",
+            "type": "fetch",
+            "encodedBodyBytes": 18096
+          },
+          {
+            "url": "/eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json",
+            "type": "fetch",
+            "encodedBodyBytes": 42872
+          },
+          {
+            "url": "/eng-trainer/data/packs/speaking-practice.30d81bc404256cb8.json",
+            "type": "fetch",
+            "encodedBodyBytes": 5467
+          },
+          {
+            "url": "/eng-trainer/data/packs/ai-certification.a743e81dde1bc943.json",
+            "type": "fetch",
+            "encodedBodyBytes": 49806
+          },
+          {
+            "url": "/eng-trainer/data/packs/essential-100.3a71b8e1e38939e1.json",
+            "type": "fetch",
+            "encodedBodyBytes": 16520
+          },
+          {
+            "url": "/eng-trainer/data/packs/logical-200.7dea9a714b2c308b.json",
+            "type": "fetch",
+            "encodedBodyBytes": 15612
+          },
+          {
+            "url": "/eng-trainer/data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+            "type": "fetch",
+            "encodedBodyBytes": 6801
+          },
+          {
+            "url": "/eng-trainer/assets/literata-latin-Cedbco83.woff2",
+            "type": "font",
+            "encodedBodyBytes": 85672
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+            "type": "font",
+            "encodedBodyBytes": 18412
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+            "type": "font",
+            "encodedBodyBytes": 60136
+          }
+        ],
+        "bodyBytes": 512123,
+        "fontBytes": 193052,
+        "codeBytes": 88768,
+        "errors": [],
+        "unhandledRejections": []
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": 22,
+      "pass": 21,
+      "failures": [
+        {
+          "name": "long-content-reflow-and-glyphs",
+          "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'E',\n+   'n',\n+   'g',\n+   'l',\n+   'i',\n+   's',\n+   'h',\n+   ' ',\n+   'і',\n+   'ї',\n+   'є',\n+   'ґ',\n+   'І',\n+   'Ї',\n+   'Є',\n+   'Ґ',\n+   'ʼ',\n+   'ɪ',\n+   'ə',\n+   'ˈ',\n+   'ː',\n+   'ʊ',\n+   'ð',\n+   'ɑ',\n+   'æ',\n+   'ʃ',\n+   'ɔ',\n+   'ɜ',\n+   'ʌ',\n+   'ɡ',\n+   'ˌ',\n+   'ŋ',\n+   'ʒ',\n+   'θ'\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:131:529\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:129:2"
+        }
+      ],
+      "errors": [],
+      "bytes": {
+        "status": "PASS",
+        "requests": [
+          {
+            "url": "/eng-trainer/",
+            "type": "document",
+            "encodedBodyBytes": 650
+          },
+          {
+            "url": "/eng-trainer/assets/index-IEkZVKR-.js",
+            "type": "script",
+            "encodedBodyBytes": 80255
+          },
+          {
+            "url": "/eng-trainer/assets/index-DnO5WmGI.css",
+            "type": "stylesheet",
+            "encodedBodyBytes": 7863
+          },
+          {
+            "url": "/eng-trainer/data/manifest.json",
+            "type": "fetch",
+            "encodedBodyBytes": 4204
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+            "type": "font",
+            "encodedBodyBytes": 28832
+          },
+          {
+            "url": "/eng-trainer/data/packs/speaking-foundations.378bea01a015d76e.json",
+            "type": "fetch",
+            "encodedBodyBytes": 19976
+          },
+          {
+            "url": "/eng-trainer/data/packs/presentations.2cd234cc3c91ce8d.json",
+            "type": "fetch",
+            "encodedBodyBytes": 27199
+          },
+          {
+            "url": "/eng-trainer/data/packs/agent-framework.30b26432f0ecf993.json",
+            "type": "fetch",
+            "encodedBodyBytes": 20397
+          },
+          {
+            "url": "/eng-trainer/data/packs/hedging-and-linking.06c92cc29e38d601.json",
+            "type": "fetch",
+            "encodedBodyBytes": 3353
+          },
+          {
+            "url": "/eng-trainer/data/packs/personal-topics.03c1443a2cc176cf.json",
+            "type": "fetch",
+            "encodedBodyBytes": 18096
+          },
+          {
+            "url": "/eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json",
+            "type": "fetch",
+            "encodedBodyBytes": 42872
+          },
+          {
+            "url": "/eng-trainer/data/packs/essential-100.3a71b8e1e38939e1.json",
+            "type": "fetch",
+            "encodedBodyBytes": 16520
+          },
+          {
+            "url": "/eng-trainer/data/packs/ai-certification.a743e81dde1bc943.json",
+            "type": "fetch",
+            "encodedBodyBytes": 49806
+          },
+          {
+            "url": "/eng-trainer/data/packs/speaking-practice.30d81bc404256cb8.json",
+            "type": "fetch",
+            "encodedBodyBytes": 5467
+          },
+          {
+            "url": "/eng-trainer/data/packs/logical-200.7dea9a714b2c308b.json",
+            "type": "fetch",
+            "encodedBodyBytes": 15612
+          },
+          {
+            "url": "/eng-trainer/data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+            "type": "fetch",
+            "encodedBodyBytes": 6801
+          },
+          {
+            "url": "/eng-trainer/favicon.svg",
+            "type": "image",
+            "encodedBodyBytes": 209
+          },
+          {
+            "url": "/eng-trainer/assets/literata-latin-Cedbco83.woff2",
+            "type": "font",
+            "encodedBodyBytes": 85672
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+            "type": "font",
+            "encodedBodyBytes": 18412
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+            "type": "font",
+            "encodedBodyBytes": 60136
+          }
+        ],
+        "bodyBytes": 512332,
+        "fontBytes": 193052,
+        "codeBytes": 88768,
+        "errors": [],
+        "unhandledRejections": []
+      }
+    }
+  },
+  "browser-adjusted": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": 22,
+      "pass": 22,
+      "failures": [],
+      "errors": [],
+      "bytes": {
+        "status": "PASS",
+        "requests": [
+          {
+            "url": "/eng-trainer/",
+            "type": "document",
+            "encodedBodyBytes": 650
+          },
+          {
+            "url": "/eng-trainer/assets/index-DnO5WmGI.css",
+            "type": "stylesheet",
+            "encodedBodyBytes": 7863
+          },
+          {
+            "url": "/eng-trainer/assets/index-IEkZVKR-.js",
+            "type": "script",
+            "encodedBodyBytes": 80255
+          },
+          {
+            "url": "/eng-trainer/data/manifest.json",
+            "type": "fetch",
+            "encodedBodyBytes": 4204
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+            "type": "font",
+            "encodedBodyBytes": 28832
+          },
+          {
+            "url": "/eng-trainer/data/packs/speaking-foundations.378bea01a015d76e.json",
+            "type": "fetch",
+            "encodedBodyBytes": 19976
+          },
+          {
+            "url": "/eng-trainer/data/packs/presentations.2cd234cc3c91ce8d.json",
+            "type": "fetch",
+            "encodedBodyBytes": 27199
+          },
+          {
+            "url": "/eng-trainer/data/packs/agent-framework.30b26432f0ecf993.json",
+            "type": "fetch",
+            "encodedBodyBytes": 20397
+          },
+          {
+            "url": "/eng-trainer/data/packs/hedging-and-linking.06c92cc29e38d601.json",
+            "type": "fetch",
+            "encodedBodyBytes": 3353
+          },
+          {
+            "url": "/eng-trainer/data/packs/personal-topics.03c1443a2cc176cf.json",
+            "type": "fetch",
+            "encodedBodyBytes": 18096
+          },
+          {
+            "url": "/eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json",
+            "type": "fetch",
+            "encodedBodyBytes": 42872
+          },
+          {
+            "url": "/eng-trainer/data/packs/ai-certification.a743e81dde1bc943.json",
+            "type": "fetch",
+            "encodedBodyBytes": 49806
+          },
+          {
+            "url": "/eng-trainer/data/packs/speaking-practice.30d81bc404256cb8.json",
+            "type": "fetch",
+            "encodedBodyBytes": 5467
+          },
+          {
+            "url": "/eng-trainer/data/packs/essential-100.3a71b8e1e38939e1.json",
+            "type": "fetch",
+            "encodedBodyBytes": 16520
+          },
+          {
+            "url": "/eng-trainer/data/packs/logical-200.7dea9a714b2c308b.json",
+            "type": "fetch",
+            "encodedBodyBytes": 15612
+          },
+          {
+            "url": "/eng-trainer/data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+            "type": "fetch",
+            "encodedBodyBytes": 6801
+          },
+          {
+            "url": "/eng-trainer/assets/literata-latin-Cedbco83.woff2",
+            "type": "font",
+            "encodedBodyBytes": 85672
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+            "type": "font",
+            "encodedBodyBytes": 18412
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+            "type": "font",
+            "encodedBodyBytes": 60136
+          }
+        ],
+        "bodyBytes": 512123,
+        "fontBytes": 193052,
+        "codeBytes": 88768,
+        "errors": [],
+        "unhandledRejections": []
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": 22,
+      "pass": 22,
+      "failures": [],
+      "errors": [],
+      "bytes": {
+        "status": "PASS",
+        "requests": [
+          {
+            "url": "/eng-trainer/",
+            "type": "document",
+            "encodedBodyBytes": 650
+          },
+          {
+            "url": "/eng-trainer/assets/index-IEkZVKR-.js",
+            "type": "script",
+            "encodedBodyBytes": 80255
+          },
+          {
+            "url": "/eng-trainer/assets/index-DnO5WmGI.css",
+            "type": "stylesheet",
+            "encodedBodyBytes": 7863
+          },
+          {
+            "url": "/eng-trainer/data/manifest.json",
+            "type": "fetch",
+            "encodedBodyBytes": 4204
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+            "type": "font",
+            "encodedBodyBytes": 28832
+          },
+          {
+            "url": "/eng-trainer/favicon.svg",
+            "type": "image",
+            "encodedBodyBytes": 209
+          },
+          {
+            "url": "/eng-trainer/data/packs/speaking-foundations.378bea01a015d76e.json",
+            "type": "fetch",
+            "encodedBodyBytes": 19976
+          },
+          {
+            "url": "/eng-trainer/data/packs/presentations.2cd234cc3c91ce8d.json",
+            "type": "fetch",
+            "encodedBodyBytes": 27199
+          },
+          {
+            "url": "/eng-trainer/data/packs/agent-framework.30b26432f0ecf993.json",
+            "type": "fetch",
+            "encodedBodyBytes": 20397
+          },
+          {
+            "url": "/eng-trainer/data/packs/hedging-and-linking.06c92cc29e38d601.json",
+            "type": "fetch",
+            "encodedBodyBytes": 3353
+          },
+          {
+            "url": "/eng-trainer/data/packs/personal-topics.03c1443a2cc176cf.json",
+            "type": "fetch",
+            "encodedBodyBytes": 18096
+          },
+          {
+            "url": "/eng-trainer/data/packs/workplace-topics.dad3daa8ab78823e.json",
+            "type": "fetch",
+            "encodedBodyBytes": 42872
+          },
+          {
+            "url": "/eng-trainer/data/packs/ai-certification.a743e81dde1bc943.json",
+            "type": "fetch",
+            "encodedBodyBytes": 49806
+          },
+          {
+            "url": "/eng-trainer/data/packs/speaking-practice.30d81bc404256cb8.json",
+            "type": "fetch",
+            "encodedBodyBytes": 5467
+          },
+          {
+            "url": "/eng-trainer/data/packs/logical-200.7dea9a714b2c308b.json",
+            "type": "fetch",
+            "encodedBodyBytes": 15612
+          },
+          {
+            "url": "/eng-trainer/data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+            "type": "fetch",
+            "encodedBodyBytes": 6801
+          },
+          {
+            "url": "/eng-trainer/data/packs/essential-100.3a71b8e1e38939e1.json",
+            "type": "fetch",
+            "encodedBodyBytes": 16520
+          },
+          {
+            "url": "/eng-trainer/assets/literata-latin-Cedbco83.woff2",
+            "type": "font",
+            "encodedBodyBytes": 85672
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+            "type": "font",
+            "encodedBodyBytes": 18412
+          },
+          {
+            "url": "/eng-trainer/assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+            "type": "font",
+            "encodedBodyBytes": 60136
+          }
+        ],
+        "bodyBytes": 512332,
+        "fontBytes": 193052,
+        "codeBytes": 88768,
+        "errors": [],
+        "unhandledRejections": []
+      }
+    }
+  },
+  "browser-regression": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": 16,
+      "pass": 16,
+      "failures": [],
+      "errors": [
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+          "reason": "net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/literata-latin-Cedbco83.woff2",
+          "reason": "net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+          "reason": "net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "scenario": "content-error-screen",
+          "type": "console",
+          "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        },
+        {
+          "scenario": "v1-isolation",
+          "type": "external-request",
+          "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap"
+        },
+        {
+          "scenario": "v1-isolation",
+          "type": "console",
+          "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+        }
+      ]
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": 16,
+      "pass": 16,
+      "failures": [],
+      "errors": [
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+          "reason": "NS_ERROR_FAILURE"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Eng Trainer Sans\" style:normal weight:400..700 width:100 src index:0): status=2147500037 source: http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2\"]"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/literata-latin-Cedbco83.woff2",
+          "reason": "NS_ERROR_FAILURE"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+          "reason": "NS_ERROR_FAILURE"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Literata\" style:normal weight:400..700 width:100 src index:0): status=2147500037 source: http://127.0.0.1:4179/eng-trainer/assets/literata-latin-Cedbco83.woff2\"]"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Eng Trainer Sans\" style:normal weight:400..700 width:100 src index:0): status=2147500037 source: http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2\"]"
+        },
+        {
+          "scenario": "v1-isolation",
+          "type": "external-request",
+          "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap"
+        }
+      ]
+    }
+  },
+  "browser-rc1": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": 5,
+      "pass": 5,
+      "failures": [],
+      "errors": []
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": 5,
+      "pass": 5,
+      "failures": [],
+      "errors": []
+    }
+  },
+  "browser-focused": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": 10,
+      "pass": 10,
+      "failures": [],
+      "errors": []
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": 10,
+      "pass": 10,
+      "failures": [],
+      "errors": []
+    }
+  }
+}

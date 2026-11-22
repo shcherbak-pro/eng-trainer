@@ -1,0 +1,164 @@
+- banner:
+  - button "Go to index":
+    - text: EA
+    - strong: English Assessment Trainer
+    - text: ShcherbakPro · B1+ → B2
+  - navigation "Main navigation":
+    - button "Index"
+    - button "Phrases"
+    - button "Words"
+    - button "Flashcards"
+    - button "Reverse"
+    - button "Verbs"
+    - button "Patterns"
+    - button "Answers"
+    - button "Practice"
+    - button "Focus"
+    - button "Collections"
+  - 'button "Theme: System. Switch to Light."'
+- paragraph: Speaking assessment trainer
+- heading "Index" [level=1]
+- paragraph: Clear structure + safe vocabulary + controlled grammar + confident pronunciation
+- strong: "566"
+- text: phrases
+- strong: "566"
+- text: words
+- strong: "339"
+- text: verbs
+- strong: "0"
+- text: focus
+- strong: "0"
+- text: hidden
+- main:
+  - button "Learn Pass Choose or create a focused learning track." [expanded]:
+    - heading "Learn Pass" [level=2]
+    - text: Choose or create a focused learning track.
+  - paragraph: Learn Pass
+  - heading "Choose your learning track" [level=2]
+  - paragraph: Default shows all available materials. Custom passes keep only selected blocks on the Index page and in navigation.
+  - text: Active pass
+  - combobox "Active pass":
+    - option "Default — all materials" [selected]
+  - paragraph: 39 blocks visible
+  - button "Create new Learn Pass"
+  - button "Edit selected Learn Pass" [disabled]
+  - text: Search learn passes
+  - textbox "Search learn passes":
+    - /placeholder: verbs, meetings, assessment…
+  - paragraph: No custom learn passes yet. Create one to focus on selected materials.
+  - button "Tag cloud Filter visible learning blocks by topic." [expanded]:
+    - heading "Tag cloud" [level=2]
+    - text: Filter visible learning blocks by topic.
+  - button "All 39"
+  - button "AI 1"
+  - button "AI agents 1"
+  - button "ai-certification 2"
+  - button "assessment 2"
+  - button "balance 1"
+  - button "career 1"
+  - button "communication 1"
+  - button "comparison 1"
+  - button "conclusion 1"
+  - button "conflict 1"
+  - button "connector 2"
+  - button "contrast 1"
+  - button "drill 1"
+  - button "estimation 2"
+  - button "framework 1"
+  - button "grammar 4"
+  - button "hedging 1"
+  - button "hobbies 1"
+  - button "index 1"
+  - button "leadership 1"
+  - button "linking 1"
+  - button "meeting 1"
+  - button "practice 1"
+  - button "presentation 1"
+  - button "problem 1"
+  - button "productivity 1"
+  - button "remote-work 1"
+  - button "speaking 1"
+  - button "spoken 1"
+  - button "stress 1"
+  - button "teamwork 1"
+  - button "vocabulary 1"
+  - button "Learning blocks Materials from your active Learn Pass." [expanded]:
+    - heading "Learning blocks" [level=2]
+    - text: Materials from your active Learn Pass.
+  - button "Reset progress"
+  - article:
+    - paragraph:
+      - button "assessment"
+      - text: 6 items
+    - heading "Start Answer Phrases" [level=3]
+    - paragraph: "Початок відповіді: фрази для м’якого і впевненого старту speaking answer."
+    - button "Open Start Answer Phrases"
+    - button "Add to Focus List"
+  - article:
+    - paragraph:
+      - button "connector"
+      - text: 5 items
+    - heading "Structure & Add Ideas" [level=3]
+    - paragraph: "Фрази для структури відповіді: first of all, on top of that, what matters most."
+    - button "Open Structure & Add Ideas"
+    - button "Add to Focus List"
+  - article:
+    - paragraph:
+      - button "index"
+      - text: 566 items
+    - heading "Word Index" [level=3]
+    - paragraph: Алфавітний індекс слів і фраз. Натисни на фразу, щоб побачити переклад, pronunciation і 2 приклади застосування.
+    - button "Open Word Index"
+    - button "Add to Focus List"
+  - article:
+    - paragraph:
+      - button "practice"
+      - text: 566 items
+    - heading "Reverse Practice" [level=3]
+    - paragraph: "Зворотня вправа: бачиш український переклад і згадуєш англійську фразу або приклад."
+    - button "Open Reverse Practice"
+    - button "Add to Focus List"
+  - article:
+    - paragraph:
+      - button "grammar"
+      - text: 100 items
+    - heading "100 Irregular Verbs" [level=3]
+    - paragraph: "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples."
+    - button "Open 100 Irregular Verbs"
+    - button "Add to Focus List"
+  - article:
+    - paragraph:
+      - button "grammar"
+      - text: 200 items
+    - heading "200 Irregular Verbs — Logical Groups" [level=3]
+    - paragraph: "200 irregular verbs grouped by change pattern: same forms, matching past/participle, -en participles, i-a-u pattern, and mixed forms."
+    - button "Open 200 Irregular Verbs — Logical Groups"
+    - button "Add to Focus List"
+  - text: Show
+  - combobox "Show":
+    - option "6" [selected]
+    - option "12"
+    - option "All"
+  - button "Previous page" [disabled]
+  - text: 1-6 of 39
+  - button "Next page"
+  - button "Phrase / Word of the day A random focus card for quick daily practice." [expanded]:
+    - heading "Phrase / Word of the day" [level=2]
+    - text: A random focus card for quick daily practice.
+  - article:
+    - paragraph: Phrase assessment
+    - heading "I would start by saying that …" [level=3]
+    - paragraph:
+      - strong: "Context:"
+      - text: Start answer
+    - button "Show another random item"
+    - paragraph:
+      - strong: "Meaning:"
+      - text: Я б почав з того, що AI — корисний інструмент, але він не повинен замінювати людське судження.
+    - strong: Example 1
+    - paragraph: I would start by saying that AI is a useful tool, but it should not replace human judgment.
+    - button "Speak"
+    - button "Add to Focus List"
+  - link "Open the previous version (v1)":
+    - /url: /eng-trainer/v1/
+  - text: v1 is kept as it was and has its own separate progress.

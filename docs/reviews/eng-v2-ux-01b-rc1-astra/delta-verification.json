@@ -1,0 +1,266 @@
+{
+  "originalFingerprint": "1df5517c9fedb1ef909d74e4788e5f943c40a34ca7f6e8d65f47c9c39b5e0231",
+  "rc1Fingerprint": "74b28dc728ceaa01f35a4c63ad5d713012f2fa50bf5e6e0731ba7ef8e83112c0",
+  "counts": {
+    "candidate": 1025,
+    "changed": 29,
+    "added": 15,
+    "removed": 5
+  },
+  "mismatches": [],
+  "unexpected": [],
+  "actualDelta": [
+    {
+      "path": "CHANGELOG.md",
+      "before": "778197d2b0a17e949e85cda2a05ed21c6d5d313c14f75a183eafd80379ef8459",
+      "after": "8b3669e8c487d31a676c4989f5c824060a2d2fe4bc09b5dd1f3a71b481d17be0"
+    },
+    {
+      "path": "README.md",
+      "before": "e8e960ee0e64a241ada7306b3c728430dfd27a432443c1829cec5813d154f5ee",
+      "after": "c80eacc255a2903e00c6ab52d8f741623ea94a72bf4360ee64f0d6e5d2cf25e6"
+    },
+    {
+      "path": "docs/architecture/USER-COLLECTIONS.md",
+      "before": "fb7f9bd45471df94619a716f6d498f4f47f0c9190ae8b7fb00255d67b68644f1",
+      "after": "fe020bc2559ba540619f077d1b56e676364ba668155b45965bdeac83463b2cce"
+    },
+    {
+      "path": "docs/handoffs/ENG-V2-UX-01B.md",
+      "before": "f1efe10c3e585f5703616fa86e193d215a8e529b2da270d8fb7f7a47f7cc4a97",
+      "after": "2d6fa8a0471bb1c2720c535479d9a64b86c1dcc652315d488d7d4886474da6a9"
+    },
+    {
+      "path": "public/fonts/OFL-SourceSans3.txt",
+      "before": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5",
+      "after": null
+    },
+    {
+      "path": "scripts/check-site.mjs",
+      "before": "d8548ff9301be874981980632b22136b2f243c1fb7d6f4ebf469f154edd23893",
+      "after": "aa10465d50983ed17bc21b8962b3e5fce20a61961d8db3e12ed00d976750c1f1"
+    },
+    {
+      "path": "src/app/App.test.ts",
+      "before": "f9365a13cefbfcfb26ee9c8f7370a9d3de87e97a8728ddd63d2c7af798d664e6",
+      "after": "5b9cd6fcdfd6052a920fe9568d2da5d03415f1f587949045f6f4ff49d4d25aad"
+    },
+    {
+      "path": "src/assets/fonts/README.md",
+      "before": "e3bd3ca6bc301366d5d5cba956f519bc635a5fcacb3014856df4834bdcc41bf7",
+      "after": "e236c872e91f5b0d3bb76e908d028343d55b4de18dbd1c654c29b5f90dbe3b2c"
+    },
+    {
+      "path": "src/assets/fonts/source-sans-3-cyrillic.woff2",
+      "before": "b6b721e08d0324b9e743858e8260463085d4c5e1e684f036f9d4a8ca6c62996f",
+      "after": null
+    },
+    {
+      "path": "src/assets/fonts/source-sans-3-greek.woff2",
+      "before": "dd6ec3878cf37dc8b864562acf1a37bd8c9e0ca638d7f75a7cd6b6f7ae16cf3d",
+      "after": null
+    },
+    {
+      "path": "src/assets/fonts/source-sans-3-latin-ext.woff2",
+      "before": "a85a7459bdb3cdc1136751e151a506bae653fc29ada3ca86237477df6f1b59e6",
+      "after": null
+    },
+    {
+      "path": "src/assets/fonts/source-sans-3-latin.woff2",
+      "before": "19143dca075972bc84e3fd9eab7416dd40cc565dccb2435a044bdfabe060c7d5",
+      "after": null
+    },
+    {
+      "path": "src/content/catalog.ts",
+      "before": "5a4be98a66dd3fcc6921388c5cc04b850d39d5b0645bfe8a974724fbc9864812",
+      "after": "091af69ba89fb1438642e211ec0c880e4d90c2dc5a5923f7791376166424b313"
+    },
+    {
+      "path": "src/features/collections/CollectionsPage.svelte",
+      "before": "1394d7df4088515b76c09cb481ca58c980ae8527d3c3f099a150ea91a87b2eaf",
+      "after": "033146a35661f44ea4a743679bae0b95c6729d4812d3c099b270274386eac067"
+    },
+    {
+      "path": "src/features/collections/CollectionsPage.test.ts",
+      "before": "66d2e26ca487112c3d31a1db7cdb3f6f76fcd4c3dd0a9c9586250f6730c18e01",
+      "after": "9e1fb1eebf957c0e7646f0c4c03e487f934203e38fed3dd19d4e8d2bb4607354"
+    },
+    {
+      "path": "src/features/exercises/AnswersPage.svelte",
+      "before": "61ec947af0d0c04f1df25896ba505e50f3959e3cafd20f85fa7c4c55fe29c616",
+      "after": "c6f56047a2bf1a0bbd42e787839404a5adf24d85335c8a9a1ce21bbc9de11a28"
+    },
+    {
+      "path": "src/features/exercises/PracticePage.svelte",
+      "before": "ae1c63e2484c68b2f02115dfd79decd422e485c7d9d292d424633e6be41e28d5",
+      "after": "a037917de618b01a87d876e82a8ec0da4039d20a54b298239fc2f11e5090ad0b"
+    },
+    {
+      "path": "src/features/exercises/ReversePracticePage.svelte",
+      "before": "c486132674757d4126de2c71119f619cdb2d10e954c0daa7f48e1826af227590",
+      "after": "99b9026db983b1853b73aea0db3e0850a471a4d9ab09b2483883b4c21e18bb68"
+    },
+    {
+      "path": "src/features/flashcards/FlashcardsPage.svelte",
+      "before": "c589dfa6c46682a9e152f0885a7d9c6e0b778f3c324ea8168fd3ba245a0a3d98",
+      "after": "044f2f337cb2eaf5d8f09a56ef7d68d3ea7e0fd8775336d93f47b896f7f8eb72"
+    },
+    {
+      "path": "src/features/focus/FocusListPage.svelte",
+      "before": "fb646113e9c821ff311ccb87ef599746ddb8ca7c7c4333fdd3990bf7b0697234",
+      "after": "c5ca7f3699431ae62acbaa2dc2e40dfdd1a921a5de9f2cb6cef5e215a7e651d7"
+    },
+    {
+      "path": "src/features/home/IndexPage.svelte",
+      "before": "5bad8f6983612d45841debe2f66a8a05a1105da4ab5580a27e0641823acec7a1",
+      "after": "168a9988dea2b33f48264efe342882238ddec6b8938beb0fd4ce39a78461aa7b"
+    },
+    {
+      "path": "src/features/home/LearnPassManager.svelte",
+      "before": "802f66d86b5f72c66347eac74c7a241dd4981b6b0a3d5e4d5ec98a46ffac5405",
+      "after": "93f95926d66d4148ac3e42807e9b2e4cde80c9abdad6f3d26bbd71d3d0f95ce8"
+    },
+    {
+      "path": "src/features/vocabulary/IrregularVerbsPage.svelte",
+      "before": "381193dc0c9309d33d0d4c1a063729d3e4da0476d0879bbc712db73fed366c6a",
+      "after": "7fc54649fd220dea4e93854936f5a771cde60970e37c299560ee69edd5ceed69"
+    },
+    {
+      "path": "src/features/vocabulary/PhrasesPage.svelte",
+      "before": "290b095d857942c4fc09e0e2fe34140a75f93340cdb459a46f9a6ca1ad2a794f",
+      "after": "8c9a78ce96e683befe523c73c758a39df3e61de00232d88eac5697d75d279622"
+    },
+    {
+      "path": "src/features/vocabulary/WordIndexPage.svelte",
+      "before": "12bc96527c8d6761dd0428e68ca601a06f20dc45bd006fed9a0fc808540660f2",
+      "after": "bd8ff0a8a7cb9964f734a23d351dd4e99b3e090388b9f9aab00c81f89c7a5ea5"
+    },
+    {
+      "path": "src/shared/entries/HideButton.svelte",
+      "before": "0cb47e652eddaf8526c7c692d52800512c2a493f19ab5d5aa69609f5ba6b6b8b",
+      "after": "d948ca804ed091521278ae9c595f3c0afc04b529ecb5140aa68617a699602c3c"
+    },
+    {
+      "path": "src/shared/ui/ConfirmDialog.svelte",
+      "before": "5e0c442182b7e33ca7d0f1585a150c101ae29425440ab277cb41cd6cab8d3483",
+      "after": "804c1a27271f2b7a34901c280b6a057e0abaca4f3b426a0651c352c35de3ba5a"
+    },
+    {
+      "path": "src/shared/ui/IconButton.svelte",
+      "before": "0ee23aeb62a62b8e24d2f4bb9ee34628e42cf4dbe97436c571e4565baed0049e",
+      "after": "dd00af93097dc98d9301fe6c76bcc4e43a92df5a655adc13dd31b575a369e6f6"
+    },
+    {
+      "path": "src/shared/ui/Notice.svelte",
+      "before": "21ab5d63e776cc1e212cc100e7f84c679108295b775b8209724193b43e88ae55",
+      "after": "6401ea369a8f846bc479013c32d5fcd4c7b9784346bc22cec7f9ac1eabf2b6dc"
+    },
+    {
+      "path": "src/shared/ui/ToastRegion.svelte",
+      "before": "260e9e8b372cf8dc8233cdf9b65d0dacea413475dcd32d813278bb6187f42628",
+      "after": "5fcce85582b444974ecd75dda7df551417c88416105f894d669c62449ee9d86b"
+    },
+    {
+      "path": "src/shared/ui/toast.ts",
+      "before": "1a0e7376fc4a1248f555cc01f19b5d8d3a792e3e5dd1a61f4fb66f43d43a45f4",
+      "after": "4ad23085a8653e3f0f9cc3b62c7b023a94459401de2f6a0d61f6b607f96292a6"
+    },
+    {
+      "path": "src/state/progress.ts",
+      "before": "381a6ebee6e10c881effbb73c46661945aa024d575f5abd6587dd519dd9988cf",
+      "after": "0049432c1cf6b2c5c9709679fd716edfaf6f167eccaf3bd212df8705dc87cb06"
+    },
+    {
+      "path": "src/styles/fonts.css",
+      "before": "ec2f85d8240b38cbcebd1a336906c4095ba46577c2c2e8a408388b1b777411c0",
+      "after": "96f801c262653fc240de5ada2c9604fa1fb455d049579f61366c1a0c808d5c85"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "before": "5074a7b887e5149d3f370854b4ca85cc8c5cc1f8a35a8dc17b1ce20d5d3370a7",
+      "after": "6bef18ada3ca8ebb3c61715dd5c9bdaeaa22266ecc7b1e6e19654def828b6ee1"
+    },
+    {
+      "path": "public/fonts/FONTLOG-EngTrainerSans.txt",
+      "before": null,
+      "after": "8a4ce41294b1909a2c69258475386b73ce740f6fc7481a9b8500afb5b3f7d327"
+    },
+    {
+      "path": "public/fonts/OFL-EngTrainerSans.txt",
+      "before": null,
+      "after": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5"
+    },
+    {
+      "path": "scripts/fonts/derive_eng_trainer_sans.py",
+      "before": null,
+      "after": "7922cdd9de7fd15c0674091f61799ee0f2f4f7dc6be272bd27b4fbde1efb8f15"
+    },
+    {
+      "path": "scripts/fonts/requirements.txt",
+      "before": null,
+      "after": "035e476d6d52ed77dfc20f3d300c760c0251431c5a40654bf59a44414ed7e85f"
+    },
+    {
+      "path": "src/assets/fonts/eng-trainer-sans-cyrillic.woff2",
+      "before": null,
+      "after": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682"
+    },
+    {
+      "path": "src/assets/fonts/eng-trainer-sans-greek.woff2",
+      "before": null,
+      "after": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670"
+    },
+    {
+      "path": "src/assets/fonts/eng-trainer-sans-latin-ext.woff2",
+      "before": null,
+      "after": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d"
+    },
+    {
+      "path": "src/assets/fonts/eng-trainer-sans-latin.woff2",
+      "before": null,
+      "after": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4"
+    },
+    {
+      "path": "src/content/descriptionLanguage.test.ts",
+      "before": null,
+      "after": "7ff1e5720a9da88e17d94442e632e31eb378909c6814f15ff55b060ccfae9e0f"
+    },
+    {
+      "path": "src/content/descriptionLanguage.ts",
+      "before": null,
+      "after": "c5e06f6394142840dbd10776623eb432720d9220a70bebd289768e91484b15be"
+    },
+    {
+      "path": "src/features/exercises/studyText.test.ts",
+      "before": null,
+      "after": "534e37031b5ced39a692a6cf8bc16562fc6724d9ac5ce9bed143b1bd7afd7723"
+    },
+    {
+      "path": "src/features/flashcards/learnAgainUndo.test.ts",
+      "before": null,
+      "after": "625eb93f734aee370f072d1d77ec8c83d6f72b22d9eeb88b758ff58c6e7b45ac"
+    },
+    {
+      "path": "src/features/home/LearnPassManager.test.ts",
+      "before": null,
+      "after": "0d5e3086e3af8d8a041f338fed091d2ce823b106a39434d07f1c5c1803033a32"
+    },
+    {
+      "path": "src/shared/entries/hideUndoValidity.test.ts",
+      "before": null,
+      "after": "c23bcb2b4e02d500eb465663056758e55cacb715959831e47def0eb9d152a5de"
+    },
+    {
+      "path": "src/state/undoValidity.test.ts",
+      "before": null,
+      "after": "b1fbb6bfeb9f78a1abf23bb72d62728482eda335e40a1884754a0d62d105a0f3"
+    }
+  ],
+  "groups": {
+    "protected": 101,
+    "originalReview": 257,
+    "priorImplementationEvidence": 81,
+    "priorRC1Evidence": 62
+  },
+  "protectedAgainstOriginal": []
+}

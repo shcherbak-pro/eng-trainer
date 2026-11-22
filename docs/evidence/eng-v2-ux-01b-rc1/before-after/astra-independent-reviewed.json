@@ -1,0 +1,49 @@
+{
+  "numPassedTests": 3,
+  "numFailedTests": 4,
+  "numTotalTests": 7,
+  "files": [
+    {
+      "file": "docs/reviews/eng-v2-ux-01b-astra/independent.test.ts",
+      "status": "failed",
+      "message": "",
+      "tests": [
+        {
+          "name": "ordinary Learn again Undo restores the exact saved state and IDs",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "Learn again, another card answer, Undo preserves the later answer and both deck records",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "old Learn again callback cannot resurrect progress after confirmed Settings Reset",
+          "status": "failed",
+          "failure": "AssertionError: expected [ 'p1' ] to deeply equal []"
+        },
+        {
+          "name": "old Learn again callback does not override a later Hide of that same entry",
+          "status": "failed",
+          "failure": "AssertionError: expected [ 'p1' ] to not include 'p1'"
+        },
+        {
+          "name": "old Hide callback cannot reapply pre-reset Focus and learned flags after a new Hide",
+          "status": "failed",
+          "failure": "AssertionError: expected { learnedPhrases: [ 'p1' ], …(10) } to match object { hiddenPhrases: [ 'p1' ], …(2) }"
+        },
+        {
+          "name": "Hide Undo does not overwrite later same-entry Focus and learned decisions",
+          "status": "failed",
+          "failure": "AssertionError: expected { learnedPhrases: [ 'p1' ], …(10) } to match object { hiddenPhrases: [ 'p1' ], …(2) }"
+        },
+        {
+          "name": "failed pre-reset save, followed by Reset and retry, cannot resurrect queued progress",
+          "status": "passed",
+          "failure": ""
+        }
+      ]
+    }
+  ]
+}

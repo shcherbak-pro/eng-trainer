@@ -1,0 +1,804 @@
+{
+  "fonts": [
+    {
+      "path": "literata-latin-italic.woff2",
+      "bytes": 88756,
+      "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265",
+      "builtMatches": [
+        "literata-latin-italic-Ckc1vdjp.woff2"
+      ],
+      "names": {
+        "0": "Copyright 2017 The Literata Project Authors (https://github.com/googlefonts/literata)",
+        "1": "Literata",
+        "2": "Italic",
+        "3": "3.103;TT;Literata-Italic",
+        "4": "Literata Italic",
+        "5": "Version 3.103;gftools[0.9.29]",
+        "6": "Literata-Italic",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "axes": [
+        {
+          "tag": "opsz",
+          "min": 7,
+          "default": 12,
+          "max": 72
+        },
+        {
+          "tag": "wght",
+          "min": 400,
+          "default": 400,
+          "max": 900
+        }
+      ],
+      "codepoints": 230,
+      "representativeCoverage": {
+        "E": true,
+        "n": true,
+        "g": true,
+        "l": true,
+        "i": true,
+        "s": true,
+        "h": true,
+        "У": false,
+        "к": false,
+        "р": false,
+        "а": false,
+        "ї": false,
+        "н": false,
+        "с": false,
+        "ь": false,
+        "і": false,
+        "є": false,
+        "ґ": false,
+        "І": false,
+        "Ї": false,
+        "Є": false,
+        "Ґ": false,
+        "ʼ": true,
+        "ɪ": false,
+        "ə": false,
+        "ˈ": false,
+        "ː": false,
+        "ʊ": false,
+        "ð": true,
+        "ɑ": false,
+        "æ": true,
+        "ʃ": false,
+        "ɔ": false,
+        "ɜ": false,
+        "ʌ": false,
+        "ɡ": false,
+        "ˌ": false,
+        "ŋ": false,
+        "ʒ": false,
+        "θ": false
+      }
+    },
+    {
+      "path": "literata-latin.woff2",
+      "bytes": 85672,
+      "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58",
+      "builtMatches": [
+        "literata-latin-Cedbco83.woff2"
+      ],
+      "names": {
+        "0": "Copyright 2017 The Literata Project Authors (https://github.com/googlefonts/literata)",
+        "1": "Literata",
+        "2": "Regular",
+        "3": "3.103;TT;Literata-Regular",
+        "4": "Literata Regular",
+        "5": "Version 3.103;gftools[0.9.29]",
+        "6": "Literata-Regular",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "axes": [
+        {
+          "tag": "opsz",
+          "min": 7,
+          "default": 12,
+          "max": 72
+        },
+        {
+          "tag": "wght",
+          "min": 400,
+          "default": 400,
+          "max": 900
+        }
+      ],
+      "codepoints": 230,
+      "representativeCoverage": {
+        "E": true,
+        "n": true,
+        "g": true,
+        "l": true,
+        "i": true,
+        "s": true,
+        "h": true,
+        "У": false,
+        "к": false,
+        "р": false,
+        "а": false,
+        "ї": false,
+        "н": false,
+        "с": false,
+        "ь": false,
+        "і": false,
+        "є": false,
+        "ґ": false,
+        "І": false,
+        "Ї": false,
+        "Є": false,
+        "Ґ": false,
+        "ʼ": true,
+        "ɪ": false,
+        "ə": false,
+        "ˈ": false,
+        "ː": false,
+        "ʊ": false,
+        "ð": true,
+        "ɑ": false,
+        "æ": true,
+        "ʃ": false,
+        "ɔ": false,
+        "ɜ": false,
+        "ʌ": false,
+        "ɡ": false,
+        "ˌ": false,
+        "ŋ": false,
+        "ʒ": false,
+        "θ": false
+      }
+    },
+    {
+      "path": "source-sans-3-cyrillic.woff2",
+      "bytes": 18496,
+      "sha256": "b6b721e08d0324b9e743858e8260463085d4c5e1e684f036f9d4a8ca6c62996f",
+      "builtMatches": [
+        "source-sans-3-cyrillic-BMDVbyM7.woff2"
+      ],
+      "names": {
+        "0": "© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’",
+        "1": "Source Sans 3 ExtraLight",
+        "2": "Regular",
+        "3": "3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE",
+        "4": "Source Sans 3",
+        "5": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0",
+        "6": "SourceSans3-Roman",
+        "14": "http://scripts.sil.org/OFL",
+        "17": "ExtraLight"
+      },
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200,
+          "default": 200,
+          "max": 900
+        }
+      ],
+      "codepoints": 106,
+      "representativeCoverage": {
+        "E": false,
+        "n": false,
+        "g": false,
+        "l": false,
+        "i": false,
+        "s": false,
+        "h": false,
+        "У": true,
+        "к": true,
+        "р": true,
+        "а": true,
+        "ї": true,
+        "н": true,
+        "с": true,
+        "ь": true,
+        "і": true,
+        "є": true,
+        "ґ": true,
+        "І": true,
+        "Ї": true,
+        "Є": true,
+        "Ґ": true,
+        "ʼ": false,
+        "ɪ": false,
+        "ə": false,
+        "ˈ": false,
+        "ː": false,
+        "ʊ": false,
+        "ð": false,
+        "ɑ": false,
+        "æ": false,
+        "ʃ": false,
+        "ɔ": false,
+        "ɜ": false,
+        "ʌ": false,
+        "ɡ": false,
+        "ˌ": false,
+        "ŋ": false,
+        "ʒ": false,
+        "θ": false
+      }
+    },
+    {
+      "path": "source-sans-3-greek.woff2",
+      "bytes": 14528,
+      "sha256": "dd6ec3878cf37dc8b864562acf1a37bd8c9e0ca638d7f75a7cd6b6f7ae16cf3d",
+      "builtMatches": [
+        "source-sans-3-greek-Cc-u-6OI.woff2"
+      ],
+      "names": {
+        "0": "© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’",
+        "1": "Source Sans 3 ExtraLight",
+        "2": "Regular",
+        "3": "3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE",
+        "4": "Source Sans 3",
+        "5": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0",
+        "6": "SourceSans3-Roman",
+        "14": "http://scripts.sil.org/OFL",
+        "17": "ExtraLight"
+      },
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200,
+          "default": 200,
+          "max": 900
+        }
+      ],
+      "codepoints": 92,
+      "representativeCoverage": {
+        "E": false,
+        "n": false,
+        "g": false,
+        "l": false,
+        "i": false,
+        "s": false,
+        "h": false,
+        "У": false,
+        "к": false,
+        "р": false,
+        "а": false,
+        "ї": false,
+        "н": false,
+        "с": false,
+        "ь": false,
+        "і": false,
+        "є": false,
+        "ґ": false,
+        "І": false,
+        "Ї": false,
+        "Є": false,
+        "Ґ": false,
+        "ʼ": false,
+        "ɪ": false,
+        "ə": false,
+        "ˈ": false,
+        "ː": false,
+        "ʊ": false,
+        "ð": false,
+        "ɑ": false,
+        "æ": false,
+        "ʃ": false,
+        "ɔ": false,
+        "ɜ": false,
+        "ʌ": false,
+        "ɡ": false,
+        "ˌ": false,
+        "ŋ": false,
+        "ʒ": false,
+        "θ": true
+      }
+    },
+    {
+      "path": "source-sans-3-latin-ext.woff2",
+      "bytes": 60088,
+      "sha256": "a85a7459bdb3cdc1136751e151a506bae653fc29ada3ca86237477df6f1b59e6",
+      "builtMatches": [
+        "source-sans-3-latin-ext-C8iNium2.woff2"
+      ],
+      "names": {
+        "0": "© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’",
+        "1": "Source Sans 3 ExtraLight",
+        "2": "Regular",
+        "3": "3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE",
+        "4": "Source Sans 3",
+        "5": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0",
+        "6": "SourceSans3-Roman",
+        "14": "http://scripts.sil.org/OFL",
+        "17": "ExtraLight"
+      },
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200,
+          "default": 200,
+          "max": 900
+        }
+      ],
+      "codepoints": 563,
+      "representativeCoverage": {
+        "E": false,
+        "n": false,
+        "g": false,
+        "l": false,
+        "i": false,
+        "s": false,
+        "h": false,
+        "У": false,
+        "к": false,
+        "р": false,
+        "а": false,
+        "ї": false,
+        "н": false,
+        "с": false,
+        "ь": false,
+        "і": false,
+        "є": false,
+        "ґ": false,
+        "І": false,
+        "Ї": false,
+        "Є": false,
+        "Ґ": false,
+        "ʼ": true,
+        "ɪ": true,
+        "ə": true,
+        "ˈ": true,
+        "ː": true,
+        "ʊ": true,
+        "ð": false,
+        "ɑ": true,
+        "æ": false,
+        "ʃ": true,
+        "ɔ": true,
+        "ɜ": true,
+        "ʌ": true,
+        "ɡ": true,
+        "ˌ": true,
+        "ŋ": true,
+        "ʒ": true,
+        "θ": false
+      }
+    },
+    {
+      "path": "source-sans-3-latin.woff2",
+      "bytes": 28872,
+      "sha256": "19143dca075972bc84e3fd9eab7416dd40cc565dccb2435a044bdfabe060c7d5",
+      "builtMatches": [
+        "source-sans-3-latin-Bo_j9asI.woff2"
+      ],
+      "names": {
+        "0": "© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’",
+        "1": "Source Sans 3 ExtraLight",
+        "2": "Regular",
+        "3": "3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE",
+        "4": "Source Sans 3",
+        "5": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0",
+        "6": "SourceSans3-Roman",
+        "14": "http://scripts.sil.org/OFL",
+        "17": "ExtraLight"
+      },
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200,
+          "default": 200,
+          "max": 900
+        }
+      ],
+      "codepoints": 231,
+      "representativeCoverage": {
+        "E": true,
+        "n": true,
+        "g": true,
+        "l": true,
+        "i": true,
+        "s": true,
+        "h": true,
+        "У": false,
+        "к": false,
+        "р": false,
+        "а": false,
+        "ї": false,
+        "н": false,
+        "с": false,
+        "ь": false,
+        "і": false,
+        "є": false,
+        "ґ": false,
+        "І": false,
+        "Ї": false,
+        "Є": false,
+        "Ґ": false,
+        "ʼ": true,
+        "ɪ": false,
+        "ə": false,
+        "ˈ": false,
+        "ː": false,
+        "ʊ": false,
+        "ð": true,
+        "ɑ": false,
+        "æ": true,
+        "ʃ": false,
+        "ɔ": false,
+        "ɜ": false,
+        "ʌ": false,
+        "ɡ": false,
+        "ˌ": false,
+        "ŋ": false,
+        "ʒ": false,
+        "θ": false
+      }
+    }
+  ],
+  "v1": [
+    {
+      "path": "favicon.svg",
+      "currentHash": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85",
+      "releaseHash": "b59f25bf77cd3295629d70534ee58550fdc3d0c61c6dd30931bed44dbc0a7eb1",
+      "byteIdentical": false,
+      "onlyCRLF": true,
+      "currentCRLF": 4,
+      "releaseCRLF": 0,
+      "CRCRLF": 0,
+      "onlyLineEndingCarriageReturns": true,
+      "linesWithRepeatedCR": []
+    },
+    {
+      "path": "index.html",
+      "currentHash": "0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f",
+      "releaseHash": "67cfc3c634287a878058caed731c481c4b4ce6805eb29b2c8b7f3dcd55496704",
+      "byteIdentical": false,
+      "onlyCRLF": false,
+      "currentCRLF": 45,
+      "releaseCRLF": 0,
+      "CRCRLF": 1,
+      "onlyLineEndingCarriageReturns": true,
+      "linesWithRepeatedCR": [
+        45
+      ]
+    },
+    {
+      "path": "assets/index-Bod3ovET.css",
+      "currentHash": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83",
+      "releaseHash": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83",
+      "byteIdentical": true
+    },
+    {
+      "path": "assets/index-C0A337ei.js",
+      "currentHash": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913",
+      "releaseHash": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913",
+      "byteIdentical": true
+    },
+    {
+      "path": "data/materials.json",
+      "currentHash": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422",
+      "releaseHash": "d206ce3294f3ce5ff7fcd60f74e4bbf27998dd9e2b5be5428b2c418b881f6a4d",
+      "byteIdentical": false,
+      "onlyCRLF": true,
+      "currentCRLF": 35805,
+      "releaseCRLF": 0,
+      "CRCRLF": 0,
+      "onlyLineEndingCarriageReturns": true,
+      "linesWithRepeatedCR": []
+    }
+  ],
+  "protectedFiles": {
+    "count": 101,
+    "changed": []
+  },
+  "v1SourceDiff": "",
+  "liveReferences": [
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3NQ6P12-iJxAIgLYT1PLs1a-t7PU0AbeE9KPxYzNiCp1OUedn8VrLmQ0iSh8g.woff2",
+      "status": 200,
+      "bytes": 16232,
+      "sha256": "e82b185e364c280300a247fe7949691b299f4f9baf61b37c7b778cc85dfaa2f5",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3NQ6P12-iJxAIgLYT1PLs1a-t7PU0AbeE9KPxYzNiCp1OUedn8VrLmSkiSh8g.woff2",
+      "status": 200,
+      "bytes": 48828,
+      "sha256": "55a5eae3905de419effe79dc973f4afa59da2bc76216d7067b78ddb22ca7eff8",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3NQ6P12-iJxAIgLYT1PLs1a-t7PU0AbeE9KPxYzNiCp1OUedn8VrLmQkiSh8g.woff2",
+      "status": 200,
+      "bytes": 20364,
+      "sha256": "55033eba2c90554f80a4d64251083e855b3a2e5f60de8b5d76262cd0f991a8dc",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3NQ6P12-iJxAIgLYT1PLs1a-t7PU0AbeE9KPxYzNiCp1OUedn8VrLmTUiSh8g.woff2",
+      "status": 200,
+      "bytes": 32852,
+      "sha256": "2369f695838b8b03237e19e559bdc09f1f61748671d6a39736ae1547aefd09a8",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3NQ6P12-iJxAIgLYT1PLs1a-t7PU0AbeE9KPxYzNiCp1OUedn8VrLmQUiSh8g.woff2",
+      "status": 200,
+      "bytes": 17444,
+      "sha256": "0b5c779e32fa7f77b54ddec6ad4ced56a9aba3912ac8ffbe3fb15b9151996fc9",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3NQ6P12-iJxAIgLYT1PLs1a-t7PU0AbeE9KPxYzNiCp1OUedn8VrLmQEiSh8g.woff2",
+      "status": 200,
+      "bytes": 71460,
+      "sha256": "265ad511d5de5b7d3641283bd4a3153e41ea45d714237d1af5bf86faa138af31",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3NQ6P12-iJxAIgLYT1PLs1a-t7PU0AbeE9KPxYzNiCp1OUedn8VrLmTkiS.woff2",
+      "status": 200,
+      "bytes": 88756,
+      "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265",
+      "localMatches": [
+        "literata-latin-italic.woff2"
+      ]
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3PQ6P12-iJxAIgLa78DkTtAoDhk0oVpaK3YLanFLHpPf2TbLi4J_zWTFCW.woff2",
+      "status": 200,
+      "bytes": 16548,
+      "sha256": "e7dd3038c6f29995387cc89858e3b073eb55fd060c05c277f390334d0bdbe8ac",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3PQ6P12-iJxAIgLa78DkTtAoDhk0oVpaK3YLanFLHpPf2TbLi4J_XWTFCW.woff2",
+      "status": 200,
+      "bytes": 48068,
+      "sha256": "9e1faecc45e112755363617c4963371d53b66b409f2ca626e57e7d9cd4b9bd06",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3PQ6P12-iJxAIgLa78DkTtAoDhk0oVpaK3YLanFLHpPf2TbLi4J_3WTFCW.woff2",
+      "status": 200,
+      "bytes": 18512,
+      "sha256": "1e19fc86642ab4a19277961e9bc47a844e802613ca47190f36ed856bdcbd48f6",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3PQ6P12-iJxAIgLa78DkTtAoDhk0oVpaK3YLanFLHpPf2TbLi4J_LWTFCW.woff2",
+      "status": 200,
+      "bytes": 32004,
+      "sha256": "440c36e0fc081d064a111fac7eefbc5b8e0f9bc5ee1e108609b327b6936482d5",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3PQ6P12-iJxAIgLa78DkTtAoDhk0oVpaK3YLanFLHpPf2TbLi4J_7WTFCW.woff2",
+      "status": 200,
+      "bytes": 17792,
+      "sha256": "401a15e7e8161680a42a07e93b8a8169cd7a312b1511af89352ef135ef5eb30f",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3PQ6P12-iJxAIgLa78DkTtAoDhk0oVpaK3YLanFLHpPf2TbLi4J__WTFCW.woff2",
+      "status": 200,
+      "bytes": 70804,
+      "sha256": "334990a82ce173e5169f5f0946c679f7d8c1ee8608eb29b56f85284802c712c9",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/literata/v40/or3PQ6P12-iJxAIgLa78DkTtAoDhk0oVpaK3YLanFLHpPf2TbLi4J_HWTA.woff2",
+      "status": 200,
+      "bytes": 85672,
+      "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58",
+      "localMatches": [
+        "literata-latin.woff2"
+      ]
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wIaZfrc.woff2",
+      "status": 200,
+      "bytes": 10732,
+      "sha256": "c6e007862d29f6b59955f979a18508b75ec081f9d28248ccc9967522e1dd7506",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wsaZfrc.woff2",
+      "status": 200,
+      "bytes": 18496,
+      "sha256": "b6b721e08d0324b9e743858e8260463085d4c5e1e684f036f9d4a8ca6c62996f",
+      "localMatches": [
+        "source-sans-3-cyrillic.woff2"
+      ]
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wMaZfrc.woff2",
+      "status": 200,
+      "bytes": 9748,
+      "sha256": "67fbab24bd97c2161850ce1b5308fe8bb4ad1dd9ddf3c38e875b185e5bacf52d",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wwaZfrc.woff2",
+      "status": 200,
+      "bytes": 14528,
+      "sha256": "dd6ec3878cf37dc8b864562acf1a37bd8c9e0ca638d7f75a7cd6b6f7ae16cf3d",
+      "localMatches": [
+        "source-sans-3-greek.woff2"
+      ]
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wAaZfrc.woff2",
+      "status": 200,
+      "bytes": 10360,
+      "sha256": "a91edbcdcb4e0f97ca0558994918fd3e489356c0f63aa0bc54972b5e513b4a59",
+      "localMatches": []
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wEaZfrc.woff2",
+      "status": 200,
+      "bytes": 60088,
+      "sha256": "a85a7459bdb3cdc1136751e151a506bae653fc29ada3ca86237477df6f1b59e6",
+      "localMatches": [
+        "source-sans-3-latin-ext.woff2"
+      ]
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZQ.woff2",
+      "status": 200,
+      "bytes": 28872,
+      "sha256": "19143dca075972bc84e3fd9eab7416dd40cc565dccb2435a044bdfabe060c7d5",
+      "localMatches": [
+        "source-sans-3-latin.woff2"
+      ]
+    }
+  ],
+  "artifact": [
+    {
+      "path": "favicon.svg",
+      "bytes": 258,
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1290,
+      "sha256": "04a51e42cb19db5e00d78029ebda7c7c4fec320018b10b8f203d9c040b959f3d"
+    },
+    {
+      "path": "assets/index-BhPhQ045.css",
+      "bytes": 41642,
+      "sha256": "66741ae4a018b61d331b11f50d0f8a809ec22888f769642db0e41b783d70fb5a"
+    },
+    {
+      "path": "assets/index-Cs4k0cOi.js",
+      "bytes": 236805,
+      "sha256": "367e7d756a3038b5ad1d5228bc692cbae52abe3b7a125c1ca1c3c157efd521e1"
+    },
+    {
+      "path": "assets/literata-latin-Cedbco83.woff2",
+      "bytes": 85672,
+      "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58"
+    },
+    {
+      "path": "assets/literata-latin-italic-Ckc1vdjp.woff2",
+      "bytes": 88756,
+      "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265"
+    },
+    {
+      "path": "assets/source-sans-3-cyrillic-BMDVbyM7.woff2",
+      "bytes": 18496,
+      "sha256": "b6b721e08d0324b9e743858e8260463085d4c5e1e684f036f9d4a8ca6c62996f"
+    },
+    {
+      "path": "assets/source-sans-3-greek-Cc-u-6OI.woff2",
+      "bytes": 14528,
+      "sha256": "dd6ec3878cf37dc8b864562acf1a37bd8c9e0ca638d7f75a7cd6b6f7ae16cf3d"
+    },
+    {
+      "path": "assets/source-sans-3-latin-Bo_j9asI.woff2",
+      "bytes": 28872,
+      "sha256": "19143dca075972bc84e3fd9eab7416dd40cc565dccb2435a044bdfabe060c7d5"
+    },
+    {
+      "path": "assets/source-sans-3-latin-ext-C8iNium2.woff2",
+      "bytes": 60088,
+      "sha256": "a85a7459bdb3cdc1136751e151a506bae653fc29ada3ca86237477df6f1b59e6"
+    },
+    {
+      "path": "data/manifest.json",
+      "bytes": 18677,
+      "sha256": "189f4720137c476c14395795cc76c178ba5a0f69538d5f37eb0ff095d07049f2"
+    },
+    {
+      "path": "fonts/OFL-Literata.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "fonts/OFL-SourceSans3.txt",
+      "bytes": 4486,
+      "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5"
+    },
+    {
+      "path": "v1/favicon.svg",
+      "bytes": 258,
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "path": "v1/index.html",
+      "bytes": 1932,
+      "sha256": "0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f"
+    },
+    {
+      "path": "data/packs/agent-framework.30b26432f0ecf993.json",
+      "bytes": 133718,
+      "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+    },
+    {
+      "path": "data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+      "bytes": 36070,
+      "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+    },
+    {
+      "path": "data/packs/ai-certification.a743e81dde1bc943.json",
+      "bytes": 294755,
+      "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+    },
+    {
+      "path": "data/packs/essential-100.3a71b8e1e38939e1.json",
+      "bytes": 93477,
+      "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+    },
+    {
+      "path": "data/packs/hedging-and-linking.06c92cc29e38d601.json",
+      "bytes": 32554,
+      "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+    },
+    {
+      "path": "data/packs/logical-200.7dea9a714b2c308b.json",
+      "bytes": 181013,
+      "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+    },
+    {
+      "path": "data/packs/personal-topics.03c1443a2cc176cf.json",
+      "bytes": 145090,
+      "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+    },
+    {
+      "path": "data/packs/presentations.2cd234cc3c91ce8d.json",
+      "bytes": 179620,
+      "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+    },
+    {
+      "path": "data/packs/speaking-foundations.378bea01a015d76e.json",
+      "bytes": 111770,
+      "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+    },
+    {
+      "path": "data/packs/speaking-practice.30d81bc404256cb8.json",
+      "bytes": 16057,
+      "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+    },
+    {
+      "path": "data/packs/workplace-topics.dad3daa8ab78823e.json",
+      "bytes": 367402,
+      "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+    },
+    {
+      "path": "v1/assets/index-Bod3ovET.css",
+      "bytes": 27847,
+      "sha256": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83"
+    },
+    {
+      "path": "v1/assets/index-C0A337ei.js",
+      "bytes": 138547,
+      "sha256": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913"
+    },
+    {
+      "path": "v1/data/materials.json",
+      "bytes": 1569661,
+      "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+    }
+  ],
+  "referenceCSS": {
+    "url": "https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&family=Source+Sans+3:wght@400..700&display=swap",
+    "status": 200,
+    "sha256": "8901f09883e31b36f6606ca4820224a79e7c5f2258fbfc3895c4a2c641cda62a"
+  }
+}

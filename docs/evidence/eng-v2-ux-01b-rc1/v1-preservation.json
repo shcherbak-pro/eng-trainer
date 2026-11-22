@@ -1,0 +1,30 @@
+{
+  "files": [
+    {
+      "path": "assets/index-Bod3ovET.css",
+      "byteIdentical": true,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "assets/index-C0A337ei.js",
+      "byteIdentical": true,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "data/materials.json",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "favicon.svg",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "index.html",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    }
+  ],
+  "pass": true
+}

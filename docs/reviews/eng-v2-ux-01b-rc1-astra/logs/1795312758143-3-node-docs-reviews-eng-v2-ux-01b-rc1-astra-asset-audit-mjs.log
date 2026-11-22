@@ -1,0 +1,88 @@
+{
+  fonts: [
+    {
+      file: 'eng-trainer-sans-cyrillic.woff2',
+      version: 'Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0',
+      built: [Array]
+    },
+    {
+      file: 'eng-trainer-sans-greek.woff2',
+      version: 'Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0',
+      built: [Array]
+    },
+    {
+      file: 'eng-trainer-sans-latin-ext.woff2',
+      version: 'Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0',
+      built: [Array]
+    },
+    {
+      file: 'eng-trainer-sans-latin.woff2',
+      version: 'Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0',
+      built: [Array]
+    },
+    {
+      file: 'literata-latin-italic.woff2',
+      version: 'Version 3.103;gftools[0.9.29]',
+      built: [Array]
+    },
+    {
+      file: 'literata-latin.woff2',
+      version: 'Version 3.103;gftools[0.9.29]',
+      built: [Array]
+    }
+  ],
+  v1: [
+    {
+      path: 'favicon.svg',
+      currentHash: '30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85',
+      releaseHash: 'b59f25bf77cd3295629d70534ee58550fdc3d0c61c6dd30931bed44dbc0a7eb1',
+      byteIdentical: false,
+      onlyCRLF: true,
+      currentCRLF: 4,
+      releaseCRLF: 0,
+      CRCRLF: 0,
+      onlyLineEndingCarriageReturns: true,
+      linesWithRepeatedCR: []
+    },
+    {
+      path: 'index.html',
+      currentHash: '0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f',
+      releaseHash: '67cfc3c634287a878058caed731c481c4b4ce6805eb29b2c8b7f3dcd55496704',
+      byteIdentical: false,
+      onlyCRLF: false,
+      currentCRLF: 45,
+      releaseCRLF: 0,
+      CRCRLF: 1,
+      onlyLineEndingCarriageReturns: true,
+      linesWithRepeatedCR: [Array]
+    },
+    {
+      path: 'assets/index-Bod3ovET.css',
+      currentHash: '03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83',
+      releaseHash: '03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83',
+      byteIdentical: true
+    },
+    {
+      path: 'assets/index-C0A337ei.js',
+      currentHash: '011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913',
+      releaseHash: '011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913',
+      byteIdentical: true
+    },
+    {
+      path: 'data/materials.json',
+      currentHash: 'f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422',
+      releaseHash: 'd206ce3294f3ce5ff7fcd60f74e4bbf27998dd9e2b5be5428b2c418b881f6a4d',
+      byteIdentical: false,
+      onlyCRLF: true,
+      currentCRLF: 35805,
+      releaseCRLF: 0,
+      CRCRLF: 0,
+      onlyLineEndingCarriageReturns: true,
+      linesWithRepeatedCR: []
+    }
+  ],
+  protected: { count: 101, changed: [] },
+  referenceMatches: [],
+  error: undefined
+}
+

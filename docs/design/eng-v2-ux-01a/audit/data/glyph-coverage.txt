@@ -1,0 +1,13 @@
+Rendered glyph coverage (Google Fonts web subsets, Chromium 157 headless, 2026-11-21/22).
+Symbols tested: ɔɪəˈːʊðɑæʃɜʌɡˌŋʒθɒ’—… ʼіїєґІЇЄҐ₴
+Method: a glyph is present when its width is identical with monospace, serif and cursive fallbacks.
+Gentium Book Plus  loaded=true  missing: ɔ ɪ ˈ ː ʊ ɑ ʃ ɜ ʌ ɡ ˌ ʒ ɒ
+Charis SIL         loaded=true  missing: ˈ ː ˌ θ
+Literata           loaded=true  missing: ɔ ɪ ː ʊ ʃ ɜ ʌ ʒ ɒ
+Source Sans 3      loaded=true  missing: none
+Source Serif 4     loaded=true  missing: ɔ ɪ ː ʊ ʃ ɜ ʌ ʒ ɒ
+Noto Sans          loaded=true  missing: none
+IBM Plex Sans      loaded=true  missing: ɔ ɪ ˈ ː ʊ ɑ ʃ ɜ ʌ ɡ ˌ ʒ ɒ
+Commissioner       loaded=true  missing: ɔ ɪ ː ʊ ɑ ʃ ɜ ʌ ɡ ʒ ɒ
+Manrope            loaded=true  missing: ɔ ɪ ˈ ː ʊ ɑ ʃ ɜ ʌ ɡ ˌ ʒ ɒ ʼ
+Andika             loaded=true  missing: θ

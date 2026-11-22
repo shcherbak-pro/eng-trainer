@@ -1,0 +1,422 @@
+{
+  "baseline": "f14dd4e33de2dfcbd8b80e1b72dbfec4326823d3",
+  "branch": "feature/eng-v2-ux-01b-spoken-line",
+  "note": "Every change of this milestone: M modified, D deleted, ?? new. Protected pre-existing files and this evidence folder are excluded. Nothing is staged.",
+  "staged": [],
+  "files": [
+    {
+      "state": "M",
+      "path": "CHANGELOG.md",
+      "sha256": "778197d2b0a17e949e85cda2a05ed21c6d5d313c14f75a183eafd80379ef8459"
+    },
+    {
+      "state": "M",
+      "path": "README.md",
+      "sha256": "e8e960ee0e64a241ada7306b3c728430dfd27a432443c1829cec5813d154f5ee"
+    },
+    {
+      "state": "M",
+      "path": "docs/architecture/USER-COLLECTIONS.md",
+      "sha256": "fb7f9bd45471df94619a716f6d498f4f47f0c9190ae8b7fb00255d67b68644f1"
+    },
+    {
+      "state": "M",
+      "path": "index.html",
+      "sha256": "c94d6b27af3c8eca2bf3c0ccf64b6dfcea0dbbd47a7f1adac4d0547a3c249253"
+    },
+    {
+      "state": "M",
+      "path": "scripts/check-site.mjs",
+      "sha256": "d8548ff9301be874981980632b22136b2f243c1fb7d6f4ebf469f154edd23893"
+    },
+    {
+      "state": "M",
+      "path": "src/app.css",
+      "sha256": "5d9cf45ed48ead61155c0b229006b651517addbdd46c5fa7c3d5bd2bd33f144c"
+    },
+    {
+      "state": "M",
+      "path": "src/app/App.svelte",
+      "sha256": "6355020b1a6a1a036c94ca1b64dfe4e279e0ab0de11056dc841397f2a9131750"
+    },
+    {
+      "state": "M",
+      "path": "src/app/App.test.ts",
+      "sha256": "f9365a13cefbfcfb26ee9c8f7370a9d3de87e97a8728ddd63d2c7af798d664e6"
+    },
+    {
+      "state": "M",
+      "path": "src/app/AppShell.svelte",
+      "sha256": "3a0f5e77521627235dbb8bc987c5cc8d90fd17fe5adf969aa7c9d9b757302818"
+    },
+    {
+      "state": "M",
+      "path": "src/app/ThemeToggle.svelte",
+      "sha256": "9f9f4c74a8550d42ffb5f8221f38e9fa8cd11af776bc77ae1e051af212e1c15c"
+    },
+    {
+      "state": "M",
+      "path": "src/app/navigation.ts",
+      "sha256": "bb990210c44b986501f8cd13996bf13011892eb537397110fbcff643cdf5d95b"
+    },
+    {
+      "state": "M",
+      "path": "src/app/theme.ts",
+      "sha256": "29cb62bb2eefddc802714e827b22845c57fcd87fca817206c61ad06271dba6ac"
+    },
+    {
+      "state": "M",
+      "path": "src/collections/format.ts",
+      "sha256": "28844fdade7e081cd859745a6959814c4e18871a5c5d4a5e400f990711f3f041"
+    },
+    {
+      "state": "M",
+      "path": "src/collections/service.ts",
+      "sha256": "fdc10799323b56c0757373f0452a4de0d08e251b6b22ee6e49bacb04d2413d93"
+    },
+    {
+      "state": "M",
+      "path": "src/features/collections/CollectionsPage.svelte",
+      "sha256": "1394d7df4088515b76c09cb481ca58c980ae8527d3c3f099a150ea91a87b2eaf"
+    },
+    {
+      "state": "M",
+      "path": "src/features/collections/retainedLearning.test.ts",
+      "sha256": "500cade9ed6e009be1d04fbcab61f0f375913e30680f447c6294ea357402b765"
+    },
+    {
+      "state": "M",
+      "path": "src/features/exercises/AnswersPage.svelte",
+      "sha256": "61ec947af0d0c04f1df25896ba505e50f3959e3cafd20f85fa7c4c55fe29c616"
+    },
+    {
+      "state": "M",
+      "path": "src/features/exercises/PatternsPage.svelte",
+      "sha256": "641edb85331e9ce751d07a84931fc07a4b3f75907aacc048e9537ef1f8942a23"
+    },
+    {
+      "state": "M",
+      "path": "src/features/exercises/PracticePage.svelte",
+      "sha256": "ae1c63e2484c68b2f02115dfd79decd422e485c7d9d292d424633e6be41e28d5"
+    },
+    {
+      "state": "M",
+      "path": "src/features/exercises/ReversePracticePage.svelte",
+      "sha256": "c486132674757d4126de2c71119f619cdb2d10e954c0daa7f48e1826af227590"
+    },
+    {
+      "state": "M",
+      "path": "src/features/flashcards/FlashcardsPage.svelte",
+      "sha256": "c589dfa6c46682a9e152f0885a7d9c6e0b778f3c324ea8168fd3ba245a0a3d98"
+    },
+    {
+      "state": "M",
+      "path": "src/features/flashcards/FlashcardsPage.test.ts",
+      "sha256": "3628077e76851cd264147860cdff0d74ff60834bcfc1c4ee98996750e601059b"
+    },
+    {
+      "state": "M",
+      "path": "src/features/focus/FocusListPage.svelte",
+      "sha256": "fb646113e9c821ff311ccb87ef599746ddb8ca7c7c4333fdd3990bf7b0697234"
+    },
+    {
+      "state": "M",
+      "path": "src/features/home/ExpansionPanel.svelte",
+      "sha256": "af4b63c786b3dcdba9c203b0b7606bf6546a63e99c9703d8800b57e86b547d7b"
+    },
+    {
+      "state": "M",
+      "path": "src/features/home/IndexPage.svelte",
+      "sha256": "5bad8f6983612d45841debe2f66a8a05a1105da4ab5580a27e0641823acec7a1"
+    },
+    {
+      "state": "M",
+      "path": "src/features/home/LearnPassManager.svelte",
+      "sha256": "802f66d86b5f72c66347eac74c7a241dd4981b6b0a3d5e4d5ec98a46ffac5405"
+    },
+    {
+      "state": "M",
+      "path": "src/features/vocabulary/IrregularVerbsPage.svelte",
+      "sha256": "381193dc0c9309d33d0d4c1a063729d3e4da0476d0879bbc712db73fed366c6a"
+    },
+    {
+      "state": "M",
+      "path": "src/features/vocabulary/PhrasesPage.svelte",
+      "sha256": "290b095d857942c4fc09e0e2fe34140a75f93340cdb459a46f9a6ca1ad2a794f"
+    },
+    {
+      "state": "M",
+      "path": "src/features/vocabulary/WordIndexPage.svelte",
+      "sha256": "12bc96527c8d6761dd0428e68ca601a06f20dc45bd006fed9a0fc808540660f2"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/entries/FocusButton.svelte",
+      "sha256": "95fee141665d10764ffec3757bf7cf96a4f1ab0ebca390a6d8e385c876a448e8"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/entries/HideButton.svelte",
+      "sha256": "0cb47e652eddaf8526c7c692d52800512c2a493f19ab5d5aa69609f5ba6b6b8b"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/entries/IrregularVerbCard.svelte",
+      "sha256": "d1d93a4f4ce3e3edf8c6959023ccb5de3eacc666f06c560af48b22c40155312f"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/entries/PhraseCard.svelte",
+      "sha256": "d3a4b28d8d0feb00a940881dc8325a9a7124f1f8f6e35793433b40d1d04453de"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/entries/WordCard.svelte",
+      "sha256": "a2097d27939078b9416f39b1fa01803d444cc5252a29eb24c0c7e2459d8ef9f9"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/speech/SectionSpeechControl.svelte",
+      "sha256": "eb7d026271bf0cb7c248c73f7923daa4a054dd933d41a8baa83e811f3dbf7b98"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/speech/SpeakButton.svelte",
+      "sha256": "ac43ab273fb29fb9119a2cdc0971b9e06af6e6b9f598693ee2bfd71a02afad4c"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/text.ts",
+      "sha256": "c46caede123926af2089b5f72d5f32987265bec6c43e15210011c031d21c54d4"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/ui/CollectionFilter.svelte",
+      "sha256": "ae572ab0162df1883cc68556146a3793d93e944c60e2daffd7b82a1e015a4758"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/ui/EmptyState.svelte",
+      "sha256": "6132b4e6b2bcd9446c4f841b2b8e9532389fffc6b05a8fde80e53c2019628e5d"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/ui/IconButton.svelte",
+      "sha256": "0ee23aeb62a62b8e24d2f4bb9ee34628e42cf4dbe97436c571e4565baed0049e"
+    },
+    {
+      "state": "D",
+      "path": "src/shared/ui/MaterialIcon.svelte"
+    },
+    {
+      "state": "M",
+      "path": "src/shared/ui/PaginationControls.svelte",
+      "sha256": "202b32ced1c3d0850b0071ab125235518489f1f09e2f4946f441a9fdf6ceb5df"
+    },
+    {
+      "state": "M",
+      "path": "src/state/index.ts",
+      "sha256": "d878ced6d699c5313275a5d4bfe7306220abdba72986f1f92b502d8fe5fdee32"
+    },
+    {
+      "state": "M",
+      "path": "src/state/progress.ts",
+      "sha256": "381a6ebee6e10c881effbb73c46661945aa024d575f5abd6587dd519dd9988cf"
+    },
+    {
+      "state": "M",
+      "path": "src/state/settings.ts",
+      "sha256": "8e2815e9bde9c09a124c2281b95fbaa35d72e81d1ce9a82e9b72a86214fa98da"
+    },
+    {
+      "state": "M",
+      "path": "src/storage/database.ts",
+      "sha256": "14eab95bc6de32814a6451705fa238aafc65f40950f9b8bb0140b44af8b87a2e"
+    },
+    {
+      "state": "??",
+      "path": "docs/handoffs/ENG-V2-UX-01B.md",
+      "sha256": "f1efe10c3e585f5703616fa86e193d215a8e529b2da270d8fb7f7a47f7cc4a97"
+    },
+    {
+      "state": "??",
+      "path": "public/fonts/OFL-Literata.txt",
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "state": "??",
+      "path": "public/fonts/OFL-SourceSans3.txt",
+      "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5"
+    },
+    {
+      "state": "??",
+      "path": "src/app/navigation.test.ts",
+      "sha256": "0ff2da4a4e627ed6bd5ef7617d8f06bfa1d3e1e081d7ac17d146ac44559ad337"
+    },
+    {
+      "state": "??",
+      "path": "src/assets/fonts/README.md",
+      "sha256": "e3bd3ca6bc301366d5d5cba956f519bc635a5fcacb3014856df4834bdcc41bf7"
+    },
+    {
+      "state": "??",
+      "path": "src/assets/fonts/literata-latin-italic.woff2",
+      "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265"
+    },
+    {
+      "state": "??",
+      "path": "src/assets/fonts/literata-latin.woff2",
+      "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58"
+    },
+    {
+      "state": "??",
+      "path": "src/assets/fonts/source-sans-3-cyrillic.woff2",
+      "sha256": "b6b721e08d0324b9e743858e8260463085d4c5e1e684f036f9d4a8ca6c62996f"
+    },
+    {
+      "state": "??",
+      "path": "src/assets/fonts/source-sans-3-greek.woff2",
+      "sha256": "dd6ec3878cf37dc8b864562acf1a37bd8c9e0ca638d7f75a7cd6b6f7ae16cf3d"
+    },
+    {
+      "state": "??",
+      "path": "src/assets/fonts/source-sans-3-latin-ext.woff2",
+      "sha256": "a85a7459bdb3cdc1136751e151a506bae653fc29ada3ca86237477df6f1b59e6"
+    },
+    {
+      "state": "??",
+      "path": "src/assets/fonts/source-sans-3-latin.woff2",
+      "sha256": "19143dca075972bc84e3fd9eab7416dd40cc565dccb2435a044bdfabe060c7d5"
+    },
+    {
+      "state": "??",
+      "path": "src/collections/fileName.test.ts",
+      "sha256": "328f0aaa4fa05d05f766a4e59dcd7ff41151bf1d6d8f5fbb1b2098dc93339421"
+    },
+    {
+      "state": "??",
+      "path": "src/collections/fileName.ts",
+      "sha256": "e126fb137d2cc0f64de9fbd145ccd5c13367fe8761abf56a74edda1bedb36d4f"
+    },
+    {
+      "state": "??",
+      "path": "src/collections/importErrors.test.ts",
+      "sha256": "df7c45fae5f58fa18ff2eccdc573f7ed63fa24acc952e60fa6dc2121ed107198"
+    },
+    {
+      "state": "??",
+      "path": "src/collections/importGuide.test.ts",
+      "sha256": "684e7461f2ec68a67c91da804f84a3930ea52cbfd233de548d62e7ad853035d3"
+    },
+    {
+      "state": "??",
+      "path": "src/collections/importGuide.ts",
+      "sha256": "66e62c7c23217c6c6e43bf4436e22f2f6fe52c4a07bee04a4e84fa8a32250364"
+    },
+    {
+      "state": "??",
+      "path": "src/collections/serviceErrors.test.ts",
+      "sha256": "509366c385a515d6cf16e5dd89577c08eb62c8c40cc39f539bdff8bc3061f583"
+    },
+    {
+      "state": "??",
+      "path": "src/features/collections/CollectionsPage.test.ts",
+      "sha256": "66d2e26ca487112c3d31a1db7cdb3f6f76fcd4c3dd0a9c9586250f6730c18e01"
+    },
+    {
+      "state": "??",
+      "path": "src/features/collections/ImportHelp.svelte",
+      "sha256": "8572a33c78cbb45150d9001d10596dd7c989a0c71fc40451ac81d094bc32d053"
+    },
+    {
+      "state": "??",
+      "path": "src/features/collections/importFeedback.ts",
+      "sha256": "fafa6ed89ac9c2baa8cec32a9ad244de04acad494afdecb6aee62b62bd6aad66"
+    },
+    {
+      "state": "??",
+      "path": "src/features/settings/SettingsPage.svelte",
+      "sha256": "7cf0d20da1a4d56272e9d1771e96025b13383c4fd5c69f862cfbf57eb87e8aad"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/download.ts",
+      "sha256": "6327cff34ac945f37bb1696f5270d743a86ffc0242fd9ad87a96d1297ab0138e"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/entries/EntryExamples.svelte",
+      "sha256": "6d124d146406306ad33f416d837854920868909106cb574e81fdcc689338b06b"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/entries/hideUndo.test.ts",
+      "sha256": "883119e846fef63cf8626d450102545c93bdba18c1d112d55ce4c1f87f3610df"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/ui/Button.svelte",
+      "sha256": "68054effabcef007f280f9d36e2e7050d9ec689af98cfe5211fd5c14a9ac434f"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/ui/ConfirmDialog.svelte",
+      "sha256": "5e0c442182b7e33ca7d0f1585a150c101ae29425440ab277cb41cd6cab8d3483"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/ui/Icon.svelte",
+      "sha256": "a20437a763f8009241652a1178f7a4b258efce358a3b2622201834ccfa3c9854"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/ui/Notice.svelte",
+      "sha256": "21ab5d63e776cc1e212cc100e7f84c679108295b775b8209724193b43e88ae55"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/ui/SearchField.svelte",
+      "sha256": "7033ddd1da7889fcb7f8e31dbb01ea1a84c0783299c9823613bec6e9c9a115e7"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/ui/ToastRegion.svelte",
+      "sha256": "260e9e8b372cf8dc8233cdf9b65d0dacea413475dcd32d813278bb6187f42628"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/ui/icons.ts",
+      "sha256": "e007322e4b2f0ff4d361bb5582b583edc4cb4ccfe7908cb97ff5952d0347abc5"
+    },
+    {
+      "state": "??",
+      "path": "src/shared/ui/toast.ts",
+      "sha256": "1a0e7376fc4a1248f555cc01f19b5d8d3a792e3e5dd1a61f4fb66f43d43a45f4"
+    },
+    {
+      "state": "??",
+      "path": "src/state/reset.test.ts",
+      "sha256": "100e035f5dc3fa9cac4f9b8458bc0b5eb8e923621c72601f52c60731cd2a61ba"
+    },
+    {
+      "state": "??",
+      "path": "src/storage/openStorage.test.ts",
+      "sha256": "b94f946172618f2e0d82d2eb13cbe2562b31517897311844f30da50c4eeea1d6"
+    },
+    {
+      "state": "??",
+      "path": "src/styles/base.css",
+      "sha256": "44e4061af6c02235d4be98d8b7d366a98a362be866b846cdbfa62c5d47d828d1"
+    },
+    {
+      "state": "??",
+      "path": "src/styles/fonts.css",
+      "sha256": "ec2f85d8240b38cbcebd1a336906c4095ba46577c2c2e8a408388b1b777411c0"
+    },
+    {
+      "state": "??",
+      "path": "src/styles/tokens.css",
+      "sha256": "5074a7b887e5149d3f370854b4ca85cc8c5cc1f8a35a8dc17b1ce20d5d3370a7"
+    }
+  ]
+}

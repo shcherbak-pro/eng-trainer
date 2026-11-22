@@ -1,0 +1,192 @@
+{
+  "versions": {
+    "chromium": "159.0.8154.6",
+    "firefox": "159.0"
+  },
+  "rawLog_x1": [
+    {
+      "t": 93,
+      "theme": null,
+      "label": "init"
+    },
+    {
+      "t": 94,
+      "theme": "light",
+      "label": "data-theme"
+    },
+    {
+      "t": 96,
+      "theme": "light",
+      "label": "data-theme"
+    },
+    {
+      "t": 104,
+      "theme": "dark",
+      "label": "data-theme"
+    },
+    {
+      "t": 104,
+      "theme": "dark",
+      "label": "first-paint"
+    },
+    {
+      "t": 104,
+      "theme": "dark",
+      "label": "first-contentful-paint"
+    },
+    {
+      "t": 612,
+      "theme": "dark",
+      "label": "app-shell"
+    }
+  ],
+  "theme_x1": {
+    "toggleLabel": "Theme: Dark. Switch to System.",
+    "runs": [
+      {
+        "firstPaint": 104,
+        "themeAtFirstPaint": "dark",
+        "darkAppliedAt": 104,
+        "appShellAt": 612,
+        "lightVisibleMs": 0
+      },
+      {
+        "firstPaint": 76,
+        "themeAtFirstPaint": "dark",
+        "darkAppliedAt": 73,
+        "appShellAt": 225,
+        "lightVisibleMs": 0
+      },
+      {
+        "firstPaint": 92,
+        "themeAtFirstPaint": "dark",
+        "darkAppliedAt": 85,
+        "appShellAt": 238,
+        "lightVisibleMs": 0
+      },
+      {
+        "firstPaint": 84,
+        "themeAtFirstPaint": "dark",
+        "darkAppliedAt": 80,
+        "appShellAt": 257,
+        "lightVisibleMs": 0
+      },
+      {
+        "firstPaint": 76,
+        "themeAtFirstPaint": "dark",
+        "darkAppliedAt": 71,
+        "appShellAt": 229,
+        "lightVisibleMs": 0
+      },
+      {
+        "firstPaint": 88,
+        "themeAtFirstPaint": "dark",
+        "darkAppliedAt": 86,
+        "appShellAt": 330,
+        "lightVisibleMs": 0
+      }
+    ],
+    "medianLightVisibleMs": 0,
+    "medianFirstPaint": 88,
+    "medianDarkAt": 85
+  },
+  "rawLog_x4": [
+    {
+      "t": 67,
+      "theme": null,
+      "label": "init"
+    },
+    {
+      "t": 71,
+      "theme": "light",
+      "label": "data-theme"
+    },
+    {
+      "t": 82,
+      "theme": "light",
+      "label": "data-theme"
+    },
+    {
+      "t": 80,
+      "theme": "light",
+      "label": "first-paint"
+    },
+    {
+      "t": 112,
+      "theme": "light",
+      "label": "first-contentful-paint"
+    },
+    {
+      "t": 160,
+      "theme": "dark",
+      "label": "data-theme"
+    },
+    {
+      "t": 997,
+      "theme": "dark",
+      "label": "app-shell"
+    }
+  ],
+  "theme_x4": {
+    "toggleLabel": "Theme: Dark. Switch to System.",
+    "runs": [
+      {
+        "firstPaint": 80,
+        "themeAtFirstPaint": "light",
+        "darkAppliedAt": 160,
+        "appShellAt": 997,
+        "lightVisibleMs": 80
+      },
+      {
+        "firstPaint": 140,
+        "themeAtFirstPaint": "light",
+        "darkAppliedAt": 156,
+        "appShellAt": 807,
+        "lightVisibleMs": 16
+      },
+      {
+        "firstPaint": 212,
+        "themeAtFirstPaint": "light",
+        "darkAppliedAt": 435,
+        "appShellAt": 1151,
+        "lightVisibleMs": 223
+      },
+      {
+        "firstPaint": 104,
+        "themeAtFirstPaint": "light",
+        "darkAppliedAt": 199,
+        "appShellAt": 649,
+        "lightVisibleMs": 95
+      },
+      {
+        "firstPaint": 88,
+        "themeAtFirstPaint": "light",
+        "darkAppliedAt": 202,
+        "appShellAt": 787,
+        "lightVisibleMs": 114
+      },
+      {
+        "firstPaint": 60,
+        "themeAtFirstPaint": "dark",
+        "darkAppliedAt": 67,
+        "appShellAt": 641,
+        "lightVisibleMs": 7
+      }
+    ],
+    "medianLightVisibleMs": 95,
+    "medianFirstPaint": 104,
+    "medianDarkAt": 199
+  },
+  "f3_chromium": {
+    "preview": "INPUT[type=file]",
+    "previewNextTab": "INPUT",
+    "error": "INPUT[type=file]",
+    "errorNextTab": "Open the previous version (v1)"
+  },
+  "f3_firefox": {
+    "preview": "INPUT[type=file]",
+    "previewNextTab": "INPUT",
+    "error": "BODY",
+    "errorNextTab": "Open the previous version (v1)"
+  }
+}

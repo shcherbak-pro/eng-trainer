@@ -1,0 +1,48 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Settings" [level=1]
+  - region "Appearance":
+    - heading "Appearance" [level=2]
+    - group "Theme":
+      - text: Theme
+      - radio "System (follow the device setting)" [checked]
+      - text: System (follow the device setting)
+      - radio "Light"
+      - text: Light
+      - radio "Dark"
+      - text: Dark
+  - region "Listening":
+    - heading "Listening" [level=2]
+    - text: Repeats when you listen to a whole page
+    - combobox "Repeats when you listen to a whole page":
+      - option "10 times" [selected]
+      - option "20 times"
+      - option "50 times"
+  - region "Your vocabulary":
+    - heading "Your vocabulary" [level=2]
+    - paragraph: Import your own words and phrases from a CSV file, or manage, export and remove your collections.
+    - paragraph:
+      - link "Open Collections":
+        - /url: "#collections"
+  - region "Learning progress":
+    - heading "Learning progress" [level=2]
+    - paragraph: Start over with your learning state. Your imported collections and the built-in material are kept.
+    - button "Reset learning progress…"
+  - region "Previous version":
+    - heading "Previous version" [level=2]
+    - paragraph: The first version of the trainer is still available. It keeps its own, separate progress.
+    - paragraph:
+      - link "Open the previous version (v1)":
+        - /url: /eng-trainer/v1/
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - 'button "More , current: Settings"'
+- status

@@ -1,0 +1,3 @@
+Publication note, 22 November 2026: the four downloaded Source Sans 3 verification binaries remain unchanged in the reviewer's local workspace and are intentionally excluded from Git. They are temporary inputs, not additional application font assets.
+
+Their source URLs, byte sizes and SHA-256 hashes remain in [equivalence.json](../equivalence.json). The [upstream notice](../OFL.txt), [review instructions](../../README.md) and [derivation script](../../../../../scripts/fonts/derive_eng_trainer_sans.py) are published. Use a new output directory when reproducing the review so historical results remain intact. See the [publication record](../../../ENG-V2-UX-01B-PUBLICATION.md).

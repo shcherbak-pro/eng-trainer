@@ -1,0 +1,106 @@
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ preserves all baseline record values, array order, identities, metadata and explicit links (6.9831ms)
+✔ generation is deterministic and generated files equal the validated source catalog (52.0734ms)
+✔ explicit order preserves each collection even when pack discovery order changes (2.5176ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (11.3464ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (13.7984ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (2.7205ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (0.6606ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (18.4118ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (1.3013ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (42.3978ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 292.3452
+
+ RUN  v3.2.7 <repo>
+
+ ✓ src/collections/importGuide.test.ts (8 tests) 24ms
+ ✓ src/storage/openStorage.test.ts (4 tests) 123ms
+ ✓ src/features/flashcards/flashcards.test.ts (50 tests) 67ms
+ ✓ src/collections/importErrors.test.ts (10 tests) 26ms
+ ✓ src/collections/serviceErrors.test.ts (4 tests) 33ms
+ ✓ src/content/catalog.test.ts (8 tests) 437ms
+   ✓ built-in content catalog > finds every phrase, word and verb by its own text, wherever it is in the catalog  419ms
+ ✓ src/state/reset.test.ts (2 tests) 398ms
+ ✓ src/collections/service.test.ts (18 tests) 262ms
+ ✓ src/collections/format.test.ts (35 tests) 16ms
+ ✓ src/collections/fileName.test.ts (6 tests) 5ms
+ ✓ src/app/navigation.test.ts (3 tests) 3ms
+ ✓ src/shared/entries/hideUndo.test.ts (2 tests) 2041ms
+   ✓ Hide and Undo > Undo reverses only what hiding changed for this entry, through entry-level operations  1514ms
+   ✓ Hide and Undo > does not add Focus or learned state that the entry did not have, and keeps a permanent "Show" action  526ms
+ ✓ src/state/progress.test.ts (26 tests) 3875ms
+   ✓ learning state in IndexedDB > returns items to the learning pool with "Learn again"  498ms
+   ✓ learning state in IndexedDB > resets one deck without touching the others  411ms
+   ✓ learning state in IndexedDB > keeps hidden items, the Focus List, Learn Passes and preferences after a reload  341ms
+ ✓ src/content/builtIn.test.ts (10 tests) 4307ms
+   ✓ complete search through the loaded shared catalog > matches a direct field-by-field oracle for every searchable field across all packs  3783ms
+ ✓ src/features/collections/retainedLearning.test.ts (5 tests) 4259ms
+   ✓ retained collection learning state > restores all order after deletion, answers and reload  2119ms
+   ✓ retained collection learning state > restores topic:Synthetic topic order after deletion, answers and reload  602ms
+   ✓ retained collection learning state > preserves absent slots during shuffle and explicit reset of an available deck  475ms
+   ✓ retained collection learning state > unhides only available words and restores hidden IDs after reimport  580ms
+   ✓ retained collection learning state > unhides only available phrases and restores hidden IDs after reimport  482ms
+ ✓ src/features/collections/CollectionsPage.test.ts (7 tests) 4938ms
+   ✓ import help > shows formats, encoding, required columns, limits and the example without writing anything  1472ms
+   ✓ file selection (F3) and validation feedback > keeps the picker usable while reading, focuses the review, and writes nothing until the import is confirmed  656ms
+   ✓ file selection (F3) and validation feedback > explains how to fix a rejected file, offers the template, focuses the summary and writes nothing  534ms
+   ✓ file selection (F3) and validation feedback > lets only the latest selection update the page, and a cancelled selection never reappears  797ms
+   ✓ file selection (F3) and validation feedback > accepts the same file name again after it has been corrected  407ms
+   ✓ saving and managing collections > reports success only after the import transaction, then exports with a readable Cyrillic file name (F6)  475ms
+   ✓ saving and managing collections > shows a rename conflict next to the form, with a reload action and no storage advice (F5)  597ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts (28 tests) 9226ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1397ms
+   ✓ Flashcards page > flips the card on tap and shows the translation and example  624ms
+   ✓ Flashcards page > keyboard > ArrowRight means "I know it"  428ms
+   ✓ Flashcards page > decks > shows a completed state when every card of the deck is learned  306ms
+   ✓ Flashcards page > saved progress > resumes in the middle of a round after a reload  569ms
+   ✓ Flashcards page > learned vocabulary > lists learned cards and returns one to the deck with "Learn again"  344ms
+   ✓ Flashcards page > learned vocabulary > offers Undo after "Learn again", which restores only that card's learned flag  345ms
+   ✓ Flashcards page > learned vocabulary > resets the progress of the selected topic only after confirmation  375ms
+ ✓ src/app/App.test.ts (21 tests) 14627ms
+   ✓ application shell > preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry  2523ms
+   ✓ application shell > loads the built-in content from its own base path and shows the index  790ms
+   ✓ application shell > links to the preserved v1 application  401ms
+   ✓ application shell > renders every screen from the catalog  578ms
+   ✓ application shell > searches the whole catalog, not only the items shown on the current page  564ms
+   ✓ application shell > opens the saved screen and keeps progress and preferences after a reload  945ms
+   ✓ application shell > does not write anything while starting with existing saved state  406ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps "consequently" and "Consequently, …" apart in every view, also after a reload  926ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps distinct entries with similar-looking text independent: C++ and C#  1229ms
+   ✓ learning identity across Phrases, Focus and Flashcards > treats a phrase and its linked word-index entry as one learning identity: the phrase id  1148ms
+   ✓ loading and storage errors > handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state  425ms
+   ✓ loading and storage errors > shows an error and a retry when the content cannot be loaded  362ms
+   ✓ loading and storage errors > shows a notice when a change cannot be saved, until saving succeeds  370ms
+   ✓ blocked database upgrade at start-up (F4) > keeps the waiting guidance on "Check again" and continues by itself when the other tab closes  593ms
+   ✓ blocked database upgrade at start-up (F4) > keeps "Continue without saving" in charge when the database opens later  614ms
+   ✓ Settings and Reset progress > asks before resetting; Cancel changes nothing; the theme and imported collections stay  612ms
+   ✓ language of study text and translations > marks built-in Ukrainian as uk, leaves imported translations unmarked, and protects English study text from translation  478ms
+   ✓ hiding an entry from a list > keeps keyboard users in place: focus moves to the entry that took its place, and Undo returns it to the restored entry  578ms
+   ✓ navigation > opens More as a sheet from a button, with links to Collections, Settings and the previous version  448ms
+   ✓ navigation > marks the current screen in every navigation and moves focus to the new heading  343ms
+
+ Test Files  18 passed (18)
+      Tests  247 passed (247)
+   Start at  02:21:56
+   Duration  16.52s (transform 3.16s, setup 937ms, collect 7.98s, tests 44.67s, environment 12.13s, prepare 2.21s)
+
+

@@ -1,0 +1,942 @@
+{
+  "tool": {
+    "python": "3.14.7",
+    "fontTools": "4.68.0"
+  },
+  "family": "Eng Trainer Sans",
+  "subsets": {
+    "latin": {
+      "ok": true,
+      "original": {
+        "file": "source-sans-3-latin.woff2",
+        "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZQ.woff2",
+        "bytes": 28872,
+        "sha256": "19143dca075972bc84e3fd9eab7416dd40cc565dccb2435a044bdfabe060c7d5",
+        "decodedBytes": 67352
+      },
+      "derived": {
+        "file": "eng-trainer-sans-latin.woff2",
+        "bytes": 28832,
+        "sha256": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4",
+        "decodedBytes": 67328
+      },
+      "glyphs": 324,
+      "codepoints": 231,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200.0,
+          "default": 200.0,
+          "max": 900.0
+        }
+      ],
+      "identicalTables": [
+        "BASE",
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "HVAR",
+        "MVAR",
+        "OS/2",
+        "STAT",
+        "avar",
+        "cmap",
+        "fvar",
+        "gasp",
+        "glyf",
+        "gvar",
+        "head",
+        "hhea",
+        "hmtx",
+        "loca",
+        "maxp",
+        "post",
+        "prep"
+      ],
+      "differentTables": [],
+      "glyphOrderIdentical": true,
+      "nameChanges": [
+        {
+          "nameID": 1,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "Source Sans 3 ExtraLight",
+          "after": "Eng Trainer Sans ExtraLight"
+        },
+        {
+          "nameID": 3,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE",
+          "after": "3.052;ENGT;EngTrainerSans-Roman"
+        },
+        {
+          "nameID": 4,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "Source Sans 3",
+          "after": "Eng Trainer Sans"
+        },
+        {
+          "nameID": 6,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "SourceSans3-Roman",
+          "after": "EngTrainerSans-Roman"
+        }
+      ],
+      "unexpectedNameChanges": [],
+      "copyrightNoticeKept": true,
+      "reservedNameLeftInOtherRecords": [],
+      "namesAfter": [
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 0,
+          "string": "© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 1,
+          "string": "Eng Trainer Sans ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 2,
+          "string": "Regular"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 3,
+          "string": "3.052;ENGT;EngTrainerSans-Roman"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 4,
+          "string": "Eng Trainer Sans"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 5,
+          "string": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 6,
+          "string": "EngTrainerSans-Roman"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 14,
+          "string": "http://scripts.sil.org/OFL"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 17,
+          "string": "ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 257,
+          "string": "Italic"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 288,
+          "string": "Weight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 299,
+          "string": "Weight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 300,
+          "string": "ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 301,
+          "string": "Light"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 302,
+          "string": "Regular"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 303,
+          "string": "Medium"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 304,
+          "string": "SemiBold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 305,
+          "string": "Bold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 306,
+          "string": "ExtraBold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 307,
+          "string": "Black"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 308,
+          "string": "Roman"
+        }
+      ]
+    },
+    "latin-ext": {
+      "ok": true,
+      "original": {
+        "file": "source-sans-3-latin-ext.woff2",
+        "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wEaZfrc.woff2",
+        "bytes": 60088,
+        "sha256": "a85a7459bdb3cdc1136751e151a506bae653fc29ada3ca86237477df6f1b59e6",
+        "decodedBytes": 149616
+      },
+      "derived": {
+        "file": "eng-trainer-sans-latin-ext.woff2",
+        "bytes": 60136,
+        "sha256": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d",
+        "decodedBytes": 149592
+      },
+      "glyphs": 731,
+      "codepoints": 563,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200.0,
+          "default": 200.0,
+          "max": 900.0
+        }
+      ],
+      "identicalTables": [
+        "BASE",
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "HVAR",
+        "MVAR",
+        "OS/2",
+        "STAT",
+        "avar",
+        "cmap",
+        "fvar",
+        "gasp",
+        "glyf",
+        "gvar",
+        "head",
+        "hhea",
+        "hmtx",
+        "loca",
+        "maxp",
+        "post",
+        "prep"
+      ],
+      "differentTables": [],
+      "glyphOrderIdentical": true,
+      "nameChanges": [
+        {
+          "nameID": 1,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "Source Sans 3 ExtraLight",
+          "after": "Eng Trainer Sans ExtraLight"
+        },
+        {
+          "nameID": 3,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE",
+          "after": "3.052;ENGT;EngTrainerSans-Roman"
+        },
+        {
+          "nameID": 4,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "Source Sans 3",
+          "after": "Eng Trainer Sans"
+        },
+        {
+          "nameID": 6,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "SourceSans3-Roman",
+          "after": "EngTrainerSans-Roman"
+        }
+      ],
+      "unexpectedNameChanges": [],
+      "copyrightNoticeKept": true,
+      "reservedNameLeftInOtherRecords": [],
+      "namesAfter": [
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 0,
+          "string": "© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 1,
+          "string": "Eng Trainer Sans ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 2,
+          "string": "Regular"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 3,
+          "string": "3.052;ENGT;EngTrainerSans-Roman"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 4,
+          "string": "Eng Trainer Sans"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 5,
+          "string": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 6,
+          "string": "EngTrainerSans-Roman"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 14,
+          "string": "http://scripts.sil.org/OFL"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 17,
+          "string": "ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 257,
+          "string": "Italic"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 288,
+          "string": "Weight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 299,
+          "string": "Weight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 300,
+          "string": "ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 301,
+          "string": "Light"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 302,
+          "string": "Regular"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 303,
+          "string": "Medium"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 304,
+          "string": "SemiBold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 305,
+          "string": "Bold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 306,
+          "string": "ExtraBold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 307,
+          "string": "Black"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 308,
+          "string": "Roman"
+        }
+      ]
+    },
+    "cyrillic": {
+      "ok": true,
+      "original": {
+        "file": "source-sans-3-cyrillic.woff2",
+        "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wsaZfrc.woff2",
+        "bytes": 18496,
+        "sha256": "b6b721e08d0324b9e743858e8260463085d4c5e1e684f036f9d4a8ca6c62996f",
+        "decodedBytes": 41016
+      },
+      "derived": {
+        "file": "eng-trainer-sans-cyrillic.woff2",
+        "bytes": 18412,
+        "sha256": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682",
+        "decodedBytes": 40992
+      },
+      "glyphs": 185,
+      "codepoints": 106,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200.0,
+          "default": 200.0,
+          "max": 900.0
+        }
+      ],
+      "identicalTables": [
+        "BASE",
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "HVAR",
+        "MVAR",
+        "OS/2",
+        "STAT",
+        "avar",
+        "cmap",
+        "fvar",
+        "gasp",
+        "glyf",
+        "gvar",
+        "head",
+        "hhea",
+        "hmtx",
+        "loca",
+        "maxp",
+        "post",
+        "prep"
+      ],
+      "differentTables": [],
+      "glyphOrderIdentical": true,
+      "nameChanges": [
+        {
+          "nameID": 1,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "Source Sans 3 ExtraLight",
+          "after": "Eng Trainer Sans ExtraLight"
+        },
+        {
+          "nameID": 3,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE",
+          "after": "3.052;ENGT;EngTrainerSans-Roman"
+        },
+        {
+          "nameID": 4,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "Source Sans 3",
+          "after": "Eng Trainer Sans"
+        },
+        {
+          "nameID": 6,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "SourceSans3-Roman",
+          "after": "EngTrainerSans-Roman"
+        }
+      ],
+      "unexpectedNameChanges": [],
+      "copyrightNoticeKept": true,
+      "reservedNameLeftInOtherRecords": [],
+      "namesAfter": [
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 0,
+          "string": "© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 1,
+          "string": "Eng Trainer Sans ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 2,
+          "string": "Regular"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 3,
+          "string": "3.052;ENGT;EngTrainerSans-Roman"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 4,
+          "string": "Eng Trainer Sans"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 5,
+          "string": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 6,
+          "string": "EngTrainerSans-Roman"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 14,
+          "string": "http://scripts.sil.org/OFL"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 17,
+          "string": "ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 257,
+          "string": "Italic"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 288,
+          "string": "Weight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 299,
+          "string": "Weight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 300,
+          "string": "ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 301,
+          "string": "Light"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 302,
+          "string": "Regular"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 303,
+          "string": "Medium"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 304,
+          "string": "SemiBold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 305,
+          "string": "Bold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 306,
+          "string": "ExtraBold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 307,
+          "string": "Black"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 308,
+          "string": "Roman"
+        }
+      ]
+    },
+    "greek": {
+      "ok": true,
+      "original": {
+        "file": "source-sans-3-greek.woff2",
+        "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wwaZfrc.woff2",
+        "bytes": 14528,
+        "sha256": "dd6ec3878cf37dc8b864562acf1a37bd8c9e0ca638d7f75a7cd6b6f7ae16cf3d",
+        "decodedBytes": 33808
+      },
+      "derived": {
+        "file": "eng-trainer-sans-greek.woff2",
+        "bytes": 14504,
+        "sha256": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670",
+        "decodedBytes": 33784
+      },
+      "glyphs": 137,
+      "codepoints": 92,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200.0,
+          "default": 200.0,
+          "max": 900.0
+        }
+      ],
+      "identicalTables": [
+        "BASE",
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "HVAR",
+        "MVAR",
+        "OS/2",
+        "STAT",
+        "avar",
+        "cmap",
+        "fvar",
+        "gasp",
+        "glyf",
+        "gvar",
+        "head",
+        "hhea",
+        "hmtx",
+        "loca",
+        "maxp",
+        "post",
+        "prep"
+      ],
+      "differentTables": [],
+      "glyphOrderIdentical": true,
+      "nameChanges": [
+        {
+          "nameID": 1,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "Source Sans 3 ExtraLight",
+          "after": "Eng Trainer Sans ExtraLight"
+        },
+        {
+          "nameID": 3,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE",
+          "after": "3.052;ENGT;EngTrainerSans-Roman"
+        },
+        {
+          "nameID": 4,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "Source Sans 3",
+          "after": "Eng Trainer Sans"
+        },
+        {
+          "nameID": 6,
+          "platformID": 3,
+          "langID": 1033,
+          "before": "SourceSans3-Roman",
+          "after": "EngTrainerSans-Roman"
+        }
+      ],
+      "unexpectedNameChanges": [],
+      "copyrightNoticeKept": true,
+      "reservedNameLeftInOtherRecords": [],
+      "namesAfter": [
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 0,
+          "string": "© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 1,
+          "string": "Eng Trainer Sans ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 2,
+          "string": "Regular"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 3,
+          "string": "3.052;ENGT;EngTrainerSans-Roman"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 4,
+          "string": "Eng Trainer Sans"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 5,
+          "string": "Version 3.052;hotconv 1.1.0;makeotfexe 2.6.0"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 6,
+          "string": "EngTrainerSans-Roman"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 14,
+          "string": "http://scripts.sil.org/OFL"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 17,
+          "string": "ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 257,
+          "string": "Italic"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 288,
+          "string": "Weight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 299,
+          "string": "Weight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 300,
+          "string": "ExtraLight"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 301,
+          "string": "Light"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 302,
+          "string": "Regular"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 303,
+          "string": "Medium"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 304,
+          "string": "SemiBold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 305,
+          "string": "Bold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 306,
+          "string": "ExtraBold"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 307,
+          "string": "Black"
+        },
+        {
+          "platformID": 3,
+          "platEncID": 1,
+          "langID": 1033,
+          "nameID": 308,
+          "string": "Roman"
+        }
+      ]
+    }
+  },
+  "ok": true
+}

@@ -1,0 +1,50 @@
+{
+  "scope": "Only new review evidence; no candidate file sanitized or rewritten.",
+  "substitutions": [
+    "Repository absolute paths → <repo>",
+    "User home absolute paths → <user-home>",
+    "ANSI color sequences removed"
+  ],
+  "changed": [
+    {
+      "path": "logs/npm-cmd-run-build-site.log",
+      "originalSha256": "fc2750c04f5a4c8c5c9077ea12f39727fd721813a14dd74807410fcb05c76ea0",
+      "publishedSha256": "0964626af313b9a28f047ee925b1ff701474e71f30615b6de9b416266da31b41"
+    },
+    {
+      "path": "logs/npm-cmd-run-check.log",
+      "originalSha256": "461c93da30e71559a69995ecfa87e2277bc8dac86d755aa2c2db16d5a057a2a4",
+      "publishedSha256": "93b3ea09ffae7066933753f11873faeb822b6bb56a5b16e8030a81c77460be08"
+    },
+    {
+      "path": "logs/npm-cmd-run-test-v1.log",
+      "originalSha256": "87090ca18112d03c1c19b1dc8e357cce13ff1cb2145036821b816b7d5553fe1e",
+      "publishedSha256": "3d2386d845c272d08702d26c71f492586c5ae70680ed59e6ad7b1919abac2ed6"
+    },
+    {
+      "path": "logs/npm-cmd-test.log",
+      "originalSha256": "0731271ff08403c69cfa99533af542a7ed53298ae73b62b21bda71bf109d3aaa",
+      "publishedSha256": "f190945a915b9fed86afd1eccd2f1d6b18757578f7e4965911348c3475ab88b5"
+    },
+    {
+      "path": "native/results.json",
+      "originalSha256": "61ce6875f2971ba147c8eb50f309e7f4931b6849fe4813390be955b8c9969eb0",
+      "publishedSha256": "f393fdf1a03e3f4f95c3c3b2d87266771af325a97fb53a5f4efe427dccfef62f"
+    },
+    {
+      "path": "native-block-language/results.json",
+      "originalSha256": "958af959d8e0fb6fada8e857256761141068bd58a6109802e7cedcba6456f40b",
+      "publishedSha256": "36a4788d9e6fa2617c3e7c340fe6effa849ab9f179dbd390b190e2fbd1a81c6b"
+    },
+    {
+      "path": "native-language/results.json",
+      "originalSha256": "bed918bbc29931cf4b9d59a7917bd5f356305006bf18046de7bc4856de5756dd",
+      "publishedSha256": "990edcf2da32b2590b4a7f39e68d15dafdd17dc03ffe21fb5b5ee4786c542a14"
+    },
+    {
+      "path": "logs/npm-cmd-run-check-v1.log",
+      "originalSha256": "52a8b60af21e11c8bbc93ab0681141ebfb3edaf295162e23734364350c17e2e4",
+      "publishedSha256": "a94b14cfe760676cd474212bf7f1b07072c932721503bd53899be301877ac550"
+    }
+  ]
+}

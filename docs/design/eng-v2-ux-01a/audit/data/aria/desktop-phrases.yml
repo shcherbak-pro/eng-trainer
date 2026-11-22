@@ -1,0 +1,147 @@
+- banner:
+  - button "Go to index":
+    - text: EA
+    - strong: English Assessment Trainer
+    - text: ShcherbakPro · B1+ → B2
+  - navigation "Main navigation":
+    - button "Index"
+    - button "Phrases"
+    - button "Words"
+    - button "Flashcards"
+    - button "Reverse"
+    - button "Verbs"
+    - button "Patterns"
+    - button "Answers"
+    - button "Practice"
+    - button "Focus"
+    - button "Collections"
+  - 'button "Theme: System. Switch to Light."'
+- paragraph: Speaking assessment trainer
+- heading "Phrases" [level=1]
+- paragraph: Clear structure + safe vocabulary + controlled grammar + confident pronunciation
+- strong: "566"
+- text: phrases
+- strong: "566"
+- text: words
+- strong: "339"
+- text: verbs
+- strong: "0"
+- text: focus
+- strong: "0"
+- text: hidden
+- main:
+  - heading "Phrases" [level=2]
+  - paragraph: Фрази, переклади, transcription, alternatives, examples, learned / hide / focus.
+  - button "Show hidden phrases"
+  - text: Search
+  - textbox "Search":
+    - /placeholder: AI, otherwise, meeting…
+  - text: Category
+  - combobox "Category":
+    - option "All" [selected]
+    - option "Advanced Linking Words"
+    - option "Agent Framework Vocabulary"
+    - option "AI / Coding tools"
+    - option "AI Certification Vocabulary"
+    - option "Career Growth"
+    - option "Communication in Distributed Teams"
+    - option "Compare / Difference"
+    - option "Conduct vs Carry out"
+    - option "Conflict Resolution / Team Problems"
+    - option "Conjunctions"
+    - option "Contrast"
+    - option "Ending"
+    - option "Hedging Phrases"
+    - option "Hobbies"
+    - option "Informal phrases"
+    - option "Lack / Not enough"
+    - option "Leadership"
+    - option "Modals"
+    - option "Online meetings"
+    - option "Otherwise"
+    - option "Presentation Phrases"
+    - option "Remote Work"
+    - option "Speed / Difficulty / Clarity"
+    - option "Start answer"
+    - option "Stress Management"
+    - option "Structure"
+    - option "Teamwork"
+    - option "Tell me about yourself"
+    - option "Time estimates"
+    - option "Time Management"
+    - option "Work-Life Balance"
+  - strong: Listen phrases
+  - text: Reads current page phrases, translations, alternatives and examples. Repeats
+  - combobox "Repeats":
+    - option "10x" [selected]
+    - option "20x"
+    - option "50x"
+  - button "Read listen phrases"
+  - paragraph: 5 items
+  - article:
+    - paragraph: Start answer B2 assessment
+    - heading "I would start by saying that …" [level=3]
+    - button "Mark as learned"
+    - paragraph: Я б почав з того, що AI — корисний інструмент, але він не повинен замінювати людське судження.
+    - strong: Example 1
+    - paragraph: I would start by saying that AI is a useful tool, but it should not replace human judgment.
+    - button "Speak"
+    - button "Speak example"
+    - button "Add to Focus List"
+    - button "Hide item"
+  - article:
+    - paragraph: Start answer B2 assessment
+    - heading "Let me start by saying that …" [level=3]
+    - button "Mark as learned"
+    - paragraph: Дозвольте почати з того, що хороша командна робота — це не лише про технічні навички.
+    - strong: Example 1
+    - paragraph: Let me start by saying that good teamwork is not only about technical skills.
+    - button "Speak"
+    - button "Speak example"
+    - button "Add to Focus List"
+    - button "Hide item"
+  - article:
+    - paragraph: Start answer B2 assessment
+    - heading "The first thing I’d say is that …" [level=3]
+    - button "Mark as learned"
+    - paragraph: "Перше, що я б сказав: AI працює найкраще, коли люди дають чіткі інструкції."
+    - strong: Example 1
+    - paragraph: The first thing I’d say is that AI works best when people give clear instructions.
+    - button "Speak"
+    - button "Speak example"
+    - button "Add to Focus List"
+    - button "Hide item"
+  - article:
+    - paragraph: Start answer B2 assessment
+    - heading "Before going into details, I’d say that …" [level=3]
+    - button "Mark as learned"
+    - paragraph: Перед тим як переходити до деталей, я б сказав, що оцінка залежить від обсягу задачі.
+    - strong: Example 1
+    - paragraph: Before going into details, I’d say that the estimate depends on the scope of the task.
+    - button "Speak"
+    - button "Speak example"
+    - button "Add to Focus List"
+    - button "Hide item"
+  - article:
+    - paragraph: Start answer B2 connector
+    - heading "From my perspective, …" [level=3]
+    - button "Mark as learned"
+    - paragraph: З моєї точки зору, AI корисний, якщо люди використовують його відповідально.
+    - strong: Example 1
+    - paragraph: From my perspective, AI is useful as long as people use it responsibly.
+    - button "Speak"
+    - button "Speak example"
+    - button "Add to Focus List"
+    - button "Hide item"
+  - text: Show
+  - combobox "Show":
+    - option "5" [selected]
+    - option "10"
+    - option "20"
+    - option "All"
+  - button "Previous page" [disabled]
+  - text: 1-5 of 566
+  - button "Next page"
+  - link "Open the previous version (v1)":
+    - /url: /eng-trainer/v1/
+  - text: v1 is kept as it was and has its own separate progress.

@@ -1,0 +1,20 @@
+[
+  {
+    "command": "node_modules/.cache/eng-v2-ux-01b-rc1-astra-fonts/Scripts/python.exe scripts/fonts/derive_eng_trainer_sans.py --download --input-dir docs/reviews/eng-v2-ux-01b-rc1-astra/fonts/originals --output-dir docs/reviews/eng-v2-ux-01b-rc1-astra/fonts/reproduced",
+    "exitCode": 0,
+    "seconds": 1.967,
+    "log": "1795312758143-1-node_modules-cache-eng-v2-ux-01b-rc1-astra-fonts-Scripts-python-exe-scripts-fonts-derive_eng_tr.log"
+  },
+  {
+    "command": "node_modules/.cache/eng-v2-ux-01b-rc1-astra-fonts/Scripts/python.exe scripts/fonts/derive_eng_trainer_sans.py --check --input-dir docs/reviews/eng-v2-ux-01b-rc1-astra/fonts/originals --output-dir src/assets/fonts --report docs/reviews/eng-v2-ux-01b-rc1-astra/fonts/equivalence.json",
+    "exitCode": 0,
+    "seconds": 3.029,
+    "log": "1795312758143-2-node_modules-cache-eng-v2-ux-01b-rc1-astra-fonts-Scripts-python-exe-scripts-fonts-derive_eng_tr.log"
+  },
+  {
+    "command": "node docs/reviews/eng-v2-ux-01b-rc1-astra/asset-audit.mjs",
+    "exitCode": 0,
+    "seconds": 0.717,
+    "log": "1795312758143-3-node-docs-reviews-eng-v2-ux-01b-rc1-astra-asset-audit-mjs.log"
+  }
+]

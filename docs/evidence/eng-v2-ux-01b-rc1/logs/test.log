@@ -1,0 +1,154 @@
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ preserves all baseline record values, array order, identities, metadata and explicit links (10.9673ms)
+✔ generation is deterministic and generated files equal the validated source catalog (55.2264ms)
+✔ explicit order preserves each collection even when pack discovery order changes (1.9789ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (12.779ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (23.1942ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (2.9606ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (1.2479ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (20.3772ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (3.0576ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (70.1857ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 403.8501
+
+ RUN  v3.2.7 <repo>
+
+ ✓ src/content/catalog.test.ts (8 tests) 537ms
+   ✓ built-in content catalog > finds every phrase, word and verb by its own text, wherever it is in the catalog  519ms
+ ✓ src/state/reset.test.ts (2 tests) 432ms
+ ✓ src/collections/service.test.ts (18 tests) 335ms
+ ✓ src/state/undoValidity.test.ts (8 tests) 862ms
+ ✓ src/storage/openStorage.test.ts (4 tests) 132ms
+ ✓ src/features/flashcards/flashcards.test.ts (50 tests) 73ms
+ ✓ src/features/home/LearnPassManager.test.ts (2 tests) 2107ms
+   ✓ deleting a Learn Pass (F2) > keeps focus on the opener when cancelled, then moves to the next pass and finally to Create a Learn Pass  1531ms
+   ✓ deleting a Learn Pass (F2) > after deleting the last pass in the list, focus goes to the pass before it  575ms
+ ✓ src/collections/importGuide.test.ts (8 tests) 31ms
+ ✓ src/shared/entries/hideUndo.test.ts (2 tests) 2211ms
+   ✓ Hide and Undo > Undo reverses only what hiding changed for this entry, through entry-level operations  1759ms
+   ✓ Hide and Undo > does not add Focus or learned state that the entry did not have, and keeps a permanent "Show" action  451ms
+stderr | src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > ordinary Learn again then Undo restores exactly the saved state, also after a reload
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+
+ ✓ src/collections/serviceErrors.test.ts (4 tests) 36ms
+ ✓ src/features/exercises/studyText.test.ts (3 tests) 2770ms
+   ✓ study text and browser translation > Answers: English questions and answers are protected; the introduction is not  1837ms
+   ✓ study text and browser translation > Speaking prompts: the current prompt and every listed prompt are protected; the hint and headings are not  598ms
+   ✓ study text and browser translation > Reverse practice: the prompt is the exercise and is protected, whatever its language; labels are not  334ms
+stderr | src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > Learn again, then answering another card, then Undo keeps the newer answer and both deck records
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+
+ ✓ src/shared/entries/hideUndoValidity.test.ts (5 tests) 3010ms
+   ✓ Hide Undo validity (F1) > a retained Hide Undo stays invalid after Reset, also when the same entry is hidden again  1862ms
+   ✓ Hide Undo validity (F1) > Show and newer choices on the same entry make an older Hide Undo stale  414ms
+ ✓ src/collections/format.test.ts (35 tests) 21ms
+ ✓ src/collections/importErrors.test.ts (10 tests) 24ms
+stderr | src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > an older Undo cannot override a newer "Keep learning" on the same card, also after a reload
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+
+ ✓ src/collections/fileName.test.ts (6 tests) 6ms
+ ✓ src/content/descriptionLanguage.test.ts (3 tests) 5ms
+ ✓ src/app/navigation.test.ts (3 tests) 3ms
+ ✓ src/content/builtIn.test.ts (10 tests) 4267ms
+   ✓ complete search through the loaded shared catalog > matches a direct field-by-field oracle for every searchable field across all packs  3725ms
+stderr | src/features/flashcards/learnAgainUndo.test.ts > Learn again Undo validity (F1) > a retained Learn again callback cannot bring back progress after Reset confirmed in Settings
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+[svelte] lifecycle_double_unmount
+Tried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount
+
+ ✓ src/state/progress.test.ts (26 tests) 4243ms
+   ✓ learning state in IndexedDB > returns items to the learning pool with "Learn again"  643ms
+   ✓ learning state in IndexedDB > resets one deck without touching the others  495ms
+   ✓ learning state in IndexedDB > keeps hidden items, the Focus List, Learn Passes and preferences after a reload  313ms
+ ✓ src/features/collections/retainedLearning.test.ts (5 tests) 4316ms
+   ✓ retained collection learning state > restores all order after deletion, answers and reload  2383ms
+   ✓ retained collection learning state > restores topic:Synthetic topic order after deletion, answers and reload  593ms
+   ✓ retained collection learning state > unhides only available words and restores hidden IDs after reimport  559ms
+   ✓ retained collection learning state > unhides only available phrases and restores hidden IDs after reimport  503ms
+ ✓ src/features/flashcards/learnAgainUndo.test.ts (11 tests) 5471ms
+   ✓ Learn again Undo validity (F1) > ordinary Learn again then Undo restores exactly the saved state, also after a reload  2266ms
+   ✓ Learn again Undo validity (F1) > Learn again, then answering another card, then Undo keeps the newer answer and both deck records  615ms
+   ✓ Learn again Undo validity (F1) > an older Undo cannot override a newer "Keep learning" on the same card, also after a reload  578ms
+   ✓ Learn again Undo validity (F1) > a retained Learn again callback cannot bring back progress after Reset confirmed in Settings  559ms
+ ✓ src/features/collections/CollectionsPage.test.ts (15 tests) 7316ms
+   ✓ import help > shows formats, encoding, required columns, limits and the example without writing anything  1678ms
+   ✓ file selection (F3) and validation feedback > keeps the picker usable while reading, focuses the review, and writes nothing until the import is confirmed  860ms
+   ✓ file selection (F3) and validation feedback > explains how to fix a rejected file, offers the template, focuses the summary and writes nothing  631ms
+   ✓ file selection (F3) and validation feedback > lets only the latest selection update the page, and a cancelled selection never reappears  604ms
+   ✓ file selection (F3) and validation feedback > accepts the same file name again after it has been corrected  375ms
+   ✓ saving and managing collections > reports success only after the import transaction, then exports with a readable Cyrillic file name (F6)  536ms
+   ✓ saving and managing collections > shows a rename conflict next to the form, with a reload action and no storage advice (F5)  492ms
+   ✓ focus once the final import plan is ready (RC1, F3) > a superseded result with problems never takes focus from the newer preview  316ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts (28 tests) 7777ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1639ms
+   ✓ Flashcards page > flips the card on tap and shows the translation and example  541ms
+   ✓ Flashcards page > buttons > "I know it" marks the card as learned and moves on  332ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  357ms
+   ✓ Flashcards page > saved progress > resumes in the middle of a round after a reload  328ms
+ ✓ src/app/App.test.ts (22 tests) 13418ms
+   ✓ application shell > preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry  3073ms
+   ✓ application shell > loads the built-in content from its own base path and shows the index  513ms
+   ✓ application shell > links to the preserved v1 application  359ms
+   ✓ application shell > renders every screen from the catalog  582ms
+   ✓ application shell > opens the saved screen and keeps progress and preferences after a reload  736ms
+   ✓ application shell > does not write anything while starting with existing saved state  306ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps "consequently" and "Consequently, …" apart in every view, also after a reload  742ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps distinct entries with similar-looking text independent: C++ and C#  945ms
+   ✓ learning identity across Phrases, Focus and Flashcards > treats a phrase and its linked word-index entry as one learning identity: the phrase id  1025ms
+   ✓ loading and storage errors > handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state  405ms
+   ✓ loading and storage errors > shows an error and a retry when the content cannot be loaded  362ms
+   ✓ loading and storage errors > stops with a visible error when the saved state cannot be opened, and can continue without saving  519ms
+   ✓ loading and storage errors > shows a notice when a change cannot be saved, until saving succeeds  440ms
+   ✓ blocked database upgrade at start-up (F4) > keeps the waiting guidance on "Check again" and continues by itself when the other tab closes  391ms
+   ✓ blocked database upgrade at start-up (F4) > keeps "Continue without saving" in charge when the database opens later  441ms
+   ✓ language of study text and translations > marks built-in Ukrainian as uk, leaves imported translations unmarked, and protects English study text from translation  304ms
+   ✓ language of learning block descriptions (RC1, F5) > marks English and Ukrainian descriptions by their actual language in Focus, Home and the Verbs set note  378ms
+   ✓ hiding an entry from a list > keeps keyboard users in place: focus moves to the entry that took its place, and Undo returns it to the restored entry  485ms
+   ✓ navigation > opens More as a sheet from a button, with links to Collections, Settings and the previous version  446ms
+   ✓ navigation > marks the current screen in every navigation and moves focus to the new heading  434ms
+
+ Test Files  24 passed (24)
+      Tests  288 passed (288)
+   Start at  03:37:24
+   Duration  16.06s (transform 7.23s, setup 1.37s, collect 14.85s, tests 59.40s, environment 21.69s, prepare 3.37s)
+

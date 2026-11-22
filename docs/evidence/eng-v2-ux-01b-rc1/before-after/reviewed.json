@@ -1,0 +1,392 @@
+{
+  "numPassedTests": 35,
+  "numFailedTests": 31,
+  "numTotalTests": 66,
+  "files": [
+    {
+      "file": "src/app/App.test.ts",
+      "status": "failed",
+      "message": "",
+      "tests": [
+        {
+          "name": "application shell preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "application shell loads the built-in content from its own base path and shows the index",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "application shell links to the preserved v1 application",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "application shell renders every screen from the catalog",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "application shell searches the whole catalog, not only the items shown on the current page",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "application shell opens the saved screen and keeps progress and preferences after a reload",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "application shell does not write anything while starting with existing saved state",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "learning identity across Phrases, Focus and Flashcards keeps \"consequently\" and \"Consequently, …\" apart in every view, also after a reload",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "learning identity across Phrases, Focus and Flashcards keeps distinct entries with similar-looking text independent: C++ and C#",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "learning identity across Phrases, Focus and Flashcards treats a phrase and its linked word-index entry as one learning identity: the phrase id",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "loading and storage errors handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "loading and storage errors shows an error and a retry when the content cannot be loaded",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "loading and storage errors stops with a visible error when the saved state cannot be opened, and can continue without saving",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "loading and storage errors shows a notice when a change cannot be saved, until saving succeeds",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "blocked database upgrade at start-up (F4) keeps the waiting guidance on \"Check again\" and continues by itself when the other tab closes",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "blocked database upgrade at start-up (F4) keeps \"Continue without saving\" in charge when the database opens later",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "Settings and Reset progress asks before resetting; Cancel changes nothing; the theme and imported collections stay",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "language of study text and translations marks built-in Ukrainian as uk, leaves imported translations unmarked, and protects English study text from translation",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "language of learning block descriptions (RC1, F5) marks English and Ukrainian descriptions by their actual language in Focus, Home and the Verbs set note",
+          "status": "failed",
+          "failure": "AssertionError: expected { 'Start Answer Phrases': 'uk', …(3) } to deeply equal { '100 Irregular Verbs': 'en', …(3) }"
+        },
+        {
+          "name": "hiding an entry from a list keeps keyboard users in place: focus moves to the entry that took its place, and Undo returns it to the restored entry",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "navigation opens More as a sheet from a button, with links to Collections, Settings and the previous version",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "navigation marks the current screen in every navigation and moves focus to the new heading",
+          "status": "passed",
+          "failure": ""
+        }
+      ]
+    },
+    {
+      "file": "src/content/descriptionLanguage.test.ts",
+      "status": "failed",
+      "message": "Failed to resolve import \"./descriptionLanguage\" from \"src/content/descriptionLanguage.test.ts\". Does the file exist?",
+      "tests": []
+    },
+    {
+      "file": "src/state/undoValidity.test.ts",
+      "status": "failed",
+      "message": "",
+      "tests": [
+        {
+          "name": "Undo validity is valid once: a second use is refused",
+          "status": "failed",
+          "failure": "TypeError: app.progress.issueUndo is not a function"
+        },
+        {
+          "name": "Undo validity expires on newer intent for the same entry, even when the stored value does not change",
+          "status": "failed",
+          "failure": "TypeError: app.progress.issueUndo is not a function"
+        },
+        {
+          "name": "Undo validity stays valid when a different entry changes",
+          "status": "failed",
+          "failure": "TypeError: app.progress.issueUndo is not a function"
+        },
+        {
+          "name": "Undo validity expires a Hide Undo on any newer change of that entry: Show, Focus, learned, or another Hide",
+          "status": "failed",
+          "failure": "TypeError: app.progress.issueUndo is not a function"
+        },
+        {
+          "name": "Undo validity keys hidden and Focus state by kind: hiding a word does not expire the Undo of a phrase with the same id",
+          "status": "failed",
+          "failure": "TypeError: app.progress.issueUndo is not a function"
+        },
+        {
+          "name": "Undo validity expires every earlier Undo on Reset, even when the entry later returns to the same values",
+          "status": "failed",
+          "failure": "TypeError: app.progress.issueUndo is not a function"
+        },
+        {
+          "name": "Undo validity expires every earlier Undo when the saved state is loaded again",
+          "status": "failed",
+          "failure": "TypeError: app.progress.issueUndo is not a function"
+        },
+        {
+          "name": "Undo validity treats a deck reset as newer intent for every card of the deck, learned or not",
+          "status": "failed",
+          "failure": "TypeError: app.progress.issueUndo is not a function"
+        }
+      ]
+    },
+    {
+      "file": "src/shared/entries/hideUndoValidity.test.ts",
+      "status": "failed",
+      "message": "",
+      "tests": [
+        {
+          "name": "Hide Undo validity (F1) a retained Hide Undo stays invalid after Reset, also when the same entry is hidden again",
+          "status": "failed",
+          "failure": "AssertionError: expected { learnedPhrases: [ 'target' ], …(10) } to match object { hiddenPhrases: [ 'target' ], …(2) }"
+        },
+        {
+          "name": "Hide Undo validity (F1) Show and newer choices on the same entry make an older Hide Undo stale",
+          "status": "failed",
+          "failure": "AssertionError: expected { learnedPhrases: [ 'target' ], …(10) } to match object { hiddenPhrases: [ 'target' ], …(2) }"
+        },
+        {
+          "name": "Hide Undo validity (F1) applies a Hide Undo at most once",
+          "status": "failed",
+          "failure": "AssertionError: expected { learnedPhrases: [ 'target' ], …(10) } to match object { hiddenPhrases: [ 'target' ], …(2) }"
+        },
+        {
+          "name": "Hide Undo validity (F1) a valid Undo still restores exactly what this Hide removed",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "Hide Undo validity (F1) after a storage failure, retrying saves the newest choice and never the stale Undo",
+          "status": "failed",
+          "failure": "AssertionError: expected { favoritePhrases: [ 'target' ], …(2) } to match object { hiddenPhrases: [ 'target' ], …(2) }"
+        }
+      ]
+    },
+    {
+      "file": "src/features/collections/CollectionsPage.test.ts",
+      "status": "failed",
+      "message": "",
+      "tests": [
+        {
+          "name": "import help shows formats, encoding, required columns, limits and the example without writing anything",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "file selection (F3) and validation feedback keeps the picker usable while reading, focuses the review, and writes nothing until the import is confirmed",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "file selection (F3) and validation feedback explains how to fix a rejected file, offers the template, focuses the summary and writes nothing",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "file selection (F3) and validation feedback lets only the latest selection update the page, and a cancelled selection never reappears",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "file selection (F3) and validation feedback accepts the same file name again after it has been corrected",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "saving and managing collections reports success only after the import transaction, then exports with a readable Cyrillic file name (F6)",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "saving and managing collections shows a rename conflict next to the form, with a reload action and no storage advice (F5)",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "focus once the final import plan is ready (RC1, F3) focuses the named issue summary for a missing translation, and saves nothing",
+          "status": "failed",
+          "failure": "AssertionError: expected null not to be null"
+        },
+        {
+          "name": "focus once the final import plan is ready (RC1, F3) focuses the named issue summary for an invalid kind, and saves nothing",
+          "status": "failed",
+          "failure": "AssertionError: expected null not to be null"
+        },
+        {
+          "name": "focus once the final import plan is ready (RC1, F3) focuses the issue summary for a native file that would change an existing entry",
+          "status": "failed",
+          "failure": "TypeError: Cannot read properties of null (reading 'textContent')"
+        },
+        {
+          "name": "focus once the final import plan is ready (RC1, F3) focuses the review heading for an importable file, also when duplicates only need acknowledging",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "focus once the final import plan is ready (RC1, F3) a superseded result with problems never takes focus from the newer preview",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "focus once the final import plan is ready (RC1, F3) a superseded importable result never takes focus from the newer issue summary",
+          "status": "failed",
+          "failure": "AssertionError: expected <h3 id=\"review-title\" …(2)></h3> to be null // Object.is equality"
+        },
+        {
+          "name": "focus once the final import plan is ready (RC1, F3) a Cancel after the result has rendered, but before focus moves, keeps the cancelled result from taking focus",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "study text in the import preview (RC1, F5) keeps the English example out of browser translation, but not its label",
+          "status": "failed",
+          "failure": "AssertionError: expected undefined to be defined"
+        }
+      ]
+    },
+    {
+      "file": "src/features/flashcards/learnAgainUndo.test.ts",
+      "status": "failed",
+      "message": "",
+      "tests": [
+        {
+          "name": "Learn again Undo validity (F1) ordinary Learn again then Undo restores exactly the saved state, also after a reload",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "Learn again Undo validity (F1) Learn again, then answering another card, then Undo keeps the newer answer and both deck records",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "Learn again Undo validity (F1) an older Undo cannot override a newer \"Keep learning\" on the same card, also after a reload",
+          "status": "failed",
+          "failure": "AssertionError: expected [ 'p1' ] to not include 'p1'"
+        },
+        {
+          "name": "Learn again Undo validity (F1) a retained Learn again callback cannot bring back progress after Reset confirmed in Settings",
+          "status": "failed",
+          "failure": "AssertionError: expected [ 'p1' ] to deeply equal []"
+        },
+        {
+          "name": "Learn again Undo validity (F1) applies an Undo at most once, even when its callback is invoked again after a newer Learn again",
+          "status": "failed",
+          "failure": "AssertionError: expected [ 'p1' ] to deeply equal []"
+        },
+        {
+          "name": "Learn again Undo validity (F1) after a storage failure, retrying saves the newer answer and never the stale Undo",
+          "status": "failed",
+          "failure": "AssertionError: expected [ 'p1' ] to deeply equal []"
+        },
+        {
+          "name": "keyboard focus around Learn again and its Undo (F2) moves focus to the card that took the row’s place, then to the list heading",
+          "status": "failed",
+          "failure": "TypeError: Cannot read properties of null (reading 'focus')"
+        },
+        {
+          "name": "keyboard focus around Learn again and its Undo (F2) Undo from the message returns focus to the restored card’s row",
+          "status": "failed",
+          "failure": "TypeError: Cannot read properties of null (reading 'focus')"
+        },
+        {
+          "name": "keyboard focus around Learn again and its Undo (F2) Undo while the learned list is closed focuses the button that opens it",
+          "status": "failed",
+          "failure": "AssertionError: expected <body><main …(2)>…(2)</main>"
+        },
+        {
+          "name": "keyboard focus around Learn again and its Undo (F2) does not move focus when the message simply expires",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "keyboard focus around Learn again and its Undo (F2) after a confirmed deck reset removes its opener, focus goes to the current card",
+          "status": "failed",
+          "failure": "AssertionError: expected <button type=\"button\" …(1)></button> to be <button type=\"button\" …(2)>…(1)</button> // Object.is equality"
+        }
+      ]
+    },
+    {
+      "file": "src/features/exercises/studyText.test.ts",
+      "status": "failed",
+      "message": "",
+      "tests": [
+        {
+          "name": "study text and browser translation Answers: English questions and answers are protected; the introduction is not",
+          "status": "failed",
+          "failure": "AssertionError: expected true to be false // Object.is equality"
+        },
+        {
+          "name": "study text and browser translation Speaking prompts: the current prompt and every listed prompt are protected; the hint and headings are not",
+          "status": "failed",
+          "failure": "AssertionError: expected true to be false // Object.is equality"
+        },
+        {
+          "name": "study text and browser translation Reverse practice: the prompt is the exercise and is protected, whatever its language; labels are not",
+          "status": "failed",
+          "failure": "AssertionError: expected true to be false // Object.is equality"
+        }
+      ]
+    },
+    {
+      "file": "src/features/home/LearnPassManager.test.ts",
+      "status": "failed",
+      "message": "",
+      "tests": [
+        {
+          "name": "deleting a Learn Pass (F2) keeps focus on the opener when cancelled, then moves to the next pass and finally to Create a Learn Pass",
+          "status": "failed",
+          "failure": "AssertionError: expected <button type=\"button\" …(1)></button> to be <button …(4)>…(1)</button> // Object.is equality"
+        },
+        {
+          "name": "deleting a Learn Pass (F2) after deleting the last pass in the list, focus goes to the pass before it",
+          "status": "failed",
+          "failure": "AssertionError: expected <button type=\"button\" …(1)></button> to be <button …(4)>…(1)</button> // Object.is equality"
+        }
+      ]
+    }
+  ]
+}

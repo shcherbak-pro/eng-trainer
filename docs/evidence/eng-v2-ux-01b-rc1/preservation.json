@@ -1,0 +1,28 @@
+{
+  "protectedReleaseAndDesignFiles": {
+    "files": 101,
+    "unchanged": 101,
+    "changed": []
+  },
+  "astraReviewReportAndEvidence": {
+    "files": 257,
+    "unchanged": 257,
+    "changed": []
+  },
+  "ux01bImplementationEvidence": {
+    "files": 81,
+    "unchanged": 81,
+    "changed": []
+  },
+  "allOtherDocsExceptIntendedUpdates": {
+    "files": 760,
+    "unchanged": 760,
+    "changed": []
+  },
+  "intendedDocumentUpdates": [
+    "docs/handoffs/ENG-V2-UX-01B.md",
+    "docs/architecture/USER-COLLECTIONS.md"
+  ],
+  "v1SourceDiffLines": 0,
+  "contentSourcesChanged": []
+}

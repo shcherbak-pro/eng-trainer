@@ -1,0 +1,31 @@
+
+light
+pass   4.64:1  (min 4.5)  muted text on bg  #667085 on #f5f7fb
+pass   4.75:1  (min 4.5)  muted text on surface-2  #667085 on #f8fafc
+pass   9.30:1  (min 4.5)  tag text on tag bg  #344054 on #eef2f6
+pass   6.73:1  (min 4.5)  focus-text on focus-bg (Focus button)  #7a4b00 on #fff4cc
+pass   5.55:1  (min 4.5)  success on learned-bg (I know it)  #087443 on #ecfdf3
+pass   5.98:1  (min 4.5)  danger on danger-bg (Hide / Reset)  #b42318 on #fff1f0
+pass  10.67:1  (min 4.5)  top-bar nav text on primary  #e2e8f0 on #263238
+pass   8.86:1  (min 4.5)  top-bar muted on primary  #cbd5e1 on #263238
+pass   5.81:1  (min 4.5)  hero muted on hero end  #e2e8f0 on #445b66
+pass   8.34:1  (min 4.5)  accent-text on accent (active segment)  #211500 on #f59e0b
+FAIL   2.15:1  (min 3)  focus ring (accent) vs surface — non-text  #f59e0b on #ffffff
+FAIL   2.00:1  (min 3)  focus ring (accent) vs bg — non-text  #f59e0b on #f5f7fb
+FAIL   1.46:1  (min 3)  input border vs surface — non-text  #cfd6e4 on #ffffff
+pass   5.20:1  (min 3)  progress fill vs track — non-text  #087443 on #eef2f6
+pass   4.97:1  (min 4.5)  bottom-nav muted on nav bg (0.94 over bg)  #667085 on #feffff
+
+dark
+pass   8.45:1  (min 4.5)  muted text on bg  #a7b0bd on #0f141a
+pass   7.67:1  (min 4.5)  muted text on surface  #a7b0bd on #171e26
+pass   7.07:1  (min 4.5)  muted text on surface-2  #a7b0bd on #1c2530
+pass   9.95:1  (min 4.5)  tag text on tag bg  #d9e2ec on #263240
+pass   9.47:1  (min 4.5)  focus-text on focus-bg  #fbd978 on #3b3010
+pass   8.96:1  (min 4.5)  success on learned-bg  #6ee7b7 on #163328
+pass   6.58:1  (min 4.5)  danger on danger-bg  #ff8a80 on #3a1f22
+pass  13.37:1  (min 4.5)  top-bar nav text on primary  #d7e0e8 on #111820
+pass  10.73:1  (min 4.5)  accent-text on accent  #211500 on #fbbf24
+pass  10.06:1  (min 3)  focus ring (accent) vs surface — non-text  #fbbf24 on #171e26
+FAIL   2.17:1  (min 3)  input border vs input bg — non-text  #405063 on #111820
+pass   8.54:1  (min 3)  progress fill vs track — non-text  #6ee7b7 on #263240

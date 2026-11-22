@@ -1,0 +1,206 @@
+{
+  "method": "Every built-in description was read and compared with the explicit table. Mixed Ukrainian descriptions containing quoted English study expressions retain uk; classification is not inferred from a runtime Cyrillic heuristic.",
+  "count": 39,
+  "counts": {
+    "uk": 16,
+    "en": 23
+  },
+  "unclassified": [],
+  "descriptions": [
+    {
+      "id": "start-answer",
+      "language": "uk",
+      "description": "Початок відповіді: фрази для м’якого і впевненого старту speaking answer."
+    },
+    {
+      "id": "structure",
+      "language": "uk",
+      "description": "Фрази для структури відповіді: first of all, on top of that, what matters most."
+    },
+    {
+      "id": "word-index",
+      "language": "uk",
+      "description": "Алфавітний індекс слів і фраз. Натисни на фразу, щоб побачити переклад, pronunciation і 2 приклади застосування."
+    },
+    {
+      "id": "reverse-practice",
+      "language": "uk",
+      "description": "Зворотня вправа: бачиш український переклад і згадуєш англійську фразу або приклад."
+    },
+    {
+      "id": "irregular-verbs-100",
+      "language": "en",
+      "description": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples."
+    },
+    {
+      "id": "irregular-verbs-logical-200",
+      "language": "en",
+      "description": "200 irregular verbs grouped by change pattern: same forms, matching past/participle, -en participles, i-a-u pattern, and mixed forms."
+    },
+    {
+      "id": "contrast",
+      "language": "uk",
+      "description": "Фрази для балансу думок: on the one hand, that being said, although, while."
+    },
+    {
+      "id": "ending",
+      "language": "uk",
+      "description": "Фрази для завершення відповіді: overall, in the long run, key takeaway."
+    },
+    {
+      "id": "ai-coding-tools",
+      "language": "uk",
+      "description": "Vocabulary для AI tools, coding assistants, code review, prompts and context."
+    },
+    {
+      "id": "lack-not-enough",
+      "language": "uk",
+      "description": "Як говорити про брак часу, контексту, ресурсів, ясності."
+    },
+    {
+      "id": "speed-difficulty-clarity",
+      "language": "uk",
+      "description": "Швидше/повільніше, легше/важче, чіткіше/нечіткіше."
+    },
+    {
+      "id": "time-estimates",
+      "language": "uk",
+      "description": "Як оцінювати час виконання задач: rough estimate, take longer, depends on."
+    },
+    {
+      "id": "online-meetings",
+      "language": "uk",
+      "description": "Фрази для онлайн-мітингів: agenda, screen sharing, blockers, next steps."
+    },
+    {
+      "id": "compare-difference",
+      "language": "uk",
+      "description": "Питання і відповіді про різницю між речами: X vs Y, pros and cons."
+    },
+    {
+      "id": "conduct-vs-carry-out",
+      "language": "uk",
+      "description": "Різниця між conduct і carry out у work-style speaking."
+    },
+    {
+      "id": "modals",
+      "language": "uk",
+      "description": "May have, might have, will have + V3 з прикладами для assessment."
+    },
+    {
+      "id": "conjunctions",
+      "language": "en",
+      "description": "Although, because, while, unless, provided that, whereas, consequently."
+    },
+    {
+      "id": "otherwise",
+      "language": "en",
+      "description": "Otherwise, if not, without that, without proper review."
+    },
+    {
+      "id": "informal-phrases",
+      "language": "uk",
+      "description": "Here we go / There we go та живі spoken фрази."
+    },
+    {
+      "id": "presentation-phrases",
+      "language": "en",
+      "description": "Opening, delivery, transitions, metrics, questions, limitations, and closing phrases for technical/business presentations."
+    },
+    {
+      "id": "agent-framework-vocabulary",
+      "language": "en",
+      "description": "Vocabulary and ready phrases for cost optimization, AI agents, agent orchestration, PR review automation, memory, metrics, and pilot validation."
+    },
+    {
+      "id": "hedging-phrases",
+      "language": "en",
+      "description": "Softening phrases for safer B2/C1-style answers: opinions, assumptions, uncertainty and balanced speaking."
+    },
+    {
+      "id": "advanced-linking-words",
+      "language": "en",
+      "description": "Advanced connectors for more natural structure, contrast, consequence and explanation."
+    },
+    {
+      "id": "topic-tell-me-about-yourself",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Tell me about yourself."
+    },
+    {
+      "id": "topic-hobbies",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Hobbies."
+    },
+    {
+      "id": "topic-work-life-balance",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Work-Life Balance."
+    },
+    {
+      "id": "topic-teamwork",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Teamwork."
+    },
+    {
+      "id": "topic-stress-management",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Stress Management."
+    },
+    {
+      "id": "topic-time-management",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Time Management."
+    },
+    {
+      "id": "topic-leadership",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Leadership."
+    },
+    {
+      "id": "topic-remote-work",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Remote Work."
+    },
+    {
+      "id": "topic-career-growth",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Career Growth."
+    },
+    {
+      "id": "topic-communication-in-distributed-teams",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Communication in Distributed Teams."
+    },
+    {
+      "id": "topic-conflict-resolution-team-problems",
+      "language": "en",
+      "description": "15 practical speaking phrases for the topic: Conflict Resolution / Team Problems."
+    },
+    {
+      "id": "answer-patterns",
+      "language": "en",
+      "description": "PREP, STAR, Balanced Opinion, Problem → Action → Result and other speaking frameworks."
+    },
+    {
+      "id": "ready-answers",
+      "language": "uk",
+      "description": "Готові assessment-style answers для AI, teamwork, difficult clients, problem-solving and online meetings."
+    },
+    {
+      "id": "practice-mode",
+      "language": "en",
+      "description": "Random speaking prompts and random phrase practice for active recall."
+    },
+    {
+      "id": "ai-certification-vocabulary",
+      "language": "en",
+      "description": "High-value vocabulary, phrases, collocations, and professional expressions for AI certification preparation, deployment, agentic workflows, evaluation, safeguards, governance, security, APIs, retrieval, monitoring, and technical communication."
+    },
+    {
+      "id": "ai-certification-verbs-contextual",
+      "language": "en",
+      "description": "Curated high-value professional verbs for AI certification topics, with Base, Past Simple, and Past Participle forms. Basic high-frequency verbs are intentionally excluded."
+    }
+  ]
+}

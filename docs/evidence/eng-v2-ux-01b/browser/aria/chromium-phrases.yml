@@ -1,0 +1,140 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Phrases" [level=1]
+  - navigation "Library sections":
+    - list:
+      - listitem:
+        - link "Phrases":
+          - /url: "#phrases"
+      - listitem:
+        - link "Words":
+          - /url: "#wordIndex"
+      - listitem:
+        - link "Verbs":
+          - /url: "#irregularVerbs"
+      - listitem:
+        - link "Patterns":
+          - /url: "#patterns"
+      - listitem:
+        - link "Answers":
+          - /url: "#answers"
+    - link "Import words":
+      - /url: "#collections"
+  - text: Search phrases
+  - searchbox "Search phrases"
+  - text: Category
+  - combobox "Category":
+    - option "All categories" [selected]
+    - option "Advanced Linking Words"
+    - option "Agent Framework Vocabulary"
+    - option "AI / Coding tools"
+    - option "AI Certification Vocabulary"
+    - option "Career Growth"
+    - option "Communication in Distributed Teams"
+    - option "Compare / Difference"
+    - option "Conduct vs Carry out"
+    - option "Conflict Resolution / Team Problems"
+    - option "Conjunctions"
+    - option "Contrast"
+    - option "Ending"
+    - option "Hedging Phrases"
+    - option "Hobbies"
+    - option "Informal phrases"
+    - option "Lack / Not enough"
+    - option "Leadership"
+    - option "Modals"
+    - option "Online meetings"
+    - option "Otherwise"
+    - option "Presentation Phrases"
+    - option "Remote Work"
+    - option "Speed / Difficulty / Clarity"
+    - option "Start answer"
+    - option "Stress Management"
+    - option "Structure"
+    - option "Teamwork"
+    - option "Tell me about yourself"
+    - option "Time estimates"
+    - option "Time Management"
+    - option "Work-Life Balance"
+  - status: 566 phrases
+  - button "Listen to this page"
+  - text: Repeats
+  - combobox "Repeats":
+    - option "10×" [selected]
+    - option "20×"
+    - option "50×"
+  - text: Reads the phrases on this page with their translations, alternatives and examples.
+  - heading "Phrase list" [level=2]
+  - list:
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "I would start by saying that …" [level=3]
+        - paragraph: Я б почав з того, що AI — корисний інструмент, але він не повинен замінювати людське судження.
+        - paragraph: B2 Start answer
+        - group: Example
+        - button "Mark as learned"
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "Let me start by saying that …" [level=3]
+        - paragraph: Дозвольте почати з того, що хороша командна робота — це не лише про технічні навички.
+        - paragraph: B2 Start answer
+        - group: Example
+        - button "Mark as learned"
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "The first thing I’d say is that …" [level=3]
+        - paragraph: "Перше, що я б сказав: AI працює найкраще, коли люди дають чіткі інструкції."
+        - paragraph: B2 Start answer
+        - group: Example
+        - button "Mark as learned"
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "Before going into details, I’d say that …" [level=3]
+        - paragraph: Перед тим як переходити до деталей, я б сказав, що оцінка залежить від обсягу задачі.
+        - paragraph: B2 Start answer
+        - group: Example
+        - button "Mark as learned"
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen"
+        - heading "From my perspective, …" [level=3]
+        - paragraph: З моєї точки зору, AI корисний, якщо люди використовують його відповідально.
+        - paragraph: B2 Start answer
+        - group: Example
+        - button "Mark as learned"
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+  - navigation "Phrase pages":
+    - text: Show
+    - combobox "Show":
+      - option "5" [selected]
+      - option "10"
+      - option "20"
+      - option "All"
+    - button "Previous page" [disabled]
+    - text: 1–5 of 566
+    - button "Next page"
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

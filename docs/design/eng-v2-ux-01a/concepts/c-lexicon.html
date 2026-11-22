@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concept C: Lexicon</title>
+<!-- ENG-V2-UX-01A static design mockup. Not production code. Fonts load from Google Fonts for review only. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400..700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
+<style>
+  :root { --sans: 'Source Sans 3', 'Segoe UI', sans-serif; --serif: 'Source Serif 4', Georgia, serif; }
+  .light { color-scheme: light; --paper:#FFFFFF; --page:#F4F5F7; --ink:#1C1D22; --ink-2:#3D404A; --muted:#5E6270; --rule:#E3E4E8; --field:#80838F; --accent:#8A2432; --accent-soft:#F7E9EB; --sel:#EEF0F4; --ring:#2A55C9; --t1:#2B7A78; --t2:#9A6A12; --t3:#74498A; --t4:#4A6274; --t5:#557428; --t6:#A2482B; --known:#1F7A4D; --star:#C98A00; }
+  .dark { color-scheme: dark; --paper:#121317; --page:#0C0D10; --ink:#E8E9ED; --ink-2:#C3C6CF; --muted:#9A9EAB; --rule:#2A2C33; --field:#7A7E8B; --accent:#F08A98; --accent-soft:#3A1E24; --sel:#1E2028; --ring:#8DB2FF; --t1:#5CC2BF; --t2:#E0B45A; --t3:#C29BD6; --t4:#93AFC4; --t5:#A7C873; --t6:#E8957A; --known:#6CCB98; --star:#F2C14E; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 40px; background: #CDD2DB; font-family: var(--sans); display: flex; flex-wrap: wrap; gap: 48px 40px; align-items: flex-start; }
+  figure { margin: 0; } figcaption { font: 600 14px/1.3 var(--sans); color: #1B2333; margin: 0 0 10px; }
+  .frame { position: relative; overflow: hidden; background: var(--paper); color: var(--ink); font: 400 16px/1.45 var(--sans); }
+  .phone { width: 390px; height: 844px; } .desk { width: 1280px; height: 800px; display: grid; grid-template-columns: 220px 460px 1fr; }
+  .i { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .head { display: flex; align-items: baseline; gap: 10px; padding: 14px 16px 6px; }
+  .head h1 { margin: 0; font: 700 24px var(--sans); letter-spacing: -0.01em; }
+  .head small { font: 600 14px var(--sans); color: var(--muted); }
+  .thumbs { display: flex; gap: 6px; padding: 6px 16px 10px; border-bottom: 1px solid var(--rule); overflow: hidden; }
+  .th { height: 34px; display: inline-flex; align-items: center; gap: 7px; padding: 0 10px 0 0; border-radius: 6px; background: var(--page); font: 600 14px var(--sans); color: var(--ink-2); white-space: nowrap; overflow: hidden; }
+  .th::before { content: ''; width: 6px; align-self: stretch; background: var(--c); }
+  .th.on { background: var(--ink); color: var(--paper); }
+  .entries { list-style: none; margin: 0; padding: 0; }
+  .e { position: relative; padding: 10px 16px 10px 22px; border-bottom: 1px solid var(--rule); }
+  .e::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--c); }
+  .hw { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .hw b { font: 700 17.5px/1.25 var(--sans); }
+  .hw .ipa { font: 400 14px var(--sans); color: var(--muted); }
+  .hw .st { margin-left: auto; display: flex; gap: 6px; align-items: center; color: var(--muted); }
+  .hw .st .i { width: 18px; height: 18px; }
+  .hw .st .f { color: var(--star); fill: var(--star); stroke: var(--star); }
+  .hw .st .k { color: var(--known); stroke-width: 2.4; }
+  .tr { margin: 1px 0 0; font: 400 15.5px/1.35 var(--sans); color: var(--ink); }
+  .exm { margin: 3px 0 0; font: italic 400 15px/1.4 var(--serif); color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .e.open { background: var(--sel); }
+  .e.open .exm { white-space: normal; }
+  .row-acts { display: flex; gap: 6px; margin-top: 8px; }
+  .ra { height: 36px; display: inline-flex; align-items: center; gap: 5px; padding: 0 10px; border: 1px solid var(--field); border-radius: 6px; background: var(--paper); font: 600 14px var(--sans); }
+  .ra .i { width: 17px; height: 17px; }
+  .bottom { position: absolute; left: 0; right: 0; bottom: 0; background: var(--paper); border-top: 1px solid var(--rule); }
+  .bsearch { margin: 10px 12px 6px; height: 46px; display: flex; align-items: center; gap: 8px; padding: 0 12px; border-radius: 23px; border: 1.5px solid var(--ink); background: var(--paper); color: var(--muted); font-size: 16px; }
+  .tabs5 { display: grid; grid-template-columns: repeat(5,1fr); height: 56px; padding-bottom: 6px; }
+  .tabs5 span { display: grid; justify-items: center; align-content: center; gap: 1px; font: 600 11.5px var(--sans); color: var(--muted); }
+  .tabs5 span.on { color: var(--accent); }
+  .tabs5 .i { width: 22px; height: 22px; }
+  /* index card */
+  .icard { position: absolute; left: 18px; right: 18px; top: 110px; height: 460px; border: 1px solid var(--rule); border-radius: 4px; background: var(--paper); box-shadow: 0 1px 0 var(--rule), 0 18px 32px -18px rgba(20,22,30,.35); padding: 0 22px; }
+  .icard .top { height: 54px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid var(--t1); font: 600 14px var(--sans); color: var(--muted); }
+  .icard .top .dir { margin-left: auto; padding: 3px 8px; border-radius: 4px; background: var(--page); color: var(--ink-2); }
+  .icard .ruled { height: 380px; background: repeating-linear-gradient(transparent 0 33px, var(--rule) 33px 34px); display: grid; align-content: center; gap: 12px; text-align: left; }
+  .icard .prompt-ua { font: 600 30px/1.2 var(--sans); }
+  .icard .say { font: italic 400 17px var(--serif); color: var(--ink-2); }
+  .drill-acts { position: absolute; left: 18px; right: 18px; top: 592px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .drill-acts span { height: 54px; display: grid; place-items: center; border: 1px solid var(--field); border-radius: 6px; font: 650 15px var(--sans); }
+  .drill-acts span.p { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .meter { position: absolute; left: 18px; right: 18px; top: 74px; display: flex; justify-content: space-between; font: 600 14px var(--sans); color: var(--muted); }
+  /* desktop */
+  .pane { border-right: 1px solid var(--rule); min-width: 0; overflow: hidden; }
+  .ti { padding: 18px 0; background: var(--page); }
+  .ti h2 { margin: 0 18px 10px; font: 700 13px var(--sans); color: var(--muted); }
+  .ti .t { position: relative; display: flex; justify-content: space-between; padding: 8px 16px 8px 22px; font: 600 15px var(--sans); color: var(--ink-2); }
+  .ti .t::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 6px; border-radius: 0 3px 3px 0; background: var(--c); }
+  .ti .t small { font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .ti .t.on { background: var(--paper); color: var(--ink); }
+  .ti .t.on::before { width: 8px; }
+  .lst .dsearch { margin: 16px; height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid var(--field); border-radius: 6px; color: var(--muted); }
+  .lst .dsearch kbd { margin-left: auto; }
+  .entry { padding: 30px 40px; }
+  .entry .hw2 { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .entry .hw2 b { font: 700 40px/1.1 var(--sans); letter-spacing: -0.015em; }
+  .entry .hw2 span { font: 400 20px var(--sans); color: var(--muted); }
+  .entry .lab { margin-top: 8px; display: flex; gap: 8px; font: 600 13.5px var(--sans); color: var(--muted); }
+  .entry .lab span { padding: 2px 7px; border-radius: 4px; background: var(--page); }
+  .entry .sense { margin-top: 22px; display: grid; grid-template-columns: 26px 1fr; gap: 4px 6px; }
+  .entry .sense .n { font: 700 18px var(--sans); color: var(--accent); }
+  .entry .sense .d { font: 600 21px/1.35 var(--sans); }
+  .entry .sense .x { grid-column: 2; font: italic 400 19px/1.5 var(--serif); color: var(--ink-2); }
+  .entry .syn { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 16px; color: var(--ink-2); }
+  .entry .syn b { color: var(--ink); }
+  .entry .acts { display: flex; gap: 8px; margin-top: 22px; flex-wrap: wrap; }
+  kbd { display: inline-block; min-width: 20px; padding: 0 5px; border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 4px; font: 650 12px/18px var(--sans); text-align: center; color: var(--ink-2); background: var(--paper); }
+  .keys { position: absolute; right: 24px; bottom: 16px; display: flex; gap: 14px; font: 500 13px var(--sans); color: var(--muted); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18 6.8a7.5 7.5 0 0 1 0 10.4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20h-5.5v-6h-5v6H4z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5h9.5a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h9.5"/></symbol>
+  <symbol id="i-cards" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="13" height="13" rx="2"/><path d="M8 4h10.5a2 2 0 0 1 2 2v10.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.2A9.6 9.6 0 0 1 12 6c5 0 8.5 4.5 9.5 6-.5.8-1.6 2.3-3.2 3.6M6.4 7.9C4.6 9.2 3.3 10.9 2.5 12c1 1.5 4.5 6 9.5 6 1.5 0 2.9-.4 4.1-1"/></symbol>
+</svg>
+
+<figure>
+  <figcaption>C1. Phrases as dictionary entries, phone, light</figcaption>
+  <section class="frame phone light" id="c1-entries">
+    <div class="head"><h1>Phrases</h1><small>566 entries</small></div>
+    <div class="thumbs"><span class="th on" style="--c:var(--t1)">All</span><span class="th" style="--c:var(--t1)">Agent framework</span><span class="th" style="--c:var(--t2)">Hedging</span><span class="th" style="--c:var(--t3)">Teamwork</span></div>
+    <ul class="entries">
+      <li class="e open" style="--c:var(--t1)"><div class="hw"><b translate="no">false positive</b><span class="ipa">/fɔːls ˈpɑːzətɪv/</span><span class="st"><svg class="i f"><use href="#i-star"/></svg></span></div><p class="tr" lang="uk">хибне спрацювання</p><p class="exm" translate="no">Too many false positives reduce trust in the agent.</p><div class="row-acts"><span class="ra"><svg class="i"><use href="#i-speaker"/></svg>Listen</span><span class="ra"><svg class="i"><use href="#i-star"/></svg>Focus</span><span class="ra"><svg class="i"><use href="#i-check"/></svg>Known</span><span class="ra"><svg class="i"><use href="#i-eye-off"/></svg>Hide</span></div></li>
+      <li class="e" style="--c:var(--t2)"><div class="hw"><b translate="no">I suppose …</b><span class="ipa">/aɪ səˈpoʊz/</span></div><p class="tr" lang="uk">Я припускаю…</p></li>
+      <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">evaluation harness</b><span class="ipa">/ɪˌvæljuˈeɪʃən ˈhɑːrnəs/</span><span class="st"><svg class="i k"><use href="#i-check"/></svg></span></div><p class="tr" lang="uk">система/набір для оцінювання</p><p class="exm" translate="no">The evaluation harness tracks useful findings and model cost.</p></li>
+      <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">token budget</b><span class="ipa">/ˈtoʊkən ˈbʌdʒɪt/</span></div><p class="tr" lang="uk">бюджет токенів</p><p class="exm" translate="no">Every PR review should have a token budget.</p></li>
+      <li class="e" style="--c:var(--t3)"><div class="hw"><b translate="no">Good teamwork starts with trust and clear communication.</b></div><p class="tr" lang="uk">Хороша командна робота починається з довіри та чіткої комунікації.</p></li>
+    </ul>
+    <div class="bottom"><div class="bsearch"><svg class="i"><use href="#i-search"/></svg>Search English or Ukrainian…</div><div class="tabs5"><span><svg class="i"><use href="#i-home"/></svg>Home</span><span class="on"><svg class="i"><use href="#i-book"/></svg>Library</span><span><svg class="i"><use href="#i-cards"/></svg>Practice</span><span><svg class="i"><use href="#i-star"/></svg>Focus</span><span><svg class="i"><use href="#i-menu"/></svg>More</span></div></div>
+  </section>
+</figure>
+
+<figure>
+  <figcaption>C2. Recall drill on an index card (Ukrainian to English), phone, light</figcaption>
+  <section class="frame phone light" id="c2-drill">
+    <div class="head"><h1>Practice</h1><small>Agent framework</small></div>
+    <div class="meter"><span>Card 7 of 20</span><span>5 known in this round</span></div>
+    <div class="icard"><div class="top"><span>Agent framework</span><span>B2</span><span class="dir">Ukrainian → English</span></div>
+      <div class="ruled"><div class="prompt-ua" lang="uk">хибне спрацювання</div><div class="say">Say the English term aloud, then check.</div></div></div>
+    <div class="drill-acts"><span>Again</span><span class="p">Check</span><span>Know it</span></div>
+    <div class="bottom"><div class="tabs5"><span><svg class="i"><use href="#i-home"/></svg>Home</span><span><svg class="i"><use href="#i-book"/></svg>Library</span><span class="on"><svg class="i"><use href="#i-cards"/></svg>Practice</span><span><svg class="i"><use href="#i-star"/></svg>Focus</span><span><svg class="i"><use href="#i-menu"/></svg>More</span></div></div>
+  </section>
+</figure>
+
+<figure>
+  <figcaption>C3. Phrases as dictionary entries, phone, dark</figcaption>
+  <section class="frame phone dark" id="c3-entries-dark">
+    <div class="head"><h1>Phrases</h1><small>566 entries</small></div>
+    <div class="thumbs"><span class="th" style="--c:var(--t1)">All</span><span class="th on" style="--c:var(--t1)">Agent framework</span><span class="th" style="--c:var(--t2)">Hedging</span><span class="th" style="--c:var(--t3)">Teamwork</span></div>
+    <ul class="entries">
+      <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">false positive</b><span class="ipa">/fɔːls ˈpɑːzətɪv/</span><span class="st"><svg class="i f"><use href="#i-star"/></svg></span></div><p class="tr" lang="uk">хибне спрацювання</p><p class="exm" translate="no">Too many false positives reduce trust in the agent.</p></li>
+      <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">evaluation harness</b><span class="ipa">/ɪˌvæljuˈeɪʃən ˈhɑːrnəs/</span><span class="st"><svg class="i k"><use href="#i-check"/></svg></span></div><p class="tr" lang="uk">система/набір для оцінювання</p><p class="exm" translate="no">The evaluation harness tracks useful findings and model cost.</p></li>
+      <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">token budget</b><span class="ipa">/ˈtoʊkən ˈbʌdʒɪt/</span></div><p class="tr" lang="uk">бюджет токенів</p><p class="exm" translate="no">Every PR review should have a token budget.</p></li>
+      <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">decision log</b><span class="ipa">/dɪˈsɪʒən lɔːɡ/</span></div><p class="tr" lang="uk">журнал рішень</p><p class="exm" translate="no">The decision log preserves architectural choices.</p></li>
+      <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">model routing</b><span class="ipa">/ˈmɑːdəl ˈruːtɪŋ/</span></div><p class="tr" lang="uk">вибір моделі залежно від задачі</p><p class="exm" translate="no">Model routing sends simple tasks to cheaper models.</p></li>
+      <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">rework</b><span class="ipa">/ˌriːˈwɜːrk/</span></div><p class="tr" lang="uk">переробка</p><p class="exm" translate="no">Early AI feedback can reduce rework.</p></li>
+    </ul>
+    <div class="bottom"><div class="bsearch"><svg class="i"><use href="#i-search"/></svg>Search English or Ukrainian…</div><div class="tabs5"><span><svg class="i"><use href="#i-home"/></svg>Home</span><span class="on"><svg class="i"><use href="#i-book"/></svg>Library</span><span><svg class="i"><use href="#i-cards"/></svg>Practice</span><span><svg class="i"><use href="#i-star"/></svg>Focus</span><span><svg class="i"><use href="#i-menu"/></svg>More</span></div></div>
+  </section>
+</figure>
+
+<figure>
+  <figcaption>C4. Thumb index, entry list and entry, desktop 1280, light</figcaption>
+  <section class="frame desk light" id="c4-desktop">
+    <div class="pane ti"><h2>Topics</h2>
+      <div class="t" style="--c:var(--t4)">All phrases<small>566</small></div>
+      <div class="t on" style="--c:var(--t1)">Agent framework<small>64</small></div>
+      <div class="t" style="--c:var(--t2)">Hedging<small>24</small></div>
+      <div class="t" style="--c:var(--t3)">Teamwork<small>12</small></div>
+      <div class="t" style="--c:var(--t5)">Presentations<small>69</small></div>
+      <div class="t" style="--c:var(--t6)">Start answer<small>6</small></div>
+      <h2 style="margin-top:22px">Yours</h2>
+      <div class="t" style="--c:var(--star)">Focus list<small>12</small></div>
+      <div class="t" style="--c:var(--t4)">Мої слова<small>4</small></div>
+    </div>
+    <div class="pane lst"><div class="dsearch"><svg class="i"><use href="#i-search"/></svg>Search 64 entries<kbd>/</kbd></div>
+      <ul class="entries">
+        <li class="e open" style="--c:var(--t1)"><div class="hw"><b translate="no">false positive</b><span class="ipa">/fɔːls ˈpɑːzətɪv/</span><span class="st"><svg class="i f"><use href="#i-star"/></svg></span></div><p class="tr" lang="uk">хибне спрацювання</p></li>
+        <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">evaluation harness</b><span class="ipa">/ɪˌvæljuˈeɪʃən ˈhɑːrnəs/</span><span class="st"><svg class="i k"><use href="#i-check"/></svg></span></div><p class="tr" lang="uk">система/набір для оцінювання</p></li>
+        <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">token budget</b><span class="ipa">/ˈtoʊkən ˈbʌdʒɪt/</span></div><p class="tr" lang="uk">бюджет токенів</p></li>
+        <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">decision log</b><span class="ipa">/dɪˈsɪʒən lɔːɡ/</span></div><p class="tr" lang="uk">журнал рішень</p></li>
+        <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">model routing</b><span class="ipa">/ˈmɑːdəl ˈruːtɪŋ/</span></div><p class="tr" lang="uk">вибір моделі залежно від задачі</p></li>
+        <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">rework</b><span class="ipa">/ˌriːˈwɜːrk/</span></div><p class="tr" lang="uk">переробка</p></li>
+        <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">first-pass review</b><span class="ipa">/fɜːrst pæs rɪˈvjuː/</span></div><p class="tr" lang="uk">первинне ревʼю</p></li>
+        <li class="e" style="--c:var(--t1)"><div class="hw"><b translate="no">baseline</b><span class="ipa">/ˈbeɪslaɪn/</span></div><p class="tr" lang="uk">базовий рівень для порівняння</p></li>
+      </ul>
+    </div>
+    <article class="entry">
+      <div class="hw2"><b translate="no">false positive</b><span>/fɔːls ˈpɑːzətɪv/</span></div>
+      <div class="lab"><span>B2</span><span>Agent framework</span><span>In your Focus list</span></div>
+      <div class="sense"><span class="n">1</span><span class="d" lang="uk">хибне спрацювання</span><span class="x" translate="no">Too many false positives reduce trust in the agent.</span></div>
+      <div class="syn"><b>Also said:</b> <span translate="no">incorrect alert, invalid finding</span></div>
+      <div class="acts"><span class="ra"><svg class="i"><use href="#i-speaker"/></svg>Listen <kbd>Space</kbd></span><span class="ra"><svg class="i"><use href="#i-star"/></svg>Remove from Focus <kbd>F</kbd></span><span class="ra"><svg class="i"><use href="#i-check"/></svg>Mark as known <kbd>K</kbd></span><span class="ra"><svg class="i"><use href="#i-eye-off"/></svg>Hide <kbd>H</kbd></span></div>
+    </article>
+    <div class="keys"><span><kbd>/</kbd> search</span><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>T</kbd> topics</span><span><kbd>Esc</kbd> clear</span></div>
+  </section>
+</figure>
+</body>
+</html>

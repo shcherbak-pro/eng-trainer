@@ -1,0 +1,115 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Home" [level=1]
+  - heading "Learn Pass Choose or create a focused learning track." [level=2]:
+    - button "Learn Pass Choose or create a focused learning track." [expanded]:
+      - strong: Learn Pass
+      - text: Choose or create a focused learning track.
+  - paragraph: The default pass shows all material. A custom pass keeps only the blocks you choose on Home and in the navigation.
+  - text: Active pass
+  - combobox "Active pass":
+    - 'option "Default: all materials" [selected]'
+  - paragraph: 39 blocks visible
+  - button "Create a Learn Pass"
+  - button "Edit the selected pass" [disabled]
+  - paragraph: No custom Learn Passes yet. Create one to focus on selected materials.
+  - heading "Topics Show only the learning blocks of one topic." [level=2]:
+    - button "Topics Show only the learning blocks of one topic." [expanded]:
+      - strong: Topics
+      - text: Show only the learning blocks of one topic.
+  - group "Topic filter":
+    - button "All 39" [pressed]
+    - button "AI 1"
+    - button "AI agents 1"
+    - button "ai-certification 2"
+    - button "assessment 2"
+    - button "balance 1"
+    - button "career 1"
+    - button "communication 1"
+    - button "comparison 1"
+    - button "conclusion 1"
+    - button "conflict 1"
+    - button "connector 2"
+    - button "contrast 1"
+    - button "drill 1"
+    - button "estimation 2"
+    - button "framework 1"
+    - button "grammar 4"
+    - button "hedging 1"
+    - button "hobbies 1"
+    - button "index 1"
+    - button "leadership 1"
+    - button "linking 1"
+    - button "meeting 1"
+    - button "practice 1"
+    - button "presentation 1"
+    - button "problem 1"
+    - button "productivity 1"
+    - button "remote-work 1"
+    - button "speaking 1"
+    - button "spoken 1"
+    - button "stress 1"
+    - button "teamwork 1"
+    - button "vocabulary 1"
+  - heading "Learning blocks Materials from your active Learn Pass." [level=2]:
+    - button "Learning blocks Materials from your active Learn Pass." [expanded]:
+      - strong: Learning blocks
+      - text: Materials from your active Learn Pass.
+  - list:
+    - listitem:
+      - 'link "Start Answer Phrases assessment, 6 items Початок відповіді: фрази для м’якого і впевненого старту speaking answer."':
+        - /url: "#phrases"
+      - button "Add to Focus List": Focus
+    - listitem:
+      - 'link "Structure & Add Ideas connector, 5 items Фрази для структури відповіді: first of all, on top of that, what matters most."':
+        - /url: "#phrases"
+      - button "Add to Focus List": Focus
+    - listitem:
+      - link "Word Index index, 566 items Алфавітний індекс слів і фраз. Натисни на фразу, щоб побачити переклад, pronunciation і 2 приклади застосування.":
+        - /url: "#wordIndex"
+      - button "Add to Focus List": Focus
+    - listitem:
+      - 'link "Reverse Practice practice, 566 items Зворотня вправа: бачиш український переклад і згадуєш англійську фразу або приклад."':
+        - /url: "#reverse"
+      - button "Add to Focus List": Focus
+    - listitem:
+      - 'link "100 Irregular Verbs grammar, 100 items 100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples."':
+        - /url: "#irregularVerbs"
+      - button "Add to Focus List": Focus
+    - listitem:
+      - 'link "200 Irregular Verbs — Logical Groups grammar, 200 items 200 irregular verbs grouped by change pattern: same forms, matching past/participle, -en participles, i-a-u pattern, and mixed forms."':
+        - /url: "#irregularVerbs"
+      - button "Add to Focus List": Focus
+  - navigation "Learning block pages":
+    - text: Show
+    - combobox "Show":
+      - option "6" [selected]
+      - option "12"
+      - option "All"
+    - button "Previous page" [disabled]
+    - text: 1–6 of 39
+    - button "Next page"
+  - heading "Phrase or word of the day A random item from your Learn Pass for quick practice." [level=2]:
+    - button "Phrase or word of the day A random item from your Learn Pass for quick practice." [expanded]:
+      - strong: Phrase or word of the day
+      - text: A random item from your Learn Pass for quick practice.
+  - article:
+    - paragraph: Phrase Start answer
+    - heading "I would start by saying that …" [level=3]
+    - paragraph: Я б почав з того, що AI — корисний інструмент, але він не повинен замінювати людське судження.
+    - group: Example
+    - button "Listen"
+    - button "Add to Focus List": Focus
+    - button "Show another"
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status
