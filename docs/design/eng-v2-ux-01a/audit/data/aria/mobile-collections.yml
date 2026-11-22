@@ -1,0 +1,48 @@
+- banner:
+  - button "Go to index":
+    - text: EA
+    - strong: English Assessment Trainer
+  - 'button "Theme: System. Switch to Light."'
+- paragraph: Speaking assessment trainer
+- heading "Collections" [level=1]
+- paragraph: Clear structure + safe vocabulary + controlled grammar + confident pronunciation
+- strong: "566"
+- text: phrases
+- strong: "566"
+- text: words
+- strong: "339"
+- text: verbs
+- strong: "0"
+- text: focus
+- strong: "0"
+- text: hidden
+- main:
+  - heading "Your vocabulary collections" [level=2]
+  - paragraph: Import words and phrases, then find them in Words, Phrases and Flashcards. Your files stay in this browser.
+  - paragraph:
+    - text: "CSV UTF-8 headers:"
+    - code: english,translation,topic,example
+    - text: . Only English and translation are required. Optional
+    - code: kind
+    - text: is
+    - code: word
+    - text: (default) or
+    - code: phrase
+    - text: . Comma and semicolon separators are supported.
+  - paragraph: "Native JSON exports preserve entry IDs and can be imported again. Maximum: 2 MiB per file and 1,000 entries per collection. Export JSON to keep a backup; exports contain vocabulary, not learning progress."
+  - text: Import vocabulary file
+  - button "Import vocabulary file"
+  - heading "No user collections yet" [level=3]
+  - paragraph: Try changing filters or search query.
+  - link "Open the previous version (v1)":
+    - /url: /eng-trainer/v1/
+  - text: v1 is kept as it was and has its own separate progress.
+- navigation "Mobile navigation":
+  - button "Index"
+  - button "Phrases"
+  - button "Words"
+  - button "Flashcards"
+  - button "Reverse"
+  - button "Verbs"
+  - button "Focus"
+  - button "Collections"

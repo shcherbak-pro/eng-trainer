@@ -1,0 +1,35 @@
+{
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": {
+        "long-content-reflow-and-glyphs": {
+          "status": "PASS",
+          "overflow": 0,
+          "glyphs": {
+            "chars": "English іїєґІЇЄҐʼɪəˈːʊðɑæʃɔɜʌɡˌŋʒθ",
+            "missing": []
+          },
+          "errors": [],
+          "unhandledRejections": []
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": {
+        "long-content-reflow-and-glyphs": {
+          "status": "PASS",
+          "overflow": 0,
+          "glyphs": {
+            "chars": "English іїєґІЇЄҐʼɪəˈːʊðɑæʃɔɜʌɡˌŋʒθ",
+            "missing": []
+          },
+          "errors": [],
+          "unhandledRejections": []
+        }
+      }
+    }
+  },
+  "definition": "Fresh nonpersistent native contexts; synthetic data; clipboard calls stubbed; localhost gzip response BODY bytes, headers excluded. No owner profiles."
+}

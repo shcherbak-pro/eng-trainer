@@ -1,0 +1,72 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Answers" [level=1]
+  - navigation "Library sections":
+    - list:
+      - listitem:
+        - link "Phrases":
+          - /url: "#phrases"
+      - listitem:
+        - link "Words":
+          - /url: "#wordIndex"
+      - listitem:
+        - link "Verbs":
+          - /url: "#irregularVerbs"
+      - listitem:
+        - link "Patterns":
+          - /url: "#patterns"
+      - listitem:
+        - link "Answers":
+          - /url: "#answers"
+    - link "Import words":
+      - /url: "#collections"
+  - paragraph: Assessment-style answers with translation, transcription and alternatives.
+  - list:
+    - listitem:
+      - paragraph: AI at work
+      - heading "How can AI help people at work?" [level=2]
+      - paragraph: I would start by saying that AI can be very useful at work. First of all, it can save time by automating routine tasks. On top of that, it can help people come up with ideas faster and explore information more efficiently. That being said, AI can make mistakes, so we should always verify the results. Overall, I think AI should support people, not replace them.
+      - paragraph: Я б почав з того, що AI може бути дуже корисним на роботі. Перш за все, він може економити час, автоматизуючи рутинні задачі. Крім того, він може допомагати людям швидше придумувати ідеї та ефективніше досліджувати інформацію. Але при цьому AI може помилятися, тому ми завжди повинні перевіряти результати. Загалом, я думаю, що AI має підтримувати людей, а не замінювати їх.
+      - button "Listen to the answer"
+    - listitem:
+      - paragraph: AI coding tools
+      - heading "How can AI coding tools help developers?" [level=2]
+      - paragraph: From my perspective, AI coding tools can be very useful for developers. First of all, they can help explore the codebase, explain what is happening under the hood, and suggest possible improvements. On top of that, they can save time on routine tasks, especially when a developer needs to dig into a problem quickly. That being said, I would not auto-accept every change. AI can make mistakes or even introduce a bug, so it is important to verify the results and combine automation with human review.
+      - paragraph: З моєї точки зору, AI-інструменти для кодування можуть бути дуже корисними для розробників. Перш за все, вони можуть допомогти дослідити кодову базу, пояснити, що відбувається “під капотом”, і запропонувати можливі покращення. Крім того, вони можуть економити час на рутинних задачах, особливо коли розробнику потрібно швидко розібратися з проблемою. Але при цьому я б не приймав кожну зміну автоматично. AI може помилятися або навіть внести баг, тому важливо перевіряти результати і поєднувати автоматизацію з людською перевіркою.
+      - button "Listen to the answer"
+    - listitem:
+      - paragraph: Teamwork
+      - heading "What makes a good team?" [level=2]
+      - paragraph: Let me start by saying that a good team is not only about technical skills. What matters most is clear communication, trust, and responsibility. If the team communicates regularly, it is easier to stay aligned and avoid misunderstandings. On top of that, supportive teammates can help each other when someone runs into a problem. Overall, I think teamwork works best when people respect each other and focus on the solution.
+      - paragraph: Дозвольте почати з того, що хороша команда — це не лише про технічні навички. Найважливіше — це чітка комунікація, довіра і відповідальність. Якщо команда регулярно комунікує, легше залишатися узгодженими і уникати непорозумінь. Крім того, підтримуючі teammates можуть допомагати одне одному, коли хтось стикається з проблемою. Загалом, я думаю, що командна робота найкраще працює, коли люди поважають одне одного і фокусуються на рішенні.
+      - button "Listen to the answer"
+    - listitem:
+      - paragraph: Difficult clients
+      - heading "How do you deal with difficult clients?" [level=2]
+      - paragraph: I would start by saying that difficult clients are often difficult because expectations are not clear. In this situation, I try to stay calm and ask specific questions. First of all, I clarify what the client actually needs. Then I point out what we can realistically do and follow up with a written summary. That being said, I try to give the client the benefit of the doubt. Overall, clear communication is the best way to reduce tension.
+      - paragraph: Я б почав з того, що складні клієнти часто складні тому, що очікування нечіткі. У такій ситуації я намагаюся залишатися спокійним і ставити конкретні питання. Перш за все, я уточнюю, що саме потрібно клієнту. Потім я вказую, що ми реально можемо зробити, і роблю follow-up письмовим підсумком. Але при цьому я намагаюся давати клієнту кредит довіри. Загалом, чітка комунікація — найкращий спосіб знизити напругу.
+      - button "Listen to the answer"
+    - listitem:
+      - paragraph: Problem-solving
+      - heading "What do you do when you run into a problem?" [level=2]
+      - paragraph: When we run into a problem, I think it is important not to panic. First of all, we need to look into the issue and understand the root cause. After that, we can come up with a practical solution and decide who is responsible for each step. If the deadline is tight, I would prioritize the most important tasks. Overall, a calm and structured approach usually works best.
+      - paragraph: Коли ми стикаємося з проблемою, я думаю, важливо не панікувати. Перш за все, нам потрібно розібратися з проблемою і зрозуміти першопричину. Після цього ми можемо придумати практичне рішення і вирішити, хто відповідає за кожен крок. Якщо дедлайн tight, я б пріоритезував найважливіші задачі. Загалом, спокійний і структурований підхід зазвичай працює найкраще.
+      - button "Listen to the answer"
+    - listitem:
+      - paragraph: Online meetings
+      - heading "How do you usually handle online meetings?" [level=2]
+      - paragraph: Let me start by saying that online meetings should be structured and focused. At the beginning, I like to clarify the main goal and agenda. During the meeting, I try to ask questions if something is unclear and make sure everyone stays aligned. If we run into technical issues, for example if someone is breaking up, I ask them to repeat or reconnect. At the end, I usually summarize the next steps and follow up with meeting notes.
+      - paragraph: Дозвольте почати з того, що онлайн-зустрічі мають бути структурованими і сфокусованими. На початку я люблю уточнити головну мету і agenda. Під час зустрічі я намагаюся ставити питання, якщо щось неясно, і переконатися, що всі залишаються узгодженими. Якщо ми стикаємося з технічними проблемами, наприклад якщо когось погано чути, я прошу повторити або перепідключитися. Наприкінці я зазвичай підсумовую наступні кроки і роблю follow-up з нотатками зустрічі.
+      - button "Listen to the answer"
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

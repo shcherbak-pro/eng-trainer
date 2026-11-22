@@ -1,33 +1,28 @@
 <script lang="ts">
-  import MaterialIcon from '../../shared/ui/MaterialIcon.svelte';
+  import Icon from '../../shared/ui/Icon.svelte';
 
   export let title: string;
   export let description = '';
   export let open = true;
   export let headingLevel: 'h2' | 'h3' = 'h2';
   export let onToggle: () => void;
+
+  const id = `panel-${Math.random().toString(36).slice(2, 10)}`;
 </script>
 
-<section class="expansion-panel card" class:collapsed={!open}>
-  <button
-    class="expansion-panel__header"
-    type="button"
-    aria-expanded={open}
-    on:click={onToggle}
-  >
-    <span class="expansion-panel__title">
-      <svelte:element this={headingLevel}>{title}</svelte:element>
-      {#if description}
-        <span class="muted">{description}</span>
-      {/if}
-    </span>
-    <span class="expansion-panel__icon" aria-hidden="true">
-      <MaterialIcon name={open ? 'expand_less' : 'expand_more'} />
-    </span>
-  </button>
+<section class="expansion-panel">
+  <svelte:element this={headingLevel} class="expansion-panel__heading">
+    <button class="expansion-panel__header" type="button" aria-expanded={open} aria-controls={id} on:click={onToggle}>
+      <span class="expansion-panel__title">
+        <strong>{title}</strong>
+        {#if description}<span>{description}</span>{/if}
+      </span>
+      <Icon name={open ? 'chevron-up' : 'chevron-down'} />
+    </button>
+  </svelte:element>
 
   {#if open}
-    <div class="expansion-panel__body">
+    <div class="expansion-panel__body" {id}>
       <slot />
     </div>
   {/if}

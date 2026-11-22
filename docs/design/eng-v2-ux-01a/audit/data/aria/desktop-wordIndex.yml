@@ -1,0 +1,131 @@
+- banner:
+  - button "Go to index":
+    - text: EA
+    - strong: English Assessment Trainer
+    - text: ShcherbakPro · B1+ → B2
+  - navigation "Main navigation":
+    - button "Index"
+    - button "Phrases"
+    - button "Words"
+    - button "Flashcards"
+    - button "Reverse"
+    - button "Verbs"
+    - button "Patterns"
+    - button "Answers"
+    - button "Practice"
+    - button "Focus"
+    - button "Collections"
+  - 'button "Theme: System. Switch to Light."'
+- paragraph: Speaking assessment trainer
+- heading "Words" [level=1]
+- paragraph: Clear structure + safe vocabulary + controlled grammar + confident pronunciation
+- strong: "566"
+- text: phrases
+- strong: "566"
+- text: words
+- strong: "339"
+- text: verbs
+- strong: "0"
+- text: focus
+- strong: "0"
+- text: hidden
+- main:
+  - heading "Word Index" [level=2]
+  - paragraph: Клік по фразі відкриває переклад, transcription, alternatives і приклади застосування.
+  - button "Show hidden words"
+  - text: Search
+  - textbox "Search":
+    - /placeholder: run into, lack, estimate…
+  - text: Category
+  - combobox "Category":
+    - option "All" [selected]
+    - option "Advanced Linking Words"
+    - option "Agent Framework Vocabulary"
+    - option "AI / Coding tools"
+    - option "AI Certification Vocabulary"
+    - option "Career Growth"
+    - option "Communication in Distributed Teams"
+    - option "Compare / Difference"
+    - option "Conduct vs Carry out"
+    - option "Conflict Resolution / Team Problems"
+    - option "Conjunctions"
+    - option "Contrast"
+    - option "Ending"
+    - option "Hedging Phrases"
+    - option "Hobbies"
+    - option "Informal phrases"
+    - option "Lack / Not enough"
+    - option "Leadership"
+    - option "Modals"
+    - option "Online meetings"
+    - option "Otherwise"
+    - option "Presentation Phrases"
+    - option "Remote Work"
+    - option "Speed / Difficulty / Clarity"
+    - option "Start answer"
+    - option "Stress Management"
+    - option "Structure"
+    - option "Teamwork"
+    - option "Tell me about yourself"
+    - option "Time estimates"
+    - option "Time Management"
+    - option "Work-Life Balance"
+  - strong: Listen words
+  - text: Reads current page words, translations and examples. Repeats
+  - combobox "Repeats":
+    - option "10x" [selected]
+    - option "20x"
+    - option "50x"
+  - button "Read listen words"
+  - paragraph: 5 items
+  - complementary:
+    - button "A balanced person usually makes better decisions. Work-Life Balance":
+      - strong: A balanced person usually makes better decisions.
+      - text: Work-Life Balance
+    - button "A calm conversation usually works better than emotional messages. Conflict Resolution / Team Problems":
+      - strong: A calm conversation usually works better than emotional messages.
+      - text: Conflict Resolution / Team Problems
+    - button "A flexible schedule can support balance if people are responsible. Work-Life Balance":
+      - strong: A flexible schedule can support balance if people are responsible.
+      - text: Work-Life Balance
+    - button "A good hobby should not feel like another task. Hobbies":
+      - strong: A good hobby should not feel like another task.
+      - text: Hobbies
+    - button "A good leader creates clarity when the situation is uncertain. Leadership":
+      - strong: A good leader creates clarity when the situation is uncertain.
+      - text: Leadership
+  - article:
+    - paragraph: Work-Life Balance B2 balance
+    - heading "A balanced person usually makes better decisions." [level=3]
+    - paragraph:
+      - strong: "Transcription:"
+      - text: /a balanced person usually makes better decisions/
+    - paragraph:
+      - strong: "Common alternatives:"
+      - emphasis: Balance improves decisions; Rest helps judgment; Energy affects thinking
+    - paragraph:
+      - strong: "Meaning:"
+      - text: Збалансована людина зазвичай приймає кращі рішення.
+    - strong: Example 1
+    - paragraph: A balanced person usually makes better decisions. For example, I try to protect personal time after work.
+    - paragraph: A balanced person usually makes better decisions. Наприклад, я намагаюся захищати особистий час після роботи.
+    - button "Speak example"
+    - strong: Example 2
+    - paragraph: A balanced person usually makes better decisions. It helps me stay productive in the long run.
+    - paragraph: A balanced person usually makes better decisions. Це допомагає мені залишатися продуктивним у довгостроковій перспективі.
+    - button "Speak example"
+    - button "Speak"
+    - button "Add to Focus List"
+    - button "Hide item"
+  - text: Show
+  - combobox "Show":
+    - option "5" [selected]
+    - option "10"
+    - option "20"
+    - option "All"
+  - button "Previous page" [disabled]
+  - text: 1-5 of 566
+  - button "Next page"
+  - link "Open the previous version (v1)":
+    - /url: /eng-trainer/v1/
+  - text: v1 is kept as it was and has its own separate progress.

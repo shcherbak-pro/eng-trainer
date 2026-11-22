@@ -1,0 +1,47 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Flashcards" [level=1]
+  - navigation "Practice sections":
+    - list:
+      - listitem:
+        - link "Flashcards":
+          - /url: "#flashcards"
+      - listitem:
+        - link "Reverse practice":
+          - /url: "#reverse"
+      - listitem:
+        - link "Speaking prompts":
+          - /url: "#practice"
+  - region "Flashcards":
+    - group "Deck":
+      - button "All Vocabulary" [pressed]
+      - button "By Topic"
+    - strong: "566"
+    - text: remaining
+    - strong: "0"
+    - text: learned Card
+    - strong: "1"
+    - text: of
+    - strong: "566"
+    - progressbar "Learned cards in All Vocabulary"
+    - button "Shuffle remaining cards": Shuffle
+    - button "Review learned vocabulary (0)"
+    - article:
+      - 'button "Front of the card: I would start by saying that …. Press to show the translation."': Start answer B2 I would start by saying that … Say it aloud, then tap to see the meaning
+      - button "Listen"
+    - button "Keep learning"
+    - button "Flip card"
+    - button "I know it"
+    - paragraph: Swipe right if you know it, left to keep learning
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

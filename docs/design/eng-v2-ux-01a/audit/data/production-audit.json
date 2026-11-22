@@ -1,0 +1,3560 @@
+{
+  "startedAt": "2026-11-21T21:30:14.957Z",
+  "base": "https://shcherbak-pro.github.io/eng-trainer/",
+  "scenarios": {
+    "provenance": {
+      "files": 21,
+      "matching": 21,
+      "mismatches": [],
+      "ms": 3618
+    },
+    "survey-desktop-light": {
+      "pages": {
+        "index": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 2797,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": null,
+          "bottomNav": null,
+          "firstContentTop": 1505,
+          "firstContentAboveFold": false,
+          "focusableCount": 78,
+          "iconOnlyButtons": 21,
+          "targetsUnder24": 1,
+          "targetsUnder44": 72,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Index",
+            "H2 Learn Pass",
+            "H2 Choose your learning track",
+            "H2 Tag cloud",
+            "H2 Learning blocks",
+            "H3 Start Answer Phrases",
+            "H3 Structure & Add Ideas",
+            "H3 Word Index",
+            "H3 Reverse Practice",
+            "H3 100 Irregular Verbs",
+            "H3 200 Irregular Verbs — Logical Groups",
+            "H2 Phrase / Word of the day",
+            "H3 I would start by saying that …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "phrases": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 2648,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 309,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 784,
+          "firstContentAboveFold": true,
+          "focusableCount": 46,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 44,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Phrases",
+            "H2 Phrases",
+            "H3 I would start by saying that …",
+            "H3 Let me start by saying that …",
+            "H3 The first thing I’d say is that …",
+            "H3 Before going into details, I’d say that …",
+            "H3 From my perspective, …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "wordIndex": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1699,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 309,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 784,
+          "firstContentAboveFold": true,
+          "focusableCount": 31,
+          "iconOnlyButtons": 10,
+          "targetsUnder24": 1,
+          "targetsUnder44": 24,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Words",
+            "H2 Word Index",
+            "H3 A balanced person usually makes better decisions."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "flashcards": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1134,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 89,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 245,
+            "height": 236,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 503,
+          "firstContentAboveFold": true,
+          "focusableCount": 23,
+          "iconOnlyButtons": 6,
+          "targetsUnder24": 1,
+          "targetsUnder44": 19,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Flashcards",
+            "H2 Flashcards"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "reverse": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1101,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 123,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 598,
+          "firstContentAboveFold": true,
+          "focusableCount": 18,
+          "iconOnlyButtons": 4,
+          "targetsUnder24": 1,
+          "targetsUnder44": 17,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Reverse",
+            "H2 Reverse Practice",
+            "H3 обґрунтування відповіді даними з джерел"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "irregularVerbs": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 4202,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 400,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 875,
+          "firstContentAboveFold": true,
+          "focusableCount": 47,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 44,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Verbs",
+            "H2 100 Irregular Verbs",
+            "H3 be → was/were → been",
+            "H3 have → had → had",
+            "H3 do → did → done",
+            "H3 make → made → made",
+            "H3 get → got → got/gotten"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "patterns": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 3774,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 123,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 598,
+          "firstContentAboveFold": true,
+          "focusableCount": 21,
+          "iconOnlyButtons": 8,
+          "targetsUnder24": 1,
+          "targetsUnder44": 21,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Patterns",
+            "H2 Answer Patterns",
+            "H3 STAR — behavioural answers",
+            "H3 PREP — opinion answers",
+            "H3 OREO — discussion answers",
+            "H3 Sandwich — feedback and weaknesses",
+            "H3 PPF — career journey",
+            "H3 SEE — analytical answers",
+            "H3 Universal speaking formula"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "answers": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 3026,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 123,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 598,
+          "firstContentAboveFold": true,
+          "focusableCount": 20,
+          "iconOnlyButtons": 7,
+          "targetsUnder24": 1,
+          "targetsUnder44": 20,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Answers",
+            "H2 Ready-Made Answers",
+            "H3 How can AI help people at work?",
+            "H3 How can AI coding tools help developers?",
+            "H3 What makes a good team?",
+            "H3 How do you deal with difficult clients?",
+            "H3 What do you do when you run into a problem?",
+            "H3 How do you usually handle online meetings?"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "practice": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1459,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 123,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 598,
+          "firstContentAboveFold": true,
+          "focusableCount": 15,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 15,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Practice",
+            "H2 Practice Mode",
+            "H3 Click “Random prompt” to start."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "favorites": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 990,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 214,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 689,
+          "firstContentAboveFold": true,
+          "focusableCount": 15,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 15,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Focus",
+            "H2 Focus List",
+            "H3 Focus list is empty"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "collections": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1162,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 386,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 861,
+          "firstContentAboveFold": true,
+          "focusableCount": 15,
+          "iconOnlyButtons": 1,
+          "targetsUnder24": 1,
+          "targetsUnder44": 14,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Collections",
+            "H2 Your vocabulary collections",
+            "H3 No user collections yet"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        }
+      },
+      "ms": 12694
+    },
+    "survey-desktop-dark": {
+      "pages": {
+        "index": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 2797,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": null,
+          "bottomNav": null,
+          "firstContentTop": 1505,
+          "firstContentAboveFold": false,
+          "focusableCount": 78,
+          "iconOnlyButtons": 21,
+          "targetsUnder24": 1,
+          "targetsUnder44": 72,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Index",
+            "H2 Learn Pass",
+            "H2 Choose your learning track",
+            "H2 Tag cloud",
+            "H2 Learning blocks",
+            "H3 Start Answer Phrases",
+            "H3 Structure & Add Ideas",
+            "H3 Word Index",
+            "H3 Reverse Practice",
+            "H3 100 Irregular Verbs",
+            "H3 200 Irregular Verbs — Logical Groups",
+            "H2 Phrase / Word of the day",
+            "H3 I would start by saying that …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "phrases": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 2648,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 309,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 784,
+          "firstContentAboveFold": true,
+          "focusableCount": 46,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 44,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Phrases",
+            "H2 Phrases",
+            "H3 I would start by saying that …",
+            "H3 Let me start by saying that …",
+            "H3 The first thing I’d say is that …",
+            "H3 Before going into details, I’d say that …",
+            "H3 From my perspective, …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "wordIndex": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1699,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 309,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 784,
+          "firstContentAboveFold": true,
+          "focusableCount": 31,
+          "iconOnlyButtons": 10,
+          "targetsUnder24": 1,
+          "targetsUnder44": 24,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Words",
+            "H2 Word Index",
+            "H3 A balanced person usually makes better decisions."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "flashcards": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1134,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 89,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 245,
+            "height": 236,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 503,
+          "firstContentAboveFold": true,
+          "focusableCount": 23,
+          "iconOnlyButtons": 6,
+          "targetsUnder24": 1,
+          "targetsUnder44": 19,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Flashcards",
+            "H2 Flashcards"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "reverse": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1101,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 123,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 598,
+          "firstContentAboveFold": true,
+          "focusableCount": 18,
+          "iconOnlyButtons": 4,
+          "targetsUnder24": 1,
+          "targetsUnder44": 17,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Reverse",
+            "H2 Reverse Practice",
+            "H3 X більш…, тоді як Y більш…"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "irregularVerbs": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 4202,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 400,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 875,
+          "firstContentAboveFold": true,
+          "focusableCount": 47,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 44,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Verbs",
+            "H2 100 Irregular Verbs",
+            "H3 be → was/were → been",
+            "H3 have → had → had",
+            "H3 do → did → done",
+            "H3 make → made → made",
+            "H3 get → got → got/gotten"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "patterns": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 3774,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 123,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 598,
+          "firstContentAboveFold": true,
+          "focusableCount": 21,
+          "iconOnlyButtons": 8,
+          "targetsUnder24": 1,
+          "targetsUnder44": 21,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Patterns",
+            "H2 Answer Patterns",
+            "H3 STAR — behavioural answers",
+            "H3 PREP — opinion answers",
+            "H3 OREO — discussion answers",
+            "H3 Sandwich — feedback and weaknesses",
+            "H3 PPF — career journey",
+            "H3 SEE — analytical answers",
+            "H3 Universal speaking formula"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "answers": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 3026,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 123,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 598,
+          "firstContentAboveFold": true,
+          "focusableCount": 20,
+          "iconOnlyButtons": 7,
+          "targetsUnder24": 1,
+          "targetsUnder44": 20,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Answers",
+            "H2 Ready-Made Answers",
+            "H3 How can AI help people at work?",
+            "H3 How can AI coding tools help developers?",
+            "H3 What makes a good team?",
+            "H3 How do you deal with difficult clients?",
+            "H3 What do you do when you run into a problem?",
+            "H3 How do you usually handle online meetings?"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "practice": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1459,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 123,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 598,
+          "firstContentAboveFold": true,
+          "focusableCount": 15,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 15,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Practice",
+            "H2 Practice Mode",
+            "H3 Click “Random prompt” to start."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "favorites": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 990,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 214,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 689,
+          "firstContentAboveFold": true,
+          "focusableCount": 15,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 15,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Focus",
+            "H2 Focus List",
+            "H3 Focus list is empty"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "collections": {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "documentHeight": 1162,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 104,
+            "width": 1440
+          },
+          "hero": {
+            "top": 130,
+            "height": 301,
+            "width": 1180
+          },
+          "toolbar": {
+            "top": 457,
+            "height": 386,
+            "width": 1180
+          },
+          "bottomNav": null,
+          "firstContentTop": 861,
+          "firstContentAboveFold": true,
+          "focusableCount": 15,
+          "iconOnlyButtons": 1,
+          "targetsUnder24": 1,
+          "targetsUnder44": 14,
+          "examplesUnder44": [
+            "Go to index",
+            "Index",
+            "Phrases",
+            "Words",
+            "Flashcards",
+            "Reverse",
+            "Verbs",
+            "Patterns",
+            "Answers",
+            "Practice",
+            "Focus",
+            "Collections"
+          ],
+          "headings": [
+            "H1 Collections",
+            "H2 Your vocabulary collections",
+            "H3 No user collections yet"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        }
+      },
+      "ms": 8642
+    },
+    "survey-mobile-light": {
+      "pages": {
+        "index": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 4879,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": null,
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 2284,
+          "firstContentAboveFold": false,
+          "focusableCount": 75,
+          "iconOnlyButtons": 21,
+          "targetsUnder24": 1,
+          "targetsUnder44": 61,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Create new Learn Pass",
+            "All 39",
+            "AI 1",
+            "AI agents 1",
+            "ai-certification 2",
+            "assessment 2",
+            "balance 1",
+            "career 1",
+            "communication 1",
+            "comparison 1"
+          ],
+          "headings": [
+            "H1 Index",
+            "H2 Learn Pass",
+            "H2 Choose your learning track",
+            "H2 Tag cloud",
+            "H2 Learning blocks",
+            "H3 Start Answer Phrases",
+            "H3 Structure & Add Ideas",
+            "H3 Word Index",
+            "H3 Reverse Practice",
+            "H3 100 Irregular Verbs",
+            "H3 200 Irregular Verbs — Logical Groups",
+            "H2 Phrase / Word of the day",
+            "H3 I would start by saying that …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "phrases": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 3842,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 606,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 1117,
+          "firstContentAboveFold": false,
+          "focusableCount": 43,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 33,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden phrases",
+            "10x20x50x",
+            "Read listen phrases",
+            "Mark as learned",
+            "Speak",
+            "Speak example",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page"
+          ],
+          "headings": [
+            "H1 Phrases",
+            "H2 Phrases",
+            "H3 I would start by saying that …",
+            "H3 Let me start by saying that …",
+            "H3 The first thing I’d say is that …",
+            "H3 Before going into details, I’d say that …",
+            "H3 From my perspective, …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "wordIndex": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 2806,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 627,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 1474,
+          "firstContentAboveFold": false,
+          "focusableCount": 28,
+          "iconOnlyButtons": 10,
+          "targetsUnder24": 1,
+          "targetsUnder44": 13,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden words",
+            "10x20x50x",
+            "Read listen words",
+            "Speak example",
+            "Speak",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Words",
+            "H2 Word Index",
+            "H3 A balanced person usually makes better decisions."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "flashcards": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 1040,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": null,
+          "toolbar": {
+            "top": 74,
+            "height": 193,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 289,
+          "firstContentAboveFold": true,
+          "focusableCount": 20,
+          "iconOnlyButtons": 6,
+          "targetsUnder24": 1,
+          "targetsUnder44": 8,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Shuffle remaining cards",
+            "Review learned vocabulary",
+            "All Vocabulary",
+            "By Topic",
+            "Speak",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H2 Flashcards"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "reverse": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 1330,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 196,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 707,
+          "firstContentAboveFold": true,
+          "focusableCount": 15,
+          "iconOnlyButtons": 4,
+          "targetsUnder24": 1,
+          "targetsUnder44": 6,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Next random item",
+            "Check answer",
+            "Show answer",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Reverse",
+            "H2 Reverse Practice",
+            "H3 Я зазвичай відділяю те, що можу контролювати, від "
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "irregularVerbs": {
+          "viewport": {
+            "width": 392,
+            "height": 849
+          },
+          "documentHeight": 5330,
+          "horizontalOverflow": 2,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 722,
+            "width": 380
+          },
+          "bottomNav": {
+            "top": 732,
+            "height": 117,
+            "width": 392
+          },
+          "firstContentTop": 1233,
+          "firstContentAboveFold": false,
+          "focusableCount": 44,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 33,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden verbs",
+            "10x20x50x",
+            "Read listen verbs",
+            "Speak example",
+            "Speak forms",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Verbs",
+            "H2 100 Irregular Verbs",
+            "H3 be → was/were → been",
+            "H3 have → had → had",
+            "H3 do → did → done",
+            "H3 make → made → made",
+            "H3 get → got → got/gotten"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "patterns": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 5598,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 157,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 668,
+          "firstContentAboveFold": true,
+          "focusableCount": 18,
+          "iconOnlyButtons": 8,
+          "targetsUnder24": 1,
+          "targetsUnder44": 10,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Speak example",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Patterns",
+            "H2 Answer Patterns",
+            "H3 STAR — behavioural answers",
+            "H3 PREP — opinion answers",
+            "H3 OREO — discussion answers",
+            "H3 Sandwich — feedback and weaknesses",
+            "H3 PPF — career journey",
+            "H3 SEE — analytical answers",
+            "H3 Universal speaking formula"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "answers": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 5688,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 136,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 647,
+          "firstContentAboveFold": true,
+          "focusableCount": 17,
+          "iconOnlyButtons": 7,
+          "targetsUnder24": 1,
+          "targetsUnder44": 9,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Speak answer",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Answers",
+            "H2 Ready-Made Answers",
+            "H3 How can AI help people at work?",
+            "H3 How can AI coding tools help developers?",
+            "H3 What makes a good team?",
+            "H3 How do you deal with difficult clients?",
+            "H3 What do you do when you run into a problem?",
+            "H3 How do you usually handle online meetings?"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "practice": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 2275,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 196,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 707,
+          "firstContentAboveFold": true,
+          "focusableCount": 12,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 4,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Generate random prompt",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Practice",
+            "H2 Practice Mode",
+            "H3 Click “Random prompt” to start."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "favorites": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 1295,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 372,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 883,
+          "firstContentAboveFold": false,
+          "focusableCount": 12,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 4,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "10x20x50x",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Focus",
+            "H2 Focus List",
+            "H3 Focus list is empty"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "collections": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 1448,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 546,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 1057,
+          "firstContentAboveFold": false,
+          "focusableCount": 12,
+          "iconOnlyButtons": 1,
+          "targetsUnder24": 1,
+          "targetsUnder44": 3,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Collections",
+            "H2 Your vocabulary collections",
+            "H3 No user collections yet"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        }
+      },
+      "ms": 9298
+    },
+    "survey-mobile-dark": {
+      "pages": {
+        "index": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 4879,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": null,
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 2284,
+          "firstContentAboveFold": false,
+          "focusableCount": 75,
+          "iconOnlyButtons": 21,
+          "targetsUnder24": 1,
+          "targetsUnder44": 61,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Create new Learn Pass",
+            "All 39",
+            "AI 1",
+            "AI agents 1",
+            "ai-certification 2",
+            "assessment 2",
+            "balance 1",
+            "career 1",
+            "communication 1",
+            "comparison 1"
+          ],
+          "headings": [
+            "H1 Index",
+            "H2 Learn Pass",
+            "H2 Choose your learning track",
+            "H2 Tag cloud",
+            "H2 Learning blocks",
+            "H3 Start Answer Phrases",
+            "H3 Structure & Add Ideas",
+            "H3 Word Index",
+            "H3 Reverse Practice",
+            "H3 100 Irregular Verbs",
+            "H3 200 Irregular Verbs — Logical Groups",
+            "H2 Phrase / Word of the day",
+            "H3 I would start by saying that …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "phrases": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 3842,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 606,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 1117,
+          "firstContentAboveFold": false,
+          "focusableCount": 43,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 33,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden phrases",
+            "10x20x50x",
+            "Read listen phrases",
+            "Mark as learned",
+            "Speak",
+            "Speak example",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page"
+          ],
+          "headings": [
+            "H1 Phrases",
+            "H2 Phrases",
+            "H3 I would start by saying that …",
+            "H3 Let me start by saying that …",
+            "H3 The first thing I’d say is that …",
+            "H3 Before going into details, I’d say that …",
+            "H3 From my perspective, …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "wordIndex": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 2806,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 627,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 1474,
+          "firstContentAboveFold": false,
+          "focusableCount": 28,
+          "iconOnlyButtons": 10,
+          "targetsUnder24": 1,
+          "targetsUnder44": 13,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden words",
+            "10x20x50x",
+            "Read listen words",
+            "Speak example",
+            "Speak",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Words",
+            "H2 Word Index",
+            "H3 A balanced person usually makes better decisions."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "flashcards": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 1040,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": null,
+          "toolbar": {
+            "top": 74,
+            "height": 193,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 289,
+          "firstContentAboveFold": true,
+          "focusableCount": 20,
+          "iconOnlyButtons": 6,
+          "targetsUnder24": 1,
+          "targetsUnder44": 8,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Shuffle remaining cards",
+            "Review learned vocabulary",
+            "All Vocabulary",
+            "By Topic",
+            "Speak",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H2 Flashcards"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "reverse": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 1303,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 196,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 707,
+          "firstContentAboveFold": true,
+          "focusableCount": 15,
+          "iconOnlyButtons": 4,
+          "targetsUnder24": 1,
+          "targetsUnder44": 6,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Next random item",
+            "Check answer",
+            "Show answer",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Reverse",
+            "H2 Reverse Practice",
+            "H3 Важливо перевірити, чи люди справді узгоджені щодо"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "irregularVerbs": {
+          "viewport": {
+            "width": 392,
+            "height": 849
+          },
+          "documentHeight": 5330,
+          "horizontalOverflow": 2,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 722,
+            "width": 380
+          },
+          "bottomNav": {
+            "top": 732,
+            "height": 117,
+            "width": 392
+          },
+          "firstContentTop": 1233,
+          "firstContentAboveFold": false,
+          "focusableCount": 44,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 33,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden verbs",
+            "10x20x50x",
+            "Read listen verbs",
+            "Speak example",
+            "Speak forms",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Verbs",
+            "H2 100 Irregular Verbs",
+            "H3 be → was/were → been",
+            "H3 have → had → had",
+            "H3 do → did → done",
+            "H3 make → made → made",
+            "H3 get → got → got/gotten"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "patterns": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 5598,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 157,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 668,
+          "firstContentAboveFold": true,
+          "focusableCount": 18,
+          "iconOnlyButtons": 8,
+          "targetsUnder24": 1,
+          "targetsUnder44": 10,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Speak example",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Patterns",
+            "H2 Answer Patterns",
+            "H3 STAR — behavioural answers",
+            "H3 PREP — opinion answers",
+            "H3 OREO — discussion answers",
+            "H3 Sandwich — feedback and weaknesses",
+            "H3 PPF — career journey",
+            "H3 SEE — analytical answers",
+            "H3 Universal speaking formula"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "answers": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 5688,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 136,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 647,
+          "firstContentAboveFold": true,
+          "focusableCount": 17,
+          "iconOnlyButtons": 7,
+          "targetsUnder24": 1,
+          "targetsUnder44": 9,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Speak answer",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Answers",
+            "H2 Ready-Made Answers",
+            "H3 How can AI help people at work?",
+            "H3 How can AI coding tools help developers?",
+            "H3 What makes a good team?",
+            "H3 How do you deal with difficult clients?",
+            "H3 What do you do when you run into a problem?",
+            "H3 How do you usually handle online meetings?"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "practice": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 2275,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 196,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 707,
+          "firstContentAboveFold": true,
+          "focusableCount": 12,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 4,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Generate random prompt",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Practice",
+            "H2 Practice Mode",
+            "H3 Click “Random prompt” to start."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "favorites": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 1295,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 372,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 883,
+          "firstContentAboveFold": false,
+          "focusableCount": 12,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 4,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "10x20x50x",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Focus",
+            "H2 Focus List",
+            "H3 Focus list is empty"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "collections": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "documentHeight": 1448,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 390
+          },
+          "hero": {
+            "top": 74,
+            "height": 405,
+            "width": 366
+          },
+          "toolbar": {
+            "top": 493,
+            "height": 546,
+            "width": 366
+          },
+          "bottomNav": {
+            "top": 727,
+            "height": 117,
+            "width": 390
+          },
+          "firstContentTop": 1057,
+          "firstContentAboveFold": false,
+          "focusableCount": 12,
+          "iconOnlyButtons": 1,
+          "targetsUnder24": 1,
+          "targetsUnder44": 3,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Collections",
+            "H2 Your vocabulary collections",
+            "H3 No user collections yet"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        }
+      },
+      "ms": 8197
+    },
+    "survey-small-light": {
+      "pages": {
+        "index": {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "documentHeight": 5552,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": null,
+          "bottomNav": {
+            "top": 523,
+            "height": 117,
+            "width": 320
+          },
+          "firstContentTop": 2732,
+          "firstContentAboveFold": false,
+          "focusableCount": 75,
+          "iconOnlyButtons": 21,
+          "targetsUnder24": 1,
+          "targetsUnder44": 61,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Create new Learn Pass",
+            "All 39",
+            "AI 1",
+            "AI agents 1",
+            "ai-certification 2",
+            "assessment 2",
+            "balance 1",
+            "career 1",
+            "communication 1",
+            "comparison 1"
+          ],
+          "headings": [
+            "H1 Index",
+            "H2 Learn Pass",
+            "H2 Choose your learning track",
+            "H2 Tag cloud",
+            "H2 Learning blocks",
+            "H3 Start Answer Phrases",
+            "H3 Structure & Add Ideas",
+            "H3 Word Index",
+            "H3 Reverse Practice",
+            "H3 100 Irregular Verbs",
+            "H3 200 Irregular Verbs — Logical Groups",
+            "H2 Phrase / Word of the day",
+            "H3 I would start by saying that …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "phrases": {
+          "viewport": {
+            "width": 332,
+            "height": 664
+          },
+          "documentHeight": 4078,
+          "horizontalOverflow": 12,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 627,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 547,
+            "height": 117,
+            "width": 332
+          },
+          "firstContentTop": 1178,
+          "firstContentAboveFold": false,
+          "focusableCount": 43,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 33,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden phrases",
+            "10x20x50x",
+            "Read listen phrases",
+            "Mark as learned",
+            "Speak",
+            "Speak example",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page"
+          ],
+          "headings": [
+            "H1 Phrases",
+            "H2 Phrases",
+            "H3 I would start by saying that …",
+            "H3 Let me start by saying that …",
+            "H3 The first thing I’d say is that …",
+            "H3 Before going into details, I’d say that …",
+            "H3 From my perspective, …"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "wordIndex": {
+          "viewport": {
+            "width": 332,
+            "height": 664
+          },
+          "documentHeight": 2985,
+          "horizontalOverflow": 12,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 627,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 547,
+            "height": 117,
+            "width": 332
+          },
+          "firstContentTop": 1514,
+          "firstContentAboveFold": false,
+          "focusableCount": 28,
+          "iconOnlyButtons": 10,
+          "targetsUnder24": 1,
+          "targetsUnder44": 13,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden words",
+            "10x20x50x",
+            "Read listen words",
+            "Speak example",
+            "Speak",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Words",
+            "H2 Word Index",
+            "H3 A balanced person usually makes better decisions."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "flashcards": {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "documentHeight": 1112,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": null,
+          "toolbar": {
+            "top": 74,
+            "height": 220,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 523,
+            "height": 117,
+            "width": 320
+          },
+          "firstContentTop": 316,
+          "firstContentAboveFold": true,
+          "focusableCount": 20,
+          "iconOnlyButtons": 6,
+          "targetsUnder24": 1,
+          "targetsUnder44": 8,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Shuffle remaining cards",
+            "Review learned vocabulary",
+            "All Vocabulary",
+            "By Topic",
+            "Speak",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H2 Flashcards"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "reverse": {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "documentHeight": 1417,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 196,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 523,
+            "height": 117,
+            "width": 320
+          },
+          "firstContentTop": 747,
+          "firstContentAboveFold": false,
+          "focusableCount": 15,
+          "iconOnlyButtons": 4,
+          "targetsUnder24": 1,
+          "targetsUnder44": 6,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Next random item",
+            "Check answer",
+            "Show answer",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Reverse",
+            "H2 Reverse Practice",
+            "H3 Хороше вирішення конфлікту може навіть зміцнити до"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "irregularVerbs": {
+          "viewport": {
+            "width": 392,
+            "height": 784
+          },
+          "documentHeight": 5390,
+          "horizontalOverflow": 72,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 722,
+            "width": 380
+          },
+          "bottomNav": {
+            "top": 667,
+            "height": 117,
+            "width": 392
+          },
+          "firstContentTop": 1273,
+          "firstContentAboveFold": false,
+          "focusableCount": 44,
+          "iconOnlyButtons": 30,
+          "targetsUnder24": 1,
+          "targetsUnder44": 33,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Show hidden verbs",
+            "10x20x50x",
+            "Read listen verbs",
+            "Speak example",
+            "Speak forms",
+            "Add to Focus List",
+            "Hide item",
+            "51020All",
+            "Next page",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Verbs",
+            "H2 100 Irregular Verbs",
+            "H3 be → was/were → been",
+            "H3 have → had → had",
+            "H3 do → did → done",
+            "H3 make → made → made",
+            "H3 get → got → got/gotten"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "patterns": {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "documentHeight": 6544,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 178,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 523,
+            "height": 117,
+            "width": 320
+          },
+          "firstContentTop": 729,
+          "firstContentAboveFold": false,
+          "focusableCount": 18,
+          "iconOnlyButtons": 8,
+          "targetsUnder24": 1,
+          "targetsUnder44": 10,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Speak example",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Patterns",
+            "H2 Answer Patterns",
+            "H3 STAR — behavioural answers",
+            "H3 PREP — opinion answers",
+            "H3 OREO — discussion answers",
+            "H3 Sandwich — feedback and weaknesses",
+            "H3 PPF — career journey",
+            "H3 SEE — analytical answers",
+            "H3 Universal speaking formula"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "answers": {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "documentHeight": 6778,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 157,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 523,
+            "height": 117,
+            "width": 320
+          },
+          "firstContentTop": 708,
+          "firstContentAboveFold": false,
+          "focusableCount": 17,
+          "iconOnlyButtons": 7,
+          "targetsUnder24": 1,
+          "targetsUnder44": 9,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Speak answer",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Answers",
+            "H2 Ready-Made Answers",
+            "H3 How can AI help people at work?",
+            "H3 How can AI coding tools help developers?",
+            "H3 What makes a good team?",
+            "H3 How do you deal with difficult clients?",
+            "H3 What do you do when you run into a problem?",
+            "H3 How do you usually handle online meetings?"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "practice": {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "documentHeight": 2530,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 217,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 523,
+            "height": 117,
+            "width": 320
+          },
+          "firstContentTop": 768,
+          "firstContentAboveFold": false,
+          "focusableCount": 12,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 4,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Generate random prompt",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Practice",
+            "H2 Practice Mode",
+            "H3 Click “Random prompt” to start."
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "favorites": {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "documentHeight": 1376,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 372,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 523,
+            "height": 117,
+            "width": 320
+          },
+          "firstContentTop": 923,
+          "firstContentAboveFold": false,
+          "focusableCount": 12,
+          "iconOnlyButtons": 2,
+          "targetsUnder24": 1,
+          "targetsUnder44": 4,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "10x20x50x",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Focus",
+            "H2 Focus List",
+            "H3 Focus list is empty"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        },
+        "collections": {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "documentHeight": 1624,
+          "horizontalOverflow": 0,
+          "topbar": {
+            "top": 0,
+            "height": 60,
+            "width": 320
+          },
+          "hero": {
+            "top": 74,
+            "height": 445,
+            "width": 296
+          },
+          "toolbar": {
+            "top": 533,
+            "height": 641,
+            "width": 296
+          },
+          "bottomNav": {
+            "top": 523,
+            "height": 117,
+            "width": 320
+          },
+          "firstContentTop": 1192,
+          "firstContentAboveFold": false,
+          "focusableCount": 12,
+          "iconOnlyButtons": 1,
+          "targetsUnder24": 1,
+          "targetsUnder44": 3,
+          "examplesUnder44": [
+            "Go to index",
+            "Theme: System. Switch to Light.",
+            "Open the previous version (v1)"
+          ],
+          "headings": [
+            "H1 Collections",
+            "H2 Your vocabulary collections",
+            "H3 No user collections yet"
+          ],
+          "langAttributes": [
+            "HTML:en"
+          ],
+          "translateNo": 0,
+          "ariaCurrent": 0,
+          "skipLink": false,
+          "links": 1
+        }
+      },
+      "ms": 8533
+    },
+    "aria-snapshots": {
+      "saved": [
+        "desktop-index",
+        "desktop-phrases",
+        "mobile-flashcards",
+        "mobile-collections",
+        "desktop-wordIndex"
+      ],
+      "ms": 10089
+    },
+    "journey-phrases-focus-hide-reset": {
+      "firstCardHeight": 462,
+      "hiddenItemStillListed": false,
+      "liveRegionsAfterHide": 1,
+      "heroBefore": "566\nphrases\n566\nwords\n339\nverbs\n2\nfocus\n1\nhidden",
+      "heroAfter": "566\nphrases\n566\nwords\n339\nverbs\n0\nfocus\n0\nhidden",
+      "resetDialogsShown": 0,
+      "ms": 4477
+    },
+    "journey-flashcards": {
+      "mobile": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentHeight": 1040,
+        "horizontalOverflow": 0,
+        "topbar": {
+          "top": 0,
+          "height": 60,
+          "width": 390
+        },
+        "hero": null,
+        "toolbar": {
+          "top": 74,
+          "height": 193,
+          "width": 366
+        },
+        "bottomNav": {
+          "top": 727,
+          "height": 117,
+          "width": 390
+        },
+        "firstContentTop": 289,
+        "firstContentAboveFold": true,
+        "focusableCount": 20,
+        "iconOnlyButtons": 6,
+        "targetsUnder24": 1,
+        "targetsUnder44": 8,
+        "examplesUnder44": [
+          "Go to index",
+          "Theme: System. Switch to Light.",
+          "Shuffle remaining cards",
+          "Review learned vocabulary",
+          "All Vocabulary",
+          "By Topic",
+          "Speak",
+          "Open the previous version (v1)"
+        ],
+        "headings": [
+          "H2 Flashcards"
+        ],
+        "langAttributes": [
+          "HTML:en"
+        ],
+        "translateNo": 0,
+        "ariaCurrent": 0,
+        "skipLink": false,
+        "links": 1
+      },
+      "mobileCard": {
+        "top": 289,
+        "height": 366
+      },
+      "mobileActionsBottom": 723,
+      "desktop": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentHeight": 1134,
+        "horizontalOverflow": 0,
+        "topbar": {
+          "top": 0,
+          "height": 104,
+          "width": 1440
+        },
+        "hero": {
+          "top": 130,
+          "height": 89,
+          "width": 1180
+        },
+        "toolbar": {
+          "top": 245,
+          "height": 236,
+          "width": 1180
+        },
+        "bottomNav": null,
+        "firstContentTop": 503,
+        "firstContentAboveFold": true,
+        "focusableCount": 23,
+        "iconOnlyButtons": 6,
+        "targetsUnder24": 1,
+        "targetsUnder44": 19,
+        "examplesUnder44": [
+          "Go to index",
+          "Index",
+          "Phrases",
+          "Words",
+          "Flashcards",
+          "Reverse",
+          "Verbs",
+          "Patterns",
+          "Answers",
+          "Practice",
+          "Focus",
+          "Collections"
+        ],
+        "headings": [
+          "H1 Flashcards",
+          "H2 Flashcards"
+        ],
+        "langAttributes": [
+          "HTML:en"
+        ],
+        "translateNo": 0,
+        "ariaCurrent": 0,
+        "skipLink": false,
+        "links": 1
+      },
+      "desktopCard": {
+        "top": 503,
+        "height": 360
+      },
+      "desktopActionsBottom": 931,
+      "ms": 7186
+    },
+    "journey-word-index-mobile": {
+      "before": {
+        "firstContentTop": 1474,
+        "headings": [
+          "H1 Words",
+          "H2 Word Index",
+          "H3 A balanced person usually makes better decisions."
+        ]
+      },
+      "after": {
+        "scrollY": 991,
+        "listTop": 147,
+        "listHeight": 320,
+        "detailTopInViewport": 483,
+        "viewportHeight": 844,
+        "detailVisible": true
+      },
+      "ms": 2658
+    },
+    "journey-collections": {
+      "emptyStateText": "No user collections yet\n\nTry changing filters or search query.",
+      "focusBeforeChoice": "INPUT:file",
+      "focusAfterPreview": "INPUT.svelte-1huuhsz",
+      "previewText": "Review import\n\nМої слова.csv: 4 new entries; 0 identical entries already present.\n\nCollection name\n\n2 entries have possible text duplicates. Different meanings are allowed; entries are never merged by their text.\n\nI reviewed these possible duplicates\nKind\tEnglish\tTranslation\tTopic / examples\tReview\nphrase\ttake ownership\tбрати відповідальність\tSynthetic workplace\n\nI take ownership of the release plan.\n\n\tNew\nword\testimate\tоцінка\tSynthetic workplace\n\nOur estimate was too optimistic.\n\n\tPossible duplicate\nword\testimate\tоцінювати\tSynthetic workplace\n\nPlease estimate the effort.\n\n\tPossible duplicate\nword\t<b>not bold</b>\tне жирний текст\tSynthetic markup\tNew\nConfirm import\nCancel import",
+      "previewTableOverflow": {
+        "scrollWidth": 480,
+        "clientWidth": 328
+      },
+      "successMessage": "Imported 4 entries. 0 identical entries were already present.",
+      "successClass": "rgb(255, 248, 225)",
+      "exportFileName": "-.json",
+      "focusAfterRenameOpen": "Rename Мої слова",
+      "focusAfterError": "INPUT",
+      "invalidMessage": "CSV needs english and translation headers; topic, example and kind are optional.",
+      "ms": 4414
+    },
+    "f5-stale-write": {
+      "bMessage": "Collection renamed.",
+      "aError": "Collection change was not saved. No partial import or deletion was kept. IndexedDB write failed: Saved data changed in another session. Reload and review the import again. Check available browser storage and try again.",
+      "errorTopInViewport": 186,
+      "renameFormTopInViewport": 680,
+      "ms": 5294
+    },
+    "f4-blocked-upgrade": {
+      "firstError": "Unable to open your saved progress\n\nThe browser storage (IndexedDB) could not be opened or read, so the app did not start with empty progress on top of it.\n\nIndexedDB open failed: Close other eng-trainer tabs so browser storage can be upgraded, then try again.\n\nYou can try again, or continue without saving: the app will work, but nothing you change will be kept after this page is closed.\n\nTry again\nContinue without saving",
+      "afterRetry": "Loading training materials…",
+      "recoveredAfterHolderClosed": true,
+      "recoveryMs": 106,
+      "ms": 4842
+    },
+    "saving-off": {
+      "notice": "Saving is off. The browser storage could not be opened, so changes are lost when this page is closed.",
+      "ms": 2010
+    },
+    "content-error": {
+      "text": "Unable to start the app\n\nFailed to load /eng-trainer/data/manifest.json (HTTP 404)\n\nFor local development, run npm run dev or npm run preview after building.\n\nTry again",
+      "ms": 451
+    },
+    "keyboard-desktop": {
+      "tabPressesToFirstCardControl": 19,
+      "firstCardControl": "Mark as learned",
+      "navFocus": {
+        "text": "Index",
+        "outline": "auto 3px rgb(226, 232, 240)",
+        "boxShadow": "none"
+      },
+      "backwardObscuredByStickyHeader": 4,
+      "obscuredSamples": [
+        "Mark as learned",
+        "Read listen phrases",
+        "10x20x50x",
+        "AllAdvanced Linking WordsAgent"
+      ],
+      "ms": 2365
+    },
+    "keyboard-narrow-bottom-nav": {
+      "forwardTabsObscuredByBottomNav": 6,
+      "samples": [
+        "",
+        "AllAdvanced Linking WordsAgent",
+        "Speak",
+        "Speak example"
+      ],
+      "bottomNavHeight": 117,
+      "ms": 2548
+    },
+    "theme-flash": {
+      "normal": {
+        "toggleLabel": "Theme: Dark. Switch to System.",
+        "throttle": 1,
+        "runs": [
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          },
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          },
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          },
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          },
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          }
+        ]
+      },
+      "cpu4x": {
+        "toggleLabel": "Theme: Dark. Switch to System.",
+        "throttle": 4,
+        "runs": [
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          },
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          },
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          },
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          },
+          {
+            "firstPaint": null,
+            "fcp": null,
+            "themeAtFirstPaint": null,
+            "darkAppliedAt": null,
+            "lightVisibleMs": null
+          }
+        ]
+      },
+      "ms": 14681
+    },
+    "icon-font-delay": {
+      "iconFontLoaded": false,
+      "ligatureText": [
+        "contrast",
+        "visibility",
+        "record_voice_over",
+        "check_circle",
+        "volume_up",
+        "record_voice_over",
+        "add",
+        "visibility_off"
+      ],
+      "ms": 6221
+    },
+    "page-weight": {
+      "requests": 17,
+      "byType": {
+        "document": 1212,
+        "stylesheet": 7795,
+        "script": 59492,
+        "fetch": 240576,
+        "font": 3135061
+      },
+      "byHost": {
+        "shcherbak-pro.github.io": 308205,
+        "fonts.googleapis.com": 870,
+        "fonts.gstatic.com": 3135061
+      },
+      "fonts": [
+        {
+          "url": "https://fonts.gstatic.com/s/materialsymbolsrounded/v386/sykd-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_QddU.woff",
+          "body": 3135061
+        }
+      ],
+      "timing": {
+        "domContentLoaded": 243,
+        "load": 243,
+        "first-paint": 268,
+        "first-contentful-paint": 268
+      },
+      "ms": 3696
+    }
+  },
+  "errors": {},
+  "console": [
+    {
+      "type": "console",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "browser": "chromium 157.0.8103.15",
+  "finishedAt": "2026-11-21T21:32:20.966Z"
+}

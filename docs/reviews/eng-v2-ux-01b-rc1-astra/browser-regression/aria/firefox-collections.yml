@@ -1,0 +1,49 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Collections" [level=1]
+  - region "Import words":
+    - heading "Import words" [level=2]
+    - paragraph: Choose a CSV or JSON file. You can review everything before anything is saved, and your file stays in this browser.
+    - button "Choose a file"
+    - text: Choose a file
+    - paragraph: CSV saved as UTF-8, or a JSON file exported from eng-trainer. Up to 2 MiB.
+    - region "How to prepare your file":
+      - heading "How to prepare your file" [level=3]
+      - list:
+        - listitem:
+          - strong: "Formats:"
+          - text: CSV, or a JSON file exported from eng-trainer.
+        - listitem:
+          - strong: "CSV encoding:"
+          - text: UTF-8.
+        - listitem:
+          - strong: "Required columns:"
+          - code: english
+          - text: and
+          - code: translation
+          - text: .
+        - listitem:
+          - strong: "Limits:"
+          - text: up to 2 MiB per file and 1,000 entries per collection.
+      - paragraph: Example CSV
+      - text: english,translation reliable,надійний improve,покращувати
+      - button "Download CSV template"
+      - button "Copy example"
+      - status
+      - group: More format details
+  - region "Your collections":
+    - heading "Your collections" [level=2]
+    - heading "No collections yet" [level=3]
+    - paragraph: Import a CSV file to create your first collection. Its words and phrases then appear in Phrases, Words and Flashcards.
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - 'button "More , current: Collections"'
+- status

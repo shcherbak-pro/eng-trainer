@@ -1,0 +1,3790 @@
+{
+  "startedAt": "2026-11-22T02:01:23.136Z",
+  "base": "http://127.0.0.1:4179/eng-trainer/",
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "scenarios": {
+        "layout-phone-light": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 64,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 49,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 161,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 19,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 137,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 232,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 136,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 72,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 10,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 7,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4590
+        },
+        "layout-phone-dark": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 64,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 49,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 161,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 19,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 137,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 232,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 136,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 72,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 10,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 7,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4494
+        },
+        "layout-narrow-light": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 64,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 49,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 161,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 19,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 137,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 284,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 136,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 72,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 10,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 7,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4514
+        },
+        "layout-narrow-dark": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 64,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 49,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 161,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 19,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 137,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 284,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 136,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 72,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 10,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 7,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4348
+        },
+        "layout-desktop-light": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 74,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 58,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 58,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 59,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 121,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 29,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 121,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 28,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 240,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 28,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 120,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 80,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 20,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 17,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4814
+        },
+        "layout-desktop-dark": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 74,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 58,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 58,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 59,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 121,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 29,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 121,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 28,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 240,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 28,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 120,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 80,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 20,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 17,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4890
+        },
+        "flashcard-answers-reachable": {
+          "status": "PASS",
+          "phone": {
+            "actionsBottom": 624,
+            "visibleLimit": 779
+          },
+          "desktop": {
+            "actionsBottom": 618,
+            "visibleLimit": 900
+          },
+          "ms": 1898
+        },
+        "reflow-large-text-and-font-fallbacks": {
+          "status": "PASS",
+          "text200-phrases": {
+            "overflow": 0,
+            "clipped": 2,
+            "tabBar": {
+              "labelsInside": true,
+              "height": 101,
+              "reserved": 133,
+              "scrollPadding": 117
+            }
+          },
+          "text200-collections": {
+            "overflow": 0,
+            "clipped": 0,
+            "tabBar": {
+              "labelsInside": true,
+              "height": 101,
+              "reserved": 133,
+              "scrollPadding": 117
+            }
+          },
+          "text200-flashcards": {
+            "overflow": 0,
+            "clipped": 1,
+            "tabBar": {
+              "labelsInside": true,
+              "height": 101,
+              "reserved": 133,
+              "scrollPadding": 117
+            }
+          },
+          "text200-settings": {
+            "overflow": 0,
+            "clipped": 0,
+            "tabBar": {
+              "labelsInside": true,
+              "height": 101,
+              "reserved": 133,
+              "scrollPadding": 117
+            }
+          },
+          "fonts-slow": {
+            "overflow": 0,
+            "firstEntry": 264,
+            "termText": "I would start by saying that …"
+          },
+          "fonts-failed": {
+            "overflow": 0,
+            "firstEntry": 264,
+            "termText": "I would start by saying that …"
+          },
+          "ms": 3239
+        },
+        "keyboard-and-focus": {
+          "status": "PASS",
+          "skip": {
+            "text": "Skip to content",
+            "visible": false
+          },
+          "reachedEntry": 11,
+          "obscured": 0,
+          "obscuredByScreen": {
+            "wordIndex": 0,
+            "irregularVerbs": 0,
+            "patterns": 0,
+            "favorites": 0,
+            "collections": 0,
+            "settings": 0
+          },
+          "ring": "solid 2px rgb(44, 91, 214)",
+          "afterHide": {
+            "label": "Hide item",
+            "entry": "Let me start by saying that …"
+          },
+          "afterUndo": {
+            "label": "Hide item",
+            "entry": "I would start by saying that …"
+          },
+          "afterEscape": {
+            "expanded": "false",
+            "focus": "More"
+          },
+          "ms": 4835
+        },
+        "reduced-motion": {
+          "status": "PASS",
+          "durations": {
+            "swipe": "1e-05s",
+            "inner": "1e-05s",
+            "button": "1e-05s"
+          },
+          "ms": 629
+        },
+        "collections-import-journey": {
+          "status": "PASS",
+          "example": "english,translation\nreliable,надійний\nimprove,покращувати",
+          "copyStatus": "Example copied.",
+          "copied": [
+            "english,translation\nreliable,надійний\nimprove,покращувати"
+          ],
+          "template": {
+            "name": "eng-trainer-vocabulary-template.csv",
+            "bom": true,
+            "sameText": true
+          },
+          "afterError": {
+            "focus": "notice notice--error ",
+            "title": "Missing column: “translation”",
+            "inputCleared": true
+          },
+          "afterPreview": "review-title",
+          "afterImport": {
+            "focus": "notice notice--success ",
+            "text": " Import complete Imported 2 entries. 0 identical entries were already present. Find the entries in Phrases, Words and Flashcards. "
+          },
+          "exportName": "Мої-слова-2026-11-22.json",
+          "reimport": " Import complete No changes needed. All 2 entries are already present. Find the entries in Phrases, Words and Flashcards. ",
+          "conflict": " The new name was not saved: this collection was changed in another tab or window. Reload the page to see the latest version, then try again. Reload page ",
+          "removed": true,
+          "ms": 3996
+        },
+        "blocked-upgrade-wait": {
+          "status": "PASS",
+          "waiting": " Close other eng-trainer tabs Your saved progress needs a quick upgrade. Another eng-trainer tab or window still uses the previous version, so the upgrade has t",
+          "recovered": true,
+          "savingOff": 0,
+          "ms": 1006
+        },
+        "blocked-upgrade-continue": {
+          "status": "PASS",
+          "waiting": " Close other eng-trainer tabs Your saved progress needs a quick upgrade. Another eng-trainer tab or window still uses the previous version, so the upgrade has t",
+          "notice": " Saving is off. The browser storage could not be opened, so changes are lost when this page is closed. Reload the app to try again. ",
+          "progressWritten": 0,
+          "ms": 2272
+        },
+        "safeguards": {
+          "status": "PASS",
+          "focusInDialog": "Cancel",
+          "ms": 3242
+        },
+        "content-error-screen": {
+          "status": "PASS",
+          "text": "The study material could not be loaded Check your internet connection and try again. Your saved progress is not affected. Try again Technical details Failed to load /eng-trainer/data/manifest.json (HTTP 503)",
+          "ms": 508
+        },
+        "v1-isolation": {
+          "status": "PASS",
+          "title": "English Assessment Trainer",
+          "databases": [],
+          "ms": 654
+        }
+      },
+      "log": [
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+          "reason": "net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/literata-latin-Cedbco83.woff2",
+          "reason": "net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+          "reason": "net::ERR_FAILED"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "scenario": "content-error-screen",
+          "type": "console",
+          "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+        },
+        {
+          "scenario": "v1-isolation",
+          "type": "external-request",
+          "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap"
+        },
+        {
+          "scenario": "v1-isolation",
+          "type": "console",
+          "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+        }
+      ]
+    },
+    "firefox": {
+      "version": "159.0",
+      "scenarios": {
+        "layout-phone-light": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 64,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 49,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 161,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 19,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 137,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 232,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 136,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 72,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 10,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 7,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 6102
+        },
+        "layout-phone-dark": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 64,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 236,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 49,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 161,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 19,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 137,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 232,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 136,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 72,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 10,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 7,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 779,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4644
+        },
+        "layout-narrow-light": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 64,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 49,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 161,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 19,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 137,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 284,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 136,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 72,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 10,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 7,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4169
+        },
+        "layout-narrow-dark": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 64,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 48,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 264,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 49,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 161,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 19,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 137,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 284,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 18,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 136,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 72,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 10,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 7,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 320,
+                "height": 640
+              },
+              "firstContentTop": 60,
+              "horizontalOverflow": 0,
+              "tabBarTop": 575,
+              "focusables": 13,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4259
+        },
+        "layout-desktop-light": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 74,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 58,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 58,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 59,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 121,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 29,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 121,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 28,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 240,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 28,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 120,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 80,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 20,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 17,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4727
+        },
+        "layout-desktop-dark": {
+          "status": "PASS",
+          "pages": {
+            "index": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 74,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Home",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "phrases": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 58,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Phrases",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "wordIndex": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 58,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Words",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "irregularVerbs": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 244,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 59,
+              "clipped": 2,
+              "stretchedIconButtons": 0,
+              "h1": "Verbs",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "patterns": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 121,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 29,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Patterns",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "answers": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 121,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 28,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Answers",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "flashcards": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 240,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 28,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Flashcards",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "reverse": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 120,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Reverse practice",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "practice": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 80,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 20,
+              "clipped": 1,
+              "stretchedIconButtons": 0,
+              "h1": "Speaking prompts",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "favorites": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 17,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Focus list",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "collections": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Collections",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            },
+            "settings": {
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "firstContentTop": 68,
+              "horizontalOverflow": 0,
+              "tabBarTop": 900,
+              "focusables": 23,
+              "clipped": 0,
+              "stretchedIconButtons": 0,
+              "h1": "Settings",
+              "h1Count": 1,
+              "h1InsideMain": true,
+              "googleFonts": false,
+              "fonts": {
+                "literata": true,
+                "sourceSans": true
+              },
+              "targetsUnder44": 0,
+              "undersizedTargets": []
+            }
+          },
+          "ms": 4726
+        },
+        "flashcard-answers-reachable": {
+          "status": "PASS",
+          "phone": {
+            "actionsBottom": 624,
+            "visibleLimit": 779
+          },
+          "desktop": {
+            "actionsBottom": 618,
+            "visibleLimit": 900
+          },
+          "ms": 2177
+        },
+        "reflow-large-text-and-font-fallbacks": {
+          "status": "PASS",
+          "text200-phrases": {
+            "overflow": 0,
+            "clipped": 2,
+            "tabBar": {
+              "labelsInside": true,
+              "height": 101,
+              "reserved": 133,
+              "scrollPadding": 117
+            }
+          },
+          "text200-collections": {
+            "overflow": 0,
+            "clipped": 0,
+            "tabBar": {
+              "labelsInside": true,
+              "height": 101,
+              "reserved": 133,
+              "scrollPadding": 117
+            }
+          },
+          "text200-flashcards": {
+            "overflow": 0,
+            "clipped": 1,
+            "tabBar": {
+              "labelsInside": true,
+              "height": 101,
+              "reserved": 133,
+              "scrollPadding": 117
+            }
+          },
+          "text200-settings": {
+            "overflow": 0,
+            "clipped": 0,
+            "tabBar": {
+              "labelsInside": true,
+              "height": 101,
+              "reserved": 133,
+              "scrollPadding": 117
+            }
+          },
+          "fonts-slow": {
+            "overflow": 0,
+            "firstEntry": 236,
+            "termText": "I would start by saying that …"
+          },
+          "fonts-failed": {
+            "overflow": 0,
+            "firstEntry": 236,
+            "termText": "I would start by saying that …"
+          },
+          "ms": 4298
+        },
+        "keyboard-and-focus": {
+          "status": "PASS",
+          "skip": {
+            "text": "Skip to content",
+            "visible": true
+          },
+          "reachedEntry": 12,
+          "obscured": 0,
+          "obscuredByScreen": {
+            "wordIndex": 0,
+            "irregularVerbs": 0,
+            "patterns": 0,
+            "favorites": 0,
+            "collections": 0,
+            "settings": 0
+          },
+          "ring": "solid 2px rgb(44, 91, 214)",
+          "afterHide": {
+            "label": "Hide item",
+            "entry": "Let me start by saying that …"
+          },
+          "afterUndo": {
+            "label": "Hide item",
+            "entry": "I would start by saying that …"
+          },
+          "afterEscape": {
+            "expanded": "false",
+            "focus": "More"
+          },
+          "ms": 6222
+        },
+        "reduced-motion": {
+          "status": "PASS",
+          "durations": {
+            "swipe": "0.00001s",
+            "inner": "0.00001s",
+            "button": "0.00001s"
+          },
+          "ms": 932
+        },
+        "collections-import-journey": {
+          "status": "PASS",
+          "example": "english,translation\nreliable,надійний\nimprove,покращувати",
+          "copyStatus": "Example copied.",
+          "copied": [
+            "english,translation\nreliable,надійний\nimprove,покращувати"
+          ],
+          "template": {
+            "name": "eng-trainer-vocabulary-template.csv",
+            "bom": true,
+            "sameText": true
+          },
+          "afterError": {
+            "focus": "notice notice--error ",
+            "title": "Missing column: “translation”",
+            "inputCleared": true
+          },
+          "afterPreview": "review-title",
+          "afterImport": {
+            "focus": "notice notice--success ",
+            "text": " Import complete Imported 2 entries. 0 identical entries were already present. Find the entries in Phrases, Words and Flashcards. "
+          },
+          "exportName": "Мої-слова-2026-11-22.json",
+          "reimport": " Import complete No changes needed. All 2 entries are already present. Find the entries in Phrases, Words and Flashcards. ",
+          "conflict": " The new name was not saved: this collection was changed in another tab or window. Reload the page to see the latest version, then try again. Reload page ",
+          "removed": true,
+          "ms": 4193
+        },
+        "blocked-upgrade-wait": {
+          "status": "PASS",
+          "waiting": " Close other eng-trainer tabs Your saved progress needs a quick upgrade. Another eng-trainer tab or window still uses the previous version, so the upgrade has t",
+          "recovered": true,
+          "savingOff": 0,
+          "ms": 1710
+        },
+        "blocked-upgrade-continue": {
+          "status": "PASS",
+          "waiting": " Close other eng-trainer tabs Your saved progress needs a quick upgrade. Another eng-trainer tab or window still uses the previous version, so the upgrade has t",
+          "notice": " Saving is off. The browser storage could not be opened, so changes are lost when this page is closed. Reload the app to try again. ",
+          "progressWritten": 0,
+          "ms": 2790
+        },
+        "safeguards": {
+          "status": "PASS",
+          "focusInDialog": "Cancel",
+          "ms": 3834
+        },
+        "content-error-screen": {
+          "status": "PASS",
+          "text": "The study material could not be loaded Check your internet connection and try again. Your saved progress is not affected. Try again Technical details Failed to load /eng-trainer/data/manifest.json (HTTP 503)",
+          "ms": 517
+        },
+        "v1-isolation": {
+          "status": "PASS",
+          "title": "English Assessment Trainer",
+          "databases": [],
+          "ms": 829
+        }
+      },
+      "log": [
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+          "reason": "NS_ERROR_FAILURE"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Eng Trainer Sans\" style:normal weight:400..700 width:100 src index:0): status=2147500037 source: http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2\"]"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/literata-latin-Cedbco83.woff2",
+          "reason": "NS_ERROR_FAILURE"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "requestfailed",
+          "url": "http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+          "reason": "NS_ERROR_FAILURE"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Literata\" style:normal weight:400..700 width:100 src index:0): status=2147500037 source: http://127.0.0.1:4179/eng-trainer/assets/literata-latin-Cedbco83.woff2\"]"
+        },
+        {
+          "scenario": "reflow-large-text-and-font-fallbacks",
+          "type": "console",
+          "text": "[JavaScript Error: \"downloadable font: download failed (font-family: \"Eng Trainer Sans\" style:normal weight:400..700 width:100 src index:0): status=2147500037 source: http://127.0.0.1:4179/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2\"]"
+        },
+        {
+          "scenario": "v1-isolation",
+          "type": "external-request",
+          "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap"
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "measurements": {
+    "firstLoad-index": {
+      "requests": 18,
+      "hosts": [
+        "127.0.0.1:4179"
+      ],
+      "bytesByType": {
+        "document": 1302,
+        "stylesheet": 41674,
+        "script": 241974,
+        "fetch": 1610367,
+        "font": 132956
+      },
+      "totalBytes": 2028273,
+      "gzipEstimateBytes": 451987,
+      "fonts": [
+        "eng-trainer-sans-latin-WBnKszXN.woff2",
+        "literata-latin-Cedbco83.woff2",
+        "eng-trainer-sans-cyrillic-CuD29lmH.woff2"
+      ]
+    },
+    "firstLoad-phrases": {
+      "requests": 18,
+      "hosts": [
+        "127.0.0.1:4179"
+      ],
+      "bytesByType": {
+        "document": 1302,
+        "stylesheet": 41674,
+        "script": 241974,
+        "fetch": 1610367,
+        "font": 132956
+      },
+      "totalBytes": 2028273,
+      "gzipEstimateBytes": 451987,
+      "fonts": [
+        "eng-trainer-sans-latin-WBnKszXN.woff2",
+        "literata-latin-Cedbco83.woff2",
+        "eng-trainer-sans-cyrillic-CuD29lmH.woff2"
+      ]
+    },
+    "firstLoad-wordIndex": {
+      "requests": 19,
+      "hosts": [
+        "127.0.0.1:4179"
+      ],
+      "bytesByType": {
+        "document": 1302,
+        "stylesheet": 41674,
+        "script": 241974,
+        "fetch": 1610367,
+        "font": 193105
+      },
+      "totalBytes": 2088422,
+      "gzipEstimateBytes": 512123,
+      "fonts": [
+        "eng-trainer-sans-latin-WBnKszXN.woff2",
+        "literata-latin-Cedbco83.woff2",
+        "eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+        "eng-trainer-sans-latin-ext-BaGxOnaP.woff2"
+      ]
+    },
+    "themeStartup4x": [
+      {
+        "firstPaint": 40,
+        "darkAt": 160,
+        "shellAt": 403,
+        "shellBeforeDark": false,
+        "transitionsEnabledAt": 403,
+        "transitionsBeforeDark": false
+      },
+      {
+        "firstPaint": 108,
+        "darkAt": 242,
+        "shellAt": 530,
+        "shellBeforeDark": false,
+        "transitionsEnabledAt": 530,
+        "transitionsBeforeDark": false
+      },
+      {
+        "firstPaint": 132,
+        "darkAt": 242,
+        "shellAt": 501,
+        "shellBeforeDark": false,
+        "transitionsEnabledAt": 501,
+        "transitionsBeforeDark": false
+      },
+      {
+        "firstPaint": 120,
+        "darkAt": 218,
+        "shellAt": 426,
+        "shellBeforeDark": false,
+        "transitionsEnabledAt": 426,
+        "transitionsBeforeDark": false
+      },
+      {
+        "firstPaint": 76,
+        "darkAt": 219,
+        "shellAt": 479,
+        "shellBeforeDark": false,
+        "transitionsEnabledAt": 479,
+        "transitionsBeforeDark": false
+      },
+      {
+        "firstPaint": 68,
+        "darkAt": 214,
+        "shellAt": 517,
+        "shellBeforeDark": false,
+        "transitionsEnabledAt": 517,
+        "transitionsBeforeDark": false
+      }
+    ],
+    "log": []
+  },
+  "finishedAt": "2026-11-22T02:03:21.559Z"
+}

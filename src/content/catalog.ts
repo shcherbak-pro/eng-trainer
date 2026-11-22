@@ -13,6 +13,8 @@ import type {
 
 export type VerbSet = {
   id: string;
+  /** The learning block that defines the set (its description is the set description). */
+  blockId: string;
   title: string;
   description?: string;
   count: number;
@@ -91,6 +93,7 @@ export function createCatalog(source: Materials): ContentCatalog {
     .filter((block) => block.type === 'irregularVerbs' && block.verbSet)
     .map((block) => ({
       id: block.verbSet as string,
+      blockId: block.id,
       title: block.title,
       description: block.description,
       count: data.irregularVerbs.filter((item) => item.verbSet === block.verbSet).length

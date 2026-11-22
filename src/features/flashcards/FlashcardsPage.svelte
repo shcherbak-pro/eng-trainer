@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { onDestroy } from 'svelte';
+  import { onDestroy, tick } from 'svelte';
+  import { get } from 'svelte/store';
   import type { ContentCatalog } from '../../content/catalog';
   import { inCollection, resolvedCollection } from '../../content/userCatalog';
   import CollectionFilter from '../../shared/ui/CollectionFilter.svelte';
-  import { progress } from '../../state/progress';
+  import { progress, type UndoToken } from '../../state/progress';
   import { settings } from '../../state/settings';
   import type { Flashcard, FlashcardAnswer, FlashcardMode } from './types';
   import {
@@ -20,9 +21,12 @@
     shuffleSession,
     summarizeDeck
   } from './flashcards';
+  import Button from '../../shared/ui/Button.svelte';
+  import ConfirmDialog from '../../shared/ui/ConfirmDialog.svelte';
   import EmptyState from '../../shared/ui/EmptyState.svelte';
+  import Icon from '../../shared/ui/Icon.svelte';
   import IconButton from '../../shared/ui/IconButton.svelte';
-  import MaterialIcon from '../../shared/ui/MaterialIcon.svelte';
+  import { showToast } from '../../shared/ui/toast';
   import SpeakButton from '../../shared/speech/SpeakButton.svelte';
 
   export let catalog: ContentCatalog;
@@ -34,6 +38,9 @@
   let view: 'learn' | 'review' = 'learn';
   let flipped = false;
   let notice = '';
+  let confirmReset = false;
+  let reviewHeading: HTMLHeadingElement | undefined;
+  let reviewToggle: HTMLButtonElement | undefined;
 
   // Swipe state.
   let pointerId: number | null = null;
@@ -116,6 +123,9 @@
     if (busy || !current || view !== 'learn') return;
 
     const card = current;
+    // The answer is newer intent for this card from the moment it is chosen, also
+    // "Keep learning" on a card that is not learned: an older Undo can no longer apply.
+    progress.noteIntent({ type: 'learned', id: card.id });
     const targetDeckKey = currentDeckKey;
     const targetSession = session;
     const savedSession = $progress.flashcardSessions[targetDeckKey];
@@ -176,19 +186,63 @@
     ));
   }
 
-  function learnAgain(card: Flashcard): void {
+  /** The "Learn again" buttons of the learned list, in order. */
+  function learnAgainButtons(): HTMLButtonElement[] {
+    return [...document.querySelectorAll<HTMLButtonElement>('.flashcards-review__list .learn-again')];
+  }
+
+  /** Focus that was on a control that has just been removed. */
+  function focusLost(): boolean {
+    const active = document.activeElement;
+    return !active || active === document.body || !active.isConnected;
+  }
+
+  async function learnAgain(card: Flashcard): Promise<void> {
+    const buttons = learnAgainButtons();
+    const self = buttons.find((item) => item.dataset.cardId === card.id) ?? null;
+    const hadFocus = self !== null && document.activeElement === self;
+    const position = self ? buttons.indexOf(self) : -1;
     progress.relearnFlashcards([card.id]);
+    const token = progress.issueUndo({ type: 'learned', id: card.id });
+    showToast(`“${card.text}” is back in the deck.`, { actionLabel: 'Undo', onAction: () => undoLearnAgain(token, card.id) });
+
+    // The row has left the list. Keyboard users continue with the row that took its place,
+    // else the one before it, else the list heading. Focus the user moved elsewhere stays put.
+    if (!hadFocus) return;
+    await tick();
+    if (!focusLost()) return;
+    const remaining = learnAgainButtons();
+    (remaining[Math.min(position, remaining.length - 1)] ?? reviewHeading)?.focus();
+  }
+
+  /**
+   * Undo for "Learn again" restores the learned flag of this one card, nothing else.
+   * "Learn again" changes no deck order or position, so none needs restoring. The Undo is
+   * refused once the card was answered or changed again, after a Reset, and when it was
+   * already used. It returns the restored row for keyboard focus or, when the learned list
+   * is not on screen, the button that opens it.
+   */
+  async function undoLearnAgain(token: UndoToken, id: string): Promise<HTMLElement | null> {
+    if (!progress.redeemUndo(token)) return null;
+    if (!get(progress).learnedPhrases.includes(id)) progress.toggleLearnedPhrase(id);
+    await tick();
+    return learnAgainButtons().find((item) => item.dataset.cardId === id) ?? (reviewToggle?.isConnected ? reviewToggle : null);
+  }
+
+  /** After a deck reset the opener is gone: the list heading, else the current card, else the review button. */
+  function afterResetFocus(): HTMLElement | null {
+    return (view === 'review' ? reviewHeading : null) ?? document.querySelector<HTMLElement>('.flashcard__surface') ?? reviewToggle ?? null;
+  }
+
+  /** Resetting a deck needs an explicit confirmation; opening or cancelling it changes nothing. */
+  function requestReset(): void {
+    if (busy || !learnedCount) return;
+    confirmReset = true;
   }
 
   function resetDeck(): void {
+    confirmReset = false;
     if (busy || !learnedCount) return;
-
-    const confirmed =
-      typeof window === 'undefined' ||
-      window.confirm(
-        `Reset progress for "${deckLabel}"? ${plural(learnedCount, 'learned card')} will return to the learning deck.`
-      );
-    if (!confirmed) return;
 
     const resetIds = new Set([...deck.learning, ...deck.learned].map((card) => card.id));
     const resetSession = preserveUnavailableCards(
@@ -199,7 +253,8 @@
     progress.resetFlashcardDeck(
       currentDeckKey,
       deck.learned.map((card) => card.id),
-      resetSession.order.some((id) => !availableIds.has(id)) ? resetSession : undefined
+      resetSession.order.some((id) => !availableIds.has(id)) ? resetSession : undefined,
+      [...resetIds]
     );
     view = 'learn';
     notice = '';
@@ -304,51 +359,24 @@
 
 <svelte:window on:keydown={onKeydown} />
 
-<section class="section-stack flashcards-page">
-  <div class="toolbar-card controls-stack flashcards-toolbar">
-    <div class="flashcards-toolbar__header">
-      <h2>Flashcards</h2>
-      <div class="control-actions">
-        <IconButton icon="shuffle" label="Shuffle remaining cards" variant="secondary" disabled={view !== 'learn' || remaining < 2} onClick={shuffle} />
-        <IconButton
-          icon={view === 'review' ? 'style' : 'checklist'}
-          label={view === 'review' ? 'Back to flashcards' : 'Review learned vocabulary'}
-          variant="secondary"
-          active={view === 'review'}
-          onClick={() => (view = view === 'review' ? 'learn' : 'review')}
-        />
-        <IconButton icon="restart_alt" label={`Reset progress for ${deckLabel}`} variant="danger" disabled={!learnedCount} onClick={resetDeck} />
-      </div>
-    </div>
-    <p class="flashcards-toolbar__intro">Swipe right if you know it, left to keep learning. Tap the card to flip it.</p>
-
+<section class="flashcards-page" aria-label="Flashcards">
+  <div class="flashcards-toolbar">
     <div class="flashcards-deck">
-      <CollectionFilter {catalog} />
       <div class="segmented" role="group" aria-label="Deck">
-        <button type="button" class:active={mode === 'all'} aria-pressed={mode === 'all'} on:click={() => setMode('all')}>
-          All Vocabulary
-        </button>
-        <button
-          type="button"
-          class:active={mode === 'topic'}
-          aria-pressed={mode === 'topic'}
-          disabled={!topics.length}
-          on:click={() => setMode('topic')}
-        >
-          By Topic
-        </button>
+        <button type="button" aria-pressed={mode === 'all'} on:click={() => setMode('all')}>All Vocabulary</button>
+        <button type="button" aria-pressed={mode === 'topic'} disabled={!topics.length} on:click={() => setMode('topic')}>By Topic</button>
       </div>
-
       {#if mode === 'topic'}
-        <label>
-          Topic
-          <select value={topic} on:change={setTopic}>
+        <label class="filter-select">
+          <span class="visually-hidden">Topic</span>
+          <select aria-label="Topic" value={topic} on:change={setTopic}>
             {#each topicStats as item (item.name)}
               <option value={item.name}>{item.name} ({item.learned}/{item.total} learned)</option>
             {/each}
           </select>
         </label>
       {/if}
+      <CollectionFilter {catalog} />
     </div>
 
     <div class="flashcards-progress">
@@ -367,49 +395,57 @@
         aria-valuemax={total}
         aria-valuenow={learnedCount}
       >
-        <span style={`width: ${learnedPercent}%`}></span>
+        <span style={`transform: scaleX(${total ? learnedCount / total : 0})`}></span>
       </div>
       {#if deck.hiddenCount}
-        <p class="flashcards-progress__note muted">
+        <p class="flashcards-progress__note">
           {plural(deck.hiddenCount, 'hidden item')} left out. Unhide on the Phrases or Words page to include.
         </p>
       {/if}
       <p class="flashcards-progress__note" role="status">{notice}</p>
     </div>
+
+    <div class="flashcards-actions">
+      <Button variant="secondary" size="sm" icon="shuffle" label="Shuffle remaining cards" disabled={view !== 'learn' || remaining < 2} onClick={shuffle}>Shuffle</Button>
+      <Button
+        variant="secondary"
+        size="sm"
+        icon={view === 'review' ? 'practice' : 'list'}
+        label={view === 'review' ? 'Back to flashcards' : `Review learned vocabulary (${learnedCount})`}
+        bind:element={reviewToggle}
+        onClick={() => (view = view === 'review' ? 'learn' : 'review')}
+      >{view === 'review' ? 'Back to flashcards' : `Review learned vocabulary (${learnedCount})`}</Button>
+    </div>
   </div>
 
   {#if view === 'review'}
-    <div class="card flashcards-review">
-      <div class="card__header">
-        <div>
-          <h3>Learned vocabulary</h3>
-          <p class="muted">{plural(learnedCount, 'learned card')} in {deckLabel}.</p>
-        </div>
-        <button type="button" class="btn secondary" on:click={() => (view = 'learn')}>Back to flashcards</button>
-      </div>
+    <section class="flashcards-review" aria-labelledby="review-title">
+      <h2 id="review-title" class="panel__title" tabindex="-1" bind:this={reviewHeading}>Learned vocabulary</h2>
+      <p class="muted">{plural(learnedCount, 'learned card')} in {deckLabel}.</p>
 
       {#if learnedCount}
         <ul class="flashcards-review__list">
           {#each deck.learned as card (card.id)}
             <li>
               <div class="flashcards-review__text">
-                <strong>{card.text}</strong>
-                <span class="translation">{card.translation}</span>
+                <strong lang="en" translate="no">{card.text}</strong>
+                <span class="entry__translation" lang={card.id.startsWith('user:') ? '' : 'uk'}>{card.translation}</span>
               </div>
               <div class="flashcards-review__actions">
-                <SpeakButton text={card.text} label={`Speak: ${card.text}`} />
-                <button type="button" class="btn focus" on:click={() => learnAgain(card)}>Learn again</button>
+                <SpeakButton text={card.text} label={`Listen: ${card.text}`} />
+                <Button variant="secondary" size="sm" icon="undo" class="learn-again" data-card-id={card.id} onClick={() => void learnAgain(card)}>Learn again</Button>
               </div>
             </li>
           {/each}
         </ul>
-        <div class="card__actions">
-          <button type="button" class="btn danger" on:click={resetDeck}>Reset progress for {deckLabel}</button>
-        </div>
       {:else}
-        <p class="muted">Nothing learned here yet. Swipe a card right or press “I know it” to add it to this list.</p>
+        <p class="muted">Nothing learned here yet. Swipe a card right or choose “I know it” to add it to this list.</p>
       {/if}
-    </div>
+      <div class="flashcards-review__footer">
+        <Button variant="secondary" icon="practice" onClick={() => (view = 'learn')}>Back to flashcards</Button>
+        {#if learnedCount}<Button variant="danger" icon="reset" onClick={requestReset}>Reset progress for {deckLabel}</Button>{/if}
+      </div>
+    </section>
   {:else if current}
     <div class="flashcard-stage">
       {#key `${currentId}:${cardSerial}`}
@@ -440,30 +476,30 @@
                     {#each current.topics as name}<span>{name}</span>{/each}
                     {#if current.level}<span>{current.level}</span>{/if}
                   </span>
-                  <span class="flashcard__term" class:long={current.text.length > LONG_TEXT_LENGTH}>{current.text}</span>
+                  <span class="flashcard__term" class:long={current.text.length > LONG_TEXT_LENGTH} lang="en" translate="no">{current.text}</span>
                   {#if current.transcription}
-                    <span class="flashcard__transcription">{current.transcription}</span>
+                    <span class="flashcard__transcription ipa" translate="no">{current.transcription}</span>
                   {/if}
-                  <span class="flashcard__hint"><MaterialIcon name="touch_app" /> Tap to flip</span>
+                  <span class="flashcard__hint">Say it aloud, then tap to see the meaning</span>
                 </span>
 
                 <span class="flashcard__face flashcard__face--back" aria-hidden={!flipped}>
                   <span class="flashcard__label">Translation</span>
-                  <span class="flashcard__translation" class:long={current.translation.length > LONG_TEXT_LENGTH}>
+                  <span class="flashcard__translation" class:long={current.translation.length > LONG_TEXT_LENGTH} lang={current.id.startsWith('user:') ? '' : 'uk'}>
                     {current.translation}
                   </span>
                   {#if example}
                     <span class="flashcard__example">
                       <span class="flashcard__label">Example</span>
-                      <span class="example">{example.en}</span>
-                      {#if example.ua}<span class="translation">{example.ua}</span>{/if}
+                      <span class="example__text" lang="en" translate="no">{example.en}</span>
+                      {#if example.ua}<span class="example__translation" lang={current.id.startsWith('user:') ? '' : 'uk'}>{example.ua}</span>{/if}
                     </span>
                   {/if}
                   {#if current.alternatives.length}
-                    <span class="flashcard__meta"><strong>Common alternatives:</strong> {current.alternatives.join('; ')}</span>
+                    <span class="flashcard__meta">Also said: <span lang="en" translate="no">{current.alternatives.join('; ')}</span></span>
                   {/if}
                   {#if current.section}
-                    <span class="flashcard__meta"><strong>Section:</strong> {current.section}</span>
+                    <span class="flashcard__meta">Section: {current.section}</span>
                   {/if}
                 </span>
               </span>
@@ -471,9 +507,9 @@
 
             <div class="flashcard__speak">
               {#if !flipped}
-                <SpeakButton text={current.text} label="Speak" />
+                <SpeakButton text={current.text} label="Listen" />
               {:else if example}
-                <SpeakButton text={example.en} label="Speak example" icon="record_voice_over" />
+                <SpeakButton text={example.en} label="Listen to example" />
               {/if}
             </div>
           </article>
@@ -488,19 +524,15 @@
       {/key}
 
       <div class="flashcard-actions">
-        <button type="button" class="btn focus" disabled={busy} on:click={() => answer('again')}>
-          <MaterialIcon name="arrow_back" /> Keep learning
-        </button>
+        <Button variant="secondary" icon="arrow-left" disabled={busy} onClick={() => answer('again')}>Keep learning</Button>
         <IconButton icon="flip" label="Flip card" variant="secondary" disabled={busy} onClick={flip} />
-        <button type="button" class="btn learned-btn" disabled={busy} on:click={() => answer('know')}>
-          I know it <MaterialIcon name="arrow_forward" />
-        </button>
+        <Button variant="known" iconEnd="arrow-right" disabled={busy} onClick={() => answer('know')}>I know it</Button>
       </div>
 
-      <p class="flashcard-keys muted">
-        Keyboard: <kbd>←</kbd> Keep learning · <kbd>→</kbd> I know it · <kbd>Enter</kbd> / <kbd>Space</kbd> Flip
+      <p class="flashcard-keys">
+        Keyboard: <kbd>←</kbd> Keep learning, <kbd>→</kbd> I know it, <kbd>Enter</kbd> or <kbd>Space</kbd> flips the card
       </p>
-      <p class="flashcard-touch-hint muted">Swipe right: I know it · Swipe left: Keep learning</p>
+      <p class="flashcard-touch-hint">Swipe right if you know it, left to keep learning</p>
     </div>
   {:else if total === 0}
     <EmptyState
@@ -510,14 +542,26 @@
         : 'This topic has no vocabulary yet. Choose another topic or switch to All Vocabulary.'}
     />
   {:else}
-    <div class="card flashcards-complete">
-      <MaterialIcon name="celebration" />
-      <h3>Deck complete</h3>
+    <div class="flashcards-complete">
+      <Icon name="check-circle" size={40} />
+      <h2 class="panel__title">Deck complete</h2>
       <p>You know all {plural(total, 'card')} in {deckLabel}.</p>
-      <div class="card__actions">
-        <button type="button" class="btn primary" on:click={() => (view = 'review')}>Review learned vocabulary</button>
-        <button type="button" class="btn danger" on:click={resetDeck}>Reset progress</button>
+      <div class="flashcards-review__footer">
+        <Button variant="primary" icon="list" onClick={() => (view = 'review')}>Review learned vocabulary</Button>
+        <Button variant="danger" icon="reset" onClick={requestReset}>Reset progress for {deckLabel}</Button>
       </div>
     </div>
   {/if}
 </section>
+
+<ConfirmDialog
+  open={confirmReset}
+  title={`Reset progress for “${deckLabel}”?`}
+  confirmLabel="Reset this deck"
+  onConfirm={resetDeck}
+  onCancel={() => (confirmReset = false)}
+  returnFocus={afterResetFocus}
+>
+  <p>{plural(learnedCount, 'learned card')} in this deck will return to the learning deck, and the deck starts from its first card.</p>
+  <p>Other decks, your Focus list and hidden items are not changed.</p>
+</ConfirmDialog>

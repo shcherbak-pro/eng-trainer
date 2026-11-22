@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concept B: Spoken Line</title>
+<!-- ENG-V2-UX-01A static design mockup. Not production code. Fonts load from Google Fonts for review only;
+     the proposal is to self-host them in the app. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..500&family=Source+Sans+3:ital,wght@0,400..700;1,400&display=swap">
+<style>
+  :root { --font-line: 'Literata', Georgia, serif; --font-ui: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; }
+  .light { color-scheme: light; --paper:#F5F6F9; --surface:#FFFFFF; --sunk:#E9EDF4; --ink:#172238; --ink-2:#38445C; --muted:#56627A; --rule:#DCE1EA; --field:#7A859B; --hl:#FFE27A; --hl-ink:#172238; --known:#17744A; --known-ink:#FFFFFF; --known-soft:#E2F3E9; --warn:#7A4F00; --warn-soft:#FFF3D1; --danger:#B3261E; --danger-ink:#FFFFFF; --ring:#2C5BD6; --scrim:rgba(15,22,36,.5); --inverse:#172238; --on-inverse:#F5F6F9; }
+  .dark { color-scheme: dark; --paper:#0D1322; --surface:#151D30; --sunk:#1E2942; --ink:#E8ECF5; --ink-2:#C3CADA; --muted:#9CA6BC; --rule:#27324C; --field:#7D89A4; --hl:#FFD84D; --hl-ink:#0D1322; --known:#6CD19C; --known-ink:#0D1322; --known-soft:#16352A; --warn:#F3C35B; --warn-soft:#33290F; --danger:#FF8B82; --danger-ink:#0D1322; --ring:#8DB2FF; --scrim:rgba(0,0,0,.6); --inverse:#E8ECF5; --on-inverse:#0D1322; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 40px; background: #CDD2DB; font-family: var(--font-ui); display: flex; flex-wrap: wrap; gap: 48px 40px; align-items: flex-start; }
+  figure { margin: 0; }
+  figcaption { font: 600 14px/1.3 var(--font-ui); color: #1B2333; margin: 0 0 10px; }
+  .frame { position: relative; overflow: hidden; background: var(--paper); color: var(--ink); font: 400 16px/1.45 var(--font-ui); }
+  .phone { width: 390px; height: 844px; }
+  .desk { width: 1280px; height: 800px; display: grid; grid-template-columns: 248px 1fr; }
+  button { font: inherit; color: inherit; }
+  .i { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .i.fill { fill: currentColor; stroke: none; }
+  [lang="uk"] { font-family: var(--font-ui); }
+  .focus-shown { outline: 2px solid var(--ring); outline-offset: 3px; border-radius: 6px; }
+
+  /* App bar, tabs, fields */
+  .appbar { height: 56px; display: flex; align-items: center; gap: 4px; padding: 0 8px 0 16px; }
+  .appbar h1 { flex: 1; margin: 0; font: 650 23px/1.2 var(--font-ui); letter-spacing: -0.01em; }
+  .icon-btn { width: 44px; height: 44px; display: grid; place-items: center; border: 0; border-radius: 12px; background: transparent; color: var(--ink); }
+  .pass { height: 34px; display: inline-flex; align-items: center; gap: 4px; padding: 0 8px 0 12px; border: 1px solid var(--field); border-radius: 17px; background: var(--surface); font: 600 14px var(--font-ui); color: var(--ink); }
+  .pass .i { width: 18px; height: 18px; }
+  .tabs { display: flex; gap: 2px; padding: 0 8px; border-bottom: 1px solid var(--rule); }
+  .tab { height: 44px; padding: 0 10px; border: 0; background: none; font: 600 15px var(--font-ui); color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tab.on { color: var(--ink); border-bottom-color: var(--ink); }
+  .search { margin: 12px 16px 0; height: 46px; display: flex; align-items: center; gap: 10px; padding: 0 12px; border: 1px solid var(--field); border-radius: 10px; background: var(--surface); color: var(--muted); font-size: 16px; }
+  .search span { flex: 1; }
+  .search small { font: 600 13px var(--font-ui); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .filters { display: flex; gap: 8px; padding: 10px 16px 12px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, #000 86%, transparent); mask-image: linear-gradient(90deg, #000 86%, transparent); }
+  .desk .filters, .toolbar .filter { -webkit-mask-image: none; mask-image: none; }
+  .filter { height: 34px; display: inline-flex; align-items: center; gap: 4px; padding: 0 10px 0 12px; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); font: 600 14px var(--font-ui); color: var(--ink-2); white-space: nowrap; }
+  .filter .i { width: 18px; height: 18px; }
+
+  /* Entry rows: lines on paper, not cards */
+  .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .row { display: grid; grid-template-columns: 44px 1fr 44px; gap: 12px; padding: 14px 8px 14px 14px; border-bottom: 1px solid var(--rule); align-items: start; }
+  .row.current { background: var(--surface); }
+  .listen { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); }
+  .listen.playing { background: var(--ink); color: var(--paper); }
+  .line { margin: 0; font: 430 19px/1.32 var(--font-line); font-variation-settings: 'opsz' 19; color: var(--ink); text-wrap: pretty; }
+  .ua { margin: 3px 0 0; font: 400 15.5px/1.4 var(--font-ui); color: var(--ink-2); }
+  .ipa { margin: 2px 0 0; font: 400 14.5px/1.4 var(--font-ui); color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin-top: 7px; font: 500 13px/1.2 var(--font-ui); color: var(--muted); }
+  .level { padding: 2px 5px; border: 1px solid var(--rule); border-radius: 4px; font-weight: 650; color: var(--ink-2); }
+  .known { display: inline-flex; align-items: center; gap: 3px; color: var(--known); font-weight: 650; }
+  .known .i { width: 16px; height: 16px; stroke-width: 2.25; }
+  .star { color: var(--muted); }
+  .star.on { color: var(--hl-ink); }
+  .star.on .i { fill: var(--hl); stroke: var(--ink); }
+  mark.spoken { color: inherit; background: linear-gradient(transparent 52%, var(--hl) 52%, var(--hl) 92%, transparent 92%); padding: 0 1px; }
+  .dark mark.spoken { color: var(--hl); background: none; text-decoration: underline 3px var(--hl); text-underline-offset: 6px; }
+
+  /* Bottom navigation: one row, five destinations */
+  .tabbar { position: absolute; left: 0; right: 0; bottom: 0; height: 74px; padding-bottom: 10px; display: grid; grid-template-columns: repeat(5, 1fr); background: var(--surface); border-top: 1px solid var(--rule); }
+  .tabbar a { display: grid; justify-items: center; align-content: center; gap: 2px; font: 600 12px var(--font-ui); color: var(--muted); text-decoration: none; }
+  .tabbar a span.pill { width: 56px; height: 30px; display: grid; place-items: center; border-radius: 15px; }
+  .tabbar a[aria-current] { color: var(--ink); }
+  .tabbar a[aria-current] span.pill { background: var(--sunk); }
+
+  .toast { position: absolute; left: 12px; right: 12px; bottom: 86px; display: flex; align-items: center; gap: 12px; padding: 10px 8px 10px 16px; border-radius: 12px; background: var(--inverse); color: var(--on-inverse); font: 500 15px/1.3 var(--font-ui); box-shadow: 0 6px 20px rgba(10,16,30,.25); }
+  .toast span { flex: 1; }
+  .toast button { height: 40px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; color: var(--hl); font: 700 15px var(--font-ui); }
+  .dark .toast button { color: #6E5000; }
+
+  /* Buttons */
+  .btn { height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0 18px; border-radius: 12px; border: 1.5px solid transparent; font: 650 16px var(--font-ui); }
+  .btn .i { width: 20px; height: 20px; }
+  .btn.primary { background: var(--ink); color: var(--paper); }
+  .btn.secondary { background: var(--surface); color: var(--ink); border-color: var(--field); }
+  .btn.quiet { background: transparent; color: var(--ink); border-color: transparent; padding: 0 10px; }
+  .btn.known { background: var(--known); color: var(--known-ink); }
+  .btn.danger { background: var(--danger); color: var(--danger-ink); }
+  .btn.small { height: 40px; padding: 0 12px; font-size: 15px; border-radius: 10px; }
+  .btn.wide { width: 100%; height: 56px; font-size: 17px; }
+
+  /* Session stage */
+  .session-top { height: 56px; display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 8px; padding: 0 16px 0 6px; }
+  .session-top strong { font: 650 16px var(--font-ui); }
+  .session-top small { font: 600 15px var(--font-ui); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .progress { height: 4px; margin: 0 16px; border-radius: 2px; background: var(--rule); overflow: hidden; }
+  .progress span { display: block; height: 100%; background: var(--ink); }
+  .stage { position: absolute; top: 76px; bottom: 150px; left: 0; right: 0; display: grid; align-content: center; justify-items: center; gap: 14px; padding: 0 26px; text-align: center; }
+  .topic { display: flex; gap: 8px; align-items: center; font: 600 14px var(--font-ui); color: var(--muted); }
+  .term { margin: 6px 0 0; font: 470 42px/1.12 var(--font-line); font-variation-settings: 'opsz' 42; letter-spacing: -0.012em; text-wrap: balance; }
+  .term-ipa { font: 400 18px/1.3 var(--font-ui); color: var(--muted); }
+  .audio { display: flex; gap: 10px; margin-top: 6px; }
+  .prompt { margin: 16px 0 0; max-width: 28ch; font: 400 16px/1.45 var(--font-ui); color: var(--ink-2); }
+  .dock { position: absolute; left: 16px; right: 16px; bottom: 24px; display: grid; gap: 10px; }
+  .dock p { margin: 0; text-align: center; font: 500 14px var(--font-ui); color: var(--muted); }
+  .answer-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .answer-row .btn { height: 60px; font-size: 17px; }
+  .revealed { position: absolute; top: 76px; left: 0; right: 0; bottom: 120px; padding: 22px 24px 0; display: grid; align-content: start; gap: 6px; }
+  .revealed .small-term { font: 470 30px/1.15 var(--font-line); font-variation-settings: 'opsz' 30; margin: 0; }
+  .revealed .meaning { margin: 18px 0 0; font: 650 27px/1.25 var(--font-ui); }
+  .example { margin-top: 18px; padding: 14px 4px 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 44px; gap: 8px; align-items: start; }
+  .example p { margin: 0; font: italic 420 19px/1.45 var(--font-line); font-variation-settings: 'opsz' 19; }
+  .also { margin-top: 12px; font: 400 15.5px/1.45 var(--font-ui); color: var(--ink-2); }
+
+  /* Home */
+  .section { padding: 18px 16px 6px; }
+  .section h2 { margin: 0 0 10px; font: 650 17px/1.3 var(--font-ui); }
+  .resume { margin: 8px 16px 0; padding: 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--rule); }
+  .resume h2 { margin: 0; font: 650 19px/1.3 var(--font-ui); }
+  .resume p { margin: 4px 0 14px; color: var(--ink-2); }
+  .resume .btns { display: flex; gap: 10px; }
+  .daily .line { font-size: 26px; font-variation-settings: 'opsz' 26; }
+  .daily .actions { display: flex; gap: 8px; margin-top: 12px; }
+  .blocks { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .blocks li { display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 8px 0 16px; border-bottom: 1px solid var(--rule); font: 600 16px var(--font-ui); }
+  .blocks li span { flex: 1; }
+  .blocks li small { font: 500 14px var(--font-ui); color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  /* Notices, dialogs, import review */
+  .notice { display: grid; grid-template-columns: 22px 1fr; gap: 10px; padding: 12px 14px; border-radius: 12px; font: 400 15px/1.45 var(--font-ui); }
+  .notice.warn { background: var(--warn-soft); color: var(--ink); }
+  .notice.warn .i { color: var(--warn); }
+  .check { display: flex; gap: 10px; align-items: center; min-height: 44px; font: 600 15px var(--font-ui); }
+  .box { width: 22px; height: 22px; border: 2px solid var(--field); border-radius: 5px; display: grid; place-items: center; background: var(--surface); }
+  .box.on { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+  .box .i { width: 16px; height: 16px; stroke-width: 2.5; }
+  .field label { display: block; font: 600 14px var(--font-ui); color: var(--ink-2); margin-bottom: 6px; }
+  .input { height: 46px; display: flex; align-items: center; padding: 0 12px; border: 1px solid var(--field); border-radius: 10px; background: var(--surface); font-size: 16px; }
+  .import-card { margin: 4px 16px 0; padding: 16px; border: 1.5px dashed var(--field); border-radius: 14px; display: grid; gap: 10px; background: var(--surface); }
+  .import-card h2 { margin: 0; font: 650 17px var(--font-ui); }
+  .import-card p { margin: 0; font-size: 15px; color: var(--ink-2); }
+  .review { padding: 18px 16px 0; display: grid; gap: 12px; }
+  .review h2 { margin: 0; font: 650 20px/1.3 var(--font-ui); justify-self: start; padding: 0 2px; }
+  .counts { display: flex; gap: 8px; }
+  .count { padding: 4px 10px; border-radius: 6px; background: var(--sunk); font: 650 14px var(--font-ui); }
+  .count.warn { background: var(--warn-soft); color: var(--warn); }
+  .entries { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .entries li { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 11px 2px; border-bottom: 1px solid var(--rule); }
+  .entries .en { font: 450 17px/1.3 var(--font-line); font-variation-settings: 'opsz' 17; }
+  .entries .tag { align-self: start; padding: 2px 8px; border-radius: 6px; font: 650 13px var(--font-ui); background: var(--sunk); color: var(--ink-2); }
+  .entries .tag.warn { background: var(--warn-soft); color: var(--warn); }
+  .entries small { grid-column: 1 / -1; font: 400 13.5px var(--font-ui); color: var(--muted); }
+  .actionbar { position: absolute; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1.6fr; gap: 10px; padding: 12px 16px 22px; background: var(--surface); border-top: 1px solid var(--rule); }
+  .scrim { position: absolute; inset: 0; background: var(--scrim); }
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 20px 26px; border-radius: 20px 20px 0 0; background: var(--surface); display: grid; gap: 12px; box-shadow: 0 -10px 30px rgba(10,16,30,.25); }
+  .sheet .handle { width: 40px; height: 5px; border-radius: 3px; background: var(--rule); justify-self: center; }
+  .sheet h2 { margin: 6px 0 0; font: 650 22px/1.25 var(--font-ui); }
+  .sheet p, .sheet li { font-size: 16px; color: var(--ink-2); }
+  .sheet p { margin: 0; }
+  .sheet ul { margin: 0; padding-left: 20px; display: grid; gap: 2px; }
+  .sheet .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .blocked { position: absolute; inset: 0; padding: 0 28px; display: grid; align-content: center; gap: 14px; }
+  .blocked h1 { margin: 0; font: 650 27px/1.2 var(--font-ui); letter-spacing: -0.01em; }
+  .blocked p { margin: 0; color: var(--ink-2); font-size: 16.5px; }
+  .blocked ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; font-size: 16.5px; }
+  .waiting { display: flex; gap: 10px; align-items: center; padding: 12px 14px; border-radius: 12px; background: var(--sunk); font: 600 15px var(--font-ui); }
+  .spinner { width: 18px; height: 18px; border-radius: 50%; border: 2.5px solid var(--rule); border-top-color: var(--ink); }
+  .details { font: 600 14px var(--font-ui); color: var(--muted); display: flex; align-items: center; gap: 4px; }
+  .details .i { width: 18px; height: 18px; }
+
+  /* Desktop */
+  .side { background: var(--surface); border-right: 1px solid var(--rule); padding: 18px 12px; display: flex; flex-direction: column; gap: 2px; }
+  .brand { padding: 4px 10px 18px; }
+  .brand b { display: block; font: 600 21px/1.1 var(--font-line); font-variation-settings: 'opsz' 21; }
+  .brand small { font: 500 13px var(--font-ui); color: var(--muted); }
+  .group { margin: 14px 10px 4px; font: 650 13px var(--font-ui); color: var(--muted); }
+  .nav { height: 38px; display: flex; align-items: center; gap: 10px; padding: 0 10px; border-radius: 8px; font: 600 15px var(--font-ui); color: var(--ink-2); text-decoration: none; }
+  .nav .i { width: 20px; height: 20px; }
+  .nav.sub { padding-left: 40px; height: 34px; font-weight: 500; }
+  .nav[aria-current] { background: var(--sunk); color: var(--ink); font-weight: 650; }
+  .nav em { margin-left: auto; font: normal 600 13px var(--font-ui); color: var(--muted); }
+  .side .foot { margin-top: auto; display: grid; gap: 2px; border-top: 1px solid var(--rule); padding-top: 10px; }
+  .main { display: grid; grid-template-rows: auto auto 1fr; min-width: 0; }
+  .main-head { display: flex; align-items: flex-end; gap: 16px; padding: 22px 28px 0; }
+  .main-head h1 { margin: 0; font: 650 30px/1.1 var(--font-ui); letter-spacing: -0.015em; }
+  .main-head p { margin: 0 0 3px; color: var(--muted); font-weight: 600; }
+  .main-head .pass { margin-left: auto; }
+  .toolbar { display: flex; gap: 10px; align-items: center; padding: 16px 28px 14px; }
+  .toolbar .search { margin: 0; width: 420px; }
+  .split { display: grid; grid-template-columns: 520px 1fr; min-height: 0; border-top: 1px solid var(--rule); }
+  .split .rows { border-top: 0; overflow: hidden; }
+  .split .row { padding-left: 28px; }
+  .split .row.current { box-shadow: inset 3px 0 0 var(--ink); }
+  .stand { background: var(--surface); border-left: 1px solid var(--rule); padding: 30px 40px; display: grid; align-content: start; gap: 4px; }
+  .stand .t { margin: 0; font: 470 46px/1.1 var(--font-line); font-variation-settings: 'opsz' 46; letter-spacing: -0.015em; }
+  .stand .ipa { font-size: 19px; margin: 0 6px 0 0; }
+  .ipa-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; }
+  .stand .acts { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 8px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .known-out { color: var(--known); border-color: var(--known); }
+  .stand .meaning { margin: 14px 0 0; font: 600 24px/1.3 var(--font-ui); }
+  .stand .example { max-width: 60ch; }
+  .kbd { position: absolute; right: 28px; bottom: 18px; display: flex; gap: 14px; font: 500 13px var(--font-ui); color: var(--muted); }
+  kbd { display: inline-block; min-width: 22px; padding: 0 5px; margin-right: 4px; border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 5px; font: 650 12px/18px var(--font-ui); text-align: center; color: var(--ink-2); background: var(--paper); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18 6.8a7.5 7.5 0 0 1 0 10.4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5.5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="18.5" cy="12" r="1.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20h-5.5v-6h-5v6H4z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5h9.5a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h9.5"/></symbol>
+  <symbol id="i-cards" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="13" height="13" rx="2"/><path d="M8 4h10.5a2 2 0 0 1 2 2v10.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6.5 9.5l5.5 5.5 5.5-5.5"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9.5 6l6 6-6 6"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7.5 8.5L12 4l4.5 4.5"/><path d="M4.5 14.5V19a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5v-4.5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4.5M12 17.4v.1"/></symbol>
+  <symbol id="i-again" viewBox="0 0 24 24"><path d="M5 12a7 7 0 1 0 2.2-5.1"/><path d="M5 4.5v4h4"/></symbol>
+  <symbol id="i-tabs" viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="11" rx="1.5"/><path d="M7 7V5.5A1.5 1.5 0 0 1 8.5 4h11A1.5 1.5 0 0 1 21 5.5v9a1.5 1.5 0 0 1-1.5 1.5H16"/></symbol>
+  <symbol id="i-slow" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 13V9.5M10 3.5h4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3.5 7a1.5 1.5 0 0 1 1.5-1.5h4.5l2 2H19a1.5 1.5 0 0 1 1.5 1.5v8.5A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5z"/></symbol>
+</svg>
+
+<!-- B1: Library, phone, light -->
+<figure>
+  <figcaption>B1. Library: phrases list, phone, light</figcaption>
+  <section class="frame phone light" id="b1-library" aria-label="Library">
+    <header class="appbar">
+      <h1>Library</h1>
+      <span class="pass">All materials <svg class="i"><use href="#i-down"/></svg></span>
+    </header>
+    <nav class="tabs" aria-label="Library sections">
+      <button class="tab on" aria-selected="true">Phrases</button><button class="tab">Words</button><button class="tab">Verbs</button><button class="tab">Patterns</button><button class="tab">Answers</button>
+    </nav>
+    <div class="search"><svg class="i"><use href="#i-search"/></svg><span>Search English or Ukrainian…</span><small>566</small></div>
+    <div class="filters">
+      <span class="filter">Topic: All <svg class="i"><use href="#i-down"/></svg></span>
+      <span class="filter">Collection: All <svg class="i"><use href="#i-down"/></svg></span>
+      <span class="filter">Hidden (1)</span>
+    </div>
+    <ul class="rows">
+      <li class="row current">
+        <span class="listen playing" aria-label="Stop"><svg class="i"><use href="#i-speaker"/></svg></span>
+        <div><p class="line" lang="en" translate="no">false <mark class="spoken">positive</mark></p><p class="ua" lang="uk">хибне спрацювання</p><p class="ipa" translate="no">/fɔːls ˈpɑːzətɪv/</p><div class="meta"><span class="level">B2</span><span>Agent framework</span></div></div>
+        <span class="icon-btn star on" aria-label="In Focus list"><svg class="i"><use href="#i-star"/></svg></span>
+      </li>
+      <li class="row">
+        <span class="listen"><svg class="i"><use href="#i-speaker"/></svg></span>
+        <div><p class="line" lang="en" translate="no">I suppose …</p><p class="ua" lang="uk">Я припускаю…</p><p class="ipa" translate="no">/aɪ səˈpoʊz/</p><div class="meta"><span class="level">B2</span><span>Hedging phrases</span></div></div>
+        <span class="icon-btn star"><svg class="i"><use href="#i-star"/></svg></span>
+      </li>
+      <li class="row">
+        <span class="listen"><svg class="i"><use href="#i-speaker"/></svg></span>
+        <div><p class="line" lang="en" translate="no">evaluation harness</p><p class="ua" lang="uk">система/набір для оцінювання</p><p class="ipa" translate="no">/ɪˌvæljuˈeɪʃən ˈhɑːrnəs/</p><div class="meta"><span class="level">B2</span><span>Agent framework</span><span class="known"><svg class="i"><use href="#i-check"/></svg>Known</span></div></div>
+        <span class="icon-btn star"><svg class="i"><use href="#i-star"/></svg></span>
+      </li>
+      <li class="row">
+        <span class="listen"><svg class="i"><use href="#i-speaker"/></svg></span>
+        <div><p class="line" lang="en" translate="no">first-pass review</p><p class="ua" lang="uk">первинне ревʼю</p><p class="ipa" translate="no">/fɜːrst pæs rɪˈvjuː/</p><div class="meta"><span class="level">B2</span><span>Agent framework</span></div></div>
+        <span class="icon-btn star"><svg class="i"><use href="#i-star"/></svg></span>
+      </li>
+    </ul>
+    <div class="toast" role="status"><span>Hidden “baseline”</span><button>Undo</button></div>
+    <nav class="tabbar" aria-label="Main">
+      <a href="#"><span class="pill"><svg class="i"><use href="#i-home"/></svg></span>Home</a>
+      <a href="#" aria-current="page"><span class="pill"><svg class="i"><use href="#i-book"/></svg></span>Library</a>
+      <a href="#"><span class="pill"><svg class="i"><use href="#i-cards"/></svg></span>Practice</a>
+      <a href="#"><span class="pill"><svg class="i"><use href="#i-star"/></svg></span>Focus</a>
+      <a href="#"><span class="pill"><svg class="i"><use href="#i-menu"/></svg></span>More</a>
+    </nav>
+  </section>
+</figure>
+
+<!-- B2: Flashcard session, front, phone, light -->
+<figure>
+  <figcaption>B2. Flashcard session, front, phone, light</figcaption>
+  <section class="frame phone light" id="b2-session-front" aria-label="Flashcard session">
+    <div class="session-top"><span class="icon-btn" aria-label="End session"><svg class="i"><use href="#i-x"/></svg></span><strong>All vocabulary</strong><small>7 of 20</small></div>
+    <div class="progress"><span style="width:32%"></span></div>
+    <div class="stage">
+      <div class="topic"><span>Agent framework</span><span class="level">B2</span></div>
+      <p class="term" lang="en" translate="no">false <mark class="spoken">positive</mark></p>
+      <div class="term-ipa" translate="no">/fɔːls ˈpɑːzətɪv/</div>
+      <div class="audio"><span class="btn secondary small"><svg class="i"><use href="#i-speaker"/></svg>Listen</span><span class="btn secondary small"><svg class="i"><use href="#i-slow"/></svg>Slower</span></div>
+      <p class="prompt">Say it aloud, then recall what it means in Ukrainian.</p>
+    </div>
+    <div class="dock">
+      <span class="btn primary wide">Show meaning</span>
+      <p>After that: swipe, or tap Again or Know it</p>
+    </div>
+  </section>
+</figure>
+
+<!-- B3: Flashcard session, revealed, phone, dark -->
+<figure>
+  <figcaption>B3. Flashcard session, meaning shown, phone, dark</figcaption>
+  <section class="frame phone dark" id="b3-session-back-dark" aria-label="Flashcard session, meaning shown">
+    <div class="session-top"><span class="icon-btn" aria-label="End session"><svg class="i"><use href="#i-x"/></svg></span><strong>All vocabulary</strong><small>7 of 20</small></div>
+    <div class="progress"><span style="width:32%"></span></div>
+    <div class="revealed">
+      <p class="small-term" lang="en" translate="no">false positive</p>
+      <div class="ipa" translate="no">/fɔːls ˈpɑːzətɪv/</div>
+      <p class="meaning" lang="uk">хибне спрацювання</p>
+      <div class="example"><p lang="en" translate="no">Too many false <mark class="spoken">positives</mark> reduce trust in the agent.</p><span class="listen playing"><svg class="i"><use href="#i-speaker"/></svg></span></div>
+      <p class="also">Also said: <span lang="en" translate="no">incorrect alert, invalid finding</span></p>
+    </div>
+    <div class="dock">
+      <div class="answer-row"><span class="btn secondary"><svg class="i"><use href="#i-again"/></svg>Again</span><span class="btn known"><svg class="i"><use href="#i-check"/></svg>Know it</span></div>
+      <p>“Again” brings it back later in this round</p>
+    </div>
+  </section>
+</figure>
+
+<!-- B5: Home, phone, light -->
+<figure>
+  <figcaption>B4. Home, phone, light</figcaption>
+  <section class="frame phone light" id="b4-home" aria-label="Home">
+    <header class="appbar"><h1>Today</h1><span class="pass">All materials <svg class="i"><use href="#i-down"/></svg></span></header>
+    <div class="resume">
+      <h2>Flashcards: All vocabulary</h2>
+      <p>13 cards left in this round. 214 of 566 known.</p>
+      <div class="btns"><span class="btn primary">Continue round</span><span class="btn secondary">Choose deck</span></div>
+    </div>
+    <div class="section daily">
+      <h2>Line of the day</h2>
+      <p class="line" lang="en" translate="no">I would say …</p>
+      <p class="ua" lang="uk">Я б сказав…</p>
+      <p class="ipa" translate="no">/aɪ wʊd seɪ/</p>
+      <div class="actions"><span class="btn secondary small"><svg class="i"><use href="#i-speaker"/></svg>Listen</span><span class="btn secondary small"><svg class="i"><use href="#i-star"/></svg>Add to Focus</span><span class="btn quiet small">Another</span></div>
+    </div>
+    <div class="section"><h2>Learning blocks</h2></div>
+    <ul class="blocks">
+      <li><span>Start Answer Phrases</span><small>6</small><svg class="i"><use href="#i-right"/></svg></li>
+      <li><span>Structure &amp; Add Ideas</span><small>5</small><svg class="i"><use href="#i-right"/></svg></li>
+      <li><span>Hedging Phrases</span><small>24</small><svg class="i"><use href="#i-right"/></svg></li>
+      <li><span>Agent Framework Vocabulary</span><small>64</small><svg class="i"><use href="#i-right"/></svg></li>
+    </ul>
+    <nav class="tabbar" aria-label="Main">
+      <a href="#" aria-current="page"><span class="pill"><svg class="i"><use href="#i-home"/></svg></span>Home</a>
+      <a href="#"><span class="pill"><svg class="i"><use href="#i-book"/></svg></span>Library</a>
+      <a href="#"><span class="pill"><svg class="i"><use href="#i-cards"/></svg></span>Practice</a>
+      <a href="#"><span class="pill"><svg class="i"><use href="#i-star"/></svg></span>Focus</a>
+      <a href="#"><span class="pill"><svg class="i"><use href="#i-menu"/></svg></span>More</a>
+    </nav>
+  </section>
+</figure>
+
+<!-- B6: Collections import review, phone, light (F3) -->
+<figure>
+  <figcaption>B5. Import review (F3: focus moves to the review heading), phone, light</figcaption>
+  <section class="frame phone light" id="b5-import-review" aria-label="Import review">
+    <header class="appbar"><h1>Collections</h1><span class="icon-btn"><svg class="i"><use href="#i-more"/></svg></span></header>
+    <div class="import-card">
+      <h2>Import vocabulary</h2>
+      <p>CSV (UTF-8) or a JSON export from this app. Up to 2&nbsp;MiB and 1,000 entries.</p>
+      <div><span class="btn secondary small"><svg class="i"><use href="#i-upload"/></svg>Choose another file</span></div>
+    </div>
+    <div class="review">
+      <h2 class="focus-shown" tabindex="-1">Review “Мої слова.csv”</h2>
+      <div class="counts"><span class="count">4 new</span><span class="count warn">2 possible duplicates</span></div>
+      <div class="field"><label>Collection name</label><div class="input" lang="uk">Мої слова</div></div>
+      <div class="notice warn"><svg class="i"><use href="#i-alert"/></svg><div>2 entries have the same English text as vocabulary you already have. They are added as separate entries, each with its own meaning.</div></div>
+      <div class="check"><span class="box on"><svg class="i"><use href="#i-check"/></svg></span>I’ve checked the possible duplicates</div>
+      <ul class="entries">
+        <li><span class="en" translate="no">take ownership</span><span class="tag">New</span><small><span lang="uk">брати відповідальність</span><br>Topic: Synthetic workplace</small></li>
+        <li><span class="en" translate="no">estimate</span><span class="tag warn">Possible duplicate</span><small><span lang="uk">оцінка</span><br>Topic: Synthetic workplace</small></li>
+        <li><span class="en" translate="no">estimate</span><span class="tag warn">Possible duplicate</span><small><span lang="uk">оцінювати</span><br>Topic: Synthetic workplace</small></li>
+      </ul>
+    </div>
+    <div class="actionbar"><span class="btn secondary">Cancel</span><span class="btn primary">Import 4 entries</span></div>
+  </section>
+</figure>
+
+<!-- B7: Blocked upgrade (F4), phone, light -->
+<figure>
+  <figcaption>B6. Another tab blocks the upgrade (F4), phone, light</figcaption>
+  <section class="frame phone light" id="b6-blocked" aria-label="Upgrade waiting">
+    <div class="blocked">
+      <svg class="i" style="width:44px;height:44px;stroke-width:1.5"><use href="#i-tabs"/></svg>
+      <h1>Close other eng‑trainer tabs</h1>
+      <p>Your saved progress needs a quick upgrade. Another eng‑trainer tab still uses the previous version, so the upgrade can’t start yet.</p>
+      <ol>
+        <li>Switch to the other eng‑trainer tabs or windows.</li>
+        <li>Close or reload them.</li>
+        <li>Come back here. This page continues by itself.</li>
+      </ol>
+      <div class="waiting" role="status"><span class="spinner"></span>Waiting for the other tabs to close…</div>
+      <div><span class="btn secondary">Continue without saving</span></div>
+      <p style="font-size:14.5px;color:var(--muted)">Without saving you can study now, but changes are lost when you close this page.</p>
+      <span class="details"><svg class="i"><use href="#i-right"/></svg>Technical details</span>
+    </div>
+  </section>
+</figure>
+
+<!-- B8: Reset confirmation, phone, light -->
+<figure>
+  <figcaption>B7. Reset progress needs confirmation, phone, light</figcaption>
+  <section class="frame phone light" id="b7-reset-dialog" aria-label="Reset confirmation">
+    <header class="appbar"><h1>Settings</h1></header>
+    <ul class="blocks">
+      <li><span>Theme</span><small>System</small><svg class="i"><use href="#i-right"/></svg></li>
+      <li><span>Listening repeats</span><small>10</small><svg class="i"><use href="#i-right"/></svg></li>
+      <li><span>Learn passes</span><small>2</small><svg class="i"><use href="#i-right"/></svg></li>
+      <li style="color:var(--danger)"><span>Reset learning progress…</span></li>
+    </ul>
+    <div class="scrim"></div>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="reset-title">
+      <span class="handle"></span>
+      <h2 id="reset-title">Reset all learning progress?</h2>
+      <p>This clears:</p>
+      <ul><li>what you marked as known</li><li>hidden items and your Focus list</li><li>Learn passes and flashcard rounds</li><li>filters, list sizes and listening repeats</li></ul>
+      <p>Your imported collections and theme stay. This can’t be undone.</p>
+      <div class="btns"><span class="btn secondary focus-shown">Cancel</span><span class="btn danger">Reset progress</span></div>
+    </div>
+  </section>
+</figure>
+
+<!-- B4: Library, desktop, light -->
+<figure>
+  <figcaption>B8. Library with reading stand, desktop 1280, light</figcaption>
+  <section class="frame desk light" id="b8-desktop" aria-label="Library, desktop">
+    <aside class="side">
+      <div class="brand"><b>English Trainer</b><small>B1+ to B2 speaking</small></div>
+      <a class="nav" href="#"><svg class="i"><use href="#i-home"/></svg>Today</a>
+      <div class="group">Library</div>
+      <a class="nav sub" href="#" aria-current="page">Phrases</a>
+      <a class="nav sub" href="#">Words</a>
+      <a class="nav sub" href="#">Verbs</a>
+      <a class="nav sub" href="#">Patterns</a>
+      <a class="nav sub" href="#">Answers</a>
+      <div class="group">Practice</div>
+      <a class="nav sub" href="#">Flashcards</a>
+      <a class="nav sub" href="#">Reverse</a>
+      <a class="nav sub" href="#">Speaking prompts</a>
+      <div class="group">Yours</div>
+      <a class="nav" href="#"><svg class="i"><use href="#i-star"/></svg>Focus list<em>12</em></a>
+      <a class="nav" href="#"><svg class="i"><use href="#i-folder"/></svg>Collections<em>1</em></a>
+      <div class="foot"><a class="nav" href="#"><svg class="i"><use href="#i-moon"/></svg>Theme: System</a><a class="nav" href="#" style="font-weight:500;color:var(--muted)">Previous version (v1)</a></div>
+    </aside>
+    <div class="main">
+      <div class="main-head"><h1>Phrases</h1><p>64 of 566</p><span class="pass">All materials <svg class="i"><use href="#i-down"/></svg></span></div>
+      <div class="toolbar">
+        <div class="search"><svg class="i"><use href="#i-search"/></svg><span>Search English or Ukrainian…</span><small><kbd>/</kbd></small></div>
+        <span class="filter">Topic: Agent framework <svg class="i"><use href="#i-down"/></svg></span>
+        <span class="filter">Collection: All <svg class="i"><use href="#i-down"/></svg></span>
+        <span class="filter">Hidden (1)</span>
+      </div>
+      <div class="split">
+        <ul class="rows">
+          <li class="row"><span class="listen"><svg class="i"><use href="#i-speaker"/></svg></span><div><p class="line" translate="no">false positive</p><p class="ua" lang="uk">хибне спрацювання</p><div class="meta"><span class="level">B2</span><span>Agent framework</span></div></div><span class="icon-btn star on"><svg class="i"><use href="#i-star"/></svg></span></li>
+          <li class="row current"><span class="listen playing"><svg class="i"><use href="#i-speaker"/></svg></span><div><p class="line" translate="no">evaluation <mark class="spoken">harness</mark></p><p class="ua" lang="uk">система/набір для оцінювання</p><div class="meta"><span class="level">B2</span><span>Agent framework</span><span class="known"><svg class="i"><use href="#i-check"/></svg>Known</span></div></div><span class="icon-btn star"><svg class="i"><use href="#i-star"/></svg></span></li>
+          <li class="row"><span class="listen"><svg class="i"><use href="#i-speaker"/></svg></span><div><p class="line" translate="no">token budget</p><p class="ua" lang="uk">бюджет токенів</p><div class="meta"><span class="level">B2</span><span>Agent framework</span></div></div><span class="icon-btn star"><svg class="i"><use href="#i-star"/></svg></span></li>
+          <li class="row"><span class="listen"><svg class="i"><use href="#i-speaker"/></svg></span><div><p class="line" translate="no">decision log</p><p class="ua" lang="uk">журнал рішень</p><div class="meta"><span class="level">B2</span><span>Agent framework</span></div></div><span class="icon-btn star"><svg class="i"><use href="#i-star"/></svg></span></li>
+          <li class="row"><span class="listen"><svg class="i"><use href="#i-speaker"/></svg></span><div><p class="line" translate="no">model routing</p><p class="ua" lang="uk">вибір моделі залежно від задачі</p><div class="meta"><span class="level">B2</span><span>Agent framework</span></div></div><span class="icon-btn star"><svg class="i"><use href="#i-star"/></svg></span></li>
+        </ul>
+        <article class="stand">
+          <p class="t" lang="en" translate="no">evaluation <mark class="spoken">harness</mark></p>
+          <div class="ipa-row"><span class="ipa" translate="no">/ɪˌvæljuˈeɪʃən ˈhɑːrnəs/</span><span class="btn secondary small"><svg class="i"><use href="#i-speaker"/></svg>Listen</span><span class="btn secondary small"><svg class="i"><use href="#i-slow"/></svg>Slower</span></div>
+          <div class="acts"><span class="btn secondary small"><svg class="i"><use href="#i-star"/></svg>Add to Focus</span><span class="btn secondary small known-out"><svg class="i"><use href="#i-check"/></svg>Known</span><span class="btn quiet small"><svg class="i"><use href="#i-more"/></svg>Hide or more</span></div>
+          <p class="meaning" lang="uk">система/набір для оцінювання</p>
+          <div class="example"><p translate="no">The evaluation harness tracks useful findings and model cost.</p><span class="listen"><svg class="i"><use href="#i-speaker"/></svg></span></div>
+          <p class="also">Also said: <span translate="no">measurement setup, test harness</span></p>
+        </article>
+      </div>
+      <div class="kbd"><span><kbd>/</kbd>search</span><span><kbd>↑</kbd><kbd>↓</kbd>move</span><span><kbd>Space</kbd>listen</span><span><kbd>F</kbd>Focus</span><span><kbd>K</kbd>known</span></div>
+    </div>
+  </section>
+</figure>
+</body>
+</html>

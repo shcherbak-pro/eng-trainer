@@ -1,4 +1,7 @@
+import { openDB } from 'idb';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { DATABASE_NAME, STATE_STORE_NAMES } from '../storage/database';
+import { collection, native } from '../test/collections';
 import { createContentFetch, manifest, realMaterials } from '../test/content';
 import type { Materials } from '../content/types';
 import { PAGE_LABELS } from './navigation';
@@ -66,17 +69,26 @@ async function ready(app: RunningApp): Promise<void> {
   app.flush();
 }
 
-function navButton(app: RunningApp, page: string): HTMLButtonElement {
-  const match = [...app.root.querySelectorAll<HTMLButtonElement>('.desktop-nav button')].find((item) =>
-    text(item).startsWith(PAGE_LABELS[page])
-  );
-  if (!match) throw new Error(`No navigation button for ${page}`);
+/** The link to a screen in the main navigation (the side navigation on wide screens). */
+function navLink(app: RunningApp, page: string): HTMLAnchorElement {
+  const match = app.root.querySelector<HTMLAnchorElement>(`.side-nav nav a[href="#${page}"]`);
+  if (!match) throw new Error(`No navigation link for ${page}`);
+  expect(text(match)).toContain(PAGE_LABELS[page]);
   return match;
 }
 
 function open(app: RunningApp, page: string): void {
-  navButton(app, page).click();
+  navLink(app, page).click();
   app.flush();
+}
+
+/** The title of the open screen. */
+function heading(app: RunningApp): string {
+  return text(app.root.querySelector('main h1')!);
+}
+
+function searchField(app: RunningApp): HTMLInputElement {
+  return app.root.querySelector<HTMLInputElement>('main input[type="search"]')!;
 }
 
 function type(app: RunningApp, input: HTMLInputElement, value: string): void {
@@ -218,16 +230,17 @@ describe('application shell', () => {
     for (const pack of manifest.packs) {
       expect(fetch).toHaveBeenCalledWith(`/eng-trainer/data/${pack.url}`, { cache: 'no-store' });
     }
-    expect(text(app.root.querySelector('.hero')!)).toContain(`${realMaterials.phrases.length} phrases`);
     expect(text(app.root)).toContain('Learning blocks');
     expect(app.root.querySelector('.storage-notice')).toBeNull();
+    open(app, 'phrases');
+    expect(text(app.root.querySelector('.list-header__count')!)).toBe(`${realMaterials.phrases.length} phrases`);
   });
 
   it('links to the preserved v1 application', async () => {
     const app = await startApp();
     await ready(app);
 
-    const link = app.root.querySelector<HTMLAnchorElement>('.app-footer a')!;
+    const link = app.root.querySelector<HTMLAnchorElement>('a[href="/eng-trainer/v1/"]')!;
     expect(link.getAttribute('href')).toBe('/eng-trainer/v1/');
     expect(text(link)).toContain('v1');
   });
@@ -237,22 +250,25 @@ describe('application shell', () => {
     await ready(app);
 
     const expected: Record<string, string> = {
-      phrases: 'Listen phrases',
-      wordIndex: 'Word Index',
-      flashcards: 'Tap to flip',
-      reverse: 'Reverse Practice',
-      irregularVerbs: 'Listen verbs',
-      patterns: 'Answer Patterns',
-      answers: 'Ready-Made Answers',
-      practice: 'Practice Mode',
+      phrases: realMaterials.phrases[0].phrase,
+      wordIndex: 'Search words',
+      flashcards: 'Say it aloud, then tap to see the meaning',
+      reverse: 'Your answer in English',
+      irregularVerbs: 'Search verbs',
+      patterns: 'Structured frameworks',
+      answers: 'Assessment-style answers',
+      practice: 'Random prompt',
       favorites: 'Focus list is empty',
+      collections: 'How to prepare your file',
+      settings: 'Reset learning progress',
       index: 'Learning blocks'
     };
 
     for (const [page, marker] of Object.entries(expected)) {
       open(app, page);
       expect(window.location.hash).toBe(`#${page}`);
-      expect(text(app.root.querySelector('.page-wrap')!), page).toContain(marker);
+      expect(heading(app), page).toBe(PAGE_LABELS[page]);
+      expect(text(app.root.querySelector('main')!), page).toContain(marker);
     }
   });
 
@@ -263,9 +279,9 @@ describe('application shell', () => {
 
     // The last phrase of the dataset is far beyond the first page of five.
     const last = realMaterials.phrases[realMaterials.phrases.length - 1];
-    expect(text(app.root.querySelector('.cards-list, .sectioned-list')!)).not.toContain(last.phrase);
+    expect(text(app.root.querySelector('.entry-list')!)).not.toContain(last.phrase);
 
-    type(app, app.root.querySelector<HTMLInputElement>('.controls-filter-stack input')!, last.phrase);
+    type(app, searchField(app), last.phrase);
 
     expect([...app.root.querySelectorAll('.phrase-card h3')].map((item) => text(item))).toContain(last.phrase);
   });
@@ -286,9 +302,9 @@ describe('application shell', () => {
     const reloaded = await startApp();
     await ready(reloaded);
 
-    expect(text(reloaded.root.querySelector('.hero h1')!)).toBe('Phrases');
+    expect(heading(reloaded)).toBe('Phrases');
     expect(reloaded.root.querySelector('.phrase-card.learned')).not.toBeNull();
-    expect(text(reloaded.root.querySelector('.hero__stats')!)).toContain('1 focus');
+    expect(text(reloaded.root.querySelector('.side-nav .nav-count')!)).toBe('1 item');
     expect(reloaded.root.querySelector('.theme-toggle')!.getAttribute('aria-label')).toContain('Theme: Light');
 
     const saved = await readDatabase();
@@ -316,7 +332,7 @@ describe('learning identity across Phrases, Focus and Flashcards', () => {
     let app = await startApp();
     await ready(app);
     open(app, 'phrases');
-    type(app, app.root.querySelector<HTMLInputElement>('.controls-filter-stack input')!, 'consequently');
+    type(app, searchField(app), 'consequently');
 
     // phrase-084 is learned. advanced-linking-004-consequently goes to the Focus List.
     press(app, phraseCard(app, 'consequently'), 'Mark as learned');
@@ -331,7 +347,7 @@ describe('learning identity across Phrases, Focus and Flashcards', () => {
     expect(hasButton(focused, 'Mark as not learned')).toBe(false);
 
     open(app, 'phrases');
-    type(app, app.root.querySelector<HTMLInputElement>('.controls-filter-stack input')!, 'consequently');
+    type(app, searchField(app), 'consequently');
     expect(phraseCard(app, 'consequently').classList.contains('learned')).toBe(true);
     expect(phraseCard(app, 'Consequently, …').classList.contains('learned')).toBe(false);
 
@@ -438,13 +454,9 @@ describe('learning identity across Phrases, Focus and Flashcards', () => {
 
     // Hiding the linked word-index entry takes exactly this one card out of the deck.
     open(app, 'wordIndex');
-    type(app, app.root.querySelector<HTMLInputElement>('.controls-filter-stack input')!, linkedWord.term);
-    const wordButton = [...app.root.querySelectorAll<HTMLButtonElement>('.index-list button')].find(
-      (item) => text(item.querySelector('strong')!) === linkedWord.term
-    )!;
-    wordButton.click();
-    app.flush();
-    press(app, app.root.querySelector('.word-card')!, 'Hide item');
+    type(app, searchField(app), linkedWord.term);
+    const wordCard = [...app.root.querySelectorAll<HTMLElement>('.word-card')].find((card) => text(card.querySelector('h3')!) === linkedWord.term)!;
+    press(app, wordCard, 'Hide item');
     open(app, 'flashcards');
     expect(deckCounts(app)).toEqual({ learned: 0, total: realMaterials.phrases.length - 1 });
   });
@@ -474,7 +486,7 @@ describe('loading and storage errors', () => {
     [...app.root.querySelectorAll('button')].find((item) => text(item) === 'Try again')!.click();
     await ready(app);
 
-    expect(text(app.root.querySelector('.hero h1')!)).toBe('Phrases');
+    expect(heading(app)).toBe('Phrases');
     expect(phraseCard(app, realMaterials.phrases[0].phrase).classList.contains('learned')).toBe(true);
     expect(app.root.querySelector('.theme-toggle')!.getAttribute('aria-label')).toContain('Theme: Dark');
     expect(app.root.querySelector('.storage-notice')).toBeNull();
@@ -492,7 +504,8 @@ describe('loading and storage errors', () => {
     const app = await startApp();
     await waitFor(() => app.root.querySelector('.error-card') !== null, 'the content error');
 
-    expect(text(app.root)).toContain('Unable to start the app');
+    expect(text(app.root)).toContain('The study material could not be loaded');
+    expect(text(app.root)).not.toContain('npm run');
     expect(text(app.root)).toContain('/eng-trainer/data/manifest.json');
 
     vi.stubGlobal(
@@ -555,5 +568,211 @@ describe('loading and storage errors', () => {
 
     expect(app.root.querySelector('.storage-notice')).toBeNull();
     expect((await readDatabase()).progress.learnedPhrases).toEqual([realMaterials.phrases[0].id]);
+  });
+});
+
+/** Another tab that still runs a build with database version 1 and does not close for upgrades. */
+function holdLegacyConnection() {
+  return openDB(DATABASE_NAME, 1, { upgrade(db) { STATE_STORE_NAMES.forEach((name) => db.createObjectStore(name)); } });
+}
+
+describe('blocked database upgrade at start-up (F4)', () => {
+  it('keeps the waiting guidance on "Check again" and continues by itself when the other tab closes', async () => {
+    const legacy = await holdLegacyConnection();
+    const app = await startApp();
+    await waitFor(() => text(app.root).includes('Close other eng-trainer tabs'), 'the waiting screen');
+    expect(text(app.root)).toContain('Waiting for the other tabs to close');
+
+    press(app, app.root, 'Check again');
+    press(app, app.root, 'Check again');
+    await waitFor(() => text(app.root).includes('Still waiting for the other tabs to close.'), 'the repeated check');
+    expect(app.root.querySelector('.app-shell')).toBeNull();
+
+    legacy.close();
+    await ready(app);
+    expect(app.root.querySelector('.storage-notice')).toBeNull();
+  });
+
+  it('keeps "Continue without saving" in charge when the database opens later', async () => {
+    const legacy = await holdLegacyConnection();
+    const app = await startApp();
+    await waitFor(() => text(app.root).includes('Close other eng-trainer tabs'), 'the waiting screen');
+    press(app, app.root, 'Continue without saving');
+    await ready(app);
+    expect(text(app.root.querySelector('.storage-notice')!)).toContain('Saving is off');
+
+    legacy.close();
+    await new Promise((resolve) => setTimeout(resolve, 60));
+    app.flush();
+    expect(text(app.root.querySelector('.storage-notice')!)).toContain('Saving is off');
+
+    open(app, 'phrases');
+    app.root.querySelector<HTMLButtonElement>('.phrase-card button[aria-label="Mark as learned"]')!.click();
+    app.flush();
+    await app.saved();
+    expect((await readDatabase()).progress).toEqual({});
+  });
+});
+
+describe('Settings and Reset progress', () => {
+  it('asks before resetting; Cancel changes nothing; the theme and imported collections stay', async () => {
+    await seedDatabase({ progress: { learnedPhrases: ['phrase-001'], favoritePhrases: ['phrase-002'] }, settings: { theme: 'dark', speechRepeatCount: 20 } });
+    const app = await startApp();
+    await ready(app);
+    // Home no longer offers a one-tap reset.
+    expect([...app.root.querySelectorAll('button')].some((item) => /reset/i.test(text(item)) || /reset/i.test(item.getAttribute('aria-label') ?? ''))).toBe(false);
+
+    open(app, 'settings');
+    await app.saved();
+    const before = await readDatabase();
+    press(app, app.root, 'Reset learning progress…');
+    const dialog = app.root.querySelector<HTMLDialogElement>('dialog.dialog')!;
+    expect(dialog.hasAttribute('open')).toBe(true);
+    expect(text(dialog)).toContain('Phrases you marked as learned');
+    expect(text(dialog)).toContain('your imported vocabulary collections, your theme');
+    // Focus moves to Cancel once the dialog has opened.
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(document.activeElement?.textContent).toBe('Cancel');
+
+    press(app, dialog, 'Cancel');
+    await app.saved();
+    expect(dialog.hasAttribute('open')).toBe(false);
+    expect(await readDatabase()).toEqual(before);
+
+    press(app, app.root, 'Reset learning progress…');
+    press(app, dialog, 'Reset progress');
+    await app.saved();
+    const saved = await readDatabase();
+    expect(saved.progress).toMatchObject({ learnedPhrases: [], favoritePhrases: [] });
+    expect(saved.settings).toMatchObject({ theme: 'dark', speechRepeatCount: 10 });
+  });
+});
+
+describe('language of study text and translations', () => {
+  it('marks built-in Ukrainian as uk, leaves imported translations unmarked, and protects English study text from translation', async () => {
+    const imported = native();
+    await seedDatabase({
+      userCollections: {
+        [collection.id]: {
+          ...collection, version: 1, createdAt: '2026-11-21T00:00:00.000Z', updatedAt: '2026-11-21T00:00:00.000Z', revision: 1,
+          lastImport: { fileName: 'synthetic.json', format: 'json', importedAt: '2026-11-21T00:00:00.000Z', added: 2, skipped: 0 }
+        }
+      },
+      userEntries: Object.fromEntries(imported.entries.map((item, position) => [item.id, { ...item, collectionId: collection.id, position }]))
+    });
+    const app = await startApp();
+    await ready(app);
+    open(app, 'phrases');
+
+    const builtIn = phraseCard(app, realMaterials.phrases[0].phrase);
+    expect(builtIn.querySelector('.entry__translation')!.getAttribute('lang')).toBe('uk');
+    expect(builtIn.querySelector('h3')!.getAttribute('lang')).toBe('en');
+    expect(builtIn.querySelector('h3')!.getAttribute('translate')).toBe('no');
+
+    type(app, searchField(app), imported.entries[1].english);
+    const user = phraseCard(app, imported.entries[1].english);
+    expect(user.querySelector('.entry__translation')!.getAttribute('lang')).toBe('');
+    expect(user.querySelector('h3')!.getAttribute('translate')).toBe('no');
+  });
+});
+
+describe('language of learning block descriptions (RC1, F5)', () => {
+  /** The effective language of an element: its nearest lang attribute. */
+  const langOf = (element: Element) => element.closest('[lang]')?.getAttribute('lang') ?? null;
+  const blockIdByTitle = new Map(realMaterials.blocks.map((block) => [block.title, block.id]));
+  // Test oracle only: in the built-in material, exactly the Ukrainian descriptions contain Cyrillic
+  // (descriptionLanguage.test.ts checks this against the hand-made table the app uses).
+  const descriptionById = new Map(realMaterials.blocks.map((block) => [block.id, block.description]));
+  const blockDescriptionLang = (id: string) => (/[Ѐ-ӿ]/.test(descriptionById.get(id) ?? '') ? 'uk' : 'en');
+
+  it('marks English and Ukrainian descriptions by their actual language in Focus, Home and the Verbs set note', async () => {
+    await seedDatabase({ progress: { favoriteBlocks: ['irregular-verbs-100', 'start-answer', 'ready-answers', 'topic-hobbies'] } });
+    const app = await startApp();
+    await ready(app);
+
+    open(app, 'favorites');
+    const focusRows = [...app.root.querySelectorAll('main .block-row')];
+    expect(focusRows).toHaveLength(4);
+    const byTitle = (rows: Element[]) =>
+      Object.fromEntries(rows.map((row) => [text(row.querySelector('.block-row__title')!), langOf(row.querySelectorAll('.block-row__meta')[row.querySelectorAll('.block-row__meta').length - 1])]));
+    expect(byTitle(focusRows)).toEqual({ '100 Irregular Verbs': 'en', 'Start Answer Phrases': 'uk', 'Ready-Made Answers': 'uk', Hobbies: 'en' });
+
+    open(app, 'index');
+    const homeRows = [...app.root.querySelectorAll('main .block-row')];
+    expect(homeRows.length).toBeGreaterThan(0);
+    for (const row of homeRows) {
+      const id = blockIdByTitle.get(text(row.querySelector('.block-row__title')!))!;
+      const metas = row.querySelectorAll('.block-row__meta');
+      expect(langOf(metas[metas.length - 1]), id).toBe(blockDescriptionLang(id));
+    }
+
+    open(app, 'irregularVerbs');
+    const note = [...app.root.querySelectorAll('main .list-note')].find((item) => text(item).startsWith('About this set:'))!;
+    expect(langOf(note.querySelector('span')!)).toBe('en');
+  });
+});
+
+describe('hiding an entry from a list', () => {
+  it('keeps keyboard users in place: focus moves to the entry that took its place, and Undo returns it to the restored entry', async () => {
+    const app = await startApp();
+    await ready(app);
+    open(app, 'phrases');
+    // Opening a screen moves focus to its heading once it has rendered; let that settle first.
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    app.flush();
+    const cards = () => [...app.root.querySelectorAll<HTMLElement>('.phrase-card')];
+    const title = (card: Element | null | undefined) => (card ? text(card.querySelector('h3')!) : '');
+    const [first, second] = cards();
+    const firstTitle = title(first);
+    const secondTitle = title(second);
+
+    const hide = first.querySelector<HTMLButtonElement>('button[aria-label="Hide item"]')!;
+    hide.focus();
+    hide.click();
+    app.flush();
+    await waitFor(() => title(document.activeElement?.closest('.phrase-card')) === secondTitle, 'focus on the next entry');
+    expect(document.activeElement!.getAttribute('aria-label')).toBe('Hide item');
+    expect(title(cards()[0])).toBe(secondTitle);
+
+    const undo = app.root.querySelector<HTMLButtonElement>('.toast__action')!;
+    expect(undo.textContent).toBe('Undo');
+    undo.focus();
+    undo.click();
+    app.flush();
+    await waitFor(() => title(cards()[0]) === firstTitle && document.activeElement?.closest('.phrase-card') === cards()[0], 'focus on the restored entry');
+    expect(document.activeElement!.getAttribute('aria-label')).toBe('Hide item');
+  });
+});
+
+describe('navigation', () => {
+  it('opens More as a sheet from a button, with links to Collections, Settings and the previous version', async () => {
+    const app = await startApp();
+    await ready(app);
+    const more = app.root.querySelector<HTMLButtonElement>('.tab-bar button')!;
+    expect(more.getAttribute('aria-haspopup')).toBe('dialog');
+    expect(more.getAttribute('aria-expanded')).toBe('false');
+    more.click();
+    app.flush();
+    expect(more.getAttribute('aria-expanded')).toBe('true');
+    const sheet = app.root.querySelector('#more-sheet')!;
+    expect([...sheet.querySelectorAll('a')].map((link) => link.getAttribute('href'))).toEqual(['#collections', '#settings', '/eng-trainer/v1/']);
+
+    sheet.querySelector<HTMLAnchorElement>('a[href="#settings"]')!.click();
+    app.flush();
+    expect(heading(app)).toBe('Settings');
+    expect(more.getAttribute('aria-expanded')).toBe('false');
+  });
+
+  it('marks the current screen in every navigation and moves focus to the new heading', async () => {
+    const app = await startApp();
+    await ready(app);
+    open(app, 'wordIndex');
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    app.flush();
+    expect(app.root.querySelector('.side-nav [aria-current="page"]')!.getAttribute('href')).toBe('#wordIndex');
+    expect(app.root.querySelector('.section-nav [aria-current="page"]')!.getAttribute('href')).toBe('#wordIndex');
+    expect(app.root.querySelector('.tab-bar [aria-current="page"]')!.textContent).toContain('Library');
+    expect(document.activeElement).toBe(app.root.querySelector('main h1'));
+    expect(app.root.querySelector('.section-nav a[href="#collections"]')!.textContent).toContain('Import words');
   });
 });

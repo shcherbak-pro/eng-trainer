@@ -1,0 +1,60 @@
+
+> english-assessment-trainer-v2@2.0.0 precheck
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: <user-home>\Desktop\Repos\eng-trainer
+Getting Svelte diagnostics...
+
+<user-home>\Desktop\Repos\eng-trainer\src\shared\ui\Icon.svelte:19:8
+Error: Build failed with 2 errors:
+error: Cannot read directory "../../..": Access is denied.
+error: Could not resolve "<user-home>\\Desktop\\Repos\\eng-trainer\\vite.config.ts" (svelte(style))
+
+<style>
+  .icon {
+
+====================================
+svelte-check found 1 error and 0 warnings in 1 file
+
+X [ERROR] Cannot read directory "../../../..": Access is denied.
+
+X [ERROR] Could not resolve "<user-home>\\Desktop\\Repos\\eng-trainer\\v1\\vite.config.ts"
+
+failed to load config from <user-home>\Desktop\Repos\eng-trainer\v1\vite.config.ts
+X [ERROR] Cannot read directory "../../..": Access is denied.
+
+X [ERROR] Could not resolve "<user-home>\\Desktop\\Repos\\eng-trainer\\vite.config.ts"
+
+failed to load config from <user-home>\Desktop\Repos\eng-trainer\vite.config.ts
+X [ERROR] Cannot read directory "../../..": Access is denied.
+
+X [ERROR] Could not resolve "<user-home>\\Desktop\\Repos\\eng-trainer\\vite.config.ts"
+
+failed to load config from <repo>\vite.config.ts
+Preprocessing failed
+Error: Build failed with 2 errors:
+error: Cannot read directory "../../..": Access is denied.
+error: Could not resolve "<user-home>\\Desktop\\Repos\\eng-trainer\\vite.config.ts"
+    at failureErrorWithLog (<user-home>\Desktop\Repos\eng-trainer\node_modules\esbuild\lib\main.js:1467:15)
+    at <user-home>\Desktop\Repos\eng-trainer\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (<user-home>\Desktop\Repos\eng-trainer\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (<user-home>\Desktop\Repos\eng-trainer\node_modules\esbuild\lib\main.js:924:7)
+    at <user-home>\Desktop\Repos\eng-trainer\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (<user-home>\Desktop\Repos\eng-trainer\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (<user-home>\Desktop\Repos\eng-trainer\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (<user-home>\Desktop\Repos\eng-trainer\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter],
+  __source: 'Style'
+}

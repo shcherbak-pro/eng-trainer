@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concept A: Clear Desk</title>
+<!-- ENG-V2-UX-01A static design mockup. Not production code. Uses the platform UI font only (no web fonts). -->
+<style>
+  :root { --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif; }
+  .light { color-scheme: light; --bg:#F3F5F8; --surface:#FFFFFF; --ink:#18222D; --ink-2:#3B4754; --muted:#5A6676; --rule:#E1E5EA; --field:#848FA0; --bar:#263238; --on-bar:#FFFFFF; --bar-muted:#C9D3DC; --amber:#F2B53F; --amber-ink:#704600; --amber-soft:#FFF3D6; --leaf:#17784A; --leaf-soft:#E5F4EB; --ring:#1F4FC2; --chip:#EEF1F5; }
+  .dark { color-scheme: dark; --bg:#10161C; --surface:#18212A; --ink:#E9EEF3; --ink-2:#C6CFD8; --muted:#A1ACB8; --rule:#2A3541; --field:#7C8898; --bar:#0B1015; --on-bar:#F1F5F9; --bar-muted:#A9B6C3; --amber:#F5C25B; --amber-ink:#F5C25B; --amber-soft:#3A2F12; --leaf:#5FCB93; --leaf-soft:#173427; --ring:#8DB2FF; --chip:#22303C; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 40px; background: #CDD2DB; font-family: var(--font); display: flex; flex-wrap: wrap; gap: 48px 40px; align-items: flex-start; }
+  figure { margin: 0; } figcaption { font: 600 14px/1.3 var(--font); color: #1B2333; margin: 0 0 10px; }
+  .frame { position: relative; overflow: hidden; background: var(--bg); color: var(--ink); font: 400 16px/1.45 var(--font); }
+  .phone { width: 390px; height: 844px; } .desk { width: 1280px; height: 800px; }
+  .i { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .bar { height: 56px; display: flex; align-items: center; gap: 6px; padding: 0 8px 0 16px; background: var(--bar); color: var(--on-bar); }
+  .bar h1 { margin: 0; flex: 1; font: 600 20px var(--font); }
+  .bar .ib { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 22px; color: var(--on-bar); }
+  .seg { display: flex; margin: 12px 16px 0; padding: 3px; gap: 2px; border-radius: 10px; background: var(--chip); }
+  .seg span { flex: 1; height: 36px; display: grid; place-items: center; border-radius: 8px; font: 600 14px var(--font); color: var(--ink-2); }
+  .seg span.on { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(16,24,40,.12); }
+  .search { margin: 10px 16px 0; height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid var(--field); border-radius: 10px; background: var(--surface); color: var(--muted); }
+  .chips { display: flex; gap: 8px; padding: 10px 16px; }
+  .chip { height: 32px; display: inline-flex; align-items: center; gap: 4px; padding: 0 10px; border-radius: 16px; background: var(--chip); font: 600 13.5px var(--font); color: var(--ink-2); white-space: nowrap; }
+  .chip .i { width: 16px; height: 16px; }
+  .list { list-style: none; margin: 0; padding: 0 12px; display: grid; gap: 8px; }
+  .item { position: relative; padding: 12px 12px 10px 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--rule); }
+  .item::before { content: ''; position: absolute; left: -1px; top: 10px; bottom: 10px; width: 4px; border-radius: 0 3px 3px 0; background: transparent; }
+  .item.focus::before { background: var(--amber); } .item.known::before { background: var(--leaf); }
+  .en { margin: 0; font: 600 17px/1.3 var(--font); }
+  .ua { margin: 2px 0 0; font: 400 15px/1.4 var(--font); color: var(--ink-2); }
+  .meta { display: flex; gap: 8px; align-items: center; margin-top: 6px; font: 500 12.5px var(--font); color: var(--muted); }
+  .badge { padding: 1px 6px; border-radius: 4px; background: var(--chip); font-weight: 700; color: var(--ink-2); }
+  .state { display: inline-flex; align-items: center; gap: 3px; font-weight: 700; }
+  .state.f { color: var(--amber-ink); } .state.k { color: var(--leaf); }
+  .state .i { width: 15px; height: 15px; }
+  .acts { display: flex; gap: 6px; margin-top: 8px; }
+  .a { height: 36px; display: inline-flex; align-items: center; gap: 6px; padding: 0 12px; border-radius: 18px; background: var(--chip); font: 600 14px var(--font); color: var(--ink); }
+  .a .i { width: 18px; height: 18px; }
+  .a.on { background: var(--amber-soft); color: var(--amber-ink); }
+  .a.more { margin-left: auto; width: 36px; padding: 0; justify-content: center; }
+  .tabbar { position: absolute; left: 0; right: 0; bottom: 0; height: 72px; padding-bottom: 8px; display: grid; grid-template-columns: repeat(5,1fr); background: var(--surface); border-top: 1px solid var(--rule); }
+  .tabbar span { display: grid; justify-items: center; align-content: center; gap: 3px; font: 600 12px var(--font); color: var(--muted); }
+  .tabbar span.on { color: var(--ink); }
+  .tabbar span.on .i { color: var(--on-bar); background: var(--bar); border-radius: 14px; width: 52px; height: 28px; padding: 4px 16px; }
+  .tabbar .i { width: 52px; height: 28px; padding: 4px 16px; }
+  /* Flashcards */
+  .deck { display: flex; align-items: center; gap: 8px; padding: 12px 16px 0; }
+  .deck .chip { height: 36px; }
+  .count { margin-left: auto; font: 600 14px var(--font); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .bar2 { height: 6px; margin: 10px 16px 0; border-radius: 3px; background: var(--chip); overflow: hidden; }
+  .bar2 span { display: block; height: 100%; background: var(--leaf); }
+  .card { position: absolute; left: 16px; right: 16px; top: 128px; height: 430px; border-radius: 20px; background: var(--surface); border: 1px solid var(--rule); box-shadow: 0 10px 28px rgba(16,24,40,.10); display: grid; align-content: center; justify-items: center; gap: 10px; padding: 24px; text-align: center; }
+  .card .topic { position: absolute; top: 16px; left: 16px; display: flex; gap: 6px; }
+  .card .spk { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 22px; background: var(--chip); }
+  .card .term { font: 700 30px/1.2 var(--font); }
+  .card .tr { font: 400 17px var(--font); color: var(--muted); }
+  .card .hint { position: absolute; bottom: 16px; font: 600 14px var(--font); color: var(--muted); }
+  .answers { position: absolute; left: 16px; right: 16px; top: 576px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .answers span { height: 56px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; font: 700 16px var(--font); }
+  .answers .again { background: var(--amber-soft); color: var(--amber-ink); }
+  .answers .know { background: var(--leaf); color: #fff; }
+  .dark .answers .know { color: #0C1A13; }
+  .flipnote { position: absolute; left: 0; right: 0; top: 644px; text-align: center; font: 500 13.5px var(--font); color: var(--muted); }
+  /* Desktop */
+  .dbar { height: 60px; display: flex; align-items: center; gap: 24px; padding: 0 28px; background: var(--bar); color: var(--on-bar); }
+  .dbar b { font: 700 17px var(--font); margin-right: 12px; }
+  .dbar nav { display: flex; gap: 4px; flex: 1; }
+  .dbar nav span { height: 40px; display: inline-flex; align-items: center; gap: 4px; padding: 0 14px; border-radius: 20px; font: 600 15px var(--font); color: var(--bar-muted); }
+  .dbar nav span.on { background: rgba(255,255,255,.14); color: var(--on-bar); }
+  .dbar nav .i { width: 16px; height: 16px; }
+  .dmain { width: 860px; margin: 0 auto; padding-top: 24px; }
+  .dhead { display: flex; align-items: flex-end; gap: 12px; }
+  .dhead h1 { margin: 0; font: 650 28px var(--font); }
+  .dhead p { margin: 0 0 4px; color: var(--muted); font-weight: 600; }
+  .dtools { display: flex; gap: 8px; margin: 14px 0 12px; align-items: center; }
+  .dtools .search { margin: 0; width: 360px; }
+  .dmain .list { padding: 0; }
+  .expanded { padding-bottom: 14px; }
+  .ex { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--bg); font-size: 15px; }
+  .ex i { font-style: normal; color: var(--ink-2); }
+  .ex b { font-weight: 600; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18 6.8a7.5 7.5 0 0 1 0 10.4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5.5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="18.5" cy="12" r="1.2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20h-5.5v-6h-5v6H4z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5h9.5a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h9.5"/></symbol>
+  <symbol id="i-cards" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="13" height="13" rx="2"/><path d="M8 4h10.5a2 2 0 0 1 2 2v10.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6.5 9.5l5.5 5.5 5.5-5.5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/></symbol>
+</svg>
+
+<figure>
+  <figcaption>A1. Library: phrases list, phone, light</figcaption>
+  <section class="frame phone light" id="a1-library">
+    <header class="bar"><h1>Library</h1><span class="ib"><svg class="i"><use href="#i-search"/></svg></span><span class="ib"><svg class="i"><use href="#i-moon"/></svg></span></header>
+    <div class="seg"><span class="on">Phrases</span><span>Words</span><span>Verbs</span><span>More</span></div>
+    <div class="search"><svg class="i"><use href="#i-search"/></svg>Search phrases…</div>
+    <div class="chips"><span class="chip">All topics <svg class="i"><use href="#i-down"/></svg></span><span class="chip">All collections <svg class="i"><use href="#i-down"/></svg></span><span class="chip">566 phrases</span></div>
+    <ul class="list">
+      <li class="item focus"><p class="en">false positive</p><p class="ua" lang="uk">хибне спрацювання</p><div class="meta"><span class="badge">B2</span>Agent framework<span class="state f"><svg class="i"><use href="#i-star"/></svg>Focus</span></div><div class="acts"><span class="a"><svg class="i"><use href="#i-speaker"/></svg>Listen</span><span class="a on"><svg class="i"><use href="#i-star"/></svg>In Focus</span><span class="a"><svg class="i"><use href="#i-check"/></svg>Known</span><span class="a more"><svg class="i"><use href="#i-more"/></svg></span></div></li>
+      <li class="item"><p class="en">I suppose …</p><p class="ua" lang="uk">Я припускаю…</p><div class="meta"><span class="badge">B2</span>Hedging phrases</div><div class="acts"><span class="a"><svg class="i"><use href="#i-speaker"/></svg>Listen</span><span class="a"><svg class="i"><use href="#i-star"/></svg>Focus</span><span class="a"><svg class="i"><use href="#i-check"/></svg>Known</span><span class="a more"><svg class="i"><use href="#i-more"/></svg></span></div></li>
+      <li class="item known"><p class="en">evaluation harness</p><p class="ua" lang="uk">система/набір для оцінювання</p><div class="meta"><span class="badge">B2</span>Agent framework<span class="state k"><svg class="i"><use href="#i-check"/></svg>Known</span></div><div class="acts"><span class="a"><svg class="i"><use href="#i-speaker"/></svg>Listen</span><span class="a"><svg class="i"><use href="#i-star"/></svg>Focus</span><span class="a"><svg class="i"><use href="#i-check"/></svg>Known</span><span class="a more"><svg class="i"><use href="#i-more"/></svg></span></div></li>
+      <li class="item"><p class="en">token budget</p><p class="ua" lang="uk">бюджет токенів</p><div class="meta"><span class="badge">B2</span>Agent framework</div></li>
+    </ul>
+    <nav class="tabbar"><span><svg class="i"><use href="#i-home"/></svg>Home</span><span class="on"><svg class="i"><use href="#i-book"/></svg>Library</span><span><svg class="i"><use href="#i-cards"/></svg>Practice</span><span><svg class="i"><use href="#i-star"/></svg>Focus</span><span><svg class="i"><use href="#i-menu"/></svg>More</span></nav>
+  </section>
+</figure>
+
+<figure>
+  <figcaption>A2. Flashcards, phone, light</figcaption>
+  <section class="frame phone light" id="a2-flashcards">
+    <header class="bar"><h1>Flashcards</h1><span class="ib"><svg class="i"><use href="#i-more"/></svg></span></header>
+    <div class="deck"><span class="chip">All vocabulary <svg class="i"><use href="#i-down"/></svg></span><span class="count">12 of 20 this round</span></div>
+    <div class="bar2"><span style="width:38%"></span></div>
+    <div class="card"><div class="topic"><span class="badge">Agent framework</span><span class="badge">B2</span></div><span class="spk"><svg class="i"><use href="#i-speaker"/></svg></span><div class="term">false positive</div><div class="tr">/fɔːls ˈpɑːzətɪv/</div><div class="hint">Tap the card to see the meaning</div></div>
+    <div class="answers"><span class="again"><svg class="i"><use href="#i-left"/></svg>Keep learning</span><span class="know">I know it<svg class="i"><use href="#i-right"/></svg></span></div>
+    <div class="flipnote">Swipe right if you know it, left to keep learning</div>
+    <nav class="tabbar"><span><svg class="i"><use href="#i-home"/></svg>Home</span><span><svg class="i"><use href="#i-book"/></svg>Library</span><span class="on"><svg class="i"><use href="#i-cards"/></svg>Practice</span><span><svg class="i"><use href="#i-star"/></svg>Focus</span><span><svg class="i"><use href="#i-menu"/></svg>More</span></nav>
+  </section>
+</figure>
+
+<figure>
+  <figcaption>A3. Flashcards, phone, dark</figcaption>
+  <section class="frame phone dark" id="a3-flashcards-dark">
+    <header class="bar"><h1>Flashcards</h1><span class="ib"><svg class="i"><use href="#i-more"/></svg></span></header>
+    <div class="deck"><span class="chip">All vocabulary <svg class="i"><use href="#i-down"/></svg></span><span class="count">12 of 20 this round</span></div>
+    <div class="bar2"><span style="width:38%"></span></div>
+    <div class="card"><div class="topic"><span class="badge">Agent framework</span><span class="badge">B2</span></div><span class="spk"><svg class="i"><use href="#i-speaker"/></svg></span><div class="term" lang="uk">хибне спрацювання</div><div class="tr" style="max-width:30ch">Too many false positives reduce trust in the agent.</div><div class="hint">Tap to see the English side</div></div>
+    <div class="answers"><span class="again"><svg class="i"><use href="#i-left"/></svg>Keep learning</span><span class="know">I know it<svg class="i"><use href="#i-right"/></svg></span></div>
+    <div class="flipnote">Swipe right if you know it, left to keep learning</div>
+    <nav class="tabbar"><span><svg class="i"><use href="#i-home"/></svg>Home</span><span><svg class="i"><use href="#i-book"/></svg>Library</span><span class="on"><svg class="i"><use href="#i-cards"/></svg>Practice</span><span><svg class="i"><use href="#i-star"/></svg>Focus</span><span><svg class="i"><use href="#i-menu"/></svg>More</span></nav>
+  </section>
+</figure>
+
+<figure>
+  <figcaption>A4. Library with an expanded entry, desktop 1280, light</figcaption>
+  <section class="frame desk light" id="a4-desktop">
+    <header class="dbar"><b>English Assessment Trainer</b><nav><span>Home</span><span class="on">Library <svg class="i"><use href="#i-down"/></svg></span><span>Practice <svg class="i"><use href="#i-down"/></svg></span><span>Focus list</span><span>Collections</span></nav><span class="ib"><svg class="i"><use href="#i-moon"/></svg></span></header>
+    <div class="dmain">
+      <div class="dhead"><h1>Phrases</h1><p>566 phrases</p></div>
+      <div class="dtools"><div class="search"><svg class="i"><use href="#i-search"/></svg>Search phrases…</div><span class="chip">All topics <svg class="i"><use href="#i-down"/></svg></span><span class="chip">All collections <svg class="i"><use href="#i-down"/></svg></span><span class="chip">Show hidden</span></div>
+      <ul class="list">
+        <li class="item focus expanded"><p class="en">false positive</p><p class="ua" lang="uk">хибне спрацювання</p><div class="meta"><span class="badge">B2</span>Agent framework<span>/fɔːls ˈpɑːzətɪv/</span><span class="state f"><svg class="i"><use href="#i-star"/></svg>Focus</span></div>
+          <div class="ex"><b>Example.</b> Too many false positives reduce trust in the agent.<br><i>Also said: incorrect alert, invalid finding</i></div>
+          <div class="acts"><span class="a"><svg class="i"><use href="#i-speaker"/></svg>Listen</span><span class="a"><svg class="i"><use href="#i-speaker"/></svg>Listen to example</span><span class="a on"><svg class="i"><use href="#i-star"/></svg>In Focus</span><span class="a"><svg class="i"><use href="#i-check"/></svg>Mark as known</span><span class="a">Hide</span></div></li>
+        <li class="item"><p class="en">I suppose …</p><p class="ua" lang="uk">Я припускаю…</p><div class="meta"><span class="badge">B2</span>Hedging phrases</div></li>
+        <li class="item known"><p class="en">evaluation harness</p><p class="ua" lang="uk">система/набір для оцінювання</p><div class="meta"><span class="badge">B2</span>Agent framework<span class="state k"><svg class="i"><use href="#i-check"/></svg>Known</span></div></li>
+        <li class="item"><p class="en">token budget</p><p class="ua" lang="uk">бюджет токенів</p><div class="meta"><span class="badge">B2</span>Agent framework</div></li>
+        <li class="item"><p class="en">first-pass review</p><p class="ua" lang="uk">первинне ревʼю</p><div class="meta"><span class="badge">B2</span>Agent framework</div></li>
+      </ul>
+    </div>
+  </section>
+</figure>
+</body>
+</html>

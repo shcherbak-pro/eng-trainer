@@ -1,0 +1,105 @@
+{
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": {
+        "learn-again-save-failures": {
+          "status": "PASS",
+          "feedback": "Action and Undo both show the unsaved notice; successful retry preserves original state.",
+          "errors": []
+        },
+        "export-filename-cases": {
+          "status": "PASS",
+          "names": [
+            {
+              "name": "Мої слова",
+              "file": "Мої-слова-2026-11-22.json"
+            },
+            {
+              "name": "CON",
+              "file": "_CON-2026-11-22.json"
+            },
+            {
+              "name": "/// :?*",
+              "file": "vocabulary-2026-11-22.json"
+            },
+            {
+              "name": "a/b\\c:*?<>|",
+              "file": "a-b-c-2026-11-22.json"
+            }
+          ],
+          "errors": []
+        },
+        "independent-blocked-startup": {
+          "status": "PASS",
+          "modes": {
+            "recover": {
+              "opens": 1,
+              "writes": 0,
+              "unhandled": [],
+              "errors": []
+            },
+            "continue": {
+              "opens": 1,
+              "writes": 0,
+              "unhandled": [],
+              "errors": []
+            }
+          },
+          "errors": []
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": {
+        "learn-again-save-failures": {
+          "status": "PASS",
+          "feedback": "Action and Undo both show the unsaved notice; successful retry preserves original state.",
+          "errors": []
+        },
+        "export-filename-cases": {
+          "status": "PASS",
+          "names": [
+            {
+              "name": "Мої слова",
+              "file": "Мої-слова-2026-11-22.json"
+            },
+            {
+              "name": "CON",
+              "file": "_CON-2026-11-22.json"
+            },
+            {
+              "name": "/// :?*",
+              "file": "vocabulary-2026-11-22.json"
+            },
+            {
+              "name": "a/b\\c:*?<>|",
+              "file": "a-b-c-2026-11-22.json"
+            }
+          ],
+          "errors": []
+        },
+        "independent-blocked-startup": {
+          "status": "PASS",
+          "modes": {
+            "recover": {
+              "opens": 1,
+              "writes": 0,
+              "unhandled": [],
+              "errors": []
+            },
+            "continue": {
+              "opens": 1,
+              "writes": 0,
+              "unhandled": [],
+              "errors": []
+            }
+          },
+          "errors": []
+        }
+      }
+    }
+  },
+  "definition": "Fresh nonpersistent native contexts; synthetic data; clipboard calls stubbed; localhost gzip response BODY bytes, headers excluded. No owner profiles."
+}

@@ -1,0 +1,19 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Focus list" [level=1]
+  - heading "Your Focus list is empty" [level=2]
+  - paragraph: Use the Focus button on a phrase, word, verb or learning block to keep it here for repeated practice.
+  - link "Open the Library":
+    - /url: "#phrases"
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

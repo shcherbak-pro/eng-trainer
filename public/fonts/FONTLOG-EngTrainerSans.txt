@@ -1,0 +1,107 @@
+FONTLOG for Eng Trainer Sans
+============================
+
+This file accompanies Eng Trainer Sans, the interface font of eng-trainer v2.
+
+Eng Trainer Sans is a Modified Version of Source Sans 3 under the SIL Open Font
+License, Version 1.1 (see OFL-EngTrainerSans.txt, which is the unchanged licence of
+Source Sans 3 with its copyright and Reserved Font Name notice). It consists of four
+web subsets of Source Sans 3 whose font names were changed, because the original
+font reserves the name "Source" and a subset is a Modified Version.
+
+Nothing else was changed. Glyph outlines, character mapping, OpenType shaping
+features, metrics, the weight axis and its variation data, and all notices are
+exactly those of the original files.
+
+Source Sans 3 was designed by Paul D. Hunt at Adobe.
+Copyright 2010-2020 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
+Source is a trademark of Adobe in the United States and/or other countries.
+
+
+Basic font information
+----------------------
+
+Family name:      Eng Trainer Sans
+PostScript name:  EngTrainerSans-Roman
+Weight axis:      wght 200 to 900 (eng-trainer uses 400 to 700)
+Font version:     3.052 (unchanged)
+Licence:          SIL Open Font License, Version 1.1
+
+
+Original files
+--------------
+
+Google Fonts, family Source Sans 3, version v20 (font version 3.052), WOFF2 subsets:
+
+latin      https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZQ.woff2
+           28872 bytes, SHA-256 19143dca075972bc84e3fd9eab7416dd40cc565dccb2435a044bdfabe060c7d5
+latin-ext  https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wEaZfrc.woff2
+           60088 bytes, SHA-256 a85a7459bdb3cdc1136751e151a506bae653fc29ada3ca86237477df6f1b59e6
+cyrillic   https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wsaZfrc.woff2
+           18496 bytes, SHA-256 b6b721e08d0324b9e743858e8260463085d4c5e1e684f036f9d4a8ca6c62996f
+greek      https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wwaZfrc.woff2
+           14528 bytes, SHA-256 dd6ec3878cf37dc8b864562acf1a37bd8c9e0ca638d7f75a7cd6b6f7ae16cf3d
+
+The licence text is https://github.com/google/fonts/blob/main/ofl/sourcesans3/OFL.txt
+(OFL-EngTrainerSans.txt, SHA-256 ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5).
+
+
+Changes
+-------
+
+2026-11-22  Renamed for eng-trainer (ENG-V2-UX-01B-RC1).
+
+The files contain only Windows naming records (platform 3, encoding 1, language
+0x409). In each of the four files exactly these records changed:
+
+  name ID 1 (family)
+    before: Source Sans 3 ExtraLight
+    after:  Eng Trainer Sans ExtraLight
+  name ID 3 (unique identifier)
+    before: 3.052;ADBO;Source Sans 3 ExtraLight-ExtraLight;ADOBE
+    after:  3.052;ENGT;EngTrainerSans-Roman
+  name ID 4 (full name)
+    before: Source Sans 3
+    after:  Eng Trainer Sans
+  name ID 6 (PostScript name)
+    before: SourceSans3-Roman
+    after:  EngTrainerSans-Roman
+
+Unchanged: name ID 0 (copyright, including the Reserved Font Name notice), 2, 5
+(version), 14 (licence URL), 17, the axis, style and instance names 257 to 308, and
+every other table (BASE, GDEF, GPOS, GSUB, HVAR, MVAR, OS/2, STAT, avar, cmap,
+fvar, gasp, glyf, gvar, hhea, hmtx, loca, maxp, post, prep). In head only the
+checksum adjustment differs, because it covers the whole file.
+
+The WOFF2 files were compressed again, so their sizes differ from the originals by
+a few dozen bytes. Decoded, each font is 24 bytes smaller: the shorter unique
+identifier, less the longer family, full and PostScript names.
+
+
+Output files
+------------
+
+eng-trainer-sans-latin.woff2      28832 bytes, SHA-256 1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4
+eng-trainer-sans-latin-ext.woff2  60136 bytes, SHA-256 c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d
+eng-trainer-sans-cyrillic.woff2   18412 bytes, SHA-256 1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682
+eng-trainer-sans-greek.woff2      14504 bytes, SHA-256 0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670
+
+
+Preparation and reproduction
+----------------------------
+
+Tool: scripts/fonts/derive_eng_trainer_sans.py in the eng-trainer repository,
+run with Python 3.14.7, fontTools 4.68.0 and brotli 1.2.1
+(scripts/fonts/requirements.txt) in a separate virtual environment. The
+application build does not run it and needs no font tooling.
+
+  py -3.14 -m venv <environment>
+  <environment>\Scripts\python -m pip install -r scripts/fonts/requirements.txt
+  <environment>\Scripts\python scripts/fonts/derive_eng_trainer_sans.py --download --input-dir <originals> --output-dir <output>
+  <environment>\Scripts\python scripts/fonts/derive_eng_trainer_sans.py --check --input-dir <originals> --output-dir <output>
+
+The script refuses originals whose SHA-256 differs from the values above. The
+output is deterministic: with the same tool versions it matches the output
+hashes above. --check compares every decoded table of each original and its
+derivative and fails on any difference other than the four name records and the
+head checksum adjustment.

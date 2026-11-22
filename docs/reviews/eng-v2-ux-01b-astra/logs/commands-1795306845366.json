@@ -1,0 +1,37 @@
+[
+  {
+    "command": "npm run check",
+    "exitCode": 1,
+    "seconds": 0.926
+  },
+  {
+    "command": "npm test",
+    "exitCode": 1,
+    "seconds": 0.972
+  },
+  {
+    "command": "npm run check:v1",
+    "exitCode": 1,
+    "seconds": 0.895
+  },
+  {
+    "command": "npm run test:v1",
+    "exitCode": 1,
+    "seconds": 0.643
+  },
+  {
+    "command": "npm run build:site",
+    "exitCode": 1,
+    "seconds": 0.57
+  },
+  {
+    "command": "npm run verify:content",
+    "exitCode": 1,
+    "seconds": 0.803
+  },
+  {
+    "command": "git -c core.whitespace=cr-at-eol diff --check",
+    "exitCode": 0,
+    "seconds": 0.974
+  }
+]

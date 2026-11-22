@@ -1,0 +1,18 @@
+
+> english-assessment-trainer-v2@2.0.0 check:v1
+> npm --prefix v1 run check
+
+
+> english-assessment-trainer-v1@1.0.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: <user-home>\Desktop\Repos\eng-trainer\v1
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+X [ERROR] Cannot read directory "../../../..": Access is denied.
+
+X [ERROR] Could not resolve "<repo>\\v1\\vite.config.ts"
+
+failed to load config from <user-home>\Desktop\Repos\eng-trainer\v1\vite.config.ts

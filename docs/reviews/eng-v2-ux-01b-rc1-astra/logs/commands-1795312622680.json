@@ -1,0 +1,44 @@
+[
+  {
+    "command": "npm.cmd run check",
+    "exitCode": 0,
+    "seconds": 8.063,
+    "log": "1795312622680-npm-cmd-run-check.log"
+  },
+  {
+    "command": "npm.cmd test",
+    "exitCode": 0,
+    "seconds": 19.155,
+    "log": "1795312622680-npm-cmd-test.log"
+  },
+  {
+    "command": "npm.cmd run check:v1",
+    "exitCode": 0,
+    "seconds": 6.144,
+    "log": "1795312622680-npm-cmd-run-check-v1.log"
+  },
+  {
+    "command": "npm.cmd run test:v1",
+    "exitCode": 0,
+    "seconds": 12.464,
+    "log": "1795312622680-npm-cmd-run-test-v1.log"
+  },
+  {
+    "command": "npm.cmd run build:site",
+    "exitCode": 0,
+    "seconds": 9.846,
+    "log": "1795312622680-npm-cmd-run-build-site.log"
+  },
+  {
+    "command": "npm.cmd run verify:content",
+    "exitCode": 0,
+    "seconds": 1.792,
+    "log": "1795312622680-npm-cmd-run-verify-content.log"
+  },
+  {
+    "command": "node node_modules/vitest/vitest.mjs run --config docs/reviews/eng-v2-ux-01b-astra/vitest.config.ts",
+    "exitCode": 0,
+    "seconds": 4.949,
+    "log": "1795312622680-node-node_modules-vitest-vitest-mjs-run---config-docs-reviews-eng-v2-ux-01b-astra-vitest-config-ts.log"
+  }
+]

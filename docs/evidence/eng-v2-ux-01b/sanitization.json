@@ -1,0 +1,195 @@
+{
+  "policy": "New ENG-V2-UX-01B logs, runner and results only: local repository, user and temporary paths are replaced with <repo>, <user-home>, <user> and <run>; terminal colour codes are removed. Screenshots and accessibility snapshots contain synthetic or built-in data only.",
+  "files": [
+    {
+      "path": "logs/browser.log",
+      "rawSha256": "c0bceb9b16c0724e29a6a256c28b8e00bec286bd5c9e286010be60cd66fbfc9d",
+      "publishedSha256": "c0bceb9b16c0724e29a6a256c28b8e00bec286bd5c9e286010be60cd66fbfc9d"
+    },
+    {
+      "path": "logs/build-site.log",
+      "rawSha256": "8c0e06e7c6b6ee7f0c2dff61ffbd359560e38cf07b8ade4ab9749e58ac74b5bb",
+      "publishedSha256": "8b503dda5ca2acf445c5b86c2a9a3107a679c481148de9b1ff23c4be9ab07814"
+    },
+    {
+      "path": "logs/build.log",
+      "rawSha256": "9cef4832d9f7ec30edcb5241ea705453de15f44c3516e81e266ffc21f8830017",
+      "publishedSha256": "c62a97eaba7fbdeff4c283e7dbb568084dbdc2037bb06501b1c92372d6ed3a99"
+    },
+    {
+      "path": "logs/check-v1.log",
+      "rawSha256": "99a7a276c93cee89c400e357c1f44a4d44933905ef6abfacc6d8a5a2b10b5640",
+      "publishedSha256": "025e8d9d47389b9e57a6dc9153cae58054c986452b8465f2cf899f03aef58309"
+    },
+    {
+      "path": "logs/check.log",
+      "rawSha256": "496371e3c12abda4d5462715581f5ae3f83e74235bbffbddc906ce115ad21436",
+      "publishedSha256": "564a94fde9c48f591f0c0b934988b0fb05e207b1f75ae99598a3c8e312f1a68b"
+    },
+    {
+      "path": "logs/diff-check.log",
+      "rawSha256": "924740608511bc0c71bb7cb959082dc1da97cedbe1ff0774694e87c955cd532d",
+      "publishedSha256": "924740608511bc0c71bb7cb959082dc1da97cedbe1ff0774694e87c955cd532d"
+    },
+    {
+      "path": "logs/environment.txt",
+      "rawSha256": "be0a9cf661ac8243c762034c0da7da383c395297aa03ef6779bcafe73196bd03",
+      "publishedSha256": "be0a9cf661ac8243c762034c0da7da383c395297aa03ef6779bcafe73196bd03"
+    },
+    {
+      "path": "logs/exit-codes.txt",
+      "rawSha256": "087a8990695d56f246a701b65b00d666ca4a575ba6fdcaf94ffc7c046caca898",
+      "publishedSha256": "087a8990695d56f246a701b65b00d666ca4a575ba6fdcaf94ffc7c046caca898"
+    },
+    {
+      "path": "logs/test-v1.log",
+      "rawSha256": "a243680e93d5d1a71c58d7fb1ca303153931ecdfb36cb837800b74e9ea226f11",
+      "publishedSha256": "9fe6fa9948be0f228a8ff41af60691356d730b2dba5d1ba88707a56617ac32fa"
+    },
+    {
+      "path": "logs/test.log",
+      "rawSha256": "42796400383d8d280d145cbfc0fd018bf5d4cd927e9ed3febeecbe3bb9d218ce",
+      "publishedSha256": "877011e51913bca980e7d173864591e8c99eb14428312fddc8e39bfe0c2f5dec"
+    },
+    {
+      "path": "logs/verify-content.log",
+      "rawSha256": "eb27b6677ecfec1dae1901d384d3fd3a55ceb45b1cdbeefbf45a36ec6ebdf009",
+      "publishedSha256": "eb27b6677ecfec1dae1901d384d3fd3a55ceb45b1cdbeefbf45a36ec6ebdf009"
+    },
+    {
+      "path": "browser-check.mjs",
+      "rawSha256": "b4a166fe2a5c59f010f28bb23887fd8e49bcf44857795652675a768bd67d4683",
+      "publishedSha256": "b4a166fe2a5c59f010f28bb23887fd8e49bcf44857795652675a768bd67d4683"
+    },
+    {
+      "path": "collect-evidence.mjs",
+      "rawSha256": "7630dd0f09ac8bf7de0cc8ef8de571f34f3422231594cdf93c5c6205f7a5bb87",
+      "publishedSha256": "7630dd0f09ac8bf7de0cc8ef8de571f34f3422231594cdf93c5c6205f7a5bb87"
+    },
+    {
+      "path": "browser/results.json",
+      "rawSha256": "e6de8f380faf2c2a34e9dd79f7b4c8e9d31f579babd925738d2cee4ad1975687",
+      "publishedSha256": "e6de8f380faf2c2a34e9dd79f7b4c8e9d31f579babd925738d2cee4ad1975687"
+    },
+    {
+      "path": "browser/aria/chromium-answers.yml",
+      "rawSha256": "6af3e08eb0c12c33dd4001eed6bcadef765e17a929baf8a13ed912b2ad162518",
+      "publishedSha256": "6af3e08eb0c12c33dd4001eed6bcadef765e17a929baf8a13ed912b2ad162518"
+    },
+    {
+      "path": "browser/aria/chromium-collections.yml",
+      "rawSha256": "730946001f079c96eb754c2199fc78b435441f762595076c93147b3817dd0dca",
+      "publishedSha256": "730946001f079c96eb754c2199fc78b435441f762595076c93147b3817dd0dca"
+    },
+    {
+      "path": "browser/aria/chromium-favorites.yml",
+      "rawSha256": "aafff33abaa72f57c5bcb2ffb494eb688fb762b116319bd2dba8c40ea0b6db80",
+      "publishedSha256": "aafff33abaa72f57c5bcb2ffb494eb688fb762b116319bd2dba8c40ea0b6db80"
+    },
+    {
+      "path": "browser/aria/chromium-flashcards.yml",
+      "rawSha256": "f12ae55583f2afadc130dc21c5eb114af8a3596122b3844976b9edc50846ef41",
+      "publishedSha256": "f12ae55583f2afadc130dc21c5eb114af8a3596122b3844976b9edc50846ef41"
+    },
+    {
+      "path": "browser/aria/chromium-index.yml",
+      "rawSha256": "993a68e815fc8e2657580c24492608de675244080c0b46e16f79541cea56194a",
+      "publishedSha256": "993a68e815fc8e2657580c24492608de675244080c0b46e16f79541cea56194a"
+    },
+    {
+      "path": "browser/aria/chromium-irregularVerbs.yml",
+      "rawSha256": "9a8eca91a2d45454c17587bcac03ff1b78f52511e7508ee4e76f5a58f9f9119d",
+      "publishedSha256": "9a8eca91a2d45454c17587bcac03ff1b78f52511e7508ee4e76f5a58f9f9119d"
+    },
+    {
+      "path": "browser/aria/chromium-patterns.yml",
+      "rawSha256": "7b637e2caa0fb9cc55307a3438b925f0936b835f234561fe76721a7fb36712b4",
+      "publishedSha256": "7b637e2caa0fb9cc55307a3438b925f0936b835f234561fe76721a7fb36712b4"
+    },
+    {
+      "path": "browser/aria/chromium-phrases.yml",
+      "rawSha256": "f354e34a7f100d776b5e808297b42339114679de640d872fd1eaeb765e5c96e0",
+      "publishedSha256": "f354e34a7f100d776b5e808297b42339114679de640d872fd1eaeb765e5c96e0"
+    },
+    {
+      "path": "browser/aria/chromium-practice.yml",
+      "rawSha256": "706f0dd976aabf51a5123d2809c37a539467590e678d444c480b066e467e58b5",
+      "publishedSha256": "706f0dd976aabf51a5123d2809c37a539467590e678d444c480b066e467e58b5"
+    },
+    {
+      "path": "browser/aria/chromium-reverse.yml",
+      "rawSha256": "b9fb55d22e80a2d9e92c7a7c80bb04d329a26479cf522e526c785c8918729d6e",
+      "publishedSha256": "b9fb55d22e80a2d9e92c7a7c80bb04d329a26479cf522e526c785c8918729d6e"
+    },
+    {
+      "path": "browser/aria/chromium-settings.yml",
+      "rawSha256": "119b3525706e25bab83bd5f15cff611b35c19201cc1f6945f227f7895030115d",
+      "publishedSha256": "119b3525706e25bab83bd5f15cff611b35c19201cc1f6945f227f7895030115d"
+    },
+    {
+      "path": "browser/aria/chromium-wordIndex.yml",
+      "rawSha256": "3ea09979f252340252d48c52ab0de442c8bc846d09aed55ec5c96f29c2a888c8",
+      "publishedSha256": "3ea09979f252340252d48c52ab0de442c8bc846d09aed55ec5c96f29c2a888c8"
+    },
+    {
+      "path": "browser/aria/firefox-answers.yml",
+      "rawSha256": "6af3e08eb0c12c33dd4001eed6bcadef765e17a929baf8a13ed912b2ad162518",
+      "publishedSha256": "6af3e08eb0c12c33dd4001eed6bcadef765e17a929baf8a13ed912b2ad162518"
+    },
+    {
+      "path": "browser/aria/firefox-collections.yml",
+      "rawSha256": "730946001f079c96eb754c2199fc78b435441f762595076c93147b3817dd0dca",
+      "publishedSha256": "730946001f079c96eb754c2199fc78b435441f762595076c93147b3817dd0dca"
+    },
+    {
+      "path": "browser/aria/firefox-favorites.yml",
+      "rawSha256": "aafff33abaa72f57c5bcb2ffb494eb688fb762b116319bd2dba8c40ea0b6db80",
+      "publishedSha256": "aafff33abaa72f57c5bcb2ffb494eb688fb762b116319bd2dba8c40ea0b6db80"
+    },
+    {
+      "path": "browser/aria/firefox-flashcards.yml",
+      "rawSha256": "f12ae55583f2afadc130dc21c5eb114af8a3596122b3844976b9edc50846ef41",
+      "publishedSha256": "f12ae55583f2afadc130dc21c5eb114af8a3596122b3844976b9edc50846ef41"
+    },
+    {
+      "path": "browser/aria/firefox-index.yml",
+      "rawSha256": "993a68e815fc8e2657580c24492608de675244080c0b46e16f79541cea56194a",
+      "publishedSha256": "993a68e815fc8e2657580c24492608de675244080c0b46e16f79541cea56194a"
+    },
+    {
+      "path": "browser/aria/firefox-irregularVerbs.yml",
+      "rawSha256": "9a8eca91a2d45454c17587bcac03ff1b78f52511e7508ee4e76f5a58f9f9119d",
+      "publishedSha256": "9a8eca91a2d45454c17587bcac03ff1b78f52511e7508ee4e76f5a58f9f9119d"
+    },
+    {
+      "path": "browser/aria/firefox-patterns.yml",
+      "rawSha256": "7b637e2caa0fb9cc55307a3438b925f0936b835f234561fe76721a7fb36712b4",
+      "publishedSha256": "7b637e2caa0fb9cc55307a3438b925f0936b835f234561fe76721a7fb36712b4"
+    },
+    {
+      "path": "browser/aria/firefox-phrases.yml",
+      "rawSha256": "f354e34a7f100d776b5e808297b42339114679de640d872fd1eaeb765e5c96e0",
+      "publishedSha256": "f354e34a7f100d776b5e808297b42339114679de640d872fd1eaeb765e5c96e0"
+    },
+    {
+      "path": "browser/aria/firefox-practice.yml",
+      "rawSha256": "706f0dd976aabf51a5123d2809c37a539467590e678d444c480b066e467e58b5",
+      "publishedSha256": "706f0dd976aabf51a5123d2809c37a539467590e678d444c480b066e467e58b5"
+    },
+    {
+      "path": "browser/aria/firefox-reverse.yml",
+      "rawSha256": "288452c65829829b4a00c8d05085f6ed29d9f43102b4502368f3ae1702d8f065",
+      "publishedSha256": "288452c65829829b4a00c8d05085f6ed29d9f43102b4502368f3ae1702d8f065"
+    },
+    {
+      "path": "browser/aria/firefox-settings.yml",
+      "rawSha256": "119b3525706e25bab83bd5f15cff611b35c19201cc1f6945f227f7895030115d",
+      "publishedSha256": "119b3525706e25bab83bd5f15cff611b35c19201cc1f6945f227f7895030115d"
+    },
+    {
+      "path": "browser/aria/firefox-wordIndex.yml",
+      "rawSha256": "3ea09979f252340252d48c52ab0de442c8bc846d09aed55ec5c96f29c2a888c8",
+      "publishedSha256": "3ea09979f252340252d48c52ab0de442c8bc846d09aed55ec5c96f29c2a888c8"
+    }
+  ]
+}

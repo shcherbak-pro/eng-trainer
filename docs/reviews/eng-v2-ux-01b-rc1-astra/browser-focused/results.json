@@ -1,0 +1,1897 @@
+{
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": {
+        "cross-deck-same-canonical-key": {
+          "status": "PASS",
+          "writes": [],
+          "after": {
+            "flashcardSessions": {
+              "all": {
+                "order": [
+                  "agent-vocab-001",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999",
+                  "agent-vocab-002"
+                ],
+                "index": 0
+              },
+              "topic:Agent Framework Vocabulary": {
+                "order": [
+                  "agent-vocab-001",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999",
+                  "agent-vocab-002",
+                  "agent-vocab-003",
+                  "agent-vocab-004",
+                  "agent-vocab-005",
+                  "agent-vocab-006",
+                  "agent-vocab-007",
+                  "agent-vocab-008",
+                  "agent-vocab-009",
+                  "agent-vocab-010",
+                  "agent-vocab-011",
+                  "agent-vocab-012",
+                  "agent-vocab-013",
+                  "agent-vocab-014",
+                  "agent-vocab-015",
+                  "agent-vocab-016",
+                  "agent-vocab-017",
+                  "agent-vocab-018",
+                  "agent-vocab-019",
+                  "agent-vocab-020",
+                  "agent-vocab-021",
+                  "agent-vocab-022",
+                  "agent-vocab-023",
+                  "agent-vocab-024",
+                  "agent-vocab-025",
+                  "agent-vocab-026",
+                  "agent-vocab-027",
+                  "agent-vocab-028",
+                  "agent-vocab-029",
+                  "agent-vocab-030",
+                  "agent-vocab-031",
+                  "agent-vocab-032",
+                  "agent-vocab-033",
+                  "agent-vocab-034",
+                  "agent-vocab-035",
+                  "agent-vocab-036",
+                  "agent-vocab-037",
+                  "agent-vocab-038",
+                  "agent-vocab-039",
+                  "agent-vocab-040",
+                  "agent-vocab-041",
+                  "agent-vocab-042",
+                  "agent-vocab-043",
+                  "agent-vocab-044",
+                  "agent-vocab-045",
+                  "agent-vocab-046",
+                  "agent-vocab-047",
+                  "agent-vocab-048",
+                  "agent-vocab-049",
+                  "agent-vocab-050",
+                  "agent-vocab-051",
+                  "agent-vocab-052",
+                  "agent-vocab-053",
+                  "agent-vocab-054",
+                  "agent-vocab-055",
+                  "agent-vocab-056",
+                  "agent-vocab-057",
+                  "agent-vocab-058",
+                  "agent-vocab-059",
+                  "agent-vocab-060",
+                  "agent-vocab-061",
+                  "agent-vocab-062",
+                  "agent-vocab-063",
+                  "agent-vocab-064",
+                  "agent-vocab-065",
+                  "agent-vocab-066",
+                  "agent-vocab-067",
+                  "agent-vocab-068",
+                  "agent-vocab-069",
+                  "agent-vocab-070",
+                  "agent-vocab-071",
+                  "agent-vocab-072",
+                  "agent-vocab-073",
+                  "agent-vocab-074",
+                  "agent-vocab-075",
+                  "agent-vocab-076",
+                  "agent-vocab-077",
+                  "agent-vocab-078",
+                  "agent-vocab-079",
+                  "agent-vocab-080",
+                  "agent-vocab-081"
+                ],
+                "index": 2
+              }
+            },
+            "learnPasses": {},
+            "progress": {
+              "hiddenWords": [
+                "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+              ],
+              "learnedPhrases": []
+            },
+            "settings": {
+              "activePage": "flashcards",
+              "flashcardMode": "topic",
+              "flashcardTopic": "Agent Framework Vocabulary"
+            },
+            "userCollections": {},
+            "userEntries": {}
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "cross-deck-different-key": {
+          "status": "PASS",
+          "writes": [
+            {
+              "store": "progress",
+              "key": "learnedPhrases"
+            }
+          ],
+          "after": {
+            "flashcardSessions": {
+              "all": {
+                "order": [
+                  "agent-vocab-001",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999",
+                  "agent-vocab-002"
+                ],
+                "index": 0
+              },
+              "topic:Agent Framework Vocabulary": {
+                "order": [
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999",
+                  "agent-vocab-001",
+                  "agent-vocab-003",
+                  "agent-vocab-004",
+                  "agent-vocab-005",
+                  "agent-vocab-006",
+                  "agent-vocab-007",
+                  "agent-vocab-008",
+                  "agent-vocab-009",
+                  "agent-vocab-010",
+                  "agent-vocab-011",
+                  "agent-vocab-012",
+                  "agent-vocab-013",
+                  "agent-vocab-014",
+                  "agent-vocab-015",
+                  "agent-vocab-016",
+                  "agent-vocab-017",
+                  "agent-vocab-018",
+                  "agent-vocab-019",
+                  "agent-vocab-020",
+                  "agent-vocab-021",
+                  "agent-vocab-022",
+                  "agent-vocab-023",
+                  "agent-vocab-024",
+                  "agent-vocab-025",
+                  "agent-vocab-026",
+                  "agent-vocab-027",
+                  "agent-vocab-028",
+                  "agent-vocab-029",
+                  "agent-vocab-030",
+                  "agent-vocab-031",
+                  "agent-vocab-032",
+                  "agent-vocab-033",
+                  "agent-vocab-034",
+                  "agent-vocab-035",
+                  "agent-vocab-036",
+                  "agent-vocab-037",
+                  "agent-vocab-038",
+                  "agent-vocab-039",
+                  "agent-vocab-040",
+                  "agent-vocab-041",
+                  "agent-vocab-042",
+                  "agent-vocab-043",
+                  "agent-vocab-044",
+                  "agent-vocab-045",
+                  "agent-vocab-046",
+                  "agent-vocab-047",
+                  "agent-vocab-048",
+                  "agent-vocab-049",
+                  "agent-vocab-050",
+                  "agent-vocab-051",
+                  "agent-vocab-052",
+                  "agent-vocab-053",
+                  "agent-vocab-054",
+                  "agent-vocab-055",
+                  "agent-vocab-056",
+                  "agent-vocab-057",
+                  "agent-vocab-058",
+                  "agent-vocab-059",
+                  "agent-vocab-060",
+                  "agent-vocab-061",
+                  "agent-vocab-062",
+                  "agent-vocab-063",
+                  "agent-vocab-064",
+                  "agent-vocab-065",
+                  "agent-vocab-066",
+                  "agent-vocab-067",
+                  "agent-vocab-068",
+                  "agent-vocab-069",
+                  "agent-vocab-070",
+                  "agent-vocab-071",
+                  "agent-vocab-072",
+                  "agent-vocab-073",
+                  "agent-vocab-074",
+                  "agent-vocab-075",
+                  "agent-vocab-076",
+                  "agent-vocab-077",
+                  "agent-vocab-078",
+                  "agent-vocab-079",
+                  "agent-vocab-080",
+                  "agent-vocab-081"
+                ],
+                "index": 1
+              }
+            },
+            "learnPasses": {},
+            "progress": {
+              "hiddenWords": [
+                "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+              ],
+              "learnedPhrases": [
+                "agent-vocab-002",
+                "agent-vocab-001"
+              ]
+            },
+            "settings": {
+              "activePage": "flashcards",
+              "flashcardMode": "topic",
+              "flashcardTopic": "Agent Framework Vocabulary"
+            },
+            "userCollections": {},
+            "userEntries": {}
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "focus-ownership-learn-again-and-toast": {
+          "status": "PASS",
+          "action": {
+            "selfFocusedBefore": true,
+            "elsewhere": "Back to flashcards"
+          },
+          "afterAction": {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Back to flashcards",
+            "cls": "btn btn--secondary btn--sm "
+          },
+          "afterUndo": {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Back to flashcards",
+            "cls": "btn btn--secondary btn--sm "
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "focus-ownership-dialog-close-after-render": {
+          "status": "PASS",
+          "move": {
+            "duringClose": true,
+            "connected": true,
+            "text": "Create a Learn Pass"
+          },
+          "focus": {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Create a Learn Pass",
+            "cls": "btn btn--secondary btn--sm "
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "collection-removal-focus-and-retention": {
+          "status": "PASS",
+          "focus": {
+            "tag": "H2",
+            "id": "collections-title",
+            "text": "Your collections",
+            "cls": "panel__title"
+          },
+          "after": {
+            "flashcardSessions": {
+              "all": {
+                "order": [
+                  "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                  "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+                ],
+                "index": 1
+              }
+            },
+            "learnPasses": {},
+            "progress": {
+              "favoriteWords": [
+                "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222"
+              ],
+              "hiddenWords": [
+                "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222"
+              ],
+              "learnedPhrases": [
+                "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222"
+              ]
+            },
+            "settings": {
+              "activePage": "collections"
+            },
+            "userCollections": {},
+            "userEntries": {}
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "returned-issue-names-file-context-and-writes": {
+          "status": "PASS",
+          "cases": [
+            {
+              "file": "missing.csv",
+              "connected": true,
+              "cls": "notice notice--error review__problems",
+              "role": "alert",
+              "tabindex": "-1",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "fileContext": "Review “missing.csv”",
+              "text": " Nothing can be imported until these problems are fixed in the file: Record 2, column “translation”: Translation is required. Records are counted from the header row (record 1). Blank lines are skipped, and a quoted value can span several lines.  Choose the corrected file ",
+              "writes": []
+            },
+            {
+              "file": "kind.csv",
+              "connected": true,
+              "cls": "notice notice--error review__problems",
+              "role": "alert",
+              "tabindex": "-1",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "fileContext": "Review “kind.csv”",
+              "text": " Nothing can be imported until these problems are fixed in the file: Record 2, column “kind”: Kind must be word or phrase. Records are counted from the header row (record 1). Blank lines are skipped, and a quoted value can span several lines.  Choose the corrected file ",
+              "writes": []
+            },
+            {
+              "file": "conflict.json",
+              "connected": true,
+              "cls": "notice notice--error review__problems",
+              "role": "alert",
+              "tabindex": "-1",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "fileContext": "Review “conflict.json”",
+              "text": " Nothing can be imported until these problems are fixed in the file: ID conflict for “Astra equal”. Existing entries are never overwritten by import.   Choose the corrected file ",
+              "writes": []
+            }
+          ],
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "returned-issue-post-render-cancel": {
+          "status": "PASS",
+          "beforeRelease": {
+            "observed": true,
+            "focus": []
+          },
+          "after": {
+            "observed": true,
+            "focus": []
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "returned-issue-post-render-supersede": {
+          "status": "PASS",
+          "beforeRelease": {
+            "observed": true,
+            "focus": []
+          },
+          "after": {
+            "observed": true,
+            "focus": [
+              {
+                "cls": "review__title",
+                "text": "Review “newest.csv”",
+                "file": "Review “newest.csv”",
+                "connected": true
+              }
+            ]
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "renamed-font-faces-assets-and-raster-glyphs": {
+          "status": "PASS",
+          "rendering": {
+            "faces": [
+              {
+                "family": "Eng Trainer Sans",
+                "status": "loaded",
+                "weight": "400 700",
+                "style": "normal",
+                "unicodeRange": "U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116"
+              },
+              {
+                "family": "Eng Trainer Sans",
+                "status": "loaded",
+                "weight": "400 700",
+                "style": "normal",
+                "unicodeRange": "U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF"
+              },
+              {
+                "family": "Eng Trainer Sans",
+                "status": "loaded",
+                "weight": "400 700",
+                "style": "normal",
+                "unicodeRange": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
+              },
+              {
+                "family": "Eng Trainer Sans",
+                "status": "loaded",
+                "weight": "400 700",
+                "style": "normal",
+                "unicodeRange": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+              }
+            ],
+            "rules": [
+              "@font-face { font-family: \"Eng Trainer Sans\"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(\"/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2\") format(\"woff2\"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }",
+              "@font-face { font-family: \"Eng Trainer Sans\"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(\"/eng-trainer/assets/eng-trainer-sans-greek-FkV9qZ7r.woff2\") format(\"woff2\"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }",
+              "@font-face { font-family: \"Eng Trainer Sans\"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(\"/eng-trainer/assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2\") format(\"woff2\"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }",
+              "@font-face { font-family: \"Eng Trainer Sans\"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(\"/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2\") format(\"woff2\"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }"
+            ],
+            "glyphs": [
+              {
+                "ch": "E",
+                "renamed": [
+                  917323330,
+                  917323330,
+                  917323330
+                ],
+                "fallback": [
+                  1234952390,
+                  1104713690,
+                  84750209
+                ]
+              },
+              {
+                "ch": "n",
+                "renamed": [
+                  3223409401,
+                  3223409401,
+                  3223409401
+                ],
+                "fallback": [
+                  3211173515,
+                  3490624474,
+                  3445048293
+                ]
+              },
+              {
+                "ch": "g",
+                "renamed": [
+                  1696772694,
+                  1696772694,
+                  1696772694
+                ],
+                "fallback": [
+                  2162116354,
+                  4199398108,
+                  2892047926
+                ]
+              },
+              {
+                "ch": "l",
+                "renamed": [
+                  1018875268,
+                  1018875268,
+                  1018875268
+                ],
+                "fallback": [
+                  2234937561,
+                  2519030398,
+                  1248648156
+                ]
+              },
+              {
+                "ch": "i",
+                "renamed": [
+                  1140260174,
+                  1140260174,
+                  1140260174
+                ],
+                "fallback": [
+                  330905905,
+                  767631785,
+                  4272619048
+                ]
+              },
+              {
+                "ch": "s",
+                "renamed": [
+                  4137221706,
+                  4137221706,
+                  4137221706
+                ],
+                "fallback": [
+                  2384505553,
+                  499138617,
+                  3873835566
+                ]
+              },
+              {
+                "ch": "h",
+                "renamed": [
+                  3570536632,
+                  3570536632,
+                  3570536632
+                ],
+                "fallback": [
+                  2676446444,
+                  927566981,
+                  3030830178
+                ]
+              },
+              {
+                "ch": "і",
+                "renamed": [
+                  1140260174,
+                  1140260174,
+                  1140260174
+                ],
+                "fallback": [
+                  330905905,
+                  767631785,
+                  4272619048
+                ]
+              },
+              {
+                "ch": "ї",
+                "renamed": [
+                  1198420706,
+                  1198420706,
+                  1198420706
+                ],
+                "fallback": [
+                  86472890,
+                  2492622508,
+                  1240546684
+                ]
+              },
+              {
+                "ch": "є",
+                "renamed": [
+                  2465851340,
+                  2465851340,
+                  2465851340
+                ],
+                "fallback": [
+                  1004266701,
+                  1969731005,
+                  875669896
+                ]
+              },
+              {
+                "ch": "ґ",
+                "renamed": [
+                  3885939278,
+                  3885939278,
+                  3885939278
+                ],
+                "fallback": [
+                  1249162633,
+                  1719885519,
+                  3135845487
+                ]
+              },
+              {
+                "ch": "І",
+                "renamed": [
+                  2840498574,
+                  2840498574,
+                  2840498574
+                ],
+                "fallback": [
+                  3319142917,
+                  335460778,
+                  3772055317
+                ]
+              },
+              {
+                "ch": "Ї",
+                "renamed": [
+                  764253670,
+                  764253670,
+                  764253670
+                ],
+                "fallback": [
+                  3872615434,
+                  898707916,
+                  308381348
+                ]
+              },
+              {
+                "ch": "Є",
+                "renamed": [
+                  1975335249,
+                  1975335249,
+                  1975335249
+                ],
+                "fallback": [
+                  697336496,
+                  3617439160,
+                  3289678147
+                ]
+              },
+              {
+                "ch": "Ґ",
+                "renamed": [
+                  3860770953,
+                  3860770953,
+                  3860770953
+                ],
+                "fallback": [
+                  2467111297,
+                  299316426,
+                  3848142975
+                ]
+              },
+              {
+                "ch": "ʼ",
+                "renamed": [
+                  23130674,
+                  23130674,
+                  23130674
+                ],
+                "fallback": [
+                  3841310052,
+                  3235086665,
+                  3235086665
+                ]
+              },
+              {
+                "ch": "ɪ",
+                "renamed": [
+                  117911830,
+                  117911830,
+                  117911830
+                ],
+                "fallback": [
+                  3495302245,
+                  3622692976,
+                  3622692976
+                ]
+              },
+              {
+                "ch": "ə",
+                "renamed": [
+                  3730561132,
+                  3730561132,
+                  3730561132
+                ],
+                "fallback": [
+                  277489802,
+                  1574094586,
+                  1574094586
+                ]
+              },
+              {
+                "ch": "ˈ",
+                "renamed": [
+                  3810497780,
+                  3810497780,
+                  3810497780
+                ],
+                "fallback": [
+                  3241768101,
+                  213103877,
+                  213103877
+                ]
+              },
+              {
+                "ch": "ː",
+                "renamed": [
+                  2436365888,
+                  2436365888,
+                  2436365888
+                ],
+                "fallback": [
+                  138513592,
+                  110160197,
+                  110160197
+                ]
+              },
+              {
+                "ch": "ʊ",
+                "renamed": [
+                  166589887,
+                  166589887,
+                  166589887
+                ],
+                "fallback": [
+                  1903968763,
+                  1286081554,
+                  1286081554
+                ]
+              },
+              {
+                "ch": "ð",
+                "renamed": [
+                  2893710755,
+                  2893710755,
+                  2893710755
+                ],
+                "fallback": [
+                  3640650821,
+                  534506113,
+                  3943395670
+                ]
+              },
+              {
+                "ch": "ɑ",
+                "renamed": [
+                  3125699099,
+                  3125699099,
+                  3125699099
+                ],
+                "fallback": [
+                  1856478661,
+                  2403095011,
+                  2403095011
+                ]
+              },
+              {
+                "ch": "æ",
+                "renamed": [
+                  3392662215,
+                  3392662215,
+                  3392662215
+                ],
+                "fallback": [
+                  2261955582,
+                  4099770336,
+                  929618345
+                ]
+              },
+              {
+                "ch": "ʃ",
+                "renamed": [
+                  3671728978,
+                  3671728978,
+                  3671728978
+                ],
+                "fallback": [
+                  136905285,
+                  3915772437,
+                  3915772437
+                ]
+              },
+              {
+                "ch": "ɔ",
+                "renamed": [
+                  2766178178,
+                  2766178178,
+                  2766178178
+                ],
+                "fallback": [
+                  2027666290,
+                  2886392374,
+                  2886392374
+                ]
+              },
+              {
+                "ch": "ɜ",
+                "renamed": [
+                  3413060950,
+                  3413060950,
+                  3413060950
+                ],
+                "fallback": [
+                  2752959506,
+                  3555971254,
+                  3555971254
+                ]
+              },
+              {
+                "ch": "ʌ",
+                "renamed": [
+                  390392276,
+                  390392276,
+                  390392276
+                ],
+                "fallback": [
+                  3028431236,
+                  1856802003,
+                  1856802003
+                ]
+              },
+              {
+                "ch": "ɡ",
+                "renamed": [
+                  2260395149,
+                  2260395149,
+                  2260395149
+                ],
+                "fallback": [
+                  1373560128,
+                  2553943717,
+                  2553943717
+                ]
+              },
+              {
+                "ch": "ˌ",
+                "renamed": [
+                  2960010255,
+                  2960010255,
+                  2960010255
+                ],
+                "fallback": [
+                  2405004453,
+                  2157688069,
+                  2157688069
+                ]
+              },
+              {
+                "ch": "ŋ",
+                "renamed": [
+                  2570213725,
+                  2570213725,
+                  2570213725
+                ],
+                "fallback": [
+                  3069063671,
+                  3498867279,
+                  3388200137
+                ]
+              },
+              {
+                "ch": "ʒ",
+                "renamed": [
+                  4268158633,
+                  4268158633,
+                  4268158633
+                ],
+                "fallback": [
+                  929006988,
+                  3637986215,
+                  3637986215
+                ]
+              },
+              {
+                "ch": "θ",
+                "renamed": [
+                  3230060943,
+                  3230060943,
+                  3230060943
+                ],
+                "fallback": [
+                  505928647,
+                  3544294472,
+                  2858604106
+                ]
+              }
+            ],
+            "requests": [
+              {
+                "url": "eng-trainer-sans-latin-WBnKszXN.woff2",
+                "bytes": 28832
+              },
+              {
+                "url": "literata-latin-Cedbco83.woff2",
+                "bytes": 85672
+              },
+              {
+                "url": "eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+                "bytes": 18412
+              },
+              {
+                "url": "eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+                "bytes": 60136
+              },
+              {
+                "url": "eng-trainer-sans-greek-FkV9qZ7r.woff2",
+                "bytes": 14504
+              }
+            ],
+            "computed": "\"Eng Trainer Sans\""
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "description-language-on-home-focus-and-every-verb-set": {
+          "status": "PASS",
+          "rows": [
+            {
+              "route": "index",
+              "id": "start-answer",
+              "text": "Початок відповіді: фрази для м’якого і впевненого старту speaking answer.",
+              "lang": "uk"
+            },
+            {
+              "route": "index",
+              "id": "irregular-verbs-100",
+              "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+              "lang": "en"
+            },
+            {
+              "route": "favorites",
+              "id": "start-answer",
+              "text": "Початок відповіді: фрази для м’якого і впевненого старту speaking answer.",
+              "lang": "uk"
+            },
+            {
+              "route": "favorites",
+              "id": "irregular-verbs-100",
+              "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+              "lang": "en"
+            },
+            {
+              "route": "irregularVerbs",
+              "id": "irregular-verbs-100",
+              "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+              "lang": "en"
+            },
+            {
+              "route": "irregularVerbs",
+              "id": "irregular-verbs-logical-200",
+              "text": "200 irregular verbs grouped by change pattern: same forms, matching past/participle, -en participles, i-a-u pattern, and mixed forms.",
+              "lang": "en"
+            },
+            {
+              "route": "irregularVerbs",
+              "id": "ai-certification-verbs-contextual",
+              "text": "Curated high-value professional verbs for AI certification topics, with Base, Past Simple, and Past Participle forms. Basic high-frequency verbs are intentionally excluded.",
+              "lang": "en"
+            }
+          ],
+          "errors": [],
+          "unhandledRejections": []
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": {
+        "cross-deck-same-canonical-key": {
+          "status": "PASS",
+          "writes": [],
+          "after": {
+            "flashcardSessions": {
+              "all": {
+                "order": [
+                  "agent-vocab-001",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999",
+                  "agent-vocab-002"
+                ],
+                "index": 0
+              },
+              "topic:Agent Framework Vocabulary": {
+                "order": [
+                  "agent-vocab-001",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999",
+                  "agent-vocab-002",
+                  "agent-vocab-003",
+                  "agent-vocab-004",
+                  "agent-vocab-005",
+                  "agent-vocab-006",
+                  "agent-vocab-007",
+                  "agent-vocab-008",
+                  "agent-vocab-009",
+                  "agent-vocab-010",
+                  "agent-vocab-011",
+                  "agent-vocab-012",
+                  "agent-vocab-013",
+                  "agent-vocab-014",
+                  "agent-vocab-015",
+                  "agent-vocab-016",
+                  "agent-vocab-017",
+                  "agent-vocab-018",
+                  "agent-vocab-019",
+                  "agent-vocab-020",
+                  "agent-vocab-021",
+                  "agent-vocab-022",
+                  "agent-vocab-023",
+                  "agent-vocab-024",
+                  "agent-vocab-025",
+                  "agent-vocab-026",
+                  "agent-vocab-027",
+                  "agent-vocab-028",
+                  "agent-vocab-029",
+                  "agent-vocab-030",
+                  "agent-vocab-031",
+                  "agent-vocab-032",
+                  "agent-vocab-033",
+                  "agent-vocab-034",
+                  "agent-vocab-035",
+                  "agent-vocab-036",
+                  "agent-vocab-037",
+                  "agent-vocab-038",
+                  "agent-vocab-039",
+                  "agent-vocab-040",
+                  "agent-vocab-041",
+                  "agent-vocab-042",
+                  "agent-vocab-043",
+                  "agent-vocab-044",
+                  "agent-vocab-045",
+                  "agent-vocab-046",
+                  "agent-vocab-047",
+                  "agent-vocab-048",
+                  "agent-vocab-049",
+                  "agent-vocab-050",
+                  "agent-vocab-051",
+                  "agent-vocab-052",
+                  "agent-vocab-053",
+                  "agent-vocab-054",
+                  "agent-vocab-055",
+                  "agent-vocab-056",
+                  "agent-vocab-057",
+                  "agent-vocab-058",
+                  "agent-vocab-059",
+                  "agent-vocab-060",
+                  "agent-vocab-061",
+                  "agent-vocab-062",
+                  "agent-vocab-063",
+                  "agent-vocab-064",
+                  "agent-vocab-065",
+                  "agent-vocab-066",
+                  "agent-vocab-067",
+                  "agent-vocab-068",
+                  "agent-vocab-069",
+                  "agent-vocab-070",
+                  "agent-vocab-071",
+                  "agent-vocab-072",
+                  "agent-vocab-073",
+                  "agent-vocab-074",
+                  "agent-vocab-075",
+                  "agent-vocab-076",
+                  "agent-vocab-077",
+                  "agent-vocab-078",
+                  "agent-vocab-079",
+                  "agent-vocab-080",
+                  "agent-vocab-081"
+                ],
+                "index": 2
+              }
+            },
+            "learnPasses": {},
+            "progress": {
+              "hiddenWords": [
+                "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+              ],
+              "learnedPhrases": []
+            },
+            "settings": {
+              "activePage": "flashcards",
+              "flashcardMode": "topic",
+              "flashcardTopic": "Agent Framework Vocabulary"
+            },
+            "userCollections": {},
+            "userEntries": {}
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "cross-deck-different-key": {
+          "status": "PASS",
+          "writes": [
+            {
+              "store": "progress",
+              "key": "learnedPhrases"
+            }
+          ],
+          "after": {
+            "flashcardSessions": {
+              "all": {
+                "order": [
+                  "agent-vocab-001",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999",
+                  "agent-vocab-002"
+                ],
+                "index": 0
+              },
+              "topic:Agent Framework Vocabulary": {
+                "order": [
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999",
+                  "agent-vocab-001",
+                  "agent-vocab-003",
+                  "agent-vocab-004",
+                  "agent-vocab-005",
+                  "agent-vocab-006",
+                  "agent-vocab-007",
+                  "agent-vocab-008",
+                  "agent-vocab-009",
+                  "agent-vocab-010",
+                  "agent-vocab-011",
+                  "agent-vocab-012",
+                  "agent-vocab-013",
+                  "agent-vocab-014",
+                  "agent-vocab-015",
+                  "agent-vocab-016",
+                  "agent-vocab-017",
+                  "agent-vocab-018",
+                  "agent-vocab-019",
+                  "agent-vocab-020",
+                  "agent-vocab-021",
+                  "agent-vocab-022",
+                  "agent-vocab-023",
+                  "agent-vocab-024",
+                  "agent-vocab-025",
+                  "agent-vocab-026",
+                  "agent-vocab-027",
+                  "agent-vocab-028",
+                  "agent-vocab-029",
+                  "agent-vocab-030",
+                  "agent-vocab-031",
+                  "agent-vocab-032",
+                  "agent-vocab-033",
+                  "agent-vocab-034",
+                  "agent-vocab-035",
+                  "agent-vocab-036",
+                  "agent-vocab-037",
+                  "agent-vocab-038",
+                  "agent-vocab-039",
+                  "agent-vocab-040",
+                  "agent-vocab-041",
+                  "agent-vocab-042",
+                  "agent-vocab-043",
+                  "agent-vocab-044",
+                  "agent-vocab-045",
+                  "agent-vocab-046",
+                  "agent-vocab-047",
+                  "agent-vocab-048",
+                  "agent-vocab-049",
+                  "agent-vocab-050",
+                  "agent-vocab-051",
+                  "agent-vocab-052",
+                  "agent-vocab-053",
+                  "agent-vocab-054",
+                  "agent-vocab-055",
+                  "agent-vocab-056",
+                  "agent-vocab-057",
+                  "agent-vocab-058",
+                  "agent-vocab-059",
+                  "agent-vocab-060",
+                  "agent-vocab-061",
+                  "agent-vocab-062",
+                  "agent-vocab-063",
+                  "agent-vocab-064",
+                  "agent-vocab-065",
+                  "agent-vocab-066",
+                  "agent-vocab-067",
+                  "agent-vocab-068",
+                  "agent-vocab-069",
+                  "agent-vocab-070",
+                  "agent-vocab-071",
+                  "agent-vocab-072",
+                  "agent-vocab-073",
+                  "agent-vocab-074",
+                  "agent-vocab-075",
+                  "agent-vocab-076",
+                  "agent-vocab-077",
+                  "agent-vocab-078",
+                  "agent-vocab-079",
+                  "agent-vocab-080",
+                  "agent-vocab-081"
+                ],
+                "index": 1
+              }
+            },
+            "learnPasses": {},
+            "progress": {
+              "hiddenWords": [
+                "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+              ],
+              "learnedPhrases": [
+                "agent-vocab-002",
+                "agent-vocab-001"
+              ]
+            },
+            "settings": {
+              "activePage": "flashcards",
+              "flashcardMode": "topic",
+              "flashcardTopic": "Agent Framework Vocabulary"
+            },
+            "userCollections": {},
+            "userEntries": {}
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "focus-ownership-learn-again-and-toast": {
+          "status": "PASS",
+          "action": {
+            "selfFocusedBefore": true,
+            "elsewhere": "Back to flashcards"
+          },
+          "afterAction": {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Back to flashcards",
+            "cls": "btn btn--secondary btn--sm "
+          },
+          "afterUndo": {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Back to flashcards",
+            "cls": "btn btn--secondary btn--sm "
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "focus-ownership-dialog-close-after-render": {
+          "status": "PASS",
+          "move": {
+            "duringClose": true,
+            "connected": true,
+            "text": "Create a Learn Pass"
+          },
+          "focus": {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Create a Learn Pass",
+            "cls": "btn btn--secondary btn--sm "
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "collection-removal-focus-and-retention": {
+          "status": "PASS",
+          "focus": {
+            "tag": "H2",
+            "id": "collections-title",
+            "text": "Your collections",
+            "cls": "panel__title"
+          },
+          "after": {
+            "flashcardSessions": {
+              "all": {
+                "order": [
+                  "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222",
+                  "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222",
+                  "user:99999999-9999-4999-8999-999999999999:entry:99999999-9999-4999-8999-999999999999"
+                ],
+                "index": 1
+              }
+            },
+            "learnPasses": {},
+            "progress": {
+              "favoriteWords": [
+                "user:11111111-1111-4111-8111-111111111111:entry:00000003-2222-4222-8222-222222222222"
+              ],
+              "hiddenWords": [
+                "user:11111111-1111-4111-8111-111111111111:entry:00000002-2222-4222-8222-222222222222"
+              ],
+              "learnedPhrases": [
+                "user:11111111-1111-4111-8111-111111111111:entry:00000001-2222-4222-8222-222222222222"
+              ]
+            },
+            "settings": {
+              "activePage": "collections"
+            },
+            "userCollections": {},
+            "userEntries": {}
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "returned-issue-names-file-context-and-writes": {
+          "status": "PASS",
+          "cases": [
+            {
+              "file": "missing.csv",
+              "connected": true,
+              "cls": "notice notice--error review__problems",
+              "role": "alert",
+              "tabindex": "-1",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "fileContext": "Review “missing.csv”",
+              "text": " Nothing can be imported until these problems are fixed in the file: Record 2, column “translation”: Translation is required. Records are counted from the header row (record 1). Blank lines are skipped, and a quoted value can span several lines.  Choose the corrected file ",
+              "writes": []
+            },
+            {
+              "file": "kind.csv",
+              "connected": true,
+              "cls": "notice notice--error review__problems",
+              "role": "alert",
+              "tabindex": "-1",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "fileContext": "Review “kind.csv”",
+              "text": " Nothing can be imported until these problems are fixed in the file: Record 2, column “kind”: Kind must be word or phrase. Records are counted from the header row (record 1). Blank lines are skipped, and a quoted value can span several lines.  Choose the corrected file ",
+              "writes": []
+            },
+            {
+              "file": "conflict.json",
+              "connected": true,
+              "cls": "notice notice--error review__problems",
+              "role": "alert",
+              "tabindex": "-1",
+              "name": "Nothing can be imported until these problems are fixed in the file:",
+              "fileContext": "Review “conflict.json”",
+              "text": " Nothing can be imported until these problems are fixed in the file: ID conflict for “Astra equal”. Existing entries are never overwritten by import.   Choose the corrected file ",
+              "writes": []
+            }
+          ],
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "returned-issue-post-render-cancel": {
+          "status": "PASS",
+          "beforeRelease": {
+            "observed": true,
+            "focus": []
+          },
+          "after": {
+            "observed": true,
+            "focus": []
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "returned-issue-post-render-supersede": {
+          "status": "PASS",
+          "beforeRelease": {
+            "observed": true,
+            "focus": []
+          },
+          "after": {
+            "observed": true,
+            "focus": [
+              {
+                "cls": "review__title",
+                "text": "Review “newest.csv”",
+                "file": "Review “newest.csv”",
+                "connected": true
+              }
+            ]
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "renamed-font-faces-assets-and-raster-glyphs": {
+          "status": "PASS",
+          "rendering": {
+            "faces": [
+              {
+                "family": "Eng Trainer Sans",
+                "status": "loaded",
+                "weight": "400 700",
+                "style": "normal",
+                "unicodeRange": "U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116"
+              },
+              {
+                "family": "Eng Trainer Sans",
+                "status": "loaded",
+                "weight": "400 700",
+                "style": "normal",
+                "unicodeRange": "U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF"
+              },
+              {
+                "family": "Eng Trainer Sans",
+                "status": "loaded",
+                "weight": "400 700",
+                "style": "normal",
+                "unicodeRange": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
+              },
+              {
+                "family": "Eng Trainer Sans",
+                "status": "loaded",
+                "weight": "400 700",
+                "style": "normal",
+                "unicodeRange": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+              }
+            ],
+            "rules": [
+              "@font-face { font-family: Eng Trainer Sans; src: url(\"/eng-trainer/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2\") format(\"woff2\"); font-style: normal; font-weight: 400 700; font-display: swap; unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }",
+              "@font-face { font-family: Eng Trainer Sans; src: url(\"/eng-trainer/assets/eng-trainer-sans-greek-FkV9qZ7r.woff2\") format(\"woff2\"); font-style: normal; font-weight: 400 700; font-display: swap; unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }",
+              "@font-face { font-family: Eng Trainer Sans; src: url(\"/eng-trainer/assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2\") format(\"woff2\"); font-style: normal; font-weight: 400 700; font-display: swap; unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }",
+              "@font-face { font-family: Eng Trainer Sans; src: url(\"/eng-trainer/assets/eng-trainer-sans-latin-WBnKszXN.woff2\") format(\"woff2\"); font-style: normal; font-weight: 400 700; font-display: swap; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }"
+            ],
+            "glyphs": [
+              {
+                "ch": "E",
+                "renamed": [
+                  3823224086,
+                  3823224086,
+                  3823224086
+                ],
+                "fallback": [
+                  1694886454,
+                  3691394284,
+                  1411591805
+                ]
+              },
+              {
+                "ch": "n",
+                "renamed": [
+                  2354399682,
+                  2354399682,
+                  2354399682
+                ],
+                "fallback": [
+                  3668043928,
+                  2016105636,
+                  1135340921
+                ]
+              },
+              {
+                "ch": "g",
+                "renamed": [
+                  2769278657,
+                  2769278657,
+                  2769278657
+                ],
+                "fallback": [
+                  3033797190,
+                  3365359381,
+                  298041481
+                ]
+              },
+              {
+                "ch": "l",
+                "renamed": [
+                  392569451,
+                  392569451,
+                  392569451
+                ],
+                "fallback": [
+                  4293485650,
+                  3072940926,
+                  1376848856
+                ]
+              },
+              {
+                "ch": "i",
+                "renamed": [
+                  2797732585,
+                  2797732585,
+                  2797732585
+                ],
+                "fallback": [
+                  3209347419,
+                  3993495333,
+                  780161359
+                ]
+              },
+              {
+                "ch": "s",
+                "renamed": [
+                  2639319589,
+                  2639319589,
+                  2639319589
+                ],
+                "fallback": [
+                  412642794,
+                  3279900267,
+                  1038080722
+                ]
+              },
+              {
+                "ch": "h",
+                "renamed": [
+                  2624896455,
+                  2624896455,
+                  2624896455
+                ],
+                "fallback": [
+                  1120539666,
+                  2103130308,
+                  577175323
+                ]
+              },
+              {
+                "ch": "і",
+                "renamed": [
+                  2797732585,
+                  2797732585,
+                  2797732585
+                ],
+                "fallback": [
+                  3209347419,
+                  3993495333,
+                  780161359
+                ]
+              },
+              {
+                "ch": "ї",
+                "renamed": [
+                  100671988,
+                  100671988,
+                  100671988
+                ],
+                "fallback": [
+                  920354191,
+                  888685801,
+                  3040441358
+                ]
+              },
+              {
+                "ch": "є",
+                "renamed": [
+                  1260893458,
+                  1260893458,
+                  1260893458
+                ],
+                "fallback": [
+                  3115986388,
+                  2427528313,
+                  3191608598
+                ]
+              },
+              {
+                "ch": "ґ",
+                "renamed": [
+                  3386838269,
+                  3386838269,
+                  3386838269
+                ],
+                "fallback": [
+                  836718975,
+                  3674076979,
+                  617572917
+                ]
+              },
+              {
+                "ch": "І",
+                "renamed": [
+                  226720118,
+                  226720118,
+                  226720118
+                ],
+                "fallback": [
+                  283862885,
+                  935728987,
+                  2070463409
+                ]
+              },
+              {
+                "ch": "Ї",
+                "renamed": [
+                  2144060638,
+                  2144060638,
+                  2144060638
+                ],
+                "fallback": [
+                  3410784453,
+                  3385177021,
+                  118630252
+                ]
+              },
+              {
+                "ch": "Є",
+                "renamed": [
+                  2168790814,
+                  2168790814,
+                  2168790814
+                ],
+                "fallback": [
+                  185912904,
+                  69286481,
+                  3174293046
+                ]
+              },
+              {
+                "ch": "Ґ",
+                "renamed": [
+                  2905450757,
+                  2905450757,
+                  2905450757
+                ],
+                "fallback": [
+                  828154404,
+                  1149174756,
+                  1141051285
+                ]
+              },
+              {
+                "ch": "ʼ",
+                "renamed": [
+                  2167740579,
+                  2167740579,
+                  2167740579
+                ],
+                "fallback": [
+                  1828446853,
+                  3483962458,
+                  286252418
+                ]
+              },
+              {
+                "ch": "ɪ",
+                "renamed": [
+                  1934961870,
+                  1934961870,
+                  1934961870
+                ],
+                "fallback": [
+                  669764997,
+                  2387714172,
+                  272473792
+                ]
+              },
+              {
+                "ch": "ə",
+                "renamed": [
+                  4152653169,
+                  4152653169,
+                  4152653169
+                ],
+                "fallback": [
+                  4217463965,
+                  1351386174,
+                  3062852942
+                ]
+              },
+              {
+                "ch": "ˈ",
+                "renamed": [
+                  1254230494,
+                  1254230494,
+                  1254230494
+                ],
+                "fallback": [
+                  2512050837,
+                  1303894725,
+                  902662469
+                ]
+              },
+              {
+                "ch": "ː",
+                "renamed": [
+                  2439189211,
+                  2439189211,
+                  2439189211
+                ],
+                "fallback": [
+                  2020296578,
+                  165030501,
+                  2606099045
+                ]
+              },
+              {
+                "ch": "ʊ",
+                "renamed": [
+                  3269820101,
+                  3269820101,
+                  3269820101
+                ],
+                "fallback": [
+                  3943246650,
+                  465070389,
+                  2895508853
+                ]
+              },
+              {
+                "ch": "ð",
+                "renamed": [
+                  1257523540,
+                  1257523540,
+                  1257523540
+                ],
+                "fallback": [
+                  3267589192,
+                  979776982,
+                  1611115074
+                ]
+              },
+              {
+                "ch": "ɑ",
+                "renamed": [
+                  1727333194,
+                  1727333194,
+                  1727333194
+                ],
+                "fallback": [
+                  1501552251,
+                  3793313837,
+                  2031221021
+                ]
+              },
+              {
+                "ch": "æ",
+                "renamed": [
+                  1106515709,
+                  1106515709,
+                  1106515709
+                ],
+                "fallback": [
+                  3320811087,
+                  3313311962,
+                  1248549511
+                ]
+              },
+              {
+                "ch": "ʃ",
+                "renamed": [
+                  1526154762,
+                  1526154762,
+                  1526154762
+                ],
+                "fallback": [
+                  1652154610,
+                  1971602138,
+                  2127479246
+                ]
+              },
+              {
+                "ch": "ɔ",
+                "renamed": [
+                  3007417519,
+                  3007417519,
+                  3007417519
+                ],
+                "fallback": [
+                  4185294446,
+                  2668781385,
+                  1298574055
+                ]
+              },
+              {
+                "ch": "ɜ",
+                "renamed": [
+                  3390506616,
+                  3390506616,
+                  3390506616
+                ],
+                "fallback": [
+                  3497986800,
+                  798682338,
+                  1581543243
+                ]
+              },
+              {
+                "ch": "ʌ",
+                "renamed": [
+                  873336349,
+                  873336349,
+                  873336349
+                ],
+                "fallback": [
+                  575758801,
+                  1650549581,
+                  1401884983
+                ]
+              },
+              {
+                "ch": "ɡ",
+                "renamed": [
+                  878847788,
+                  878847788,
+                  878847788
+                ],
+                "fallback": [
+                  972537123,
+                  3817347282,
+                  3537570479
+                ]
+              },
+              {
+                "ch": "ˌ",
+                "renamed": [
+                  1398272989,
+                  1398272989,
+                  1398272989
+                ],
+                "fallback": [
+                  3429554837,
+                  425188037,
+                  2209061160
+                ]
+              },
+              {
+                "ch": "ŋ",
+                "renamed": [
+                  123697181,
+                  123697181,
+                  123697181
+                ],
+                "fallback": [
+                  735039592,
+                  3505429100,
+                  522201033
+                ]
+              },
+              {
+                "ch": "ʒ",
+                "renamed": [
+                  2969191103,
+                  2969191103,
+                  2969191103
+                ],
+                "fallback": [
+                  3896782288,
+                  312346883,
+                  2398075138
+                ]
+              },
+              {
+                "ch": "θ",
+                "renamed": [
+                  447133259,
+                  447133259,
+                  447133259
+                ],
+                "fallback": [
+                  350035819,
+                  2149444274,
+                  3697902602
+                ]
+              }
+            ],
+            "requests": [
+              {
+                "url": "eng-trainer-sans-latin-WBnKszXN.woff2",
+                "bytes": 28832
+              },
+              {
+                "url": "literata-latin-Cedbco83.woff2",
+                "bytes": 85672
+              },
+              {
+                "url": "eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+                "bytes": 18412
+              },
+              {
+                "url": "eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+                "bytes": 60136
+              },
+              {
+                "url": "eng-trainer-sans-greek-FkV9qZ7r.woff2",
+                "bytes": 14504
+              }
+            ],
+            "computed": "Eng Trainer Sans"
+          },
+          "errors": [],
+          "unhandledRejections": []
+        },
+        "description-language-on-home-focus-and-every-verb-set": {
+          "status": "PASS",
+          "rows": [
+            {
+              "route": "index",
+              "id": "start-answer",
+              "text": "Початок відповіді: фрази для м’якого і впевненого старту speaking answer.",
+              "lang": "uk"
+            },
+            {
+              "route": "index",
+              "id": "irregular-verbs-100",
+              "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+              "lang": "en"
+            },
+            {
+              "route": "favorites",
+              "id": "start-answer",
+              "text": "Початок відповіді: фрази для м’якого і впевненого старту speaking answer.",
+              "lang": "uk"
+            },
+            {
+              "route": "favorites",
+              "id": "irregular-verbs-100",
+              "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+              "lang": "en"
+            },
+            {
+              "route": "irregularVerbs",
+              "id": "irregular-verbs-100",
+              "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+              "lang": "en"
+            },
+            {
+              "route": "irregularVerbs",
+              "id": "irregular-verbs-logical-200",
+              "text": "200 irregular verbs grouped by change pattern: same forms, matching past/participle, -en participles, i-a-u pattern, and mixed forms.",
+              "lang": "en"
+            },
+            {
+              "route": "irregularVerbs",
+              "id": "ai-certification-verbs-contextual",
+              "text": "Curated high-value professional verbs for AI certification topics, with Base, Past Simple, and Past Participle forms. Basic high-frequency verbs are intentionally excluded.",
+              "lang": "en"
+            }
+          ],
+          "errors": [],
+          "unhandledRejections": []
+        }
+      }
+    }
+  },
+  "definition": "Fresh nonpersistent native contexts; synthetic data; clipboard calls stubbed; localhost gzip response BODY bytes, headers excluded. No owner profiles."
+}

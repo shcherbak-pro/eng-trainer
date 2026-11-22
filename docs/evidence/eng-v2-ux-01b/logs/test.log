@@ -1,0 +1,99 @@
+
+> english-assessment-trainer-v2@2.0.0 pretest
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 11 built-in packs: {"phrases":566,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":6,"drills":15}
+
+> english-assessment-trainer-v2@2.0.0 test
+> node --test scripts/content-build.test.mjs && vitest run
+
+✔ preserves all baseline record values, array order, identities, metadata and explicit links (15.0666ms)
+✔ generation is deterministic and generated files equal the validated source catalog (62.6986ms)
+✔ explicit order preserves each collection even when pack discovery order changes (3.9911ms)
+✔ cross-pack sourcePhraseId references work without inferring links from text (18.9187ms)
+✔ duplicate IDs anywhere in progress identity space and dangling references fail validation (22.1924ms)
+✔ bad schemas, missing required fields and misspelled collections fail before generation (1.9552ms)
+✔ the legacy null word transcriptions are retained; other malformed values are rejected (0.6005ms)
+✔ duplicate packs/orders and blocks targeting absent categories or verb sets fail (31.2599ms)
+✔ manifest paths stay in v2 packs and inventory/version/order errors are rejected (1.7034ms)
+✔ published asset validation rejects a corrupt or missing pack even when counts match (68.1786ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 437.7618
+
+ RUN  v3.2.7 <repo>
+
+ ✓ src/collections/importGuide.test.ts (8 tests) 23ms
+ ✓ src/storage/openStorage.test.ts (4 tests) 129ms
+ ✓ src/features/flashcards/flashcards.test.ts (50 tests) 53ms
+ ✓ src/collections/importErrors.test.ts (10 tests) 30ms
+ ✓ src/collections/serviceErrors.test.ts (4 tests) 34ms
+ ✓ src/content/catalog.test.ts (8 tests) 510ms
+   ✓ built-in content catalog > finds every phrase, word and verb by its own text, wherever it is in the catalog  500ms
+ ✓ src/collections/service.test.ts (18 tests) 263ms
+ ✓ src/state/reset.test.ts (2 tests) 537ms
+ ✓ src/collections/format.test.ts (35 tests) 17ms
+ ✓ src/collections/fileName.test.ts (6 tests) 7ms
+ ✓ src/app/navigation.test.ts (3 tests) 2ms
+ ✓ src/shared/entries/hideUndo.test.ts (2 tests) 2148ms
+   ✓ Hide and Undo > Undo reverses only what hiding changed for this entry, through entry-level operations  1800ms
+   ✓ Hide and Undo > does not add Focus or learned state that the entry did not have, and keeps a permanent "Show" action  347ms
+ ✓ src/state/progress.test.ts (26 tests) 3569ms
+   ✓ learning state in IndexedDB > resets one deck without touching the others  711ms
+ ✓ src/content/builtIn.test.ts (10 tests) 3859ms
+   ✓ complete search through the loaded shared catalog > matches a direct field-by-field oracle for every searchable field across all packs  3340ms
+ ✓ src/features/collections/retainedLearning.test.ts (5 tests) 4185ms
+   ✓ retained collection learning state > restores all order after deletion, answers and reload  2228ms
+   ✓ retained collection learning state > restores topic:Synthetic topic order after deletion, answers and reload  596ms
+   ✓ retained collection learning state > unhides only available words and restores hidden IDs after reimport  420ms
+   ✓ retained collection learning state > unhides only available phrases and restores hidden IDs after reimport  722ms
+ ✓ src/features/collections/CollectionsPage.test.ts (7 tests) 4995ms
+   ✓ import help > shows formats, encoding, required columns, limits and the example without writing anything  1773ms
+   ✓ file selection (F3) and validation feedback > keeps the picker usable while reading, focuses the review, and writes nothing until the import is confirmed  504ms
+   ✓ file selection (F3) and validation feedback > explains how to fix a rejected file, offers the template, focuses the summary and writes nothing  604ms
+   ✓ file selection (F3) and validation feedback > lets only the latest selection update the page, and a cancelled selection never reappears  528ms
+   ✓ file selection (F3) and validation feedback > accepts the same file name again after it has been corrected  351ms
+   ✓ saving and managing collections > reports success only after the import transaction, then exports with a readable Cyrillic file name (F6)  657ms
+   ✓ saving and managing collections > shows a rename conflict next to the form, with a reload action and no storage advice (F5)  577ms
+ ✓ src/features/flashcards/FlashcardsPage.test.ts (28 tests) 8548ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1677ms
+   ✓ Flashcards page > flips the card on tap and shows the translation and example  437ms
+   ✓ Flashcards page > buttons > "Keep learning" keeps the card in the pool and brings it back later  339ms
+   ✓ Flashcards page > keyboard > ignores shortcuts combined with modifier keys  302ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  420ms
+   ✓ Flashcards page > saved progress > resumes in the middle of a round after a reload  542ms
+ ✓ src/app/App.test.ts (21 tests) 14759ms
+   ✓ application shell > preserves existing IndexedDB records when a pack fails, then restores Focus and learning state on retry  2723ms
+   ✓ application shell > loads the built-in content from its own base path and shows the index  371ms
+   ✓ application shell > renders every screen from the catalog  709ms
+   ✓ application shell > searches the whole catalog, not only the items shown on the current page  554ms
+   ✓ application shell > opens the saved screen and keeps progress and preferences after a reload  805ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps "consequently" and "Consequently, …" apart in every view, also after a reload  864ms
+   ✓ learning identity across Phrases, Focus and Flashcards > keeps distinct entries with similar-looking text independent: C++ and C#  1266ms
+   ✓ learning identity across Phrases, Focus and Flashcards > treats a phrase and its linked word-index entry as one learning identity: the phrase id  1288ms
+   ✓ loading and storage errors > handles a read transaction that aborts by itself: error screen, no unhandled rejection, and retry restores the saved state  520ms
+   ✓ loading and storage errors > shows an error and a retry when the content cannot be loaded  449ms
+   ✓ loading and storage errors > stops with a visible error when the saved state cannot be opened, and can continue without saving  544ms
+   ✓ loading and storage errors > shows a notice when a change cannot be saved, until saving succeeds  505ms
+   ✓ blocked database upgrade at start-up (F4) > keeps the waiting guidance on "Check again" and continues by itself when the other tab closes  492ms
+   ✓ blocked database upgrade at start-up (F4) > keeps "Continue without saving" in charge when the database opens later  641ms
+   ✓ Settings and Reset progress > asks before resetting; Cancel changes nothing; the theme and imported collections stay  500ms
+   ✓ language of study text and translations > marks built-in Ukrainian as uk, leaves imported translations unmarked, and protects English study text from translation  583ms
+   ✓ hiding an entry from a list > keeps keyboard users in place: focus moves to the entry that took its place, and Undo returns it to the restored entry  595ms
+   ✓ navigation > opens More as a sheet from a button, with links to Collections, Settings and the previous version  432ms
+   ✓ navigation > marks the current screen in every navigation and moves focus to the new heading  428ms
+
+ Test Files  18 passed (18)
+      Tests  247 passed (247)
+   Start at  01:53:32
+   Duration  16.63s (transform 3.40s, setup 894ms, collect 7.63s, tests 43.67s, environment 11.97s, prepare 1.76s)
+

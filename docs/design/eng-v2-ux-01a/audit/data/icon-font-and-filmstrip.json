@@ -1,0 +1,57 @@
+{
+  "toggleLabel": "Theme: Dark. Switch to System.",
+  "rawThemeLog": [],
+  "themeRuns": [
+    {
+      "firstPaint": null,
+      "themeAtFirstPaint": null,
+      "darkAppliedAt": null,
+      "lightVisibleMs": null
+    },
+    {
+      "firstPaint": null,
+      "themeAtFirstPaint": null,
+      "darkAppliedAt": null,
+      "lightVisibleMs": null
+    },
+    {
+      "firstPaint": null,
+      "themeAtFirstPaint": null,
+      "darkAppliedAt": null,
+      "lightVisibleMs": null
+    },
+    {
+      "firstPaint": null,
+      "themeAtFirstPaint": null,
+      "darkAppliedAt": null,
+      "lightVisibleMs": null
+    },
+    {
+      "firstPaint": null,
+      "themeAtFirstPaint": null,
+      "darkAppliedAt": null,
+      "lightVisibleMs": null
+    }
+  ],
+  "throttled": {
+    "firstPaint": null,
+    "darkAppliedAt": null,
+    "lightVisibleMs": null,
+    "frames": 12
+  },
+  "filmstripFrames": 12,
+  "f3KeyboardChooser": {
+    "activeElementAfterPreview": [
+      "INPUT[type=file]",
+      "INPUT[type=file]",
+      "INPUT[type=file]",
+      "INPUT[type=file]"
+    ]
+  },
+  "iconFontLoadedAtCapture": false,
+  "iconFontForDesktopChrome": {
+    "format": "woff2",
+    "bytes": 3132808,
+    "display": "swap"
+  }
+}

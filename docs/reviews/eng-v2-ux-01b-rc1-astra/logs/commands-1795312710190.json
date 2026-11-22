@@ -1,0 +1,26 @@
+[
+  {
+    "command": "powershell.exe -NoProfile -File docs/reviews/eng-v2-ux-01b-rc1-astra/run-browser.ps1 original",
+    "exitCode": 0,
+    "seconds": 93.195,
+    "log": "1795312710190-powershell-exe--NoProfile--File-docs-reviews-eng-v2-ux-01b-rc1-astra-run-browser-ps1-original.log"
+  },
+  {
+    "command": "powershell.exe -NoProfile -File docs/reviews/eng-v2-ux-01b-rc1-astra/run-browser.ps1 adjusted",
+    "exitCode": 0,
+    "seconds": 78.179,
+    "log": "1795312710190-powershell-exe--NoProfile--File-docs-reviews-eng-v2-ux-01b-rc1-astra-run-browser-ps1-adjusted.log"
+  },
+  {
+    "command": "powershell.exe -NoProfile -File docs/reviews/eng-v2-ux-01b-rc1-astra/run-browser.ps1 regression",
+    "exitCode": 0,
+    "seconds": 120.073,
+    "log": "1795312710190-powershell-exe--NoProfile--File-docs-reviews-eng-v2-ux-01b-rc1-astra-run-browser-ps1-regression.log"
+  },
+  {
+    "command": "powershell.exe -NoProfile -File docs/reviews/eng-v2-ux-01b-rc1-astra/run-browser.ps1 rc1",
+    "exitCode": 0,
+    "seconds": 48.896,
+    "log": "1795312710190-powershell-exe--NoProfile--File-docs-reviews-eng-v2-ux-01b-rc1-astra-run-browser-ps1-rc1.log"
+  }
+]

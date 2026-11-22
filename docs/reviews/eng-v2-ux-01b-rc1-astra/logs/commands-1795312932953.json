@@ -1,0 +1,8 @@
+[
+  {
+    "command": "powershell.exe -NoProfile -File docs/reviews/eng-v2-ux-01b-rc1-astra/run-browser.ps1 focused",
+    "exitCode": 0,
+    "seconds": 29.368,
+    "log": "1795312932953-1-powershell-exe--NoProfile--File-docs-reviews-eng-v2-ux-01b-rc1-astra-run-browser-ps1-focused.log"
+  }
+]

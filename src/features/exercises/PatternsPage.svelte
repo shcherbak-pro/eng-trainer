@@ -6,35 +6,25 @@
   export let patterns: Pattern[];
 </script>
 
-<section class="section-stack">
-  <div class="toolbar-card">
-    <div>
-      <h2>Answer Patterns</h2>
-      <p>Structured frameworks for B2 → C1 speaking answers, with use cases, examples, transcription and alternatives.</p>
-    </div>
-  </div>
-
-  <div class="cards-list">
+<div class="page-stack">
+  <p class="muted">Structured frameworks for B2 to C1 speaking answers, with use cases, examples, transcription and alternatives.</p>
+  <ul class="reading-list">
     {#each patterns as pattern}
       {@const alternatives = splitAlternatives(pattern.commonAlternatives)}
-      <article class="card">
-        <p class="tag-row">
-          {#if pattern.level}<span>{pattern.level}</span>{/if}
+      <li class="reading-card">
+        <p class="entry__meta">
+          {#if pattern.level}<span class="badge">{pattern.level}</span>{/if}
           {#if pattern.tag}<span>{pattern.tag}</span>{/if}
         </p>
-        <h3>{pattern.title}</h3>
-        <p class="formula">{pattern.formula}</p>
-        {#if pattern.transcription}
-          <p class="meta-line"><strong>Transcription:</strong> <span>{pattern.transcription}</span></p>
-        {/if}
-        {#if alternatives.length}
-          <p class="meta-line common-alternatives"><strong>Common alternatives:</strong> <em>{alternatives.join('; ')}</em></p>
-        {/if}
+        <h2>{pattern.title}</h2>
+        <p class="reading-card__formula" lang="en" translate="no">{pattern.formula}</p>
+        {#if pattern.transcription}<p class="entry__ipa ipa" translate="no">{pattern.transcription}</p>{/if}
         <p><strong>Use:</strong> {pattern.use}</p>
-        <p class="example">{pattern.example}</p>
-        <p class="translation">{pattern.translation}</p>
-        <SpeakButton text={pattern.example} label="Speak example" icon="record_voice_over" />
-      </article>
+        <p class="reading-card__english" lang="en" translate="no">{pattern.example}</p>
+        <p class="reading-card__translation" lang="uk">{pattern.translation}</p>
+        {#if alternatives.length}<p class="alternatives">Also said: <span lang="en" translate="no">{alternatives.join('; ')}</span></p>{/if}
+        <div><SpeakButton text={pattern.example} label="Listen to example" withText /></div>
+      </li>
     {/each}
-  </div>
-</section>
+  </ul>
+</div>

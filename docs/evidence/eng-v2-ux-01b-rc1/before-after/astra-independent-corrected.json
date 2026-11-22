@@ -1,0 +1,49 @@
+{
+  "numPassedTests": 7,
+  "numFailedTests": 0,
+  "numTotalTests": 7,
+  "files": [
+    {
+      "file": "docs/reviews/eng-v2-ux-01b-astra/independent.test.ts",
+      "status": "passed",
+      "message": "",
+      "tests": [
+        {
+          "name": "ordinary Learn again Undo restores the exact saved state and IDs",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "Learn again, another card answer, Undo preserves the later answer and both deck records",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "old Learn again callback cannot resurrect progress after confirmed Settings Reset",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "old Learn again callback does not override a later Hide of that same entry",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "old Hide callback cannot reapply pre-reset Focus and learned flags after a new Hide",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "Hide Undo does not overwrite later same-entry Focus and learned decisions",
+          "status": "passed",
+          "failure": ""
+        },
+        {
+          "name": "failed pre-reset save, followed by Reset and retry, cannot resurrect queued progress",
+          "status": "passed",
+          "failure": ""
+        }
+      ]
+    }
+  ]
+}

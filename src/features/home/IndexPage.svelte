@@ -1,13 +1,15 @@
 <script lang="ts">
+  import { blockDescriptionLang } from '../../content/descriptionLanguage';
   import type { ContentCatalog } from '../../content/catalog';
   import type { IrregularVerb, Phrase, TrainingBlock, WordExample, WordIndexItem } from '../../content/types';
-  import { resetAllState } from '../../state';
+  import { pageForBlock } from '../../app/navigation';
   import { settings } from '../../state/settings';
   import { viewState } from '../../state/viewState';
+  import EntryExamples from '../../shared/entries/EntryExamples.svelte';
   import FocusButton from '../../shared/entries/FocusButton.svelte';
   import SpeakButton from '../../shared/speech/SpeakButton.svelte';
+  import Button from '../../shared/ui/Button.svelte';
   import EmptyState from '../../shared/ui/EmptyState.svelte';
-  import IconButton from '../../shared/ui/IconButton.svelte';
   import PaginationControls from '../../shared/ui/PaginationControls.svelte';
   import { paginate, totalPages, type PageSizeOption } from '../../shared/pagination';
   import { splitAlternatives } from '../../shared/text';
@@ -193,7 +195,7 @@
   }
 </script>
 
-<section class="section-stack">
+<div class="home">
   <ExpansionPanel
     title="Learn Pass"
     description="Choose or create a focused learning track."
@@ -205,17 +207,17 @@
 
   {#if tagOptions.length}
     <ExpansionPanel
-      title="Tag cloud"
-      description="Filter visible learning blocks by topic."
+      title="Topics"
+      description="Show only the learning blocks of one topic."
       open={$settings.indexTagCloudExpanded}
       onToggle={() => settings.toggleIndexPanel('tagCloud')}
     >
-      <div class="tag-cloud">
-        <button class:active={!$settings.indexTagFilter} type="button" on:click={() => settings.setIndexTagFilter('')}>
+      <div class="tag-cloud" role="group" aria-label="Topic filter">
+        <button aria-pressed={!$settings.indexTagFilter} type="button" on:click={() => settings.setIndexTagFilter('')}>
           All <span>{blocks.length}</span>
         </button>
         {#each tagOptions as option}
-          <button class:active={$settings.indexTagFilter === option.tag} type="button" on:click={() => settings.setIndexTagFilter(option.tag)}>
+          <button aria-pressed={$settings.indexTagFilter === option.tag} type="button" on:click={() => settings.setIndexTagFilter(option.tag)}>
             {option.tag} <span>{option.count}</span>
           </button>
         {/each}
@@ -229,97 +231,61 @@
     open={$settings.indexLearningBlocksExpanded}
     onToggle={() => settings.toggleIndexPanel('learningBlocks')}
   >
-    <div class="panel-actions">
-      <IconButton icon="restart_alt" label="Reset progress" variant="secondary" onClick={resetAllState} />
-    </div>
-
     {#if filteredBlocks.length}
-      <div class="block-grid">
-        {#each pagedBlocks as block}
-          <article class="card block-card">
-            <p class="tag-row">
-              {#if block.tag}
-                <button
-                  class:active={$settings.indexTagFilter === block.tag}
-                  class="chip-button"
-                  type="button"
-                  on:click={() => settings.setIndexTagFilter(block.tag ?? '')}
-                >{block.tag}</button>
-              {:else}
-                <span>{block.type}</span>
-              {/if}
-              {#if block.itemsCount}<span>{block.itemsCount} items</span>{/if}
-            </p>
-            <h3>{block.title}</h3>
-            <p>{block.description}</p>
-            <div class="card__actions">
-              <IconButton icon="arrow_forward" label={`Open ${block.title}`} variant="primary" onClick={() => onOpenBlock(block)} />
-              <FocusButton kind="block" id={block.id} />
-            </div>
-          </article>
+      <ul class="block-list">
+        {#each pagedBlocks as block (block.id)}
+          <li class="block-row">
+            <a class="block-row__open" href={`#${pageForBlock(block)}`} on:click|preventDefault={() => onOpenBlock(block)}>
+              <span class="block-row__title">{block.title}</span>
+              <span class="block-row__meta">
+                {#if block.tag}{block.tag}{:else}{block.type}{/if}{#if block.itemsCount}, {block.itemsCount} items{/if}
+              </span>
+              {#if block.description}<span class="block-row__meta" lang={blockDescriptionLang(block.id)}>{block.description}</span>{/if}
+            </a>
+            <div class="block-row__actions"><FocusButton kind="block" id={block.id} /></div>
+          </li>
         {/each}
-      </div>
+      </ul>
 
-      <div class="pagination-footer">
-        <PaginationControls
-          total={filteredBlocks.length}
-          page={currentPage}
-          pageSize={$settings.indexPageSize}
-          {pageSizeOptions}
-          label="Learning blocks pagination"
-          onPageChange={(page) => viewState.setIndexPage(page)}
-          onPageSizeChange={setPageSize}
-        />
-      </div>
+      <PaginationControls
+        total={filteredBlocks.length}
+        page={currentPage}
+        pageSize={$settings.indexPageSize}
+        {pageSizeOptions}
+        label="Learning block pages"
+        onPageChange={(page) => viewState.setIndexPage(page)}
+        onPageSizeChange={setPageSize}
+      />
     {:else if blocks.length}
-      <EmptyState title="No blocks for this tag" text="Select another tag or switch back to All." />
+      <EmptyState level="h3" title="No blocks for this topic" text="Choose another topic, or All.">
+        <Button variant="secondary" size="sm" onClick={() => settings.setIndexTagFilter('')}>Show all topics</Button>
+      </EmptyState>
     {:else}
-      <EmptyState title="No blocks in this Learn Pass" text="Edit the active Learn Pass and select at least one learning block." />
+      <EmptyState level="h3" title="No blocks in this Learn Pass" text="Edit the active Learn Pass and select at least one learning block." />
     {/if}
   </ExpansionPanel>
 
   <ExpansionPanel
-    title="Phrase / Word of the day"
-    description="A random focus card for quick daily practice."
+    title="Phrase or word of the day"
+    description="A random item from your Learn Pass for quick practice."
     open={$settings.indexDailyExpanded}
     onToggle={() => settings.toggleIndexPanel('daily')}
   >
     {#if dailyItem}
-      <article class="card daily-card">
-        <div class="card__header">
-          <div>
-            <p class="tag-row"><span>{dailyItem.kind}</span>{#if dailyItem.tag}<span>{dailyItem.tag}</span>{/if}</p>
-            <h3>{dailyItem.title}</h3>
-            {#if dailyItem.subtitle}<p class="meta-line"><strong>Context:</strong> <span>{dailyItem.subtitle}</span></p>{/if}
-            {#if dailyItem.transcription}<p class="meta-line"><strong>Transcription:</strong> <span>{dailyItem.transcription}</span></p>{/if}
-            {#if dailyItem.alternatives.length}
-              <p class="meta-line common-alternatives"><strong>Common alternatives:</strong> <em>{dailyItem.alternatives.join('; ')}</em></p>
-            {/if}
-          </div>
-          <IconButton icon="shuffle" label="Show another random item" variant="secondary" onClick={pickDailyItem} />
-        </div>
-
-        <p class="translation"><strong>Meaning:</strong> {dailyItem.translation}</p>
-
-        {#if dailyItem.examples.length}
-          <div class="examples">
-            {#each dailyItem.examples as example, index}
-              <div class="example-box">
-                <strong>Example {index + 1}</strong>
-                <p class="example">{example.en}</p>
-                {#if example.ua}<p class="translation">{example.ua}</p>{/if}
-              </div>
-            {/each}
-          </div>
-        {/if}
-
-        <div class="card__actions">
-          <SpeakButton text={dailyItem.speakText} />
+      <article class="daily">
+        <p class="entry__meta"><span class="badge">{dailyItem.kind}</span>{#if dailyItem.subtitle}<span>{dailyItem.subtitle}</span>{/if}</p>
+        <h3 class="daily__term" lang="en" translate="no">{dailyItem.title}</h3>
+        <p class="entry__translation" lang="uk">{dailyItem.translation}</p>
+        {#if dailyItem.transcription}<p class="entry__ipa ipa" translate="no">{dailyItem.transcription}</p>{/if}
+        <EntryExamples examples={dailyItem.examples} alternatives={dailyItem.alternatives} lang="uk" />
+        <div class="daily__actions">
+          <SpeakButton text={dailyItem.speakText} label="Listen" withText />
           <FocusButton kind={dailyItem.focusKind} id={dailyItem.focusId} />
+          <Button variant="quiet" size="sm" icon="shuffle" onClick={pickDailyItem}>Show another</Button>
         </div>
       </article>
     {:else}
-      <EmptyState title="No daily item available" text="Add words or phrases to the active Learn Pass." />
+      <EmptyState level="h3" title="No daily item available" text="Add words or phrases to the active Learn Pass." />
     {/if}
   </ExpansionPanel>
-</section>
+</div>

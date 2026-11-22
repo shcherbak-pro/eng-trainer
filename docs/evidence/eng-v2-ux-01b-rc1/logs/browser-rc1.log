@@ -1,0 +1,11 @@
+chromium PASS f2-learn-again-focus
+chromium PASS f2-confirmation-fallbacks
+chromium PASS f3-returned-issues-focus
+chromium PASS f4-font-family-loaded
+chromium PASS f5-language-and-translation
+firefox PASS f2-learn-again-focus
+firefox PASS f2-confirmation-fallbacks
+firefox PASS f3-returned-issues-focus
+firefox PASS f4-font-family-loaded
+firefox PASS f5-language-and-translation
+{"chromium":{"version":"159.0.8154.6","pass":5,"fail":0,"log":0},"firefox":{"version":"159.0","pass":5,"fail":0,"log":0}}

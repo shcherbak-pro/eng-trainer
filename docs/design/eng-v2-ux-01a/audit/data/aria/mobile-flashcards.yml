@@ -1,0 +1,40 @@
+- banner:
+  - button "Go to index":
+    - text: EA
+    - strong: English Assessment Trainer
+  - 'button "Theme: System. Switch to Light."'
+- main:
+  - heading "Flashcards" [level=2]
+  - button "Shuffle remaining cards"
+  - button "Review learned vocabulary"
+  - button "Reset progress for All Vocabulary" [disabled]
+  - group "Deck":
+    - button "All Vocabulary" [pressed]
+    - button "By Topic"
+  - strong: "566"
+  - text: remaining
+  - strong: "0"
+  - text: learned Card
+  - strong: "1"
+  - text: of
+  - strong: "566"
+  - progressbar "Learned cards in All Vocabulary"
+  - article:
+    - 'button "Front of the card: I would start by saying that …. Press to show the translation."': Start answer B2 I would start by saying that … Tap to flip
+    - button "Speak"
+  - button "Keep learning"
+  - button "Flip card"
+  - button "I know it"
+  - paragraph: "Swipe right: I know it · Swipe left: Keep learning"
+  - link "Open the previous version (v1)":
+    - /url: /eng-trainer/v1/
+  - text: v1 is kept as it was and has its own separate progress.
+- navigation "Mobile navigation":
+  - button "Index"
+  - button "Phrases"
+  - button "Words"
+  - button "Flashcards"
+  - button "Reverse"
+  - button "Verbs"
+  - button "Focus"
+  - button "Collections"

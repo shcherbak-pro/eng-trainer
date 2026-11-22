@@ -1,0 +1,113 @@
+{
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": {
+        "study-text-translation-protection": {
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: English study questions and prompts must opt out of browser translation\n+ actual - expected\n\n+ [\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How can AI help people at work?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How can AI coding tools help developers?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'What makes a good team?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How do you deal with difficult clients?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'What do you do when you run into a problem?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How do you usually handle online meetings?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What is more important: speed or quality?',\n+     translate: true\n+   }\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:156:544\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:155:2",
+          "unprotected": [
+            {
+              "route": "answers",
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How can AI coding tools help developers?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "What do you do when you run into a problem?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How do you usually handle online meetings?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What is more important: speed or quality?",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "errors": []
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": {
+        "study-text-translation-protection": {
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: English study questions and prompts must opt out of browser translation\n+ actual - expected\n\n+ [\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How can AI help people at work?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How can AI coding tools help developers?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'What makes a good team?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How do you deal with difficult clients?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'What do you do when you run into a problem?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'answers',\n+     text: 'How do you usually handle online meetings?',\n+     translate: true\n+   },\n+   {\n+     lang: 'en',\n+     route: 'practice',\n+     text: 'What makes a good team leader?',\n+     translate: true\n+   }\n+ ]\n- []\n\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:156:544\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:155:2",
+          "unprotected": [
+            {
+              "route": "answers",
+              "text": "How can AI help people at work?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How can AI coding tools help developers?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "What makes a good team?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How do you deal with difficult clients?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "What do you do when you run into a problem?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "answers",
+              "text": "How do you usually handle online meetings?",
+              "lang": "en",
+              "translate": true
+            },
+            {
+              "route": "practice",
+              "text": "What makes a good team leader?",
+              "lang": "en",
+              "translate": true
+            }
+          ],
+          "errors": []
+        }
+      }
+    }
+  },
+  "definition": "Fresh nonpersistent native contexts; synthetic data; clipboard calls stubbed; localhost gzip response BODY bytes, headers excluded. No owner profiles."
+}

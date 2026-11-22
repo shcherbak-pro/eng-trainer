@@ -1,0 +1,33 @@
+{
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "cases": {
+        "english-block-language": {
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: English block description must not be labelled Ukrainian\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:159:237\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:158:2",
+          "block": {
+            "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+            "lang": "uk"
+          },
+          "errors": []
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "cases": {
+        "english-block-language": {
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: English block description must not be labelled Ukrainian\n    at file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:159:237\n    at async run (file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:46:122)\n    at async file:///<repo>/docs/reviews/eng-v2-ux-01b-astra/browser-independent.mjs:158:2",
+          "block": {
+            "text": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+            "lang": "uk"
+          },
+          "errors": []
+        }
+      }
+    }
+  },
+  "definition": "Fresh nonpersistent native contexts; synthetic data; clipboard calls stubbed; localhost gzip response BODY bytes, headers excluded. No owner profiles."
+}

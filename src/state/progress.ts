@@ -73,6 +73,26 @@ const defaultState: ProgressState = {
   flashcardSessions: {}
 };
 
+/** Every field of the learning state, in a stable order. */
+export const PROGRESS_KEYS = Object.keys(defaultState) as (keyof ProgressState)[];
+
+/**
+ * The stored entry state that an Undo would restore:
+ * - `hide`: the hidden flag, the Focus flag and, for a phrase, the learned flag of one entry;
+ * - `learned`: the learned flag of one learning identity (a flashcard id).
+ */
+export type UndoScope = { type: 'hide'; kind: HideKind; id: string } | { type: 'learned'; id: string };
+
+/**
+ * An issued Undo. It can be used once, and only while nothing newer has touched
+ * the same stored entry state and no Reset or reload of the saved state has happened.
+ */
+export type UndoToken = {
+  readonly generation: number;
+  readonly revisions: ReadonlyArray<readonly [string, number]>;
+  used: boolean;
+};
+
 const FOCUS_LIST: Record<FocusKind, ListKey> = {
   block: 'favoriteBlocks',
   phrase: 'favoritePhrases',
@@ -219,6 +239,35 @@ function createProgressStore() {
   let state = defaultState;
   const store = writable<ProgressState>(state);
 
+  // Operation validity, in memory only (nothing here is saved). Every action records a
+  // new revision for the stored entry state it touches, even when the stored value does
+  // not change: "Keep learning" on a card that is not learned is still newer intent.
+  // Reset and every reload of the saved state start a new generation.
+  let generation = 0;
+  let clock = 0;
+  const revisions = new Map<string, number>();
+
+  /** Keys are the stored list and the id it holds, never display text. */
+  const entryKey = (list: ListKey, id: string): string => `${list}:${id}`;
+
+  function touch(keys: string[]): void {
+    for (const key of keys) revisions.set(key, ++clock);
+  }
+
+  function newGeneration(): void {
+    generation += 1;
+    revisions.clear();
+  }
+
+  function scopeKeys(scope: UndoScope): string[] {
+    if (scope.type === 'learned') return [entryKey('learnedPhrases', scope.id)];
+    const keys = [entryKey(HIDDEN_LIST[scope.kind], scope.id), entryKey(FOCUS_LIST[scope.kind], scope.id)];
+    if (scope.kind === 'phrase') keys.push(entryKey('learnedPhrases', scope.id));
+    return keys;
+  }
+
+  const learnedKeys = (ids: string[]): string[] => ids.map((id) => entryKey('learnedPhrases', id));
+
   /** Applies a change in memory and queues the records that changed. */
   function update(change: (current: ProgressState) => ProgressState): void {
     const next = change(state);
@@ -232,17 +281,39 @@ function createProgressStore() {
 
   return {
     subscribe: store.subscribe,
-    /** Replaces the in-memory state with the saved one. Writes nothing. */
+    /** Replaces the in-memory state with the saved one. Writes nothing. Earlier Undo offers expire. */
     hydrate(records: StoredRecords): void {
+      newGeneration();
       state = readProgress(records);
       store.set(state);
     },
-    toggleLearnedPhrase: (id: string) =>
-      update((current) => ({ ...current, learnedPhrases: toggleValue(current.learnedPhrases, id) })),
-    toggleFavorite: (kind: FocusKind, id: string) =>
-      update((current) => ({ ...current, [FOCUS_LIST[kind]]: toggleValue(current[FOCUS_LIST[kind]], id) })),
+    /** Issues an Undo for the entry state of `scope` as it is now. Call it right after the action. */
+    issueUndo(scope: UndoScope): UndoToken {
+      return { generation, revisions: scopeKeys(scope).map((key) => [key, revisions.get(key) ?? 0] as const), used: false };
+    },
+    /**
+     * Uses an Undo. It is refused when it was used before, after a Reset or reload of the saved
+     * state, and after any newer action on the same stored entry state.
+     */
+    redeemUndo(token: UndoToken): boolean {
+      if (token.used || token.generation !== generation) return false;
+      if (token.revisions.some(([key, revision]) => (revisions.get(key) ?? 0) !== revision)) return false;
+      token.used = true;
+      return true;
+    },
+    /** Records newer intent for an entry without changing it, such as "Keep learning". */
+    noteIntent: (scope: UndoScope) => touch(scopeKeys(scope)),
+    toggleLearnedPhrase: (id: string) => {
+      touch([entryKey('learnedPhrases', id)]);
+      update((current) => ({ ...current, learnedPhrases: toggleValue(current.learnedPhrases, id) }));
+    },
+    toggleFavorite: (kind: FocusKind, id: string) => {
+      touch([entryKey(FOCUS_LIST[kind], id)]);
+      update((current) => ({ ...current, [FOCUS_LIST[kind]]: toggleValue(current[FOCUS_LIST[kind]], id) }));
+    },
     /** A hidden item also leaves the Focus List and is no longer "learned". */
-    hideItem: (kind: HideKind, id: string) =>
+    hideItem: (kind: HideKind, id: string) => {
+      touch(scopeKeys({ type: 'hide', kind, id }));
       update((current) => {
         const hidden = HIDDEN_LIST[kind];
         const focus = FOCUS_LIST[kind];
@@ -252,12 +323,17 @@ function createProgressStore() {
           [focus]: removeValue(current[focus], id),
           learnedPhrases: kind === 'phrase' ? removeValue(current.learnedPhrases, id) : current.learnedPhrases
         };
-      }),
-    unhideItem: (kind: HideKind, id: string) =>
-      update((current) => ({ ...current, [HIDDEN_LIST[kind]]: removeValue(current[HIDDEN_LIST[kind]], id) })),
+      });
+    },
+    unhideItem: (kind: HideKind, id: string) => {
+      touch([entryKey(HIDDEN_LIST[kind], id)]);
+      update((current) => ({ ...current, [HIDDEN_LIST[kind]]: removeValue(current[HIDDEN_LIST[kind]], id) }));
+    },
     // Bulk unhide is scoped to catalog-known IDs; absent collections keep their flags.
-    unhideAll: (kind: HideKind, availableIds: string[]) =>
-      update((current) => ({ ...current, [HIDDEN_LIST[kind]]: removeValues(current[HIDDEN_LIST[kind]], availableIds) })),
+    unhideAll: (kind: HideKind, availableIds: string[]) => {
+      touch(availableIds.map((id) => entryKey(HIDDEN_LIST[kind], id)));
+      update((current) => ({ ...current, [HIDDEN_LIST[kind]]: removeValues(current[HIDDEN_LIST[kind]], availableIds) }));
+    },
     setSelectedLearnPass(selectedLearnPassId: string): void {
       update((current) => ({ ...current, selectedLearnPassId }));
       viewState.resetPage('index');
@@ -289,29 +365,39 @@ function createProgressStore() {
       })),
     // Saves the review sequence of one deck. `learnedIds` are the items the
     // learner has just marked as known; they are shared with every other deck.
-    saveFlashcardSession: (deckKey: string, session: FlashcardSession, learnedIds: string[] = []) =>
+    saveFlashcardSession: (deckKey: string, session: FlashcardSession, learnedIds: string[] = []) => {
+      touch(learnedKeys(learnedIds));
       update((current) => ({
         ...current,
         learnedPhrases: learnedIds.every((id) => current.learnedPhrases.includes(id))
           ? current.learnedPhrases
           : uniqueValues([...current.learnedPhrases, ...learnedIds]),
         flashcardSessions: { ...current.flashcardSessions, [deckKey]: session }
-      })),
+      }));
+    },
     // "Learn again": the items go back to the learning pool of every deck.
-    relearnFlashcards: (ids: string[]) =>
-      update((current) => ({ ...current, learnedPhrases: removeValues(current.learnedPhrases, ids) })),
+    relearnFlashcards: (ids: string[]) => {
+      touch(learnedKeys(ids));
+      update((current) => ({ ...current, learnedPhrases: removeValues(current.learnedPhrases, ids) }));
+    },
     // Resets one deck: its learned items become unlearned and its review
     // sequence starts from the beginning. A reconciled session may retain
-    // temporarily unavailable vocabulary in its existing slots.
-    resetFlashcardDeck: (deckKey: string, ids: string[], session?: FlashcardSession) =>
+    // temporarily unavailable vocabulary in its existing slots. The reset is
+    // newer intent for every card of the deck (`deckCardIds`), learned or not.
+    resetFlashcardDeck: (deckKey: string, ids: string[], session?: FlashcardSession, deckCardIds: string[] = []) => {
+      touch(learnedKeys([...ids, ...deckCardIds, ...(session?.order ?? [])]));
       update((current) => {
         const flashcardSessions = { ...current.flashcardSessions };
         if (session) flashcardSessions[deckKey] = session;
         else delete flashcardSessions[deckKey];
         return { ...current, learnedPhrases: removeValues(current.learnedPhrases, ids), flashcardSessions };
-      }),
-    /** Removes all v2 learning state. Nothing outside the v2 database is touched. */
-    reset: () => update(() => defaultState)
+      });
+    },
+    /** Removes all v2 learning state. Nothing outside the v2 database is touched. Every earlier Undo expires. */
+    reset: () => {
+      newGeneration();
+      update(() => defaultState);
+    }
   };
 }
 

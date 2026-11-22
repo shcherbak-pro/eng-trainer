@@ -6,8 +6,8 @@
 </script>
 
 {#if catalog.collections.length}
-  <label>
-    Collection
+  <label class="filter-select">
+    <span class="visually-hidden">Collection</span>
     <select aria-label="Collection" value={resolvedCollection(catalog, $settings.collectionFilter)} on:change={(event) => settings.setCollectionFilter((event.target as HTMLSelectElement).value)}>
       <option value="">All collections</option>
       <option value="built-in">Built-in vocabulary</option>

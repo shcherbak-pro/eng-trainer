@@ -1,0 +1,115 @@
+{
+  "verdict": "READY_FOR_PR",
+  "date": "2026-11-22",
+  "timezone": "Europe/Kiev",
+  "branch": "feature/eng-v2-ux-01b-spoken-line",
+  "head": "f14dd4e33de2dfcbd8b80e1b72dbfec4326823d3",
+  "candidateFingerprint": "74b28dc728ceaa01f35a4c63ad5d713012f2fa50bf5e6e0731ba7ef8e83112c0",
+  "pathStates": 1025,
+  "closure": {
+    "F1": "RESOLVED",
+    "F2": "RESOLVED",
+    "F3": "RESOLVED",
+    "F4": "RESOLVED",
+    "F5": "RESOLVED"
+  },
+  "projectChecks": {
+    "v2Tests": 288,
+    "v1Tests": 68,
+    "contentBuildTests": 10,
+    "unchangedReviewerTests": 7,
+    "newReviewerTests": 9,
+    "checks": "PASS (0 errors, 0 warnings)",
+    "buildSiteIncludingRootBuild": "PASS",
+    "contentVerification": "PASS",
+    "whitespace": "PASS"
+  },
+  "browsers": {
+    "browser-original": {
+      "chromium": {
+        "version": "159.0.8154.6",
+        "cases": 22,
+        "passed": 21,
+        "failures": [
+          "long-content-reflow-and-glyphs"
+        ]
+      },
+      "firefox": {
+        "version": "159.0",
+        "cases": 22,
+        "passed": 21,
+        "failures": [
+          "long-content-reflow-and-glyphs"
+        ]
+      }
+    },
+    "browser-adjusted": {
+      "chromium": {
+        "version": "159.0.8154.6",
+        "cases": 22,
+        "passed": 22,
+        "failures": []
+      },
+      "firefox": {
+        "version": "159.0",
+        "cases": 22,
+        "passed": 22,
+        "failures": []
+      }
+    },
+    "browser-regression": {
+      "chromium": {
+        "version": "159.0.8154.6",
+        "cases": 16,
+        "passed": 16,
+        "failures": []
+      },
+      "firefox": {
+        "version": "159.0",
+        "cases": 16,
+        "passed": 16,
+        "failures": []
+      }
+    },
+    "browser-rc1": {
+      "chromium": {
+        "version": "159.0.8154.6",
+        "cases": 5,
+        "passed": 5,
+        "failures": []
+      },
+      "firefox": {
+        "version": "159.0",
+        "cases": 5,
+        "passed": 5,
+        "failures": []
+      }
+    },
+    "browser-focused": {
+      "chromium": {
+        "version": "159.0.8154.6",
+        "cases": 10,
+        "passed": 10,
+        "failures": []
+      },
+      "firefox": {
+        "version": "159.0",
+        "cases": 10,
+        "passed": 10,
+        "failures": []
+      }
+    }
+  },
+  "delta": {
+    "candidate": 1025,
+    "changed": 29,
+    "added": 15,
+    "removed": 5
+  },
+  "nonblockingNotes": [
+    "Nine lifecycle_double_unmount cleanup warnings in four implementation reload tests; source/tests left unchanged.",
+    "Historical summary counts a failed module as one failed row: raw result is 35 passed, 31 failed assertions, one unavailable three-test module.",
+    "Six new implementation test files, not the seven stated in the handoff."
+  ],
+  "preservation": "preservation-after.json"
+}

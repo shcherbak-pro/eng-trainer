@@ -10,6 +10,8 @@
   export let onPageChange: (page: number) => void;
   export let onPageSizeChange: (pageSize: PageSizeOption) => void;
 
+  const number = new Intl.NumberFormat('en');
+
   function parsePageSize(value: string): PageSizeOption {
     return value === 'all' ? 'all' : Number(value);
   }
@@ -25,8 +27,8 @@
   $: pageSizeValue = pageSize === 'all' ? 'all' : String(pageSize);
 </script>
 
-<div class="pagination-control" aria-label={label}>
-  <label class="pagination-control__size">
+<nav class="pagination" aria-label={label}>
+  <label class="pagination__size">
     Show
     <select value={pageSizeValue} on:change={(e) => onPageSizeChange(parsePageSize((e.target as HTMLSelectElement).value))}>
       {#each pageSizeOptions as option}
@@ -35,9 +37,9 @@
     </select>
   </label>
 
-  <div class="pagination-control__nav">
-    <IconButton icon="chevron_left" label="Previous page" variant="secondary" disabled={currentPage <= 1 || total === 0} onClick={() => onPageChange(currentPage - 1)} />
-    <span class="pagination-control__status">{from}-{to} of {total}</span>
-    <IconButton icon="chevron_right" label="Next page" variant="secondary" disabled={currentPage >= totalPages || total === 0} onClick={() => onPageChange(currentPage + 1)} />
+  <div class="pagination__pages">
+    <IconButton icon="chevron-left" label="Previous page" variant="secondary" disabled={currentPage <= 1 || total === 0} onClick={() => onPageChange(currentPage - 1)} />
+    <span class="pagination__status">{number.format(from)}–{number.format(to)} of {number.format(total)}</span>
+    <IconButton icon="chevron-right" label="Next page" variant="secondary" disabled={currentPage >= totalPages || total === 0} onClick={() => onPageChange(currentPage + 1)} />
   </div>
-</div>
+</nav>

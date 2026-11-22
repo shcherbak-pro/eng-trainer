@@ -28,14 +28,44 @@ export type StoredRecords = Record<StoreName, Map<string, unknown>>;
 
 export type StorageOperation = 'open' | 'read' | 'write';
 
+/**
+ * Why a storage operation failed, so the interface can give the right advice:
+ * - `conflict`: another tab or session changed the record first (reload, then retry);
+ * - `quota`: the browser refused to store more data for this site;
+ * - `failure`: anything else (aborted transaction, unavailable database, ...).
+ */
+export type StorageFailureKind = 'conflict' | 'quota' | 'failure';
+
+/** A guarded write found that the saved record no longer matches what this tab saw. */
+export class StorageConflictError extends Error {
+  constructor() {
+    super('Saved data changed in another session.');
+    this.name = 'StorageConflictError';
+  }
+}
+
+/** The caller abandoned a request, or a newer request replaced it. Not a storage failure. */
+export class StorageAbortError extends Error {
+  constructor(message = 'Opening the browser storage was cancelled.') {
+    super(message);
+    this.name = 'AbortError';
+  }
+}
+
 export class StorageError extends Error {
   readonly operation: StorageOperation;
+  readonly kind: StorageFailureKind;
+  readonly cause: unknown;
 
   constructor(operation: StorageOperation, cause: unknown) {
     const detail = cause instanceof Error ? cause.message : String(cause ?? 'unknown error');
     super(`IndexedDB ${operation} failed: ${detail}`);
     this.name = 'StorageError';
     this.operation = operation;
+    this.cause = cause;
+    this.kind = cause instanceof StorageConflictError
+      ? 'conflict'
+      : (cause as { name?: unknown } | null)?.name === 'QuotaExceededError' ? 'quota' : 'failure';
   }
 }
 
@@ -141,7 +171,7 @@ function createStorage(db: IDBPDatabase): AppStorage {
           const values = await Promise.all(checks);
           conditions.forEach((condition, index) => {
             if (JSON.stringify(values[index]) !== JSON.stringify(condition.expected)) {
-              throw new Error('Saved data changed in another session. Reload and review the import again.');
+              throw new StorageConflictError();
             }
           });
         }
@@ -164,53 +194,126 @@ function createStorage(db: IDBPDatabase): AppStorage {
   };
 }
 
+export const BLOCKED_UPGRADE_MESSAGE = 'Close other eng-trainer tabs so browser storage can be upgraded, then try again.';
+
+export type OpenStorageOptions = {
+  /**
+   * Called when another tab blocks the database upgrade. With this callback the
+   * request keeps waiting and completes by itself once the other tab closes or
+   * reloads. Without it, a blocked upgrade fails (the released behaviour).
+   */
+  onBlocked?: () => void;
+  /** Abandons the request. A connection that opens later is closed, never used. */
+  signal?: AbortSignal;
+};
+
+type ConnectionWaiter = {
+  resolve: (db: IDBPDatabase) => void;
+  reject: (error: unknown) => void;
+  onBlocked?: () => void;
+  settled: boolean;
+};
+
+type PendingOpen = { blocked: boolean; waiters: ConnectionWaiter[] };
+
+/**
+ * At most one IndexedDB open request exists at a time. An open request cannot be
+ * cancelled, and a second request would queue behind a blocked one without ever
+ * receiving its own "blocked" event. Retries therefore join the pending request,
+ * and only the latest caller receives the connection.
+ */
+let pendingOpen: PendingOpen | null = null;
+
+function settle(waiter: ConnectionWaiter, run: () => void): void {
+  if (waiter.settled) return;
+  waiter.settled = true;
+  run();
+}
+
+function beginOpen(): PendingOpen {
+  const pending: PendingOpen = { blocked: false, waiters: [] };
+  let upgradeFailure: unknown;
+  const opening = openDB(DATABASE_NAME, DATABASE_VERSION, {
+    upgrade(database, oldVersion, _newVersion, transaction) {
+      // The open request reports a failed migration; also observe idb's
+      // wrapped upgrade-transaction promise so its abort is not detached.
+      void transaction.done.catch(() => undefined);
+      try {
+        if (oldVersion < 1) {
+          for (const name of STATE_STORE_NAMES) database.createObjectStore(name);
+        }
+        if (oldVersion < 2) {
+          database.createObjectStore('userCollections');
+          database.createObjectStore('userEntries');
+        }
+      } catch (error) {
+        upgradeFailure = error;
+        transaction.abort();
+      }
+    },
+    blocked() {
+      pending.blocked = true;
+      for (const waiter of pending.waiters) {
+        if (waiter.settled) continue;
+        if (waiter.onBlocked) waiter.onBlocked();
+        else settle(waiter, () => waiter.reject(new Error(BLOCKED_UPGRADE_MESSAGE)));
+      }
+    },
+    blocking() {
+      // A newer version of the app in another tab wants to upgrade the
+      // database. Let it: later writes from this tab fail visibly.
+      void opening.then((database) => database.close());
+    }
+  });
+
+  opening.then(
+    (db) => {
+      if (pendingOpen === pending) pendingOpen = null;
+      const live = pending.waiters.filter((waiter) => !waiter.settled);
+      const latest = live[live.length - 1];
+      // Nobody is waiting any more (for example "Continue without saving" was
+      // chosen): close the late connection instead of using it.
+      if (!latest) {
+        db.close();
+        return;
+      }
+      settle(latest, () => latest.resolve(db));
+    },
+    (error) => {
+      if (pendingOpen === pending) pendingOpen = null;
+      for (const waiter of pending.waiters) settle(waiter, () => waiter.reject(upgradeFailure ?? error));
+    }
+  );
+  return pending;
+}
+
+function requestConnection({ onBlocked, signal }: OpenStorageOptions): Promise<IDBPDatabase> {
+  if (signal?.aborted) return Promise.reject(new StorageAbortError());
+  const pending = pendingOpen ?? (pendingOpen = beginOpen());
+
+  return new Promise<IDBPDatabase>((resolve, reject) => {
+    // A newer request replaces requests that are still waiting.
+    for (const waiter of pending.waiters) {
+      settle(waiter, () => waiter.reject(new StorageAbortError('A newer request replaced this one.')));
+    }
+    const waiter: ConnectionWaiter = { resolve, reject, onBlocked, settled: false };
+    pending.waiters.push(waiter);
+    signal?.addEventListener('abort', () => settle(waiter, () => reject(new StorageAbortError())), { once: true });
+    // Joining a request that is already blocked: report it straight away. A caller
+    // without onBlocked keeps waiting, as a queued request always did.
+    if (pending.blocked && onBlocked) onBlocked();
+  });
+}
+
 /** Opens the v2 database, creating it on the first run. */
-export async function openStorage(): Promise<AppStorage> {
+export async function openStorage(options: OpenStorageOptions = {}): Promise<AppStorage> {
   try {
     if (typeof indexedDB === 'undefined') {
       throw new Error('IndexedDB is not available in this browser.');
     }
-
-    let abandoned = false;
-    let upgradeFailure: unknown;
-    let rejectBlocked: (error: Error) => void;
-    const blocked = new Promise<never>((_resolve, reject) => { rejectBlocked = reject; });
-    const opening = openDB(DATABASE_NAME, DATABASE_VERSION, {
-      upgrade(database, oldVersion, _newVersion, transaction) {
-        // The open request reports a failed migration; also observe idb's
-        // wrapped upgrade-transaction promise so its abort is not detached.
-        void transaction.done.catch(() => undefined);
-        try {
-          if (oldVersion < 1) {
-            for (const name of STATE_STORE_NAMES) database.createObjectStore(name);
-          }
-          if (oldVersion < 2) {
-            database.createObjectStore('userCollections');
-            database.createObjectStore('userEntries');
-          }
-        } catch (error) {
-          upgradeFailure = error;
-          transaction.abort();
-        }
-      },
-      blocked() {
-        abandoned = true;
-        rejectBlocked(new Error('Close other eng-trainer tabs so browser storage can be upgraded, then try again.'));
-      },
-      blocking() {
-        // A newer version of the app in another tab wants to upgrade the
-        // database. Let it: later writes from this tab fail visibly.
-        void opening.then((database) => database.close());
-      }
-    });
-
-    // An IndexedDB open request cannot be canceled. Close it if an abandoned
-    // blocked attempt eventually completes after the other tab is closed.
-    void opening.then((database) => { if (abandoned) database.close(); }, () => undefined);
-    const db = await Promise.race([opening, blocked]).catch((error) => { throw upgradeFailure ?? error; });
-
-    return createStorage(db);
+    return createStorage(await requestConnection(options));
   } catch (error) {
+    if (error instanceof StorageAbortError) throw error;
     throw new StorageError('open', error);
   }
 }

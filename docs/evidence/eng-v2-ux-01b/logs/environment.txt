@@ -1,0 +1,5 @@
+date: 2026-11-21T23:53:16Z
+node: v24.18.0
+npm: 11.17.0
+git HEAD: f14dd4e33de2dfcbd8b80e1b72dbfec4326823d3
+branch: feature/eng-v2-ux-01b-spoken-line

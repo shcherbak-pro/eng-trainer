@@ -1,0 +1,8 @@
+[
+  {
+    "command": "node node_modules/vitest/vitest.mjs run --config docs/reviews/eng-v2-ux-01b-rc1-astra/vitest.config.ts",
+    "exitCode": 0,
+    "seconds": 4.806,
+    "log": "1795312812930-1-node-node_modules-vitest-vitest-mjs-run---config-docs-reviews-eng-v2-ux-01b-rc1-astra-vitest-co.log"
+  }
+]

@@ -1,0 +1,37 @@
+
+B light
+pass  14.70:1 (min 4.5)  ink on paper
+pass   9.04:1 (min 4.5)  ink-2 on paper
+pass   5.68:1 (min 4.5)  muted on paper
+pass   6.13:1 (min 4.5)  muted on surface
+pass   3.71:1 (min 3)  field border on surface (non-text)
+pass   3.44:1 (min 3)  field border on paper (non-text)
+pass   5.44:1 (min 3)  focus ring on paper (non-text)
+pass   5.87:1 (min 3)  focus ring on surface (non-text)
+pass   4.59:1 (min 3)  focus ring on highlighter (non-text)
+pass   5.78:1 (min 4.5)  known text on surface
+pass   5.78:1 (min 4.5)  white on known button
+pass   6.45:1 (min 4.5)  warn text on warn-soft
+pass   6.54:1 (min 4.5)  white on danger button
+pass  12.41:1 (min 4.5)  ink on highlighter mark
+pass  12.41:1 (min 4.5)  Undo (highlighter) on toast
+pass  14.70:1 (min 4.5)  paper text on primary button
+pass   8.32:1 (min 4.5)  ink-2 on sunk (count chip)
+
+B dark
+pass  15.66:1 (min 4.5)  ink on paper
+pass  10.22:1 (min 4.5)  ink-2 on surface
+pass   7.58:1 (min 4.5)  muted on paper
+pass   6.87:1 (min 4.5)  muted on surface
+pass   4.79:1 (min 3)  field border on surface (non-text)
+pass   5.28:1 (min 3)  field border on paper (non-text)
+pass   8.77:1 (min 3)  focus ring on paper (non-text)
+pass   7.95:1 (min 3)  focus ring on surface (non-text)
+pass  13.40:1 (min 4.5)  spoken word (highlighter) on paper
+pass   9.92:1 (min 4.5)  dark text on known button
+pass   9.92:1 (min 4.5)  known text on paper
+pass   8.18:1 (min 4.5)  dark text on danger button
+pass   8.72:1 (min 4.5)  warn text on warn-soft
+pass  15.66:1 (min 4.5)  toast text on inverse
+pass   4.55:1 (min 4.5)  Undo on inverse toast
+pass  15.66:1 (min 4.5)  paper text on primary button

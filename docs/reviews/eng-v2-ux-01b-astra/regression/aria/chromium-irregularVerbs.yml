@@ -1,0 +1,123 @@
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Verbs" [level=1]
+  - navigation "Library sections":
+    - list:
+      - listitem:
+        - link "Phrases":
+          - /url: "#phrases"
+      - listitem:
+        - link "Words":
+          - /url: "#wordIndex"
+      - listitem:
+        - link "Verbs":
+          - /url: "#irregularVerbs"
+      - listitem:
+        - link "Patterns":
+          - /url: "#patterns"
+      - listitem:
+        - link "Answers":
+          - /url: "#answers"
+    - link "Import words":
+      - /url: "#collections"
+  - text: Search verbs
+  - searchbox "Search verbs"
+  - text: Verb set
+  - combobox "Verb set":
+    - option "100 Irregular Verbs (100)" [selected]
+    - option "200 Irregular Verbs — Logical Groups (200)"
+    - option "AI Certification Verbs — Contextual (39)"
+  - text: Group
+  - combobox "Group":
+    - option "All groups" [selected]
+    - option "Core state & experience"
+    - option "Communication & meetings"
+    - option "Work, tasks & delivery"
+    - option "Movement & process flow"
+    - option "Money, resources & ownership"
+    - option "Problems, risk & change"
+    - option "Time, progress & change"
+    - option "Everyday actions & physical context"
+  - status: 100 verbs
+  - button "Listen to this page"
+  - text: Repeats
+  - combobox "Repeats":
+    - option "10×" [selected]
+    - option "20×"
+    - option "50×"
+  - text: "Reads the verbs on this page: the three forms, translations, alternatives and examples."
+  - heading "Verb list" [level=2]
+  - list:
+    - listitem:
+      - article:
+        - button "Listen to the three forms"
+        - heading "be → was/were → been" [level=3]
+        - paragraph: бути
+        - paragraph: be /biː/ — was/were /wəz, wɜːr/ — been /bɪn/
+        - paragraph: Core state & experience
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen to the three forms"
+        - heading "have → had → had" [level=3]
+        - paragraph: мати
+        - paragraph: have /hæv/ — had /hæd/ — had /hæd/
+        - paragraph: Core state & experience
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen to the three forms"
+        - heading "do → did → done" [level=3]
+        - paragraph: робити, виконувати
+        - paragraph: do /duː/ — did /dɪd/ — done /dʌn/
+        - paragraph: Core state & experience
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen to the three forms"
+        - heading "make → made → made" [level=3]
+        - paragraph: робити, створювати, приймати рішення
+        - paragraph: make /meɪk/ — made /meɪd/ — made /meɪd/
+        - paragraph: Core state & experience
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+    - listitem:
+      - article:
+        - button "Listen to the three forms"
+        - heading "get → got → got/gotten" [level=3]
+        - paragraph: отримувати, ставати
+        - paragraph: get /ɡet/ — got /ɡɑːt/ — got/gotten /ɡɑːt, ˈɡɑːtən/
+        - paragraph: Core state & experience
+        - group: Examples and alternatives
+        - button "Add to Focus List": Focus
+        - button "Hide item": Hide
+  - navigation "Verb pages":
+    - text: Show
+    - combobox "Show":
+      - option "5" [selected]
+      - option "10"
+      - option "20"
+      - option "All"
+    - button "Previous page" [disabled]
+    - text: 1–5 of 100
+    - button "Next page"
+  - paragraph: "About this set: 100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples."
+- navigation "Main":
+  - link "Home":
+    - /url: "#index"
+  - link "Library":
+    - /url: "#phrases"
+  - link "Practice":
+    - /url: "#flashcards"
+  - link "Focus":
+    - /url: "#favorites"
+  - button "More"
+- status

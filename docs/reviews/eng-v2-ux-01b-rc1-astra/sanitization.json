@@ -1,0 +1,35 @@
+{
+  "scope": "New reviewer log files only; historical files untouched.",
+  "files": [
+    {
+      "path": "logs/1795312589957-node-node_modules-vitest-vitest-mjs-run---config-docs-reviews-eng-v2-ux-01b-astra-vitest-config-ts.log",
+      "before": "75508f6c8c5c86c24cca7dcdd562592e23c66f02d3870237b318fcf4d57a6ec1",
+      "after": "0ab6f32f50aa4a66b4f3937c3b4522414ce4af5b273f5e989e2cb3d21b5b2c66"
+    },
+    {
+      "path": "logs/1795312589957-npm-cmd-run-build-site.log",
+      "before": "fc2750c04f5a4c8c5c9077ea12f39727fd721813a14dd74807410fcb05c76ea0",
+      "after": "4f6d9858996138e03d590bc8f227b88d69c13002e6a94169b16edfcc44a6c482"
+    },
+    {
+      "path": "logs/1795312589957-npm-cmd-run-check-v1.log",
+      "before": "52a8b60af21e11c8bbc93ab0681141ebfb3edaf295162e23734364350c17e2e4",
+      "after": "f60ef315b4e393fe1e3671e6ebe3e8f65bc1d7fa025f09b415484279eef683cd"
+    },
+    {
+      "path": "logs/1795312589957-npm-cmd-run-check.log",
+      "before": "461c93da30e71559a69995ecfa87e2277bc8dac86d755aa2c2db16d5a057a2a4",
+      "after": "6993939af3eb3d807f2f43c323f9a5e74adcb4daf3b7b6ab95d81e6011e14dd6"
+    },
+    {
+      "path": "logs/1795312589957-npm-cmd-run-test-v1.log",
+      "before": "87090ca18112d03c1c19b1dc8e357cce13ff1cb2145036821b816b7d5553fe1e",
+      "after": "1315fa01aca9570acc535f591b3e9c691ea2f575575d2fd04490abb94bc0501d"
+    },
+    {
+      "path": "logs/1795312589957-npm-cmd-test.log",
+      "before": "a5abe71b62040162089421b284acc8d309eeafc243522257313061715e860e07",
+      "after": "1499d94832a90b35e27420b503d32176752811798790e2766ca83ed31c3086d0"
+    }
+  ]
+}

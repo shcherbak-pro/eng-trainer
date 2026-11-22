@@ -1,0 +1,25 @@
+{
+  "candidateFiles": 1025,
+  "differences": [],
+  "headUnchanged": true,
+  "indexUnchanged": true,
+  "treeUnchanged": true,
+  "groups": {
+    "protected": {
+      "files": 101,
+      "changed": []
+    },
+    "originalReview": {
+      "files": 257,
+      "changed": []
+    },
+    "priorImplementationEvidence": {
+      "files": 81,
+      "changed": []
+    },
+    "priorRC1Evidence": {
+      "files": 62,
+      "changed": []
+    }
+  }
+}

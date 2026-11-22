@@ -1,0 +1,32 @@
+[
+  {
+    "command": "npm.cmd run check",
+    "exitCode": 1,
+    "seconds": 9.22
+  },
+  {
+    "command": "npm.cmd test",
+    "exitCode": 1,
+    "seconds": 3.094
+  },
+  {
+    "command": "npm.cmd run check:v1",
+    "exitCode": 0,
+    "seconds": 6.431
+  },
+  {
+    "command": "npm.cmd run test:v1",
+    "exitCode": 1,
+    "seconds": 2.848
+  },
+  {
+    "command": "npm.cmd run build:site",
+    "exitCode": 1,
+    "seconds": 4.361
+  },
+  {
+    "command": "npm.cmd run verify:content",
+    "exitCode": 0,
+    "seconds": 2.139
+  }
+]

@@ -1,0 +1,265 @@
+{
+  "rc1Regressions": {
+    "reviewed": {
+      "passed": 35,
+      "failed": 32
+    },
+    "corrected": {
+      "passed": 69,
+      "failed": 0
+    },
+    "unrunnableOnReviewed": [
+      {
+        "file": "src/content/descriptionLanguage.test.ts",
+        "reason": "Failed to resolve import \"./descriptionLanguage\" from \"src/content/descriptionLanguage.test.ts\". Does the file exist?"
+      }
+    ],
+    "failingOnReviewedOnly": [
+      {
+        "file": "src/app/App.test.ts",
+        "test": "language of learning block descriptions (RC1, F5) marks English and Ukrainian descriptions by their actual language in Focus, Home and the Verbs set note",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/content/descriptionLanguage.test.ts",
+        "test": "language of built-in block descriptions (RC1, F5) classifies every built-in learning block, and nothing else",
+        "reviewed": "not run",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/content/descriptionLanguage.test.ts",
+        "test": "language of built-in block descriptions (RC1, F5) agrees with the text that was classified: English descriptions are English, Ukrainian ones Ukrainian",
+        "reviewed": "not run",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/content/descriptionLanguage.test.ts",
+        "test": "language of built-in block descriptions (RC1, F5) leaves an unknown block unclassified instead of guessing",
+        "reviewed": "not run",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/state/undoValidity.test.ts",
+        "test": "Undo validity is valid once: a second use is refused",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/state/undoValidity.test.ts",
+        "test": "Undo validity expires on newer intent for the same entry, even when the stored value does not change",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/state/undoValidity.test.ts",
+        "test": "Undo validity stays valid when a different entry changes",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/state/undoValidity.test.ts",
+        "test": "Undo validity expires a Hide Undo on any newer change of that entry: Show, Focus, learned, or another Hide",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/state/undoValidity.test.ts",
+        "test": "Undo validity keys hidden and Focus state by kind: hiding a word does not expire the Undo of a phrase with the same id",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/state/undoValidity.test.ts",
+        "test": "Undo validity expires every earlier Undo on Reset, even when the entry later returns to the same values",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/state/undoValidity.test.ts",
+        "test": "Undo validity expires every earlier Undo when the saved state is loaded again",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/state/undoValidity.test.ts",
+        "test": "Undo validity treats a deck reset as newer intent for every card of the deck, learned or not",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/collections/CollectionsPage.test.ts",
+        "test": "focus once the final import plan is ready (RC1, F3) focuses the named issue summary for a missing translation, and saves nothing",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/collections/CollectionsPage.test.ts",
+        "test": "focus once the final import plan is ready (RC1, F3) focuses the named issue summary for an invalid kind, and saves nothing",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/collections/CollectionsPage.test.ts",
+        "test": "focus once the final import plan is ready (RC1, F3) focuses the issue summary for a native file that would change an existing entry",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/collections/CollectionsPage.test.ts",
+        "test": "focus once the final import plan is ready (RC1, F3) a superseded importable result never takes focus from the newer issue summary",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/collections/CollectionsPage.test.ts",
+        "test": "study text in the import preview (RC1, F5) keeps the English example out of browser translation, but not its label",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/flashcards/learnAgainUndo.test.ts",
+        "test": "Learn again Undo validity (F1) an older Undo cannot override a newer \"Keep learning\" on the same card, also after a reload",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/flashcards/learnAgainUndo.test.ts",
+        "test": "Learn again Undo validity (F1) a retained Learn again callback cannot bring back progress after Reset confirmed in Settings",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/flashcards/learnAgainUndo.test.ts",
+        "test": "Learn again Undo validity (F1) applies an Undo at most once, even when its callback is invoked again after a newer Learn again",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/flashcards/learnAgainUndo.test.ts",
+        "test": "Learn again Undo validity (F1) after a storage failure, retrying saves the newer answer and never the stale Undo",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/flashcards/learnAgainUndo.test.ts",
+        "test": "keyboard focus around Learn again and its Undo (F2) moves focus to the card that took the row’s place, then to the list heading",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/flashcards/learnAgainUndo.test.ts",
+        "test": "keyboard focus around Learn again and its Undo (F2) Undo from the message returns focus to the restored card’s row",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/flashcards/learnAgainUndo.test.ts",
+        "test": "keyboard focus around Learn again and its Undo (F2) Undo while the learned list is closed focuses the button that opens it",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/flashcards/learnAgainUndo.test.ts",
+        "test": "keyboard focus around Learn again and its Undo (F2) after a confirmed deck reset removes its opener, focus goes to the current card",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/exercises/studyText.test.ts",
+        "test": "study text and browser translation Answers: English questions and answers are protected; the introduction is not",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/exercises/studyText.test.ts",
+        "test": "study text and browser translation Speaking prompts: the current prompt and every listed prompt are protected; the hint and headings are not",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/exercises/studyText.test.ts",
+        "test": "study text and browser translation Reverse practice: the prompt is the exercise and is protected, whatever its language; labels are not",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/home/LearnPassManager.test.ts",
+        "test": "deleting a Learn Pass (F2) keeps focus on the opener when cancelled, then moves to the next pass and finally to Create a Learn Pass",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/features/home/LearnPassManager.test.ts",
+        "test": "deleting a Learn Pass (F2) after deleting the last pass in the list, focus goes to the pass before it",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/shared/entries/hideUndoValidity.test.ts",
+        "test": "Hide Undo validity (F1) a retained Hide Undo stays invalid after Reset, also when the same entry is hidden again",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/shared/entries/hideUndoValidity.test.ts",
+        "test": "Hide Undo validity (F1) Show and newer choices on the same entry make an older Hide Undo stale",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/shared/entries/hideUndoValidity.test.ts",
+        "test": "Hide Undo validity (F1) applies a Hide Undo at most once",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "src/shared/entries/hideUndoValidity.test.ts",
+        "test": "Hide Undo validity (F1) after a storage failure, retrying saves the newest choice and never the stale Undo",
+        "reviewed": "failed",
+        "corrected": "passed"
+      }
+    ],
+    "failingOnCorrected": [],
+    "passingOnBoth": 35
+  },
+  "astraIndependent": {
+    "reviewed": {
+      "passed": 3,
+      "failed": 4
+    },
+    "corrected": {
+      "passed": 7,
+      "failed": 0
+    },
+    "unrunnableOnReviewed": [],
+    "failingOnReviewedOnly": [
+      {
+        "file": "docs/reviews/eng-v2-ux-01b-astra/independent.test.ts",
+        "test": "old Learn again callback cannot resurrect progress after confirmed Settings Reset",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "docs/reviews/eng-v2-ux-01b-astra/independent.test.ts",
+        "test": "old Learn again callback does not override a later Hide of that same entry",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "docs/reviews/eng-v2-ux-01b-astra/independent.test.ts",
+        "test": "old Hide callback cannot reapply pre-reset Focus and learned flags after a new Hide",
+        "reviewed": "failed",
+        "corrected": "passed"
+      },
+      {
+        "file": "docs/reviews/eng-v2-ux-01b-astra/independent.test.ts",
+        "test": "Hide Undo does not overwrite later same-entry Focus and learned decisions",
+        "reviewed": "failed",
+        "corrected": "passed"
+      }
+    ],
+    "failingOnCorrected": [],
+    "passingOnBoth": 3
+  }
+}
