@@ -1,0 +1,11 @@
+check 0
+test 0
+check-v1 0
+test-v1 0
+build 0
+build-site 0
+verify-content 0
+diff-check 0
+new-files-whitespace 0
+
+[exit 0]

@@ -3,6 +3,7 @@
   import type { ContentCatalog } from '../../content/catalog';
   import type { IrregularVerb, Phrase, TrainingBlock, WordExample, WordIndexItem } from '../../content/types';
   import { pageForBlock } from '../../app/navigation';
+  import { progress } from '../../state/progress';
   import { settings } from '../../state/settings';
   import { viewState } from '../../state/viewState';
   import EntryExamples from '../../shared/entries/EntryExamples.svelte';
@@ -13,8 +14,12 @@
   import PaginationControls from '../../shared/ui/PaginationControls.svelte';
   import { paginate, totalPages, type PageSizeOption } from '../../shared/pagination';
   import { splitAlternatives } from '../../shared/text';
+  import { buildFlashcards } from '../flashcards/flashcards';
   import ExpansionPanel from './ExpansionPanel.svelte';
+  import HomeOverview from './HomeOverview.svelte';
+  import { homeProgress, libraryOverview } from './homeStats';
   import LearnPassManager from './LearnPassManager.svelte';
+  import TopicCards from './TopicCards.svelte';
 
   export let catalog: ContentCatalog;
   /** The blocks of the active Learn Pass. */
@@ -173,6 +178,11 @@
     dailyItemKey = dailyCandidates[index].key;
   }
 
+  // Home statistics (ENG-V2-03): derived from the whole current catalog, never from a filtered view.
+  $: cards = buildFlashcards(catalog);
+  $: stats = homeProgress(catalog, $progress, cards);
+  $: library = libraryOverview(catalog, cards);
+
   $: tagOptions = getTagOptions(blocks);
   $: selectedTagExists = !$settings.indexTagFilter || tagOptions.some((option) => option.tag === $settings.indexTagFilter);
   $: filteredBlocks = selectedTagExists && $settings.indexTagFilter
@@ -196,6 +206,10 @@
 </script>
 
 <div class="home">
+  <HomeOverview {stats} {library} />
+
+  <TopicCards topics={catalog.topics} {blocks} completion={stats.topics.list} {onOpenBlock} />
+
   <ExpansionPanel
     title="Learn Pass"
     description="Choose or create a focused learning track."
@@ -207,12 +221,12 @@
 
   {#if tagOptions.length}
     <ExpansionPanel
-      title="Topics"
-      description="Show only the learning blocks of one topic."
+      title="Tags"
+      description="Show only the learning blocks with one tag."
       open={$settings.indexTagCloudExpanded}
       onToggle={() => settings.toggleIndexPanel('tagCloud')}
     >
-      <div class="tag-cloud" role="group" aria-label="Topic filter">
+      <div class="tag-cloud" role="group" aria-label="Tag filter">
         <button aria-pressed={!$settings.indexTagFilter} type="button" on:click={() => settings.setIndexTagFilter('')}>
           All <span>{blocks.length}</span>
         </button>
@@ -235,7 +249,7 @@
       <ul class="block-list">
         {#each pagedBlocks as block (block.id)}
           <li class="block-row">
-            <a class="block-row__open" href={`#${pageForBlock(block)}`} on:click|preventDefault={() => onOpenBlock(block)}>
+            <a class="block-row__open" href={`#${pageForBlock(block, catalog.topics)}`} on:click|preventDefault={() => onOpenBlock(block)}>
               <span class="block-row__title">{block.title}</span>
               <span class="block-row__meta">
                 {#if block.tag}{block.tag}{:else}{block.type}{/if}{#if block.itemsCount}, {block.itemsCount} items{/if}
@@ -257,8 +271,8 @@
         onPageSizeChange={setPageSize}
       />
     {:else if blocks.length}
-      <EmptyState level="h3" title="No blocks for this topic" text="Choose another topic, or All.">
-        <Button variant="secondary" size="sm" onClick={() => settings.setIndexTagFilter('')}>Show all topics</Button>
+      <EmptyState level="h3" title="No blocks with this tag" text="Choose another tag, or All.">
+        <Button variant="secondary" size="sm" onClick={() => settings.setIndexTagFilter('')}>Show all tags</Button>
       </EmptyState>
     {:else}
       <EmptyState level="h3" title="No blocks in this Learn Pass" text="Edit the active Learn Pass and select at least one learning block." />

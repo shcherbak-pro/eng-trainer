@@ -1,0 +1,445 @@
+{
+  "note": "Every screenshot of the final run. Files marked published are in screenshots/; rerun browser-check.mjs to recreate the others.",
+  "files": [
+    {
+      "file": "chromium-desktop-answers.png",
+      "published": false,
+      "sha256": "4af66f276b3b5b54bbbe94b3f8029759d3c08251176707e3016258b513132eb7"
+    },
+    {
+      "file": "chromium-desktop-collections.png",
+      "published": false,
+      "sha256": "4a43106eb3e6ce05724848abe3d7959e8dc616fd89ae5160901503a3e22b3da8"
+    },
+    {
+      "file": "chromium-desktop-favorites.png",
+      "published": false,
+      "sha256": "12245bb4d4e14d3cb399273cccfa28ce1865091dfddb80664767d666b15430e9"
+    },
+    {
+      "file": "chromium-desktop-flashcards.png",
+      "published": false,
+      "sha256": "ac279d07a208611990a2984d455f73e235fce3a4307866bbc166bcfa809b7ba4"
+    },
+    {
+      "file": "chromium-desktop-index.png",
+      "published": true,
+      "sha256": "13296cad96098ded551a62134c7672dd2a46b8f96ee3dba7c900444b2756577a"
+    },
+    {
+      "file": "chromium-desktop-irregularVerbs.png",
+      "published": false,
+      "sha256": "ecd26a962b26184581f1a504f82f84f033ca9b4d90571897ec08b2c117db543a"
+    },
+    {
+      "file": "chromium-desktop-patterns.png",
+      "published": false,
+      "sha256": "31a0f7b1ccf6be6b41b9df237cac81883ea10ac40ec4e623b794595407b1a5ac"
+    },
+    {
+      "file": "chromium-desktop-phrases.png",
+      "published": false,
+      "sha256": "ea34b23b26a577222e44db4a1245ac52b25df3e279b6be648326382900434482"
+    },
+    {
+      "file": "chromium-desktop-practice.png",
+      "published": false,
+      "sha256": "49e77b7c98a022738f797ade4b3c33c5ab94b44037f4ab8ddc388e385b838778"
+    },
+    {
+      "file": "chromium-desktop-reverse.png",
+      "published": false,
+      "sha256": "6db25264e52f2cd262237ec65c03309b83b0bb471567458eb0ad6f15249c3dae"
+    },
+    {
+      "file": "chromium-desktop-settings.png",
+      "published": false,
+      "sha256": "55816c1322c79c4cef8e2715cc23bf8e313c70c1b5c37e712fda8f7fd97d184c"
+    },
+    {
+      "file": "chromium-desktop-topic-conditionals.png",
+      "published": false,
+      "sha256": "7b4b468c568d35ffde4033489b4f8de76980d1d7c36329232d51b4fd1c2a404d"
+    },
+    {
+      "file": "chromium-desktop-topic-interview-english.png",
+      "published": true,
+      "sha256": "c32f62935a01321d36133c972c2e10984c092102bb6a2af3c62aa49e018db1b1"
+    },
+    {
+      "file": "chromium-desktop-topic-small-talk.png",
+      "published": false,
+      "sha256": "ab53acbd38f196f8a59c0fd5533414d414b750c6019b74ef940d229f0d1d11a3"
+    },
+    {
+      "file": "chromium-desktop-wordIndex.png",
+      "published": false,
+      "sha256": "efb9bb78d6a923b4c55a9c2767af8a68035a6f3330595ef10db27796bdf4c63a"
+    },
+    {
+      "file": "chromium-narrow-index.png",
+      "published": true,
+      "sha256": "206908492cb54414b3063013ecaac793b2e9bdbfc4625acb5b7706fd3c585e33"
+    },
+    {
+      "file": "chromium-narrow-phrases.png",
+      "published": false,
+      "sha256": "814d4b4c428e725e848014d9080b6294fd7c194aa7bd7a1eaa80eaa97c177056"
+    },
+    {
+      "file": "chromium-narrow-topic-conditionals.png",
+      "published": false,
+      "sha256": "5e23e0122cc39ff80fefda09fdb084750bc186a67489bd4e1a0a3071e6d6a8d2"
+    },
+    {
+      "file": "chromium-narrow-topic-interview-english.png",
+      "published": false,
+      "sha256": "870a7e53188d1f7dc1091deabd99b7256f96f7489d3f696ad850e0f8fb5651ef"
+    },
+    {
+      "file": "chromium-narrow-topic-small-talk.png",
+      "published": true,
+      "sha256": "59c6c6fffe8a1c86a27548e43fc9f532f5fb60e6fb45433d116eaddbee972692"
+    },
+    {
+      "file": "chromium-phone-answers.png",
+      "published": false,
+      "sha256": "fe25e7cfa5ef07f7ff573cbf72ba96a64351416bc5d65fa4f999845a143a2fa4"
+    },
+    {
+      "file": "chromium-phone-collections.png",
+      "published": true,
+      "sha256": "07a111ef70100da2d9e7d3a31263172901232a8e91fefe574174d3010a24d2a5"
+    },
+    {
+      "file": "chromium-phone-conditionals-final-subsection.png",
+      "published": true,
+      "sha256": "891f68291fb683a1a1e5cdc3eaf5e6cc014a948ce407dd769ddff58e2e25b5ef"
+    },
+    {
+      "file": "chromium-phone-content-error.png",
+      "published": true,
+      "sha256": "f884f45d9ea04f064520c8c2941a475c21ee62afb270cdda53184391604d62d8"
+    },
+    {
+      "file": "chromium-phone-enlarged-index.png",
+      "published": false,
+      "sha256": "7ec04657c62fa2fcf2147824abd3937efc77330f4ab3d7f98d703cef116a809d"
+    },
+    {
+      "file": "chromium-phone-enlarged-irregularVerbs.png",
+      "published": false,
+      "sha256": "ab64fa0a8b472ec19162d37ae847ae491d6b9b76a2625572b937a26f20949217"
+    },
+    {
+      "file": "chromium-phone-enlarged-topic-small-talk.png",
+      "published": true,
+      "sha256": "5bdc7bc5d0ee233f3e2fa7ab1d045ff6e50348e70060c2215698fa283b65b321"
+    },
+    {
+      "file": "chromium-phone-favorites.png",
+      "published": false,
+      "sha256": "a27750c6ed3ae6497f6a3f783eb3fb0ed289098b0c65641c6c9a3b575c6a53e4"
+    },
+    {
+      "file": "chromium-phone-flashcards.png",
+      "published": true,
+      "sha256": "796c2e4d87ab67ee877d46badbff1d8bb81eae0f7bfeca6437352521d6bceb69"
+    },
+    {
+      "file": "chromium-phone-home-details.png",
+      "published": true,
+      "sha256": "3d24b01d55dd54f8b970a750cc565a10a9ac6ab5b77b2e833a2ba62d8257c51d"
+    },
+    {
+      "file": "chromium-phone-home-start.png",
+      "published": false,
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "chromium-phone-index.png",
+      "published": true,
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "chromium-phone-interview-final-category.png",
+      "published": true,
+      "sha256": "7c9f2bbe1a7e8a8251b04f51aaf1360282b638937af84e8ebc0bc73fee817af9"
+    },
+    {
+      "file": "chromium-phone-irregularVerbs.png",
+      "published": true,
+      "sha256": "5e621ab4f77fbe331864c563d2b4c9b769d6307e8369382e71de37a11aefde92"
+    },
+    {
+      "file": "chromium-phone-patterns.png",
+      "published": false,
+      "sha256": "aaca914551508934baa1eb105c1de583d331eedb251ff7256578598f88c27b75"
+    },
+    {
+      "file": "chromium-phone-phrases.png",
+      "published": true,
+      "sha256": "d4753e106d471be52ebbf00efc678e0ab0ff8d695fefec3cd763aee3c9baf4e1"
+    },
+    {
+      "file": "chromium-phone-practice.png",
+      "published": false,
+      "sha256": "20cf31fb955905d207c51c157d69a20213071f09207ee19148025a0c835a6144"
+    },
+    {
+      "file": "chromium-phone-reverse.png",
+      "published": false,
+      "sha256": "285209ff1aa0ffa13e5af819df70d6999aec2e76fbe4f694cb1e10ae6009054e"
+    },
+    {
+      "file": "chromium-phone-settings.png",
+      "published": true,
+      "sha256": "d0498064e52b29820bc2a34b356612e23fa7cb4d8e136a68d2b9f42957e8e905"
+    },
+    {
+      "file": "chromium-phone-small-talk-traveling.png",
+      "published": true,
+      "sha256": "d6658539e9207271bf5552489b82c98c2546d5711e28f8283bd4f37f3764cc2a"
+    },
+    {
+      "file": "chromium-phone-topic-conditionals.png",
+      "published": true,
+      "sha256": "c36fed98e05bbfb0838b232d8c620d14620d30a448735e24213a708a799e3311"
+    },
+    {
+      "file": "chromium-phone-topic-interview-english.png",
+      "published": true,
+      "sha256": "365bc17e39ce787bf7a399574bacf977cee6538af3e6703f67d2626a7a4df608"
+    },
+    {
+      "file": "chromium-phone-topic-small-talk.png",
+      "published": true,
+      "sha256": "72d0ea4d8f20508779afadf74dad5dc80a5c6370c98434c5a684cc5d709294d3"
+    },
+    {
+      "file": "chromium-phone-wordIndex.png",
+      "published": false,
+      "sha256": "578ceebc09fec711954e09cb2ba7d75b09d72c088a5e725e1ec08e90d133834e"
+    },
+    {
+      "file": "firefox-desktop-answers.png",
+      "published": false,
+      "sha256": "5ce33374e55e331c70c2b350a200b51fe9e0483ef60ec6fe1312c6a1cf323df6"
+    },
+    {
+      "file": "firefox-desktop-collections.png",
+      "published": false,
+      "sha256": "23269fce407a27f1747264b53227d1d3e4d94bdb5ecd31d5561dbfa3a51f3694"
+    },
+    {
+      "file": "firefox-desktop-favorites.png",
+      "published": false,
+      "sha256": "c7c062c2400293d4ecfc6d29aad837108b8284ca1c57b58bb08c6651fbe35bd8"
+    },
+    {
+      "file": "firefox-desktop-flashcards.png",
+      "published": false,
+      "sha256": "05f7d5cdbed501011624409891c0b64101059630903bac73b828720ef590148a"
+    },
+    {
+      "file": "firefox-desktop-index.png",
+      "published": true,
+      "sha256": "a839d930bcbd58378804121f60773ddcc857c4f38d649ad8408e0b7e2badda73"
+    },
+    {
+      "file": "firefox-desktop-irregularVerbs.png",
+      "published": false,
+      "sha256": "8de31e69878e467cd5f504d1d3f341acfc866afd37de2d5ba86f5c1e18f8076f"
+    },
+    {
+      "file": "firefox-desktop-patterns.png",
+      "published": false,
+      "sha256": "c39c6bab55b68848432a82d25ac321097b2b55524cf2f7b316a682fabe5a31ae"
+    },
+    {
+      "file": "firefox-desktop-phrases.png",
+      "published": false,
+      "sha256": "ad277fa03275437d936e0fecf7492793252a57c67f1d4349849ede55d0448bc6"
+    },
+    {
+      "file": "firefox-desktop-practice.png",
+      "published": false,
+      "sha256": "6432300d37446c7eb2cca75ad5908b31c3378f8a568d3f59220bcb2be073fd61"
+    },
+    {
+      "file": "firefox-desktop-reverse.png",
+      "published": false,
+      "sha256": "d6a09fc9186742a765925df65a2ec8ac9bb1db7d9b852cdb2be5df4b6abf8011"
+    },
+    {
+      "file": "firefox-desktop-settings.png",
+      "published": false,
+      "sha256": "946b6ee376471b57e757335f87b0740066655458c93fe362772e0018c91724cb"
+    },
+    {
+      "file": "firefox-desktop-topic-conditionals.png",
+      "published": false,
+      "sha256": "a970abfbfb47b7e735548fc21ccd23f3856a1ff3f99ad815d6f06df80af7320c"
+    },
+    {
+      "file": "firefox-desktop-topic-interview-english.png",
+      "published": false,
+      "sha256": "6bdcac539b629e4e22f2b18c7ca4f9bae826e0dc67a91b3fdd45b2f758c99f38"
+    },
+    {
+      "file": "firefox-desktop-topic-small-talk.png",
+      "published": false,
+      "sha256": "eb4c966f6203890f692bbcd76fdb5c237901f8f2a7281059cbeaf4f2458b09ce"
+    },
+    {
+      "file": "firefox-desktop-wordIndex.png",
+      "published": false,
+      "sha256": "562b9ceb0107d6db7fab8b8721ae669e500e3d6df65031eb16adefdecde34145"
+    },
+    {
+      "file": "firefox-narrow-index.png",
+      "published": false,
+      "sha256": "f428f0595d603ff17a875ebb69a660ed08b4bafdcce2fd7fbdce68d3c7684870"
+    },
+    {
+      "file": "firefox-narrow-phrases.png",
+      "published": false,
+      "sha256": "602e5aa105529ba47fae6deada2628b2f13b09ea195e6058b7532f91e36ecd99"
+    },
+    {
+      "file": "firefox-narrow-topic-conditionals.png",
+      "published": false,
+      "sha256": "056f8a3e1f278ce8d2c2ecb30791f46e1b16518caf2516516337eb9c68d26e4a"
+    },
+    {
+      "file": "firefox-narrow-topic-interview-english.png",
+      "published": false,
+      "sha256": "31a937a0a4b09fc134f0a1b2970367706a65d9edd95128c0f84e4a667677b61c"
+    },
+    {
+      "file": "firefox-narrow-topic-small-talk.png",
+      "published": false,
+      "sha256": "f3a9cf5d0086735dc477ff47da5304142c300086d3e395f89950208443bcd3bf"
+    },
+    {
+      "file": "firefox-phone-answers.png",
+      "published": false,
+      "sha256": "c59c168c175d63e6351bd0102c38b78dc9d675fabd2daae48dbc044dc10d9436"
+    },
+    {
+      "file": "firefox-phone-collections.png",
+      "published": false,
+      "sha256": "8987a5314af53cccc9528a951c48a17400cceeb2905a6c712de01c8a0beaab79"
+    },
+    {
+      "file": "firefox-phone-conditionals-final-subsection.png",
+      "published": false,
+      "sha256": "c7c73629cfec4df397b87082f19091f9cdc590e17c612c4beb9a1e5c9139d9c3"
+    },
+    {
+      "file": "firefox-phone-content-error.png",
+      "published": false,
+      "sha256": "2abfc5741665b9d6dd954c9be78dab14399206af523b7be3d88dd9e36c2b5ca0"
+    },
+    {
+      "file": "firefox-phone-enlarged-index.png",
+      "published": false,
+      "sha256": "43f565bfb88b1e561b9503809f6998ceee04c98d52274c9e3e3752cfdd91f5b8"
+    },
+    {
+      "file": "firefox-phone-enlarged-irregularVerbs.png",
+      "published": false,
+      "sha256": "7fe8736e6f323c56537531a3684953a05b7add8ea2b31c7d374855bc3a574135"
+    },
+    {
+      "file": "firefox-phone-enlarged-topic-small-talk.png",
+      "published": false,
+      "sha256": "2c2267a4a0ccbb403928a8abdf46430f821c128aabed4cc7c5ce1e3b53e354ab"
+    },
+    {
+      "file": "firefox-phone-favorites.png",
+      "published": false,
+      "sha256": "8ae111bd3966adae82186602ec41e01655ecafcc6c43fc286cc191aedbe7ffd3"
+    },
+    {
+      "file": "firefox-phone-flashcards.png",
+      "published": false,
+      "sha256": "515209150ab3f26adc396eedc8c7467a5d5533aa2b4c062559151685105e9b5a"
+    },
+    {
+      "file": "firefox-phone-home-details.png",
+      "published": true,
+      "sha256": "6ea09a51ab5152b2a72528fe04c0ebaadccc63ec6e4b6467544481db882e951a"
+    },
+    {
+      "file": "firefox-phone-home-start.png",
+      "published": false,
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "firefox-phone-index.png",
+      "published": true,
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "firefox-phone-interview-final-category.png",
+      "published": false,
+      "sha256": "b5ee3ed9089bd2a723b79c2b8f600ba5ada8105814e17763ed9eb50fd957b75d"
+    },
+    {
+      "file": "firefox-phone-irregularVerbs.png",
+      "published": false,
+      "sha256": "35e323252bdaa5ea79e0d63c1db6a473ac2e13471c486b2c3825406e37403755"
+    },
+    {
+      "file": "firefox-phone-patterns.png",
+      "published": false,
+      "sha256": "0930e92ca1a15ea38420818b6b593788dea3c951a5bf77a6113cc5ea599193d2"
+    },
+    {
+      "file": "firefox-phone-phrases.png",
+      "published": false,
+      "sha256": "8b42ae8a4aeb6c31ac150ae5456e115ac060836d87ce3626e38e7aa53a861af5"
+    },
+    {
+      "file": "firefox-phone-practice.png",
+      "published": false,
+      "sha256": "711a938478360bf6ea42d69fbaadcf5f7f8ea3cfdbff34ccefbb481d27052ae7"
+    },
+    {
+      "file": "firefox-phone-reverse.png",
+      "published": false,
+      "sha256": "9dccfcb51eb4ffae4dbc36ca71c9dd4cf081723cf8c2656efd5e2a577bf51abd"
+    },
+    {
+      "file": "firefox-phone-settings.png",
+      "published": false,
+      "sha256": "453c328b9a82455e69516b999346c1c45ac24a7ed05bfe999e0cbe262922f46b"
+    },
+    {
+      "file": "firefox-phone-small-talk-traveling.png",
+      "published": false,
+      "sha256": "c2e36a1495185ff0c9a71ab99ca22c0a1df5469f8168be4b3a5878d2c7e87ef2"
+    },
+    {
+      "file": "firefox-phone-topic-conditionals.png",
+      "published": false,
+      "sha256": "e58f5841d195af19268df27c6565446ff3e211f7dc247b84c09a7389e1cc9ed6"
+    },
+    {
+      "file": "firefox-phone-topic-interview-english.png",
+      "published": false,
+      "sha256": "d5a3cdc9ee21b314b784435ec579baa7fd5a68ccd2fb56d5039424cc4ba62413"
+    },
+    {
+      "file": "firefox-phone-topic-small-talk.png",
+      "published": true,
+      "sha256": "7706719bc9d00000b9005a15a962a6df15907545e3a078e6e8ca213d70c09e97"
+    },
+    {
+      "file": "firefox-phone-wordIndex.png",
+      "published": false,
+      "sha256": "afa7582c5d8bd64edcc88b5173da80fb60cc2c6c7b502093fa18431aa538b507"
+    }
+  ]
+}

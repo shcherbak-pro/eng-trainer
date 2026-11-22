@@ -1,0 +1,13 @@
+$ npm run check:v1
+
+> english-assessment-trainer-v2@2.0.0 check:v1
+> npm --prefix v1 run check
+
+
+> english-assessment-trainer-v1@1.0.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+1795360272624 START "<repo>\\v1"
+1795360272626 COMPLETED 189 FILES 0 ERRORS 0 WARNINGS 0 FILES_WITH_PROBLEMS
+
+[exit 0]

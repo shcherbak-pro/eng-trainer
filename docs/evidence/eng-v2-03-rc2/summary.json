@@ -1,0 +1,823 @@
+{
+  "decisiveRequirement": "RC1 fails and RC2 passes in both engines, without test-side refocusing or scrolling",
+  "decisiveResult": {
+    "rc1FailsInBothEngines": true,
+    "rc2PassesInBothEngines": true
+  },
+  "astraProbe": {
+    "rc1": {
+      "passed": false,
+      "runnerSha256": "4a55be6de637a3cb22568dee56c5a149dc49b41a15e68cbc87898b28b550431b",
+      "engines": {
+        "chromium": {
+          "before": true,
+          "resized": false,
+          "coveredPx": 36.891,
+          "refocused": true,
+          "errors": 0
+        },
+        "firefox": {
+          "before": true,
+          "resized": false,
+          "coveredPx": 36.5,
+          "refocused": true,
+          "errors": 0
+        }
+      }
+    },
+    "rc2": {
+      "passed": true,
+      "runnerSha256": "4a55be6de637a3cb22568dee56c5a149dc49b41a15e68cbc87898b28b550431b",
+      "engines": {
+        "chromium": {
+          "before": true,
+          "resized": true,
+          "coveredPx": 0.375,
+          "refocused": true,
+          "errors": 0
+        },
+        "firefox": {
+          "before": true,
+          "resized": true,
+          "coveredPx": 0.4,
+          "refocused": true,
+          "errors": 0
+        }
+      }
+    }
+  },
+  "heightResize": {
+    "rc1": {
+      "runnerSha256": "81d0cf0525b93729475b3747f47b3ccd1a0fa4c0c403cbf4e17b7e23c78bfc63",
+      "oracleSha256": "0e4b6bb6d1640d0076b17e70a4945b7e14c389a401433195bc6c558cf1dcfa98",
+      "buildIndexSha256": "cb488245caca76d340d370107870a12bf32f21941eb57415cb7d2e5aef733b92",
+      "summary": {
+        "chromium": {
+          "passed": 4,
+          "total": 8
+        },
+        "firefox": {
+          "passed": 4,
+          "total": 8
+        }
+      },
+      "engines": {
+        "chromium": {
+          "decisive": {
+            "pass": false,
+            "failures": [
+              "after 320x480: 36.890625px of the outline covered, 6 characters clipped",
+              "second shrink: 36.890625px covered"
+            ],
+            "tabsToAllSituations": 5,
+            "before": {
+              "complete": true,
+              "coveredOrClippedPx": 0.375,
+              "clippedCharacters": 0,
+              "outlineBottom": 416.109,
+              "navigationTop": 743.219,
+              "pageScrollY": 430,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x844"
+            },
+            "at480": {
+              "complete": false,
+              "coveredOrClippedPx": 36.891,
+              "clippedCharacters": 6,
+              "outlineBottom": 416.109,
+              "navigationTop": 379.219,
+              "pageScrollY": 430,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x480"
+            },
+            "restored844": {
+              "complete": true,
+              "coveredOrClippedPx": 0.375,
+              "clippedCharacters": 0,
+              "outlineBottom": 416.109,
+              "navigationTop": 743.219,
+              "pageScrollY": 430,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x844"
+            },
+            "at480Again": {
+              "complete": false,
+              "coveredOrClippedPx": 36.891,
+              "clippedCharacters": 6,
+              "outlineBottom": 416.109,
+              "navigationTop": 379.219,
+              "pageScrollY": 430,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x480"
+            },
+            "elementSizesUnchangedByResize": true,
+            "strip": {
+              "width": 320,
+              "height": 104.375,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 750
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.375
+            },
+            "focusOwnerKept": true,
+            "selectionAfter": [
+              "All situations"
+            ]
+          },
+          "scenarios": {
+            "decisive-320-200": {
+              "pass": false,
+              "failures": [
+                "after 320x480: 36.890625px of the outline covered, 6 characters clipped",
+                "second shrink: 36.890625px covered"
+              ],
+              "height": null
+            },
+            "normal-320-100": {
+              "pass": false,
+              "failures": [
+                "after 320x443: 30.375px covered"
+              ],
+              "height": 443
+            },
+            "enlarged-390-200": {
+              "pass": false,
+              "failures": [
+                "after 390x747: 29.921875px covered"
+              ],
+              "height": 747
+            },
+            "search-focus-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": 487
+            },
+            "manual-scroll-unfocused-320-100": {
+              "pass": true,
+              "failures": [],
+              "height": 443
+            },
+            "focus-moves-after-resize-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "navigate-after-resize-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "resize-burst-320-200": {
+              "pass": false,
+              "failures": [
+                "after the burst: 36.890625px covered"
+              ],
+              "height": null
+            }
+          }
+        },
+        "firefox": {
+          "decisive": {
+            "pass": false,
+            "failures": [
+              "after 320x480: 36.499969482421875px of the outline covered, 6 characters clipped",
+              "second shrink: 36.499969482421875px covered"
+            ],
+            "tabsToAllSituations": 6,
+            "before": {
+              "complete": true,
+              "coveredOrClippedPx": 0.4,
+              "clippedCharacters": 0,
+              "outlineBottom": 415.7,
+              "navigationTop": 743.2,
+              "pageScrollY": 430.5,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x844"
+            },
+            "at480": {
+              "complete": false,
+              "coveredOrClippedPx": 36.5,
+              "clippedCharacters": 6,
+              "outlineBottom": 415.7,
+              "navigationTop": 379.2,
+              "pageScrollY": 430.5,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x480"
+            },
+            "restored844": {
+              "complete": true,
+              "coveredOrClippedPx": 0.4,
+              "clippedCharacters": 0,
+              "outlineBottom": 415.7,
+              "navigationTop": 743.2,
+              "pageScrollY": 430.5,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x844"
+            },
+            "at480Again": {
+              "complete": false,
+              "coveredOrClippedPx": 36.5,
+              "clippedCharacters": 6,
+              "outlineBottom": 415.7,
+              "navigationTop": 379.2,
+              "pageScrollY": 430.5,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x480"
+            },
+            "elementSizesUnchangedByResize": true,
+            "strip": {
+              "width": 320,
+              "height": 104.39999389648438,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 761.6333618164062
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "focusOwnerKept": true,
+            "selectionAfter": [
+              "All situations"
+            ]
+          },
+          "scenarios": {
+            "decisive-320-200": {
+              "pass": false,
+              "failures": [
+                "after 320x480: 36.499969482421875px of the outline covered, 6 characters clipped",
+                "second shrink: 36.499969482421875px covered"
+              ],
+              "height": null
+            },
+            "normal-320-100": {
+              "pass": false,
+              "failures": [
+                "after 320x443: 30.399993896484375px covered"
+              ],
+              "height": 443
+            },
+            "enlarged-390-200": {
+              "pass": false,
+              "failures": [
+                "after 390x747: 29.999984741210938px covered"
+              ],
+              "height": 747
+            },
+            "search-focus-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": 486
+            },
+            "manual-scroll-unfocused-320-100": {
+              "pass": true,
+              "failures": [],
+              "height": 443
+            },
+            "focus-moves-after-resize-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "navigate-after-resize-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "resize-burst-320-200": {
+              "pass": false,
+              "failures": [
+                "after the burst: 36.499969482421875px covered"
+              ],
+              "height": null
+            }
+          }
+        }
+      }
+    },
+    "rc2": {
+      "runnerSha256": "81d0cf0525b93729475b3747f47b3ccd1a0fa4c0c403cbf4e17b7e23c78bfc63",
+      "oracleSha256": "0e4b6bb6d1640d0076b17e70a4945b7e14c389a401433195bc6c558cf1dcfa98",
+      "buildIndexSha256": "8b0a649046637a4efaf91cb0a3a771cd356fd99cfbe5ebb599bcf7cc1abcf520",
+      "summary": {
+        "chromium": {
+          "passed": 8,
+          "total": 8
+        },
+        "firefox": {
+          "passed": 8,
+          "total": 8
+        }
+      },
+      "engines": {
+        "chromium": {
+          "decisive": {
+            "pass": true,
+            "failures": [],
+            "tabsToAllSituations": 5,
+            "before": {
+              "complete": true,
+              "coveredOrClippedPx": 0.375,
+              "clippedCharacters": 0,
+              "outlineBottom": 416.109,
+              "navigationTop": 743.219,
+              "pageScrollY": 430,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x844"
+            },
+            "at480": {
+              "complete": true,
+              "coveredOrClippedPx": 0.375,
+              "clippedCharacters": 0,
+              "outlineBottom": 379.109,
+              "navigationTop": 379.219,
+              "pageScrollY": 467,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x480"
+            },
+            "restored844": {
+              "complete": true,
+              "coveredOrClippedPx": 0.375,
+              "clippedCharacters": 0,
+              "outlineBottom": 379.109,
+              "navigationTop": 743.219,
+              "pageScrollY": 467,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x844"
+            },
+            "at480Again": {
+              "complete": true,
+              "coveredOrClippedPx": 0.375,
+              "clippedCharacters": 0,
+              "outlineBottom": 379.109,
+              "navigationTop": 379.219,
+              "pageScrollY": 467,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x480"
+            },
+            "elementSizesUnchangedByResize": true,
+            "strip": {
+              "width": 320,
+              "height": 104.375,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 750
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.375
+            },
+            "focusOwnerKept": true,
+            "selectionAfter": [
+              "All situations"
+            ]
+          },
+          "scenarios": {
+            "decisive-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "normal-320-100": {
+              "pass": true,
+              "failures": [],
+              "height": 443
+            },
+            "enlarged-390-200": {
+              "pass": true,
+              "failures": [],
+              "height": 747
+            },
+            "search-focus-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": 487
+            },
+            "manual-scroll-unfocused-320-100": {
+              "pass": true,
+              "failures": [],
+              "height": 443
+            },
+            "focus-moves-after-resize-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "navigate-after-resize-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "resize-burst-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            }
+          }
+        },
+        "firefox": {
+          "decisive": {
+            "pass": true,
+            "failures": [],
+            "tabsToAllSituations": 6,
+            "before": {
+              "complete": true,
+              "coveredOrClippedPx": 0.4,
+              "clippedCharacters": 0,
+              "outlineBottom": 415.7,
+              "navigationTop": 743.2,
+              "pageScrollY": 430.5,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x844"
+            },
+            "at480": {
+              "complete": true,
+              "coveredOrClippedPx": 0.4,
+              "clippedCharacters": 0,
+              "outlineBottom": 379.2,
+              "navigationTop": 379.2,
+              "pageScrollY": 467,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x480"
+            },
+            "restored844": {
+              "complete": true,
+              "coveredOrClippedPx": 0.4,
+              "clippedCharacters": 0,
+              "outlineBottom": 379.2,
+              "navigationTop": 743.2,
+              "pageScrollY": 467,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x844"
+            },
+            "at480Again": {
+              "complete": true,
+              "coveredOrClippedPx": 0.4,
+              "clippedCharacters": 0,
+              "outlineBottom": 379.2,
+              "navigationTop": 379.2,
+              "pageScrollY": 467,
+              "chipFontPx": 28,
+              "lines": 2,
+              "viewport": "320x480"
+            },
+            "elementSizesUnchangedByResize": true,
+            "strip": {
+              "width": 320,
+              "height": 104.39999389648438,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 761.6333618164062
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "focusOwnerKept": true,
+            "selectionAfter": [
+              "All situations"
+            ]
+          },
+          "scenarios": {
+            "decisive-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "normal-320-100": {
+              "pass": true,
+              "failures": [],
+              "height": 443
+            },
+            "enlarged-390-200": {
+              "pass": true,
+              "failures": [],
+              "height": 747
+            },
+            "search-focus-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": 486
+            },
+            "manual-scroll-unfocused-320-100": {
+              "pass": true,
+              "failures": [],
+              "height": 443
+            },
+            "focus-moves-after-resize-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "navigate-after-resize-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            },
+            "resize-burst-320-200": {
+              "pass": true,
+              "failures": [],
+              "height": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "unitTests": {
+    "rc1BeforeFix": {
+      "passed": 7,
+      "failed": 3
+    },
+    "rc2AfterFix": {
+      "passed": 10,
+      "failed": 0
+    }
+  },
+  "existingFocusedRunnerOnRc2": {
+    "chromium": {
+      "scenarios": "7/7",
+      "visibilityMeasurements": 157
+    },
+    "firefox": {
+      "scenarios": "7/7",
+      "visibilityMeasurements": 157
+    }
+  },
+  "implementationRunnerOnRc2": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "passed": 12,
+      "total": 12
+    },
+    "firefox": {
+      "version": "159.0",
+      "passed": 12,
+      "total": 12
+    }
+  },
+  "budgets": {
+    "chromium": {
+      "index": {
+        "rc1": 471079,
+        "rc2": 471095,
+        "rc2Code": 97280,
+        "rc2Fonts": 132916,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      },
+      "phrases": {
+        "rc1": 471079,
+        "rc2": 471095,
+        "rc2Code": 97280,
+        "rc2Fonts": 132916,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      },
+      "wordIndex": {
+        "rc1": 531215,
+        "rc2": 531231,
+        "rc2Code": 97280,
+        "rc2Fonts": 193052,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      },
+      "topic/small-talk": {
+        "rc1": 471079,
+        "rc2": 471095,
+        "rc2Code": 97280,
+        "rc2Fonts": 132916,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      },
+      "topic/interview-english": {
+        "rc1": 471079,
+        "rc2": 471095,
+        "rc2Code": 97280,
+        "rc2Fonts": 132916,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      }
+    },
+    "firefox": {
+      "index": {
+        "rc1": 471288,
+        "rc2": 471304,
+        "rc2Code": 97280,
+        "rc2Fonts": 132916,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      },
+      "phrases": {
+        "rc1": 471288,
+        "rc2": 471304,
+        "rc2Code": 97280,
+        "rc2Fonts": 132916,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      },
+      "wordIndex": {
+        "rc1": 531424,
+        "rc2": 531440,
+        "rc2Code": 97280,
+        "rc2Fonts": 193052,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      },
+      "topic/small-talk": {
+        "rc1": 471288,
+        "rc2": 471304,
+        "rc2Code": 97280,
+        "rc2Fonts": 132916,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      },
+      "topic/interview-english": {
+        "rc1": 471288,
+        "rc2": 471304,
+        "rc2Code": 97280,
+        "rc2Fonts": 132916,
+        "rc2Content": 240899,
+        "delta": {
+          "code": 16,
+          "fonts": 0,
+          "content": 0,
+          "other": 0,
+          "total": 16
+        }
+      }
+    }
+  },
+  "largestRc2Total": 531440,
+  "budgetLimits": {
+    "code": 102400,
+    "fonts": 204800,
+    "total": 563200
+  },
+  "commands": [
+    {
+      "name": "check",
+      "exitCode": 0,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "1795360249654 COMPLETED 266 FILES 0 ERRORS 0 WARNINGS 0 FILES_WITH_PROBLEMS"
+      ]
+    },
+    {
+      "name": "test",
+      "exitCode": 0,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "ℹ tests 15",
+        "ℹ pass 15",
+        "ℹ fail 0",
+        "Test Files  29 passed (29)",
+        "Tests  345 passed (345)"
+      ]
+    },
+    {
+      "name": "check-v1",
+      "exitCode": 0,
+      "highlights": [
+        "1795360272626 COMPLETED 189 FILES 0 ERRORS 0 WARNINGS 0 FILES_WITH_PROBLEMS"
+      ]
+    },
+    {
+      "name": "test-v1",
+      "exitCode": 0,
+      "highlights": [
+        "Test Files  3 passed (3)",
+        "Tests  68 passed (68)"
+      ]
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "✓ built in 1.55s"
+      ]
+    },
+    {
+      "name": "build-site",
+      "exitCode": 0,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "✓ built in 1.90s",
+        "✓ built in 1.17s",
+        "v2 fonts: 6 self-hosted font files, licences and FONTLOG published, no Google Fonts references, no replaced subsets.",
+        "v2 content: verified manifest and all 14 pack hashes, identities, counts and links.",
+        "site-dist check passed: both entry pages, their assets and data are in place."
+      ]
+    },
+    {
+      "name": "verify-content",
+      "exitCode": 0,
+      "highlights": [
+        "\"exactContentAndOrderMatch\": true,",
+        "\"v1Unchanged\": true"
+      ]
+    },
+    {
+      "name": "diff-check",
+      "exitCode": 0,
+      "highlights": []
+    },
+    {
+      "name": "new-files-whitespace",
+      "exitCode": 0,
+      "highlights": [
+        "139 files, 0 problems"
+      ]
+    }
+  ],
+  "artifacts": {
+    "identicalFiles": 31,
+    "of": 33,
+    "changed": [
+      "assets/index-BIsJEtZg.js",
+      "assets/index-CggR75Uk.js",
+      "index.html"
+    ]
+  }
+}

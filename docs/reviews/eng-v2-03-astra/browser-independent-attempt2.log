@@ -1,0 +1,30 @@
+chromium same-name-topic-and-persistence AssertionError [ERR_ASSERTION]: The input did not match the regular expression /1 learning/. Input:
+
+'1 remaining 18 learned Card 1 of 1'
+
+    at file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:142:14
+    at async scenario (file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:105:71)
+    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:110:3
+chromium routing-chips-language-and-rows AssertionError [ERR_ASSERTION]: {"text":"Before a work meeting","visible":true,"left":282.84375,"right":444.34375,"bottom":358.78125,"limit":779,"width":390,"outline":"solid"}
+    at file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:200:40
+    at async scenario (file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:105:71)
+    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:191:3
+chromium malformed-pack-retry-and-loading PASS
+chromium learn-pass-filter-independence PASS
+chromium ordinary-dialog-paths-baseline PASS
+chromium ordinary-dialog-paths-candidate PASS
+firefox same-name-topic-and-persistence AssertionError [ERR_ASSERTION]: The input did not match the regular expression /1 learning/. Input:
+
+'1 remaining 18 learned Card 1 of 1'
+
+    at file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:142:14
+    at async scenario (file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:105:71)
+    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:110:3
+firefox routing-chips-language-and-rows AssertionError [ERR_ASSERTION]: {"text":"Before a work meeting","visible":true,"left":282.816650390625,"right":444.2666473388672,"bottom":358.79998779296875,"limit":779,"width":390,"outline":"solid"}
+    at file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:200:40
+    at async scenario (file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:105:71)
+    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:191:3
+firefox malformed-pack-retry-and-loading PASS
+firefox learn-pass-filter-independence PASS
+firefox ordinary-dialog-paths-baseline PASS
+firefox ordinary-dialog-paths-candidate PASS

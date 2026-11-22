@@ -56,7 +56,7 @@ describe('built-in pack loading', () => {
       await expect(loadBuiltInCatalog()).rejects.toThrow();
       vi.stubGlobal('fetch', vi.fn(createContentFetch()));
       const catalog = await loadBuiltInCatalog();
-      expect(catalog.phrases).toHaveLength(566);
+      expect(catalog.phrases).toHaveLength(realMaterials.phrases.length);
       expect(fetch).toHaveBeenCalledTimes(manifest.packs.length + 1);
     }
   );

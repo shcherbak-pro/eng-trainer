@@ -1,0 +1,3026 @@
+{
+  "definition": "Fresh non-persistent native contexts per scenario; synthetic data; requests to other hosts refused; speech synthesis and clipboard replaced inside the page. No owner profile.",
+  "base": "http://127.0.0.1:4183/eng-trainer/",
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "scenarios": {
+        "routes-phone": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 6334,
+          "log": [],
+          "data": {
+            "pages": {
+              "index": {
+                "h1": "Home",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": true,
+                "firstContentTop": 107,
+                "firstTopicCardTop": 639,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "phrases": {
+                "h1": "Phrases",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 203,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "wordIndex": {
+                "h1": "Words",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 203,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "irregularVerbs": {
+                "h1": "Verbs",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 255,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "patterns": {
+                "h1": "Patterns",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 188,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "answers": {
+                "h1": "Answers",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 164,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "flashcards": {
+                "h1": "Flashcards",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 247,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "reverse": {
+                "h1": "Reverse practice",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 163,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "practice": {
+                "h1": "Speaking prompts",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 99,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "favorites": {
+                "h1": "Focus list",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "collections": {
+                "h1": "Collections",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "settings": {
+                "h1": "Settings",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/conditionals": {
+                "h1": "Conditionals",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 319,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/small-talk": {
+                "h1": "Small Talk",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 441,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/interview-english": {
+                "h1": "Interview English",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 430,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              }
+            },
+            "firstStudyContent": {
+              "phrases": 203,
+              "wordIndex": 203,
+              "irregularVerbs": 255,
+              "patterns": 188,
+              "answers": 164,
+              "flashcards": 247,
+              "reverse": 163,
+              "practice": 99,
+              "favorites": 107,
+              "collections": 107,
+              "topic/conditionals": 319,
+              "topic/small-talk": 441,
+              "topic/interview-english": 430
+            }
+          }
+        },
+        "routes-narrow": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 5789,
+          "log": [],
+          "data": {
+            "pages": {
+              "index": {
+                "h1": "Home",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": true,
+                "firstContentTop": 107,
+                "firstTopicCardTop": 659,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "phrases": {
+                "h1": "Phrases",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 283,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "wordIndex": {
+                "h1": "Words",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 283,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "irregularVerbs": {
+                "h1": "Verbs",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 283,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "patterns": {
+                "h1": "Patterns",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 188,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "answers": {
+                "h1": "Answers",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 164,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "flashcards": {
+                "h1": "Flashcards",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 299,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "reverse": {
+                "h1": "Reverse practice",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 163,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "practice": {
+                "h1": "Speaking prompts",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 99,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "favorites": {
+                "h1": "Focus list",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "collections": {
+                "h1": "Collections",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "settings": {
+                "h1": "Settings",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/conditionals": {
+                "h1": "Conditionals",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 347,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/small-talk": {
+                "h1": "Small Talk",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 512,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/interview-english": {
+                "h1": "Interview English",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 477,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              }
+            },
+            "firstStudyContent": {
+              "phrases": 283,
+              "wordIndex": 283,
+              "irregularVerbs": 283,
+              "patterns": 188,
+              "answers": 164,
+              "flashcards": 299,
+              "reverse": 163,
+              "practice": 99,
+              "favorites": 107,
+              "collections": 107,
+              "topic/conditionals": 347,
+              "topic/small-talk": 512,
+              "topic/interview-english": 477
+            }
+          }
+        },
+        "routes-desktop": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 7050,
+          "log": [],
+          "data": {
+            "pages": {
+              "index": {
+                "h1": "Home",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": true,
+                "firstContentTop": 68,
+                "firstTopicCardTop": 381,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "phrases": {
+                "h1": "Phrases",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 192,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "wordIndex": {
+                "h1": "Words",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 192,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "irregularVerbs": {
+                "h1": "Verbs",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 244,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "patterns": {
+                "h1": "Patterns",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 121,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "answers": {
+                "h1": "Answers",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 121,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "flashcards": {
+                "h1": "Flashcards",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 240,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "reverse": {
+                "h1": "Reverse practice",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 120,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "practice": {
+                "h1": "Speaking prompts",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 80,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "favorites": {
+                "h1": "Focus list",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 68,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "collections": {
+                "h1": "Collections",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 68,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "settings": {
+                "h1": "Settings",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 68,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/conditionals": {
+                "h1": "Conditionals",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 260,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/small-talk": {
+                "h1": "Small Talk",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 454,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/interview-english": {
+                "h1": "Interview English",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 351,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              }
+            },
+            "firstStudyContent": {
+              "phrases": 192,
+              "wordIndex": 192,
+              "irregularVerbs": 244,
+              "patterns": 121,
+              "answers": 121,
+              "flashcards": 240,
+              "reverse": 120,
+              "practice": 80,
+              "favorites": 68,
+              "collections": 68,
+              "topic/conditionals": 260,
+              "topic/small-talk": 454,
+              "topic/interview-english": 351
+            }
+          }
+        },
+        "topic-conditionals": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 2394,
+          "log": [],
+          "data": {
+            "focusOnHeading": true,
+            "outline": [
+              "H2:Zero Conditional",
+              "H2:First Conditional",
+              "H2:Second Conditional",
+              "H2:Third Conditional",
+              "H2:Mixed Conditionals",
+              "H3:Past condition, present result",
+              "H3:General condition, past result",
+              "H2:Usage note"
+            ],
+            "rows": 18,
+            "finalSample": "If I weren't afraid of flying, I would have traveled to the conference last month.",
+            "rule": "Pattern: If + present simple, present simple. Use: General truths, repeated results and habits.",
+            "spoken": [
+              {
+                "text": "If I skip breakfast, I feel hungry before lunch.",
+                "lang": "en-US"
+              },
+              {
+                "text": "Якщо я пропускаю сніданок, то відчуваю голод ще до обіду.",
+                "lang": "uk-UA"
+              }
+            ],
+            "afterReload": 1,
+            "deck": {
+              "topic": "Conditionals",
+              "total": "18",
+              "learned": "1"
+            }
+          }
+        },
+        "topic-small-talk": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 2861,
+          "log": [],
+          "data": {
+            "chips": [
+              [
+                "All situations",
+                "true"
+              ],
+              [
+                "Meeting new people",
+                "false"
+              ],
+              [
+                "Before a work meeting",
+                "false"
+              ],
+              [
+                "Coffee and lunch breaks",
+                "false"
+              ],
+              [
+                "Free time and weekends",
+                "false"
+              ],
+              [
+                "Conferences and events",
+                "false"
+              ],
+              [
+                "Traveling",
+                "false"
+              ]
+            ],
+            "group": [
+              "group",
+              "Situations"
+            ],
+            "chipFocusVisible": true,
+            "travel": [
+              "Are you traveling for work or for a vacation?",
+              "Have you been here before?",
+              "How was your journey?",
+              "How long are you staying?",
+              "Have you had a chance to explore the city?",
+              "I hope you enjoy the rest of your trip."
+            ],
+            "combined": [
+              "Have you been here before?",
+              "Have you had a chance to explore the city?"
+            ],
+            "kept": 2,
+            "all": 36,
+            "afterReload": 36
+          }
+        },
+        "topic-interview": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 1058,
+          "log": [],
+          "data": {
+            "sections": 6,
+            "subheadings": [
+              "Typical questions / Answer structure / Answer frames / Model answer / Translation"
+            ],
+            "lastTitle": "Describing experience and solving problems",
+            "lastFrame": "As a result, [outcome]. What I learned was [lesson].",
+            "labels": [
+              "Hypothetical server-backed application",
+              "Fictional practice example"
+            ],
+            "note": "Model answers are examples, not statements about your experience. Replace details with information that is true for you.",
+            "hint": "Replace the text in brackets with your own details.",
+            "spoken": {
+              "text": "In a practice project, a form showed the wrong error message after validation failed. I was responsible for finding the cause. I reproduced the problem, traced it to an incorrect condition, and added a regression test before fixing it. The test passed, and the correct message appeared for the case we had reproduced. I learned how useful a small, repeatable example can be.",
+              "lang": "en-US"
+            }
+          }
+        },
+        "search-and-focus": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 2248,
+          "log": [],
+          "data": {
+            "Shall we get started?": [
+              "Shall we get started?"
+            ],
+            "Почнемо?": [
+              "Shall we get started?"
+            ],
+            "If I had known about the meeting": [
+              "If I had known about the meeting, I would have joined it."
+            ],
+            "focus": [
+              "If I had known about the meeting, I would have joined it."
+            ],
+            "home": {
+              "vocabulary": "0 / 638 0%",
+              "progressbar": {
+                "now": "0",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 34",
+              "inFocus": "1",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "0 / 638",
+              "remaining": "638",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            }
+          }
+        },
+        "home-counts": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 3719,
+          "log": [],
+          "data": {
+            "start": {
+              "vocabulary": "0 / 638 0%",
+              "progressbar": {
+                "now": "0",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "0 / 638",
+              "remaining": "638",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "completed": {
+              "vocabulary": "18 / 638 2%",
+              "progressbar": {
+                "now": "18",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "1 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "18 / 638",
+              "remaining": "620",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "18 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "details": {
+              "vocabulary": "18 / 638 2%",
+              "progressbar": {
+                "now": "18",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "1 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "18 / 638",
+              "remaining": "620",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "18 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "afterReload": {
+              "vocabulary": "18 / 638 2%",
+              "progressbar": {
+                "now": "18",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "1 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "18 / 638",
+              "remaining": "620",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "18 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "storedKeys": {
+              "flashcardSessions": [],
+              "learnPasses": [],
+              "progress": [
+                "learnedPhrases"
+              ],
+              "settings": [
+                "activePage"
+              ],
+              "userCollections": [],
+              "userEntries": []
+            }
+          }
+        },
+        "import-remove-reimport": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 4281,
+          "log": [],
+          "data": {
+            "imported": {
+              "vocabulary": "1 / 640 <1%",
+              "progressbar": {
+                "now": "1",
+                "max": "640",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 35",
+              "inFocus": "0",
+              "wordsLearned": "0 / 567",
+              "phrasesLearned": "1 / 639",
+              "remaining": "639",
+              "words": "567",
+              "phrases": "639",
+              "verbs": "339",
+              "topics": "35",
+              "collections": "1",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "canceled": {
+              "vocabulary": "1 / 640 <1%",
+              "progressbar": {
+                "now": "1",
+                "max": "640",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 35",
+              "inFocus": "0",
+              "wordsLearned": "0 / 567",
+              "phrasesLearned": "1 / 639",
+              "remaining": "639",
+              "words": "567",
+              "phrases": "639",
+              "verbs": "339",
+              "topics": "35",
+              "collections": "1",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "removed": {
+              "vocabulary": "0 / 638 0%",
+              "progressbar": {
+                "now": "0",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "0 / 638",
+              "remaining": "638",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "retained": [
+              "user:00000000-0000-4000-8000-0000000000e3:entry:00000000-0000-4000-8000-000000000002"
+            ],
+            "reimported": {
+              "vocabulary": "1 / 640 <1%",
+              "progressbar": {
+                "now": "1",
+                "max": "640",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 35",
+              "inFocus": "0",
+              "wordsLearned": "0 / 567",
+              "phrasesLearned": "1 / 639",
+              "remaining": "639",
+              "words": "567",
+              "phrases": "639",
+              "verbs": "339",
+              "topics": "35",
+              "collections": "1",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            }
+          }
+        },
+        "keyboard": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 1399,
+          "log": [],
+          "data": {
+            "order": [
+              {
+                "text": "Skip to content",
+                "cls": "skip-link",
+                "bottom": 48,
+                "tabTop": 779
+              },
+              {
+                "text": "Eng Trainer, Home",
+                "cls": "app-header__brand",
+                "bottom": 45,
+                "tabTop": 779
+              },
+              {
+                "text": "Practice this topic",
+                "cls": "btn btn--primary btn--md ",
+                "bottom": 242.78125,
+                "tabTop": 779
+              },
+              {
+                "text": "",
+                "cls": "",
+                "bottom": 304.78125,
+                "tabTop": 779
+              }
+            ],
+            "afterBrand": {
+              "hash": "#index",
+              "focusOnHeading": true
+            }
+          }
+        },
+        "enlarged-text": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 2235,
+          "log": [],
+          "data": {
+            "index": {
+              "header": 86,
+              "clipped": false,
+              "overflow": 0
+            },
+            "topic/small-talk": {
+              "header": 86,
+              "clipped": false,
+              "overflow": 0
+            },
+            "irregularVerbs": {
+              "header": 86,
+              "clipped": false,
+              "overflow": 0
+            }
+          }
+        },
+        "startup-and-v1": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 1414,
+          "log": [
+            {
+              "scenario": "startup-and-v1",
+              "type": "console",
+              "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+            },
+            {
+              "scenario": "startup-and-v1",
+              "type": "console",
+              "text": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+            }
+          ],
+          "data": {
+            "error": {
+              "header": "Eng Trainer Practice English at your pace",
+              "link": false,
+              "h1": "The study material could not be loaded"
+            },
+            "v1": {
+              "title": "English Assessment Trainer",
+              "v2Header": false,
+              "v1Brand": true,
+              "text": "EA English Assessment Trainer ShcherbakPro · B1+ → B2 Index Phrases Words Flashcards Reverse Verbs Patterns Answers Prac"
+            },
+            "v1Databases": [
+              "eng-trainer-v2"
+            ]
+          }
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "scenarios": {
+        "routes-phone": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 8618,
+          "log": [],
+          "data": {
+            "pages": {
+              "index": {
+                "h1": "Home",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": true,
+                "firstContentTop": 107,
+                "firstTopicCardTop": 639,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "phrases": {
+                "h1": "Phrases",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 203,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "wordIndex": {
+                "h1": "Words",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 203,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "irregularVerbs": {
+                "h1": "Verbs",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 255,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "patterns": {
+                "h1": "Patterns",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 188,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "answers": {
+                "h1": "Answers",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 164,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "flashcards": {
+                "h1": "Flashcards",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 247,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "reverse": {
+                "h1": "Reverse practice",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 163,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "practice": {
+                "h1": "Speaking prompts",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 99,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "favorites": {
+                "h1": "Focus list",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "collections": {
+                "h1": "Collections",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "settings": {
+                "h1": "Settings",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/conditionals": {
+                "h1": "Conditionals",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 319,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/small-talk": {
+                "h1": "Small Talk",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 441,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/interview-english": {
+                "h1": "Interview English",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 430,
+                "firstTopicCardTop": null,
+                "tabBarTop": 779,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              }
+            },
+            "firstStudyContent": {
+              "phrases": 203,
+              "wordIndex": 203,
+              "irregularVerbs": 255,
+              "patterns": 188,
+              "answers": 164,
+              "flashcards": 247,
+              "reverse": 163,
+              "practice": 99,
+              "favorites": 107,
+              "collections": 107,
+              "topic/conditionals": 319,
+              "topic/small-talk": 441,
+              "topic/interview-english": 430
+            }
+          }
+        },
+        "routes-narrow": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 6795,
+          "log": [],
+          "data": {
+            "pages": {
+              "index": {
+                "h1": "Home",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": true,
+                "firstContentTop": 107,
+                "firstTopicCardTop": 659,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "phrases": {
+                "h1": "Phrases",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 283,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "wordIndex": {
+                "h1": "Words",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 283,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "irregularVerbs": {
+                "h1": "Verbs",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 283,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "patterns": {
+                "h1": "Patterns",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 188,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "answers": {
+                "h1": "Answers",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 164,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "flashcards": {
+                "h1": "Flashcards",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 299,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "reverse": {
+                "h1": "Reverse practice",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 163,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "practice": {
+                "h1": "Speaking prompts",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 99,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "favorites": {
+                "h1": "Focus list",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "collections": {
+                "h1": "Collections",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "settings": {
+                "h1": "Settings",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 107,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/conditionals": {
+                "h1": "Conditionals",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 347,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/small-talk": {
+                "h1": "Small Talk",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 512,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/interview-english": {
+                "h1": "Interview English",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 47,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 477,
+                "firstTopicCardTop": null,
+                "tabBarTop": 575,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              }
+            },
+            "firstStudyContent": {
+              "phrases": 283,
+              "wordIndex": 283,
+              "irregularVerbs": 283,
+              "patterns": 188,
+              "answers": 164,
+              "flashcards": 299,
+              "reverse": 163,
+              "practice": 99,
+              "favorites": 107,
+              "collections": 107,
+              "topic/conditionals": 347,
+              "topic/small-talk": 512,
+              "topic/interview-english": 477
+            }
+          }
+        },
+        "routes-desktop": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 8114,
+          "log": [],
+          "data": {
+            "pages": {
+              "index": {
+                "h1": "Home",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": true,
+                "firstContentTop": 68,
+                "firstTopicCardTop": 381,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "phrases": {
+                "h1": "Phrases",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 192,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "wordIndex": {
+                "h1": "Words",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 192,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "irregularVerbs": {
+                "h1": "Verbs",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 244,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "patterns": {
+                "h1": "Patterns",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 121,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "answers": {
+                "h1": "Answers",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 121,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "flashcards": {
+                "h1": "Flashcards",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 240,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "reverse": {
+                "h1": "Reverse practice",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 120,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "practice": {
+                "h1": "Speaking prompts",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 80,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "favorites": {
+                "h1": "Focus list",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 68,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "collections": {
+                "h1": "Collections",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 68,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "settings": {
+                "h1": "Settings",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 68,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/conditionals": {
+                "h1": "Conditionals",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 260,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/small-talk": {
+                "h1": "Small Talk",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 454,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              },
+              "topic/interview-english": {
+                "h1": "Interview English",
+                "h1Count": 1,
+                "h1InsideMain": true,
+                "header": {
+                  "height": 91.6,
+                  "top": 0,
+                  "text": "Eng Trainer, Home Practice English at your pace",
+                  "insideMain": false,
+                  "link": "/eng-trainer/#index",
+                  "digits": false
+                },
+                "statistics": false,
+                "firstContentTop": 351,
+                "firstTopicCardTop": null,
+                "tabBarTop": 900,
+                "horizontalOverflow": 0,
+                "unmarkedCyrillic": [],
+                "skipLinkFirst": true,
+                "smallTargets": []
+              }
+            },
+            "firstStudyContent": {
+              "phrases": 192,
+              "wordIndex": 192,
+              "irregularVerbs": 244,
+              "patterns": 121,
+              "answers": 121,
+              "flashcards": 240,
+              "reverse": 120,
+              "practice": 80,
+              "favorites": 68,
+              "collections": 68,
+              "topic/conditionals": 260,
+              "topic/small-talk": 454,
+              "topic/interview-english": 351
+            }
+          }
+        },
+        "topic-conditionals": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 3243,
+          "log": [],
+          "data": {
+            "focusOnHeading": true,
+            "outline": [
+              "H2:Zero Conditional",
+              "H2:First Conditional",
+              "H2:Second Conditional",
+              "H2:Third Conditional",
+              "H2:Mixed Conditionals",
+              "H3:Past condition, present result",
+              "H3:General condition, past result",
+              "H2:Usage note"
+            ],
+            "rows": 18,
+            "finalSample": "If I weren't afraid of flying, I would have traveled to the conference last month.",
+            "rule": "Pattern: If + present simple, present simple. Use: General truths, repeated results and habits.",
+            "spoken": [
+              {
+                "text": "If I skip breakfast, I feel hungry before lunch.",
+                "lang": "en-US"
+              },
+              {
+                "text": "Якщо я пропускаю сніданок, то відчуваю голод ще до обіду.",
+                "lang": "uk-UA"
+              }
+            ],
+            "afterReload": 1,
+            "deck": {
+              "topic": "Conditionals",
+              "total": "18",
+              "learned": "1"
+            }
+          }
+        },
+        "topic-small-talk": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 3217,
+          "log": [],
+          "data": {
+            "chips": [
+              [
+                "All situations",
+                "true"
+              ],
+              [
+                "Meeting new people",
+                "false"
+              ],
+              [
+                "Before a work meeting",
+                "false"
+              ],
+              [
+                "Coffee and lunch breaks",
+                "false"
+              ],
+              [
+                "Free time and weekends",
+                "false"
+              ],
+              [
+                "Conferences and events",
+                "false"
+              ],
+              [
+                "Traveling",
+                "false"
+              ]
+            ],
+            "group": [
+              "group",
+              "Situations"
+            ],
+            "chipFocusVisible": true,
+            "travel": [
+              "Are you traveling for work or for a vacation?",
+              "Have you been here before?",
+              "How was your journey?",
+              "How long are you staying?",
+              "Have you had a chance to explore the city?",
+              "I hope you enjoy the rest of your trip."
+            ],
+            "combined": [
+              "Have you been here before?",
+              "Have you had a chance to explore the city?"
+            ],
+            "kept": 2,
+            "all": 36,
+            "afterReload": 36
+          }
+        },
+        "topic-interview": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 1582,
+          "log": [],
+          "data": {
+            "sections": 6,
+            "subheadings": [
+              "Typical questions / Answer structure / Answer frames / Model answer / Translation"
+            ],
+            "lastTitle": "Describing experience and solving problems",
+            "lastFrame": "As a result, [outcome]. What I learned was [lesson].",
+            "labels": [
+              "Hypothetical server-backed application",
+              "Fictional practice example"
+            ],
+            "note": "Model answers are examples, not statements about your experience. Replace details with information that is true for you.",
+            "hint": "Replace the text in brackets with your own details.",
+            "spoken": {
+              "text": "In a practice project, a form showed the wrong error message after validation failed. I was responsible for finding the cause. I reproduced the problem, traced it to an incorrect condition, and added a regression test before fixing it. The test passed, and the correct message appeared for the case we had reproduced. I learned how useful a small, repeatable example can be.",
+              "lang": "en-US"
+            }
+          }
+        },
+        "search-and-focus": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 3107,
+          "log": [],
+          "data": {
+            "Shall we get started?": [
+              "Shall we get started?"
+            ],
+            "Почнемо?": [
+              "Shall we get started?"
+            ],
+            "If I had known about the meeting": [
+              "If I had known about the meeting, I would have joined it."
+            ],
+            "focus": [
+              "If I had known about the meeting, I would have joined it."
+            ],
+            "home": {
+              "vocabulary": "0 / 638 0%",
+              "progressbar": {
+                "now": "0",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 34",
+              "inFocus": "1",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "0 / 638",
+              "remaining": "638",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            }
+          }
+        },
+        "home-counts": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 4553,
+          "log": [],
+          "data": {
+            "start": {
+              "vocabulary": "0 / 638 0%",
+              "progressbar": {
+                "now": "0",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "0 / 638",
+              "remaining": "638",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "completed": {
+              "vocabulary": "18 / 638 2%",
+              "progressbar": {
+                "now": "18",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "1 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "18 / 638",
+              "remaining": "620",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "18 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "details": {
+              "vocabulary": "18 / 638 2%",
+              "progressbar": {
+                "now": "18",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "1 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "18 / 638",
+              "remaining": "620",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "18 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "afterReload": {
+              "vocabulary": "18 / 638 2%",
+              "progressbar": {
+                "now": "18",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "1 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "18 / 638",
+              "remaining": "620",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "18 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "storedKeys": {
+              "flashcardSessions": [],
+              "learnPasses": [],
+              "progress": [
+                "learnedPhrases"
+              ],
+              "settings": [
+                "activePage"
+              ],
+              "userCollections": [],
+              "userEntries": []
+            }
+          }
+        },
+        "import-remove-reimport": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 5509,
+          "log": [],
+          "data": {
+            "imported": {
+              "vocabulary": "1 / 640 <1%",
+              "progressbar": {
+                "now": "1",
+                "max": "640",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 35",
+              "inFocus": "0",
+              "wordsLearned": "0 / 567",
+              "phrasesLearned": "1 / 639",
+              "remaining": "639",
+              "words": "567",
+              "phrases": "639",
+              "verbs": "339",
+              "topics": "35",
+              "collections": "1",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "canceled": {
+              "vocabulary": "1 / 640 <1%",
+              "progressbar": {
+                "now": "1",
+                "max": "640",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 35",
+              "inFocus": "0",
+              "wordsLearned": "0 / 567",
+              "phrasesLearned": "1 / 639",
+              "remaining": "639",
+              "words": "567",
+              "phrases": "639",
+              "verbs": "339",
+              "topics": "35",
+              "collections": "1",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "removed": {
+              "vocabulary": "0 / 638 0%",
+              "progressbar": {
+                "now": "0",
+                "max": "638",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 34",
+              "inFocus": "0",
+              "wordsLearned": "0 / 566",
+              "phrasesLearned": "0 / 638",
+              "remaining": "638",
+              "words": "566",
+              "phrases": "638",
+              "verbs": "339",
+              "topics": "34",
+              "collections": "0",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            },
+            "retained": [
+              "user:00000000-0000-4000-8000-0000000000e3:entry:00000000-0000-4000-8000-000000000002"
+            ],
+            "reimported": {
+              "vocabulary": "1 / 640 <1%",
+              "progressbar": {
+                "now": "1",
+                "max": "640",
+                "name": "Vocabulary learned"
+              },
+              "topicsCompleted": "0 / 35",
+              "inFocus": "0",
+              "wordsLearned": "0 / 567",
+              "phrasesLearned": "1 / 639",
+              "remaining": "639",
+              "words": "567",
+              "phrases": "639",
+              "verbs": "339",
+              "topics": "35",
+              "collections": "1",
+              "cards": [
+                "0 of 18 practice cards learned",
+                "0 of 36 practice cards learned",
+                "0 of 18 practice cards learned"
+              ]
+            }
+          }
+        },
+        "keyboard": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 3031,
+          "log": [],
+          "data": {
+            "order": [
+              {
+                "text": "Skip to content",
+                "cls": "skip-link",
+                "bottom": 48,
+                "tabTop": 779
+              },
+              {
+                "text": "Eng Trainer, Home",
+                "cls": "app-header__brand",
+                "bottom": 45,
+                "tabTop": 779
+              },
+              {
+                "text": "Practice this topic",
+                "cls": "btn btn--primary btn--md ",
+                "bottom": 242.8000030517578,
+                "tabTop": 779
+              },
+              {
+                "text": "",
+                "cls": "",
+                "bottom": 304.79998779296875,
+                "tabTop": 779
+              }
+            ],
+            "afterBrand": {
+              "hash": "#index",
+              "focusOnHeading": true
+            }
+          }
+        },
+        "enlarged-text": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 2547,
+          "log": [],
+          "data": {
+            "index": {
+              "header": 86,
+              "clipped": false,
+              "overflow": 0
+            },
+            "topic/small-talk": {
+              "header": 86,
+              "clipped": false,
+              "overflow": 0
+            },
+            "irregularVerbs": {
+              "header": 86,
+              "clipped": false,
+              "overflow": 0
+            }
+          }
+        },
+        "startup-and-v1": {
+          "pass": true,
+          "failures": [],
+          "error": null,
+          "ms": 1661,
+          "log": [],
+          "data": {
+            "error": {
+              "header": "Eng Trainer Practice English at your pace",
+              "link": false,
+              "h1": "The study material could not be loaded"
+            },
+            "v1": {
+              "title": "English Assessment Trainer",
+              "v2Header": false,
+              "v1Brand": true,
+              "text": "EA English Assessment Trainer ShcherbakPro · B1+ → B2 Index Phrases Words Flashcards Reverse Verbs Patterns Answers Prac"
+            },
+            "v1Databases": [
+              "eng-trainer-v2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "finishedAt": "2026-11-22T11:12:08.142Z",
+  "summary": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "passed": 12,
+      "total": 12
+    },
+    "firefox": {
+      "version": "159.0",
+      "passed": 12,
+      "total": 12
+    }
+  }
+}

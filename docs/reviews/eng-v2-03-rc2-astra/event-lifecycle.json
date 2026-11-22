@@ -1,0 +1,727 @@
+{
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "checks": [
+        {
+          "label": "Mount 0: exactly one additional active resize handler",
+          "passed": true
+        },
+        {
+          "label": "Unmount 0: original resize-listener set restored",
+          "passed": true
+        },
+        {
+          "label": "Mount 1: exactly one additional active resize handler",
+          "passed": true
+        },
+        {
+          "label": "Unmount 1: original resize-listener set restored",
+          "passed": true
+        },
+        {
+          "label": "Mount 2: exactly one additional active resize handler",
+          "passed": true
+        },
+        {
+          "label": "Unmount 2: original resize-listener set restored",
+          "passed": true
+        },
+        {
+          "label": "Manual-scroll setup with selected unfocused chip",
+          "passed": true
+        },
+        {
+          "label": "Native resize leaves Search focus, selection and manually scrolled strip unchanged",
+          "passed": true
+        },
+        {
+          "label": "Former-owner diagnostic delivered actually canceled work",
+          "passed": true
+        },
+        {
+          "label": "Former owner neither measured nor revealed after focus leaves",
+          "passed": true
+        },
+        {
+          "label": "Unmount diagnostic delivered canceled resize work",
+          "passed": true
+        },
+        {
+          "label": "No late scroll/focus/detached reads or active handler after destruction",
+          "passed": true
+        },
+        {
+          "label": "Native resize burst leaves full focused label and outline accessible",
+          "passed": true
+        },
+        {
+          "label": "No continuing movement after final native layout settles",
+          "passed": true
+        },
+        {
+          "label": "Only one action listener after repeated topic visits",
+          "passed": true
+        },
+        {
+          "label": "Twenty same-frame resize events coalesce into one live callback",
+          "passed": true
+        },
+        {
+          "label": "Already visible focus does not cause an unnecessary page jump",
+          "passed": true
+        },
+        {
+          "label": "Final unmount restores listener baseline",
+          "passed": true
+        },
+        {
+          "label": "No uncaught errors or unhandled rejections",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "cases": {
+        "listenerCycles": [
+          {
+            "mounted": [
+              1
+            ],
+            "unmounted": []
+          },
+          {
+            "mounted": [
+              2
+            ],
+            "unmounted": []
+          },
+          {
+            "mounted": [
+              3
+            ],
+            "unmounted": []
+          }
+        ],
+        "outsideSelectedManual": {
+          "before": {
+            "left": 281,
+            "y": 0,
+            "focus": {
+              "tag": "INPUT",
+              "type": "search",
+              "text": ""
+            },
+            "selected": "Traveling"
+          },
+          "after": {
+            "left": 281,
+            "y": 0,
+            "focus": {
+              "tag": "INPUT",
+              "type": "search",
+              "text": ""
+            },
+            "selected": "Traveling"
+          },
+          "resizeHandlerCalls": 1
+        },
+        "formerOwner": {
+          "before": {
+            "left": 41,
+            "y": 9,
+            "focus": {
+              "tag": "INPUT",
+              "type": "search",
+              "text": ""
+            },
+            "selected": "Traveling"
+          },
+          "after": {
+            "left": 41,
+            "y": 9,
+            "focus": {
+              "tag": "INPUT",
+              "type": "search",
+              "text": ""
+            },
+            "selected": "Traveling"
+          },
+          "delivery": {
+            "delivered": 4,
+            "live": 0,
+            "canceled": 4
+          },
+          "reads": 0
+        },
+        "unmount": {
+          "before": {
+            "left": null,
+            "y": 0,
+            "focus": {
+              "tag": "H1",
+              "type": null,
+              "text": "Home"
+            },
+            "selected": null
+          },
+          "after": {
+            "left": null,
+            "y": 0,
+            "focus": {
+              "tag": "H1",
+              "type": null,
+              "text": "Home"
+            },
+            "selected": null
+          },
+          "delivery": {
+            "delivered": 1,
+            "live": 0,
+            "canceled": 1
+          },
+          "beforeListeners": [],
+          "afterListeners": [],
+          "oldConnected": false,
+          "detachedReads": 0
+        },
+        "nativeBurst": {
+          "settled": {
+            "left": 750,
+            "y": 467,
+            "focus": {
+              "tag": "BUTTON",
+              "type": "button",
+              "text": "Coffee and lunch breaks"
+            },
+            "selected": "Traveling"
+          },
+          "later": {
+            "left": 750,
+            "y": 467,
+            "focus": {
+              "tag": "BUTTON",
+              "type": "button",
+              "text": "Coffee and lunch breaks"
+            },
+            "selected": "Traveling"
+          },
+          "geometry": {
+            "label": "Coffee and lunch breaks",
+            "connected": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "box": {
+              "left": 27.65625,
+              "top": 278.734375,
+              "right": 315.65625,
+              "bottom": 375.109375,
+              "width": 288,
+              "height": 96.375
+            },
+            "outlineWidth": 2,
+            "outlineOffset": 2,
+            "footprint": {
+              "left": 23.65625,
+              "right": 319.65625,
+              "top": 274.734375,
+              "bottom": 379.109375
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.734375,
+              "right": 320,
+              "bottom": 378.734375
+            },
+            "ancestors": [
+              {
+                "tag": "DIV",
+                "className": "chip-row",
+                "overflowX": "auto",
+                "overflowY": "auto",
+                "bounds": {
+                  "left": 0,
+                  "right": 320,
+                  "top": 274.734375,
+                  "bottom": 378.734375
+                }
+              }
+            ],
+            "lines": [
+              {
+                "left": 70.984375,
+                "top": 286.734375,
+                "right": 272.328125,
+                "bottom": 326.734375,
+                "width": 201.34375,
+                "height": 40
+              },
+              {
+                "left": 131.1875,
+                "top": 325.921875,
+                "right": 212.109375,
+                "bottom": 365.921875,
+                "width": 80.921875,
+                "height": 40
+              }
+            ],
+            "paintedOverflow": 0.375,
+            "characterCount": 20,
+            "clippedCharacters": [],
+            "complete": true,
+            "fontSize": 28,
+            "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+            "lineCount": 2,
+            "unwrappedTextWidth": 287.83990478515625,
+            "whiteSpace": "normal",
+            "textOverflow": "clip",
+            "stripClientWidth": 320,
+            "stripScrollWidth": 1819,
+            "stripLeft": 750,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.21875,
+            "pageOverflow": 0
+          },
+          "scrolls": [
+            {
+              "before": 430,
+              "after": 467,
+              "args": [
+                {
+                  "top": 36.890625,
+                  "behavior": "instant"
+                }
+              ],
+              "focused": "Coffee and lunch breaks"
+            }
+          ],
+          "scrollCountAfterSettle": 1,
+          "scrollCountOneSecondLater": 1
+        },
+        "sameFrameBurst": {
+          "liveBeforeDelivery": 1,
+          "delivery": {
+            "delivered": 1,
+            "live": 1,
+            "canceled": 19
+          },
+          "scrollCountAfter": 1
+        }
+      },
+      "listenerRecords": [
+        {
+          "id": 1,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 2,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 3,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 4,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 5
+        },
+        {
+          "id": 5,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 23
+        }
+      ],
+      "passed": true
+    },
+    "firefox": {
+      "version": "159.0",
+      "checks": [
+        {
+          "label": "Mount 0: exactly one additional active resize handler",
+          "passed": true
+        },
+        {
+          "label": "Unmount 0: original resize-listener set restored",
+          "passed": true
+        },
+        {
+          "label": "Mount 1: exactly one additional active resize handler",
+          "passed": true
+        },
+        {
+          "label": "Unmount 1: original resize-listener set restored",
+          "passed": true
+        },
+        {
+          "label": "Mount 2: exactly one additional active resize handler",
+          "passed": true
+        },
+        {
+          "label": "Unmount 2: original resize-listener set restored",
+          "passed": true
+        },
+        {
+          "label": "Manual-scroll setup with selected unfocused chip",
+          "passed": true
+        },
+        {
+          "label": "Native resize leaves Search focus, selection and manually scrolled strip unchanged",
+          "passed": true
+        },
+        {
+          "label": "Former-owner diagnostic delivered actually canceled work",
+          "passed": true
+        },
+        {
+          "label": "Former owner neither measured nor revealed after focus leaves",
+          "passed": true
+        },
+        {
+          "label": "Unmount diagnostic delivered canceled resize work",
+          "passed": true
+        },
+        {
+          "label": "No late scroll/focus/detached reads or active handler after destruction",
+          "passed": true
+        },
+        {
+          "label": "Native resize burst leaves full focused label and outline accessible",
+          "passed": true
+        },
+        {
+          "label": "No continuing movement after final native layout settles",
+          "passed": true
+        },
+        {
+          "label": "Only one action listener after repeated topic visits",
+          "passed": true
+        },
+        {
+          "label": "Twenty same-frame resize events coalesce into one live callback",
+          "passed": true
+        },
+        {
+          "label": "Already visible focus does not cause an unnecessary page jump",
+          "passed": true
+        },
+        {
+          "label": "Final unmount restores listener baseline",
+          "passed": true
+        },
+        {
+          "label": "No uncaught errors or unhandled rejections",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "cases": {
+        "listenerCycles": [
+          {
+            "mounted": [
+              1
+            ],
+            "unmounted": []
+          },
+          {
+            "mounted": [
+              2
+            ],
+            "unmounted": []
+          },
+          {
+            "mounted": [
+              3
+            ],
+            "unmounted": []
+          }
+        ],
+        "outsideSelectedManual": {
+          "before": {
+            "left": 251,
+            "y": 0,
+            "focus": {
+              "tag": "INPUT",
+              "type": "search",
+              "text": ""
+            },
+            "selected": "Traveling"
+          },
+          "after": {
+            "left": 251,
+            "y": 0,
+            "focus": {
+              "tag": "INPUT",
+              "type": "search",
+              "text": ""
+            },
+            "selected": "Traveling"
+          },
+          "resizeHandlerCalls": 1
+        },
+        "formerOwner": {
+          "before": {
+            "left": 41.41666793823242,
+            "y": 1.399999976158142,
+            "focus": {
+              "tag": "INPUT",
+              "type": "search",
+              "text": ""
+            },
+            "selected": "Traveling"
+          },
+          "after": {
+            "left": 41.41666793823242,
+            "y": 1.399999976158142,
+            "focus": {
+              "tag": "INPUT",
+              "type": "search",
+              "text": ""
+            },
+            "selected": "Traveling"
+          },
+          "delivery": {
+            "delivered": 4,
+            "live": 0,
+            "canceled": 4
+          },
+          "reads": 0
+        },
+        "unmount": {
+          "before": {
+            "left": null,
+            "y": 0,
+            "focus": {
+              "tag": "H1",
+              "type": null,
+              "text": "Home"
+            },
+            "selected": null
+          },
+          "after": {
+            "left": null,
+            "y": 0,
+            "focus": {
+              "tag": "H1",
+              "type": null,
+              "text": "Home"
+            },
+            "selected": null
+          },
+          "delivery": {
+            "delivered": 1,
+            "live": 0,
+            "canceled": 1
+          },
+          "beforeListeners": [],
+          "afterListeners": [],
+          "oldConnected": false,
+          "detachedReads": 0
+        },
+        "nativeBurst": {
+          "settled": {
+            "left": 761.6333618164062,
+            "y": 477,
+            "focus": {
+              "tag": "BUTTON",
+              "type": "button",
+              "text": "Coffee and lunch breaks"
+            },
+            "selected": "Traveling"
+          },
+          "later": {
+            "left": 761.6333618164062,
+            "y": 477,
+            "focus": {
+              "tag": "BUTTON",
+              "type": "button",
+              "text": "Coffee and lunch breaks"
+            },
+            "selected": "Traveling"
+          },
+          "geometry": {
+            "label": "Coffee and lunch breaks",
+            "connected": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "box": {
+              "left": 16,
+              "top": 268.79998779296875,
+              "right": 304,
+              "bottom": 365.1999816894531,
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "outlineWidth": 2,
+            "outlineOffset": 2,
+            "footprint": {
+              "left": 12,
+              "right": 308,
+              "top": 264.79998779296875,
+              "bottom": 369.1999816894531
+            },
+            "effective": {
+              "left": 0,
+              "top": 264.79998779296875,
+              "right": 320,
+              "bottom": 368.79998779296875
+            },
+            "ancestors": [
+              {
+                "tag": "DIV",
+                "className": "chip-row",
+                "overflowX": "auto",
+                "overflowY": "auto",
+                "bounds": {
+                  "left": 0,
+                  "right": 320,
+                  "top": 264.79998779296875,
+                  "bottom": 368.79998779296875
+                }
+              }
+            ],
+            "lines": [
+              {
+                "left": 59.33332824707031,
+                "top": 277.3999938964844,
+                "right": 260.6666717529297,
+                "bottom": 317.3999938964844,
+                "width": 201.33334350585938,
+                "height": 40
+              },
+              {
+                "left": 119.53334045410156,
+                "top": 316.6000061035156,
+                "right": 200.4499969482422,
+                "bottom": 356.6000061035156,
+                "width": 80.91665649414062,
+                "height": 40
+              }
+            ],
+            "paintedOverflow": 0.399993896484375,
+            "characterCount": 20,
+            "clippedCharacters": [],
+            "complete": true,
+            "fontSize": 28,
+            "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+            "lineCount": 2,
+            "unwrappedTextWidth": 287.8500061035156,
+            "whiteSpace": "normal",
+            "textOverflow": "clip",
+            "stripClientWidth": 320,
+            "stripScrollWidth": 1819,
+            "stripLeft": 761.6333618164062,
+            "scrollY": 477,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.20001220703125,
+            "pageOverflow": 0
+          },
+          "scrolls": [
+            {
+              "before": 430.5,
+              "after": 447,
+              "args": [
+                {
+                  "top": 16.499969482421875,
+                  "behavior": "instant"
+                }
+              ],
+              "focused": "Coffee and lunch breaks"
+            },
+            {
+              "before": 447,
+              "after": 477,
+              "args": [
+                {
+                  "top": 29.999969482421875,
+                  "behavior": "instant"
+                }
+              ],
+              "focused": "Coffee and lunch breaks"
+            }
+          ],
+          "scrollCountAfterSettle": 2,
+          "scrollCountOneSecondLater": 2
+        },
+        "sameFrameBurst": {
+          "liveBeforeDelivery": 1,
+          "delivery": {
+            "delivered": 1,
+            "live": 1,
+            "canceled": 19
+          },
+          "scrollCountAfter": 2
+        }
+      },
+      "listenerRecords": [
+        {
+          "id": 1,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 2,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 3,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 0
+        },
+        {
+          "id": 4,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 5
+        },
+        {
+          "id": 5,
+          "active": false,
+          "capture": false,
+          "adds": 1,
+          "removes": 1,
+          "calls": 26
+        }
+      ],
+      "passed": true
+    }
+  },
+  "method": "Native keyboard, native viewport changes, instrumented window resize listeners and scrollBy. Separate held/canceled callback diagnostics and synchronous event burst. No arbitrary lower-edge clearance.",
+  "passed": true
+}

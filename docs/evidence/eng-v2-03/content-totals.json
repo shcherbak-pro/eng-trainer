@@ -1,0 +1,36 @@
+{
+  "released": {
+    "phrases": 566,
+    "patterns": 7,
+    "answers": 6,
+    "drills": 15,
+    "blocks": 39,
+    "wordIndex": 566,
+    "irregularVerbs": 339,
+    "packs": 11,
+    "records": 1538
+  },
+  "current": {
+    "phrases": 638,
+    "wordIndex": 566,
+    "irregularVerbs": 339,
+    "patterns": 7,
+    "answers": 12,
+    "drills": 15,
+    "topics": 3,
+    "blocks": 42,
+    "packs": 14,
+    "records": 1622
+  },
+  "delta": {
+    "phrases": 72,
+    "wordIndex": 0,
+    "irregularVerbs": 0,
+    "patterns": 0,
+    "answers": 6,
+    "drills": 0,
+    "topics": 3,
+    "blocks": 3
+  },
+  "note": "Counts come from the generated manifest. \"records\" sums every collection, as the released figure of 1,538 did; it is not a learning-vocabulary count."
+}

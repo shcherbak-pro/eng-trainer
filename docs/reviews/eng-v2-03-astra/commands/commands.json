@@ -1,0 +1,101 @@
+{
+  "platform": "win32",
+  "node": "v24.18.0",
+  "commands": [
+    {
+      "name": "check",
+      "command": "npm run check",
+      "exitCode": 1,
+      "seconds": 6.5,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "Error: Build failed with 2 errors:",
+        "failed to load config from <repo>\\vite.config.ts",
+        "failed to load config from <repo>\\vite.config.ts",
+        "Preprocessing failed",
+        "Error: Build failed with 2 errors:"
+      ]
+    },
+    {
+      "name": "test",
+      "command": "npm test",
+      "exitCode": 1,
+      "seconds": 3.3,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "ℹ tests 15",
+        "ℹ pass 15",
+        "ℹ fail 0",
+        "failed to load config from <repo>\\vitest.config.ts",
+        "Error: Build failed with 2 errors:"
+      ]
+    },
+    {
+      "name": "check-v1",
+      "command": "npm run check:v1",
+      "exitCode": 0,
+      "seconds": 8.6,
+      "highlights": [
+        "failed to load config from <repo>\\v1\\vite.config.ts"
+      ]
+    },
+    {
+      "name": "test-v1",
+      "command": "npm run test:v1",
+      "exitCode": 1,
+      "seconds": 2.2,
+      "highlights": [
+        "failed to load config from <repo>\\v1\\vitest.config.ts",
+        "Error: Build failed with 2 errors:"
+      ]
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "exitCode": 1,
+      "seconds": 3,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "failed to load config from <repo>\\vite.config.ts",
+        "Error: Build failed with 2 errors:"
+      ]
+    },
+    {
+      "name": "build-site",
+      "command": "npm run build:site",
+      "exitCode": 1,
+      "seconds": 3.6,
+      "highlights": [
+        "Generated 14 built-in packs: {\"phrases\":638,\"wordIndex\":566,\"irregularVerbs\":339,\"patterns\":7,\"answers\":12,\"drills\":15,\"topics\":3}",
+        "failed to load config from <repo>\\vite.config.ts",
+        "Error: Build failed with 2 errors:"
+      ]
+    },
+    {
+      "name": "verify-content",
+      "command": "npm run verify:content",
+      "exitCode": 0,
+      "seconds": 2.1,
+      "highlights": [
+        "\"exactContentAndOrderMatch\": true,",
+        "\"v1Unchanged\": true"
+      ]
+    },
+    {
+      "name": "diff-check",
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "exitCode": 0,
+      "seconds": 0.3,
+      "highlights": []
+    },
+    {
+      "name": "new-files-whitespace",
+      "command": "(built-in check of untracked text files)",
+      "exitCode": 0,
+      "seconds": 0,
+      "highlights": [
+        "99 files, 0 problems"
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import type { TrainingBlock } from '../content/types';
+import type { LearningTopic, TrainingBlock } from '../content/types';
 import type { IconName } from '../shared/ui/icons';
 import { DEFAULT_LEARN_PASS_ID, type LearnPass } from '../state/progress';
 
@@ -43,8 +43,33 @@ export const DESTINATIONS: Destination[] = [
   { id: 'more', label: 'More', icon: 'menu', pages: ['collections', 'settings'] }
 ];
 
+/**
+ * Learning topics (ENG-V2-03) have one shared screen with the address #topic/<topic id>.
+ * Topic ids are slugs, so the address needs no escaping. Released page ids never contain
+ * a slash, so the two kinds of address cannot collide.
+ */
+export const TOPIC_ROUTE_PREFIX = 'topic/';
+
+export function topicRoute(topicId: string): string {
+  return `${TOPIC_ROUTE_PREFIX}${topicId}`;
+}
+
+/** The topic id of a topic address, or null for every other page. */
+export function topicIdOf(page: string): string | null {
+  return page.startsWith(TOPIC_ROUTE_PREFIX) ? page.slice(TOPIC_ROUTE_PREFIX.length) : null;
+}
+
+/** A topic screen belongs to the Library: topics are library material, not a sixth destination. */
 export function destinationOf(page: string): Destination {
+  if (topicIdOf(page) !== null) return DESTINATIONS[1];
   return DESTINATIONS.find((destination) => destination.pages.includes(page)) ?? DESTINATIONS[0];
+}
+
+/** The page heading: the screen's label, or the topic title on a topic screen. */
+export function pageTitle(page: string, topics: LearningTopic[] = []): string {
+  const topicId = topicIdOf(page);
+  if (topicId !== null) return topics.find((topic) => topic.id === topicId)?.title ?? 'Topic';
+  return PAGE_LABELS[page] ?? 'English Trainer';
 }
 
 /** Screens of a destination that the active Learn Pass makes available. */
@@ -77,8 +102,11 @@ export function blocksForLearnPass(
   return allBlocks.filter((block) => allowed.has(block.id));
 }
 
-/** The screens that have something to show for the given blocks. */
-export function availablePagesFor(blocks: TrainingBlock[]): string[] {
+/**
+ * The screens that have something to show for the given blocks. A topic screen is
+ * available when the active Learn Pass contains the topic's learning block.
+ */
+export function availablePagesFor(blocks: TrainingBlock[], topics: LearningTopic[] = []): string[] {
   const pages = ['index'];
   const types = new Set(blocks.map((block) => block.type));
 
@@ -91,11 +119,17 @@ export function availablePagesFor(blocks: TrainingBlock[]): string[] {
   if (types.has('answers')) pages.push('answers');
   if (types.has('practice')) pages.push('practice');
 
+  const blockIds = new Set(blocks.map((block) => block.id));
+  for (const topic of topics) if (blockIds.has(topic.blockId)) pages.push(topicRoute(topic.id));
+
   pages.push('favorites', 'collections', 'settings');
   return pages;
 }
 
-export function pageForBlock(block: TrainingBlock): string {
+/** A topic's learning block opens the topic screen; every other block keeps its released screen. */
+export function pageForBlock(block: TrainingBlock, topics: LearningTopic[] = []): string {
+  const topic = topics.find((item) => item.blockId === block.id);
+  if (topic) return topicRoute(topic.id);
   return PAGE_BY_BLOCK_TYPE[block.type] ?? 'index';
 }
 

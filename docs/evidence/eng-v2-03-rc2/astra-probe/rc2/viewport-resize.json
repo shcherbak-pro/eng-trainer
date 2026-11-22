@@ -1,0 +1,499 @@
+{
+  "runnerSha256": "4a55be6de637a3cb22568dee56c5a149dc49b41a15e68cbc87898b28b550431b",
+  "method": "Real Tab to Coffee at 320x844 with actual 200% text, then height-only viewport resize to 320x480, 1000ms settlement, no test-side reveal.",
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "before": {
+        "label": "Coffee and lunch breaks",
+        "connected": true,
+        "focusVisible": true,
+        "ariaPressed": "false",
+        "box": {
+          "left": 27.65625,
+          "top": 315.734375,
+          "right": 315.65625,
+          "bottom": 412.109375,
+          "width": 288,
+          "height": 96.375
+        },
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "footprint": {
+          "left": 23.65625,
+          "right": 319.65625,
+          "top": 311.734375,
+          "bottom": 416.109375
+        },
+        "effective": {
+          "left": 0,
+          "top": 311.734375,
+          "right": 320,
+          "bottom": 415.734375
+        },
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "className": "chip-row",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "bounds": {
+              "left": 0,
+              "right": 320,
+              "top": 311.734375,
+              "bottom": 415.734375
+            }
+          }
+        ],
+        "lines": [
+          {
+            "left": 70.984375,
+            "top": 323.734375,
+            "right": 272.328125,
+            "bottom": 363.734375,
+            "width": 201.34375,
+            "height": 40
+          },
+          {
+            "left": 131.1875,
+            "top": 362.921875,
+            "right": 212.109375,
+            "bottom": 402.921875,
+            "width": 80.921875,
+            "height": 40
+          }
+        ],
+        "paintedOverflow": 0.375,
+        "characterCount": 20,
+        "clippedCharacters": [],
+        "complete": true,
+        "fontSize": 28,
+        "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+        "lineCount": 2,
+        "unwrappedTextWidth": 287.83990478515625,
+        "whiteSpace": "normal",
+        "textOverflow": "clip",
+        "stripClientWidth": 320,
+        "stripScrollWidth": 1819,
+        "stripLeft": 750,
+        "scrollY": 430,
+        "viewport": {
+          "width": 320,
+          "height": 844
+        },
+        "navTop": 743.21875,
+        "pageOverflow": 0
+      },
+      "resized": {
+        "label": "Coffee and lunch breaks",
+        "connected": true,
+        "focusVisible": true,
+        "ariaPressed": "false",
+        "box": {
+          "left": 27.65625,
+          "top": 278.734375,
+          "right": 315.65625,
+          "bottom": 375.109375,
+          "width": 288,
+          "height": 96.375
+        },
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "footprint": {
+          "left": 23.65625,
+          "right": 319.65625,
+          "top": 274.734375,
+          "bottom": 379.109375
+        },
+        "effective": {
+          "left": 0,
+          "top": 274.734375,
+          "right": 320,
+          "bottom": 378.734375
+        },
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "className": "chip-row",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "bounds": {
+              "left": 0,
+              "right": 320,
+              "top": 274.734375,
+              "bottom": 378.734375
+            }
+          }
+        ],
+        "lines": [
+          {
+            "left": 70.984375,
+            "top": 286.734375,
+            "right": 272.328125,
+            "bottom": 326.734375,
+            "width": 201.34375,
+            "height": 40
+          },
+          {
+            "left": 131.1875,
+            "top": 325.921875,
+            "right": 212.109375,
+            "bottom": 365.921875,
+            "width": 80.921875,
+            "height": 40
+          }
+        ],
+        "paintedOverflow": 0.375,
+        "characterCount": 20,
+        "clippedCharacters": [],
+        "complete": true,
+        "fontSize": 28,
+        "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+        "lineCount": 2,
+        "unwrappedTextWidth": 287.83990478515625,
+        "whiteSpace": "normal",
+        "textOverflow": "clip",
+        "stripClientWidth": 320,
+        "stripScrollWidth": 1819,
+        "stripLeft": 750,
+        "scrollY": 467,
+        "viewport": {
+          "width": 320,
+          "height": 480
+        },
+        "navTop": 379.21875,
+        "pageOverflow": 0
+      },
+      "refocused": {
+        "label": "Coffee and lunch breaks",
+        "connected": true,
+        "focusVisible": true,
+        "ariaPressed": "false",
+        "box": {
+          "left": 4.65625,
+          "top": 262.734375,
+          "right": 292.65625,
+          "bottom": 359.109375,
+          "width": 288,
+          "height": 96.375
+        },
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "footprint": {
+          "left": 0.65625,
+          "right": 296.65625,
+          "top": 258.734375,
+          "bottom": 363.109375
+        },
+        "effective": {
+          "left": 0,
+          "top": 258.734375,
+          "right": 320,
+          "bottom": 362.734375
+        },
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "className": "chip-row",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "bounds": {
+              "left": 0,
+              "right": 320,
+              "top": 258.734375,
+              "bottom": 362.734375
+            }
+          }
+        ],
+        "lines": [
+          {
+            "left": 47.984375,
+            "top": 270.734375,
+            "right": 249.328125,
+            "bottom": 310.734375,
+            "width": 201.34375,
+            "height": 40
+          },
+          {
+            "left": 108.1875,
+            "top": 309.921875,
+            "right": 189.109375,
+            "bottom": 349.921875,
+            "width": 80.921875,
+            "height": 40
+          }
+        ],
+        "paintedOverflow": 0.375,
+        "characterCount": 20,
+        "clippedCharacters": [],
+        "complete": true,
+        "fontSize": 28,
+        "fontFamily": "\"Eng Trainer Sans\", \"Segoe UI\", system-ui, -apple-system, Roboto, \"Noto Sans\", Arial, sans-serif",
+        "lineCount": 2,
+        "unwrappedTextWidth": 287.83990478515625,
+        "whiteSpace": "normal",
+        "textOverflow": "clip",
+        "stripClientWidth": 320,
+        "stripScrollWidth": 1819,
+        "stripLeft": 773,
+        "scrollY": 483,
+        "viewport": {
+          "width": 320,
+          "height": 480
+        },
+        "navTop": 379.21875,
+        "pageOverflow": 0
+      },
+      "errors": [],
+      "shot": "shots/rc1-chromium-height-only-480.png",
+      "recoveryShot": "shots/rc1-chromium-height-only-480-refocused.png"
+    },
+    "firefox": {
+      "version": "159.0",
+      "before": {
+        "label": "Coffee and lunch breaks",
+        "connected": true,
+        "focusVisible": true,
+        "ariaPressed": "false",
+        "box": {
+          "left": 16,
+          "top": 315.29998779296875,
+          "right": 304,
+          "bottom": 411.6999816894531,
+          "width": 288,
+          "height": 96.39999389648438
+        },
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "footprint": {
+          "left": 12,
+          "right": 308,
+          "top": 311.29998779296875,
+          "bottom": 415.6999816894531
+        },
+        "effective": {
+          "left": 0,
+          "top": 311.29998779296875,
+          "right": 320,
+          "bottom": 415.29998779296875
+        },
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "className": "chip-row",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "bounds": {
+              "left": 0,
+              "right": 320,
+              "top": 311.29998779296875,
+              "bottom": 415.29998779296875
+            }
+          }
+        ],
+        "lines": [
+          {
+            "left": 59.33332824707031,
+            "top": 323.8999938964844,
+            "right": 260.6666717529297,
+            "bottom": 363.8999938964844,
+            "width": 201.33334350585938,
+            "height": 40
+          },
+          {
+            "left": 119.53334045410156,
+            "top": 363.1000061035156,
+            "right": 200.4499969482422,
+            "bottom": 403.1000061035156,
+            "width": 80.91665649414062,
+            "height": 40
+          }
+        ],
+        "paintedOverflow": 0.399993896484375,
+        "characterCount": 20,
+        "clippedCharacters": [],
+        "complete": true,
+        "fontSize": 28,
+        "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+        "lineCount": 2,
+        "unwrappedTextWidth": 287.8500061035156,
+        "whiteSpace": "normal",
+        "textOverflow": "clip",
+        "stripClientWidth": 320,
+        "stripScrollWidth": 1819,
+        "stripLeft": 761.6333618164062,
+        "scrollY": 430.5,
+        "viewport": {
+          "width": 320,
+          "height": 844
+        },
+        "navTop": 743.2000122070312,
+        "pageOverflow": 0
+      },
+      "resized": {
+        "label": "Coffee and lunch breaks",
+        "connected": true,
+        "focusVisible": true,
+        "ariaPressed": "false",
+        "box": {
+          "left": 16,
+          "top": 278.79998779296875,
+          "right": 304,
+          "bottom": 375.1999816894531,
+          "width": 288,
+          "height": 96.39999389648438
+        },
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "footprint": {
+          "left": 12,
+          "right": 308,
+          "top": 274.79998779296875,
+          "bottom": 379.1999816894531
+        },
+        "effective": {
+          "left": 0,
+          "top": 274.79998779296875,
+          "right": 320,
+          "bottom": 378.79998779296875
+        },
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "className": "chip-row",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "bounds": {
+              "left": 0,
+              "right": 320,
+              "top": 274.79998779296875,
+              "bottom": 378.79998779296875
+            }
+          }
+        ],
+        "lines": [
+          {
+            "left": 59.33332824707031,
+            "top": 287.3999938964844,
+            "right": 260.6666717529297,
+            "bottom": 327.3999938964844,
+            "width": 201.33334350585938,
+            "height": 40
+          },
+          {
+            "left": 119.53334045410156,
+            "top": 326.6000061035156,
+            "right": 200.4499969482422,
+            "bottom": 366.6000061035156,
+            "width": 80.91665649414062,
+            "height": 40
+          }
+        ],
+        "paintedOverflow": 0.399993896484375,
+        "characterCount": 20,
+        "clippedCharacters": [],
+        "complete": true,
+        "fontSize": 28,
+        "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+        "lineCount": 2,
+        "unwrappedTextWidth": 287.8500061035156,
+        "whiteSpace": "normal",
+        "textOverflow": "clip",
+        "stripClientWidth": 320,
+        "stripScrollWidth": 1819,
+        "stripLeft": 761.6333618164062,
+        "scrollY": 467,
+        "viewport": {
+          "width": 320,
+          "height": 480
+        },
+        "navTop": 379.20001220703125,
+        "pageOverflow": 0
+      },
+      "refocused": {
+        "label": "Coffee and lunch breaks",
+        "connected": true,
+        "focusVisible": true,
+        "ariaPressed": "false",
+        "box": {
+          "left": 16,
+          "top": 274.79998779296875,
+          "right": 304,
+          "bottom": 371.1999816894531,
+          "width": 288,
+          "height": 96.39999389648438
+        },
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "footprint": {
+          "left": 12,
+          "right": 308,
+          "top": 270.79998779296875,
+          "bottom": 375.1999816894531
+        },
+        "effective": {
+          "left": 0,
+          "top": 270.79998779296875,
+          "right": 320,
+          "bottom": 374.79998779296875
+        },
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "className": "chip-row",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "bounds": {
+              "left": 0,
+              "right": 320,
+              "top": 270.79998779296875,
+              "bottom": 374.79998779296875
+            }
+          }
+        ],
+        "lines": [
+          {
+            "left": 59.33332824707031,
+            "top": 283.3999938964844,
+            "right": 260.6666717529297,
+            "bottom": 323.3999938964844,
+            "width": 201.33334350585938,
+            "height": 40
+          },
+          {
+            "left": 119.53334045410156,
+            "top": 322.6000061035156,
+            "right": 200.4499969482422,
+            "bottom": 362.6000061035156,
+            "width": 80.91665649414062,
+            "height": 40
+          }
+        ],
+        "paintedOverflow": 0.399993896484375,
+        "characterCount": 20,
+        "clippedCharacters": [],
+        "complete": true,
+        "fontSize": 28,
+        "fontFamily": "Eng Trainer Sans, Segoe UI, system-ui, -apple-system, Roboto, Noto Sans, Arial, sans-serif",
+        "lineCount": 2,
+        "unwrappedTextWidth": 287.8500061035156,
+        "whiteSpace": "normal",
+        "textOverflow": "clip",
+        "stripClientWidth": 320,
+        "stripScrollWidth": 1819,
+        "stripLeft": 761.6333618164062,
+        "scrollY": 471,
+        "viewport": {
+          "width": 320,
+          "height": 480
+        },
+        "navTop": 379.20001220703125,
+        "pageOverflow": 0
+      },
+      "errors": [],
+      "shot": "shots/rc1-firefox-height-only-480.png",
+      "recoveryShot": "shots/rc1-firefox-height-only-480-refocused.png"
+    }
+  },
+  "passed": true
+}

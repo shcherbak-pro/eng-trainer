@@ -1,0 +1,51 @@
+{
+  "candidate": {
+    "files": 2128,
+    "reviewedWorkingBytesUnchanged": true,
+    "pathAndContentSha256": "7f9e8dc43f8b72d1a2a637c971cd599a515896fb5c5faae418b2b62c342419b8"
+  },
+  "main": {
+    "branch": "main",
+    "head": "03f1267f1ef4287580227ce5db67615988c98177",
+    "files": 1332,
+    "untrackedFiles": 92,
+    "stagedFiles": 0,
+    "unchanged": true,
+    "pathAndContentSha256": "a869daadcdc81adb48c9521d37a90dff65c69e935900fa182a6fbe4357d07a0d"
+  },
+  "history": {
+    "docs/reviews/eng-v2-03-astra": {
+      "files": 506,
+      "identical": true,
+      "beforeAndAfterInventorySha256": "78be192765093500a5738f295e8e0a9f645b891759ebb8b3ad02eafdfb330802"
+    },
+    "docs/reviews/eng-v2-03-rc1-astra": {
+      "files": 619,
+      "identical": true,
+      "beforeAndAfterInventorySha256": "ac23dcb2f462c83d8c9903a3dd7b358d95e3cfdbaff4170d8b711714ad0ca3c5"
+    },
+    "docs/evidence/eng-v2-03": {
+      "files": 49,
+      "identical": true,
+      "beforeAndAfterInventorySha256": "c3a2bf0f7fd107ffd491aaa839cc6fd850406fe33fa6547337344dc31579bde4"
+    },
+    "docs/evidence/eng-v2-03-rc1": {
+      "files": 286,
+      "identical": true,
+      "beforeAndAfterInventorySha256": "9057ba06c5ef3513f713659f26629fd41eb7a15c9d1e383384e9839d4aeb031b"
+    },
+    "docs/evidence/eng-v2-03-rc2": {
+      "files": 204,
+      "identical": true,
+      "beforeAndAfterInventorySha256": "e751243d688590277740ddba2d4a4eeef86b7748d28e4ac446afadda5356cade"
+    },
+    "docs/reviews/eng-v2-03-rc2-astra": {
+      "files": 1187,
+      "identical": true,
+      "beforeAndAfterInventorySha256": "e610427d5c17691455fdbd3e96f74e136d018f6b78c7759c5e2b50c5e7d84970"
+    }
+  },
+  "existingGitExcludesUnchanged": true,
+  "excludeSha256": "2d936954490b6ce89b2049abbfed5c8d3e21e88e962f9ea8902cb67338f8f081",
+  "protectedScope": "All reviewed source, authored content, tests, v1, dependencies, workflow, historical evidence and ignored reproduction inputs are byte-identical. Publication additions are separate. Builds may regenerate ignored active outputs; preserved before-build copies remain byte-identical."
+}

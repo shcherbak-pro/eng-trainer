@@ -433,6 +433,39 @@
       "tag": "ai-certification",
       "itemsCount": 39,
       "priority": 38.1
+    },
+    {
+      "id": "topic-conditionals",
+      "title": "Conditionals",
+      "category": "Conditionals",
+      "type": "phraseCategory",
+      "description": "Use conditionals to connect a situation with its result. Start with the four core types, then explore mixed conditionals.",
+      "icon": "topic",
+      "tag": "grammar",
+      "itemsCount": 18,
+      "priority": 36.1
+    },
+    {
+      "id": "topic-small-talk",
+      "title": "Small Talk",
+      "category": "Small Talk",
+      "type": "phraseCategory",
+      "description": "Start a conversation, keep it going and finish politely. Choose a situation and practice a few phrases.",
+      "icon": "topic",
+      "tag": "small-talk",
+      "itemsCount": 36,
+      "priority": 36.2
+    },
+    {
+      "id": "topic-interview-english",
+      "title": "Interview English",
+      "category": "Interview English",
+      "type": "phraseCategory",
+      "description": "Build clear answers in English. Choose a question type, use the answer frames and adapt the example to your own experience.",
+      "icon": "topic",
+      "tag": "interview",
+      "itemsCount": 18,
+      "priority": 36.3
     }
   ]
 }

@@ -1,0 +1,88 @@
+{
+  "rc1Files": 33,
+  "rc2Files": 33,
+  "identicalFiles": 31,
+  "changed": [
+    {
+      "file": "assets/index-BIsJEtZg.js",
+      "rc1": "9e55bf8b2df08c083597f53df1a91dd3528a0b023cf0a6452ada505666eca9ff",
+      "rc2": null
+    },
+    {
+      "file": "assets/index-CggR75Uk.js",
+      "rc1": null,
+      "rc2": "b465abcfa985f6b794512cd1ede91f621f3d5bbe09b2d4563b45e06f448cc942"
+    },
+    {
+      "file": "index.html",
+      "rc1": "cb488245caca76d340d370107870a12bf32f21941eb57415cb7d2e5aef733b92",
+      "rc2": "8b0a649046637a4efaf91cb0a3a771cd356fd99cfbe5ebb599bcf7cc1abcf520"
+    }
+  ],
+  "css": [
+    {
+      "file": "assets/index-DFaGuSQ9.css",
+      "identicalToRc1": true
+    },
+    {
+      "file": "v1/assets/index-Bod3ovET.css",
+      "identicalToRc1": true
+    }
+  ],
+  "rc1ProtectedArtifactGroups": {
+    "data/": {
+      "files": 15,
+      "unchanged": true
+    },
+    "v1/": {
+      "files": 5,
+      "unchanged": true
+    },
+    "fonts/": {
+      "files": 3,
+      "unchanged": true
+    },
+    "font-assets": {
+      "files": 6,
+      "unchanged": true
+    }
+  },
+  "rc1ProtectedSourceFiles": [
+    {
+      "file": "docs/evidence/eng-v2-03/id-mapping.json",
+      "unchanged": true
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/content-totals.json",
+      "unchanged": true
+    },
+    {
+      "file": "src/features/home/homeStats.ts",
+      "unchanged": true
+    },
+    {
+      "file": "src/features/home/homeStats.test.ts",
+      "unchanged": true
+    },
+    {
+      "file": "src/app/App.home.test.ts",
+      "unchanged": true
+    },
+    {
+      "file": "package.json",
+      "unchanged": true
+    },
+    {
+      "file": "package-lock.json",
+      "unchanged": true
+    },
+    {
+      "file": "v1/package.json",
+      "unchanged": true
+    },
+    {
+      "file": "v1/package-lock.json",
+      "unchanged": true
+    }
+  ]
+}

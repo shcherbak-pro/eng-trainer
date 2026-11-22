@@ -1,0 +1,4631 @@
+{
+  "base": "03f1267f1ef4287580227ce5db67615988c98177",
+  "reviewedFiles": 912,
+  "publicationAdditions": 12,
+  "totalFiles": 924,
+  "implementationFiles": 43,
+  "documentationFiles": 881,
+  "contentHashes": "reviewed-inventory.json authenticates every reviewed file; a separate ignored final receipt authenticates all publication additions, including this manifest, without a self-referential hash.",
+  "files": [
+    {
+      "file": "content/catalog.json",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "content/packs/conditionals.json",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "content/packs/interview-english.json",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "content/packs/small-talk.json",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/architecture/BUILT-IN-CONTENT.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/.gitignore",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/README.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/artifacts.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/browser.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/budget.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/budget.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/commands.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/build-site.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/check-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/diff-check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/new-files-whitespace.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/verify-content.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/final-audit.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/final-checks.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/focused-chips.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/results.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/chromium-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/shots/firefox-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/preservation-after.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/preserve.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/rc1.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/reviewed.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-chromium-focused-reflow-200-percent.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-chromium-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-chromium-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-chromium-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-chromium-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-firefox-focused-reflow-200-percent.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-firefox-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-firefox-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-firefox-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/rc1-firefox-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-chromium-focused-reflow-200-percent.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-chromium-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-chromium-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-chromium-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-chromium-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-firefox-focused-reflow-200-percent.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-firefox-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-firefox-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-firefox-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/shots/reviewed-firefox-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/summarize.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/summary.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/verify.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/.gitignore",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/README.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/artifacts.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/artifacts.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/browser-support.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/shots/rc1-chromium-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/shots/rc1-chromium-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/shots/rc1-firefox-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/shots/rc1-firefox-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/viewport-resize.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc1/viewport-resize.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/shots/rc1-chromium-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/shots/rc1-chromium-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/shots/rc1-firefox-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/shots/rc1-firefox-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/viewport-resize.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/rc2/viewport-resize.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/viewport-resize.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/baseline.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/budget.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/budget.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/commands.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/build-site.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/check-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/diff-check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/new-files-whitespace.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/verify-content.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/final-audit.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/final-checks.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-after.txt",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-before.txt",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/rc1.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/rc2.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-decisive-320-200-480-again.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-decisive-320-200-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-decisive-320-200-before.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-enlarged-390-200-resized.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-chromium-normal-320-100-resized.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-decisive-320-200-480-again.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-decisive-320-200-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-decisive-320-200-before.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-enlarged-390-200-resized.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc1-firefox-normal-320-100-resized.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-decisive-320-200-480-again.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-decisive-320-200-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-decisive-320-200-before.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-enlarged-390-200-resized.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-chromium-normal-320-100-resized.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-decisive-320-200-480-again.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-decisive-320-200-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-decisive-320-200-before.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-enlarged-390-200-resized.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/height-resize/shots/rc2-firefox-normal-320-100-resized.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/results.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/chromium-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/shots/firefox-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/prepare-runners.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/preservation-after.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/preserve.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/focused-chips.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/rc2.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-focused-reflow-200-percent.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-chromium-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-focused-reflow-200-percent.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/shots/rc2-firefox-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/runner-adaptations.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/summarize.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/summary.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/unit/rc1-before-fix.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/unit/rc2-after-fix.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/README.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/artifact.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/browser-check.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/browser/results.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/browser/screenshots.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/budget-and-markup.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/collect-evidence.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/commands.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/compare-builds.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/content-totals.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/git-status.txt",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/id-mapping.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/build-site.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/check-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/diff-check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/new-files-whitespace.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/verify-content.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/preservation.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/run-commands.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/sanitization.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/sanitize.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/firefox-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/firefox-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/firefox-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/screenshots/firefox-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/v1-preservation.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/ENG-V2-03-ASTRA.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/ENG-V2-03-PUBLICATION.md",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/ENG-V2-03-RC1-ASTRA.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/ENG-V2-03-RC2-ASTRA.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/.gitignore",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/README.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/artifact-audit.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/artifact-audit.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/baseline-build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-additional.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-additional.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/budget-comparison.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-chip-2-partly-visible.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-chip-4-partly-visible.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-chip-focused-selected-clipped.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-malformed-startup.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-routing-chips-language-and-rows-failure.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-same-name-authored-topic.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-same-name-home.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-same-name-topic-and-persistence-failure.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/chromium-synthetic-export.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/commands.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/build-site.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/check-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/diff-check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/new-files-whitespace.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/verify-content.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/commands.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/build-site.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/check-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/diff-check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/new-files-whitespace.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/test-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/test.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/verify-content.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/content-oracle.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/content-oracle.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/editorial-mapping.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/final-whitespace.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-chip-2-partly-visible.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-chip-4-partly-visible.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-chip-focused-selected-clipped.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-malformed-startup.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-routing-chips-language-and-rows-failure.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-same-name-authored-topic.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-same-name-home.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-same-name-topic-and-persistence-failure.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/firefox-synthetic-export.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/hygiene.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/results.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/chromium-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/shots/firefox-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-final.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-final.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent.test.ts",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/prepare-baseline.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preserve.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/race-probe.test.ts",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/race.config.ts",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/released-materials.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/reset-race-original-schedule.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/reset-race.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/reset-race.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/sanitize-review.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/vitest.config.ts",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/.gitignore",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/hygiene.json",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/integration.json",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/logs/build-site.log",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/logs/build.log",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/logs/verify-content.log",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/newline-mappings.json",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/preservation.json",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/publication-inventory.json",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/reviewed-inventory.json",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-publication/starting-candidate.json",
+      "commit": "documentation",
+      "category": "publication-record"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/.gitignore",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/README.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/artifacts.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/artifacts.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/browser-support.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/browser.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/budget.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/budget.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/budget.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/commands.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/build-site.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/check-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/diff-check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/new-files-whitespace.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/verify-content.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/final-audit.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/final-checks.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/focused.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/focused.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/focused.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/gates.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-after.txt",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-before.txt",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/results.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/chromium-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/shots/firefox-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/independent.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/independent.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/independent.test.ts",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/prepare-runners.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preserve.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/run.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/runner-adaptations.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/scope.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shared-controls.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shared-controls.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/before-chromium-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/before-chromium-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/before-firefox-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/before-firefox-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-chromium-focused-height-reflow-height-640.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-chromium-focused-width-text-reflow-wrapped.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-chromium-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-chromium-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-chromium-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-chromium-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-chromium-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-chromium-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-firefox-focused-height-reflow-height-640.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-firefox-focused-width-text-reflow-wrapped.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-firefox-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-firefox-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-firefox-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-firefox-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-firefox-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/shots/rc1-firefox-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/tools.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/viewport-resize-attempt1.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/viewport-resize.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/viewport-resize.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/viewport-resize.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/vitest.config.ts",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/.gitignore",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/README.md",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/artifacts.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/authenticate-artifacts.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/browser-support.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/browser.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/budget.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/budget.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/budget.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/commands.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/build-site.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/check-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/diff-check.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/new-files-whitespace.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test-v1.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/verify-content.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/event-lifecycle.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/event-lifecycle.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-probe-summary.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-probe/browser-support.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-probe/viewport-resize.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/run.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/shots/rc1-chromium-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/shots/rc1-chromium-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/shots/rc1-firefox-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/shots/rc1-firefox-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/viewport-resize.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc1/viewport-resize.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/run.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/shots/rc1-chromium-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/shots/rc1-chromium-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/shots/rc1-firefox-height-only-480-refocused.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/shots/rc1-firefox-height-only-480.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/viewport-resize.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-rc2/viewport-resize.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/final-audit.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/final-checks.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/focused.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/focused.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/focused.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/gates.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-after.txt",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-before.txt",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-sequence.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-sequence.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-320-100-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-320-100-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-320-200-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-320-200-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-390-200-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-chromium-390-200-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-320-100-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-320-100-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-320-200-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-320-200-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-390-200-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc1-firefox-390-200-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-320-100-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-320-100-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-320-200-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-320-200-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-390-200-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-chromium-390-200-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-320-100-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-320-100-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-320-200-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-320-200-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-390-200-second-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/height-shots/rc2-firefox-390-200-shrink.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/results.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/chromium-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-desktop-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-narrow-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-answers.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-collections.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-conditionals-final-subsection.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-content-error.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-enlarged-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-favorites.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-flashcards.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-home-details.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-home-start.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-index.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-interview-final-category.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-irregularVerbs.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-patterns.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-phrases.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-practice.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-reverse.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-settings.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-small-talk-traveling.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-topic-conditionals.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-topic-interview-english.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-topic-small-talk.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/shots/firefox-phone-wordIndex.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/independent.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/independent.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/independent.test.ts",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/prepare-runners.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preserve.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication-build.log",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/run-exact-probe.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/run.mjs",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/runner-adaptations.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/scope.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/before-chromium-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/before-chromium-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/before-firefox-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/before-firefox-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-focused-height-reflow-height-640.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-focused-width-text-reflow-wrapped.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-chromium-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-focused-height-reflow-height-640.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-focused-width-text-reflow-wrapped.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-matrix-320-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-matrix-320-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-matrix-390-100-selected-2.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/shots/rc2-firefox-matrix-390-200-selected-3.png",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/tools.json",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/vitest.config.ts",
+      "commit": "documentation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "scripts/content-build.test.mjs",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "scripts/verify-content-migration.mjs",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/app.css",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/app/App.home.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/app/App.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/app/App.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/app/AppHeader.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/app/AppShell.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/app/navigation.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/app/navigation.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/collections/service.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/content/builtIn.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/content/catalog.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/content/descriptionLanguage.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/content/descriptionLanguage.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/content/packFormat.js",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/content/topics.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/content/types.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/exercises/AnswersPage.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/exercises/PatternsPage.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/focus/FocusListPage.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/home/HomeOverview.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/home/IndexPage.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/home/TopicCards.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/home/homeStats.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/home/homeStats.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/topics/TopicPage.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/topics/topicView.test.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/topics/topicView.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/features/vocabulary/PhrasesPage.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/shared/entries/AnswerCard.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/shared/entries/PatternCard.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/shared/entries/PhraseCard.svelte",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/state/viewState.ts",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/test/fixtures/eng-v2-03-editorial.json",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/test/fixtures/legacy-pack-urls.json",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    },
+    {
+      "file": "src/test/legacyProjection.js",
+      "commit": "implementation",
+      "category": "approved-reviewed-candidate"
+    }
+  ]
+}

@@ -8,7 +8,8 @@
   import CollectionsPage from '../features/collections/CollectionsPage.svelte';
   import type { TrainingBlock } from '../content/types';
   import { initState, initStateWithoutStorage, progress, settings } from '../state';
-  import { availablePagesFor, blocksForLearnPass, pageForBlock, pageFromHash } from './navigation';
+  import { availablePagesFor, blocksForLearnPass, pageForBlock, pageFromHash, topicIdOf, topicRoute } from './navigation';
+  import AppHeader from './AppHeader.svelte';
   import AppShell from './AppShell.svelte';
   import IndexPage from '../features/home/IndexPage.svelte';
   import PhrasesPage from '../features/vocabulary/PhrasesPage.svelte';
@@ -21,6 +22,7 @@
   import PracticePage from '../features/exercises/PracticePage.svelte';
   import FocusListPage from '../features/focus/FocusListPage.svelte';
   import SettingsPage from '../features/settings/SettingsPage.svelte';
+  import TopicPage from '../features/topics/TopicPage.svelte';
   import Icon from '../shared/ui/Icon.svelte';
 
   type Phase = 'loading' | 'storage-blocked' | 'storage-error' | 'content-error' | 'ready';
@@ -39,7 +41,12 @@
   $: catalog = builtIn ? combineCatalog(builtIn, $userVocabulary) : null;
 
   $: blocks = catalog ? blocksForLearnPass(catalog.blocks, $progress.selectedLearnPassId, $progress.learnPasses) : [];
-  $: availablePages = availablePagesFor(blocks);
+  $: availablePages = availablePagesFor(blocks, catalog?.topics ?? []);
+  $: activeTopic = catalog?.topics.find((topic) => topicRoute(topic.id) === activePage) ?? null;
+  /** Topic screens the Phrases screen can link to: the topics of the active Learn Pass. */
+  $: topicLinks = (catalog?.topics ?? [])
+    .filter((topic) => availablePages.includes(topicRoute(topic.id)))
+    .map((topic) => ({ title: topic.title, page: topicRoute(topic.id) }));
 
   // The saved theme may replace the system theme during start-up: no fade then.
   $: if (mounted && phase !== 'loading' && phase !== 'storage-blocked') document.documentElement.setAttribute('data-theme-ready', '');
@@ -99,7 +106,7 @@
     }
     if (!mounted || token !== attempt) return;
 
-    const pages = availablePagesFor(blocksForLearnPass(loaded.blocks, $progress.selectedLearnPassId, $progress.learnPasses));
+    const pages = availablePagesFor(blocksForLearnPass(loaded.blocks, $progress.selectedLearnPassId, $progress.learnPasses), loaded.topics);
     const requested = pageFromHash() || $settings.activePage;
 
     builtIn = loaded;
@@ -135,9 +142,13 @@
   }
 
   function openBlock(block: TrainingBlock): void {
-    if (block.type === 'phraseCategory' && block.category) settings.setPhraseCategory(block.category);
-    if (block.type === 'irregularVerbs' && block.verbSet) settings.setIrregularSet(block.verbSet);
-    navigate(pageForBlock(block));
+    const page = pageForBlock(block, catalog?.topics ?? []);
+    // A topic screen shows its own material, so the Phrases filter is left as the learner set it.
+    if (topicIdOf(page) === null) {
+      if (block.type === 'phraseCategory' && block.category) settings.setPhraseCategory(block.category);
+      if (block.type === 'irregularVerbs' && block.verbSet) settings.setIrregularSet(block.verbSet);
+    }
+    navigate(page);
   }
 
   // A Learn Pass can remove the screen that is currently open.
@@ -159,73 +170,85 @@
 </script>
 
 {#if phase === 'loading'}
-  <main class="startup" aria-busy="true">
-    <p class="startup__status" role="status"><span class="spinner" aria-hidden="true"></span>Loading training materials…</p>
-  </main>
+  <div class="startup-shell">
+    <AppHeader />
+    <main class="startup" aria-busy="true">
+      <p class="startup__status" role="status"><span class="spinner" aria-hidden="true"></span>Loading training materials…</p>
+    </main>
+  </div>
 {:else if phase === 'storage-blocked'}
-  <main class="startup">
-    <section class="startup__panel" aria-labelledby="blocked-title">
-      <Icon name="tabs" size={40} />
-      <h1 id="blocked-title">Close other eng-trainer tabs</h1>
-      <p>Your saved progress needs a quick upgrade. Another eng-trainer tab or window still uses the previous version, so the upgrade has to wait.</p>
-      <ol class="startup__steps">
-        <li>Switch to the other eng-trainer tabs or windows.</li>
-        <li>Close or reload them.</li>
-        <li>Come back here. This page continues by itself.</li>
-      </ol>
-      <p class="startup__waiting" role="status">
-        <span class="spinner" aria-hidden="true"></span>
-        {blockedChecks ? 'Still waiting for the other tabs to close.' : 'Waiting for the other tabs to close…'}
-      </p>
-      <div class="startup__actions">
-        <button type="button" class="btn btn--secondary btn--md" on:click={checkAgain}>Check again</button>
-        <button type="button" class="btn btn--secondary btn--md" on:click={continueWithoutSaving}>Continue without saving</button>
-      </div>
-      <p class="startup__note">Without saving you can study now, but your changes are lost when you close this page.</p>
-      <details class="startup__details">
-        <summary>Technical details</summary>
-        <p>The upgrade of the browser database to version 2 is waiting for another open connection to close.</p>
-      </details>
-    </section>
-  </main>
+  <div class="startup-shell">
+    <AppHeader />
+    <main class="startup">
+      <section class="startup__panel" aria-labelledby="blocked-title">
+        <Icon name="tabs" size={40} />
+        <h1 id="blocked-title">Close other eng-trainer tabs</h1>
+        <p>Your saved progress needs a quick upgrade. Another eng-trainer tab or window still uses the previous version, so the upgrade has to wait.</p>
+        <ol class="startup__steps">
+          <li>Switch to the other eng-trainer tabs or windows.</li>
+          <li>Close or reload them.</li>
+          <li>Come back here. This page continues by itself.</li>
+        </ol>
+        <p class="startup__waiting" role="status">
+          <span class="spinner" aria-hidden="true"></span>
+          {blockedChecks ? 'Still waiting for the other tabs to close.' : 'Waiting for the other tabs to close…'}
+        </p>
+        <div class="startup__actions">
+          <button type="button" class="btn btn--secondary btn--md" on:click={checkAgain}>Check again</button>
+          <button type="button" class="btn btn--secondary btn--md" on:click={continueWithoutSaving}>Continue without saving</button>
+        </div>
+        <p class="startup__note">Without saving you can study now, but your changes are lost when you close this page.</p>
+        <details class="startup__details">
+          <summary>Technical details</summary>
+          <p>The upgrade of the browser database to version 2 is waiting for another open connection to close.</p>
+        </details>
+      </section>
+    </main>
+  </div>
 {:else if phase === 'storage-error'}
-  <main class="startup">
-    <section class="startup__panel error-card" role="alert" aria-labelledby="storage-error-title">
-      <Icon name="error" size={40} />
-      <h1 id="storage-error-title">Unable to open your saved progress</h1>
-      <p>The browser storage could not be opened or read. To protect your saved progress, the app did not start with empty progress on top of it.</p>
-      <p>Try again, or continue without saving: you can study, but nothing you change is kept after this page is closed.</p>
-      <div class="startup__actions">
-        <button type="button" class="btn btn--primary btn--md" on:click={() => void start()}>Try again</button>
-        <button type="button" class="btn btn--secondary btn--md" on:click={continueWithoutSaving}>Continue without saving</button>
-      </div>
-      <details class="startup__details">
-        <summary>Technical details</summary>
-        <p><code>{errorMessage}</code></p>
-      </details>
-    </section>
-  </main>
+  <div class="startup-shell">
+    <AppHeader />
+    <main class="startup">
+      <section class="startup__panel error-card" role="alert" aria-labelledby="storage-error-title">
+        <Icon name="error" size={40} />
+        <h1 id="storage-error-title">Unable to open your saved progress</h1>
+        <p>The browser storage could not be opened or read. To protect your saved progress, the app did not start with empty progress on top of it.</p>
+        <p>Try again, or continue without saving: you can study, but nothing you change is kept after this page is closed.</p>
+        <div class="startup__actions">
+          <button type="button" class="btn btn--primary btn--md" on:click={() => void start()}>Try again</button>
+          <button type="button" class="btn btn--secondary btn--md" on:click={continueWithoutSaving}>Continue without saving</button>
+        </div>
+        <details class="startup__details">
+          <summary>Technical details</summary>
+          <p><code>{errorMessage}</code></p>
+        </details>
+      </section>
+    </main>
+  </div>
 {:else if phase === 'content-error' || !catalog}
-  <main class="startup">
-    <section class="startup__panel error-card" role="alert" aria-labelledby="content-error-title">
-      <Icon name="error" size={40} />
-      <h1 id="content-error-title">The study material could not be loaded</h1>
-      <p>Check your internet connection and try again. Your saved progress is not affected.</p>
-      <div class="startup__actions">
-        <button type="button" class="btn btn--primary btn--md" on:click={retryContent}>Try again</button>
-      </div>
-      <details class="startup__details">
-        <summary>Technical details</summary>
-        <p><code>{errorMessage}</code></p>
-      </details>
-    </section>
-  </main>
+  <div class="startup-shell">
+    <AppHeader />
+    <main class="startup">
+      <section class="startup__panel error-card" role="alert" aria-labelledby="content-error-title">
+        <Icon name="error" size={40} />
+        <h1 id="content-error-title">The study material could not be loaded</h1>
+        <p>Check your internet connection and try again. Your saved progress is not affected.</p>
+        <div class="startup__actions">
+          <button type="button" class="btn btn--primary btn--md" on:click={retryContent}>Try again</button>
+        </div>
+        <details class="startup__details">
+          <summary>Technical details</summary>
+          <p><code>{errorMessage}</code></p>
+        </details>
+      </section>
+    </main>
+  </div>
 {:else}
   <AppShell {catalog} {availablePages} {activePage} onNavigate={navigate}>
     {#if activePage === 'index'}
       <IndexPage {catalog} {blocks} onOpenBlock={openBlock} />
     {:else if activePage === 'phrases'}
-      <PhrasesPage {catalog} />
+      <PhrasesPage {catalog} {topicLinks} />
     {:else if activePage === 'wordIndex'}
       <WordIndexPage {catalog} />
     {:else if activePage === 'flashcards'}
@@ -246,6 +269,8 @@
       <CollectionsPage {catalog} />
     {:else if activePage === 'settings'}
       <SettingsPage />
+    {:else if activeTopic}
+      <TopicPage {catalog} topic={activeTopic} onNavigate={navigate} />
     {/if}
   </AppShell>
 {/if}

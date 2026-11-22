@@ -1,0 +1,913 @@
+{
+  "syntheticProfiles": true,
+  "speech": "Invocation only; no audible speech",
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "scenarios": [
+        {
+          "name": "same-name-topic-and-persistence",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "initial": {
+              "vocabulary": "18 / 638 2%",
+              "stats": {
+                "Topics completed": "1 / 34",
+                "In Focus": "0",
+                "Words learned": "0 / 566",
+                "Phrases learned": "18 / 638",
+                "Remaining vocabulary": "620",
+                "Words": "566",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "0"
+              },
+              "topicCards": [
+                {
+                  "title": "Conditionals",
+                  "counts": "18 of 18 practice cards learned"
+                },
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                },
+                {
+                  "title": "Interview English",
+                  "counts": "0 of 18 practice cards learned"
+                }
+              ]
+            },
+            "imported": {
+              "vocabulary": "18 / 639 2%",
+              "stats": {
+                "Topics completed": "0 / 34",
+                "In Focus": "0",
+                "Words learned": "0 / 567",
+                "Phrases learned": "18 / 638",
+                "Remaining vocabulary": "621",
+                "Words": "567",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "1"
+              },
+              "topicCards": [
+                {
+                  "title": "Conditionals",
+                  "counts": "18 of 19 practice cards learned"
+                },
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                },
+                {
+                  "title": "Interview English",
+                  "counts": "0 of 18 practice cards learned"
+                }
+              ]
+            },
+            "removed": {
+              "vocabulary": "18 / 638 2%",
+              "stats": {
+                "Topics completed": "1 / 34",
+                "In Focus": "1",
+                "Words learned": "0 / 566",
+                "Phrases learned": "18 / 638",
+                "Remaining vocabulary": "620",
+                "Words": "566",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "0"
+              },
+              "topicCards": [
+                {
+                  "title": "Conditionals",
+                  "counts": "18 of 18 practice cards learned"
+                },
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                },
+                {
+                  "title": "Interview English",
+                  "counts": "0 of 18 practice cards learned"
+                }
+              ]
+            },
+            "restored": {
+              "vocabulary": "19 / 639 2%",
+              "stats": {
+                "Topics completed": "1 / 34",
+                "In Focus": "2",
+                "Words learned": "1 / 567",
+                "Phrases learned": "18 / 638",
+                "Remaining vocabulary": "620",
+                "Words": "567",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "1"
+              },
+              "topicCards": [
+                {
+                  "title": "Conditionals",
+                  "counts": "19 of 19 practice cards learned"
+                },
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                },
+                {
+                  "title": "Interview English",
+                  "counts": "0 of 18 practice cards learned"
+                }
+              ]
+            },
+            "deckChecks": [
+              {
+                "selected": "",
+                "current": "",
+                "progress": "1 remaining 18 learned Card 1 of 1",
+                "savedDecksUnchanged": true
+              },
+              {
+                "selected": "built-in",
+                "current": "built-in",
+                "progress": "0 remaining 18 learned",
+                "savedDecksUnchanged": true
+              },
+              {
+                "selected": "user:11111111-1111-4111-8111-111111111111",
+                "current": "",
+                "progress": "1 remaining 18 learned Card 1 of 1",
+                "savedDecksUnchanged": true
+              }
+            ],
+            "detailsWrites": [],
+            "renderWrites": [
+              {
+                "type": "transaction",
+                "stores": [
+                  "settings"
+                ]
+              },
+              {
+                "type": "put",
+                "store": "settings",
+                "key": "activePage"
+              }
+            ],
+            "retainedLearnedAndFavorite": true
+          }
+        },
+        {
+          "name": "routing-chips-language-and-rows",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "keyboard": [
+            {
+              "text": "All situations",
+              "visible": true,
+              "left": 16,
+              "right": 120.03125,
+              "bottom": 358.78125,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Meeting new people",
+              "visible": true,
+              "left": 128.03125,
+              "right": 274.84375,
+              "bottom": 358.78125,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Before a work meeting",
+              "visible": true,
+              "left": 282.84375,
+              "right": 444.34375,
+              "bottom": 358.78125,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Coffee and lunch breaks",
+              "visible": true,
+              "left": 110.34375,
+              "right": 280.265625,
+              "bottom": 358.78125,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Free time and weekends",
+              "visible": true,
+              "left": 288.265625,
+              "right": 459.828125,
+              "bottom": 358.78125,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Conferences and events",
+              "visible": true,
+              "left": 115.828125,
+              "right": 284.484375,
+              "bottom": 358.78125,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Traveling",
+              "visible": true,
+              "left": 292.484375,
+              "right": 374.125,
+              "bottom": 358.78125,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            }
+          ],
+          "data": {
+            "keyboard": [
+              {
+                "text": "All situations",
+                "visible": true,
+                "left": 16,
+                "right": 120.03125,
+                "bottom": 358.78125,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Meeting new people",
+                "visible": true,
+                "left": 128.03125,
+                "right": 274.84375,
+                "bottom": 358.78125,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Before a work meeting",
+                "visible": true,
+                "left": 282.84375,
+                "right": 444.34375,
+                "bottom": 358.78125,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Coffee and lunch breaks",
+                "visible": true,
+                "left": 110.34375,
+                "right": 280.265625,
+                "bottom": 358.78125,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Free time and weekends",
+                "visible": true,
+                "left": 288.265625,
+                "right": 459.828125,
+                "bottom": 358.78125,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Conferences and events",
+                "visible": true,
+                "left": 115.828125,
+                "right": 284.484375,
+                "bottom": 358.78125,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Traveling",
+                "visible": true,
+                "left": 292.484375,
+                "right": 374.125,
+                "bottom": 358.78125,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              }
+            ],
+            "languageSamples": 72,
+            "sharedComponentsListening": [
+              {
+                "text": "In a practice project, a form showed the wrong error message after validation failed. I was responsible for finding the cause. I reproduced the problem, traced it to an incorrect condition, and added a regression test before fixing it. The test passed, and the correct message appeared for the case we had reproduced. I learned how useful a small, repeatable example can be.",
+                "lang": "en-US"
+              },
+              {
+                "text": "I would start by saying that AI can be very useful at work. First of all, it can save time by automating routine tasks. On top of that, it can help people come up with ideas faster and explore information more efficiently. That being said, AI can make mistakes, so we should always verify the results. Overall, I think AI should support people, not replace them.",
+                "lang": "en-US"
+              },
+              {
+                "text": "I used the STAR framework to describe a difficult release: I explained the situation, my task, the actions I took, and the final result.",
+                "lang": "en-US"
+              }
+            ],
+            "samePhraseIdentity": true
+          }
+        },
+        {
+          "name": "malformed-pack-retry-and-loading",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "noPartialCatalog": true,
+            "noLearningWrites": true,
+            "recovery": true
+          }
+        },
+        {
+          "name": "learn-pass-filter-independence",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "limited": {
+              "vocabulary": "2 / 638 <1%",
+              "stats": {
+                "Topics completed": "0 / 34",
+                "In Focus": "0",
+                "Words learned": "1 / 566",
+                "Phrases learned": "2 / 638",
+                "Remaining vocabulary": "636",
+                "Words": "566",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "0"
+              },
+              "topicCards": [
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                }
+              ]
+            },
+            "filtersDoNotChangeTotals": true
+          }
+        },
+        {
+          "name": "ordinary-dialog-paths-baseline",
+          "version": "baseline",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "outcomes": [
+              {
+                "action": "confirm",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "confirm",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "history",
+                "errors": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "ordinary-dialog-paths-candidate",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "outcomes": [
+              {
+                "action": "confirm",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "confirm",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "history",
+                "errors": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "firefox": {
+      "version": "159.0",
+      "scenarios": [
+        {
+          "name": "same-name-topic-and-persistence",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "initial": {
+              "vocabulary": "18 / 638 2%",
+              "stats": {
+                "Topics completed": "1 / 34",
+                "In Focus": "0",
+                "Words learned": "0 / 566",
+                "Phrases learned": "18 / 638",
+                "Remaining vocabulary": "620",
+                "Words": "566",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "0"
+              },
+              "topicCards": [
+                {
+                  "title": "Conditionals",
+                  "counts": "18 of 18 practice cards learned"
+                },
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                },
+                {
+                  "title": "Interview English",
+                  "counts": "0 of 18 practice cards learned"
+                }
+              ]
+            },
+            "imported": {
+              "vocabulary": "18 / 639 2%",
+              "stats": {
+                "Topics completed": "0 / 34",
+                "In Focus": "0",
+                "Words learned": "0 / 567",
+                "Phrases learned": "18 / 638",
+                "Remaining vocabulary": "621",
+                "Words": "567",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "1"
+              },
+              "topicCards": [
+                {
+                  "title": "Conditionals",
+                  "counts": "18 of 19 practice cards learned"
+                },
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                },
+                {
+                  "title": "Interview English",
+                  "counts": "0 of 18 practice cards learned"
+                }
+              ]
+            },
+            "removed": {
+              "vocabulary": "18 / 638 2%",
+              "stats": {
+                "Topics completed": "1 / 34",
+                "In Focus": "1",
+                "Words learned": "0 / 566",
+                "Phrases learned": "18 / 638",
+                "Remaining vocabulary": "620",
+                "Words": "566",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "0"
+              },
+              "topicCards": [
+                {
+                  "title": "Conditionals",
+                  "counts": "18 of 18 practice cards learned"
+                },
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                },
+                {
+                  "title": "Interview English",
+                  "counts": "0 of 18 practice cards learned"
+                }
+              ]
+            },
+            "restored": {
+              "vocabulary": "19 / 639 2%",
+              "stats": {
+                "Topics completed": "1 / 34",
+                "In Focus": "2",
+                "Words learned": "1 / 567",
+                "Phrases learned": "18 / 638",
+                "Remaining vocabulary": "620",
+                "Words": "567",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "1"
+              },
+              "topicCards": [
+                {
+                  "title": "Conditionals",
+                  "counts": "19 of 19 practice cards learned"
+                },
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                },
+                {
+                  "title": "Interview English",
+                  "counts": "0 of 18 practice cards learned"
+                }
+              ]
+            },
+            "deckChecks": [
+              {
+                "selected": "",
+                "current": "",
+                "progress": "1 remaining 18 learned Card 1 of 1",
+                "savedDecksUnchanged": true
+              },
+              {
+                "selected": "built-in",
+                "current": "built-in",
+                "progress": "0 remaining 18 learned",
+                "savedDecksUnchanged": true
+              },
+              {
+                "selected": "user:11111111-1111-4111-8111-111111111111",
+                "current": "",
+                "progress": "1 remaining 18 learned Card 1 of 1",
+                "savedDecksUnchanged": true
+              }
+            ],
+            "detailsWrites": [],
+            "renderWrites": [
+              {
+                "type": "transaction",
+                "stores": [
+                  "settings"
+                ]
+              },
+              {
+                "type": "put",
+                "store": "settings",
+                "key": "activePage"
+              }
+            ],
+            "retainedLearnedAndFavorite": true
+          }
+        },
+        {
+          "name": "routing-chips-language-and-rows",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "keyboard": [
+            {
+              "text": "All situations",
+              "visible": true,
+              "left": 16,
+              "right": 120.01666259765625,
+              "bottom": 358.79998779296875,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Meeting new people",
+              "visible": true,
+              "left": 128.01666259765625,
+              "right": 274.81666564941406,
+              "bottom": 358.79998779296875,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Before a work meeting",
+              "visible": true,
+              "left": 282.816650390625,
+              "right": 444.2666473388672,
+              "bottom": 358.79998779296875,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Coffee and lunch breaks",
+              "visible": true,
+              "left": 110.05000305175781,
+              "right": 279.9499969482422,
+              "bottom": 358.79998779296875,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Free time and weekends",
+              "visible": true,
+              "left": 287.95001220703125,
+              "right": 459.50001525878906,
+              "bottom": 358.79998779296875,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Conferences and events",
+              "visible": true,
+              "left": 115.71665954589844,
+              "right": 284.3666687011719,
+              "bottom": 358.79998779296875,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            },
+            {
+              "text": "Traveling",
+              "visible": true,
+              "left": 292.3666687011719,
+              "right": 374,
+              "bottom": 358.79998779296875,
+              "limit": 779,
+              "width": 390,
+              "outline": "solid"
+            }
+          ],
+          "data": {
+            "keyboard": [
+              {
+                "text": "All situations",
+                "visible": true,
+                "left": 16,
+                "right": 120.01666259765625,
+                "bottom": 358.79998779296875,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Meeting new people",
+                "visible": true,
+                "left": 128.01666259765625,
+                "right": 274.81666564941406,
+                "bottom": 358.79998779296875,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Before a work meeting",
+                "visible": true,
+                "left": 282.816650390625,
+                "right": 444.2666473388672,
+                "bottom": 358.79998779296875,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Coffee and lunch breaks",
+                "visible": true,
+                "left": 110.05000305175781,
+                "right": 279.9499969482422,
+                "bottom": 358.79998779296875,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Free time and weekends",
+                "visible": true,
+                "left": 287.95001220703125,
+                "right": 459.50001525878906,
+                "bottom": 358.79998779296875,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Conferences and events",
+                "visible": true,
+                "left": 115.71665954589844,
+                "right": 284.3666687011719,
+                "bottom": 358.79998779296875,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              },
+              {
+                "text": "Traveling",
+                "visible": true,
+                "left": 292.3666687011719,
+                "right": 374,
+                "bottom": 358.79998779296875,
+                "limit": 779,
+                "width": 390,
+                "outline": "solid"
+              }
+            ],
+            "languageSamples": 72,
+            "sharedComponentsListening": [
+              {
+                "text": "In a practice project, a form showed the wrong error message after validation failed. I was responsible for finding the cause. I reproduced the problem, traced it to an incorrect condition, and added a regression test before fixing it. The test passed, and the correct message appeared for the case we had reproduced. I learned how useful a small, repeatable example can be.",
+                "lang": "en-US"
+              },
+              {
+                "text": "I would start by saying that AI can be very useful at work. First of all, it can save time by automating routine tasks. On top of that, it can help people come up with ideas faster and explore information more efficiently. That being said, AI can make mistakes, so we should always verify the results. Overall, I think AI should support people, not replace them.",
+                "lang": "en-US"
+              },
+              {
+                "text": "I used the STAR framework to describe a difficult release: I explained the situation, my task, the actions I took, and the final result.",
+                "lang": "en-US"
+              }
+            ],
+            "samePhraseIdentity": true
+          }
+        },
+        {
+          "name": "malformed-pack-retry-and-loading",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "noPartialCatalog": true,
+            "noLearningWrites": true,
+            "recovery": true
+          }
+        },
+        {
+          "name": "learn-pass-filter-independence",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "limited": {
+              "vocabulary": "2 / 638 <1%",
+              "stats": {
+                "Topics completed": "0 / 34",
+                "In Focus": "0",
+                "Words learned": "1 / 566",
+                "Phrases learned": "2 / 638",
+                "Remaining vocabulary": "636",
+                "Words": "566",
+                "Phrases": "638",
+                "Verbs": "339",
+                "Topics": "34",
+                "Your collections": "0"
+              },
+              "topicCards": [
+                {
+                  "title": "Small Talk",
+                  "counts": "0 of 36 practice cards learned"
+                }
+              ]
+            },
+            "filtersDoNotChangeTotals": true
+          }
+        },
+        {
+          "name": "ordinary-dialog-paths-baseline",
+          "version": "baseline",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "outcomes": [
+              {
+                "action": "confirm",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "confirm",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "history",
+                "errors": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "ordinary-dialog-paths-candidate",
+          "version": "candidate",
+          "pass": true,
+          "errors": [],
+          "data": {
+            "outcomes": [
+              {
+                "action": "confirm",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "confirm",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "cancel",
+                "navigation": "history",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "home",
+                "errors": []
+              },
+              {
+                "action": "escape",
+                "navigation": "history",
+                "errors": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "pass": true
+}

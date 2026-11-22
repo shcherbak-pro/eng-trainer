@@ -1,0 +1,36 @@
+chromium same-name-topic-and-persistence locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for getByText(/Collection change was not saved/) to be visible
+
+    at <worktree>\docs\reviews\eng-v2-03-astra\browser-independent.mjs:120:61
+    at async scenario (<worktree>\docs\reviews\eng-v2-03-astra\browser-independent.mjs:105:71)
+    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:110:3
+chromium routing-chips-language-and-rows AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(facts.left>=0&&facts.right<=facts.width+1)
+
+    at file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:198:40
+    at async scenario (file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:105:71)
+    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:191:3
+chromium malformed-pack-retry-and-loading PASS
+chromium learn-pass-filter-independence PASS
+chromium ordinary-dialog-paths-baseline PASS
+chromium ordinary-dialog-paths-candidate PASS
+firefox same-name-topic-and-persistence locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for getByText(/Collection change was not saved/) to be visible
+
+    at <worktree>\docs\reviews\eng-v2-03-astra\browser-independent.mjs:120:61
+    at async scenario (<worktree>\docs\reviews\eng-v2-03-astra\browser-independent.mjs:105:71)
+    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:110:3
+firefox routing-chips-language-and-rows AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(facts.left>=0&&facts.right<=facts.width+1)
+
+    at file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:198:40
+    at async scenario (file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:105:71)
+    at async file:///<worktree>/docs/reviews/eng-v2-03-astra/browser-independent.mjs:191:3
+firefox malformed-pack-retry-and-loading PASS
+firefox learn-pass-filter-independence PASS
+firefox ordinary-dialog-paths-baseline PASS
+firefox ordinary-dialog-paths-candidate PASS

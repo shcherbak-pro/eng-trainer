@@ -1,0 +1,39 @@
+{
+  "rc1Fingerprint": "01c6ec10666ed943fbb3804101637cd00458ed60a8caaf319586e84e44e7039c",
+  "rc2Fingerprint": "e862d40228c7338e07610c1c33fae1afdbcf2d07b25f80512aaf07db7bd88044",
+  "fullCandidateFingerprint": "bc57c526c352e5174053fd19cb2bbd0d113eeb47288f569ed68fbfdc97738fa3",
+  "changes": [
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "before": "21b216cdf8ad074aa0e411c45d2efa4909bb937d169543b4fd8d1cd1420f69fc",
+      "after": "2f601f77cafcbbc4b41de4aa720cab5f2cb43274cfae651e140af06d0d5b3cc5"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.test.ts",
+      "before": "c8abda151df2121f8f08e9d2ebda8fea2ea2e8e9bca4260ce70b20a71b8118aa",
+      "after": "c307cacd7620f01a8881661d52cf6ea387e77968e4be8dbc8d395a0e91f57d93"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.ts",
+      "before": "c7cbf6ff33f29942f04c1b409e58a681e96c3c58e8c502768068e5f83954e0d0",
+      "after": "818794dff77322b9dd502e67dfac67ec066511b8b67ab58255c87f3e393c02ef"
+    }
+  ],
+  "candidateFiles": 1935,
+  "modified": 24,
+  "untracked": 695,
+  "priorComparableEntries": 1613,
+  "currentComparableEntries": 1613,
+  "rc1ReviewPublicAdditions": 155,
+  "rc2EvidencePublicAdditions": 167,
+  "handoffPrefixBytes": 38402,
+  "mainFiles": 1332,
+  "mainUntracked": 92,
+  "historicalTrees": {
+    "docs/reviews/eng-v2-03-astra": 506,
+    "docs/reviews/eng-v2-03-rc1-astra": 619,
+    "docs/evidence/eng-v2-03": 49,
+    "docs/evidence/eng-v2-03-rc1": 286,
+    "docs/evidence/eng-v2-03-rc2": 204
+  }
+}

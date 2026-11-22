@@ -1,0 +1,1127 @@
+{
+  "authenticated": true,
+  "note": "Prior independent records lacked full RC1 JS/CSS hashes. Their gap is closed with an isolated rebuild from SHA-256-verified RC1 inputs; all retained non-v1 bytes match. All retained v1 bytes match prior recorded hashes.",
+  "priorProtectedArtifactHashesVerified": 29,
+  "priorRecordedHtmlHashVerified": true,
+  "authenticatedBuildInputs": [
+    {
+      "file": ".gitignore",
+      "sha256": "5a7aa7952c1f9b3a29428b38fbeaa57d969a7dcfa13cecce23e484bfde84a213",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "CHANGELOG.md",
+      "sha256": "8b3669e8c487d31a676c4989f5c824060a2d2fe4bc09b5dd1f3a71b481d17be0",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "README.md",
+      "sha256": "c80eacc255a2903e00c6ab52d8f741623ea94a72bf4360ee64f0d6e5d2cf25e6",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/catalog.json",
+      "sha256": "3bc5770c9c8ff9b4829265c565f5873796eeff3af45ba500758c6618006e3a0d",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "content/packs/agent-framework.json",
+      "sha256": "85e0e627ac7337604bdf126452c0053b35c4f13489c8ebf6e663d4f8fae0b0ff",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/ai-certification-verbs-contextual.json",
+      "sha256": "ae3194d44e7ae2ac854fcb600db6b21ac635c99d72544369c4a80e47907fdc09",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/ai-certification.json",
+      "sha256": "0004b329f60228c83f8e903f7fd327ad7943cb773472d3720f1c5ad2c9c5b724",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/conditionals.json",
+      "sha256": "1c6e8e33d50795c2119dfea8880ecd9c8403b388d6630c0d3cb59d41fd8b7aba",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "content/packs/essential-100.json",
+      "sha256": "a234a9369e91c1441d702d4a3398bbba6f762496eaed5c913d38b57eb9ec49a3",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/hedging-and-linking.json",
+      "sha256": "3558956fef7da3032951143512e6523b8cf768ff4913e8208e7bd4e327846edb",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/interview-english.json",
+      "sha256": "b1b80134e0f24ef7af11d67166a8c085f14fe9e1ebc9a18ada214b3f69fa7fae",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "content/packs/logical-200.json",
+      "sha256": "93970da90bac003e2c0fcee1e677335d8a0e5cfd03e77e653cfdd6dcee8168cc",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/personal-topics.json",
+      "sha256": "4769601b1b7118e40fcf390a472543a27341a7dd1dced846b83791af77da72ed",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/presentations.json",
+      "sha256": "2ccbb796d840b83cc0037dcde2c26d2afba9e05bd650c91d8fb842225a127fff",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/small-talk.json",
+      "sha256": "9223c920eb6387cd0de76b09f144f4e62543b42327abbf776e1720dc4dc19bbf",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "content/packs/speaking-foundations.json",
+      "sha256": "a0c5236098424dfcf59aa94c8601e84334901f2623fd4ca4add2504d61855636",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/speaking-practice.json",
+      "sha256": "7c69d511c47571413573d367ecabeef7704801ff0a713305cdda38e3095ef09c",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "content/packs/workplace-topics.json",
+      "sha256": "232c5c6e9461ebf464a8904aea2908c45618fe3044c8b2c1cfd8c940f673b6f6",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "index.html",
+      "sha256": "1b6c1faa3315892c3bd5df1a0b7dbafd266d4803b97357be21a5d1f3b766250e",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "fd8eebb14c8a657d2ce4feecafb970c2aeb3a9d9368d25dfb56bea485921c01c",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "package.json",
+      "sha256": "89fcf90a1b7728b32303034b69306201acfa5dfdaf0e0f4bdf33b920d14f2df5",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "public/favicon.svg",
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "public/fonts/FONTLOG-EngTrainerSans.txt",
+      "sha256": "4bef97c323a80b8dca8b3ef48da47dac36c9eb7dd2c10ceda198c9ce82fe8a27",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "public/fonts/OFL-EngTrainerSans.txt",
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "public/fonts/OFL-Literata.txt",
+      "sha256": "5b52638039d9f63fe82bab2ccea1cf0312d275c49e6f1cf7e36361c256b4ce92",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "scripts/assemble-site.mjs",
+      "sha256": "80b309024da275a3c133ac31fb2efff80a584e2ace055c3c152cf8f10d812355",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "scripts/check-site.mjs",
+      "sha256": "aa10465d50983ed17bc21b8962b3e5fce20a61961d8db3e12ed00d976750c1f1",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "scripts/content-build.mjs",
+      "sha256": "cb64a73582948084155ae411e82181e742c39d371f27cba65912c93584a4b048",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "scripts/content-build.test.mjs",
+      "sha256": "e28c205e3059e5a2fea6d6d0ccb95b0013615aa38737e51fbc478abc73b6ea8e",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "scripts/fonts/derive_eng_trainer_sans.py",
+      "sha256": "8e9f2b5b183dc38e8191cddd54feca1bfd867fa7a55bd3b7a22c0c13a3376836",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "scripts/fonts/requirements.txt",
+      "sha256": "b2141ea3aa340ca495d303ad0ecad9f2ce3703a54fa58c0409451a5496d5bc87",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "scripts/generate-content.mjs",
+      "sha256": "06735f2427bd17ec94e9438eab76ac7230b322006bf8f267f8491cb29d2c6966",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "scripts/verify-content-migration.mjs",
+      "sha256": "fc4cfa1ebf6bcc4f653afc48db95506d9053eea7f1c94d51787d3ee7ecf4bc60",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/app.css",
+      "sha256": "b0139199e71a75e40345b79759d216525c4c4635c622779bb84be09ba3210992",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/app/App.home.test.ts",
+      "sha256": "87d2f59d429f5c3de9bb83ee394346c4f7ac714bbca6e1c6aab61f2bb6a14e3b",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/app/App.svelte",
+      "sha256": "0a4d5b42568f99e814185ef87dcd5d3c83b74011e4660511b040ac98bca64f02",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/app/App.test.ts",
+      "sha256": "880a50d7b917f16055e512dbf1a4aa20cd00308a043f04bca1b1ccc5bd252bd3",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/app/AppHeader.svelte",
+      "sha256": "1ece655afa11858d6651ca9d061a9de7c527202648b4042678d9b73bf1e11c3f",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/app/AppShell.svelte",
+      "sha256": "1a5aae5cec1800e65177277f2cf39c68559917154494f274929003b123a80729",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/app/ThemeToggle.svelte",
+      "sha256": "33f8a3871890fa43c95fcf396cebc27eca0ea6f5dc5f67c90c412863f232110c",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/app/navigation.test.ts",
+      "sha256": "29d1c75a9417f403385b9f34d84ac2970fb8d2032304b2d512b54b03c3354b1e",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/app/navigation.ts",
+      "sha256": "b544e59698c237d72d77da373a321fdcdb0f3f75dc03c350e3f4cb159d7b8a42",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/app/theme.ts",
+      "sha256": "ed2f24de2f117eb8f1a329b842b442570377e54f6d9225ac5b7d325109ef142a",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/assets/fonts/README.md",
+      "sha256": "e6b3a9f76bb4a5b26d93a2e7cdb80342e91f0b540a2fb496887cb9987965628b",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/assets/fonts/eng-trainer-sans-cyrillic.woff2",
+      "sha256": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/assets/fonts/eng-trainer-sans-greek.woff2",
+      "sha256": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/assets/fonts/eng-trainer-sans-latin-ext.woff2",
+      "sha256": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/assets/fonts/eng-trainer-sans-latin.woff2",
+      "sha256": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/assets/fonts/literata-latin-italic.woff2",
+      "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/assets/fonts/literata-latin.woff2",
+      "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/fileName.test.ts",
+      "sha256": "a7d7dfb49730680c1cfb8f8a333c2c9def47423587132cb0e24fc04880dc08b8",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/fileName.ts",
+      "sha256": "1ac766f963a7e2f0696755382249b007b9ddc28fb35294b9292fcc5ad00979ec",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/format.test.ts",
+      "sha256": "4acc9c665d1406e63c2aa75a0466947311e74511fa8e74091744db92bdf3141f",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/format.ts",
+      "sha256": "28844fdade7e081cd859745a6959814c4e18871a5c5d4a5e400f990711f3f041",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/importErrors.test.ts",
+      "sha256": "1432a3b80dff6eefc265d23fcf5c28af86317be3a316632601fe6267508596af",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/importGuide.test.ts",
+      "sha256": "86b32c94f8b995d08df09bacc66a91efb1b3e7c4d46c74d081013f60a1f719ac",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/importGuide.ts",
+      "sha256": "2d55ef1a7f48438a52c8b6bc7b702336f50a3e004b3ece7f9ab9b8219867a5e0",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/service.test.ts",
+      "sha256": "cdb1420f7bf6639906d90e855763fb7dce97594c04e62fa4086d78b8a4198bfc",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/collections/service.ts",
+      "sha256": "44f0db13353ff9ace55b6356f596d5a8e51af5698a98731397ea9cd38b455a5a",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/collections/serviceErrors.test.ts",
+      "sha256": "17370540696b8c42060baf845e64e35eed554bdd866edfa6d0eae4f8a09a6ebf",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/content/builtIn.test.ts",
+      "sha256": "4fd095fd9965d695efac997f10e2e3ae426680b13bf7e63cd7840d4ceac19072",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/content/builtIn.ts",
+      "sha256": "cf94975277342f67dfe7b86b3733e54ae8330f3a4aa39d0c54c858dfe9bb6dea",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/content/catalog.test.ts",
+      "sha256": "53fc5ea700b4bcc2d5be31b7cc8d2369c60ec0e4edd858dd57aed870730deffb",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/content/catalog.ts",
+      "sha256": "f3994cda59891959454d58011b617d4393c5fd6b928120b3eee99e63b3c7c20b",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/content/descriptionLanguage.test.ts",
+      "sha256": "c69aac8b2e207d670a938fb2f1de2077886d8a5f23918f44e834cbe8d5e40664",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/content/descriptionLanguage.ts",
+      "sha256": "fda8fb5bf9d13067c88578d88458e53b1f763bdb429d18288385a4398d456c39",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/content/packFormat.js",
+      "sha256": "b289899723e52351aa6fd0ebce48979cee6ac9734190ebd21c7226b924dea089",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/content/packTypes.ts",
+      "sha256": "e4395776198f631bcea6742e5d7ff0f7f36500eb11148de8048abc706c952157",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/content/search.ts",
+      "sha256": "004e5f6226e627a09280fce29d5b3287b751287a7f7468fce4878f932340128e",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/content/topics.test.ts",
+      "sha256": "ab17f691c6351026575e71ad4c3787b3be05c1ebad252f72d9eabe1f623f0c8b",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/content/types.ts",
+      "sha256": "19e3d3fc925d712dffb607b33f38e1eba4e15d3d783605ce95b8e545b83bfbab",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/content/userCatalog.ts",
+      "sha256": "a9291e2258c9515a5d7d1c8062ac702336c09e26ce2786961d14eeb7d0e73737",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/collections/CollectionsPage.svelte",
+      "sha256": "0a347d3e39a6ceac9ae65e3ce60418917209089fbcfa81e9f132f01619bcb889",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/collections/CollectionsPage.test.ts",
+      "sha256": "2a0c736ae1ba92749e0ed1108e06767c8a18bd586e0c9c0de0dac0991d6c324f",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/collections/ImportHelp.svelte",
+      "sha256": "0e53395973cff59798d8de98e45333881dcdf35c2e768c2ee42246b5b9654f84",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/collections/importFeedback.ts",
+      "sha256": "6c9ed40b0463369ee031e17f675ecac66d603de00a4c94612714f39899a7e1fa",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/collections/retainedLearning.test.ts",
+      "sha256": "500cade9ed6e009be1d04fbcab61f0f375913e30680f447c6294ea357402b765",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/exercises/AnswersPage.svelte",
+      "sha256": "42ac01da2b3b8b64a49295872e4fbc4bc20258fa0501671c6848315604678beb",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/features/exercises/PatternsPage.svelte",
+      "sha256": "4523b4257f8e94cfe1bcf3eea0d187db65397729cf25cad973bf01d47e211b31",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/features/exercises/PracticePage.svelte",
+      "sha256": "d53008f4e68049acdb4ce477c350577a6768779fbd364fcda3aea0d1f3fb16bb",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/exercises/ReversePracticePage.svelte",
+      "sha256": "886d86ccca0b2e83ad8e2790bd7c4d5a71b44122a5657edc7d18ced79295dfb5",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/exercises/studyText.test.ts",
+      "sha256": "e11e7c005efab8e92a4ecc4231719b79bed588a8af3f11d44b9262173bc8a936",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/flashcards/FlashcardsPage.svelte",
+      "sha256": "044f2f337cb2eaf5d8f09a56ef7d68d3ea7e0fd8775336d93f47b896f7f8eb72",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/flashcards/FlashcardsPage.test.ts",
+      "sha256": "3628077e76851cd264147860cdff0d74ff60834bcfc1c4ee98996750e601059b",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/flashcards/flashcards.test.ts",
+      "sha256": "696c8ed83e8061129a38429a2859ebeff219c3651480ac5fb3f7cfce2ecc47b2",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/flashcards/flashcards.ts",
+      "sha256": "40e3155a5668b46890d72002cedbe446542b101818fe2dbe712dc340360a72bf",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/flashcards/learnAgainUndo.test.ts",
+      "sha256": "be6874cd2558b588e0e18792829fda5f0e04170ee5cfb344d0df9b8f7560a76e",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/flashcards/types.ts",
+      "sha256": "a8d31686dd1c3c7adb3a5d35ed10173df865e5dd2660401f38b905815f790c39",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/focus/FocusListPage.svelte",
+      "sha256": "14a0f317d3aae7ff52db21cb8772742874c5c0c0631e6593f48c9e669ad000e3",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/features/home/ExpansionPanel.svelte",
+      "sha256": "9f7956f3a71289bdb3bbac53fecce6152032b245355caffa3a7f4051254840ed",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/home/HomeOverview.svelte",
+      "sha256": "ac9adb86fcc2d1e09db8202bf9e937eb1eddb612ce484760953074fef4060772",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/home/IndexPage.svelte",
+      "sha256": "19e2813ec743402c94b93435f57d719ad32a77e17b8ed7b010c124ccf1d4e4f7",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/features/home/LearnPassManager.svelte",
+      "sha256": "657037e347b7f85d11d805c7919097f95e752c47b3e8cb173849a8e08579920d",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/home/LearnPassManager.test.ts",
+      "sha256": "e3da78939df0cc6f8255b99528a1ec9324c2d8a814d6f3daa5645b58d1688413",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/home/TopicCards.svelte",
+      "sha256": "60508ef6ee6e1b5ba02523e4d062d117f9ecf952d4d6b99f3c98acf0edc9b6dc",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/home/homeStats.test.ts",
+      "sha256": "5b2090ec5cace92cc581663fcf2efd6f446d3f43f2d2970c2203de4567b284c6",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/home/homeStats.ts",
+      "sha256": "c90796f20835066792b3682f1dd09511c63b5dfbd4bbca091cb0d0cf33eb187a",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/settings/SettingsPage.svelte",
+      "sha256": "310b1aff96288c22e5b25a15a8e6cbcf3abc9822a481991b1fe705bb46379234",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/topics/TopicPage.svelte",
+      "sha256": "11fad6e95b5d4d0befd7260a1d258bb0f0f64d358e6b6b9f7b87d0b9fa46d410",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.test.ts",
+      "sha256": "c8abda151df2121f8f08e9d2ebda8fea2ea2e8e9bca4260ce70b20a71b8118aa",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.ts",
+      "sha256": "c7cbf6ff33f29942f04c1b409e58a681e96c3c58e8c502768068e5f83954e0d0",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/topics/topicView.test.ts",
+      "sha256": "84c0c01b0c5bb4c723a7a960827f583d06c4b7db743e2d1e951abb082a321436",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/topics/topicView.ts",
+      "sha256": "5b37e1a417561a00f319a8b453c257914e81d9bcd9577ecee0512c65091157bb",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/features/vocabulary/IrregularVerbsPage.svelte",
+      "sha256": "de12ec5e920187495b904accb496f669026d1a99d8b3ee6c7f4c161afa209837",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/features/vocabulary/PhrasesPage.svelte",
+      "sha256": "278961fc180273e9116117c7b871f6ad3f70796c78a2f3a32a47e09f83df5aa5",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/features/vocabulary/WordIndexPage.svelte",
+      "sha256": "8f4c619c1544c9cfde87a920cca89529ef4993d3449b4131d449de3c0d82bfdb",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/main.ts",
+      "sha256": "9421737350fa1bd50252a1f417d4fb0f71faab6543553c1254d11721eb6ad602",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/download.ts",
+      "sha256": "2abd6162e74f6dfe6cc44dcab26531d8f91d3d3c16f017b5f46311f07cbc4bb4",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/AnswerCard.svelte",
+      "sha256": "79198247d85aa6ae311fc859a6da244ea5b225a3e36ad7bbe91a207fa784d342",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/EntryExamples.svelte",
+      "sha256": "4371ad7ede448d7b599cb17ac37f6f66611f57ee7f39159fecfa86b1ecca14f4",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/FocusButton.svelte",
+      "sha256": "69cba51fc525d30994407f70bdbe5c8dbdf30138137f10d8663a786f3da540b5",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/HideButton.svelte",
+      "sha256": "c1b4f7f948996d8c03730771fdfe678f9506e2a985a9ff3c57e98d9edc6a9a26",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/IrregularVerbCard.svelte",
+      "sha256": "9c8f367eb8513a84a2fab7e75fccc92294949bf47d60457c404721dc44b977c9",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/PatternCard.svelte",
+      "sha256": "120f233e027a0275862636953da351c22cbc746eea6f79b56885e5d81edf3247",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/PhraseCard.svelte",
+      "sha256": "582df90c6613d8b0fd48f4430524475e54fb3234cf911b840fd7b3b43056ba8d",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/shared/entries/WordCard.svelte",
+      "sha256": "896554480b9507582df47c1e796d1d58865a8ff7f44bbe33643bbc392dce35a6",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/hideUndo.test.ts",
+      "sha256": "354c67842c262af63d2eb363bf6417b5b34cf977264da30de37e97d484e808a9",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/entries/hideUndoValidity.test.ts",
+      "sha256": "6304a497d976bd6caa8681d749cf1225e0225d5427ac1bccd1d8b5bad5a3d516",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/pagination.ts",
+      "sha256": "66fb0e8e17f488c2c6fe196504c44908466d0d666b86b05b26fe54616b748775",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/speech/SectionSpeechControl.svelte",
+      "sha256": "7f538952819065653486b0aa4eae6cbbb817d26a891ef987c6388f5d22f094bc",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/speech/SpeakButton.svelte",
+      "sha256": "b886b0dee662352e29c3982eef9a76bf5dd77e238516ca8f6bd7351cda101f73",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/speech/sectionSpeech.ts",
+      "sha256": "122efdbadd35bbae1eb706516cc9d7cefb5e70725c6633f0e4e77bbf91bdc1cf",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/speech/speech.ts",
+      "sha256": "34c785d86ccef5b334c467abe24439a2044b3701c7943591c6446eab01114fa0",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/speech/speechFormatters.ts",
+      "sha256": "8e594d89aefb79ef3ce8183bed68c6d30257710426a8fd5fcd8072b8c536bb43",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/text.ts",
+      "sha256": "0c2640c42d08e039f79cb48b3a6663cb8da84d21926a2759a9745c5424df4390",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/Button.svelte",
+      "sha256": "92c93cce484daf60575037c5d2a7430a9ba7ddf41588d8f98cba7778329bbf17",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/CollectionFilter.svelte",
+      "sha256": "9c1cbf71a53fb834322cc13ade750a74a4254063b1022cc9cc22cdf91e6bb1e5",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/ConfirmDialog.svelte",
+      "sha256": "f8932ee46fed211df7477281e01af3ec819e784a76e84b32ee5892eaec22fe65",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/EmptyState.svelte",
+      "sha256": "0e8532fe63d462cac49d467de5371e8a17b89fb02ab3ba7b29abd5fae9173e36",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/Icon.svelte",
+      "sha256": "41dea60e89512dca528234f9e5d2a36fbe73d1f0af485af62cd1eab68f8ddf44",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/IconButton.svelte",
+      "sha256": "66a9209df63bad7717bcfd16ec989c0d483d574a5cd0f56954b9d46304e624dd",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/Notice.svelte",
+      "sha256": "8f66e38b36bd1bde6cf128366e795c9d1c98c6cba2a74a96d28b7305ef38058d",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/PaginationControls.svelte",
+      "sha256": "24d86d48fe13686a6544179d40342acb457974395a8009081739c89af7abcfb4",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/SearchField.svelte",
+      "sha256": "dc79b058e4f85649d6871fcb3ed0d4a2211390f44ed88fab379d3d36a535923c",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/ToastRegion.svelte",
+      "sha256": "b127899140590337f9b51ced0b5634742270e889325b4d70e00c4293b4cea930",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/icons.ts",
+      "sha256": "e6d3a7f3e0ab4325ad391a3ae322d8c3cb4ca1bb1bc18e002d0ddd68ceb7884b",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/shared/ui/toast.ts",
+      "sha256": "b95e52932a7e01dbc6907b888d2ecefd9c3f6e6abe408e8deef8e5358411a9f8",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/state/index.ts",
+      "sha256": "5224280494b9a24e9f685e7f969962dc58dca68f57d225972fe6cf7e1b52f82e",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/state/persistence.ts",
+      "sha256": "4f2e8a703f63315c3ddc91fc6845147f9c98e446b08d2dbdacbc686379de9d51",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/state/progress.test.ts",
+      "sha256": "3360ca234ea8bd6915beda58d01695d3a22a36fec8701099a51688b8fd148d27",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/state/progress.ts",
+      "sha256": "d8f9f0c60c94ccc880631dc2e2bceeec70831a89c8ae9b83c5fb31a3116ad099",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/state/reset.test.ts",
+      "sha256": "65fa630f0c1ac1cc1db91ae2e7c2ece2190d94148b41c4d77f83fa3bcc935207",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/state/settings.ts",
+      "sha256": "dcec73371e25489bf9361aa1ac3acad1ade348d27e9f1bd0551385264098328b",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/state/undoValidity.test.ts",
+      "sha256": "85c4f058083c7614ecd2e6c9fbfa323ea5a384246b31b71b9d0a2f67e5c47f91",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/state/viewState.ts",
+      "sha256": "86dd1af7580f91ad0143b9c4998956cdf5216aece91c1332250b109b7cded676",
+      "untracked": false,
+      "changed": true
+    },
+    {
+      "file": "src/storage/database.ts",
+      "sha256": "14eab95bc6de32814a6451705fa238aafc65f40950f9b8bb0140b44af8b87a2e",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/storage/openStorage.test.ts",
+      "sha256": "ffe0b3391020adc8d80a51c996f8e42ce7a18f3d8c2e479d24b41538c255d9ff",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/styles/base.css",
+      "sha256": "db170bc3b1352782fca887926633957ba8f81e86477f1296d3e9c780e9b1adaf",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/styles/fonts.css",
+      "sha256": "724d43c8b93396ed7010ac14ca1c4a96a696f71b8d179d6471bfcc0a54693528",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/styles/tokens.css",
+      "sha256": "015467caf5b0d3a07bac8b4ee0fc2a220ba251a01f422f2feef0e27380bc2472",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/test/collections.ts",
+      "sha256": "74e16ef54514291c96f6f6f098330b84934990803f1f62289b3de4167ef1f7e3",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/test/content.ts",
+      "sha256": "ac83fcb1a318d32989522db12d7eb150f92c4774bf57a77f8b3ca2f6af627617",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/test/database.ts",
+      "sha256": "130362aecce9ad5358dce1bed6405bbd7b7da5a513fd70382cdb6a0cdf5caace",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/test/fixtures/content-baseline.json",
+      "sha256": "e2b0ed4f8c2ec1bcef7a927eb5325d11be19d4fa6508f0b4cf93213172ce83a1",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/test/fixtures/eng-v2-03-editorial.json",
+      "sha256": "c3bc15c08dfc78c01adc05f42939e206bb49e958ecd569c9a9ba5ab7c6bce68b",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/test/fixtures/legacy-pack-urls.json",
+      "sha256": "3378b3a51799929a132c0301d362f5977af3bf0bbcf58fb41fd6ffae9485816e",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/test/legacyProjection.js",
+      "sha256": "bafcc18e259f904cb22a31ac8fe79a2ce59764301e94144a2d791cda74a9df3b",
+      "untracked": true,
+      "changed": false
+    },
+    {
+      "file": "src/test/setup.ts",
+      "sha256": "fed8fd377535b12ac0c5078f60e0340e3f6f539f4e9f574fda25b9422257c920",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "src/vite-env.d.ts",
+      "sha256": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "svelte.config.js",
+      "sha256": "707dcfd53f6a2f8687e273925b680a90eb5eee7118335d4043a52fac83c98505",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "tsconfig.json",
+      "sha256": "7e63ab1be23f4435468d062e1507a4296602f022a027eba844e161a21bef0de3",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "tsconfig.node.json",
+      "sha256": "0545d503eac171d76f4dc615ba6dd0f59fe8c3817134ccc8dc577d01bedbec51",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "vite.config.ts",
+      "sha256": "2cafceef96989f084334170f9f5749385776db79372121cb67219a3739a6d412",
+      "untracked": false,
+      "changed": false
+    },
+    {
+      "file": "vitest.config.ts",
+      "sha256": "4314497fa666d44963e2a85b2fb53679977abb5baea145a28a442f9951316eda",
+      "untracked": false,
+      "changed": false
+    }
+  ],
+  "rebuiltNonV1Files": 28,
+  "rc1Artifacts": [
+    {
+      "file": "assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+      "sha256": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682"
+    },
+    {
+      "file": "assets/eng-trainer-sans-greek-FkV9qZ7r.woff2",
+      "sha256": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670"
+    },
+    {
+      "file": "assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+      "sha256": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d"
+    },
+    {
+      "file": "assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+      "sha256": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4"
+    },
+    {
+      "file": "assets/index-BIsJEtZg.js",
+      "sha256": "9e55bf8b2df08c083597f53df1a91dd3528a0b023cf0a6452ada505666eca9ff"
+    },
+    {
+      "file": "assets/index-DFaGuSQ9.css",
+      "sha256": "0bcf9d7e2ce5ced1df5ba74dc2287219661b8286e449c8eb33e97bce6462d3fe"
+    },
+    {
+      "file": "assets/literata-latin-Cedbco83.woff2",
+      "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58"
+    },
+    {
+      "file": "assets/literata-latin-italic-Ckc1vdjp.woff2",
+      "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265"
+    },
+    {
+      "file": "data/manifest.json",
+      "sha256": "db99f2172b7c30c9ada8299ab2c3f463c4fe600b39878b150e321b3e5e57776b"
+    },
+    {
+      "file": "data/packs/agent-framework.30b26432f0ecf993.json",
+      "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+    },
+    {
+      "file": "data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+      "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+    },
+    {
+      "file": "data/packs/ai-certification.a743e81dde1bc943.json",
+      "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+    },
+    {
+      "file": "data/packs/conditionals.1c6e8e33d50795c2.json",
+      "sha256": "1c6e8e33d50795c2119dfea8880ecd9c8403b388d6630c0d3cb59d41fd8b7aba"
+    },
+    {
+      "file": "data/packs/essential-100.3a71b8e1e38939e1.json",
+      "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+    },
+    {
+      "file": "data/packs/hedging-and-linking.06c92cc29e38d601.json",
+      "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+    },
+    {
+      "file": "data/packs/interview-english.b1b80134e0f24ef7.json",
+      "sha256": "b1b80134e0f24ef7af11d67166a8c085f14fe9e1ebc9a18ada214b3f69fa7fae"
+    },
+    {
+      "file": "data/packs/logical-200.7dea9a714b2c308b.json",
+      "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+    },
+    {
+      "file": "data/packs/personal-topics.03c1443a2cc176cf.json",
+      "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+    },
+    {
+      "file": "data/packs/presentations.2cd234cc3c91ce8d.json",
+      "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+    },
+    {
+      "file": "data/packs/small-talk.9223c920eb6387cd.json",
+      "sha256": "9223c920eb6387cd0de76b09f144f4e62543b42327abbf776e1720dc4dc19bbf"
+    },
+    {
+      "file": "data/packs/speaking-foundations.378bea01a015d76e.json",
+      "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+    },
+    {
+      "file": "data/packs/speaking-practice.30d81bc404256cb8.json",
+      "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+    },
+    {
+      "file": "data/packs/workplace-topics.dad3daa8ab78823e.json",
+      "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+    },
+    {
+      "file": "favicon.svg",
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "file": "fonts/FONTLOG-EngTrainerSans.txt",
+      "sha256": "4bef97c323a80b8dca8b3ef48da47dac36c9eb7dd2c10ceda198c9ce82fe8a27"
+    },
+    {
+      "file": "fonts/OFL-EngTrainerSans.txt",
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "file": "fonts/OFL-Literata.txt",
+      "sha256": "5b52638039d9f63fe82bab2ccea1cf0312d275c49e6f1cf7e36361c256b4ce92"
+    },
+    {
+      "file": "index.html",
+      "sha256": "cb488245caca76d340d370107870a12bf32f21941eb57415cb7d2e5aef733b92"
+    },
+    {
+      "file": "v1/assets/index-Bod3ovET.css",
+      "sha256": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83"
+    },
+    {
+      "file": "v1/assets/index-C0A337ei.js",
+      "sha256": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913"
+    },
+    {
+      "file": "v1/data/materials.json",
+      "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+    },
+    {
+      "file": "v1/favicon.svg",
+      "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+    },
+    {
+      "file": "v1/index.html",
+      "sha256": "0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f"
+    }
+  ]
+}

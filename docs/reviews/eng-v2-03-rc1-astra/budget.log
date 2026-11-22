@@ -1,0 +1,12 @@
+chromium index {"reviewed":470446,"rc1":471079,"code":97264,"withinBudget":true}
+chromium phrases {"reviewed":470446,"rc1":471079,"code":97264,"withinBudget":true}
+chromium wordIndex {"reviewed":530582,"rc1":531215,"code":97264,"withinBudget":true}
+chromium topic/small-talk {"reviewed":470446,"rc1":471079,"code":97264,"withinBudget":true}
+chromium topic/interview-english {"reviewed":470446,"rc1":471079,"code":97264,"withinBudget":true}
+firefox index {"reviewed":470655,"rc1":471288,"code":97264,"withinBudget":true}
+firefox phrases {"reviewed":470655,"rc1":471288,"code":97264,"withinBudget":true}
+firefox wordIndex {"reviewed":530791,"rc1":531424,"code":97264,"withinBudget":true}
+firefox topic/small-talk {"reviewed":470655,"rc1":471288,"code":97264,"withinBudget":true}
+firefox topic/interview-english {"reviewed":470655,"rc1":471288,"code":97264,"withinBudget":true}
+
+[exit 0]

@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 <worktree>
+
+ ✓ docs/reviews/eng-v2-03-astra/race-probe.test.ts > baseline: reproduce original flushSync-close then same-stack navigation 2442ms
+ ✓ docs/reviews/eng-v2-03-astra/race-probe.test.ts > candidate: reproduce original flushSync-close then same-stack navigation 1629ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  13:46:08
+   Duration  5.16s (transform 2.10s, setup 40ms, collect 69ms, tests 4.07s, environment 642ms, prepare 92ms)
+

@@ -1,0 +1,46 @@
+[
+  {
+    "source": "docs/reviews/eng-v2-03-astra/independent.test.ts",
+    "destination": "independent.test.ts",
+    "originalSha256": "73f4528e9d623432d6354316038ceebb3f54c17d82a403c59e59af511e876e61",
+    "adaptedSha256": "f320d50da423f91e670dca9ae356368653cce85aeb663916263f8b2af415981b",
+    "replacements": [
+      [
+        "from './released-materials.json'",
+        "from '../eng-v2-03-astra/released-materials.json'"
+      ],
+      [
+        "resolve('docs/reviews/eng-v2-03-astra')",
+        "resolve('docs/reviews/eng-v2-03-rc1-astra/local')"
+      ]
+    ]
+  },
+  {
+    "source": "docs/reviews/eng-v2-03-astra/vitest.config.ts",
+    "destination": "vitest.config.ts",
+    "originalSha256": "28c1a009d353751df9841260aa62faee61216019488251abe42a35c72ad050ac",
+    "adaptedSha256": "16417b997755eba4509862d301813695eecca68d56072b219f5accff1318838e",
+    "replacements": [
+      [
+        "docs/reviews/eng-v2-03-astra/independent.test.ts",
+        "docs/reviews/eng-v2-03-rc1-astra/independent.test.ts"
+      ]
+    ]
+  },
+  {
+    "source": "docs/evidence/eng-v2-03-rc1/budget.mjs",
+    "destination": "budget.mjs",
+    "originalSha256": "4b19bb3281fd300d5a0e0fb63985915d2762e76d2623cf1610436ad1d222ba9e",
+    "adaptedSha256": "2e919bbb856871045182e4456f9ebebfd69820785115d7c53156a3a34ebe5343",
+    "replacements": [
+      [
+        "path.resolve('docs/evidence/eng-v2-03-rc1')",
+        "path.resolve('docs/reviews/eng-v2-03-rc1-astra')"
+      ],
+      [
+        "path.join(out, 'local/reviewed-site')",
+        "path.join(out, 'local/before-site')"
+      ]
+    ]
+  }
+]

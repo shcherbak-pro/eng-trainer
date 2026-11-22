@@ -1,0 +1,578 @@
+[
+  {
+    "sourceId": "cond-zero-01",
+    "catalogId": "conditionals-zero-01",
+    "english": "If I skip breakfast, I feel hungry before lunch.",
+    "ukrainian": "Якщо я пропускаю сніданок, то відчуваю голод ще до обіду.",
+    "topic": "Conditionals",
+    "section": "Zero Conditional"
+  },
+  {
+    "sourceId": "cond-zero-02",
+    "catalogId": "conditionals-zero-02",
+    "english": "If a required field is empty, the form shows an error.",
+    "ukrainian": "Якщо обов’язкове поле порожнє, форма показує помилку.",
+    "topic": "Conditionals",
+    "section": "Zero Conditional"
+  },
+  {
+    "sourceId": "cond-zero-03",
+    "catalogId": "conditionals-zero-03",
+    "english": "If I work late, I usually take a break before dinner.",
+    "ukrainian": "Якщо я працюю допізна, то зазвичай роблю перерву перед вечерею.",
+    "topic": "Conditionals",
+    "section": "Zero Conditional"
+  },
+  {
+    "sourceId": "cond-first-01",
+    "catalogId": "conditionals-first-01",
+    "english": "If I finish work early, I'll go for a walk.",
+    "ukrainian": "Якщо я закінчу роботу раніше, то піду на прогулянку.",
+    "topic": "Conditionals",
+    "section": "First Conditional"
+  },
+  {
+    "sourceId": "cond-first-02",
+    "catalogId": "conditionals-first-02",
+    "english": "If you send me the details, I'll take a look.",
+    "ukrainian": "Якщо ви надішлете мені подробиці, я їх перегляну.",
+    "topic": "Conditionals",
+    "section": "First Conditional"
+  },
+  {
+    "sourceId": "cond-first-03",
+    "catalogId": "conditionals-first-03",
+    "english": "If the tests pass, we'll deploy the update.",
+    "ukrainian": "Якщо тести пройдуть успішно, ми розгорнемо оновлення.",
+    "topic": "Conditionals",
+    "section": "First Conditional"
+  },
+  {
+    "sourceId": "cond-second-01",
+    "catalogId": "conditionals-second-01",
+    "english": "If I had more free time, I'd practice English every day.",
+    "ukrainian": "Якби в мене було більше вільного часу, я практикував би англійську щодня.",
+    "topic": "Conditionals",
+    "section": "Second Conditional"
+  },
+  {
+    "sourceId": "cond-second-02",
+    "catalogId": "conditionals-second-02",
+    "english": "If I were in your position, I'd ask for more information.",
+    "ukrainian": "Якби я був на вашому місці, то попросив би більше інформації.",
+    "topic": "Conditionals",
+    "section": "Second Conditional"
+  },
+  {
+    "sourceId": "cond-second-03",
+    "catalogId": "conditionals-second-03",
+    "english": "If we had a larger budget, we'd test both options.",
+    "ukrainian": "Якби в нас був більший бюджет, ми протестували б обидва варіанти.",
+    "topic": "Conditionals",
+    "section": "Second Conditional"
+  },
+  {
+    "sourceId": "cond-third-01",
+    "catalogId": "conditionals-third-01",
+    "english": "If we had left earlier, we would have caught the train.",
+    "ukrainian": "Якби ми виїхали раніше, то встигли б на потяг.",
+    "topic": "Conditionals",
+    "section": "Third Conditional"
+  },
+  {
+    "sourceId": "cond-third-02",
+    "catalogId": "conditionals-third-02",
+    "english": "If I had known about the meeting, I would have joined it.",
+    "ukrainian": "Якби я знав про зустріч, то долучився б до неї.",
+    "topic": "Conditionals",
+    "section": "Third Conditional"
+  },
+  {
+    "sourceId": "cond-third-03",
+    "catalogId": "conditionals-third-03",
+    "english": "If we had tested that case, we would have found the bug before release.",
+    "ukrainian": "Якби ми протестували цей сценарій, то знайшли б помилку до релізу.",
+    "topic": "Conditionals",
+    "section": "Third Conditional"
+  },
+  {
+    "sourceId": "cond-mixed-past-01",
+    "catalogId": "conditionals-mixed-past-01",
+    "english": "If I had gone to bed earlier, I wouldn't be so tired now.",
+    "ukrainian": "Якби я ліг спати раніше, то зараз не був би таким втомленим.",
+    "topic": "Conditionals",
+    "section": "Mixed Conditionals — Past condition, present result"
+  },
+  {
+    "sourceId": "cond-mixed-past-02",
+    "catalogId": "conditionals-mixed-past-02",
+    "english": "If we had documented the decision, we'd understand it better now.",
+    "ukrainian": "Якби ми задокументували це рішення, то зараз краще його розуміли б.",
+    "topic": "Conditionals",
+    "section": "Mixed Conditionals — Past condition, present result"
+  },
+  {
+    "sourceId": "cond-mixed-past-03",
+    "catalogId": "conditionals-mixed-past-03",
+    "english": "If she had accepted the offer, she would be working with us now.",
+    "ukrainian": "Якби вона прийняла пропозицію, то зараз працювала б із нами.",
+    "topic": "Conditionals",
+    "section": "Mixed Conditionals — Past condition, present result"
+  },
+  {
+    "sourceId": "cond-mixed-present-01",
+    "catalogId": "conditionals-mixed-present-01",
+    "english": "If I were more organized, I wouldn't have missed yesterday's deadline.",
+    "ukrainian": "Якби я був більш організованим, то не пропустив би вчорашній дедлайн.",
+    "topic": "Conditionals",
+    "section": "Mixed Conditionals — General condition, past result"
+  },
+  {
+    "sourceId": "cond-mixed-present-02",
+    "catalogId": "conditionals-mixed-present-02",
+    "english": "If she knew the system better, she would have spotted the problem yesterday.",
+    "ukrainian": "Якби вона краще знала систему, то вчора помітила б проблему.",
+    "topic": "Conditionals",
+    "section": "Mixed Conditionals — General condition, past result"
+  },
+  {
+    "sourceId": "cond-mixed-present-03",
+    "catalogId": "conditionals-mixed-present-03",
+    "english": "If I weren't afraid of flying, I would have traveled to the conference last month.",
+    "ukrainian": "Якби я не боявся літати, то минулого місяця поїхав би на конференцію.",
+    "topic": "Conditionals",
+    "section": "Mixed Conditionals — General condition, past result"
+  },
+  {
+    "sourceId": "small-meet-01",
+    "catalogId": "small-talk-meet-01",
+    "english": "Hi, I'm [name]. It's nice to meet you.",
+    "ukrainian": "Привіт, я [ім’я]. Приємно познайомитися.",
+    "topic": "Small Talk",
+    "section": "Meeting new people"
+  },
+  {
+    "sourceId": "small-meet-02",
+    "catalogId": "small-talk-meet-02",
+    "english": "What do you do?",
+    "ukrainian": "Чим ви займаєтеся?",
+    "topic": "Small Talk",
+    "section": "Meeting new people"
+  },
+  {
+    "sourceId": "small-meet-03",
+    "catalogId": "small-talk-meet-03",
+    "english": "How do you know the people here?",
+    "ukrainian": "Звідки ви знаєте присутніх?",
+    "topic": "Small Talk",
+    "section": "Meeting new people"
+  },
+  {
+    "sourceId": "small-meet-04",
+    "catalogId": "small-talk-meet-04",
+    "english": "Have we met before?",
+    "ukrainian": "Ми раніше зустрічалися?",
+    "topic": "Small Talk",
+    "section": "Meeting new people"
+  },
+  {
+    "sourceId": "small-meet-05",
+    "catalogId": "small-talk-meet-05",
+    "english": "What brought you here today?",
+    "ukrainian": "Що привело вас сюди сьогодні?",
+    "topic": "Small Talk",
+    "section": "Meeting new people"
+  },
+  {
+    "sourceId": "small-meet-06",
+    "catalogId": "small-talk-meet-06",
+    "english": "It's great to finally meet you in person.",
+    "ukrainian": "Дуже приємно нарешті познайомитися з вами особисто.",
+    "topic": "Small Talk",
+    "section": "Meeting new people"
+  },
+  {
+    "sourceId": "small-meeting-01",
+    "catalogId": "small-talk-meeting-01",
+    "english": "How's your day going so far?",
+    "ukrainian": "Як минає ваш день?",
+    "topic": "Small Talk",
+    "section": "Before a work meeting"
+  },
+  {
+    "sourceId": "small-meeting-02",
+    "catalogId": "small-talk-meeting-02",
+    "english": "How has your week been?",
+    "ukrainian": "Як минає ваш тиждень?",
+    "topic": "Small Talk",
+    "section": "Before a work meeting"
+  },
+  {
+    "sourceId": "small-meeting-03",
+    "catalogId": "small-talk-meeting-03",
+    "english": "Have you had a busy morning?",
+    "ukrainian": "У вас був насичений ранок?",
+    "topic": "Small Talk",
+    "section": "Before a work meeting"
+  },
+  {
+    "sourceId": "small-meeting-04",
+    "catalogId": "small-talk-meeting-04",
+    "english": "How are things going with your project?",
+    "ukrainian": "Як просувається ваш проєкт?",
+    "topic": "Small Talk",
+    "section": "Before a work meeting"
+  },
+  {
+    "sourceId": "small-meeting-05",
+    "catalogId": "small-talk-meeting-05",
+    "english": "Do you have any plans for the weekend?",
+    "ukrainian": "Маєте якісь плани на вихідні?",
+    "topic": "Small Talk",
+    "section": "Before a work meeting"
+  },
+  {
+    "sourceId": "small-meeting-06",
+    "catalogId": "small-talk-meeting-06",
+    "english": "Shall we get started?",
+    "ukrainian": "Почнемо?",
+    "topic": "Small Talk",
+    "section": "Before a work meeting"
+  },
+  {
+    "sourceId": "small-coffee-01",
+    "catalogId": "small-talk-coffee-01",
+    "english": "Would you like to grab a coffee?",
+    "ukrainian": "Хочете випити кави?",
+    "topic": "Small Talk",
+    "section": "Coffee and lunch breaks"
+  },
+  {
+    "sourceId": "small-coffee-02",
+    "catalogId": "small-talk-coffee-02",
+    "english": "Is this seat taken?",
+    "ukrainian": "Це місце зайняте?",
+    "topic": "Small Talk",
+    "section": "Coffee and lunch breaks"
+  },
+  {
+    "sourceId": "small-coffee-03",
+    "catalogId": "small-talk-coffee-03",
+    "english": "Do you have a favorite place for lunch around here?",
+    "ukrainian": "Маєте тут поблизу улюблене місце для обіду?",
+    "topic": "Small Talk",
+    "section": "Coffee and lunch breaks"
+  },
+  {
+    "sourceId": "small-coffee-04",
+    "catalogId": "small-talk-coffee-04",
+    "english": "That looks good. What did you order?",
+    "ukrainian": "Виглядає смачно. Що ви замовили?",
+    "topic": "Small Talk",
+    "section": "Coffee and lunch breaks"
+  },
+  {
+    "sourceId": "small-coffee-05",
+    "catalogId": "small-talk-coffee-05",
+    "english": "I haven't tried that before. Would you recommend it?",
+    "ukrainian": "Я цього ще не пробував. Порадите спробувати?",
+    "topic": "Small Talk",
+    "section": "Coffee and lunch breaks"
+  },
+  {
+    "sourceId": "small-coffee-06",
+    "catalogId": "small-talk-coffee-06",
+    "english": "It was nice chatting with you. I'd better get back to work.",
+    "ukrainian": "Було приємно поспілкуватися. Мені вже час повертатися до роботи.",
+    "topic": "Small Talk",
+    "section": "Coffee and lunch breaks"
+  },
+  {
+    "sourceId": "small-weekend-01",
+    "catalogId": "small-talk-weekend-01",
+    "english": "What do you like to do in your free time?",
+    "ukrainian": "Що ви любите робити у вільний час?",
+    "topic": "Small Talk",
+    "section": "Free time and weekends"
+  },
+  {
+    "sourceId": "small-weekend-02",
+    "catalogId": "small-talk-weekend-02",
+    "english": "Have you watched anything good lately?",
+    "ukrainian": "Дивилися щось цікаве останнім часом?",
+    "topic": "Small Talk",
+    "section": "Free time and weekends"
+  },
+  {
+    "sourceId": "small-weekend-03",
+    "catalogId": "small-talk-weekend-03",
+    "english": "Have you read any good books recently?",
+    "ukrainian": "Читали останнім часом якісь цікаві книжки?",
+    "topic": "Small Talk",
+    "section": "Free time and weekends"
+  },
+  {
+    "sourceId": "small-weekend-04",
+    "catalogId": "small-talk-weekend-04",
+    "english": "How did your weekend go?",
+    "ukrainian": "Як минули ваші вихідні?",
+    "topic": "Small Talk",
+    "section": "Free time and weekends"
+  },
+  {
+    "sourceId": "small-weekend-05",
+    "catalogId": "small-talk-weekend-05",
+    "english": "I'm thinking of going for a walk later. Would you like to join me?",
+    "ukrainian": "Думаю пізніше піти на прогулянку. Хочете приєднатися?",
+    "topic": "Small Talk",
+    "section": "Free time and weekends"
+  },
+  {
+    "sourceId": "small-weekend-06",
+    "catalogId": "small-talk-weekend-06",
+    "english": "That sounds interesting. How did you get into it?",
+    "ukrainian": "Звучить цікаво. Як ви цим захопилися?",
+    "topic": "Small Talk",
+    "section": "Free time and weekends"
+  },
+  {
+    "sourceId": "small-event-01",
+    "catalogId": "small-talk-event-01",
+    "english": "Is this your first time at this event?",
+    "ukrainian": "Ви вперше на цьому заході?",
+    "topic": "Small Talk",
+    "section": "Conferences and events"
+  },
+  {
+    "sourceId": "small-event-02",
+    "catalogId": "small-talk-event-02",
+    "english": "Which session are you looking forward to?",
+    "ukrainian": "На який виступ ви найбільше чекаєте?",
+    "topic": "Small Talk",
+    "section": "Conferences and events"
+  },
+  {
+    "sourceId": "small-event-03",
+    "catalogId": "small-talk-event-03",
+    "english": "What did you think of the last talk?",
+    "ukrainian": "Що ви думаєте про попередній виступ?",
+    "topic": "Small Talk",
+    "section": "Conferences and events"
+  },
+  {
+    "sourceId": "small-event-04",
+    "catalogId": "small-talk-event-04",
+    "english": "Was there anything in the talk that you could use in your work?",
+    "ukrainian": "Чи було у виступі щось, що ви могли б застосувати у своїй роботі?",
+    "topic": "Small Talk",
+    "section": "Conferences and events"
+  },
+  {
+    "sourceId": "small-event-05",
+    "catalogId": "small-talk-event-05",
+    "english": "Would you like to exchange contact details?",
+    "ukrainian": "Хочете обмінятися контактами?",
+    "topic": "Small Talk",
+    "section": "Conferences and events"
+  },
+  {
+    "sourceId": "small-event-06",
+    "catalogId": "small-talk-event-06",
+    "english": "It was great talking to you. Enjoy the rest of the event.",
+    "ukrainian": "Було дуже приємно поспілкуватися. Бажаю гарно провести решту заходу.",
+    "topic": "Small Talk",
+    "section": "Conferences and events"
+  },
+  {
+    "sourceId": "small-travel-01",
+    "catalogId": "small-talk-travel-01",
+    "english": "Are you traveling for work or for a vacation?",
+    "ukrainian": "Ви подорожуєте у справах чи на відпочинок?",
+    "topic": "Small Talk",
+    "section": "Traveling"
+  },
+  {
+    "sourceId": "small-travel-02",
+    "catalogId": "small-talk-travel-02",
+    "english": "Have you been here before?",
+    "ukrainian": "Ви тут уже бували?",
+    "topic": "Small Talk",
+    "section": "Traveling"
+  },
+  {
+    "sourceId": "small-travel-03",
+    "catalogId": "small-talk-travel-03",
+    "english": "How was your journey?",
+    "ukrainian": "Як минула ваша подорож?",
+    "topic": "Small Talk",
+    "section": "Traveling"
+  },
+  {
+    "sourceId": "small-travel-04",
+    "catalogId": "small-talk-travel-04",
+    "english": "How long are you staying?",
+    "ukrainian": "На скільки часу ви приїхали?",
+    "topic": "Small Talk",
+    "section": "Traveling"
+  },
+  {
+    "sourceId": "small-travel-05",
+    "catalogId": "small-talk-travel-05",
+    "english": "Have you had a chance to explore the city?",
+    "ukrainian": "Уже мали нагоду прогулятися містом?",
+    "topic": "Small Talk",
+    "section": "Traveling"
+  },
+  {
+    "sourceId": "small-travel-06",
+    "catalogId": "small-talk-travel-06",
+    "english": "I hope you enjoy the rest of your trip.",
+    "ukrainian": "Сподіваюся, решта вашої подорожі буде приємною.",
+    "topic": "Small Talk",
+    "section": "Traveling"
+  },
+  {
+    "sourceId": "interview-compare-01",
+    "catalogId": "interview-english-compare-01",
+    "english": "Both [A] and [B] help with [goal], but they solve different problems.",
+    "ukrainian": "І [A], і [B] допомагають досягти [мети], але розв’язують різні завдання.",
+    "topic": "Interview English",
+    "section": "Comparing concepts"
+  },
+  {
+    "sourceId": "interview-compare-02",
+    "catalogId": "interview-english-compare-02",
+    "english": "The main difference is that [A] ..., whereas [B] ...",
+    "ukrainian": "Головна відмінність полягає в тому, що [A] ..., тоді як [B] ...",
+    "topic": "Interview English",
+    "section": "Comparing concepts"
+  },
+  {
+    "sourceId": "interview-compare-03",
+    "catalogId": "interview-english-compare-03",
+    "english": "For example, [concrete example].",
+    "ukrainian": "Наприклад, [конкретний приклад].",
+    "topic": "Interview English",
+    "section": "Comparing concepts"
+  },
+  {
+    "sourceId": "interview-explain-01",
+    "catalogId": "interview-english-explain-01",
+    "english": "In simple terms, [main idea].",
+    "ukrainian": "Простими словами, [основна думка].",
+    "topic": "Interview English",
+    "section": "Explaining how something works"
+  },
+  {
+    "sourceId": "interview-explain-02",
+    "catalogId": "interview-english-explain-02",
+    "english": "The basic idea is to [action] so that [benefit].",
+    "ukrainian": "Основна ідея полягає в тому, щоб [виконати дію] й завдяки цьому [отримати користь].",
+    "topic": "Interview English",
+    "section": "Explaining how something works"
+  },
+  {
+    "sourceId": "interview-explain-03",
+    "catalogId": "interview-english-explain-03",
+    "english": "One thing to keep in mind is [limitation].",
+    "ukrainian": "Варто врахувати [обмеження].",
+    "topic": "Interview English",
+    "section": "Explaining how something works"
+  },
+  {
+    "sourceId": "interview-define-01",
+    "catalogId": "interview-english-define-01",
+    "english": "[Concept] is a [category] that [purpose].",
+    "ukrainian": "[Поняття] — це [категорія], що [виконує певну функцію].",
+    "topic": "Interview English",
+    "section": "Defining a concept"
+  },
+  {
+    "sourceId": "interview-define-02",
+    "catalogId": "interview-english-define-02",
+    "english": "We use it to [goal].",
+    "ukrainian": "Ми використовуємо це, щоб [досягти мети].",
+    "topic": "Interview English",
+    "section": "Defining a concept"
+  },
+  {
+    "sourceId": "interview-define-03",
+    "catalogId": "interview-english-define-03",
+    "english": "A simple example would be [example].",
+    "ukrainian": "Простим прикладом може бути [приклад].",
+    "topic": "Interview English",
+    "section": "Defining a concept"
+  },
+  {
+    "sourceId": "interview-process-01",
+    "catalogId": "interview-english-process-01",
+    "english": "First, [first step].",
+    "ukrainian": "Спочатку [перший крок].",
+    "topic": "Interview English",
+    "section": "Describing a process"
+  },
+  {
+    "sourceId": "interview-process-02",
+    "catalogId": "interview-english-process-02",
+    "english": "Once [condition] is met, [next step].",
+    "ukrainian": "Щойно [умову] виконано, [наступний крок].",
+    "topic": "Interview English",
+    "section": "Describing a process"
+  },
+  {
+    "sourceId": "interview-process-03",
+    "catalogId": "interview-english-process-03",
+    "english": "If something goes wrong, [recovery action].",
+    "ukrainian": "Якщо щось іде не так, [дія для відновлення].",
+    "topic": "Interview English",
+    "section": "Describing a process"
+  },
+  {
+    "sourceId": "interview-options-01",
+    "catalogId": "interview-english-options-01",
+    "english": "We have two main options: [A] and [B].",
+    "ukrainian": "У нас є два основні варіанти: [A] і [B].",
+    "topic": "Interview English",
+    "section": "Discussing options and trade-offs"
+  },
+  {
+    "sourceId": "interview-options-02",
+    "catalogId": "interview-english-options-02",
+    "english": "The advantage of [A] is [benefit], but the trade-off is [cost or limitation].",
+    "ukrainian": "Перевага [A] — це [користь], але за це доводиться платити [витратами або обмеженнями].",
+    "topic": "Interview English",
+    "section": "Discussing options and trade-offs"
+  },
+  {
+    "sourceId": "interview-options-03",
+    "catalogId": "interview-english-options-03",
+    "english": "Given [constraint], I'd choose [option] because [reason].",
+    "ukrainian": "З огляду на [обмеження], я обрав би [варіант], тому що [причина].",
+    "topic": "Interview English",
+    "section": "Discussing options and trade-offs"
+  },
+  {
+    "sourceId": "interview-experience-01",
+    "catalogId": "interview-english-experience-01",
+    "english": "The situation was [context], and my task was to [goal].",
+    "ukrainian": "Ситуація була такою: [контекст], а моє завдання полягало в тому, щоб [досягти мети].",
+    "topic": "Interview English",
+    "section": "Describing experience and solving problems"
+  },
+  {
+    "sourceId": "interview-experience-02",
+    "catalogId": "interview-english-experience-02",
+    "english": "I started by [action], then [next action].",
+    "ukrainian": "Спочатку я [виконав дію], а потім [виконав наступну дію].",
+    "topic": "Interview English",
+    "section": "Describing experience and solving problems"
+  },
+  {
+    "sourceId": "interview-experience-03",
+    "catalogId": "interview-english-experience-03",
+    "english": "As a result, [outcome]. What I learned was [lesson].",
+    "ukrainian": "У результаті [підсумок]. Завдяки цьому я зрозумів [висновок].",
+    "topic": "Interview English",
+    "section": "Describing experience and solving problems"
+  }
+]

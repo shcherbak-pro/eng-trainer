@@ -3,7 +3,9 @@
   import type { ContentCatalog } from '../content/catalog';
   import { progress } from '../state/progress';
   import { retrySave, saveStatus } from '../state/persistence';
-  import { DESTINATIONS, PAGE_LABELS, destinationOf, destinationPages, type Destination } from './navigation';
+  import { DESTINATIONS, PAGE_LABELS, destinationOf, destinationPages, pageTitle, topicIdOf, type Destination } from './navigation';
+  import { focusCount as countFocus } from '../features/home/homeStats';
+  import AppHeader from './AppHeader.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
   import Button from '../shared/ui/Button.svelte';
   import Icon from '../shared/ui/Icon.svelte';
@@ -67,19 +69,17 @@
     return () => document.removeEventListener('focusin', keepFocusAboveTabBar);
   });
 
-  function knownCount(ids: string[], entries: { id: string }[]): number {
-    const known = new Set(entries.map((item) => item.id));
-    return ids.filter((id) => known.has(id)).length;
-  }
   // Removed user entries retain progress for reimport, but do not inflate visible counts.
-  $: focusCount = knownCount($progress.favoriteBlocks, catalog.blocks) + knownCount($progress.favoritePhrases, catalog.phrases) + knownCount($progress.favoriteWords, catalog.wordIndex) + knownCount($progress.favoriteIrregular, catalog.irregularVerbs);
+  // The same selector gives the "In Focus" value on Home.
+  $: focusCount = countFocus(catalog, $progress);
 
   $: current = destinationOf(activePage);
   $: destinations = DESTINATIONS.map((destination) => ({ ...destination, pages: destinationPages(destination, availablePages) })).filter(
     (destination) => destination.pages.length > 0
   );
-  $: sections = current.id === 'library' || current.id === 'practice' ? destinationPages(current, availablePages) : [];
-  $: title = PAGE_LABELS[activePage] ?? 'English Trainer';
+  // A topic screen names itself in its visible heading; the Library tabs would mark no current tab.
+  $: sections = (current.id === 'library' || current.id === 'practice') && topicIdOf(activePage) === null ? destinationPages(current, availablePages) : [];
+  $: title = pageTitle(activePage, catalog.topics);
 
   function hrefFor(destination: Destination): string {
     return `#${destination.id === current.id && destination.pages.includes(activePage) ? activePage : destination.pages[0]}`;
@@ -132,46 +132,47 @@
 <div class="app-shell">
   <a class="skip-link" href="#main" on:click={skipToContent}>Skip to content</a>
 
-  <aside class="side-nav">
-    <a class="brand" href="#index" on:click={(event) => go(event, 'index')}>
-      <span class="brand__title">{catalog.meta.title}</span>
-      <span class="brand__subtitle">{catalog.meta.subtitle}</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="side-nav__list">
-        {#each destinations as destination (destination.id)}
-          {#if destination.id === 'library' || destination.id === 'practice' || destination.id === 'more'}
-            <li class="side-nav__group">
-              <span class="side-nav__group-label">{destination.label}</span>
-              <ul>
-                {#each destination.pages as page (page)}
-                  <li>
-                    <a class="side-nav__link side-nav__link--sub" href={`#${page}`} on:click={(event) => go(event, page)} aria-current={activePage === page ? 'page' : undefined}>{PAGE_LABELS[page]}</a>
-                  </li>
-                {/each}
-              </ul>
-            </li>
-          {:else}
-            <li>
-              <a class="side-nav__link" href={`#${destination.pages[0]}`} on:click={(event) => go(event, destination.pages[0])} aria-current={activePage === destination.pages[0] ? 'page' : undefined}>
-                <Icon name={destination.icon} />
-                <span>{destination.id === 'focus' ? 'Focus list' : destination.label}</span>
-                {#if destination.id === 'focus' && focusCount > 0}
-                  <span class="nav-count">{focusCount}<span class="visually-hidden">{focusCount === 1 ? ' item' : ' items'}</span></span>
-                {/if}
-              </a>
-            </li>
-          {/if}
-        {/each}
-      </ul>
-    </nav>
-    <div class="side-nav__footer">
-      <ThemeToggle />
-      <a class="side-nav__v1" href={v1Url}>Previous version (v1)</a>
-    </div>
-  </aside>
+  <!-- The shared header replaces the former side-navigation brand. Wide screens show it
+       at the top of the navigation column, small screens as a compact bar above the page. -->
+  <div class="app-chrome">
+    <AppHeader onHome={(event) => go(event, 'index')} />
+    <aside class="side-nav">
+      <nav aria-label="Main">
+        <ul class="side-nav__list">
+          {#each destinations as destination (destination.id)}
+            {#if destination.id === 'library' || destination.id === 'practice' || destination.id === 'more'}
+              <li class="side-nav__group">
+                <span class="side-nav__group-label">{destination.label}</span>
+                <ul>
+                  {#each destination.pages as page (page)}
+                    <li>
+                      <a class="side-nav__link side-nav__link--sub" href={`#${page}`} on:click={(event) => go(event, page)} aria-current={activePage === page ? 'page' : undefined}>{PAGE_LABELS[page]}</a>
+                    </li>
+                  {/each}
+                </ul>
+              </li>
+            {:else}
+              <li>
+                <a class="side-nav__link" href={`#${destination.pages[0]}`} on:click={(event) => go(event, destination.pages[0])} aria-current={activePage === destination.pages[0] ? 'page' : undefined}>
+                  <Icon name={destination.icon} />
+                  <span>{destination.id === 'focus' ? 'Focus list' : destination.label}</span>
+                  {#if destination.id === 'focus' && focusCount > 0}
+                    <span class="nav-count">{focusCount}<span class="visually-hidden">{focusCount === 1 ? ' item' : ' items'}</span></span>
+                  {/if}
+                </a>
+              </li>
+            {/if}
+          {/each}
+        </ul>
+      </nav>
+      <div class="side-nav__footer">
+        <ThemeToggle />
+        <a class="side-nav__v1" href={v1Url}>Previous version (v1)</a>
+      </div>
+    </aside>
+  </div>
 
-  <main id="main" class="page-wrap" tabindex="-1" bind:this={main}>
+  <main id="main" class="page-wrap" class:page-wrap--tabs={sections.length > 0} tabindex="-1" bind:this={main}>
     {#if $saveStatus.state === 'error'}
       <Notice tone="error" class="storage-notice" title="Your latest changes are not saved.">
         <p>They stay on screen, but will be lost when this page is closed unless saving succeeds.</p>

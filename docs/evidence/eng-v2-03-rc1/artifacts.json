@@ -1,0 +1,885 @@
+{
+  "reviewedBuildMatchesAstra": true,
+  "reviewedBuildFilesVerified": 33,
+  "groups": {
+    "data/": {
+      "unchanged": true,
+      "files": 15,
+      "entries": [
+        {
+          "file": "data/manifest.json",
+          "sha256": "db99f2172b7c30c9ada8299ab2c3f463c4fe600b39878b150e321b3e5e57776b"
+        },
+        {
+          "file": "data/packs/agent-framework.30b26432f0ecf993.json",
+          "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+        },
+        {
+          "file": "data/packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+          "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+        },
+        {
+          "file": "data/packs/ai-certification.a743e81dde1bc943.json",
+          "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+        },
+        {
+          "file": "data/packs/conditionals.1c6e8e33d50795c2.json",
+          "sha256": "1c6e8e33d50795c2119dfea8880ecd9c8403b388d6630c0d3cb59d41fd8b7aba"
+        },
+        {
+          "file": "data/packs/essential-100.3a71b8e1e38939e1.json",
+          "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+        },
+        {
+          "file": "data/packs/hedging-and-linking.06c92cc29e38d601.json",
+          "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+        },
+        {
+          "file": "data/packs/interview-english.b1b80134e0f24ef7.json",
+          "sha256": "b1b80134e0f24ef7af11d67166a8c085f14fe9e1ebc9a18ada214b3f69fa7fae"
+        },
+        {
+          "file": "data/packs/logical-200.7dea9a714b2c308b.json",
+          "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+        },
+        {
+          "file": "data/packs/personal-topics.03c1443a2cc176cf.json",
+          "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+        },
+        {
+          "file": "data/packs/presentations.2cd234cc3c91ce8d.json",
+          "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+        },
+        {
+          "file": "data/packs/small-talk.9223c920eb6387cd.json",
+          "sha256": "9223c920eb6387cd0de76b09f144f4e62543b42327abbf776e1720dc4dc19bbf"
+        },
+        {
+          "file": "data/packs/speaking-foundations.378bea01a015d76e.json",
+          "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+        },
+        {
+          "file": "data/packs/speaking-practice.30d81bc404256cb8.json",
+          "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+        },
+        {
+          "file": "data/packs/workplace-topics.dad3daa8ab78823e.json",
+          "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+        }
+      ]
+    },
+    "v1/": {
+      "unchanged": true,
+      "files": 5,
+      "entries": [
+        {
+          "file": "v1/assets/index-Bod3ovET.css",
+          "sha256": "03014dda854a4cde18084029cb3a26cc388984d8111b0b08b1d40098b1dbce83"
+        },
+        {
+          "file": "v1/assets/index-C0A337ei.js",
+          "sha256": "011212c203e296a42442fde59bf3a6d03f5c8beb3e743019c249d67ece955913"
+        },
+        {
+          "file": "v1/data/materials.json",
+          "sha256": "f700f7329ef30e938604fe9523394f0ec7db2cafa03b9a741dfca375dbaa3422"
+        },
+        {
+          "file": "v1/favicon.svg",
+          "sha256": "30475fcef5698d46ef6538a9cb5fabc19affd0dfa9a921351acb3b10a3838a85"
+        },
+        {
+          "file": "v1/index.html",
+          "sha256": "0da9f63a75d6dab6fadbaea8946dada1fed5ea6f0377501573ac8a92ccbd2d4f"
+        }
+      ]
+    },
+    "fonts/": {
+      "unchanged": true,
+      "files": 3,
+      "entries": [
+        {
+          "file": "fonts/FONTLOG-EngTrainerSans.txt",
+          "sha256": "4bef97c323a80b8dca8b3ef48da47dac36c9eb7dd2c10ceda198c9ce82fe8a27"
+        },
+        {
+          "file": "fonts/OFL-EngTrainerSans.txt",
+          "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+        },
+        {
+          "file": "fonts/OFL-Literata.txt",
+          "sha256": "5b52638039d9f63fe82bab2ccea1cf0312d275c49e6f1cf7e36361c256b4ce92"
+        }
+      ]
+    },
+    "font-assets": {
+      "unchanged": true,
+      "files": 6,
+      "entries": [
+        {
+          "file": "assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2",
+          "sha256": "1bba4b98f5f89a7226cc9e18b0502d09d80150f3ea80d1a3a16f44e024b52682"
+        },
+        {
+          "file": "assets/eng-trainer-sans-greek-FkV9qZ7r.woff2",
+          "sha256": "0f6a78c1908a95f8b1f0faa7498e54249ada201d3b14c093a68e8170ec8f8670"
+        },
+        {
+          "file": "assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2",
+          "sha256": "c9c893dfe10a4b324486c3ab4c506cfb65b468b879e233b7ac33e2fab092c86d"
+        },
+        {
+          "file": "assets/eng-trainer-sans-latin-WBnKszXN.woff2",
+          "sha256": "1bf77ef0b5446cfb6f13e91e9443ae7e2aff3e5a51133191ed88442aed3124e4"
+        },
+        {
+          "file": "assets/literata-latin-Cedbco83.woff2",
+          "sha256": "7478e1920209e51dcc235d151d2056a0a6e3c54b4436f7030d256f231fe09b58"
+        },
+        {
+          "file": "assets/literata-latin-italic-Ckc1vdjp.woff2",
+          "sha256": "88716d1d508846fb4152ee7f7e05b034b334c84206322efd828402e9a18d9265"
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "schemaVersion": 1,
+    "meta": {
+      "title": "English Assessment Trainer",
+      "subtitle": "B1+ → B2 Speaking Playbook",
+      "version": "ShcherbakPro",
+      "language": "uk/en",
+      "updated": "2026-09-04",
+      "goal": "Clear structure + safe vocabulary + controlled grammar + confident pronunciation",
+      "updatedFeature": "Integrated 117 curated AI certification phrases and 39 contextual professional verbs with deduplication and rewritten examples."
+    },
+    "blocks": [
+      {
+        "id": "start-answer",
+        "title": "Start Answer Phrases",
+        "category": "Start answer",
+        "type": "phraseCategory",
+        "description": "Початок відповіді: фрази для м’якого і впевненого старту speaking answer.",
+        "icon": "record_voice_over",
+        "tag": "assessment",
+        "itemsCount": 6,
+        "priority": 1
+      },
+      {
+        "id": "structure",
+        "title": "Structure & Add Ideas",
+        "category": "Structure",
+        "type": "phraseCategory",
+        "description": "Фрази для структури відповіді: first of all, on top of that, what matters most.",
+        "icon": "account_tree",
+        "tag": "connector",
+        "itemsCount": 5,
+        "priority": 2
+      },
+      {
+        "id": "word-index",
+        "title": "Word Index",
+        "description": "Алфавітний індекс слів і фраз. Натисни на фразу, щоб побачити переклад, pronunciation і 2 приклади застосування.",
+        "type": "wordIndex",
+        "tag": "index",
+        "icon": "record_voice_over",
+        "itemsCount": 566,
+        "priority": 2.5
+      },
+      {
+        "id": "reverse-practice",
+        "title": "Reverse Practice",
+        "description": "Зворотня вправа: бачиш український переклад і згадуєш англійську фразу або приклад.",
+        "type": "reversePractice",
+        "tag": "practice",
+        "icon": "quiz",
+        "itemsCount": 566,
+        "priority": 2.6
+      },
+      {
+        "id": "irregular-verbs-100",
+        "title": "100 Irregular Verbs",
+        "type": "irregularVerbs",
+        "description": "100 popular irregular verbs grouped by everyday/work context: 3 forms, translation, transcription, examples.",
+        "icon": "format_list_numbered",
+        "tag": "grammar",
+        "itemsCount": 100,
+        "priority": 2.7,
+        "verbSet": "essential-100"
+      },
+      {
+        "id": "irregular-verbs-logical-200",
+        "title": "200 Irregular Verbs — Logical Groups",
+        "type": "irregularVerbs",
+        "verbSet": "logical-200",
+        "description": "200 irregular verbs grouped by change pattern: same forms, matching past/participle, -en participles, i-a-u pattern, and mixed forms.",
+        "icon": "schema",
+        "tag": "grammar",
+        "itemsCount": 200,
+        "priority": 2.8
+      },
+      {
+        "id": "contrast",
+        "title": "Contrast Phrases",
+        "category": "Contrast",
+        "type": "phraseCategory",
+        "description": "Фрази для балансу думок: on the one hand, that being said, although, while.",
+        "icon": "compare_arrows",
+        "tag": "contrast",
+        "itemsCount": 6,
+        "priority": 3
+      },
+      {
+        "id": "ending",
+        "title": "Ending / Conclusion",
+        "category": "Ending",
+        "type": "phraseCategory",
+        "description": "Фрази для завершення відповіді: overall, in the long run, key takeaway.",
+        "icon": "flag",
+        "tag": "conclusion",
+        "itemsCount": 3,
+        "priority": 4
+      },
+      {
+        "id": "ai-coding-tools",
+        "title": "AI / Coding Tools",
+        "category": "AI / Coding tools",
+        "type": "phraseCategory",
+        "description": "Vocabulary для AI tools, coding assistants, code review, prompts and context.",
+        "icon": "smart_toy",
+        "tag": "AI",
+        "itemsCount": 9,
+        "priority": 5
+      },
+      {
+        "id": "lack-not-enough",
+        "title": "Lack / Not Enough",
+        "category": "Lack / Not enough",
+        "type": "phraseCategory",
+        "description": "Як говорити про брак часу, контексту, ресурсів, ясності.",
+        "icon": "report_problem",
+        "tag": "problem",
+        "itemsCount": 6,
+        "priority": 6
+      },
+      {
+        "id": "speed-difficulty-clarity",
+        "title": "Speed, Difficulty & Clarity",
+        "category": "Speed / Difficulty / Clarity",
+        "type": "phraseCategory",
+        "description": "Швидше/повільніше, легше/важче, чіткіше/нечіткіше.",
+        "icon": "speed",
+        "tag": "estimation",
+        "itemsCount": 10,
+        "priority": 7
+      },
+      {
+        "id": "time-estimates",
+        "title": "Time Estimates",
+        "category": "Time estimates",
+        "type": "phraseCategory",
+        "description": "Як оцінювати час виконання задач: rough estimate, take longer, depends on.",
+        "icon": "schedule",
+        "tag": "estimation",
+        "itemsCount": 8,
+        "priority": 8
+      },
+      {
+        "id": "online-meetings",
+        "title": "Online Meetings",
+        "category": "Online meetings",
+        "type": "phraseCategory",
+        "description": "Фрази для онлайн-мітингів: agenda, screen sharing, blockers, next steps.",
+        "icon": "groups",
+        "tag": "meeting",
+        "itemsCount": 12,
+        "priority": 9
+      },
+      {
+        "id": "compare-difference",
+        "title": "Compare / Difference",
+        "category": "Compare / Difference",
+        "type": "phraseCategory",
+        "description": "Питання і відповіді про різницю між речами: X vs Y, pros and cons.",
+        "icon": "difference",
+        "tag": "comparison",
+        "itemsCount": 6,
+        "priority": 10
+      },
+      {
+        "id": "conduct-vs-carry-out",
+        "title": "Conduct vs Carry out",
+        "category": "Conduct vs Carry out",
+        "type": "phraseCategory",
+        "description": "Різниця між conduct і carry out у work-style speaking.",
+        "icon": "rule",
+        "tag": "vocabulary",
+        "itemsCount": 5,
+        "priority": 11
+      },
+      {
+        "id": "modals",
+        "title": "Modals: May/Might/Will Have + V3",
+        "category": "Modals",
+        "type": "phraseCategory",
+        "description": "May have, might have, will have + V3 з прикладами для assessment.",
+        "icon": "psychology",
+        "tag": "grammar",
+        "itemsCount": 3,
+        "priority": 12
+      },
+      {
+        "id": "conjunctions",
+        "title": "Conjunctions",
+        "category": "Conjunctions",
+        "type": "phraseCategory",
+        "description": "Although, because, while, unless, provided that, whereas, consequently.",
+        "icon": "link",
+        "tag": "grammar",
+        "itemsCount": 5,
+        "priority": 13
+      },
+      {
+        "id": "otherwise",
+        "title": "Otherwise & Alternatives",
+        "category": "Otherwise",
+        "type": "phraseCategory",
+        "description": "Otherwise, if not, without that, without proper review.",
+        "icon": "alt_route",
+        "tag": "connector",
+        "itemsCount": 3,
+        "priority": 14
+      },
+      {
+        "id": "informal-phrases",
+        "title": "Informal Phrases",
+        "category": "Informal phrases",
+        "type": "phraseCategory",
+        "description": "Here we go / There we go та живі spoken фрази.",
+        "icon": "chat",
+        "tag": "spoken",
+        "itemsCount": 2,
+        "priority": 15
+      },
+      {
+        "id": "presentation-phrases",
+        "title": "Presentation Phrases",
+        "category": "Presentation Phrases",
+        "type": "phraseCategory",
+        "description": "Opening, delivery, transitions, metrics, questions, limitations, and closing phrases for technical/business presentations.",
+        "icon": "slideshow",
+        "tag": "presentation",
+        "itemsCount": 90,
+        "priority": 22
+      },
+      {
+        "id": "agent-framework-vocabulary",
+        "title": "Agent Framework Vocabulary",
+        "category": "Agent Framework Vocabulary",
+        "type": "phraseCategory",
+        "description": "Vocabulary and ready phrases for cost optimization, AI agents, agent orchestration, PR review automation, memory, metrics, and pilot validation.",
+        "icon": "hub",
+        "tag": "AI agents",
+        "itemsCount": 81,
+        "priority": 23
+      },
+      {
+        "id": "hedging-phrases",
+        "title": "Hedging Phrases",
+        "category": "Hedging Phrases",
+        "type": "phraseCategory",
+        "description": "Softening phrases for safer B2/C1-style answers: opinions, assumptions, uncertainty and balanced speaking.",
+        "icon": "psychology_alt",
+        "tag": "hedging",
+        "itemsCount": 12,
+        "priority": 24
+      },
+      {
+        "id": "advanced-linking-words",
+        "title": "Advanced Linking Words",
+        "category": "Advanced Linking Words",
+        "type": "phraseCategory",
+        "description": "Advanced connectors for more natural structure, contrast, consequence and explanation.",
+        "icon": "link",
+        "tag": "linking",
+        "itemsCount": 12,
+        "priority": 25
+      },
+      {
+        "id": "topic-tell-me-about-yourself",
+        "title": "Tell me about yourself",
+        "category": "Tell me about yourself",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Tell me about yourself.",
+        "icon": "topic",
+        "tag": "assessment",
+        "itemsCount": 15,
+        "priority": 26
+      },
+      {
+        "id": "topic-hobbies",
+        "title": "Hobbies",
+        "category": "Hobbies",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Hobbies.",
+        "icon": "topic",
+        "tag": "hobbies",
+        "itemsCount": 15,
+        "priority": 27
+      },
+      {
+        "id": "topic-work-life-balance",
+        "title": "Work-Life Balance",
+        "category": "Work-Life Balance",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Work-Life Balance.",
+        "icon": "topic",
+        "tag": "balance",
+        "itemsCount": 15,
+        "priority": 28
+      },
+      {
+        "id": "topic-teamwork",
+        "title": "Teamwork",
+        "category": "Teamwork",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Teamwork.",
+        "icon": "topic",
+        "tag": "teamwork",
+        "itemsCount": 15,
+        "priority": 29
+      },
+      {
+        "id": "topic-stress-management",
+        "title": "Stress Management",
+        "category": "Stress Management",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Stress Management.",
+        "icon": "topic",
+        "tag": "stress",
+        "itemsCount": 15,
+        "priority": 30
+      },
+      {
+        "id": "topic-time-management",
+        "title": "Time Management",
+        "category": "Time Management",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Time Management.",
+        "icon": "topic",
+        "tag": "productivity",
+        "itemsCount": 15,
+        "priority": 31
+      },
+      {
+        "id": "topic-leadership",
+        "title": "Leadership",
+        "category": "Leadership",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Leadership.",
+        "icon": "topic",
+        "tag": "leadership",
+        "itemsCount": 15,
+        "priority": 32
+      },
+      {
+        "id": "topic-remote-work",
+        "title": "Remote Work",
+        "category": "Remote Work",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Remote Work.",
+        "icon": "topic",
+        "tag": "remote-work",
+        "itemsCount": 15,
+        "priority": 33
+      },
+      {
+        "id": "topic-career-growth",
+        "title": "Career Growth",
+        "category": "Career Growth",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Career Growth.",
+        "icon": "topic",
+        "tag": "career",
+        "itemsCount": 15,
+        "priority": 34
+      },
+      {
+        "id": "topic-communication-in-distributed-teams",
+        "title": "Communication in Distributed Teams",
+        "category": "Communication in Distributed Teams",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Communication in Distributed Teams.",
+        "icon": "topic",
+        "tag": "communication",
+        "itemsCount": 15,
+        "priority": 35
+      },
+      {
+        "id": "topic-conflict-resolution-team-problems",
+        "title": "Conflict Resolution / Team Problems",
+        "category": "Conflict Resolution / Team Problems",
+        "type": "phraseCategory",
+        "description": "15 practical speaking phrases for the topic: Conflict Resolution / Team Problems.",
+        "icon": "topic",
+        "tag": "conflict",
+        "itemsCount": 15,
+        "priority": 36
+      },
+      {
+        "id": "answer-patterns",
+        "title": "Answer Patterns",
+        "type": "patterns",
+        "description": "PREP, STAR, Balanced Opinion, Problem → Action → Result and other speaking frameworks.",
+        "icon": "schema",
+        "tag": "framework",
+        "itemsCount": 7,
+        "priority": 100
+      },
+      {
+        "id": "ready-answers",
+        "title": "Ready-Made Answers",
+        "type": "answers",
+        "description": "Готові assessment-style answers для AI, teamwork, difficult clients, problem-solving and online meetings.",
+        "icon": "article",
+        "tag": "speaking",
+        "itemsCount": 6,
+        "priority": 101
+      },
+      {
+        "id": "practice-mode",
+        "title": "Practice Mode",
+        "type": "practice",
+        "description": "Random speaking prompts and random phrase practice for active recall.",
+        "icon": "shuffle",
+        "tag": "drill",
+        "itemsCount": 15,
+        "priority": 102
+      },
+      {
+        "id": "ai-certification-vocabulary",
+        "title": "AI Certification Vocabulary",
+        "category": "AI Certification Vocabulary",
+        "type": "phraseCategory",
+        "description": "High-value vocabulary, phrases, collocations, and professional expressions for AI certification preparation, deployment, agentic workflows, evaluation, safeguards, governance, security, APIs, retrieval, monitoring, and technical communication.",
+        "icon": "school",
+        "tag": "ai-certification",
+        "itemsCount": 117,
+        "priority": 38
+      },
+      {
+        "id": "ai-certification-verbs-contextual",
+        "title": "AI Certification Verbs — Contextual",
+        "type": "irregularVerbs",
+        "verbSet": "ai-certification-verbs-contextual",
+        "description": "Curated high-value professional verbs for AI certification topics, with Base, Past Simple, and Past Participle forms. Basic high-frequency verbs are intentionally excluded.",
+        "icon": "schema",
+        "tag": "ai-certification",
+        "itemsCount": 39,
+        "priority": 38.1
+      },
+      {
+        "id": "topic-conditionals",
+        "title": "Conditionals",
+        "category": "Conditionals",
+        "type": "phraseCategory",
+        "description": "Use conditionals to connect a situation with its result. Start with the four core types, then explore mixed conditionals.",
+        "icon": "topic",
+        "tag": "grammar",
+        "itemsCount": 18,
+        "priority": 36.1
+      },
+      {
+        "id": "topic-small-talk",
+        "title": "Small Talk",
+        "category": "Small Talk",
+        "type": "phraseCategory",
+        "description": "Start a conversation, keep it going and finish politely. Choose a situation and practice a few phrases.",
+        "icon": "topic",
+        "tag": "small-talk",
+        "itemsCount": 36,
+        "priority": 36.2
+      },
+      {
+        "id": "topic-interview-english",
+        "title": "Interview English",
+        "category": "Interview English",
+        "type": "phraseCategory",
+        "description": "Build clear answers in English. Choose a question type, use the answer frames and adapt the example to your own experience.",
+        "icon": "topic",
+        "tag": "interview",
+        "itemsCount": 18,
+        "priority": 36.3
+      }
+    ],
+    "counts": {
+      "phrases": 638,
+      "wordIndex": 566,
+      "irregularVerbs": 339,
+      "patterns": 7,
+      "answers": 12,
+      "drills": 15,
+      "topics": 3
+    },
+    "packs": [
+      {
+        "id": "speaking-foundations",
+        "title": "Speaking foundations",
+        "order": 10,
+        "url": "packs/speaking-foundations.378bea01a015d76e.json",
+        "counts": {
+          "phrases": 89,
+          "wordIndex": 89,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "presentations",
+        "title": "Presentations",
+        "order": 20,
+        "url": "packs/presentations.2cd234cc3c91ce8d.json",
+        "counts": {
+          "phrases": 90,
+          "wordIndex": 90,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "agent-framework",
+        "title": "Agent framework",
+        "order": 30,
+        "url": "packs/agent-framework.30b26432f0ecf993.json",
+        "counts": {
+          "phrases": 81,
+          "wordIndex": 81,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "hedging-and-linking",
+        "title": "Hedging and linking",
+        "order": 40,
+        "url": "packs/hedging-and-linking.06c92cc29e38d601.json",
+        "counts": {
+          "phrases": 24,
+          "wordIndex": 24,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "personal-topics",
+        "title": "Personal speaking topics",
+        "order": 50,
+        "url": "packs/personal-topics.03c1443a2cc176cf.json",
+        "counts": {
+          "phrases": 45,
+          "wordIndex": 45,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "workplace-topics",
+        "title": "Workplace speaking topics",
+        "order": 60,
+        "url": "packs/workplace-topics.dad3daa8ab78823e.json",
+        "counts": {
+          "phrases": 120,
+          "wordIndex": 120,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "ai-certification",
+        "title": "AI certification",
+        "order": 70,
+        "url": "packs/ai-certification.a743e81dde1bc943.json",
+        "counts": {
+          "phrases": 117,
+          "wordIndex": 117,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "speaking-practice",
+        "title": "Speaking practice",
+        "order": 80,
+        "url": "packs/speaking-practice.30d81bc404256cb8.json",
+        "counts": {
+          "phrases": 0,
+          "wordIndex": 0,
+          "irregularVerbs": 0,
+          "patterns": 7,
+          "answers": 6,
+          "drills": 15,
+          "topics": 0
+        }
+      },
+      {
+        "id": "essential-100",
+        "title": "100 Irregular Verbs",
+        "order": 90,
+        "url": "packs/essential-100.3a71b8e1e38939e1.json",
+        "counts": {
+          "phrases": 0,
+          "wordIndex": 0,
+          "irregularVerbs": 100,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "logical-200",
+        "title": "200 Irregular Verbs — Logical Groups",
+        "order": 100,
+        "url": "packs/logical-200.7dea9a714b2c308b.json",
+        "counts": {
+          "phrases": 0,
+          "wordIndex": 0,
+          "irregularVerbs": 200,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "ai-certification-verbs-contextual",
+        "title": "AI Certification Verbs — Contextual",
+        "order": 110,
+        "url": "packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+        "counts": {
+          "phrases": 0,
+          "wordIndex": 0,
+          "irregularVerbs": 39,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 0
+        }
+      },
+      {
+        "id": "conditionals",
+        "title": "Conditionals",
+        "order": 120,
+        "url": "packs/conditionals.1c6e8e33d50795c2.json",
+        "counts": {
+          "phrases": 18,
+          "wordIndex": 0,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 1
+        }
+      },
+      {
+        "id": "small-talk",
+        "title": "Small Talk",
+        "order": 130,
+        "url": "packs/small-talk.9223c920eb6387cd.json",
+        "counts": {
+          "phrases": 36,
+          "wordIndex": 0,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 0,
+          "drills": 0,
+          "topics": 1
+        }
+      },
+      {
+        "id": "interview-english",
+        "title": "Interview English",
+        "order": 140,
+        "url": "packs/interview-english.b1b80134e0f24ef7.json",
+        "counts": {
+          "phrases": 18,
+          "wordIndex": 0,
+          "irregularVerbs": 0,
+          "patterns": 0,
+          "answers": 6,
+          "drills": 0,
+          "topics": 1
+        }
+      }
+    ]
+  },
+  "protectedFiles": [
+    {
+      "file": "docs/evidence/eng-v2-03/id-mapping.json",
+      "sha256": "75f8878ae919072d6a7ed419acec76e460562bb7419e812b83616d1724904774",
+      "unchanged": true
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/content-totals.json",
+      "sha256": "67d0f3ec92ce2e9337de1ccfdb0fcb9c4d1083a10d70de09f62aa72b0140565e",
+      "unchanged": true
+    },
+    {
+      "file": "src/features/home/homeStats.ts",
+      "sha256": "c90796f20835066792b3682f1dd09511c63b5dfbd4bbca091cb0d0cf33eb187a",
+      "unchanged": true
+    },
+    {
+      "file": "src/features/home/homeStats.test.ts",
+      "sha256": "5b2090ec5cace92cc581663fcf2efd6f446d3f43f2d2970c2203de4567b284c6",
+      "unchanged": true
+    },
+    {
+      "file": "src/app/App.home.test.ts",
+      "sha256": "87d2f59d429f5c3de9bb83ee394346c4f7ac714bbca6e1c6aab61f2bb6a14e3b",
+      "unchanged": true
+    },
+    {
+      "file": "package.json",
+      "sha256": "89fcf90a1b7728b32303034b69306201acfa5dfdaf0e0f4bdf33b920d14f2df5",
+      "unchanged": true
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "fd8eebb14c8a657d2ce4feecafb970c2aeb3a9d9368d25dfb56bea485921c01c",
+      "unchanged": true
+    },
+    {
+      "file": "v1/package.json",
+      "sha256": "4ccd4b7d81ffab71d2a5a2154313de0f244f5b6dee09d1cd2678b380f24a44ad",
+      "unchanged": true
+    },
+    {
+      "file": "v1/package-lock.json",
+      "sha256": "c88bc5166ff3228b6dbf75f8e40e1973050fb6b40359a43f5d87f02ddb8928c4",
+      "unchanged": true
+    }
+  ]
+}

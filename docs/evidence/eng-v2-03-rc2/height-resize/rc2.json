@@ -1,0 +1,1479 @@
+{
+  "runnerSha256": "81d0cf0525b93729475b3747f47b3ccd1a0fa4c0c403cbf4e17b7e23c78bfc63",
+  "oracleSha256": "0e4b6bb6d1640d0076b17e70a4945b7e14c389a401433195bc6c558cf1dcfa98",
+  "buildIndexSha256": "8b0a649046637a4efaf91cb0a3a771cd356fd99cfbe5ebb599bcf7cc1abcf520",
+  "method": "Fresh isolated contexts (reduced motion, as in Astra's probe); intended fonts loaded; html font-size 100% or 200%; real Tab/Shift+Tab/Enter; viewport height changed with the width kept; 1000 ms settling; no test-side chip focus, reveal or scroll.",
+  "engines": {
+    "chromium": {
+      "version": "159.0.8154.6",
+      "scenarios": {
+        "decisive-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-chromium-decisive-320-200",
+          "fontsLoaded": 2,
+          "tabsToAllSituations": 5,
+          "before": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 27.65625,
+              "top": 315.734375,
+              "right": 315.65625,
+              "bottom": 412.109375,
+              "width": 288,
+              "height": 96.375
+            },
+            "footprint": {
+              "left": 23.65625,
+              "right": 319.65625,
+              "top": 311.734375,
+              "bottom": 416.109375
+            },
+            "effective": {
+              "left": 0,
+              "top": 311.734375,
+              "right": 320,
+              "bottom": 415.734375
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 430,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 743.21875,
+            "pageOverflow": 0
+          },
+          "layoutBefore": {
+            "strip": {
+              "width": 320,
+              "height": 104.375,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 750
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.375
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 430,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 743.21875
+          },
+          "resized": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 27.65625,
+              "top": 278.734375,
+              "right": 315.65625,
+              "bottom": 375.109375,
+              "width": 288,
+              "height": 96.375
+            },
+            "footprint": {
+              "left": 23.65625,
+              "right": 319.65625,
+              "top": 274.734375,
+              "bottom": 379.109375
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.734375,
+              "right": 320,
+              "bottom": 378.734375
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.21875,
+            "pageOverflow": 0
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 320,
+              "height": 104.375,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 750
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.375
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.21875
+          },
+          "sizesUnchangedByResize": true,
+          "restored": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 27.65625,
+              "top": 278.734375,
+              "right": 315.65625,
+              "bottom": 375.109375,
+              "width": 288,
+              "height": 96.375
+            },
+            "footprint": {
+              "left": 23.65625,
+              "right": 319.65625,
+              "top": 274.734375,
+              "bottom": 379.109375
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.734375,
+              "right": 320,
+              "bottom": 378.734375
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 743.21875,
+            "pageOverflow": 0
+          },
+          "shrunkAgain": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 27.65625,
+              "top": 278.734375,
+              "right": 315.65625,
+              "bottom": 375.109375,
+              "width": 288,
+              "height": 96.375
+            },
+            "footprint": {
+              "left": 23.65625,
+              "right": 319.65625,
+              "top": 274.734375,
+              "bottom": 379.109375
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.734375,
+              "right": 320,
+              "bottom": 378.734375
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.21875,
+            "pageOverflow": 0
+          },
+          "layoutShrunkAgain": {
+            "strip": {
+              "width": 320,
+              "height": 104.375,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 750
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.375
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.21875
+          }
+        },
+        "normal-320-100": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 100,
+          "shot": "rc2-chromium-normal-320-100",
+          "fontsLoaded": 2,
+          "before": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 75.34375,
+              "top": 360.375,
+              "right": 245.265625,
+              "bottom": 404.375,
+              "width": 169.921875,
+              "height": 44
+            },
+            "footprint": {
+              "left": 71.34375,
+              "right": 249.265625,
+              "top": 356.375,
+              "bottom": 408.375
+            },
+            "effective": {
+              "left": 0,
+              "top": 356.375,
+              "right": 320,
+              "bottom": 408.375
+            },
+            "fontSize": 14,
+            "lineCount": 1,
+            "scrollY": 0,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 779,
+            "pageOverflow": 0
+          },
+          "layoutBefore": {
+            "strip": {
+              "width": 320,
+              "height": 52,
+              "clientWidth": 320,
+              "clientHeight": 52,
+              "scrollWidth": 1084,
+              "scrollLeft": 377
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 169.921875,
+              "height": 44
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 0,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 779
+          },
+          "height": 443,
+          "resized": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 75.34375,
+              "top": 330.375,
+              "right": 245.265625,
+              "bottom": 374.375,
+              "width": 169.921875,
+              "height": 44
+            },
+            "footprint": {
+              "left": 71.34375,
+              "right": 249.265625,
+              "top": 326.375,
+              "bottom": 378.375
+            },
+            "effective": {
+              "left": 0,
+              "top": 326.375,
+              "right": 320,
+              "bottom": 378
+            },
+            "fontSize": 14,
+            "lineCount": 1,
+            "scrollY": 30,
+            "viewport": {
+              "width": 320,
+              "height": 443
+            },
+            "navTop": 378,
+            "pageOverflow": 0
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 320,
+              "height": 52,
+              "clientWidth": 320,
+              "clientHeight": 52,
+              "scrollWidth": 1084,
+              "scrollLeft": 377
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 169.921875,
+              "height": 44
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 30,
+            "viewport": {
+              "width": 320,
+              "height": 443
+            },
+            "navTop": 378
+          },
+          "sizesUnchangedByResize": true
+        },
+        "enlarged-390-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 390,
+          "text": 200,
+          "shot": "rc2-chromium-enlarged-390-200",
+          "fontsLoaded": 2,
+          "before": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.1875,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 71.65625,
+              "top": 614.953125,
+              "right": 385.5,
+              "bottom": 672.140625,
+              "width": 313.84375,
+              "height": 57.1875
+            },
+            "footprint": {
+              "left": 67.65625,
+              "right": 389.5,
+              "top": 610.953125,
+              "bottom": 676.140625
+            },
+            "effective": {
+              "left": 0,
+              "top": 610.953125,
+              "right": 390,
+              "bottom": 675.953125
+            },
+            "fontSize": 28,
+            "lineCount": 1,
+            "scrollY": 0,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "navTop": 743.21875,
+            "pageOverflow": 0
+          },
+          "layoutBefore": {
+            "strip": {
+              "width": 390,
+              "height": 65.1875,
+              "clientWidth": 390,
+              "clientHeight": 65,
+              "scrollWidth": 1906,
+              "scrollLeft": 715
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 313.84375,
+              "height": 57.1875
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 0,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "navTop": 743.21875
+          },
+          "height": 747,
+          "resized": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.1875,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 71.65625,
+              "top": 584.953125,
+              "right": 385.5,
+              "bottom": 642.140625,
+              "width": 313.84375,
+              "height": 57.1875
+            },
+            "footprint": {
+              "left": 67.65625,
+              "right": 389.5,
+              "top": 580.953125,
+              "bottom": 646.140625
+            },
+            "effective": {
+              "left": 0,
+              "top": 580.953125,
+              "right": 390,
+              "bottom": 645.953125
+            },
+            "fontSize": 28,
+            "lineCount": 1,
+            "scrollY": 30,
+            "viewport": {
+              "width": 390,
+              "height": 747
+            },
+            "navTop": 646.21875,
+            "pageOverflow": 0
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 390,
+              "height": 65.1875,
+              "clientWidth": 390,
+              "clientHeight": 65,
+              "scrollWidth": 1906,
+              "scrollLeft": 715
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 313.84375,
+              "height": 57.1875
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 30,
+            "viewport": {
+              "width": 390,
+              "height": 747
+            },
+            "navTop": 646.21875
+          },
+          "sizesUnchangedByResize": true
+        },
+        "search-focus-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-chromium-search-focus-320-200",
+          "fontsLoaded": 2,
+          "height": 487,
+          "shiftTabsToSearch": 4,
+          "layoutBefore": {
+            "strip": {
+              "width": 320,
+              "height": 104.375,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 12
+            },
+            "button": null,
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": false,
+            "scrollY": 430,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 743.21875
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 320,
+              "height": 104.375,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 12
+            },
+            "button": null,
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": false,
+            "scrollY": 430,
+            "viewport": {
+              "width": 320,
+              "height": 487
+            },
+            "navTop": 386.21875
+          },
+          "active": "<search>"
+        },
+        "manual-scroll-unfocused-320-100": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 100,
+          "shot": "rc2-chromium-manual-scroll-unfocused-320-100",
+          "fontsLoaded": 2,
+          "height": 443,
+          "layoutBefore": {
+            "strip": {
+              "width": 320,
+              "height": 52,
+              "clientWidth": 320,
+              "clientHeight": 52,
+              "scrollWidth": 1084,
+              "scrollLeft": 132
+            },
+            "button": null,
+            "selected": [
+              "Traveling"
+            ],
+            "activeIsMarked": false,
+            "scrollY": 0,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 779
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 320,
+              "height": 52,
+              "clientWidth": 320,
+              "clientHeight": 52,
+              "scrollWidth": 1084,
+              "scrollLeft": 132
+            },
+            "button": null,
+            "selected": [
+              "Traveling"
+            ],
+            "activeIsMarked": false,
+            "scrollY": 0,
+            "viewport": {
+              "width": 320,
+              "height": 443
+            },
+            "navTop": 378
+          }
+        },
+        "focus-moves-after-resize-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-chromium-focus-moves-after-resize-320-200",
+          "fontsLoaded": 2,
+          "after": {
+            "label": "Free time and weekends",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.375,
+            "clippedCharacters": 0,
+            "characterCount": 19,
+            "box": {
+              "left": 15.65625,
+              "top": 278.734375,
+              "right": 303.65625,
+              "bottom": 375.109375,
+              "width": 288,
+              "height": 96.375
+            },
+            "footprint": {
+              "left": 11.65625,
+              "right": 307.65625,
+              "top": 274.734375,
+              "bottom": 379.109375
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.734375,
+              "right": 320,
+              "bottom": 378.734375
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.21875,
+            "pageOverflow": 0
+          }
+        },
+        "navigate-after-resize-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-chromium-navigate-after-resize-320-200",
+          "fontsLoaded": 2,
+          "heading": "Home",
+          "scrollY": 0
+        },
+        "resize-burst-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-chromium-resize-burst-320-200",
+          "fontsLoaded": 2,
+          "after": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 27.65625,
+              "top": 278.734375,
+              "right": 315.65625,
+              "bottom": 375.109375,
+              "width": 288,
+              "height": 96.375
+            },
+            "footprint": {
+              "left": 23.65625,
+              "right": 319.65625,
+              "top": 274.734375,
+              "bottom": 379.109375
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.734375,
+              "right": 320,
+              "bottom": 378.734375
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.21875,
+            "pageOverflow": 0
+          },
+          "scrollEvents": 1,
+          "scrollEventsOneSecondLater": 1
+        }
+      }
+    },
+    "firefox": {
+      "version": "159.0",
+      "scenarios": {
+        "decisive-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-firefox-decisive-320-200",
+          "fontsLoaded": 2,
+          "tabsToAllSituations": 6,
+          "before": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.399993896484375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 16,
+              "top": 315.29998779296875,
+              "right": 304,
+              "bottom": 411.6999816894531,
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "footprint": {
+              "left": 12,
+              "right": 308,
+              "top": 311.29998779296875,
+              "bottom": 415.6999816894531
+            },
+            "effective": {
+              "left": 0,
+              "top": 311.29998779296875,
+              "right": 320,
+              "bottom": 415.29998779296875
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 430.5,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 743.2000122070312,
+            "pageOverflow": 0
+          },
+          "layoutBefore": {
+            "strip": {
+              "width": 320,
+              "height": 104.39999389648438,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 761.6333618164062
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 430.5,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 743.2000122070312
+          },
+          "resized": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.399993896484375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 16,
+              "top": 278.79998779296875,
+              "right": 304,
+              "bottom": 375.1999816894531,
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "footprint": {
+              "left": 12,
+              "right": 308,
+              "top": 274.79998779296875,
+              "bottom": 379.1999816894531
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.79998779296875,
+              "right": 320,
+              "bottom": 378.79998779296875
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.20001220703125,
+            "pageOverflow": 0
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 320,
+              "height": 104.39999389648438,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 761.6333618164062
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.20001220703125
+          },
+          "sizesUnchangedByResize": true,
+          "restored": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.399993896484375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 16,
+              "top": 278.79998779296875,
+              "right": 304,
+              "bottom": 375.1999816894531,
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "footprint": {
+              "left": 12,
+              "right": 308,
+              "top": 274.79998779296875,
+              "bottom": 379.1999816894531
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.79998779296875,
+              "right": 320,
+              "bottom": 378.79998779296875
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 743.2000122070312,
+            "pageOverflow": 0
+          },
+          "shrunkAgain": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.399993896484375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 16,
+              "top": 278.79998779296875,
+              "right": 304,
+              "bottom": 375.1999816894531,
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "footprint": {
+              "left": 12,
+              "right": 308,
+              "top": 274.79998779296875,
+              "bottom": 379.1999816894531
+            },
+            "effective": {
+              "left": 0,
+              "top": 274.79998779296875,
+              "right": 320,
+              "bottom": 378.79998779296875
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.20001220703125,
+            "pageOverflow": 0
+          },
+          "layoutShrunkAgain": {
+            "strip": {
+              "width": 320,
+              "height": 104.39999389648438,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 761.6333618164062
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 467,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.20001220703125
+          }
+        },
+        "normal-320-100": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 100,
+          "shot": "rc2-firefox-normal-320-100",
+          "fontsLoaded": 2,
+          "before": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 75.05000305175781,
+              "top": 360.3999938964844,
+              "right": 244.9499969482422,
+              "bottom": 404.3999938964844,
+              "width": 169.89999389648438,
+              "height": 44
+            },
+            "footprint": {
+              "left": 71.05000305175781,
+              "right": 248.9499969482422,
+              "top": 356.3999938964844,
+              "bottom": 408.3999938964844
+            },
+            "effective": {
+              "left": 0,
+              "top": 356.3999938964844,
+              "right": 320,
+              "bottom": 408.3999938964844
+            },
+            "fontSize": 14,
+            "lineCount": 1,
+            "scrollY": 0,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 779,
+            "pageOverflow": 0
+          },
+          "layoutBefore": {
+            "strip": {
+              "width": 320,
+              "height": 52,
+              "clientWidth": 320,
+              "clientHeight": 52,
+              "scrollWidth": 1084,
+              "scrollLeft": 377.2166748046875
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 169.89999389648438,
+              "height": 44
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 0,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 779
+          },
+          "height": 443,
+          "resized": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 75.05000305175781,
+              "top": 330,
+              "right": 244.9499969482422,
+              "bottom": 374,
+              "width": 169.89999389648438,
+              "height": 44
+            },
+            "footprint": {
+              "left": 71.05000305175781,
+              "right": 248.9499969482422,
+              "top": 326,
+              "bottom": 378
+            },
+            "effective": {
+              "left": 0,
+              "top": 326,
+              "right": 320,
+              "bottom": 378
+            },
+            "fontSize": 14,
+            "lineCount": 1,
+            "scrollY": 30.399999618530273,
+            "viewport": {
+              "width": 320,
+              "height": 443
+            },
+            "navTop": 378,
+            "pageOverflow": 0
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 320,
+              "height": 52,
+              "clientWidth": 320,
+              "clientHeight": 52,
+              "scrollWidth": 1084,
+              "scrollLeft": 377.2166748046875
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 169.89999389648438,
+              "height": 44
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 30.399999618530273,
+            "viewport": {
+              "width": 320,
+              "height": 443
+            },
+            "navTop": 378
+          },
+          "sizesUnchangedByResize": true
+        },
+        "enlarged-390-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 390,
+          "text": 200,
+          "shot": "rc2-firefox-enlarged-390-200",
+          "fontsLoaded": 2,
+          "before": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.1999969482421875,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 71.64999389648438,
+              "top": 615,
+              "right": 385.5,
+              "bottom": 672.1999969482422,
+              "width": 313.8500061035156,
+              "height": 57.19999694824219
+            },
+            "footprint": {
+              "left": 67.64999389648438,
+              "right": 389.5,
+              "top": 611,
+              "bottom": 676.1999969482422
+            },
+            "effective": {
+              "left": 0,
+              "top": 611,
+              "right": 390,
+              "bottom": 676
+            },
+            "fontSize": 28,
+            "lineCount": 1,
+            "scrollY": 0,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "navTop": 743.2000122070312,
+            "pageOverflow": 0
+          },
+          "layoutBefore": {
+            "strip": {
+              "width": 390,
+              "height": 65.19999694824219,
+              "clientWidth": 390,
+              "clientHeight": 65,
+              "scrollWidth": 1906,
+              "scrollLeft": 715
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 313.8500061035156,
+              "height": 57.19999694824219
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 0,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "navTop": 743.2000122070312
+          },
+          "height": 747,
+          "resized": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.1999969482421875,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 71.64999389648438,
+              "top": 585,
+              "right": 385.5,
+              "bottom": 642.1999969482422,
+              "width": 313.8500061035156,
+              "height": 57.19999694824219
+            },
+            "footprint": {
+              "left": 67.64999389648438,
+              "right": 389.5,
+              "top": 581,
+              "bottom": 646.1999969482422
+            },
+            "effective": {
+              "left": 0,
+              "top": 581,
+              "right": 390,
+              "bottom": 646
+            },
+            "fontSize": 28,
+            "lineCount": 1,
+            "scrollY": 30,
+            "viewport": {
+              "width": 390,
+              "height": 747
+            },
+            "navTop": 646.2000122070312,
+            "pageOverflow": 0
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 390,
+              "height": 65.19999694824219,
+              "clientWidth": 390,
+              "clientHeight": 65,
+              "scrollWidth": 1906,
+              "scrollLeft": 715
+            },
+            "button": {
+              "label": "Coffee and lunch breaks",
+              "width": 313.8500061035156,
+              "height": 57.19999694824219
+            },
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": true,
+            "scrollY": 30,
+            "viewport": {
+              "width": 390,
+              "height": 747
+            },
+            "navTop": 646.2000122070312
+          },
+          "sizesUnchangedByResize": true
+        },
+        "search-focus-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-firefox-search-focus-320-200",
+          "fontsLoaded": 2,
+          "height": 486,
+          "shiftTabsToSearch": 5,
+          "layoutBefore": {
+            "strip": {
+              "width": 320,
+              "height": 104.39999389648438,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 0
+            },
+            "button": null,
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": false,
+            "scrollY": 430.5,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 743.2000122070312
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 320,
+              "height": 104.39999389648438,
+              "clientWidth": 320,
+              "clientHeight": 104,
+              "scrollWidth": 1819,
+              "scrollLeft": 0
+            },
+            "button": null,
+            "selected": [
+              "All situations"
+            ],
+            "activeIsMarked": false,
+            "scrollY": 430.5,
+            "viewport": {
+              "width": 320,
+              "height": 486
+            },
+            "navTop": 385.20001220703125
+          },
+          "active": "<search>"
+        },
+        "manual-scroll-unfocused-320-100": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 100,
+          "shot": "rc2-firefox-manual-scroll-unfocused-320-100",
+          "fontsLoaded": 2,
+          "height": 443,
+          "layoutBefore": {
+            "strip": {
+              "width": 320,
+              "height": 52,
+              "clientWidth": 320,
+              "clientHeight": 52,
+              "scrollWidth": 1084,
+              "scrollLeft": 161.4166717529297
+            },
+            "button": null,
+            "selected": [
+              "Traveling"
+            ],
+            "activeIsMarked": false,
+            "scrollY": 0,
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "navTop": 779
+          },
+          "layoutResized": {
+            "strip": {
+              "width": 320,
+              "height": 52,
+              "clientWidth": 320,
+              "clientHeight": 52,
+              "scrollWidth": 1084,
+              "scrollLeft": 161.4166717529297
+            },
+            "button": null,
+            "selected": [
+              "Traveling"
+            ],
+            "activeIsMarked": false,
+            "scrollY": 0,
+            "viewport": {
+              "width": 320,
+              "height": 443
+            },
+            "navTop": 378
+          }
+        },
+        "focus-moves-after-resize-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-firefox-focus-moves-after-resize-320-200",
+          "fontsLoaded": 2,
+          "after": {
+            "label": "Free time and weekends",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.399993896484375,
+            "clippedCharacters": 0,
+            "characterCount": 19,
+            "box": {
+              "left": 16,
+              "top": 274.79998779296875,
+              "right": 304,
+              "bottom": 371.1999816894531,
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "footprint": {
+              "left": 12,
+              "right": 308,
+              "top": 270.79998779296875,
+              "bottom": 375.1999816894531
+            },
+            "effective": {
+              "left": 0,
+              "top": 270.79998779296875,
+              "right": 320,
+              "bottom": 374.79998779296875
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 471,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.20001220703125,
+            "pageOverflow": 0
+          }
+        },
+        "navigate-after-resize-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-firefox-navigate-after-resize-320-200",
+          "fontsLoaded": 2,
+          "heading": "Home",
+          "scrollY": 0
+        },
+        "resize-burst-320-200": {
+          "pass": true,
+          "failures": [],
+          "errors": [],
+          "width": 320,
+          "text": 200,
+          "shot": "rc2-firefox-resize-burst-320-200",
+          "fontsLoaded": 2,
+          "after": {
+            "label": "Coffee and lunch breaks",
+            "complete": true,
+            "focusVisible": true,
+            "ariaPressed": "false",
+            "paintedOverflow": 0.399993896484375,
+            "clippedCharacters": 0,
+            "characterCount": 20,
+            "box": {
+              "left": 16,
+              "top": 268.79998779296875,
+              "right": 304,
+              "bottom": 365.1999816894531,
+              "width": 288,
+              "height": 96.39999389648438
+            },
+            "footprint": {
+              "left": 12,
+              "right": 308,
+              "top": 264.79998779296875,
+              "bottom": 369.1999816894531
+            },
+            "effective": {
+              "left": 0,
+              "top": 264.79998779296875,
+              "right": 320,
+              "bottom": 368.79998779296875
+            },
+            "fontSize": 28,
+            "lineCount": 2,
+            "scrollY": 477,
+            "viewport": {
+              "width": 320,
+              "height": 480
+            },
+            "navTop": 379.20001220703125,
+            "pageOverflow": 0
+          },
+          "scrollEvents": 2,
+          "scrollEventsOneSecondLater": 2
+        }
+      }
+    }
+  },
+  "summary": {
+    "chromium": {
+      "passed": 8,
+      "total": 8
+    },
+    "firefox": {
+      "passed": 8,
+      "total": 8
+    }
+  },
+  "passed": true
+}

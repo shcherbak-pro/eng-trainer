@@ -1,0 +1,325 @@
+{
+  "rule": "Existing core.autocrlf=true; no configuration changed. Git hash-object applies repository attributes and clean rules. Stored bytes equal the reviewed bytes with CRLF replaced by LF, and no other change.",
+  "files": [
+    {
+      "file": "content/catalog.json",
+      "commit": "implementation",
+      "reviewedBytes": 16436,
+      "reviewedSha256": "3bc5770c9c8ff9b4829265c565f5873796eeff3af45ba500758c6618006e3a0d",
+      "gitBytes": 15965,
+      "gitSha256": "8f7bdd50fa6effdbb37b99b4d2d9bdc55e351c30cf30705f9b63d077717cb3cc",
+      "gitBlob": "4146f59a4e4dc0da80516f93872013e35a3bc274",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/architecture/BUILT-IN-CONTENT.md",
+      "commit": "documentation",
+      "reviewedBytes": 10328,
+      "reviewedSha256": "6dfb0167f4e6217a9280f97344e98a0e6009000ee09d92896fba75b8d61939df",
+      "gitBytes": 10197,
+      "gitSha256": "538bc703669f7625b1166a6fbef0375bcc347ce9c54be53336e90d46f368e6a5",
+      "gitBlob": "8d89a513695237981941be0dc74883705cd12665",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-additional.log",
+      "commit": "documentation",
+      "reviewedBytes": 144,
+      "reviewedSha256": "e8cd4f693bdbc3e905c28b6833a09edc1d35248dfe0ab28e17ba6442917b19e8",
+      "gitBytes": 140,
+      "gitSha256": "8d2e70b01913b2146fbeb3875a61f731cbae51c246366a923f1f152906322943",
+      "gitBlob": "87addcdf326e700376b832425eee613dde46f91c",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "commit": "documentation",
+      "reviewedBytes": 2170,
+      "reviewedSha256": "61166a6cd209028b6e4c47b70a10b2b1b4ac7bc5cb8c2cc99bb765cb30de3258",
+      "gitBytes": 2134,
+      "gitSha256": "fe3f54ab773b9d225a77eaa105884832c0801eef453bf084bc39d4f35b89f99b",
+      "gitBlob": "f923241360f15b0b6091764ee7349003fe39e942",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "commit": "documentation",
+      "reviewedBytes": 2328,
+      "reviewedSha256": "43131668264586d4165d57376c060c5e689ec0a6ab349cd05cc2945ec0ae8dd0",
+      "gitBytes": 2298,
+      "gitSha256": "8aa0005405242647d29f150ee5fcaa741e73e7556a86624bef665636f7ac3130",
+      "gitBlob": "4de099ff1c9d6a611ca07c9bc652a5370114123f",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent.log",
+      "commit": "documentation",
+      "reviewedBytes": 556,
+      "reviewedSha256": "9cce868573316f19d98bd244783eade8107849ebf80d059a7cdec6bf05a273ed",
+      "gitBytes": 544,
+      "gitSha256": "c29d35f36ca2c59e53c25b7fe825cc094229abb0a675722f53cda92409cb86b2",
+      "gitBlob": "936d3af5ddf8fb5efeb21c0a41259958bdcaab9d",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands/logs/check.log",
+      "commit": "documentation",
+      "reviewedBytes": 2068,
+      "reviewedSha256": "db8d9618718e57f817067ea6825a3494e376644ad79ffc4895137809fa9e4534",
+      "gitBytes": 2066,
+      "gitSha256": "a93357c6685e547ec3c14706068bf8c34e8b955ed04adf79415949c68a904ee7",
+      "gitBlob": "56e3cc57b7cdec847bfecd001a56c1d981796a37",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-final.log",
+      "commit": "documentation",
+      "reviewedBytes": 4251,
+      "reviewedSha256": "618eb5cc3f0f2287e83c0c4b074228eed62f8a6e695845064d39028ea67ff328",
+      "gitBytes": 4217,
+      "gitSha256": "036787a109684d0fbe0ffcc186f884888ec3473fcde40b049bb441dce258ea80",
+      "gitBlob": "98892b9e7c39824ecda74a70311a9a2599726a8f",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "commit": "documentation",
+      "reviewedBytes": 60819,
+      "reviewedSha256": "04117a401ad3db15c7cb34d4b97bab531260bb4e62f8be63adfdba3b185379c2",
+      "gitBytes": 60341,
+      "gitSha256": "3b21f17bf90e928df2193dd268183a12a6a0c5bde9075200ad0a1ebfd4ad770e",
+      "gitBlob": "b704ebebfe89e7a6a823bd334bb7fa9d1ef15f9f",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/reset-race-original-schedule.log",
+      "commit": "documentation",
+      "reviewedBytes": 491,
+      "reviewedSha256": "a504d307f0098b0bbd21dce1488cb1b101e42a2dface848aded93a511340ca2f",
+      "gitBytes": 480,
+      "gitSha256": "a49a5a680521cc7b0f6cef1cf2db9080441644a751976ef71bffbc672acfc2db",
+      "gitBlob": "8b188f26ab8f68cfe35ce5d4a5e601de7da00867",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/reset-race.log",
+      "commit": "documentation",
+      "reviewedBytes": 492,
+      "reviewedSha256": "7dbcb91829a34fe742911549a638bc47575cf307a300bd5e4f91a6715e7d84f9",
+      "gitBytes": 481,
+      "gitSha256": "e21127fbca3fba4cdd996da92b7b01fce603ccd456513307b1d10613ceb3154a",
+      "gitBlob": "5648e60801a5c6c7837febe34911448400f0b27d",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "scripts/content-build.test.mjs",
+      "commit": "implementation",
+      "reviewedBytes": 13844,
+      "reviewedSha256": "e28c205e3059e5a2fea6d6d0ccb95b0013615aa38737e51fbc478abc73b6ea8e",
+      "gitBytes": 13612,
+      "gitSha256": "d702426214f8f87b20e1dd9a37ab7952b8b34fc3b923a54eb41be8a023410aab",
+      "gitBlob": "291270dfbad9f1083dc8ed3697d82e1bb23ad193",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/app.css",
+      "commit": "implementation",
+      "reviewedBytes": 51069,
+      "reviewedSha256": "b0139199e71a75e40345b79759d216525c4c4635c622779bb84be09ba3210992",
+      "gitBytes": 50100,
+      "gitSha256": "e56aff54764702e0eabde1d084676fcd08698a1fc5755df13c035ec82c50788e",
+      "gitBlob": "8150e7bac8997712d91eb71949520379354badc8",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/app/App.svelte",
+      "commit": "implementation",
+      "reviewedBytes": 12051,
+      "reviewedSha256": "0a4d5b42568f99e814185ef87dcd5d3c83b74011e4660511b040ac98bca64f02",
+      "gitBytes": 11775,
+      "gitSha256": "bb33284365e3c47036d7dcb6d7de7c89d3402fc8fd9d46b0e77c82fc96d45b63",
+      "gitBlob": "cb0a9827c1326780723db691f7219fb50c7b93b0",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/app/App.test.ts",
+      "commit": "implementation",
+      "reviewedBytes": 34746,
+      "reviewedSha256": "880a50d7b917f16055e512dbf1a4aa20cd00308a043f04bca1b1ccc5bd252bd3",
+      "gitBytes": 33967,
+      "gitSha256": "a41371152108318968c6aa85cfea2573c53be4029f13fab4f642b59c9dd142c5",
+      "gitBlob": "a2e84091e89ef9b32d8840dace5892d1b6331607",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/app/AppShell.svelte",
+      "commit": "implementation",
+      "reviewedBytes": 12003,
+      "reviewedSha256": "1a5aae5cec1800e65177277f2cf39c68559917154494f274929003b123a80729",
+      "gitBytes": 11750,
+      "gitSha256": "a30a24c891c024ea5c4ab5441059dd813a5d4838fb2fa0cb103781f3127078d3",
+      "gitBlob": "23f8d2484cd1be0536af98e6f716079f9db1db1e",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/app/navigation.test.ts",
+      "commit": "implementation",
+      "reviewedBytes": 3996,
+      "reviewedSha256": "29d1c75a9417f403385b9f34d84ac2970fb8d2032304b2d512b54b03c3354b1e",
+      "gitBytes": 3933,
+      "gitSha256": "6b5d901a0229c2d66aaa9bcf2cffc92c568cb34a5525f6d94983e018e77f68d6",
+      "gitBlob": "e5d666abf9299e77e17d9cae2b3edffa51e86f61",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/app/navigation.ts",
+      "commit": "implementation",
+      "reviewedBytes": 5612,
+      "reviewedSha256": "b544e59698c237d72d77da373a321fdcdb0f3f75dc03c350e3f4cb159d7b8a42",
+      "gitBytes": 5474,
+      "gitSha256": "2f7c1f4d0cbcc9a879bf95d7e775c23a5b228d478ac97bd895983cc70a87e924",
+      "gitBlob": "e3d040bf6e69c4fdbb5fe473f3324731b3655638",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/collections/service.test.ts",
+      "commit": "implementation",
+      "reviewedBytes": 14964,
+      "reviewedSha256": "cdb1420f7bf6639906d90e855763fb7dce97594c04e62fa4086d78b8a4198bfc",
+      "gitBytes": 14734,
+      "gitSha256": "29f9aeb97f2d2eb33191272c8ac0c1c474364da64ef142246f71319e6940f250",
+      "gitBlob": "2a7f1a6733df1d830b27be50a8f10e302fa851d2",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/content/builtIn.test.ts",
+      "commit": "implementation",
+      "reviewedBytes": 6945,
+      "reviewedSha256": "4fd095fd9965d695efac997f10e2e3ae426680b13bf7e63cd7840d4ceac19072",
+      "gitBytes": 6846,
+      "gitSha256": "8e85e37b87e331b08b0b57b49db6018a8c82c95268177a6afdf091d1e9829833",
+      "gitBlob": "d1792f3b6a11c3e31d67424eddfc809f448e7b96",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/content/catalog.ts",
+      "commit": "implementation",
+      "reviewedBytes": 5437,
+      "reviewedSha256": "f3994cda59891959454d58011b617d4393c5fd6b928120b3eee99e63b3c7c20b",
+      "gitBytes": 5283,
+      "gitSha256": "368ad29d76abc0bd811802a27fc25e1f6ba0aea8bcc9bf8281e12f3e400fff23",
+      "gitBlob": "e640b7b3db5ac81ea2adde4dcf7e722629827c4c",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/content/descriptionLanguage.test.ts",
+      "commit": "implementation",
+      "reviewedBytes": 1654,
+      "reviewedSha256": "c69aac8b2e207d670a938fb2f1de2077886d8a5f23918f44e834cbe8d5e40664",
+      "gitBytes": 1622,
+      "gitSha256": "f2529b5f30857eeb77ac68e1af51728b50e126bcf9d30782c540e45c79bab8a5",
+      "gitBlob": "b5f0e6bc9fd65223ac91d85bf9be91ced8316542",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/content/descriptionLanguage.ts",
+      "commit": "implementation",
+      "reviewedBytes": 2433,
+      "reviewedSha256": "fda8fb5bf9d13067c88578d88458e53b1f763bdb429d18288385a4398d456c39",
+      "gitBytes": 2371,
+      "gitSha256": "c9ad386d064e55425e1dcad57b9fe8ba9fc2a16adfd0412103c5e7c79d9663d1",
+      "gitBlob": "0b5cc8f0aad60bdc3d585652b80932c7bfe2c29e",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/content/packFormat.js",
+      "commit": "implementation",
+      "reviewedBytes": 16893,
+      "reviewedSha256": "b289899723e52351aa6fd0ebce48979cee6ac9734190ebd21c7226b924dea089",
+      "gitBytes": 16593,
+      "gitSha256": "3001fed6dfc74457e17b5bfaf537c3d6bd28dceffbe5e94a9f01e1860c9e0540",
+      "gitBlob": "a2e71be8add5ad33f4a74d0ae5efb1a917f687e6",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/content/types.ts",
+      "commit": "implementation",
+      "reviewedBytes": 4340,
+      "reviewedSha256": "19e3d3fc925d712dffb607b33f38e1eba4e15d3d783605ce95b8e545b83bfbab",
+      "gitBytes": 4177,
+      "gitSha256": "2a8655e50a71044e0528b932e76aa8478fb001c79a04d37e5cd450d7e3a6d014",
+      "gitBlob": "3c5a34b7e47ee598327977777c59adbf30e9f011",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/features/exercises/AnswersPage.svelte",
+      "commit": "implementation",
+      "reviewedBytes": 479,
+      "reviewedSha256": "42ac01da2b3b8b64a49295872e4fbc4bc20258fa0501671c6848315604678beb",
+      "gitBytes": 464,
+      "gitSha256": "61391fc0cf8ef3f50f3eac64fd5972991fe8b10f9a6bad490a0a67ea11c0408c",
+      "gitBlob": "0d6e1e287e9ab2c7c064244be609affe92d5ffb8",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/features/exercises/PatternsPage.svelte",
+      "commit": "implementation",
+      "reviewedBytes": 511,
+      "reviewedSha256": "4523b4257f8e94cfe1bcf3eea0d187db65397729cf25cad973bf01d47e211b31",
+      "gitBytes": 496,
+      "gitSha256": "364970c1694eb96da5413173511ffefb363b5898ff375fb3022f6163cbcae92e",
+      "gitBlob": "f2ee97327c02b665f7bcdd946938cdbe44dc1f99",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/features/focus/FocusListPage.svelte",
+      "commit": "implementation",
+      "reviewedBytes": 3946,
+      "reviewedSha256": "14a0f317d3aae7ff52db21cb8772742874c5c0c0631e6593f48c9e669ad000e3",
+      "gitBytes": 3868,
+      "gitSha256": "2d5b21709934cf38272eb1cee1f94bb80ba7c95580fc14f792e0d5641a411969",
+      "gitBlob": "7c39b6fe6b062fc19617faeb4074ea0a8add3e5f",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/features/home/IndexPage.svelte",
+      "commit": "implementation",
+      "reviewedBytes": 12268,
+      "reviewedSha256": "19e2813ec743402c94b93435f57d719ad32a77e17b8ed7b010c124ccf1d4e4f7",
+      "gitBytes": 11963,
+      "gitSha256": "d96eebef652ccf6caefbe3c205312f5861c8a78559f408e51bf6a44f9fedcd72",
+      "gitBlob": "d29e9dc85d0999d973fdbf8e8558e324a060c342",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/features/vocabulary/PhrasesPage.svelte",
+      "commit": "implementation",
+      "reviewedBytes": 7446,
+      "reviewedSha256": "278961fc180273e9116117c7b871f6ad3f70796c78a2f3a32a47e09f83df5aa5",
+      "gitBytes": 7276,
+      "gitSha256": "da6d80272bb9a796af346840df0affff08fd8892b6e5ffdd1699d88c0f899053",
+      "gitBlob": "6f5f2a524638674687fb310630a4d4d1a30788f9",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/shared/entries/PhraseCard.svelte",
+      "commit": "implementation",
+      "reviewedBytes": 2430,
+      "reviewedSha256": "582df90c6613d8b0fd48f4430524475e54fb3234cf911b840fd7b3b43056ba8d",
+      "gitBytes": 2376,
+      "gitSha256": "97879605e3a94be7e0b8a4c4284b9baa116a7c91cfa704b8a4672b930c6cd8d8",
+      "gitBlob": "f6f16673dbadb98db9a7e3577bc83865303032f6",
+      "transformation": "CRLF-to-LF-only"
+    },
+    {
+      "file": "src/state/viewState.ts",
+      "commit": "implementation",
+      "reviewedBytes": 2908,
+      "reviewedSha256": "86dd1af7580f91ad0143b9c4998956cdf5216aece91c1332250b109b7cded676",
+      "gitBytes": 2838,
+      "gitSha256": "3bd8b32e67d9eac8968431aebc1ba143831442275db18cb385bc9ed047f37e63",
+      "gitBlob": "81d3dc34a7212b57a701fe63d6475e5e4dc60a4f",
+      "transformation": "CRLF-to-LF-only"
+    }
+  ]
+}

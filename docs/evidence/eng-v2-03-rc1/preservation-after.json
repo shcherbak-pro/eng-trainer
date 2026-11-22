@@ -1,0 +1,582 @@
+{
+  "preserved": true,
+  "head": "03f1267f1ef4287580227ce5db67615988c98177",
+  "staged": "",
+  "candidateFingerprintExcludingReviewAndRc1Evidence": "01c6ec10666ed943fbb3804101637cd00458ed60a8caaf319586e84e44e7039c",
+  "mainUntracked": 92,
+  "historicalReviewFilesIncludingIgnored": 506,
+  "handoffOriginalBytes": 33108,
+  "changes": [
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "before": "f22cecc2c2d01881f9405432225679131d6c923df6faaa6b4f76d780148030d2",
+      "after": "21b216cdf8ad074aa0e411c45d2efa4909bb937d169543b4fd8d1cd1420f69fc"
+    },
+    {
+      "file": "src/app.css",
+      "before": "3f0f2c29d88d54e2ae33e1c49a6b5c2ecf0752b6f4dcbb70d64022afc9a535c5",
+      "after": "b0139199e71a75e40345b79759d216525c4c4635c622779bb84be09ba3210992"
+    },
+    {
+      "file": "src/features/topics/TopicPage.svelte",
+      "before": "1a9105cf7d21fe70f5eac53e1dfc52fce8129970f4bc7474836bf02343815b12",
+      "after": "11fad6e95b5d4d0befd7260a1d258bb0f0f64d358e6b6b9f7b87d0b9fa46d410"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.test.ts",
+      "before": null,
+      "after": "c8abda151df2121f8f08e9d2ebda8fea2ea2e8e9bca4260ce70b20a71b8118aa"
+    },
+    {
+      "file": "src/features/topics/revealFocusedChip.ts",
+      "before": null,
+      "after": "c7cbf6ff33f29942f04c1b409e58a681e96c3c58e8c502768068e5f83954e0d0"
+    }
+  ],
+  "rc1Evidence": [
+    {
+      "file": ".gitignore",
+      "sha256": "04e59f5cc75e578a7492cd2c14ddf16487d1af09e188a7cc01224a61b1b3855f"
+    },
+    {
+      "file": "artifacts.json",
+      "sha256": "23f942439247028113e55633345650a616cb59f978f1276e198149f95fbd22eb"
+    },
+    {
+      "file": "baseline.json",
+      "sha256": "73ca915be0fc80b24915a426afbd21863f52c72a36cb83bb24fad653c55390b3"
+    },
+    {
+      "file": "browser.log",
+      "sha256": "32993b417f2bc4f0711a9ac7c51f07591345148c265a164687db0efa48aae2d0"
+    },
+    {
+      "file": "budget.json",
+      "sha256": "c377423627ac20c172cd2609d4b2ff4b59461f4be07d3a1b5677447450cc31ed"
+    },
+    {
+      "file": "budget.mjs",
+      "sha256": "4b19bb3281fd300d5a0e0fb63985915d2762e76d2623cf1610436ad1d222ba9e"
+    },
+    {
+      "file": "commands/commands.json",
+      "sha256": "ab3795a5add1815f146047d25684c348d770d70051562b36bee138579a8e4d5b"
+    },
+    {
+      "file": "commands/logs/build-site.log",
+      "sha256": "e7ea6dba4e0cf95d85151374e94a4a12d7189935bb50fcbefe850e8477092fe8"
+    },
+    {
+      "file": "commands/logs/build.log",
+      "sha256": "b078b7aa6f42d96649d9936f4d697156fe3d7360d838c3f15134a476702d8263"
+    },
+    {
+      "file": "commands/logs/check-v1.log",
+      "sha256": "4340c591cf26d4767f86b7e988d0e8c697ef5a41538fe193a813eb3e61b5035b"
+    },
+    {
+      "file": "commands/logs/check.log",
+      "sha256": "9ef3d6ca6245ddd9ca2c06f56563dee35923371eb8f85038412fe723cff33ca7"
+    },
+    {
+      "file": "commands/logs/diff-check.log",
+      "sha256": "20f35d17f1fe3e7f2eb373ee7d43b7869de43ccae2b5c3f130fb72374654d66e"
+    },
+    {
+      "file": "commands/logs/new-files-whitespace.log",
+      "sha256": "22de00d538cfa69dd11e693394048bc7ea42e81fa82162aa4f86f25abc81fece"
+    },
+    {
+      "file": "commands/logs/test-v1.log",
+      "sha256": "74c68febec2448798aafd95ed71b0b8bbe9397a434500a4e77e311af296186e9"
+    },
+    {
+      "file": "commands/logs/test.log",
+      "sha256": "f8dc94b3314eb34f749a17cde61463662422e3ac48a6f7efedc8f68d029fc867"
+    },
+    {
+      "file": "commands/logs/verify-content.log",
+      "sha256": "a1ff6b9a9dd1403000e80bb93fbb9fd4197c4f993637b352a6d60b8419a7b1f3"
+    },
+    {
+      "file": "commands.log",
+      "sha256": "299a0e8d57540d844c3db5ac6deb36b40fb2fa75334cae03bb5f1f9a8c5c802d"
+    },
+    {
+      "file": "final-audit.mjs",
+      "sha256": "48b3d5f7f56624c3bbbe72cef7db377067597e77afa18c38dcb98301c6f5cad7"
+    },
+    {
+      "file": "final-checks.json",
+      "sha256": "1c2c793aa6bc6f9e24655894798781fcd05956378812c7373fd93ee8cdcd3529"
+    },
+    {
+      "file": "focused-chips.mjs",
+      "sha256": "b25897fda9727d947c3a878a4ba0ec67cfa80b7a94f0c2939762d028cf633fff"
+    },
+    {
+      "file": "implementation-browser/results.json",
+      "sha256": "a4216a845d0eabe9a62240caabc40b21b93b9508bad0f75a7e1ee352617be3c2"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-answers.png",
+      "sha256": "4af66f276b3b5b54bbbe94b3f8029759d3c08251176707e3016258b513132eb7"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-collections.png",
+      "sha256": "4a43106eb3e6ce05724848abe3d7959e8dc616fd89ae5160901503a3e22b3da8"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-favorites.png",
+      "sha256": "12245bb4d4e14d3cb399273cccfa28ce1865091dfddb80664767d666b15430e9"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-flashcards.png",
+      "sha256": "ac279d07a208611990a2984d455f73e235fce3a4307866bbc166bcfa809b7ba4"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-index.png",
+      "sha256": "13296cad96098ded551a62134c7672dd2a46b8f96ee3dba7c900444b2756577a"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-irregularVerbs.png",
+      "sha256": "ecd26a962b26184581f1a504f82f84f033ca9b4d90571897ec08b2c117db543a"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-patterns.png",
+      "sha256": "31a0f7b1ccf6be6b41b9df237cac81883ea10ac40ec4e623b794595407b1a5ac"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-phrases.png",
+      "sha256": "ea34b23b26a577222e44db4a1245ac52b25df3e279b6be648326382900434482"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-practice.png",
+      "sha256": "49e77b7c98a022738f797ade4b3c33c5ab94b44037f4ab8ddc388e385b838778"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-reverse.png",
+      "sha256": "0c829c58fc9bab12a82ff1ddbd6acd1ab73498b3b27653408819097f92ff4d75"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-settings.png",
+      "sha256": "55816c1322c79c4cef8e2715cc23bf8e313c70c1b5c37e712fda8f7fd97d184c"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-topic-conditionals.png",
+      "sha256": "7b4b468c568d35ffde4033489b4f8de76980d1d7c36329232d51b4fd1c2a404d"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-topic-interview-english.png",
+      "sha256": "c32f62935a01321d36133c972c2e10984c092102bb6a2af3c62aa49e018db1b1"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-topic-small-talk.png",
+      "sha256": "ab53acbd38f196f8a59c0fd5533414d414b750c6019b74ef940d229f0d1d11a3"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-desktop-wordIndex.png",
+      "sha256": "efb9bb78d6a923b4c55a9c2767af8a68035a6f3330595ef10db27796bdf4c63a"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-narrow-index.png",
+      "sha256": "206908492cb54414b3063013ecaac793b2e9bdbfc4625acb5b7706fd3c585e33"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-narrow-phrases.png",
+      "sha256": "814d4b4c428e725e848014d9080b6294fd7c194aa7bd7a1eaa80eaa97c177056"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-narrow-topic-conditionals.png",
+      "sha256": "5e23e0122cc39ff80fefda09fdb084750bc186a67489bd4e1a0a3071e6d6a8d2"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-narrow-topic-interview-english.png",
+      "sha256": "870a7e53188d1f7dc1091deabd99b7256f96f7489d3f696ad850e0f8fb5651ef"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-narrow-topic-small-talk.png",
+      "sha256": "d9057cca2684ab6e3f384c747be0ca64af34d457db6060197619b507827b87f1"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-answers.png",
+      "sha256": "fe25e7cfa5ef07f7ff573cbf72ba96a64351416bc5d65fa4f999845a143a2fa4"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-collections.png",
+      "sha256": "07a111ef70100da2d9e7d3a31263172901232a8e91fefe574174d3010a24d2a5"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-conditionals-final-subsection.png",
+      "sha256": "34d340f3a6b7a10889cd7c21533b3b015885e613efe86fc0ad387734296d5e11"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-content-error.png",
+      "sha256": "f884f45d9ea04f064520c8c2941a475c21ee62afb270cdda53184391604d62d8"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-enlarged-index.png",
+      "sha256": "7ec04657c62fa2fcf2147824abd3937efc77330f4ab3d7f98d703cef116a809d"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "sha256": "ab64fa0a8b472ec19162d37ae847ae491d6b9b76a2625572b937a26f20949217"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "sha256": "80dd588f45f00855b268de65f4a26117faba084fd6bc8e2ad525e1a8a5460a15"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-favorites.png",
+      "sha256": "a27750c6ed3ae6497f6a3f783eb3fb0ed289098b0c65641c6c9a3b575c6a53e4"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-flashcards.png",
+      "sha256": "796c2e4d87ab67ee877d46badbff1d8bb81eae0f7bfeca6437352521d6bceb69"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-home-details.png",
+      "sha256": "3d24b01d55dd54f8b970a750cc565a10a9ac6ab5b77b2e833a2ba62d8257c51d"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-home-start.png",
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-index.png",
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-interview-final-category.png",
+      "sha256": "7c9f2bbe1a7e8a8251b04f51aaf1360282b638937af84e8ebc0bc73fee817af9"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-irregularVerbs.png",
+      "sha256": "5e621ab4f77fbe331864c563d2b4c9b769d6307e8369382e71de37a11aefde92"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-patterns.png",
+      "sha256": "aaca914551508934baa1eb105c1de583d331eedb251ff7256578598f88c27b75"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-phrases.png",
+      "sha256": "d4753e106d471be52ebbf00efc678e0ab0ff8d695fefec3cd763aee3c9baf4e1"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-practice.png",
+      "sha256": "20cf31fb955905d207c51c157d69a20213071f09207ee19148025a0c835a6144"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-reverse.png",
+      "sha256": "5993424e69031fbdf800849e949287abd9ab37946b81a143b01ec399614e5e92"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-settings.png",
+      "sha256": "d0498064e52b29820bc2a34b356612e23fa7cb4d8e136a68d2b9f42957e8e905"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-small-talk-traveling.png",
+      "sha256": "c30313bd86d4d58d1e07249c27248ac8dada42a3a5877154a738bb3df2b18476"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-topic-conditionals.png",
+      "sha256": "c36fed98e05bbfb0838b232d8c620d14620d30a448735e24213a708a799e3311"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-topic-interview-english.png",
+      "sha256": "365bc17e39ce787bf7a399574bacf977cee6538af3e6703f67d2626a7a4df608"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-topic-small-talk.png",
+      "sha256": "e3f0f7fb03f3616662c94905d922578ae98682b4b47942e0920210813762428c"
+    },
+    {
+      "file": "implementation-browser/shots/chromium-phone-wordIndex.png",
+      "sha256": "578ceebc09fec711954e09cb2ba7d75b09d72c088a5e725e1ec08e90d133834e"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-answers.png",
+      "sha256": "5ce33374e55e331c70c2b350a200b51fe9e0483ef60ec6fe1312c6a1cf323df6"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-collections.png",
+      "sha256": "23269fce407a27f1747264b53227d1d3e4d94bdb5ecd31d5561dbfa3a51f3694"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-favorites.png",
+      "sha256": "c7c062c2400293d4ecfc6d29aad837108b8284ca1c57b58bb08c6651fbe35bd8"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-flashcards.png",
+      "sha256": "05f7d5cdbed501011624409891c0b64101059630903bac73b828720ef590148a"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-index.png",
+      "sha256": "a839d930bcbd58378804121f60773ddcc857c4f38d649ad8408e0b7e2badda73"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-irregularVerbs.png",
+      "sha256": "8de31e69878e467cd5f504d1d3f341acfc866afd37de2d5ba86f5c1e18f8076f"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-patterns.png",
+      "sha256": "c39c6bab55b68848432a82d25ac321097b2b55524cf2f7b316a682fabe5a31ae"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-phrases.png",
+      "sha256": "ad277fa03275437d936e0fecf7492793252a57c67f1d4349849ede55d0448bc6"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-practice.png",
+      "sha256": "6432300d37446c7eb2cca75ad5908b31c3378f8a568d3f59220bcb2be073fd61"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-reverse.png",
+      "sha256": "185eb384accdfb13a0edb618a2a65b9e138b2f9823332092b162124278a2fdc3"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-settings.png",
+      "sha256": "946b6ee376471b57e757335f87b0740066655458c93fe362772e0018c91724cb"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-topic-conditionals.png",
+      "sha256": "a970abfbfb47b7e735548fc21ccd23f3856a1ff3f99ad815d6f06df80af7320c"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-topic-interview-english.png",
+      "sha256": "6bdcac539b629e4e22f2b18c7ca4f9bae826e0dc67a91b3fdd45b2f758c99f38"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-topic-small-talk.png",
+      "sha256": "eb4c966f6203890f692bbcd76fdb5c237901f8f2a7281059cbeaf4f2458b09ce"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-desktop-wordIndex.png",
+      "sha256": "562b9ceb0107d6db7fab8b8721ae669e500e3d6df65031eb16adefdecde34145"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-narrow-index.png",
+      "sha256": "f428f0595d603ff17a875ebb69a660ed08b4bafdcce2fd7fbdce68d3c7684870"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-narrow-phrases.png",
+      "sha256": "602e5aa105529ba47fae6deada2628b2f13b09ea195e6058b7532f91e36ecd99"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-narrow-topic-conditionals.png",
+      "sha256": "056f8a3e1f278ce8d2c2ecb30791f46e1b16518caf2516516337eb9c68d26e4a"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-narrow-topic-interview-english.png",
+      "sha256": "31a937a0a4b09fc134f0a1b2970367706a65d9edd95128c0f84e4a667677b61c"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-narrow-topic-small-talk.png",
+      "sha256": "005c84d8c67dede93576defbc2dfc59349fbd479024550bfedc9278015fc3a0f"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-answers.png",
+      "sha256": "c59c168c175d63e6351bd0102c38b78dc9d675fabd2daae48dbc044dc10d9436"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-collections.png",
+      "sha256": "8987a5314af53cccc9528a951c48a17400cceeb2905a6c712de01c8a0beaab79"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-conditionals-final-subsection.png",
+      "sha256": "c7c73629cfec4df397b87082f19091f9cdc590e17c612c4beb9a1e5c9139d9c3"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-content-error.png",
+      "sha256": "2abfc5741665b9d6dd954c9be78dab14399206af523b7be3d88dd9e36c2b5ca0"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-enlarged-index.png",
+      "sha256": "43f565bfb88b1e561b9503809f6998ceee04c98d52274c9e3e3752cfdd91f5b8"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "sha256": "7fe8736e6f323c56537531a3684953a05b7add8ea2b31c7d374855bc3a574135"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "sha256": "9009de4c177c8c3795221d19a17c54016fc2a156527c71830e16f465b39c23ff"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-favorites.png",
+      "sha256": "8ae111bd3966adae82186602ec41e01655ecafcc6c43fc286cc191aedbe7ffd3"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-flashcards.png",
+      "sha256": "515209150ab3f26adc396eedc8c7467a5d5533aa2b4c062559151685105e9b5a"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-home-details.png",
+      "sha256": "6ea09a51ab5152b2a72528fe04c0ebaadccc63ec6e4b6467544481db882e951a"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-home-start.png",
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-index.png",
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-interview-final-category.png",
+      "sha256": "b5ee3ed9089bd2a723b79c2b8f600ba5ada8105814e17763ed9eb50fd957b75d"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-irregularVerbs.png",
+      "sha256": "35e323252bdaa5ea79e0d63c1db6a473ac2e13471c486b2c3825406e37403755"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-patterns.png",
+      "sha256": "0930e92ca1a15ea38420818b6b593788dea3c951a5bf77a6113cc5ea599193d2"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-phrases.png",
+      "sha256": "8b42ae8a4aeb6c31ac150ae5456e115ac060836d87ce3626e38e7aa53a861af5"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-practice.png",
+      "sha256": "711a938478360bf6ea42d69fbaadcf5f7f8ea3cfdbff34ccefbb481d27052ae7"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-reverse.png",
+      "sha256": "da4ef66178c8a3a93475a34537d8a7466682b93de6a7e0fa7279fbfe99b3d767"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-settings.png",
+      "sha256": "453c328b9a82455e69516b999346c1c45ac24a7ed05bfe999e0cbe262922f46b"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-small-talk-traveling.png",
+      "sha256": "d3d91257cfb2ad4266ec1717861b55dea81364d5b7af9176c8649596b20315ce"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-topic-conditionals.png",
+      "sha256": "e58f5841d195af19268df27c6565446ff3e211f7dc247b84c09a7389e1cc9ed6"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-topic-interview-english.png",
+      "sha256": "d5a3cdc9ee21b314b784435ec579baa7fd5a68ccd2fb56d5039424cc4ba62413"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-topic-small-talk.png",
+      "sha256": "c43298b076b42b35b1022e9757a96782f69875d802b16b45978d88b6c7e2abc0"
+    },
+    {
+      "file": "implementation-browser/shots/firefox-phone-wordIndex.png",
+      "sha256": "afa7582c5d8bd64edcc88b5173da80fb60cc2c6c7b502093fa18431aa538b507"
+    },
+    {
+      "file": "preserve.mjs",
+      "sha256": "43b2c691d94d9292b0e9e4bdc9591fd4363b29124adb6c71ec4db784009b975b"
+    },
+    {
+      "file": "rc1.json",
+      "sha256": "805b7f58a051760953e92df24910ac79102d44eb72f3fb095495ef69cf3893d0"
+    },
+    {
+      "file": "README.md",
+      "sha256": "3802cb77d1fdb6592c35df9f81726366d40617fd93fe9e9e8aac51c7246b41e1"
+    },
+    {
+      "file": "reviewed.json",
+      "sha256": "ed4ae74393f1fda08b5a48800c4e68dd68e3335adcabf0778a6847e4c717a96e"
+    },
+    {
+      "file": "shots/rc1-chromium-focused-reflow-200-percent.png",
+      "sha256": "7f42e02862a6cc4ce6d0f44a18dfbac9cd747226b17aa93ac29ddde4a49073c2"
+    },
+    {
+      "file": "shots/rc1-chromium-matrix-320-100-selected-2.png",
+      "sha256": "4e96d9d32104d12ca940f8323c40509cb9c457cec1b556153e0e8156d7b2a6fb"
+    },
+    {
+      "file": "shots/rc1-chromium-matrix-320-200-selected-3.png",
+      "sha256": "c2042840e1b74eee723c12b6cfd573e583c4a72e7a2ac278962264124fe3e948"
+    },
+    {
+      "file": "shots/rc1-chromium-matrix-390-100-selected-2.png",
+      "sha256": "04822248a17affa17f1ba54e14a3f7e1c95e3bcfb10285444424f49daafac696"
+    },
+    {
+      "file": "shots/rc1-chromium-matrix-390-200-selected-3.png",
+      "sha256": "8c6bc681c0ff72b61d922d0ebc1c64ac959799b1e038087dabaee1c388fc2ed4"
+    },
+    {
+      "file": "shots/rc1-firefox-focused-reflow-200-percent.png",
+      "sha256": "b1a613b33b6d0fa14e2df34f61447b3f52b131ea98dbf0ddff4bb06a1a988974"
+    },
+    {
+      "file": "shots/rc1-firefox-matrix-320-100-selected-2.png",
+      "sha256": "69cf9f2faaf75b1cd9ca1b8531d9baeeeada8f8de00d77a961d83e999fd604b8"
+    },
+    {
+      "file": "shots/rc1-firefox-matrix-320-200-selected-3.png",
+      "sha256": "cd359e5d33a753502eed3bc34cd8338f74e6f3cba54e5a5732e7c9664836d308"
+    },
+    {
+      "file": "shots/rc1-firefox-matrix-390-100-selected-2.png",
+      "sha256": "046cd3c74055b915b1e460d9d2376644d8884cab063d17098d74216c7b78bb5f"
+    },
+    {
+      "file": "shots/rc1-firefox-matrix-390-200-selected-3.png",
+      "sha256": "e281b643be0bc13109bf437fa3c6e824fdba1cd2f9b061d7a69a52981e94dd2d"
+    },
+    {
+      "file": "shots/reviewed-chromium-focused-reflow-200-percent.png",
+      "sha256": "9ff188e28c1d80a3e47f433cdb14ddb63f3c2b3b857a277c1c90f2044904380d"
+    },
+    {
+      "file": "shots/reviewed-chromium-matrix-320-100-selected-2.png",
+      "sha256": "267fefac5367be21e65d03820549f5ccc9a44f07bb112df2f9d6ba86feb2635e"
+    },
+    {
+      "file": "shots/reviewed-chromium-matrix-320-200-selected-3.png",
+      "sha256": "dfca207b89a85e1933be7f51b3f660ea091ae3a569cbaf73ca6cb84ed51764b0"
+    },
+    {
+      "file": "shots/reviewed-chromium-matrix-390-100-selected-2.png",
+      "sha256": "1a836675b5204ab77ca89daf2d776485773156a89d1b8943f38f0532e8e878d2"
+    },
+    {
+      "file": "shots/reviewed-chromium-matrix-390-200-selected-3.png",
+      "sha256": "2071498b0405d4f9ba807dc9255cab8c0eb89e042c3d917ba0d3c22cda279eb8"
+    },
+    {
+      "file": "shots/reviewed-firefox-focused-reflow-200-percent.png",
+      "sha256": "6b7887340f9fac8347979796f86a3385536329f8cc5c7b94972d9ed2ba6f16a3"
+    },
+    {
+      "file": "shots/reviewed-firefox-matrix-320-100-selected-2.png",
+      "sha256": "d952e62d1407df4d8b3f15d09d320d994d39c2a812925a4fabbfda0a53693742"
+    },
+    {
+      "file": "shots/reviewed-firefox-matrix-320-200-selected-3.png",
+      "sha256": "a9e9ceffdd6c6e702fbf4910d37866ae0d4a87d6b4808aaa9c0f3683adcd13b8"
+    },
+    {
+      "file": "shots/reviewed-firefox-matrix-390-100-selected-2.png",
+      "sha256": "bed60022de563eeefe883af8b8cdac16ca366bd7991daeaeb94c04270f5681b3"
+    },
+    {
+      "file": "shots/reviewed-firefox-matrix-390-200-selected-3.png",
+      "sha256": "e9305880a84dd640eade4579de536d3d548489c9b4b229da9f39bd21a5e8ff57"
+    },
+    {
+      "file": "summarize.mjs",
+      "sha256": "3deab5334fea9f98b2e8d6d51f86b845fe0eadabb80efd2595bb4bca422fafd6"
+    },
+    {
+      "file": "summary.json",
+      "sha256": "ef939ba0bf0ca7693da2d8f2283297e2aec68b2f5eecc0ef4d5d0575735169b1"
+    },
+    {
+      "file": "verify.mjs",
+      "sha256": "1e0460b9b31e62069681530d0c9fb661a9e4282af7c402200291a9698293f836"
+    }
+  ]
+}

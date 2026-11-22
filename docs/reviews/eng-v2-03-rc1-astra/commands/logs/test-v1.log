@@ -1,0 +1,25 @@
+$ npm run test:v1
+
+> english-assessment-trainer-v2@2.0.0 test:v1
+> npm --prefix v1 run test
+
+
+> english-assessment-trainer-v1@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 <repo>/v1
+
+ ✓ src/lib/utils/flashcards.test.ts (30 tests) 39ms
+ ✓ src/lib/stores/progress.flashcards.test.ts (12 tests) 1308ms
+ ✓ src/lib/pages/FlashcardsPage.test.ts (26 tests) 5224ms
+   ✓ Flashcards page > shows one card with the English side first and the deck progress  1093ms
+   ✓ Flashcards page > saved progress > continues with the same deck, card and counts after a reload  301ms
+
+ Test Files  3 passed (3)
+      Tests  68 passed (68)
+   Start at  16:12:27
+   Duration  7.11s (transform 1.08s, setup 0ms, collect 1.42s, tests 6.57s, environment 2.53s, prepare 401ms)
+
+
+[exit 0]

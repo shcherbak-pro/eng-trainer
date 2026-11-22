@@ -1,0 +1,4 @@
+chromium learn-again-reset-reload PASS
+chromium chip-focus-reflow PASS
+firefox learn-again-reset-reload PASS
+firefox chip-focus-reflow PASS

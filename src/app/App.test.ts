@@ -379,6 +379,7 @@ describe('learning identity across Phrases, Focus and Flashcards', () => {
         { id: 'review-csharp', category: 'Languages', phrase: 'C#', translation: 'Language C#', example: 'C# records' }
       ],
       wordIndex: [],
+      topics: [],
       blocks: [{ id: 'review-languages', title: 'Languages', type: 'phraseCategory', category: 'Languages', description: '' }]
     };
     vi.stubGlobal(

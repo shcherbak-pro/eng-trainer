@@ -1,0 +1,3092 @@
+{
+  "reviewedScope": 912,
+  "textFiles": 309,
+  "pngFiles": 605,
+  "credentialMatches": 0,
+  "secretAssignmentMatches": 0,
+  "signedUrlMatches": 0,
+  "ownerIdentityMatches": 0,
+  "persistentProfileMatches": 0,
+  "environmentDumpMatches": 0,
+  "classifications": [
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/artifacts.json",
+      "category": "machinePath",
+      "line": 850,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/artifacts.json",
+      "category": "machinePath",
+      "line": 855,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 1232,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 8084,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 8090,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 8096,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 8102,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 8108,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 8114,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 8120,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 8126,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 9771,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 16155,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 16161,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 16167,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 16173,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 17214,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 17218,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 17222,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 17226,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 17230,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 18351,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 18355,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 18359,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/baseline.json",
+      "category": "machinePath",
+      "line": 18363,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/budget.mjs",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/budget.mjs",
+      "category": "machinePath",
+      "line": 34,
+      "matchHash": "4cd88e1904907c0bf611e4f93173899139ce5a7884a854ddddf74207e9fe7928",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 46,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 48,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 178,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 181,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 186,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 189,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 194,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 197,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 202,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 205,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 208,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/focused-chips.mjs",
+      "category": "machinePath",
+      "line": 26,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/focused-chips.mjs",
+      "category": "machinePath",
+      "line": 36,
+      "matchHash": "4cd88e1904907c0bf611e4f93173899139ce5a7884a854ddddf74207e9fe7928",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/implementation-browser/results.json",
+      "category": "machinePath",
+      "line": 3,
+      "matchHash": "e494091fd4758d72b3adabcf6c56951e1306ed3ae671828262c66e926cb0dccc",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/verify.mjs",
+      "category": "machinePath",
+      "line": 31,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc1/verify.mjs",
+      "category": "machinePath",
+      "line": 31,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/README.md",
+      "category": "machinePath",
+      "line": 188,
+      "matchHash": "b6e37c4d525d383874d5b09f09de4b94d3b9423b0d8ad1e9422e810c05635c22",
+      "classification": "already-redacted-drive-example"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/artifacts.json",
+      "category": "machinePath",
+      "line": 60,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/artifacts.json",
+      "category": "machinePath",
+      "line": 64,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/browser-support.mjs",
+      "category": "machinePath",
+      "line": 16,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/astra-probe/browser-support.mjs",
+      "category": "machinePath",
+      "line": 26,
+      "matchHash": "4700e3315ec40d2890b14885af9abb0b7f6db09d3472ecfe776bf26d9ac4102c",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/budget.mjs",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/budget.mjs",
+      "category": "machinePath",
+      "line": 34,
+      "matchHash": "4cd88e1904907c0bf611e4f93173899139ce5a7884a854ddddf74207e9fe7928",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 49,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 52,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 142,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 145,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 150,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 153,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 158,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 161,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 166,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 169,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 172,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-after.txt",
+      "category": "machinePath",
+      "line": 22,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-after.txt",
+      "category": "machinePath",
+      "line": 707,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-after.txt",
+      "category": "machinePath",
+      "line": 708,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-after.txt",
+      "category": "machinePath",
+      "line": 709,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-after.txt",
+      "category": "machinePath",
+      "line": 710,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-before.txt",
+      "category": "machinePath",
+      "line": 22,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-before.txt",
+      "category": "machinePath",
+      "line": 542,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-before.txt",
+      "category": "machinePath",
+      "line": 543,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-before.txt",
+      "category": "machinePath",
+      "line": 544,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/git-status-before.txt",
+      "category": "machinePath",
+      "line": 545,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/implementation-browser/results.json",
+      "category": "machinePath",
+      "line": 3,
+      "matchHash": "e494091fd4758d72b3adabcf6c56951e1306ed3ae671828262c66e926cb0dccc",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/focused-chips.mjs",
+      "category": "machinePath",
+      "line": 26,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03-rc2/rc1-runner/focused-chips.mjs",
+      "category": "machinePath",
+      "line": 36,
+      "matchHash": "4cd88e1904907c0bf611e4f93173899139ce5a7884a854ddddf74207e9fe7928",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/README.md",
+      "category": "machinePath",
+      "line": 44,
+      "matchHash": "3e61014e552bf0660c164f0b01d97cdb26be0a96dc745f620ebac22a73e30922",
+      "classification": "already-redacted-drive-example"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/browser-check.mjs",
+      "category": "machinePath",
+      "line": 19,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/browser-check.mjs",
+      "category": "machinePath",
+      "line": 33,
+      "matchHash": "c36d39a729fd9adf4214210bd6695f409367e661a84809da6ed209cb03b349d0",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/browser/results.json",
+      "category": "machinePath",
+      "line": 3,
+      "matchHash": "e494091fd4758d72b3adabcf6c56951e1306ed3ae671828262c66e926cb0dccc",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/compare-builds.mjs",
+      "category": "machinePath",
+      "line": 25,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/compare-builds.mjs",
+      "category": "machinePath",
+      "line": 97,
+      "matchHash": "871463a61b09674b4a289c8277d8882db1c2936295614bcb74eaa24de366dcda",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/compare-builds.mjs",
+      "category": "machinePath",
+      "line": 97,
+      "matchHash": "6329c324b47e40138199c83c13b141c9d30d4c962bfdc5934d392fe6ace0132b",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/git-status.txt",
+      "category": "machinePath",
+      "line": 21,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/git-status.txt",
+      "category": "machinePath",
+      "line": 77,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/git-status.txt",
+      "category": "machinePath",
+      "line": 78,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/git-status.txt",
+      "category": "machinePath",
+      "line": 79,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/git-status.txt",
+      "category": "machinePath",
+      "line": 80,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 47,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 48,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 168,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 171,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 176,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 179,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 184,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 187,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 192,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 195,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/logs/test.log",
+      "category": "machinePath",
+      "line": 198,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/evidence/eng-v2-03/sanitize.mjs",
+      "category": "machinePath",
+      "line": 19,
+      "matchHash": "f2e20457dd8e4bd436b0ea16c9855c9260816f358a5a18fa95e8a374e027fd1f",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 195,
+      "matchHash": "922a5fa9126b79422fcfb76772cff09d910485df95e0e85c64b2137bcb9c1d68",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 231,
+      "matchHash": "d5c8737d9d1190079b313de75cd9a7fdd1056382f37524a2bf7e402c036d7375",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 326,
+      "matchHash": "841a4425507beffc0c00f889dbf3fa0a28e56ddb78762378de7642a6d3f6ff9f",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 329,
+      "matchHash": "d5c8737d9d1190079b313de75cd9a7fdd1056382f37524a2bf7e402c036d7375",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 340,
+      "matchHash": "e3acdaa4c6c5bf0098d7b22c9ef8a74e2344798b36bee9bf8c42c1e302fcbdd8",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 356,
+      "matchHash": "1cb7b1ee1f0a4f83e6c96118a02bfac38f9aaafd0084614177d00b5e469e0459",
+      "classification": "already-redacted-drive-example"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 364,
+      "matchHash": "ec2c5015259a4a26e370c78a2070900c6482cef74f89019905e4b8cf1e6d4eb5",
+      "classification": "already-redacted-drive-example"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 377,
+      "matchHash": "4e05098af1154f650ba58b749ada77f483e48a320f1ec173acd85c4b8763aca0",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 378,
+      "matchHash": "a2a464ebc1d1aef57ea2085dfc5602ed40dc849da8fbc64c88da71d81d750922",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 379,
+      "matchHash": "c37d62f73a6c7453a473823c6243eeb74e2d75a9642a395468ab33ca0bb8d2cb",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 380,
+      "matchHash": "198ded4c6e11cc7b14ac6bf646f555017ceb70efea96fd79db0adbc50840c5bc",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/handoffs/ENG-V2-03.md",
+      "category": "machinePath",
+      "line": 381,
+      "matchHash": "17ede10374c63fd0ea748f243aa30bc939eeedb3dec6bf0bad51e2f0ee878ab0",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 13,
+      "matchHash": "74d4ee47a2e212587d6eae240f3a02c5dd18e3e217202fcbf0e5945427093771",
+      "classification": "escaped-newline-in-test-output"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 13,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "40d2513ef21dadc1ee5655a89c053af10de26c96531d190396b50a12543617d6",
+      "classification": "escaped-newline-in-test-output"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 153,
+      "matchHash": "74d4ee47a2e212587d6eae240f3a02c5dd18e3e217202fcbf0e5945427093771",
+      "classification": "escaped-newline-in-test-output"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 153,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 160,
+      "matchHash": "40d2513ef21dadc1ee5655a89c053af10de26c96531d190396b50a12543617d6",
+      "classification": "escaped-newline-in-test-output"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 160,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 160,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.json",
+      "category": "machinePath",
+      "line": 160,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "category": "machinePath",
+      "line": 7,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "category": "machinePath",
+      "line": 12,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "category": "machinePath",
+      "line": 13,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "category": "machinePath",
+      "line": 14,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "category": "machinePath",
+      "line": 25,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "category": "machinePath",
+      "line": 30,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "category": "machinePath",
+      "line": 31,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt1.log",
+      "category": "machinePath",
+      "line": 32,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 13,
+      "matchHash": "50163e0ceb3d60a3c0177ee01043e712dfcd2a9f48e8bdc462f04d5ab63c5a85",
+      "classification": "escaped-newline-in-test-output"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 13,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 13,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 13,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 52,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 52,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 52,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 185,
+      "matchHash": "50163e0ceb3d60a3c0177ee01043e712dfcd2a9f48e8bdc462f04d5ab63c5a85",
+      "classification": "escaped-newline-in-test-output"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 185,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 185,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 185,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 224,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 224,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.json",
+      "category": "machinePath",
+      "line": 224,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 5,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 6,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 7,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 9,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 10,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 11,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 21,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 22,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 24,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 25,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent-attempt2.log",
+      "category": "machinePath",
+      "line": 26,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent.mjs",
+      "category": "machinePath",
+      "line": 17,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent.mjs",
+      "category": "machinePath",
+      "line": 28,
+      "matchHash": "4cd88e1904907c0bf611e4f93173899139ce5a7884a854ddddf74207e9fe7928",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent.mjs",
+      "category": "machinePath",
+      "line": 123,
+      "matchHash": "3ee06285b6860d4263b5eb708f09b0e43b87f4dca5bbd596d5dd9f503a7462b6",
+      "classification": "test-regexp-source"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/browser-independent.mjs",
+      "category": "machinePath",
+      "line": 173,
+      "matchHash": "3ee06285b6860d4263b5eb708f09b0e43b87f4dca5bbd596d5dd9f503a7462b6",
+      "classification": "test-regexp-source"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 46,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 48,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 174,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 177,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 182,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 185,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 190,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 193,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 198,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 201,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/commands-native/logs/test.log",
+      "category": "machinePath",
+      "line": 204,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 22,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 155,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 156,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 157,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 158,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 159,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 177,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 178,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 179,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 180,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/implementation-browser-rerun/results.json",
+      "category": "machinePath",
+      "line": 3,
+      "matchHash": "e494091fd4758d72b3adabcf6c56951e1306ed3ae671828262c66e926cb0dccc",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "ddf2679f0da8a89b4abb4c0275f832bca2b5e0f74337b99c05e9712cf65ecf34",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.json",
+      "category": "machinePath",
+      "line": 1,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 87,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 90,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 96,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 99,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 105,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 108,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 114,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 117,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 120,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 206,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 207,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 254,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 255,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 256,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 257,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 258,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 259,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 260,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 261,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 262,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 263,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 264,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent-tests.log",
+      "category": "machinePath",
+      "line": 265,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/independent.test.ts",
+      "category": "machinePath",
+      "line": 10,
+      "matchHash": "e4b7ecd46b6a5514b4dd2e383512b1bdcb838640be0f4bbd0e182c88ce8f9c3f",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 1232,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 7088,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 7094,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 7100,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 7106,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 7112,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 7118,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 7124,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 7130,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8777,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 15161,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 15167,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 15173,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 15179,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 1232,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 7088,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 7094,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 7100,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 7106,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 7112,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 7118,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 7124,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 7130,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8777,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 15161,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 15167,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 15173,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 15179,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/browser-support.mjs",
+      "category": "machinePath",
+      "line": 16,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/browser-support.mjs",
+      "category": "machinePath",
+      "line": 26,
+      "matchHash": "4700e3315ec40d2890b14885af9abb0b7f6db09d3472ecfe776bf26d9ac4102c",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/budget.mjs",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/budget.mjs",
+      "category": "machinePath",
+      "line": 34,
+      "matchHash": "4cd88e1904907c0bf611e4f93173899139ce5a7884a854ddddf74207e9fe7928",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 46,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 63,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 144,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 147,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 152,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 155,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 160,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 163,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 168,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 171,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 174,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 21,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 539,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 540,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 541,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 542,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 22,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 388,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 389,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 390,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 391,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/implementation-browser/results.json",
+      "category": "machinePath",
+      "line": 3,
+      "matchHash": "e494091fd4758d72b3adabcf6c56951e1306ed3ae671828262c66e926cb0dccc",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/independent.test.ts",
+      "category": "machinePath",
+      "line": 10,
+      "matchHash": "e4b7ecd46b6a5514b4dd2e383512b1bdcb838640be0f4bbd0e182c88ce8f9c3f",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 2055,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8907,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8913,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8919,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8925,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8931,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8937,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8943,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 8949,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10608,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 16992,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 16998,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 17004,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 17010,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18053,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18057,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18061,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18065,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18069,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 19190,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 19194,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 19198,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 19202,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 20688,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 20692,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 20696,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 20700,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 20704,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 2054,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8906,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8912,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8918,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8924,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8930,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8936,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8942,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 8948,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10607,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 16991,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 16997,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 17003,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 17009,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18052,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18056,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18060,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18064,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18068,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19189,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19193,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19197,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19201,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 20687,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 20691,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 20695,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 20699,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc1-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 20703,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/browser-support.mjs",
+      "category": "machinePath",
+      "line": 16,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/browser-support.mjs",
+      "category": "machinePath",
+      "line": 26,
+      "matchHash": "4700e3315ec40d2890b14885af9abb0b7f6db09d3472ecfe776bf26d9ac4102c",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/budget.mjs",
+      "category": "machinePath",
+      "line": 20,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/budget.mjs",
+      "category": "machinePath",
+      "line": 34,
+      "matchHash": "4cd88e1904907c0bf611e4f93173899139ce5a7884a854ddddf74207e9fe7928",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 46,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 62,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 154,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 157,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 162,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 165,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 170,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 173,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 178,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 181,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/commands/logs/test.log",
+      "category": "machinePath",
+      "line": 184,
+      "matchHash": "6fad8d28284f0f06f1f7e7d0054de0554f2826a11056de85b8dcca4b89b11621",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-probe/browser-support.mjs",
+      "category": "machinePath",
+      "line": 16,
+      "matchHash": "bf5583367e090aa1bc3c922f206a80e428a52f7dc7819309bb825680aba54728",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/exact-probe/browser-support.mjs",
+      "category": "machinePath",
+      "line": 26,
+      "matchHash": "4700e3315ec40d2890b14885af9abb0b7f6db09d3472ecfe776bf26d9ac4102c",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 21,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 898,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 899,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 900,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-after.txt",
+      "category": "machinePath",
+      "line": 901,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 22,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 710,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 711,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 712,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/git-status-before.txt",
+      "category": "machinePath",
+      "line": 713,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/implementation-browser/results.json",
+      "category": "machinePath",
+      "line": 3,
+      "matchHash": "e494091fd4758d72b3adabcf6c56951e1306ed3ae671828262c66e926cb0dccc",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/independent.test.ts",
+      "category": "machinePath",
+      "line": 10,
+      "matchHash": "e4b7ecd46b6a5514b4dd2e383512b1bdcb838640be0f4bbd0e182c88ce8f9c3f",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 3057,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10839,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10845,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10851,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10857,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10863,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10869,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10875,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 10881,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 12539,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18923,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18929,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18935,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 18941,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 19984,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 19988,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 19992,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 19996,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 20000,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 21121,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 21125,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 21129,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 21133,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 23771,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 23775,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 23779,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 23783,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 23787,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 25295,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 25299,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 25303,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 25307,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-after.json",
+      "category": "machinePath",
+      "line": 25311,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 3056,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10838,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10844,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10850,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10856,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10862,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10868,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10874,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 10880,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 12538,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18922,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18928,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18934,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 18940,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19983,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19987,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19991,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19995,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 19999,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 21120,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 21124,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 21128,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 21132,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 23770,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 23774,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 23778,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 23782,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 23786,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 25294,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 25298,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 25302,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 25306,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/preservation-before.json",
+      "category": "machinePath",
+      "line": 25310,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "category": "machinePath",
+      "line": 542,
+      "matchHash": "cdda503d11a7cfa8566a98da1b9e6b38941b80bc0b890ebe9e684f5dec8f56cf",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "category": "machinePath",
+      "line": 548,
+      "matchHash": "94ee9672dea0f6fb8e9139c0893537d22442282313a6cb9eac2a893175659d2e",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "category": "machinePath",
+      "line": 554,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "category": "machinePath",
+      "line": 560,
+      "matchHash": "85ab9acd2a633e90f503c2ad4cb50f88226c2453c1fb7b63e822e5ef158236c1",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "category": "machinePath",
+      "line": 566,
+      "matchHash": "89a6636f5ece5189d1deccacbf8fa3b50458b433708c8d1853355efc8d80aed0",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "category": "machinePath",
+      "line": 572,
+      "matchHash": "594d7e415a7edc803be1ee8b4b49dceb977b250e604886a3b9034fe94016ea18",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "category": "machinePath",
+      "line": 578,
+      "matchHash": "806e5d8d7ea395f2c6817457f156846c07a56df17b2923e92ac69d9beb98d9d5",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "docs/reviews/eng-v2-03-rc2-astra/rc1-authentication.json",
+      "category": "machinePath",
+      "line": 584,
+      "matchHash": "2f1fbe4c042f94d6c030a522e95d0d7b436060336a91a6c09938a170f1203b76",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "scripts/content-build.test.mjs",
+      "category": "machinePath",
+      "line": 198,
+      "matchHash": "5535acfa02499bf20d48e9f536b7ea002265c52890ae56fc048a98bf5aae33f2",
+      "classification": "HTTP-or-file-URL-fragment"
+    },
+    {
+      "file": "src/app/App.svelte",
+      "category": "machinePath",
+      "line": 14,
+      "matchHash": "b0ca6dae69380d45e9d2a63c363fd8f854e331840e7c9afc692cddbf42e8d58b",
+      "classification": "repository-feature-path"
+    },
+    {
+      "file": "src/app/AppShell.svelte",
+      "category": "machinePath",
+      "line": 7,
+      "matchHash": "e4b7ecd46b6a5514b4dd2e383512b1bdcb838640be0f4bbd0e182c88ce8f9c3f",
+      "classification": "repository-feature-path"
+    }
+  ],
+  "jsonFiles": 95,
+  "jsonErrors": [],
+  "pngMetadata": [],
+  "unusualFiles": [],
+  "markdownFilesChecked": 42,
+  "linksChecked": 516,
+  "linkExceptions": [
+    {
+      "file": "docs/evidence/eng-v2-ux-01b-rc1/before-after/reviewed-originals/src/assets/fonts/README.md",
+      "target": "../../../public/fonts/OFL-Literata.txt",
+      "resolved": "docs/evidence/eng-v2-ux-01b-rc1/before-after/reviewed-originals/public/fonts/OFL-Literata.txt",
+      "existsInPublication": false,
+      "anchorExists": true,
+      "classification": "inherited-at-base"
+    },
+    {
+      "file": "docs/evidence/eng-v2-ux-01b-rc1/before-after/reviewed-originals/src/assets/fonts/README.md",
+      "target": "../../../public/fonts/OFL-SourceSans3.txt",
+      "resolved": "docs/evidence/eng-v2-ux-01b-rc1/before-after/reviewed-originals/public/fonts/OFL-SourceSans3.txt",
+      "existsInPublication": false,
+      "anchorExists": true,
+      "classification": "inherited-at-base"
+    },
+    {
+      "file": "docs/evidence/eng-v2-ux-01b-rc1/before-after/reviewed-originals/src/assets/fonts/README.md",
+      "target": "../../styles/fonts.css",
+      "resolved": "docs/evidence/eng-v2-ux-01b-rc1/before-after/reviewed-originals/src/styles/fonts.css",
+      "existsInPublication": false,
+      "anchorExists": true,
+      "classification": "inherited-at-base"
+    }
+  ],
+  "publishedCandidateLinks": 137,
+  "publishedCandidateLinkExceptions": [],
+  "note": "No reviewed evidence needed publication sanitization. Existing sanitized placeholders, synthetic exports, test fixtures, and hashes are retained. Public PNG signatures/chunk bounds and absence of text/EXIF metadata were checked; screenshots retain their independently reviewed synthetic content.",
+  "finalPublicationPass": {
+    "intendedFiles": 924,
+    "jsonFiles": 101,
+    "jsonErrors": 0,
+    "candidateAndPublicationLocalLinks": 146,
+    "unresolvedCandidateOrPublicationLinks": 0,
+    "repositoryMarkdownFiles": 43,
+    "repositoryLocalLinks": 525,
+    "inheritedExceptions": 3,
+    "sensitiveFindings": 0,
+    "classifiedFalsePositives": {
+      "repository-feature-path": 282,
+      "HTTP-or-file-URL-fragment": 151,
+      "already-redacted-drive-example": 4,
+      "escaped-newline-in-test-output": 6,
+      "test-regexp-source": 2
+    },
+    "allReviewedWorkingBytesPreserved": true,
+    "note": "Rechecked after the publication additions. The broader prior repository link check remains applicable to unchanged documents; the publication report adds nine resolving links and no new heading fragments."
+  }
+}

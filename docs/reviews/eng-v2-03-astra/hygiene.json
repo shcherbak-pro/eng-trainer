@@ -1,0 +1,826 @@
+{
+  "sanitized": true,
+  "scope": "Public reviewer JSON/text logs only; exact local candidate backups and disposable runtime are excluded.",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 140,
+      "sha256": "1668cf7a20d457981bf080857fc12ad995fd6927a2792b3fe17902649724f8eb"
+    },
+    {
+      "file": "README.md",
+      "bytes": 4157,
+      "sha256": "67d89b9be0443f98f018d07537b397e803478c32959e7d9dc2a7dbda2e6eec0c"
+    },
+    {
+      "file": "artifact-audit.json",
+      "bytes": 8307,
+      "sha256": "6848716524b550d16131375c56c782e3d7271138323d64bbd394e4bd4316382a"
+    },
+    {
+      "file": "artifact-audit.mjs",
+      "bytes": 2861,
+      "sha256": "9a82a52ba59a4fb5cf46a25fa103195f92b8db238f742ff016ee225d1c4aa197"
+    },
+    {
+      "file": "baseline-build.log",
+      "bytes": 1135,
+      "sha256": "9284d2958a1c53fb2b53dafd4cc9cb89357db6f17d22752eb476824d5a383582"
+    },
+    {
+      "file": "browser-additional.json",
+      "bytes": 26539,
+      "sha256": "7c225301d8b5f57d539fec5482feedc951591b79045b6b8ac17d6db139ea7987"
+    },
+    {
+      "file": "browser-additional.log",
+      "bytes": 144,
+      "sha256": "e8cd4f693bdbc3e905c28b6833a09edc1d35248dfe0ab28e17ba6442917b19e8"
+    },
+    {
+      "file": "browser-independent-attempt1.json",
+      "bytes": 9344,
+      "sha256": "440182a61c5350a13d1fbda51e3343c02b8d376e619b9271ce5a091c102977d9"
+    },
+    {
+      "file": "browser-independent-attempt1.log",
+      "bytes": 2170,
+      "sha256": "61166a6cd209028b6e4c47b70a10b2b1b4ac7bc5cb8c2cc99bb765cb30de3258"
+    },
+    {
+      "file": "browser-independent-attempt2.json",
+      "bytes": 11383,
+      "sha256": "e865bf32b2a5abb4abd4f9a4fd7c854efade4907407128843da1b44657aa0f58"
+    },
+    {
+      "file": "browser-independent-attempt2.log",
+      "bytes": 2328,
+      "sha256": "43131668264586d4165d57376c060c5e689ec0a6ab349cd05cc2945ec0ae8dd0"
+    },
+    {
+      "file": "browser-independent.json",
+      "bytes": 29355,
+      "sha256": "5b6bfc22bd3f1ec23ed494788f95b3a61783d3b21a669d9d215d493e3935945e"
+    },
+    {
+      "file": "browser-independent.log",
+      "bytes": 556,
+      "sha256": "9cce868573316f19d98bd244783eade8107849ebf80d059a7cdec6bf05a273ed"
+    },
+    {
+      "file": "browser-independent.mjs",
+      "bytes": 27222,
+      "sha256": "35f6dab789918650a8ac0048e6a7067e764c0819a01790b63850bb61e98a4801"
+    },
+    {
+      "file": "budget-comparison.json",
+      "bytes": 44641,
+      "sha256": "33430c2eda6b5ffc4448bf224392ea408de64bae90a183e3a108694fc3899833"
+    },
+    {
+      "file": "chromium-chip-2-partly-visible.png",
+      "bytes": 67234,
+      "sha256": "2e7bc25fdc3f8d830d5cda74b3cb5de0a7906522c00feca3bf658c65375f402c"
+    },
+    {
+      "file": "chromium-chip-4-partly-visible.png",
+      "bytes": 65932,
+      "sha256": "df7f7c87f23f8b0b345b2eea9291b1e420ab65eebc9aa7d22f8163271eccc64a"
+    },
+    {
+      "file": "chromium-chip-focused-selected-clipped.png",
+      "bytes": 69897,
+      "sha256": "6739af1a5da64b5b9e592ce18efe7b4f106f33311c36c87a0f51a86c0c51a38c"
+    },
+    {
+      "file": "chromium-malformed-startup.png",
+      "bytes": 26437,
+      "sha256": "f884f45d9ea04f064520c8c2941a475c21ee62afb270cdda53184391604d62d8"
+    },
+    {
+      "file": "chromium-routing-chips-language-and-rows-failure.png",
+      "bytes": 67234,
+      "sha256": "2e7bc25fdc3f8d830d5cda74b3cb5de0a7906522c00feca3bf658c65375f402c"
+    },
+    {
+      "file": "chromium-same-name-authored-topic.png",
+      "bytes": 69330,
+      "sha256": "685250c73b49dba001ae943e913aab626bf9870f1fb171b4c5af8176316f5c78"
+    },
+    {
+      "file": "chromium-same-name-home.png",
+      "bytes": 55847,
+      "sha256": "3d1d839991e23e825f8a71838444a00555f24666fccc1d5c9f7189c9ec065dd9"
+    },
+    {
+      "file": "chromium-same-name-topic-and-persistence-failure.png",
+      "bytes": 55050,
+      "sha256": "ea2963812aa4c4d1e67c022e367329896d5683e1366035d131f4b920694265f2"
+    },
+    {
+      "file": "chromium-synthetic-export.json",
+      "bytes": 548,
+      "sha256": "b9cf6c9eb3696bfb95375a0e7c72791c434da320e89d9d989af5960eb859a6c9"
+    },
+    {
+      "file": "commands-native/commands.json",
+      "bytes": 2794,
+      "sha256": "cf924a98fd7a658b3907700663da6df97a6e411b65983c82ceb7c57c0b2c9f53"
+    },
+    {
+      "file": "commands-native/logs/build-site.log",
+      "bytes": 2264,
+      "sha256": "64b21dc6878ef3fa14b6c7740f6fac284081423052ae8c3606084dd790994217"
+    },
+    {
+      "file": "commands-native/logs/build.log",
+      "bytes": 1173,
+      "sha256": "104798cc6c9737ba9c577d73a321e89019fb4386d115d15644677affde670085"
+    },
+    {
+      "file": "commands-native/logs/check-v1.log",
+      "bytes": 313,
+      "sha256": "4340c591cf26d4767f86b7e988d0e8c697ef5a41538fe193a813eb3e61b5035b"
+    },
+    {
+      "file": "commands-native/logs/check.log",
+      "bytes": 530,
+      "sha256": "9ef3d6ca6245ddd9ca2c06f56563dee35923371eb8f85038412fe723cff33ca7"
+    },
+    {
+      "file": "commands-native/logs/diff-check.log",
+      "bytes": 187,
+      "sha256": "20f35d17f1fe3e7f2eb373ee7d43b7869de43ccae2b5c3f130fb72374654d66e"
+    },
+    {
+      "file": "commands-native/logs/new-files-whitespace.log",
+      "bytes": 42,
+      "sha256": "024f0a6af97c75d6036ba8997f521810ce000a6525d5e70b9d9b48a390a05a7b"
+    },
+    {
+      "file": "commands-native/logs/test-v1.log",
+      "bytes": 966,
+      "sha256": "ce53b556ae2e1644270505ec0ebeaa839fa2f4579b8b3b5496c6154c0b02ce90"
+    },
+    {
+      "file": "commands-native/logs/test.log",
+      "bytes": 17677,
+      "sha256": "62ef60485fe2f78ea6e2b16b19c65c0de5cf8403e83b613a36ddf04054101239"
+    },
+    {
+      "file": "commands-native/logs/verify-content.log",
+      "bytes": 5226,
+      "sha256": "a1ff6b9a9dd1403000e80bb93fbb9fd4197c4f993637b352a6d60b8419a7b1f3"
+    },
+    {
+      "file": "commands/commands.json",
+      "bytes": 3000,
+      "sha256": "7b5f3d334a7ce19097dbdc02d1cc53edcdb89dc3959baad28dc835f9fe8b4749"
+    },
+    {
+      "file": "commands/logs/build-site.log",
+      "bytes": 1532,
+      "sha256": "b9c5ef6bb0a76dbd9e305676e99b7fe11be89de3e32af0b6a7f5133eea77e117"
+    },
+    {
+      "file": "commands/logs/build.log",
+      "bytes": 1398,
+      "sha256": "88c01ed92ef75f0af18b335de737f87e99123f7df3d0c96ebecc24490ab72f89"
+    },
+    {
+      "file": "commands/logs/check-v1.log",
+      "bytes": 495,
+      "sha256": "9a249dc74cb2abc3528795dd414b0950a41e8ce1e5c3a17e4ee485067dd1db3a"
+    },
+    {
+      "file": "commands/logs/check.log",
+      "bytes": 2068,
+      "sha256": "db8d9618718e57f817067ea6825a3494e376644ad79ffc4895137809fa9e4534"
+    },
+    {
+      "file": "commands/logs/diff-check.log",
+      "bytes": 187,
+      "sha256": "20f35d17f1fe3e7f2eb373ee7d43b7869de43ccae2b5c3f130fb72374654d66e"
+    },
+    {
+      "file": "commands/logs/new-files-whitespace.log",
+      "bytes": 41,
+      "sha256": "6c4adddce77217c1246b1a8608baa30cee856eb9098bb6c02e0208590cca2393"
+    },
+    {
+      "file": "commands/logs/test-v1.log",
+      "bytes": 1325,
+      "sha256": "16e77b2fa5040ecef010a8bacc07592f48a59ddd315df8d7f242b2c164e0bdf5"
+    },
+    {
+      "file": "commands/logs/test.log",
+      "bytes": 3149,
+      "sha256": "272a2c84d4ce11e638ffa5345636c8274c77f8983185c945edebbdbcb014a725"
+    },
+    {
+      "file": "commands/logs/verify-content.log",
+      "bytes": 5226,
+      "sha256": "a1ff6b9a9dd1403000e80bb93fbb9fd4197c4f993637b352a6d60b8419a7b1f3"
+    },
+    {
+      "file": "content-oracle.json",
+      "bytes": 5451,
+      "sha256": "3b7b4490495818d9de4e03f17afac9f7ce327b387103366366fee9d9a46511bc"
+    },
+    {
+      "file": "content-oracle.mjs",
+      "bytes": 9553,
+      "sha256": "96330a3c77a78bf8feaae5dacc386621b0a3ed14ce9c89ab49d31ef6a9efe4e5"
+    },
+    {
+      "file": "editorial-mapping.json",
+      "bytes": 23383,
+      "sha256": "b397a47e38057892b00b3e3132e57181d652a51d9ed70bf331b3971f6ac0f7fb"
+    },
+    {
+      "file": "final-whitespace.json",
+      "bytes": 41,
+      "sha256": "555f8fe1d8ddb123d49201fc474c162a6c8c67c3c28536307f22d86094c9493f"
+    },
+    {
+      "file": "firefox-chip-2-partly-visible.png",
+      "bytes": 58990,
+      "sha256": "6e12e5a0c94d5f4d354f00baee50082dafe02d5037766b7232e16133e30990c4"
+    },
+    {
+      "file": "firefox-chip-4-partly-visible.png",
+      "bytes": 57470,
+      "sha256": "4684279de03779be911c190eee56c9f4a89fea26e3e8acc01d45e5ba60f3bad8"
+    },
+    {
+      "file": "firefox-chip-focused-selected-clipped.png",
+      "bytes": 59519,
+      "sha256": "bed60022de563eeefe883af8b8cdac16ca366bd7991daeaeb94c04270f5681b3"
+    },
+    {
+      "file": "firefox-malformed-startup.png",
+      "bytes": 21540,
+      "sha256": "2abfc5741665b9d6dd954c9be78dab14399206af523b7be3d88dd9e36c2b5ca0"
+    },
+    {
+      "file": "firefox-routing-chips-language-and-rows-failure.png",
+      "bytes": 58990,
+      "sha256": "6e12e5a0c94d5f4d354f00baee50082dafe02d5037766b7232e16133e30990c4"
+    },
+    {
+      "file": "firefox-same-name-authored-topic.png",
+      "bytes": 60537,
+      "sha256": "66a4e1c279a61545fa64c219205f4ac3dd617a51bb78a5f2579ac9a5e53801ff"
+    },
+    {
+      "file": "firefox-same-name-home.png",
+      "bytes": 45292,
+      "sha256": "793f99e38ca5429c21e6b1c439f5b65f709f60019bb51969594c41e62d337d8d"
+    },
+    {
+      "file": "firefox-same-name-topic-and-persistence-failure.png",
+      "bytes": 46623,
+      "sha256": "a7f96beeb44440b5cd23b8c828eb1b0d78d906295c77b5fa8191cb11be63e97d"
+    },
+    {
+      "file": "firefox-synthetic-export.json",
+      "bytes": 548,
+      "sha256": "b9cf6c9eb3696bfb95375a0e7c72791c434da320e89d9d989af5960eb859a6c9"
+    },
+    {
+      "file": "git-status-before.txt",
+      "bytes": 13299,
+      "sha256": "26bd69890221f83c42eb67c780d578f4fd968c1610485295e057a08afd1b4d30"
+    },
+    {
+      "file": "implementation-browser-rerun/results.json",
+      "bytes": 104666,
+      "sha256": "1c515100cd343d92996a0a0f78de1e732f88caad604a3c0422b832501abdc0ad"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-answers.png",
+      "bytes": 212473,
+      "sha256": "4af66f276b3b5b54bbbe94b3f8029759d3c08251176707e3016258b513132eb7"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-collections.png",
+      "bytes": 111369,
+      "sha256": "4a43106eb3e6ce05724848abe3d7959e8dc616fd89ae5160901503a3e22b3da8"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-favorites.png",
+      "bytes": 52472,
+      "sha256": "12245bb4d4e14d3cb399273cccfa28ce1865091dfddb80664767d666b15430e9"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-flashcards.png",
+      "bytes": 84415,
+      "sha256": "ac279d07a208611990a2984d455f73e235fce3a4307866bbc166bcfa809b7ba4"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-index.png",
+      "bytes": 125710,
+      "sha256": "13296cad96098ded551a62134c7672dd2a46b8f96ee3dba7c900444b2756577a"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-irregularVerbs.png",
+      "bytes": 98727,
+      "sha256": "ecd26a962b26184581f1a504f82f84f033ca9b4d90571897ec08b2c117db543a"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-patterns.png",
+      "bytes": 164883,
+      "sha256": "31a0f7b1ccf6be6b41b9df237cac81883ea10ac40ec4e623b794595407b1a5ac"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-phrases.png",
+      "bytes": 126151,
+      "sha256": "ea34b23b26a577222e44db4a1245ac52b25df3e279b6be648326382900434482"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-practice.png",
+      "bytes": 98726,
+      "sha256": "49e77b7c98a022738f797ade4b3c33c5ab94b44037f4ab8ddc388e385b838778"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-reverse.png",
+      "bytes": 67237,
+      "sha256": "af78a0caff98267393f29f36d08c6f75afa0bf345f11c5042b71283ef6f5bf6e"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-settings.png",
+      "bytes": 88858,
+      "sha256": "55816c1322c79c4cef8e2715cc23bf8e313c70c1b5c37e712fda8f7fd97d184c"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-topic-conditionals.png",
+      "bytes": 119659,
+      "sha256": "7b4b468c568d35ffde4033489b4f8de76980d1d7c36329232d51b4fd1c2a404d"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-topic-interview-english.png",
+      "bytes": 133613,
+      "sha256": "c32f62935a01321d36133c972c2e10984c092102bb6a2af3c62aa49e018db1b1"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-topic-small-talk.png",
+      "bytes": 114041,
+      "sha256": "ab53acbd38f196f8a59c0fd5533414d414b750c6019b74ef940d229f0d1d11a3"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-desktop-wordIndex.png",
+      "bytes": 135013,
+      "sha256": "efb9bb78d6a923b4c55a9c2767af8a68035a6f3330595ef10db27796bdf4c63a"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-narrow-index.png",
+      "bytes": 37318,
+      "sha256": "206908492cb54414b3063013ecaac793b2e9bdbfc4625acb5b7706fd3c585e33"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-narrow-phrases.png",
+      "bytes": 41764,
+      "sha256": "814d4b4c428e725e848014d9080b6294fd7c194aa7bd7a1eaa80eaa97c177056"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-narrow-topic-conditionals.png",
+      "bytes": 38755,
+      "sha256": "5e23e0122cc39ff80fefda09fdb084750bc186a67489bd4e1a0a3071e6d6a8d2"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-narrow-topic-interview-english.png",
+      "bytes": 45045,
+      "sha256": "870a7e53188d1f7dc1091deabd99b7256f96f7489d3f696ad850e0f8fb5651ef"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-narrow-topic-small-talk.png",
+      "bytes": 43238,
+      "sha256": "59c6c6fffe8a1c86a27548e43fc9f532f5fb60e6fb45433d116eaddbee972692"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-answers.png",
+      "bytes": 87239,
+      "sha256": "fe25e7cfa5ef07f7ff573cbf72ba96a64351416bc5d65fa4f999845a143a2fa4"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-collections.png",
+      "bytes": 64848,
+      "sha256": "07a111ef70100da2d9e7d3a31263172901232a8e91fefe574174d3010a24d2a5"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-conditionals-final-subsection.png",
+      "bytes": 69952,
+      "sha256": "34d340f3a6b7a10889cd7c21533b3b015885e613efe86fc0ad387734296d5e11"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-content-error.png",
+      "bytes": 26437,
+      "sha256": "f884f45d9ea04f064520c8c2941a475c21ee62afb270cdda53184391604d62d8"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-enlarged-index.png",
+      "bytes": 58327,
+      "sha256": "7ec04657c62fa2fcf2147824abd3937efc77330f4ab3d7f98d703cef116a809d"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-enlarged-irregularVerbs.png",
+      "bytes": 65536,
+      "sha256": "ab64fa0a8b472ec19162d37ae847ae491d6b9b76a2625572b937a26f20949217"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-enlarged-topic-small-talk.png",
+      "bytes": 75476,
+      "sha256": "5bdc7bc5d0ee233f3e2fa7ab1d045ff6e50348e70060c2215698fa283b65b321"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-favorites.png",
+      "bytes": 29485,
+      "sha256": "a27750c6ed3ae6497f6a3f783eb3fb0ed289098b0c65641c6c9a3b575c6a53e4"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-flashcards.png",
+      "bytes": 54121,
+      "sha256": "796c2e4d87ab67ee877d46badbff1d8bb81eae0f7bfeca6437352521d6bceb69"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-home-details.png",
+      "bytes": 288073,
+      "sha256": "3d24b01d55dd54f8b970a750cc565a10a9ac6ab5b77b2e833a2ba62d8257c51d"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-home-start.png",
+      "bytes": 55523,
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-index.png",
+      "bytes": 55523,
+      "sha256": "1d4532bde86cc19de92d64b6cbbb08caf012f6cae321f528c6bd3e7046063f5f"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-interview-final-category.png",
+      "bytes": 81118,
+      "sha256": "7c9f2bbe1a7e8a8251b04f51aaf1360282b638937af84e8ebc0bc73fee817af9"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-irregularVerbs.png",
+      "bytes": 64290,
+      "sha256": "5e621ab4f77fbe331864c563d2b4c9b769d6307e8369382e71de37a11aefde92"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-patterns.png",
+      "bytes": 78071,
+      "sha256": "aaca914551508934baa1eb105c1de583d331eedb251ff7256578598f88c27b75"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-phrases.png",
+      "bytes": 65669,
+      "sha256": "d4753e106d471be52ebbf00efc678e0ab0ff8d695fefec3cd763aee3c9baf4e1"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-practice.png",
+      "bytes": 62505,
+      "sha256": "20cf31fb955905d207c51c157d69a20213071f09207ee19148025a0c835a6144"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-reverse.png",
+      "bytes": 44317,
+      "sha256": "e9b3bd1722ee3f25b9fc6718ea46bb95afc818b90ff3e77c4640d88eface0180"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-settings.png",
+      "bytes": 47582,
+      "sha256": "d0498064e52b29820bc2a34b356612e23fa7cb4d8e136a68d2b9f42957e8e905"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-small-talk-traveling.png",
+      "bytes": 67118,
+      "sha256": "d6658539e9207271bf5552489b82c98c2546d5711e28f8283bd4f37f3764cc2a"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-topic-conditionals.png",
+      "bytes": 61122,
+      "sha256": "c36fed98e05bbfb0838b232d8c620d14620d30a448735e24213a708a799e3311"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-topic-interview-english.png",
+      "bytes": 72478,
+      "sha256": "365bc17e39ce787bf7a399574bacf977cee6538af3e6703f67d2626a7a4df608"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-topic-small-talk.png",
+      "bytes": 66511,
+      "sha256": "72d0ea4d8f20508779afadf74dad5dc80a5c6370c98434c5a684cc5d709294d3"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/chromium-phone-wordIndex.png",
+      "bytes": 75723,
+      "sha256": "578ceebc09fec711954e09cb2ba7d75b09d72c088a5e725e1ec08e90d133834e"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-answers.png",
+      "bytes": 172943,
+      "sha256": "5ce33374e55e331c70c2b350a200b51fe9e0483ef60ec6fe1312c6a1cf323df6"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-collections.png",
+      "bytes": 96869,
+      "sha256": "23269fce407a27f1747264b53227d1d3e4d94bdb5ecd31d5561dbfa3a51f3694"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-favorites.png",
+      "bytes": 48176,
+      "sha256": "c7c062c2400293d4ecfc6d29aad837108b8284ca1c57b58bb08c6651fbe35bd8"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-flashcards.png",
+      "bytes": 76493,
+      "sha256": "05f7d5cdbed501011624409891c0b64101059630903bac73b828720ef590148a"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-index.png",
+      "bytes": 111416,
+      "sha256": "a839d930bcbd58378804121f60773ddcc857c4f38d649ad8408e0b7e2badda73"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-irregularVerbs.png",
+      "bytes": 90754,
+      "sha256": "8de31e69878e467cd5f504d1d3f341acfc866afd37de2d5ba86f5c1e18f8076f"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-patterns.png",
+      "bytes": 136669,
+      "sha256": "c39c6bab55b68848432a82d25ac321097b2b55524cf2f7b316a682fabe5a31ae"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-phrases.png",
+      "bytes": 113348,
+      "sha256": "ad277fa03275437d936e0fecf7492793252a57c67f1d4349849ede55d0448bc6"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-practice.png",
+      "bytes": 86320,
+      "sha256": "6432300d37446c7eb2cca75ad5908b31c3378f8a568d3f59220bcb2be073fd61"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-reverse.png",
+      "bytes": 62949,
+      "sha256": "ea9d64f77fdc24cf92ed6d51539f4382dcf545533a8e13577e705c9895e86e80"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-settings.png",
+      "bytes": 83450,
+      "sha256": "946b6ee376471b57e757335f87b0740066655458c93fe362772e0018c91724cb"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-topic-conditionals.png",
+      "bytes": 107341,
+      "sha256": "a970abfbfb47b7e735548fc21ccd23f3856a1ff3f99ad815d6f06df80af7320c"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-topic-interview-english.png",
+      "bytes": 114408,
+      "sha256": "6bdcac539b629e4e22f2b18c7ca4f9bae826e0dc67a91b3fdd45b2f758c99f38"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-topic-small-talk.png",
+      "bytes": 103259,
+      "sha256": "eb4c966f6203890f692bbcd76fdb5c237901f8f2a7281059cbeaf4f2458b09ce"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-desktop-wordIndex.png",
+      "bytes": 117938,
+      "sha256": "562b9ceb0107d6db7fab8b8721ae669e500e3d6df65031eb16adefdecde34145"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-narrow-index.png",
+      "bytes": 30031,
+      "sha256": "f428f0595d603ff17a875ebb69a660ed08b4bafdcce2fd7fbdce68d3c7684870"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-narrow-phrases.png",
+      "bytes": 36163,
+      "sha256": "602e5aa105529ba47fae6deada2628b2f13b09ea195e6058b7532f91e36ecd99"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-narrow-topic-conditionals.png",
+      "bytes": 33086,
+      "sha256": "056f8a3e1f278ce8d2c2ecb30791f46e1b16518caf2516516337eb9c68d26e4a"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-narrow-topic-interview-english.png",
+      "bytes": 36640,
+      "sha256": "31a937a0a4b09fc134f0a1b2970367706a65d9edd95128c0f84e4a667677b61c"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-narrow-topic-small-talk.png",
+      "bytes": 36456,
+      "sha256": "f3a9cf5d0086735dc477ff47da5304142c300086d3e395f89950208443bcd3bf"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-answers.png",
+      "bytes": 73280,
+      "sha256": "c59c168c175d63e6351bd0102c38b78dc9d675fabd2daae48dbc044dc10d9436"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-collections.png",
+      "bytes": 54220,
+      "sha256": "8987a5314af53cccc9528a951c48a17400cceeb2905a6c712de01c8a0beaab79"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-conditionals-final-subsection.png",
+      "bytes": 65483,
+      "sha256": "c7c73629cfec4df397b87082f19091f9cdc590e17c612c4beb9a1e5c9139d9c3"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-content-error.png",
+      "bytes": 21540,
+      "sha256": "2abfc5741665b9d6dd954c9be78dab14399206af523b7be3d88dd9e36c2b5ca0"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-enlarged-index.png",
+      "bytes": 43130,
+      "sha256": "43f565bfb88b1e561b9503809f6998ceee04c98d52274c9e3e3752cfdd91f5b8"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-enlarged-irregularVerbs.png",
+      "bytes": 52029,
+      "sha256": "7fe8736e6f323c56537531a3684953a05b7add8ea2b31c7d374855bc3a574135"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-enlarged-topic-small-talk.png",
+      "bytes": 56626,
+      "sha256": "2c2267a4a0ccbb403928a8abdf46430f821c128aabed4cc7c5ce1e3b53e354ab"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-favorites.png",
+      "bytes": 26091,
+      "sha256": "8ae111bd3966adae82186602ec41e01655ecafcc6c43fc286cc191aedbe7ffd3"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-flashcards.png",
+      "bytes": 44318,
+      "sha256": "515209150ab3f26adc396eedc8c7467a5d5533aa2b4c062559151685105e9b5a"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-home-details.png",
+      "bytes": 241237,
+      "sha256": "6ea09a51ab5152b2a72528fe04c0ebaadccc63ec6e4b6467544481db882e951a"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-home-start.png",
+      "bytes": 45137,
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-index.png",
+      "bytes": 45137,
+      "sha256": "b955ccef51c62040cfe996ef16b31d9bfd81cbaa2440cc49b7dda5e27e23a71e"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-interview-final-category.png",
+      "bytes": 73345,
+      "sha256": "b5ee3ed9089bd2a723b79c2b8f600ba5ada8105814e17763ed9eb50fd957b75d"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-irregularVerbs.png",
+      "bytes": 56591,
+      "sha256": "35e323252bdaa5ea79e0d63c1db6a473ac2e13471c486b2c3825406e37403755"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-patterns.png",
+      "bytes": 63691,
+      "sha256": "0930e92ca1a15ea38420818b6b593788dea3c951a5bf77a6113cc5ea599193d2"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-phrases.png",
+      "bytes": 57797,
+      "sha256": "8b42ae8a4aeb6c31ac150ae5456e115ac060836d87ce3626e38e7aa53a861af5"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-practice.png",
+      "bytes": 50335,
+      "sha256": "711a938478360bf6ea42d69fbaadcf5f7f8ea3cfdbff34ccefbb481d27052ae7"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-reverse.png",
+      "bytes": 35497,
+      "sha256": "441a81bd8e6b934346fa09df5f0a548149a71760465c642dcb0862c496d452e0"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-settings.png",
+      "bytes": 40980,
+      "sha256": "453c328b9a82455e69516b999346c1c45ac24a7ed05bfe999e0cbe262922f46b"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-small-talk-traveling.png",
+      "bytes": 59049,
+      "sha256": "c2e36a1495185ff0c9a71ab99ca22c0a1df5469f8168be4b3a5878d2c7e87ef2"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-topic-conditionals.png",
+      "bytes": 52914,
+      "sha256": "e58f5841d195af19268df27c6565446ff3e211f7dc247b84c09a7389e1cc9ed6"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-topic-interview-english.png",
+      "bytes": 61378,
+      "sha256": "d5a3cdc9ee21b314b784435ec579baa7fd5a68ccd2fb56d5039424cc4ba62413"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-topic-small-talk.png",
+      "bytes": 58089,
+      "sha256": "7706719bc9d00000b9005a15a962a6df15907545e3a078e6e8ca213d70c09e97"
+    },
+    {
+      "file": "implementation-browser-rerun/shots/firefox-phone-wordIndex.png",
+      "bytes": 64606,
+      "sha256": "afa7582c5d8bd64edcc88b5173da80fb60cc2c6c7b502093fa18431aa538b507"
+    },
+    {
+      "file": "independent-final.json",
+      "bytes": 8470,
+      "sha256": "574f08dd42ad0b8ebb794193f7a52925b822f981b6dc0aa168e7c9dca919afba"
+    },
+    {
+      "file": "independent-final.log",
+      "bytes": 4251,
+      "sha256": "618eb5cc3f0f2287e83c0c4b074228eed62f8a6e695845064d39028ea67ff328"
+    },
+    {
+      "file": "independent-tests.json",
+      "bytes": 127371,
+      "sha256": "d729a34f5db61f2e0d84150278b7a2b95b23eb7059470100966aacf6a75622a5"
+    },
+    {
+      "file": "independent-tests.log",
+      "bytes": 60819,
+      "sha256": "04117a401ad3db15c7cb34d4b97bab531260bb4e62f8be63adfdba3b185379c2"
+    },
+    {
+      "file": "independent.test.ts",
+      "bytes": 14699,
+      "sha256": "73f4528e9d623432d6354316038ceebb3f54c17d82a403c59e59af511e876e61"
+    },
+    {
+      "file": "prepare-baseline.mjs",
+      "bytes": 1162,
+      "sha256": "a17d812ef10fc5f485f086c8149aa56d590ead65b930193581a90e5770b3151c"
+    },
+    {
+      "file": "preservation-after.json",
+      "bytes": 638036,
+      "sha256": "8e58e03e5af4016d983090352101561ad4144856f886d4009b49324f069ba8b2"
+    },
+    {
+      "file": "preservation-before.json",
+      "bytes": 638015,
+      "sha256": "17430d81cbc623932d7e05462c7aa6f5c2a729e59e0e3f4e3317b71f87b86928"
+    },
+    {
+      "file": "preserve.mjs",
+      "bytes": 3233,
+      "sha256": "e5783ae1948f7e665906cbe35fd963089642beab451c557353393b0be22f9540"
+    },
+    {
+      "file": "race-probe.test.ts",
+      "bytes": 3008,
+      "sha256": "0e531d17786bb0475463092453aea4fc204abfbb35d2126f8237723d65cfc334"
+    },
+    {
+      "file": "race.config.ts",
+      "bytes": 473,
+      "sha256": "8a5051f4ed8d374768925af74bd8d3f344f0fe03c4623709769d7ad35a2dbb3e"
+    },
+    {
+      "file": "released-materials.json",
+      "bytes": 1533856,
+      "sha256": "aab5af48402ea8ab3e256941300d75a0047d3f4f6e7fc2694e2176c11a9f7b70"
+    },
+    {
+      "file": "reset-race-original-schedule.log",
+      "bytes": 491,
+      "sha256": "a504d307f0098b0bbd21dce1488cb1b101e42a2dface848aded93a511340ca2f"
+    },
+    {
+      "file": "reset-race.json",
+      "bytes": 725,
+      "sha256": "6d44d624219796232909cac2e0435d43b2e2d98f1919926e68acbd0635a1d965"
+    },
+    {
+      "file": "reset-race.log",
+      "bytes": 492,
+      "sha256": "7dbcb91829a34fe742911549a638bc47575cf307a300bd5e4f91a6715e7d84f9"
+    },
+    {
+      "file": "sanitize-review.mjs",
+      "bytes": 1983,
+      "sha256": "d3513afe086b2772bfdcf811ead68e82b1e71a1e4a0ea989d80ab3c0706823b9"
+    },
+    {
+      "file": "vitest.config.ts",
+      "bytes": 268,
+      "sha256": "28c1a009d353751df9841260aa62faee61216019488251abe42a35c72ad050ac"
+    }
+  ]
+}

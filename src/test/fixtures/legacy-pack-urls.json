@@ -1,0 +1,149 @@
+{
+  "baseline": "03f1267f1ef4287580227ce5db67615988c98177",
+  "note": "Generated pack URLs of the eleven packs released before ENG-V2-03. The URL contains the first 16 hex digits of the SHA-256 of the published pack bytes, so an unchanged URL means an unchanged file.",
+  "packs": [
+    {
+      "id": "speaking-foundations",
+      "order": 10,
+      "url": "packs/speaking-foundations.378bea01a015d76e.json",
+      "counts": {
+        "phrases": 89,
+        "wordIndex": 89,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "presentations",
+      "order": 20,
+      "url": "packs/presentations.2cd234cc3c91ce8d.json",
+      "counts": {
+        "phrases": 90,
+        "wordIndex": 90,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "agent-framework",
+      "order": 30,
+      "url": "packs/agent-framework.30b26432f0ecf993.json",
+      "counts": {
+        "phrases": 81,
+        "wordIndex": 81,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "hedging-and-linking",
+      "order": 40,
+      "url": "packs/hedging-and-linking.06c92cc29e38d601.json",
+      "counts": {
+        "phrases": 24,
+        "wordIndex": 24,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "personal-topics",
+      "order": 50,
+      "url": "packs/personal-topics.03c1443a2cc176cf.json",
+      "counts": {
+        "phrases": 45,
+        "wordIndex": 45,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "workplace-topics",
+      "order": 60,
+      "url": "packs/workplace-topics.dad3daa8ab78823e.json",
+      "counts": {
+        "phrases": 120,
+        "wordIndex": 120,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "ai-certification",
+      "order": 70,
+      "url": "packs/ai-certification.a743e81dde1bc943.json",
+      "counts": {
+        "phrases": 117,
+        "wordIndex": 117,
+        "irregularVerbs": 0,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "speaking-practice",
+      "order": 80,
+      "url": "packs/speaking-practice.30d81bc404256cb8.json",
+      "counts": {
+        "phrases": 0,
+        "wordIndex": 0,
+        "irregularVerbs": 0,
+        "patterns": 7,
+        "answers": 6,
+        "drills": 15
+      }
+    },
+    {
+      "id": "essential-100",
+      "order": 90,
+      "url": "packs/essential-100.3a71b8e1e38939e1.json",
+      "counts": {
+        "phrases": 0,
+        "wordIndex": 0,
+        "irregularVerbs": 100,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "logical-200",
+      "order": 100,
+      "url": "packs/logical-200.7dea9a714b2c308b.json",
+      "counts": {
+        "phrases": 0,
+        "wordIndex": 0,
+        "irregularVerbs": 200,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    },
+    {
+      "id": "ai-certification-verbs-contextual",
+      "order": 110,
+      "url": "packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+      "counts": {
+        "phrases": 0,
+        "wordIndex": 0,
+        "irregularVerbs": 39,
+        "patterns": 0,
+        "answers": 0,
+        "drills": 0
+      }
+    }
+  ]
+}

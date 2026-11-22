@@ -1,0 +1,57 @@
+$ npm run check
+
+> english-assessment-trainer-v2@2.0.0 precheck
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 14 built-in packs: {"phrases":638,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":12,"drills":15,"topics":3}
+
+> english-assessment-trainer-v2@2.0.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: <repo>
+Getting Svelte diagnostics...
+
+<repo>\src\shared\ui\Icon.svelte:19:8
+Error: Build failed with 2 errors:
+error: Cannot read directory "../../../../..": Access is denied.
+error: Could not resolve "<repo>\\vite.config.ts" (svelte(style))
+
+<style>
+  .icon {
+
+====================================
+svelte-check found 1 error and 0 warnings in 1 file
+X [ERROR] Cannot read directory "../../../../..": Access is denied.
+
+X [ERROR] Could not resolve "<repo>\\vite.config.ts"
+
+failed to load config from <repo>\vite.config.ts
+X [ERROR] Cannot read directory "../../../../..": Access is denied.
+
+X [ERROR] Could not resolve "<repo>\\vite.config.ts"
+
+failed to load config from <repo>\vite.config.ts
+Preprocessing failed
+Error: Build failed with 2 errors:
+error: Cannot read directory "../../../../..": Access is denied.
+error: Could not resolve "<repo>\\vite.config.ts"
+    at failureErrorWithLog (<repo>\node_modules\esbuild\lib\main.js:1467:15)
+    at <repo>\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (<repo>\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (<repo>\node_modules\esbuild\lib\main.js:924:7)
+    at <repo>\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (<repo>\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (<repo>\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (<repo>\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter],
+  __source: 'Style'
+}
+
+[exit 1]

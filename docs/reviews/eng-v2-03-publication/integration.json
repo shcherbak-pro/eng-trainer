@@ -1,0 +1,33 @@
+{
+  "clientDate": "2026-11-22",
+  "timezone": "Europe/Kyiv",
+  "platform": "win32",
+  "release": "10.0.26200",
+  "node": "v24.18.0",
+  "npm": "11.17.0",
+  "commands": [
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 4209,
+      "log": "logs/build.log"
+    },
+    {
+      "command": "npm run build:site",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 9820,
+      "log": "logs/build-site.log"
+    },
+    {
+      "command": "npm run verify:content",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 1688,
+      "log": "logs/verify-content.log"
+    }
+  ],
+  "browserReview": "No rerun: all reviewed source/content bytes preserved. Independent RC2 READY_FOR_PR remains applicable.",
+  "ci": "These are local Windows integration checks. Actual PR CI is verified after publication and recorded in the PR body and completion receipt."
+}

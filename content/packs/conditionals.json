@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "id": "conditionals",
+  "title": "Conditionals",
+  "order": 120,
+  "content": {
+    "phrases": [
+      {
+        "id": "conditionals-zero-01",
+        "category": "Conditionals",
+        "phrase": "If I skip breakfast, I feel hungry before lunch.",
+        "translation": "Якщо я пропускаю сніданок, то відчуваю голод ще до обіду.",
+        "section": "Zero Conditional",
+        "tag": "zero-conditional"
+      },
+      {
+        "id": "conditionals-zero-02",
+        "category": "Conditionals",
+        "phrase": "If a required field is empty, the form shows an error.",
+        "translation": "Якщо обов’язкове поле порожнє, форма показує помилку.",
+        "section": "Zero Conditional",
+        "tag": "zero-conditional"
+      },
+      {
+        "id": "conditionals-zero-03",
+        "category": "Conditionals",
+        "phrase": "If I work late, I usually take a break before dinner.",
+        "translation": "Якщо я працюю допізна, то зазвичай роблю перерву перед вечерею.",
+        "section": "Zero Conditional",
+        "tag": "zero-conditional"
+      },
+      {
+        "id": "conditionals-first-01",
+        "category": "Conditionals",
+        "phrase": "If I finish work early, I'll go for a walk.",
+        "translation": "Якщо я закінчу роботу раніше, то піду на прогулянку.",
+        "section": "First Conditional",
+        "tag": "first-conditional"
+      },
+      {
+        "id": "conditionals-first-02",
+        "category": "Conditionals",
+        "phrase": "If you send me the details, I'll take a look.",
+        "translation": "Якщо ви надішлете мені подробиці, я їх перегляну.",
+        "section": "First Conditional",
+        "tag": "first-conditional"
+      },
+      {
+        "id": "conditionals-first-03",
+        "category": "Conditionals",
+        "phrase": "If the tests pass, we'll deploy the update.",
+        "translation": "Якщо тести пройдуть успішно, ми розгорнемо оновлення.",
+        "section": "First Conditional",
+        "tag": "first-conditional"
+      },
+      {
+        "id": "conditionals-second-01",
+        "category": "Conditionals",
+        "phrase": "If I had more free time, I'd practice English every day.",
+        "translation": "Якби в мене було більше вільного часу, я практикував би англійську щодня.",
+        "section": "Second Conditional",
+        "tag": "second-conditional"
+      },
+      {
+        "id": "conditionals-second-02",
+        "category": "Conditionals",
+        "phrase": "If I were in your position, I'd ask for more information.",
+        "translation": "Якби я був на вашому місці, то попросив би більше інформації.",
+        "section": "Second Conditional",
+        "tag": "second-conditional"
+      },
+      {
+        "id": "conditionals-second-03",
+        "category": "Conditionals",
+        "phrase": "If we had a larger budget, we'd test both options.",
+        "translation": "Якби в нас був більший бюджет, ми протестували б обидва варіанти.",
+        "section": "Second Conditional",
+        "tag": "second-conditional"
+      },
+      {
+        "id": "conditionals-third-01",
+        "category": "Conditionals",
+        "phrase": "If we had left earlier, we would have caught the train.",
+        "translation": "Якби ми виїхали раніше, то встигли б на потяг.",
+        "section": "Third Conditional",
+        "tag": "third-conditional"
+      },
+      {
+        "id": "conditionals-third-02",
+        "category": "Conditionals",
+        "phrase": "If I had known about the meeting, I would have joined it.",
+        "translation": "Якби я знав про зустріч, то долучився б до неї.",
+        "section": "Third Conditional",
+        "tag": "third-conditional"
+      },
+      {
+        "id": "conditionals-third-03",
+        "category": "Conditionals",
+        "phrase": "If we had tested that case, we would have found the bug before release.",
+        "translation": "Якби ми протестували цей сценарій, то знайшли б помилку до релізу.",
+        "section": "Third Conditional",
+        "tag": "third-conditional"
+      },
+      {
+        "id": "conditionals-mixed-past-01",
+        "category": "Conditionals",
+        "phrase": "If I had gone to bed earlier, I wouldn't be so tired now.",
+        "translation": "Якби я ліг спати раніше, то зараз не був би таким втомленим.",
+        "section": "Mixed Conditionals — Past condition, present result",
+        "tag": "mixed-past-to-present"
+      },
+      {
+        "id": "conditionals-mixed-past-02",
+        "category": "Conditionals",
+        "phrase": "If we had documented the decision, we'd understand it better now.",
+        "translation": "Якби ми задокументували це рішення, то зараз краще його розуміли б.",
+        "section": "Mixed Conditionals — Past condition, present result",
+        "tag": "mixed-past-to-present"
+      },
+      {
+        "id": "conditionals-mixed-past-03",
+        "category": "Conditionals",
+        "phrase": "If she had accepted the offer, she would be working with us now.",
+        "translation": "Якби вона прийняла пропозицію, то зараз працювала б із нами.",
+        "section": "Mixed Conditionals — Past condition, present result",
+        "tag": "mixed-past-to-present"
+      },
+      {
+        "id": "conditionals-mixed-present-01",
+        "category": "Conditionals",
+        "phrase": "If I were more organized, I wouldn't have missed yesterday's deadline.",
+        "translation": "Якби я був більш організованим, то не пропустив би вчорашній дедлайн.",
+        "section": "Mixed Conditionals — General condition, past result",
+        "tag": "mixed-general-to-past"
+      },
+      {
+        "id": "conditionals-mixed-present-02",
+        "category": "Conditionals",
+        "phrase": "If she knew the system better, she would have spotted the problem yesterday.",
+        "translation": "Якби вона краще знала систему, то вчора помітила б проблему.",
+        "section": "Mixed Conditionals — General condition, past result",
+        "tag": "mixed-general-to-past"
+      },
+      {
+        "id": "conditionals-mixed-present-03",
+        "category": "Conditionals",
+        "phrase": "If I weren't afraid of flying, I would have traveled to the conference last month.",
+        "translation": "Якби я не боявся літати, то минулого місяця поїхав би на конференцію.",
+        "section": "Mixed Conditionals — General condition, past result",
+        "tag": "mixed-general-to-past"
+      }
+    ],
+    "topics": [
+      {
+        "id": "conditionals",
+        "title": "Conditionals",
+        "blockId": "topic-conditionals",
+        "description": "Use conditionals to connect a situation with its result. Start with the four core types, then explore mixed conditionals.",
+        "usageNote": "The clauses can change order without changing their relationship: If the tests pass, we'll deploy the update / We'll deploy the update if the tests pass. Put a comma after an opening if-clause. These formulas are a starting point; other modal and tense combinations exist.",
+        "sections": [
+          {
+            "id": "zero-conditional",
+            "title": "Zero Conditional",
+            "pattern": "If + present simple, present simple.",
+            "use": "General truths, repeated results and habits.",
+            "items": [
+              "conditionals-zero-01",
+              "conditionals-zero-02",
+              "conditionals-zero-03"
+            ]
+          },
+          {
+            "id": "first-conditional",
+            "title": "First Conditional",
+            "pattern": "If + present simple, will + base verb.",
+            "use": "A real possibility in the future and its likely result.",
+            "items": [
+              "conditionals-first-01",
+              "conditionals-first-02",
+              "conditionals-first-03"
+            ]
+          },
+          {
+            "id": "second-conditional",
+            "title": "Second Conditional",
+            "pattern": "If + past simple, would + base verb.",
+            "use": "An imagined or unlikely situation in the present or future. The past form here does not necessarily describe past time.",
+            "items": [
+              "conditionals-second-01",
+              "conditionals-second-02",
+              "conditionals-second-03"
+            ]
+          },
+          {
+            "id": "third-conditional",
+            "title": "Third Conditional",
+            "pattern": "If + past perfect, would have + past participle.",
+            "use": "An imagined change to a past situation and its past result.",
+            "items": [
+              "conditionals-third-01",
+              "conditionals-third-02",
+              "conditionals-third-03"
+            ]
+          },
+          {
+            "id": "mixed-past-to-present",
+            "group": "Mixed Conditionals",
+            "title": "Past condition, present result",
+            "pattern": "If + past perfect, would + base verb.",
+            "use": "An imagined past change with a result now.",
+            "items": [
+              "conditionals-mixed-past-01",
+              "conditionals-mixed-past-02",
+              "conditionals-mixed-past-03"
+            ]
+          },
+          {
+            "id": "mixed-general-to-past",
+            "group": "Mixed Conditionals",
+            "title": "General condition, past result",
+            "pattern": "If + past simple, would have + past participle.",
+            "use": "An imagined continuing characteristic or situation that would have changed a past result. The condition is not a new fact that began only today.",
+            "items": [
+              "conditionals-mixed-present-01",
+              "conditionals-mixed-present-02",
+              "conditionals-mixed-present-03"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

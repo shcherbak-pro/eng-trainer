@@ -1,0 +1,33 @@
+{
+  "sourceDiffAgainstRelease": "none",
+  "newUntrackedV1Files": [],
+  "builtAgainstReleasedArtifact": [
+    {
+      "path": "v1/assets/index-Bod3ovET.css",
+      "byteIdentical": true,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "v1/assets/index-C0A337ei.js",
+      "byteIdentical": true,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "v1/data/materials.json",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "v1/favicon.svg",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    },
+    {
+      "path": "v1/index.html",
+      "byteIdentical": false,
+      "identicalIgnoringCarriageReturns": true
+    }
+  ],
+  "releasedOnly": [],
+  "pass": true
+}

@@ -1,0 +1,88 @@
+ M content/catalog.json
+ M docs/architecture/BUILT-IN-CONTENT.md
+ M scripts/content-build.test.mjs
+ M scripts/verify-content-migration.mjs
+ M src/app.css
+ M src/app/App.svelte
+ M src/app/App.test.ts
+ M src/app/AppShell.svelte
+ M src/app/navigation.test.ts
+ M src/app/navigation.ts
+ M src/collections/service.test.ts
+ M src/content/builtIn.test.ts
+ M src/content/catalog.ts
+ M src/content/descriptionLanguage.test.ts
+ M src/content/descriptionLanguage.ts
+ M src/content/packFormat.js
+ M src/content/types.ts
+ M src/features/exercises/AnswersPage.svelte
+ M src/features/exercises/PatternsPage.svelte
+ M src/features/focus/FocusListPage.svelte
+ M src/features/home/IndexPage.svelte
+ M src/features/vocabulary/PhrasesPage.svelte
+ M src/shared/entries/PhraseCard.svelte
+ M src/state/viewState.ts
+?? content/packs/conditionals.json
+?? content/packs/interview-english.json
+?? content/packs/small-talk.json
+?? docs/evidence/eng-v2-03/README.md
+?? docs/evidence/eng-v2-03/artifact.json
+?? docs/evidence/eng-v2-03/browser-check.mjs
+?? docs/evidence/eng-v2-03/browser/results.json
+?? docs/evidence/eng-v2-03/browser/screenshots.json
+?? docs/evidence/eng-v2-03/budget-and-markup.json
+?? docs/evidence/eng-v2-03/collect-evidence.mjs
+?? docs/evidence/eng-v2-03/commands.json
+?? docs/evidence/eng-v2-03/compare-builds.mjs
+?? docs/evidence/eng-v2-03/logs/build-site.log
+?? docs/evidence/eng-v2-03/logs/build.log
+?? docs/evidence/eng-v2-03/logs/check-v1.log
+?? docs/evidence/eng-v2-03/logs/check.log
+?? docs/evidence/eng-v2-03/logs/diff-check.log
+?? docs/evidence/eng-v2-03/logs/new-files-whitespace.log
+?? docs/evidence/eng-v2-03/logs/test-v1.log
+?? docs/evidence/eng-v2-03/logs/test.log
+?? docs/evidence/eng-v2-03/logs/verify-content.log
+?? docs/evidence/eng-v2-03/preservation.json
+?? docs/evidence/eng-v2-03/run-commands.mjs
+?? docs/evidence/eng-v2-03/sanitize.mjs
+?? docs/evidence/eng-v2-03/screenshots/chromium-desktop-index.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-desktop-topic-interview-english.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-narrow-index.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-narrow-topic-small-talk.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-collections.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-conditionals-final-subsection.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-content-error.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-enlarged-topic-small-talk.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-flashcards.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-home-details.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-index.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-interview-final-category.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-irregularVerbs.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-phrases.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-settings.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-small-talk-traveling.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-conditionals.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-interview-english.png
+?? docs/evidence/eng-v2-03/screenshots/chromium-phone-topic-small-talk.png
+?? docs/evidence/eng-v2-03/screenshots/firefox-desktop-index.png
+?? docs/evidence/eng-v2-03/screenshots/firefox-phone-home-details.png
+?? docs/evidence/eng-v2-03/screenshots/firefox-phone-index.png
+?? docs/evidence/eng-v2-03/screenshots/firefox-phone-topic-small-talk.png
+?? docs/evidence/eng-v2-03/v1-preservation.json
+?? docs/handoffs/ENG-V2-03.md
+?? src/app/App.home.test.ts
+?? src/app/AppHeader.svelte
+?? src/content/topics.test.ts
+?? src/features/home/HomeOverview.svelte
+?? src/features/home/TopicCards.svelte
+?? src/features/home/homeStats.test.ts
+?? src/features/home/homeStats.ts
+?? src/features/topics/TopicPage.svelte
+?? src/features/topics/topicView.test.ts
+?? src/features/topics/topicView.ts
+?? src/shared/entries/AnswerCard.svelte
+?? src/shared/entries/PatternCard.svelte
+?? src/test/fixtures/eng-v2-03-editorial.json
+?? src/test/fixtures/legacy-pack-urls.json
+?? src/test/legacyProjection.js

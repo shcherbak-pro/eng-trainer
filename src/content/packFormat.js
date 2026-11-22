@@ -7,8 +7,12 @@
 /** @typedef {import('./packTypes').ContentCounts} ContentCounts */
 /** @typedef {import('./packTypes').PackContent} PackContent */
 
-/** @type {(keyof PackContent)[]} */
-export const CONTENT_KEYS = ['phrases', 'wordIndex', 'irregularVerbs', 'patterns', 'answers', 'drills'];
+/**
+ * `topics` (ENG-V2-03) is optional like every collection: a pack without it has no
+ * learning topics. Its records only describe and group existing phrases and answers.
+ * @type {(keyof PackContent)[]}
+ */
+export const CONTENT_KEYS = ['phrases', 'wordIndex', 'irregularVerbs', 'patterns', 'answers', 'drills', 'topics'];
 const BLOCK_TYPES = ['phraseCategory', 'wordIndex', 'irregularVerbs', 'patterns', 'answers', 'practice', 'reversePractice'];
 const PACK_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
@@ -53,9 +57,54 @@ function examples(value, at) {
   }
 }
 
+/** @param {Record<string, unknown>} value @param {string[]} fields @param {string} at */
+function optionalText(value, fields, at) {
+  for (const field of fields) if (value[field] !== undefined) string(value[field], `${at}.${field}`, true);
+}
+
+/** @param {unknown} value @param {string} at */
+function topicSection(value, at) {
+  const item = object(value, at);
+  keys(item, ['id', 'title', 'group', 'pattern', 'use', 'note', 'questions', 'structure', 'items', 'answerId'], at);
+  string(item.id, `${at}.id`, true);
+  require(PACK_ID.test(/** @type {string} */ (item.id)), `${at}.id must be a lowercase slug`);
+  string(item.title, `${at}.title`, true);
+  optionalText(item, ['group', 'pattern', 'use', 'note', 'structure', 'answerId'], at);
+  if (item.questions !== undefined) {
+    for (const [i, entry] of array(item.questions, `${at}.questions`).entries()) {
+      const question = object(entry, `${at}.questions[${i}]`);
+      keys(question, ['en', 'ua'], `${at}.questions[${i}]`);
+      string(question.en, `${at}.questions[${i}].en`, true);
+      string(question.ua, `${at}.questions[${i}].ua`, true);
+    }
+  }
+  const items = array(item.items, `${at}.items`);
+  require(items.length > 0, `${at}.items is empty`);
+  items.forEach((id, i) => string(id, `${at}.items[${i}]`, true));
+}
+
+/** A learning topic only refers to content; its references are checked after assembly. @param {unknown} value @param {string} at */
+function topic(value, at) {
+  const item = object(value, at);
+  keys(item, ['id', 'title', 'blockId', 'description', 'note', 'usageNote', 'filter', 'sections'], at);
+  for (const field of ['id', 'title', 'blockId', 'description']) string(item[field], `${at}.${field}`, true);
+  require(PACK_ID.test(/** @type {string} */ (item.id)), `${at}.id must be a lowercase slug`);
+  optionalText(item, ['note', 'usageNote'], at);
+  if (item.filter !== undefined) {
+    const filter = object(item.filter, `${at}.filter`);
+    keys(filter, ['label', 'all'], `${at}.filter`);
+    string(filter.label, `${at}.filter.label`, true);
+    string(filter.all, `${at}.filter.all`, true);
+  }
+  const sections = array(item.sections, `${at}.sections`);
+  require(sections.length > 0, `${at}.sections is empty`);
+  sections.forEach((entry, i) => topicSection(entry, `${at}.sections[${i}]`));
+}
+
 /** @param {unknown} value @param {string} kind @param {string} at */
 function record(value, kind, at) {
   if (kind === 'drills') return string(value, at, true);
+  if (kind === 'topics') return topic(value, at);
   const item = object(value, at);
   if (['blocks', 'phrases', 'wordIndex', 'irregularVerbs'].includes(kind)) string(item.id, `${at}.id`, true);
   if (kind === 'phrases') strings(item, ['category', 'phrase', 'translation'], at);
@@ -75,7 +124,7 @@ function record(value, kind, at) {
     require(BLOCK_TYPES.includes(/** @type {string} */ (item.type)), `${at}.type is unsupported`);
     if (item.type === 'phraseCategory') string(item.category, `${at}.category`, true);
   }
-  for (const field of ['id', 'example', 'transcription', 'section', 'level', 'tag', 'verbSet', 'category', 'icon']) {
+  for (const field of ['id', 'example', 'transcription', 'section', 'level', 'tag', 'verbSet', 'category', 'icon', 'label']) {
     // Seventeen legacy word entries explicitly have no transcription.
     if (kind === 'wordIndex' && field === 'transcription' && item[field] === null) continue;
     if (item[field] !== undefined) string(item[field], `${at}.${field}`);
@@ -186,7 +235,7 @@ export function assembleMaterials(descriptor, packs) {
     Object.assign(materials, { [key]: parsed.flatMap((pack) => /** @type {unknown[]} */ (pack.content[key] ?? [])) });
   }
   const ids = new Set();
-  for (const key of ['blocks', 'phrases', 'wordIndex', 'irregularVerbs', 'patterns']) {
+  for (const key of ['blocks', 'phrases', 'wordIndex', 'irregularVerbs', 'patterns', 'answers']) {
     for (const item of /** @type {{id?: string}[]} */ (materials[/** @type {keyof Materials} */ (key)])) {
       if (item.id === undefined) continue;
       require(!ids.has(item.id), `duplicate entry id ${item.id}`);
@@ -206,5 +255,46 @@ export function assembleMaterials(descriptor, packs) {
     if (block.type === 'answers') require(materials.answers.length > 0, `${block.id} has no answers`);
     if (block.type === 'practice') require(materials.drills.length > 0, `${block.id} has no drills`);
   }
+  validateTopics(materials);
   return materials;
+}
+
+/**
+ * Every reference of a learning topic is explicit and checked: its block, each listed
+ * phrase and model answer. A topic lists every phrase of its category exactly once, so
+ * the topic's flashcard deck and its practice rows are the same cards.
+ * @param {Materials} materials
+ */
+function validateTopics(materials) {
+  const topics = materials.topics ?? [];
+  const phraseById = new Map(materials.phrases.map((item) => [item.id, item]));
+  const answerIds = new Set(materials.answers.map((item) => item.id).filter((id) => id !== undefined));
+  const topicIds = new Set(), titles = new Set(), blockIds = new Set();
+  for (const item of topics) {
+    require(!topicIds.has(item.id), `duplicate topic id ${item.id}`);
+    require(!titles.has(item.title), `duplicate topic title ${item.title}`);
+    require(!blockIds.has(item.blockId), `${item.id}: block ${item.blockId} already opens another topic`);
+    topicIds.add(item.id);
+    titles.add(item.title);
+    blockIds.add(item.blockId);
+    const block = materials.blocks.find((entry) => entry.id === item.blockId);
+    require(block !== undefined, `${item.id}.blockId points to missing block ${item.blockId}`);
+    require(block.type === 'phraseCategory' && block.category === item.title, `${item.id}: block ${item.blockId} must be the phrase category ${item.title}`);
+    const sectionIds = new Set(), listed = new Set();
+    for (const section of item.sections) {
+      require(!sectionIds.has(section.id), `${item.id}: duplicate section id ${section.id}`);
+      sectionIds.add(section.id);
+      for (const id of section.items) {
+        const phrase = phraseById.get(id);
+        require(phrase !== undefined, `${item.id}.${section.id} lists missing phrase ${id}`);
+        require(phrase.category === item.title, `${item.id}.${section.id}: phrase ${id} belongs to ${phrase.category}`);
+        require(!listed.has(id), `${item.id}: phrase ${id} is listed twice`);
+        listed.add(id);
+      }
+      require(section.answerId === undefined || answerIds.has(section.answerId), `${item.id}.${section.id}.answerId points to missing answer ${section.answerId}`);
+    }
+    for (const phrase of materials.phrases) {
+      require(phrase.category !== item.title || listed.has(phrase.id), `${item.id} does not list its phrase ${phrase.id}`);
+    }
+  }
 }

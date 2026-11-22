@@ -1,0 +1,64 @@
+$ npm run build:site
+
+> english-assessment-trainer-v2@2.0.0 build:site
+> npm run build && npm run build:v1 && npm run assemble && npm run check:site
+
+
+> english-assessment-trainer-v2@2.0.0 prebuild
+> npm run content:generate
+
+
+> english-assessment-trainer-v2@2.0.0 content:generate
+> node scripts/generate-content.mjs
+
+Generated 14 built-in packs: {"phrases":638,"wordIndex":566,"irregularVerbs":339,"patterns":7,"answers":12,"drills":15,"topics":3}
+
+> english-assessment-trainer-v2@2.0.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 185 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                          1.32 kB │ gzip:  0.66 kB
+dist/assets/eng-trainer-sans-greek-FkV9qZ7r.woff2       14.50 kB
+dist/assets/eng-trainer-sans-cyrillic-CuD29lmH.woff2    18.41 kB
+dist/assets/eng-trainer-sans-latin-WBnKszXN.woff2       28.83 kB
+dist/assets/eng-trainer-sans-latin-ext-BaGxOnaP.woff2   60.14 kB
+dist/assets/literata-latin-Cedbco83.woff2               85.67 kB
+dist/assets/literata-latin-italic-Ckc1vdjp.woff2        88.76 kB
+dist/assets/index-DFaGuSQ9.css                          48.25 kB │ gzip:  8.81 kB
+dist/assets/index-BIsJEtZg.js                          266.68 kB │ gzip: 87.93 kB
+✓ built in 2.02s
+
+> english-assessment-trainer-v2@2.0.0 build:v1
+> npm --prefix v1 run build
+
+
+> english-assessment-trainer-v1@1.0.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 143 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.93 kB │ gzip:  0.85 kB
+dist/assets/index-Bod3ovET.css   27.85 kB │ gzip:  6.33 kB
+dist/assets/index-C0A337ei.js   138.55 kB │ gzip: 45.43 kB
+✓ built in 935ms
+
+> english-assessment-trainer-v2@2.0.0 assemble
+> node scripts/assemble-site.mjs
+
+Assembled site-dist/ (v2) and site-dist/v1/ (v1).
+
+> english-assessment-trainer-v2@2.0.0 check:site
+> node scripts/check-site.mjs
+
+v2 fonts: 6 self-hosted font files, licences and FONTLOG published, no Google Fonts references, no replaced subsets.
+v2 content: verified manifest and all 14 pack hashes, identities, counts and links.
+site-dist check passed: both entry pages, their assets and data are in place.
+
+[exit 0]
