@@ -1,0 +1,707 @@
+{
+  "source": "ENG-V2-03 implementation task, section 8 \"Complete learning content\" (22 November 2026)",
+  "idRule": "catalog ID = pack ID + the editorial source ID without its short prefix (cond-, small-, interview-)",
+  "topics": [
+    {
+      "label": "Conditionals",
+      "pack": "conditionals",
+      "description": "Use conditionals to connect a situation with its result. Start with the four core types, then explore mixed conditionals.",
+      "groups": [
+        {
+          "heading": "Zero Conditional",
+          "use": "General truths, repeated results and habits.",
+          "pattern": "If + present simple, present simple.",
+          "items": [
+            {
+              "sourceId": "cond-zero-01",
+              "catalogId": "conditionals-zero-01",
+              "en": "If I skip breakfast, I feel hungry before lunch.",
+              "uk": "Якщо я пропускаю сніданок, то відчуваю голод ще до обіду."
+            },
+            {
+              "sourceId": "cond-zero-02",
+              "catalogId": "conditionals-zero-02",
+              "en": "If a required field is empty, the form shows an error.",
+              "uk": "Якщо обов’язкове поле порожнє, форма показує помилку."
+            },
+            {
+              "sourceId": "cond-zero-03",
+              "catalogId": "conditionals-zero-03",
+              "en": "If I work late, I usually take a break before dinner.",
+              "uk": "Якщо я працюю допізна, то зазвичай роблю перерву перед вечерею."
+            }
+          ]
+        },
+        {
+          "heading": "First Conditional",
+          "use": "A real possibility in the future and its likely result.",
+          "pattern": "If + present simple, will + base verb.",
+          "items": [
+            {
+              "sourceId": "cond-first-01",
+              "catalogId": "conditionals-first-01",
+              "en": "If I finish work early, I'll go for a walk.",
+              "uk": "Якщо я закінчу роботу раніше, то піду на прогулянку."
+            },
+            {
+              "sourceId": "cond-first-02",
+              "catalogId": "conditionals-first-02",
+              "en": "If you send me the details, I'll take a look.",
+              "uk": "Якщо ви надішлете мені подробиці, я їх перегляну."
+            },
+            {
+              "sourceId": "cond-first-03",
+              "catalogId": "conditionals-first-03",
+              "en": "If the tests pass, we'll deploy the update.",
+              "uk": "Якщо тести пройдуть успішно, ми розгорнемо оновлення."
+            }
+          ]
+        },
+        {
+          "heading": "Second Conditional",
+          "use": "An imagined or unlikely situation in the present or future. The past form here does not necessarily describe past time.",
+          "pattern": "If + past simple, would + base verb.",
+          "items": [
+            {
+              "sourceId": "cond-second-01",
+              "catalogId": "conditionals-second-01",
+              "en": "If I had more free time, I'd practice English every day.",
+              "uk": "Якби в мене було більше вільного часу, я практикував би англійську щодня."
+            },
+            {
+              "sourceId": "cond-second-02",
+              "catalogId": "conditionals-second-02",
+              "en": "If I were in your position, I'd ask for more information.",
+              "uk": "Якби я був на вашому місці, то попросив би більше інформації."
+            },
+            {
+              "sourceId": "cond-second-03",
+              "catalogId": "conditionals-second-03",
+              "en": "If we had a larger budget, we'd test both options.",
+              "uk": "Якби в нас був більший бюджет, ми протестували б обидва варіанти."
+            }
+          ]
+        },
+        {
+          "heading": "Third Conditional",
+          "use": "An imagined change to a past situation and its past result.",
+          "pattern": "If + past perfect, would have + past participle.",
+          "items": [
+            {
+              "sourceId": "cond-third-01",
+              "catalogId": "conditionals-third-01",
+              "en": "If we had left earlier, we would have caught the train.",
+              "uk": "Якби ми виїхали раніше, то встигли б на потяг."
+            },
+            {
+              "sourceId": "cond-third-02",
+              "catalogId": "conditionals-third-02",
+              "en": "If I had known about the meeting, I would have joined it.",
+              "uk": "Якби я знав про зустріч, то долучився б до неї."
+            },
+            {
+              "sourceId": "cond-third-03",
+              "catalogId": "conditionals-third-03",
+              "en": "If we had tested that case, we would have found the bug before release.",
+              "uk": "Якби ми протестували цей сценарій, то знайшли б помилку до релізу."
+            }
+          ]
+        },
+        {
+          "heading": "Mixed Conditionals — Past condition, present result",
+          "use": "An imagined past change with a result now.",
+          "pattern": "If + past perfect, would + base verb.",
+          "items": [
+            {
+              "sourceId": "cond-mixed-past-01",
+              "catalogId": "conditionals-mixed-past-01",
+              "en": "If I had gone to bed earlier, I wouldn't be so tired now.",
+              "uk": "Якби я ліг спати раніше, то зараз не був би таким втомленим."
+            },
+            {
+              "sourceId": "cond-mixed-past-02",
+              "catalogId": "conditionals-mixed-past-02",
+              "en": "If we had documented the decision, we'd understand it better now.",
+              "uk": "Якби ми задокументували це рішення, то зараз краще його розуміли б."
+            },
+            {
+              "sourceId": "cond-mixed-past-03",
+              "catalogId": "conditionals-mixed-past-03",
+              "en": "If she had accepted the offer, she would be working with us now.",
+              "uk": "Якби вона прийняла пропозицію, то зараз працювала б із нами."
+            }
+          ]
+        },
+        {
+          "heading": "Mixed Conditionals — General condition, past result",
+          "use": "An imagined continuing characteristic or situation that would have changed a past result. The condition is not a new fact that began only today.",
+          "pattern": "If + past simple, would have + past participle.",
+          "items": [
+            {
+              "sourceId": "cond-mixed-present-01",
+              "catalogId": "conditionals-mixed-present-01",
+              "en": "If I were more organized, I wouldn't have missed yesterday's deadline.",
+              "uk": "Якби я був більш організованим, то не пропустив би вчорашній дедлайн."
+            },
+            {
+              "sourceId": "cond-mixed-present-02",
+              "catalogId": "conditionals-mixed-present-02",
+              "en": "If she knew the system better, she would have spotted the problem yesterday.",
+              "uk": "Якби вона краще знала систему, то вчора помітила б проблему."
+            },
+            {
+              "sourceId": "cond-mixed-present-03",
+              "catalogId": "conditionals-mixed-present-03",
+              "en": "If I weren't afraid of flying, I would have traveled to the conference last month.",
+              "uk": "Якби я не боявся літати, то минулого місяця поїхав би на конференцію."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "kind": "scope",
+          "text": "These are common introductory patterns, not an exhaustive grammar of every conditional construction. The coverage and time distinctions follow the British Council's core and mixed-conditionals explanations [G1, G2]."
+        },
+        {
+          "kind": "usage",
+          "text": "The clauses can change order without changing their relationship: If the tests pass, we'll deploy the update / We'll deploy the update if the tests pass. Put a comma after an opening if-clause. These formulas are a starting point; other modal and tense combinations exist."
+        }
+      ]
+    },
+    {
+      "label": "Small Talk",
+      "pack": "small-talk",
+      "description": "Start a conversation, keep it going and finish politely. Choose a situation and practice a few phrases.",
+      "situations": [
+        {
+          "label": "Meeting new people",
+          "key": "meeting-new-people"
+        },
+        {
+          "label": "Before a work meeting",
+          "key": "before-a-meeting"
+        },
+        {
+          "label": "Coffee and lunch breaks",
+          "key": "coffee-and-lunch"
+        },
+        {
+          "label": "Free time and weekends",
+          "key": "free-time-and-weekends"
+        },
+        {
+          "label": "Conferences and events",
+          "key": "conferences-and-events"
+        },
+        {
+          "label": "Traveling",
+          "key": "traveling"
+        }
+      ],
+      "groups": [
+        {
+          "heading": "Meeting new people",
+          "items": [
+            {
+              "sourceId": "small-meet-01",
+              "catalogId": "small-talk-meet-01",
+              "en": "Hi, I'm [name]. It's nice to meet you.",
+              "uk": "Привіт, я [ім’я]. Приємно познайомитися."
+            },
+            {
+              "sourceId": "small-meet-02",
+              "catalogId": "small-talk-meet-02",
+              "en": "What do you do?",
+              "uk": "Чим ви займаєтеся?"
+            },
+            {
+              "sourceId": "small-meet-03",
+              "catalogId": "small-talk-meet-03",
+              "en": "How do you know the people here?",
+              "uk": "Звідки ви знаєте присутніх?"
+            },
+            {
+              "sourceId": "small-meet-04",
+              "catalogId": "small-talk-meet-04",
+              "en": "Have we met before?",
+              "uk": "Ми раніше зустрічалися?"
+            },
+            {
+              "sourceId": "small-meet-05",
+              "catalogId": "small-talk-meet-05",
+              "en": "What brought you here today?",
+              "uk": "Що привело вас сюди сьогодні?"
+            },
+            {
+              "sourceId": "small-meet-06",
+              "catalogId": "small-talk-meet-06",
+              "en": "It's great to finally meet you in person.",
+              "uk": "Дуже приємно нарешті познайомитися з вами особисто."
+            }
+          ]
+        },
+        {
+          "heading": "Before a work meeting",
+          "note": "Use Shall we get started? to move from small talk into the meeting.",
+          "items": [
+            {
+              "sourceId": "small-meeting-01",
+              "catalogId": "small-talk-meeting-01",
+              "en": "How's your day going so far?",
+              "uk": "Як минає ваш день?"
+            },
+            {
+              "sourceId": "small-meeting-02",
+              "catalogId": "small-talk-meeting-02",
+              "en": "How has your week been?",
+              "uk": "Як минає ваш тиждень?"
+            },
+            {
+              "sourceId": "small-meeting-03",
+              "catalogId": "small-talk-meeting-03",
+              "en": "Have you had a busy morning?",
+              "uk": "У вас був насичений ранок?"
+            },
+            {
+              "sourceId": "small-meeting-04",
+              "catalogId": "small-talk-meeting-04",
+              "en": "How are things going with your project?",
+              "uk": "Як просувається ваш проєкт?"
+            },
+            {
+              "sourceId": "small-meeting-05",
+              "catalogId": "small-talk-meeting-05",
+              "en": "Do you have any plans for the weekend?",
+              "uk": "Маєте якісь плани на вихідні?"
+            },
+            {
+              "sourceId": "small-meeting-06",
+              "catalogId": "small-talk-meeting-06",
+              "en": "Shall we get started?",
+              "uk": "Почнемо?"
+            }
+          ]
+        },
+        {
+          "heading": "Coffee and lunch breaks",
+          "items": [
+            {
+              "sourceId": "small-coffee-01",
+              "catalogId": "small-talk-coffee-01",
+              "en": "Would you like to grab a coffee?",
+              "uk": "Хочете випити кави?"
+            },
+            {
+              "sourceId": "small-coffee-02",
+              "catalogId": "small-talk-coffee-02",
+              "en": "Is this seat taken?",
+              "uk": "Це місце зайняте?"
+            },
+            {
+              "sourceId": "small-coffee-03",
+              "catalogId": "small-talk-coffee-03",
+              "en": "Do you have a favorite place for lunch around here?",
+              "uk": "Маєте тут поблизу улюблене місце для обіду?"
+            },
+            {
+              "sourceId": "small-coffee-04",
+              "catalogId": "small-talk-coffee-04",
+              "en": "That looks good. What did you order?",
+              "uk": "Виглядає смачно. Що ви замовили?"
+            },
+            {
+              "sourceId": "small-coffee-05",
+              "catalogId": "small-talk-coffee-05",
+              "en": "I haven't tried that before. Would you recommend it?",
+              "uk": "Я цього ще не пробував. Порадите спробувати?"
+            },
+            {
+              "sourceId": "small-coffee-06",
+              "catalogId": "small-talk-coffee-06",
+              "en": "It was nice chatting with you. I'd better get back to work.",
+              "uk": "Було приємно поспілкуватися. Мені вже час повертатися до роботи."
+            }
+          ]
+        },
+        {
+          "heading": "Free time and weekends",
+          "items": [
+            {
+              "sourceId": "small-weekend-01",
+              "catalogId": "small-talk-weekend-01",
+              "en": "What do you like to do in your free time?",
+              "uk": "Що ви любите робити у вільний час?"
+            },
+            {
+              "sourceId": "small-weekend-02",
+              "catalogId": "small-talk-weekend-02",
+              "en": "Have you watched anything good lately?",
+              "uk": "Дивилися щось цікаве останнім часом?"
+            },
+            {
+              "sourceId": "small-weekend-03",
+              "catalogId": "small-talk-weekend-03",
+              "en": "Have you read any good books recently?",
+              "uk": "Читали останнім часом якісь цікаві книжки?"
+            },
+            {
+              "sourceId": "small-weekend-04",
+              "catalogId": "small-talk-weekend-04",
+              "en": "How did your weekend go?",
+              "uk": "Як минули ваші вихідні?"
+            },
+            {
+              "sourceId": "small-weekend-05",
+              "catalogId": "small-talk-weekend-05",
+              "en": "I'm thinking of going for a walk later. Would you like to join me?",
+              "uk": "Думаю пізніше піти на прогулянку. Хочете приєднатися?"
+            },
+            {
+              "sourceId": "small-weekend-06",
+              "catalogId": "small-talk-weekend-06",
+              "en": "That sounds interesting. How did you get into it?",
+              "uk": "Звучить цікаво. Як ви цим захопилися?"
+            }
+          ]
+        },
+        {
+          "heading": "Conferences and events",
+          "items": [
+            {
+              "sourceId": "small-event-01",
+              "catalogId": "small-talk-event-01",
+              "en": "Is this your first time at this event?",
+              "uk": "Ви вперше на цьому заході?"
+            },
+            {
+              "sourceId": "small-event-02",
+              "catalogId": "small-talk-event-02",
+              "en": "Which session are you looking forward to?",
+              "uk": "На який виступ ви найбільше чекаєте?"
+            },
+            {
+              "sourceId": "small-event-03",
+              "catalogId": "small-talk-event-03",
+              "en": "What did you think of the last talk?",
+              "uk": "Що ви думаєте про попередній виступ?"
+            },
+            {
+              "sourceId": "small-event-04",
+              "catalogId": "small-talk-event-04",
+              "en": "Was there anything in the talk that you could use in your work?",
+              "uk": "Чи було у виступі щось, що ви могли б застосувати у своїй роботі?"
+            },
+            {
+              "sourceId": "small-event-05",
+              "catalogId": "small-talk-event-05",
+              "en": "Would you like to exchange contact details?",
+              "uk": "Хочете обмінятися контактами?"
+            },
+            {
+              "sourceId": "small-event-06",
+              "catalogId": "small-talk-event-06",
+              "en": "It was great talking to you. Enjoy the rest of the event.",
+              "uk": "Було дуже приємно поспілкуватися. Бажаю гарно провести решту заходу."
+            }
+          ]
+        },
+        {
+          "heading": "Traveling",
+          "items": [
+            {
+              "sourceId": "small-travel-01",
+              "catalogId": "small-talk-travel-01",
+              "en": "Are you traveling for work or for a vacation?",
+              "uk": "Ви подорожуєте у справах чи на відпочинок?"
+            },
+            {
+              "sourceId": "small-travel-02",
+              "catalogId": "small-talk-travel-02",
+              "en": "Have you been here before?",
+              "uk": "Ви тут уже бували?"
+            },
+            {
+              "sourceId": "small-travel-03",
+              "catalogId": "small-talk-travel-03",
+              "en": "How was your journey?",
+              "uk": "Як минула ваша подорож?"
+            },
+            {
+              "sourceId": "small-travel-04",
+              "catalogId": "small-talk-travel-04",
+              "en": "How long are you staying?",
+              "uk": "На скільки часу ви приїхали?"
+            },
+            {
+              "sourceId": "small-travel-05",
+              "catalogId": "small-talk-travel-05",
+              "en": "Have you had a chance to explore the city?",
+              "uk": "Уже мали нагоду прогулятися містом?"
+            },
+            {
+              "sourceId": "small-travel-06",
+              "catalogId": "small-talk-travel-06",
+              "en": "I hope you enjoy the rest of your trip.",
+              "uk": "Сподіваюся, решта вашої подорожі буде приємною."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "label": "Interview English",
+      "pack": "interview-english",
+      "description": "Build clear answers in English. Choose a question type, use the answer frames and adapt the example to your own experience.",
+      "groups": [
+        {
+          "heading": "Comparing concepts",
+          "key": "comparing-concepts",
+          "structure": "Shared context → main difference → practical example.",
+          "questions": [
+            {
+              "en": "What's the difference between authentication and authorization?",
+              "uk": "У чому різниця між автентифікацією та авторизацією?"
+            },
+            {
+              "en": "How do unit tests differ from integration tests?",
+              "uk": "Чим модульні тести відрізняються від інтеграційних?"
+            }
+          ],
+          "modelAnswer": {
+            "label": null,
+            "en": "Authentication checks who a user is. Authorization determines what that user is allowed to do. For example, signing in establishes an identity, while an authorization rule decides whether that user can edit a document.",
+            "uk": "Автентифікація перевіряє особу користувача. Авторизація визначає, що цьому користувачеві дозволено робити. Наприклад, під час входу в систему встановлюється особа користувача, а правило авторизації визначає, чи може він редагувати документ."
+          },
+          "items": [
+            {
+              "sourceId": "interview-compare-01",
+              "catalogId": "interview-english-compare-01",
+              "en": "Both [A] and [B] help with [goal], but they solve different problems.",
+              "uk": "І [A], і [B] допомагають досягти [мети], але розв’язують різні завдання."
+            },
+            {
+              "sourceId": "interview-compare-02",
+              "catalogId": "interview-english-compare-02",
+              "en": "The main difference is that [A] ..., whereas [B] ...",
+              "uk": "Головна відмінність полягає в тому, що [A] ..., тоді як [B] ..."
+            },
+            {
+              "sourceId": "interview-compare-03",
+              "catalogId": "interview-english-compare-03",
+              "en": "For example, [concrete example].",
+              "uk": "Наприклад, [конкретний приклад]."
+            }
+          ]
+        },
+        {
+          "heading": "Explaining how something works",
+          "key": "explaining-how-it-works",
+          "structure": "Main idea → mechanism → limitation.",
+          "questions": [
+            {
+              "en": "How does caching work?",
+              "uk": "Як працює кешування?"
+            },
+            {
+              "en": "How can an application handle a temporary failure?",
+              "uk": "Як застосунок може обробити тимчасовий збій?"
+            }
+          ],
+          "modelAnswer": {
+            "label": null,
+            "en": "One common approach is to keep a copy of frequently used data in a cache. When the application needs that data again, it checks the cache before going to the original source. Cached data may become outdated, so we need a way to refresh or expire it.",
+            "uk": "Один із поширених підходів — зберігати в кеші копію даних, які часто використовуються. Коли ці дані знову потрібні застосунку, він перевіряє кеш, перш ніж звертатися до початкового джерела. Дані в кеші можуть застарівати, тому потрібен спосіб їх оновлювати або задавати термін їхньої дії."
+          },
+          "items": [
+            {
+              "sourceId": "interview-explain-01",
+              "catalogId": "interview-english-explain-01",
+              "en": "In simple terms, [main idea].",
+              "uk": "Простими словами, [основна думка]."
+            },
+            {
+              "sourceId": "interview-explain-02",
+              "catalogId": "interview-english-explain-02",
+              "en": "The basic idea is to [action] so that [benefit].",
+              "uk": "Основна ідея полягає в тому, щоб [виконати дію] й завдяки цьому [отримати користь]."
+            },
+            {
+              "sourceId": "interview-explain-03",
+              "catalogId": "interview-english-explain-03",
+              "en": "One thing to keep in mind is [limitation].",
+              "uk": "Варто врахувати [обмеження]."
+            }
+          ]
+        },
+        {
+          "heading": "Defining a concept",
+          "key": "defining-a-concept",
+          "structure": "Category → purpose → example.",
+          "questions": [
+            {
+              "en": "What is an API?",
+              "uk": "Що таке API?"
+            },
+            {
+              "en": "What is dependency injection?",
+              "uk": "Що таке впровадження залежностей?"
+            }
+          ],
+          "modelAnswer": {
+            "label": null,
+            "en": "An API is an interface that lets one piece of software interact with another. It defines what operations are available and how to request them. For example, a weather service can expose an API that an app uses to request a forecast.",
+            "uk": "API — це інтерфейс, який дозволяє одному програмному компоненту взаємодіяти з іншим. Він визначає доступні операції та спосіб звернення до них. Наприклад, погодний сервіс може надавати API, через який застосунок запитує прогноз погоди."
+          },
+          "items": [
+            {
+              "sourceId": "interview-define-01",
+              "catalogId": "interview-english-define-01",
+              "en": "[Concept] is a [category] that [purpose].",
+              "uk": "[Поняття] — це [категорія], що [виконує певну функцію]."
+            },
+            {
+              "sourceId": "interview-define-02",
+              "catalogId": "interview-english-define-02",
+              "en": "We use it to [goal].",
+              "uk": "Ми використовуємо це, щоб [досягти мети]."
+            },
+            {
+              "sourceId": "interview-define-03",
+              "catalogId": "interview-english-define-03",
+              "en": "A simple example would be [example].",
+              "uk": "Простим прикладом може бути [приклад]."
+            }
+          ]
+        },
+        {
+          "heading": "Describing a process",
+          "key": "describing-a-process",
+          "structure": "Starting point → steps → result → failure handling.",
+          "questions": [
+            {
+              "en": "Walk me through what happens when a user submits a form.",
+              "uk": "Опишіть крок за кроком, що відбувається, коли користувач надсилає форму."
+            },
+            {
+              "en": "How would you investigate a reported bug?",
+              "uk": "Як би ви досліджували помилку, про яку повідомив користувач?"
+            }
+          ],
+          "modelAnswer": {
+            "label": "hypothetical server-backed application",
+            "en": "One possible flow starts with the browser checking the user's input. Next, it sends a request to the server, which validates the data and saves it. Finally, the app displays the result. If a step fails, it shows an error and gives the user a way to try again.",
+            "uk": "Один із можливих процесів починається з того, що браузер перевіряє введені користувачем дані. Потім він надсилає запит на сервер, який перевіряє дані й зберігає їх. Насамкінець застосунок показує результат. Якщо на якомусь етапі стається збій, він показує помилку й дає користувачеві можливість повторити спробу."
+          },
+          "items": [
+            {
+              "sourceId": "interview-process-01",
+              "catalogId": "interview-english-process-01",
+              "en": "First, [first step].",
+              "uk": "Спочатку [перший крок]."
+            },
+            {
+              "sourceId": "interview-process-02",
+              "catalogId": "interview-english-process-02",
+              "en": "Once [condition] is met, [next step].",
+              "uk": "Щойно [умову] виконано, [наступний крок]."
+            },
+            {
+              "sourceId": "interview-process-03",
+              "catalogId": "interview-english-process-03",
+              "en": "If something goes wrong, [recovery action].",
+              "uk": "Якщо щось іде не так, [дія для відновлення]."
+            }
+          ]
+        },
+        {
+          "heading": "Discussing options and trade-offs",
+          "key": "discussing-options",
+          "structure": "Options → benefits and costs → constraint → recommendation.",
+          "questions": [
+            {
+              "en": "Would you build this feature in-house or use an existing library?",
+              "uk": "Ви розробили б цю функцію власними силами чи використали б готову бібліотеку?"
+            },
+            {
+              "en": "How would you choose between two possible solutions?",
+              "uk": "Як би ви обирали між двома можливими рішеннями?"
+            }
+          ],
+          "modelAnswer": {
+            "label": null,
+            "en": "An existing library could reduce development time, but we'd need to check its maintenance and whether it meets our requirements. Building our own would give us more control, but we'd also have to maintain it. I'd start by checking whether a small, well-maintained library covers the core requirements.",
+            "uk": "Готова бібліотека могла б скоротити час розробки, але потрібно перевірити, чи її підтримують і чи вона відповідає нашим вимогам. Власне рішення дало б нам більше контролю, але його також довелося б підтримувати. Я почав би з перевірки, чи покриває невелика бібліотека з активною підтримкою основні вимоги."
+          },
+          "items": [
+            {
+              "sourceId": "interview-options-01",
+              "catalogId": "interview-english-options-01",
+              "en": "We have two main options: [A] and [B].",
+              "uk": "У нас є два основні варіанти: [A] і [B]."
+            },
+            {
+              "sourceId": "interview-options-02",
+              "catalogId": "interview-english-options-02",
+              "en": "The advantage of [A] is [benefit], but the trade-off is [cost or limitation].",
+              "uk": "Перевага [A] — це [користь], але за це доводиться платити [витратами або обмеженнями]."
+            },
+            {
+              "sourceId": "interview-options-03",
+              "catalogId": "interview-english-options-03",
+              "en": "Given [constraint], I'd choose [option] because [reason].",
+              "uk": "З огляду на [обмеження], я обрав би [варіант], тому що [причина]."
+            }
+          ]
+        },
+        {
+          "heading": "Describing experience and solving problems",
+          "key": "describing-experience",
+          "structure": "Situation → Task → Action → Result. Add a short lesson when it helps explain the outcome.",
+          "questions": [
+            {
+              "en": "Tell me about a time you solved a difficult problem.",
+              "uk": "Розкажіть про випадок, коли ви розв’язали складну проблему."
+            },
+            {
+              "en": "Tell me about a time you had to learn something unfamiliar.",
+              "uk": "Розкажіть про випадок, коли вам довелося опанувати щось незнайоме."
+            }
+          ],
+          "modelAnswer": {
+            "label": "fictional practice example",
+            "en": "In a practice project, a form showed the wrong error message after validation failed. I was responsible for finding the cause. I reproduced the problem, traced it to an incorrect condition, and added a regression test before fixing it. The test passed, and the correct message appeared for the case we had reproduced. I learned how useful a small, repeatable example can be.",
+            "uk": "У навчальному проєкті форма показувала неправильне повідомлення про помилку після невдалої перевірки даних. Я відповідав за пошук причини. Я відтворив проблему, з’ясував, що її спричинила неправильна умова, і додав регресійний тест перед виправленням. Тест пройшов, а для відтвореного сценарію почало з’являтися правильне повідомлення. Я зрозумів, наскільки корисним може бути невеликий приклад, який легко відтворити."
+          },
+          "items": [
+            {
+              "sourceId": "interview-experience-01",
+              "catalogId": "interview-english-experience-01",
+              "en": "The situation was [context], and my task was to [goal].",
+              "uk": "Ситуація була такою: [контекст], а моє завдання полягало в тому, щоб [досягти мети]."
+            },
+            {
+              "sourceId": "interview-experience-02",
+              "catalogId": "interview-english-experience-02",
+              "en": "I started by [action], then [next action].",
+              "uk": "Спочатку я [виконав дію], а потім [виконав наступну дію]."
+            },
+            {
+              "sourceId": "interview-experience-03",
+              "catalogId": "interview-english-experience-03",
+              "en": "As a result, [outcome]. What I learned was [lesson].",
+              "uk": "У результаті [підсумок]. Завдяки цьому я зрозумів [висновок]."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "kind": "shared",
+          "text": "Model answers are examples, not statements about your experience. Replace details with information that is true for you."
+        }
+      ]
+    }
+  ]
+}

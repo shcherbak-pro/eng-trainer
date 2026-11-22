@@ -4,8 +4,9 @@
 @import './styles/base.css';
 
 /* ---------------------------------------------------------------- start-up */
+.startup-shell { min-height: 100svh; display: flex; flex-direction: column; }
 .startup {
-  min-height: 100svh;
+  flex: 1;
   display: grid;
   place-items: center;
   padding: var(--space-5) var(--space-4);
@@ -60,6 +61,32 @@
 
 /* ---------------------------------------------------------------- shell */
 .app-shell { min-height: 100svh; }
+
+/* Shared header (ENG-V2-03): one compact brand bar in normal document flow. The brand link
+   keeps the 44 px target; enlarged text lets the bar grow instead of clipping. */
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--space-3);
+  padding: 1px var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+  background: var(--color-surface);
+}
+.app-header__brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target);
+  color: var(--color-text);
+  font: 600 1.125rem/1.2 var(--font-line);
+  text-decoration: none;
+}
+a.app-header__brand:hover { text-decoration: underline; }
+.app-header__tagline { color: var(--color-text-muted); font: var(--text-small); font-weight: 400; }
+/* The secondary copy only where it fits next to the brand. */
+@media (max-width: 359px) {
+  .app-header__tagline { display: none; }
+}
 
 .side-nav { display: none; }
 
@@ -190,36 +217,44 @@
     --obscured-bottom: calc(var(--tab-bar-reserved) + var(--space-4));
   }
   .page-wrap { padding-bottom: calc(var(--tab-bar-reserved) + var(--space-6)); }
+  .page-wrap--tabs { padding-top: 0; }
+  .section-nav { margin-bottom: var(--space-2); }
 }
 
 @media (min-width: 900px) {
   .app-shell { display: grid; grid-template-columns: var(--side-nav-width) minmax(0, 1fr); }
   .tab-bar, .sheet { display: none; }
-  .side-nav {
+  .app-chrome {
     position: sticky;
     top: 0;
     height: 100svh;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
-    padding: var(--space-5) var(--space-3) var(--space-4);
     overflow-y: auto;
     background: var(--color-surface);
     border-right: 1px solid var(--color-divider);
+  }
+  .app-chrome .app-header {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 0;
+    padding: var(--space-3) var(--space-5) var(--space-4);
+    border-bottom: 0;
+    background: none;
+  }
+  .app-chrome .app-header__brand { font-size: 1.25rem; }
+  .side-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: 0 var(--space-3) var(--space-4);
   }
   .page-wrap { padding: var(--space-5) var(--space-6) var(--space-7); }
   .section-nav { margin-left: 0; margin-right: 0; padding: 0; }
 }
 
-.brand {
-  display: grid;
-  gap: 2px;
-  padding: 0 var(--space-3) var(--space-4);
-  color: var(--color-text);
-  text-decoration: none;
-}
-.brand__title { font: 600 1.25rem/1.2 var(--font-line); }
-.brand__subtitle { color: var(--color-text-muted); font: var(--text-small); }
 .side-nav__list, .side-nav__list ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
 .side-nav__group { margin-top: var(--space-3); }
 .side-nav__group-label { display: block; padding: var(--space-1) var(--space-3); color: var(--color-text-muted); font: var(--text-caption); }
@@ -467,7 +502,11 @@ input::placeholder, textarea::placeholder { color: var(--color-text-muted); opac
 .toast :focus-visible { outline-color: var(--color-inverse-action); }
 
 /* ---------------------------------------------------------------- library toolbar and lists */
-.toolbar { display: grid; gap: var(--space-2); margin-bottom: var(--space-3); }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3); }
+.toolbar > .search-field { flex: 1 1 11rem; min-width: 0; }
+/* One filter shares the search row; two or more keep their own row, as before. */
+.toolbar > .filters { flex: 1 1 10rem; }
+.toolbar > .filters:has(> :nth-child(2)) { flex-basis: 100%; }
 .filters { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
 .filter-select { position: relative; flex: 1 1 140px; min-width: 0; max-width: 260px; }
 .filter-select select { min-height: var(--target); padding: 6px 30px 6px 10px; font: var(--text-small); font-weight: 600; }
@@ -602,6 +641,62 @@ input::placeholder, textarea::placeholder { color: var(--color-text-muted); opac
 .daily__term { font: 470 1.625rem/1.2 var(--font-line); font-variation-settings: 'opsz' 26; overflow-wrap: anywhere; }
 .daily__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
 
+/* Home statistics and topic entry cards (ENG-V2-03) */
+.home-overview { display: grid; gap: var(--space-3); margin-bottom: var(--space-5); }
+@media (min-width: 700px) {
+  .home-overview { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; }
+}
+.home-panel {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+.home-panel__head { display: grid; gap: 2px; }
+.home-panel__title { font: var(--text-title); }
+.home-panel__note { color: var(--color-text-muted); font: var(--text-small); font-weight: 400; }
+.home-meter { display: grid; gap: var(--space-2); }
+.home-meter__row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px var(--space-3); }
+.home-meter__label { color: var(--color-text-secondary); font-weight: 600; }
+.home-meter__value { font-variant-numeric: tabular-nums; }
+.home-meter__value strong { font-size: 1.25rem; font-weight: 650; }
+.home-meter__percent { color: var(--color-text-secondary); font: var(--text-small); }
+.home-meter__bar { height: 8px; border-radius: 4px; background: var(--color-divider); overflow: hidden; }
+.home-meter__bar span { display: block; width: 100%; height: 100%; background: var(--color-known); transform-origin: left center; transition: transform var(--dur-base) var(--ease-standard); }
+.home-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2) var(--space-3); margin: 0; }
+.home-stats--library { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.home-stat { display: grid; align-content: start; min-width: 0; }
+.home-stat dt { color: var(--color-text-muted); font: var(--text-small); font-weight: 500; }
+.home-stat dd { margin: 0; font: 650 1.125rem/1.3 var(--font-ui); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.home-details > summary { display: flex; align-items: center; min-height: var(--target); color: var(--color-text-secondary); font-weight: 650; cursor: pointer; }
+.home-details[open] > summary { color: var(--color-text); }
+.home-details__body { display: grid; gap: var(--space-2); padding-bottom: var(--space-1); }
+.home-topics { display: grid; gap: var(--space-3); margin-bottom: var(--space-4); }
+.home-section-title { font: var(--text-title); }
+.topic-cards { display: grid; gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+@media (min-width: 700px) {
+  .topic-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.topic-card {
+  display: grid;
+  align-content: start;
+  gap: var(--space-1);
+  height: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.topic-card:hover { border-color: var(--color-border-control); }
+.topic-card:hover .topic-card__title { text-decoration: underline; }
+.topic-card__title { font: 600 1.1875rem/1.25 var(--font-line); }
+.topic-card__description { color: var(--color-text-secondary); font: var(--text-small); font-weight: 400; }
+.topic-card__meta { margin-top: var(--space-1); color: var(--color-text-muted); font: var(--text-caption); font-variant-numeric: tabular-nums; }
+
 /* Learn Pass manager (existing structure, restyled) */
 .learn-pass-panel { display: grid; gap: var(--space-4); }
 .learn-pass-panel__main { display: grid; gap: var(--space-3); }
@@ -640,6 +735,78 @@ input::placeholder, textarea::placeholder { color: var(--color-text-muted); opac
 .practice-answer__english { font: 470 1.25rem/1.35 var(--font-line); }
 .drill-list { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-2); }
 .drill-list li { padding: var(--space-3) 0; border-bottom: 1px solid var(--color-divider); }
+
+/* ---------------------------------------------------------------- learning topics (ENG-V2-03) */
+.topic-page { display: grid; gap: var(--space-4); }
+.topic-intro { display: grid; gap: var(--space-2); }
+.topic-intro__description { color: var(--color-text-secondary); max-width: 68ch; }
+.topic-intro__note {
+  max-width: 68ch;
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--color-highlight);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--color-surface-sunk);
+  font: var(--text-small);
+}
+.topic-intro__hint { color: var(--color-text-muted); font: var(--text-small); }
+.topic-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.topic-toolbar { display: grid; gap: var(--space-2); }
+/* One scrolling row of chips on small screens (like the section tabs); wrapped rows on wider ones. */
+.chip-row {
+  --chip-focus-clearance: 4px;
+  display: flex;
+  gap: var(--space-2);
+  margin: 0 calc(var(--space-4) * -1);
+  /* The shared focus ring extends 4px beyond each button (2px outline + 2px offset). */
+  padding: var(--chip-focus-clearance) var(--space-4);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.chip-row > .chip-toggle {
+  flex: 0 0 auto;
+  max-width: 100%;
+  padding-block: var(--space-2);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  scroll-margin: var(--chip-focus-clearance);
+}
+.chip-row::-webkit-scrollbar { display: none; }
+@media (min-width: 700px) {
+  .chip-row { flex-wrap: wrap; margin: 0; padding: 0; overflow: visible; }
+}
+.topic-group { margin-top: var(--space-2); font: var(--text-title); font-size: 1.375rem; }
+.topic-section { display: grid; gap: var(--space-3); }
+.topic-section .entry-list { margin-bottom: 0; }
+.topic-section__title { font: var(--text-title); }
+.topic-section__subheading { margin-top: var(--space-1); color: var(--color-text-secondary); font: var(--text-small); font-weight: 650; }
+.topic-section__note { color: var(--color-text-secondary); font: var(--text-small); }
+.topic-section__empty { font: var(--text-small); }
+.reading-card__formula-label { color: var(--color-text-secondary); font-weight: 650; }
+.reading-card__label {
+  justify-self: start;
+  padding: 1px 8px;
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font: var(--text-caption);
+}
+.reading-card__question { color: var(--color-text-secondary); font: var(--text-small); }
+.reading-card__question span { color: var(--color-text); }
+.topic-structure { justify-self: start; }
+.topic-questions { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--color-divider); }
+.topic-question {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+.topic-question__text { display: grid; gap: 2px; min-width: 0; }
+.topic-question__english { font: var(--line-list); overflow-wrap: anywhere; }
+.topic-usage { display: grid; gap: var(--space-2); padding: var(--space-4); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); background: var(--color-surface); }
+.topic-usage h2 { font: var(--text-title); font-size: 1.0625rem; }
+.topic-usage p { color: var(--color-text-secondary); }
 
 /* ---------------------------------------------------------------- flashcards */
 .flashcards-page { display: grid; gap: var(--space-3); }
@@ -724,6 +891,14 @@ input::placeholder, textarea::placeholder { color: var(--color-text-muted); opac
 @media (max-width: 599px) {
   .flashcard-actions .btn { padding: 0 var(--space-2); font-size: 0.9375rem; }
   .flashcards-review__list li { grid-template-columns: 1fr; }
+}
+
+/* Small screens: the controls above a list or deck use the compact 8 px rhythm (ENG-V2-03),
+   which keeps the first study content near the top under the shared header. */
+@media (max-width: 899px) {
+  .toolbar { margin-bottom: var(--space-2); }
+  .list-header { margin-bottom: var(--space-1); }
+  .flashcards-page, .flashcards-toolbar { gap: var(--space-2); }
 }
 
 /* ---------------------------------------------------------------- collections */

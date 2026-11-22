@@ -39,7 +39,7 @@ describe('collection persistence and catalog', () => {
     const original = get(userVocabulary);
     storage.close(); await connect();
     expect(get(userVocabulary)).toEqual(original);
-    expect(combineCatalog(builtIn, get(userVocabulary)).phrases.slice(0, 566)).toEqual(builtIn.phrases);
+    expect(combineCatalog(builtIn, get(userVocabulary)).phrases.slice(0, builtIn.phrases.length)).toEqual(builtIn.phrases);
   });
   it('round-trips native export and treats repeated import as an exact no-op', async () => {
     await acceptImport(plan());

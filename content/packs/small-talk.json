@@ -1,0 +1,385 @@
+{
+  "schemaVersion": 1,
+  "id": "small-talk",
+  "title": "Small Talk",
+  "order": 130,
+  "content": {
+    "phrases": [
+      {
+        "id": "small-talk-meet-01",
+        "category": "Small Talk",
+        "phrase": "Hi, I'm [name]. It's nice to meet you.",
+        "translation": "Привіт, я [ім’я]. Приємно познайомитися.",
+        "section": "Meeting new people",
+        "tag": "meeting-new-people"
+      },
+      {
+        "id": "small-talk-meet-02",
+        "category": "Small Talk",
+        "phrase": "What do you do?",
+        "translation": "Чим ви займаєтеся?",
+        "section": "Meeting new people",
+        "tag": "meeting-new-people"
+      },
+      {
+        "id": "small-talk-meet-03",
+        "category": "Small Talk",
+        "phrase": "How do you know the people here?",
+        "translation": "Звідки ви знаєте присутніх?",
+        "section": "Meeting new people",
+        "tag": "meeting-new-people"
+      },
+      {
+        "id": "small-talk-meet-04",
+        "category": "Small Talk",
+        "phrase": "Have we met before?",
+        "translation": "Ми раніше зустрічалися?",
+        "section": "Meeting new people",
+        "tag": "meeting-new-people"
+      },
+      {
+        "id": "small-talk-meet-05",
+        "category": "Small Talk",
+        "phrase": "What brought you here today?",
+        "translation": "Що привело вас сюди сьогодні?",
+        "section": "Meeting new people",
+        "tag": "meeting-new-people"
+      },
+      {
+        "id": "small-talk-meet-06",
+        "category": "Small Talk",
+        "phrase": "It's great to finally meet you in person.",
+        "translation": "Дуже приємно нарешті познайомитися з вами особисто.",
+        "section": "Meeting new people",
+        "tag": "meeting-new-people"
+      },
+      {
+        "id": "small-talk-meeting-01",
+        "category": "Small Talk",
+        "phrase": "How's your day going so far?",
+        "translation": "Як минає ваш день?",
+        "section": "Before a work meeting",
+        "tag": "before-a-meeting"
+      },
+      {
+        "id": "small-talk-meeting-02",
+        "category": "Small Talk",
+        "phrase": "How has your week been?",
+        "translation": "Як минає ваш тиждень?",
+        "section": "Before a work meeting",
+        "tag": "before-a-meeting"
+      },
+      {
+        "id": "small-talk-meeting-03",
+        "category": "Small Talk",
+        "phrase": "Have you had a busy morning?",
+        "translation": "У вас був насичений ранок?",
+        "section": "Before a work meeting",
+        "tag": "before-a-meeting"
+      },
+      {
+        "id": "small-talk-meeting-04",
+        "category": "Small Talk",
+        "phrase": "How are things going with your project?",
+        "translation": "Як просувається ваш проєкт?",
+        "section": "Before a work meeting",
+        "tag": "before-a-meeting"
+      },
+      {
+        "id": "small-talk-meeting-05",
+        "category": "Small Talk",
+        "phrase": "Do you have any plans for the weekend?",
+        "translation": "Маєте якісь плани на вихідні?",
+        "section": "Before a work meeting",
+        "tag": "before-a-meeting"
+      },
+      {
+        "id": "small-talk-meeting-06",
+        "category": "Small Talk",
+        "phrase": "Shall we get started?",
+        "translation": "Почнемо?",
+        "section": "Before a work meeting",
+        "tag": "before-a-meeting"
+      },
+      {
+        "id": "small-talk-coffee-01",
+        "category": "Small Talk",
+        "phrase": "Would you like to grab a coffee?",
+        "translation": "Хочете випити кави?",
+        "section": "Coffee and lunch breaks",
+        "tag": "coffee-and-lunch"
+      },
+      {
+        "id": "small-talk-coffee-02",
+        "category": "Small Talk",
+        "phrase": "Is this seat taken?",
+        "translation": "Це місце зайняте?",
+        "section": "Coffee and lunch breaks",
+        "tag": "coffee-and-lunch"
+      },
+      {
+        "id": "small-talk-coffee-03",
+        "category": "Small Talk",
+        "phrase": "Do you have a favorite place for lunch around here?",
+        "translation": "Маєте тут поблизу улюблене місце для обіду?",
+        "section": "Coffee and lunch breaks",
+        "tag": "coffee-and-lunch"
+      },
+      {
+        "id": "small-talk-coffee-04",
+        "category": "Small Talk",
+        "phrase": "That looks good. What did you order?",
+        "translation": "Виглядає смачно. Що ви замовили?",
+        "section": "Coffee and lunch breaks",
+        "tag": "coffee-and-lunch"
+      },
+      {
+        "id": "small-talk-coffee-05",
+        "category": "Small Talk",
+        "phrase": "I haven't tried that before. Would you recommend it?",
+        "translation": "Я цього ще не пробував. Порадите спробувати?",
+        "section": "Coffee and lunch breaks",
+        "tag": "coffee-and-lunch"
+      },
+      {
+        "id": "small-talk-coffee-06",
+        "category": "Small Talk",
+        "phrase": "It was nice chatting with you. I'd better get back to work.",
+        "translation": "Було приємно поспілкуватися. Мені вже час повертатися до роботи.",
+        "section": "Coffee and lunch breaks",
+        "tag": "coffee-and-lunch"
+      },
+      {
+        "id": "small-talk-weekend-01",
+        "category": "Small Talk",
+        "phrase": "What do you like to do in your free time?",
+        "translation": "Що ви любите робити у вільний час?",
+        "section": "Free time and weekends",
+        "tag": "free-time-and-weekends"
+      },
+      {
+        "id": "small-talk-weekend-02",
+        "category": "Small Talk",
+        "phrase": "Have you watched anything good lately?",
+        "translation": "Дивилися щось цікаве останнім часом?",
+        "section": "Free time and weekends",
+        "tag": "free-time-and-weekends"
+      },
+      {
+        "id": "small-talk-weekend-03",
+        "category": "Small Talk",
+        "phrase": "Have you read any good books recently?",
+        "translation": "Читали останнім часом якісь цікаві книжки?",
+        "section": "Free time and weekends",
+        "tag": "free-time-and-weekends"
+      },
+      {
+        "id": "small-talk-weekend-04",
+        "category": "Small Talk",
+        "phrase": "How did your weekend go?",
+        "translation": "Як минули ваші вихідні?",
+        "section": "Free time and weekends",
+        "tag": "free-time-and-weekends"
+      },
+      {
+        "id": "small-talk-weekend-05",
+        "category": "Small Talk",
+        "phrase": "I'm thinking of going for a walk later. Would you like to join me?",
+        "translation": "Думаю пізніше піти на прогулянку. Хочете приєднатися?",
+        "section": "Free time and weekends",
+        "tag": "free-time-and-weekends"
+      },
+      {
+        "id": "small-talk-weekend-06",
+        "category": "Small Talk",
+        "phrase": "That sounds interesting. How did you get into it?",
+        "translation": "Звучить цікаво. Як ви цим захопилися?",
+        "section": "Free time and weekends",
+        "tag": "free-time-and-weekends"
+      },
+      {
+        "id": "small-talk-event-01",
+        "category": "Small Talk",
+        "phrase": "Is this your first time at this event?",
+        "translation": "Ви вперше на цьому заході?",
+        "section": "Conferences and events",
+        "tag": "conferences-and-events"
+      },
+      {
+        "id": "small-talk-event-02",
+        "category": "Small Talk",
+        "phrase": "Which session are you looking forward to?",
+        "translation": "На який виступ ви найбільше чекаєте?",
+        "section": "Conferences and events",
+        "tag": "conferences-and-events"
+      },
+      {
+        "id": "small-talk-event-03",
+        "category": "Small Talk",
+        "phrase": "What did you think of the last talk?",
+        "translation": "Що ви думаєте про попередній виступ?",
+        "section": "Conferences and events",
+        "tag": "conferences-and-events"
+      },
+      {
+        "id": "small-talk-event-04",
+        "category": "Small Talk",
+        "phrase": "Was there anything in the talk that you could use in your work?",
+        "translation": "Чи було у виступі щось, що ви могли б застосувати у своїй роботі?",
+        "section": "Conferences and events",
+        "tag": "conferences-and-events"
+      },
+      {
+        "id": "small-talk-event-05",
+        "category": "Small Talk",
+        "phrase": "Would you like to exchange contact details?",
+        "translation": "Хочете обмінятися контактами?",
+        "section": "Conferences and events",
+        "tag": "conferences-and-events"
+      },
+      {
+        "id": "small-talk-event-06",
+        "category": "Small Talk",
+        "phrase": "It was great talking to you. Enjoy the rest of the event.",
+        "translation": "Було дуже приємно поспілкуватися. Бажаю гарно провести решту заходу.",
+        "section": "Conferences and events",
+        "tag": "conferences-and-events"
+      },
+      {
+        "id": "small-talk-travel-01",
+        "category": "Small Talk",
+        "phrase": "Are you traveling for work or for a vacation?",
+        "translation": "Ви подорожуєте у справах чи на відпочинок?",
+        "section": "Traveling",
+        "tag": "traveling"
+      },
+      {
+        "id": "small-talk-travel-02",
+        "category": "Small Talk",
+        "phrase": "Have you been here before?",
+        "translation": "Ви тут уже бували?",
+        "section": "Traveling",
+        "tag": "traveling"
+      },
+      {
+        "id": "small-talk-travel-03",
+        "category": "Small Talk",
+        "phrase": "How was your journey?",
+        "translation": "Як минула ваша подорож?",
+        "section": "Traveling",
+        "tag": "traveling"
+      },
+      {
+        "id": "small-talk-travel-04",
+        "category": "Small Talk",
+        "phrase": "How long are you staying?",
+        "translation": "На скільки часу ви приїхали?",
+        "section": "Traveling",
+        "tag": "traveling"
+      },
+      {
+        "id": "small-talk-travel-05",
+        "category": "Small Talk",
+        "phrase": "Have you had a chance to explore the city?",
+        "translation": "Уже мали нагоду прогулятися містом?",
+        "section": "Traveling",
+        "tag": "traveling"
+      },
+      {
+        "id": "small-talk-travel-06",
+        "category": "Small Talk",
+        "phrase": "I hope you enjoy the rest of your trip.",
+        "translation": "Сподіваюся, решта вашої подорожі буде приємною.",
+        "section": "Traveling",
+        "tag": "traveling"
+      }
+    ],
+    "topics": [
+      {
+        "id": "small-talk",
+        "title": "Small Talk",
+        "blockId": "topic-small-talk",
+        "description": "Start a conversation, keep it going and finish politely. Choose a situation and practice a few phrases.",
+        "filter": {
+          "label": "Situations",
+          "all": "All situations"
+        },
+        "sections": [
+          {
+            "id": "meeting-new-people",
+            "title": "Meeting new people",
+            "items": [
+              "small-talk-meet-01",
+              "small-talk-meet-02",
+              "small-talk-meet-03",
+              "small-talk-meet-04",
+              "small-talk-meet-05",
+              "small-talk-meet-06"
+            ]
+          },
+          {
+            "id": "before-a-meeting",
+            "title": "Before a work meeting",
+            "note": "Use “Shall we get started?” to move from small talk into the meeting.",
+            "items": [
+              "small-talk-meeting-01",
+              "small-talk-meeting-02",
+              "small-talk-meeting-03",
+              "small-talk-meeting-04",
+              "small-talk-meeting-05",
+              "small-talk-meeting-06"
+            ]
+          },
+          {
+            "id": "coffee-and-lunch",
+            "title": "Coffee and lunch breaks",
+            "items": [
+              "small-talk-coffee-01",
+              "small-talk-coffee-02",
+              "small-talk-coffee-03",
+              "small-talk-coffee-04",
+              "small-talk-coffee-05",
+              "small-talk-coffee-06"
+            ]
+          },
+          {
+            "id": "free-time-and-weekends",
+            "title": "Free time and weekends",
+            "items": [
+              "small-talk-weekend-01",
+              "small-talk-weekend-02",
+              "small-talk-weekend-03",
+              "small-talk-weekend-04",
+              "small-talk-weekend-05",
+              "small-talk-weekend-06"
+            ]
+          },
+          {
+            "id": "conferences-and-events",
+            "title": "Conferences and events",
+            "items": [
+              "small-talk-event-01",
+              "small-talk-event-02",
+              "small-talk-event-03",
+              "small-talk-event-04",
+              "small-talk-event-05",
+              "small-talk-event-06"
+            ]
+          },
+          {
+            "id": "traveling",
+            "title": "Traveling",
+            "items": [
+              "small-talk-travel-01",
+              "small-talk-travel-02",
+              "small-talk-travel-03",
+              "small-talk-travel-04",
+              "small-talk-travel-05",
+              "small-talk-travel-06"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

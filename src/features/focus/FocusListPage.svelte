@@ -44,7 +44,7 @@
       <ul class="block-list">
         {#each favoriteBlocks as block (block.id)}
           <li class="block-row">
-            <a class="block-row__open" href={`#${pageForBlock(block)}`} on:click|preventDefault={() => onOpenBlock(block)}>
+            <a class="block-row__open" href={`#${pageForBlock(block, catalog.topics)}`} on:click|preventDefault={() => onOpenBlock(block)}>
               <span class="block-row__title">{block.title}</span>
               {#if block.description}<span class="block-row__meta" lang={blockDescriptionLang(block.id)}>{block.description}</span>{/if}
             </a>

@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "id": "interview-english",
+  "title": "Interview English",
+  "order": 140,
+  "content": {
+    "phrases": [
+      {
+        "id": "interview-english-compare-01",
+        "category": "Interview English",
+        "phrase": "Both [A] and [B] help with [goal], but they solve different problems.",
+        "translation": "І [A], і [B] допомагають досягти [мети], але розв’язують різні завдання.",
+        "section": "Comparing concepts",
+        "tag": "comparing-concepts"
+      },
+      {
+        "id": "interview-english-compare-02",
+        "category": "Interview English",
+        "phrase": "The main difference is that [A] ..., whereas [B] ...",
+        "translation": "Головна відмінність полягає в тому, що [A] ..., тоді як [B] ...",
+        "section": "Comparing concepts",
+        "tag": "comparing-concepts"
+      },
+      {
+        "id": "interview-english-compare-03",
+        "category": "Interview English",
+        "phrase": "For example, [concrete example].",
+        "translation": "Наприклад, [конкретний приклад].",
+        "section": "Comparing concepts",
+        "tag": "comparing-concepts"
+      },
+      {
+        "id": "interview-english-explain-01",
+        "category": "Interview English",
+        "phrase": "In simple terms, [main idea].",
+        "translation": "Простими словами, [основна думка].",
+        "section": "Explaining how something works",
+        "tag": "explaining-how-it-works"
+      },
+      {
+        "id": "interview-english-explain-02",
+        "category": "Interview English",
+        "phrase": "The basic idea is to [action] so that [benefit].",
+        "translation": "Основна ідея полягає в тому, щоб [виконати дію] й завдяки цьому [отримати користь].",
+        "section": "Explaining how something works",
+        "tag": "explaining-how-it-works"
+      },
+      {
+        "id": "interview-english-explain-03",
+        "category": "Interview English",
+        "phrase": "One thing to keep in mind is [limitation].",
+        "translation": "Варто врахувати [обмеження].",
+        "section": "Explaining how something works",
+        "tag": "explaining-how-it-works"
+      },
+      {
+        "id": "interview-english-define-01",
+        "category": "Interview English",
+        "phrase": "[Concept] is a [category] that [purpose].",
+        "translation": "[Поняття] — це [категорія], що [виконує певну функцію].",
+        "section": "Defining a concept",
+        "tag": "defining-a-concept"
+      },
+      {
+        "id": "interview-english-define-02",
+        "category": "Interview English",
+        "phrase": "We use it to [goal].",
+        "translation": "Ми використовуємо це, щоб [досягти мети].",
+        "section": "Defining a concept",
+        "tag": "defining-a-concept"
+      },
+      {
+        "id": "interview-english-define-03",
+        "category": "Interview English",
+        "phrase": "A simple example would be [example].",
+        "translation": "Простим прикладом може бути [приклад].",
+        "section": "Defining a concept",
+        "tag": "defining-a-concept"
+      },
+      {
+        "id": "interview-english-process-01",
+        "category": "Interview English",
+        "phrase": "First, [first step].",
+        "translation": "Спочатку [перший крок].",
+        "section": "Describing a process",
+        "tag": "describing-a-process"
+      },
+      {
+        "id": "interview-english-process-02",
+        "category": "Interview English",
+        "phrase": "Once [condition] is met, [next step].",
+        "translation": "Щойно [умову] виконано, [наступний крок].",
+        "section": "Describing a process",
+        "tag": "describing-a-process"
+      },
+      {
+        "id": "interview-english-process-03",
+        "category": "Interview English",
+        "phrase": "If something goes wrong, [recovery action].",
+        "translation": "Якщо щось іде не так, [дія для відновлення].",
+        "section": "Describing a process",
+        "tag": "describing-a-process"
+      },
+      {
+        "id": "interview-english-options-01",
+        "category": "Interview English",
+        "phrase": "We have two main options: [A] and [B].",
+        "translation": "У нас є два основні варіанти: [A] і [B].",
+        "section": "Discussing options and trade-offs",
+        "tag": "discussing-options"
+      },
+      {
+        "id": "interview-english-options-02",
+        "category": "Interview English",
+        "phrase": "The advantage of [A] is [benefit], but the trade-off is [cost or limitation].",
+        "translation": "Перевага [A] — це [користь], але за це доводиться платити [витратами або обмеженнями].",
+        "section": "Discussing options and trade-offs",
+        "tag": "discussing-options"
+      },
+      {
+        "id": "interview-english-options-03",
+        "category": "Interview English",
+        "phrase": "Given [constraint], I'd choose [option] because [reason].",
+        "translation": "З огляду на [обмеження], я обрав би [варіант], тому що [причина].",
+        "section": "Discussing options and trade-offs",
+        "tag": "discussing-options"
+      },
+      {
+        "id": "interview-english-experience-01",
+        "category": "Interview English",
+        "phrase": "The situation was [context], and my task was to [goal].",
+        "translation": "Ситуація була такою: [контекст], а моє завдання полягало в тому, щоб [досягти мети].",
+        "section": "Describing experience and solving problems",
+        "tag": "describing-experience"
+      },
+      {
+        "id": "interview-english-experience-02",
+        "category": "Interview English",
+        "phrase": "I started by [action], then [next action].",
+        "translation": "Спочатку я [виконав дію], а потім [виконав наступну дію].",
+        "section": "Describing experience and solving problems",
+        "tag": "describing-experience"
+      },
+      {
+        "id": "interview-english-experience-03",
+        "category": "Interview English",
+        "phrase": "As a result, [outcome]. What I learned was [lesson].",
+        "translation": "У результаті [підсумок]. Завдяки цьому я зрозумів [висновок].",
+        "section": "Describing experience and solving problems",
+        "tag": "describing-experience"
+      }
+    ],
+    "answers": [
+      {
+        "id": "interview-english-answer-compare",
+        "topic": "Interview English",
+        "question": "What's the difference between authentication and authorization?",
+        "answer": "Authentication checks who a user is. Authorization determines what that user is allowed to do. For example, signing in establishes an identity, while an authorization rule decides whether that user can edit a document.",
+        "translation": "Автентифікація перевіряє особу користувача. Авторизація визначає, що цьому користувачеві дозволено робити. Наприклад, під час входу в систему встановлюється особа користувача, а правило авторизації визначає, чи може він редагувати документ.",
+        "tag": "Comparing concepts"
+      },
+      {
+        "id": "interview-english-answer-explain",
+        "topic": "Interview English",
+        "question": "How does caching work?",
+        "answer": "One common approach is to keep a copy of frequently used data in a cache. When the application needs that data again, it checks the cache before going to the original source. Cached data may become outdated, so we need a way to refresh or expire it.",
+        "translation": "Один із поширених підходів — зберігати в кеші копію даних, які часто використовуються. Коли ці дані знову потрібні застосунку, він перевіряє кеш, перш ніж звертатися до початкового джерела. Дані в кеші можуть застарівати, тому потрібен спосіб їх оновлювати або задавати термін їхньої дії.",
+        "tag": "Explaining how something works"
+      },
+      {
+        "id": "interview-english-answer-define",
+        "topic": "Interview English",
+        "question": "What is an API?",
+        "answer": "An API is an interface that lets one piece of software interact with another. It defines what operations are available and how to request them. For example, a weather service can expose an API that an app uses to request a forecast.",
+        "translation": "API — це інтерфейс, який дозволяє одному програмному компоненту взаємодіяти з іншим. Він визначає доступні операції та спосіб звернення до них. Наприклад, погодний сервіс може надавати API, через який застосунок запитує прогноз погоди.",
+        "tag": "Defining a concept"
+      },
+      {
+        "id": "interview-english-answer-process",
+        "topic": "Interview English",
+        "question": "Walk me through what happens when a user submits a form.",
+        "answer": "One possible flow starts with the browser checking the user's input. Next, it sends a request to the server, which validates the data and saves it. Finally, the app displays the result. If a step fails, it shows an error and gives the user a way to try again.",
+        "translation": "Один із можливих процесів починається з того, що браузер перевіряє введені користувачем дані. Потім він надсилає запит на сервер, який перевіряє дані й зберігає їх. Насамкінець застосунок показує результат. Якщо на якомусь етапі стається збій, він показує помилку й дає користувачеві можливість повторити спробу.",
+        "label": "Hypothetical server-backed application",
+        "tag": "Describing a process"
+      },
+      {
+        "id": "interview-english-answer-options",
+        "topic": "Interview English",
+        "question": "Would you build this feature in-house or use an existing library?",
+        "answer": "An existing library could reduce development time, but we'd need to check its maintenance and whether it meets our requirements. Building our own would give us more control, but we'd also have to maintain it. I'd start by checking whether a small, well-maintained library covers the core requirements.",
+        "translation": "Готова бібліотека могла б скоротити час розробки, але потрібно перевірити, чи її підтримують і чи вона відповідає нашим вимогам. Власне рішення дало б нам більше контролю, але його також довелося б підтримувати. Я почав би з перевірки, чи покриває невелика бібліотека з активною підтримкою основні вимоги.",
+        "tag": "Discussing options and trade-offs"
+      },
+      {
+        "id": "interview-english-answer-experience",
+        "topic": "Interview English",
+        "question": "Tell me about a time you solved a difficult problem.",
+        "answer": "In a practice project, a form showed the wrong error message after validation failed. I was responsible for finding the cause. I reproduced the problem, traced it to an incorrect condition, and added a regression test before fixing it. The test passed, and the correct message appeared for the case we had reproduced. I learned how useful a small, repeatable example can be.",
+        "translation": "У навчальному проєкті форма показувала неправильне повідомлення про помилку після невдалої перевірки даних. Я відповідав за пошук причини. Я відтворив проблему, з’ясував, що її спричинила неправильна умова, і додав регресійний тест перед виправленням. Тест пройшов, а для відтвореного сценарію почало з’являтися правильне повідомлення. Я зрозумів, наскільки корисним може бути невеликий приклад, який легко відтворити.",
+        "label": "Fictional practice example",
+        "tag": "Describing experience and solving problems"
+      }
+    ],
+    "topics": [
+      {
+        "id": "interview-english",
+        "title": "Interview English",
+        "blockId": "topic-interview-english",
+        "description": "Build clear answers in English. Choose a question type, use the answer frames and adapt the example to your own experience.",
+        "note": "Model answers are examples, not statements about your experience. Replace details with information that is true for you.",
+        "sections": [
+          {
+            "id": "comparing-concepts",
+            "title": "Comparing concepts",
+            "questions": [
+              {
+                "en": "What's the difference between authentication and authorization?",
+                "ua": "У чому різниця між автентифікацією та авторизацією?"
+              },
+              {
+                "en": "How do unit tests differ from integration tests?",
+                "ua": "Чим модульні тести відрізняються від інтеграційних?"
+              }
+            ],
+            "structure": "Shared context → main difference → practical example.",
+            "items": [
+              "interview-english-compare-01",
+              "interview-english-compare-02",
+              "interview-english-compare-03"
+            ],
+            "answerId": "interview-english-answer-compare"
+          },
+          {
+            "id": "explaining-how-it-works",
+            "title": "Explaining how something works",
+            "questions": [
+              {
+                "en": "How does caching work?",
+                "ua": "Як працює кешування?"
+              },
+              {
+                "en": "How can an application handle a temporary failure?",
+                "ua": "Як застосунок може обробити тимчасовий збій?"
+              }
+            ],
+            "structure": "Main idea → mechanism → limitation.",
+            "items": [
+              "interview-english-explain-01",
+              "interview-english-explain-02",
+              "interview-english-explain-03"
+            ],
+            "answerId": "interview-english-answer-explain"
+          },
+          {
+            "id": "defining-a-concept",
+            "title": "Defining a concept",
+            "questions": [
+              {
+                "en": "What is an API?",
+                "ua": "Що таке API?"
+              },
+              {
+                "en": "What is dependency injection?",
+                "ua": "Що таке впровадження залежностей?"
+              }
+            ],
+            "structure": "Category → purpose → example.",
+            "items": [
+              "interview-english-define-01",
+              "interview-english-define-02",
+              "interview-english-define-03"
+            ],
+            "answerId": "interview-english-answer-define"
+          },
+          {
+            "id": "describing-a-process",
+            "title": "Describing a process",
+            "questions": [
+              {
+                "en": "Walk me through what happens when a user submits a form.",
+                "ua": "Опишіть крок за кроком, що відбувається, коли користувач надсилає форму."
+              },
+              {
+                "en": "How would you investigate a reported bug?",
+                "ua": "Як би ви досліджували помилку, про яку повідомив користувач?"
+              }
+            ],
+            "structure": "Starting point → steps → result → failure handling.",
+            "items": [
+              "interview-english-process-01",
+              "interview-english-process-02",
+              "interview-english-process-03"
+            ],
+            "answerId": "interview-english-answer-process"
+          },
+          {
+            "id": "discussing-options",
+            "title": "Discussing options and trade-offs",
+            "questions": [
+              {
+                "en": "Would you build this feature in-house or use an existing library?",
+                "ua": "Ви розробили б цю функцію власними силами чи використали б готову бібліотеку?"
+              },
+              {
+                "en": "How would you choose between two possible solutions?",
+                "ua": "Як би ви обирали між двома можливими рішеннями?"
+              }
+            ],
+            "structure": "Options → benefits and costs → constraint → recommendation.",
+            "items": [
+              "interview-english-options-01",
+              "interview-english-options-02",
+              "interview-english-options-03"
+            ],
+            "answerId": "interview-english-answer-options"
+          },
+          {
+            "id": "describing-experience",
+            "title": "Describing experience and solving problems",
+            "questions": [
+              {
+                "en": "Tell me about a time you solved a difficult problem.",
+                "ua": "Розкажіть про випадок, коли ви розв’язали складну проблему."
+              },
+              {
+                "en": "Tell me about a time you had to learn something unfamiliar.",
+                "ua": "Розкажіть про випадок, коли вам довелося опанувати щось незнайоме."
+              }
+            ],
+            "structure": "Situation → Task → Action → Result. Add a short lesson when it helps explain the outcome.",
+            "items": [
+              "interview-english-experience-01",
+              "interview-english-experience-02",
+              "interview-english-experience-03"
+            ],
+            "answerId": "interview-english-answer-experience"
+          }
+        ]
+      }
+    ]
+  }
+}

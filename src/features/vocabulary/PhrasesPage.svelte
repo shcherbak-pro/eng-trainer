@@ -17,6 +17,8 @@
   import { paginate, totalPages, type PageSizeOption } from '../../shared/pagination';
 
   export let catalog: ContentCatalog;
+  /** Learning topic screens of the active Learn Pass, by topic title (ENG-V2-03). */
+  export let topicLinks: { title: string; page: string }[] = [];
 
   const pageSizeOptions: PageSizeOption[] = [5, 10, 20, 'all'];
   const number = new Intl.NumberFormat('en');
@@ -62,6 +64,7 @@
   }
 
   $: categories = ['All', ...catalog.phraseCategories];
+  $: topicLink = topicLinks.find((link) => link.title === $settings.phraseCategory) ?? null;
   $: availableHiddenIds = catalog.phrases.filter((item) => $progress.hiddenPhrases.includes(item.id)).map((item) => item.id);
   $: collectionFilter = resolvedCollection(catalog, $settings.collectionFilter);
   $: visible = catalog.searchPhrases($viewState.phraseQuery).filter((item) => {
@@ -107,6 +110,10 @@
   <p class="list-header__count" role="status">{number.format(visible.length)} {visible.length === 1 ? 'phrase' : 'phrases'}</p>
   <SectionSpeechControl controlId="phrases-visible" label="Listen to this page" items={speechItems} help="Reads the phrases on this page with their translations, alternatives and examples." />
 </div>
+
+{#if topicLink}
+  <p class="list-note"><a href={`#${topicLink.page}`}>Open the {topicLink.title} topic</a> for its rules, notes and examples.</p>
+{/if}
 
 {#if availableHiddenIds.length}
   <div class="list-note">

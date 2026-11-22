@@ -17,7 +17,11 @@ describe('language of built-in block descriptions (RC1, F5)', () => {
       if (lang === 'en') expect(block.description, block.id).not.toMatch(CYRILLIC);
       else expect(block.description, block.id).toMatch(CYRILLIC);
     }
-    expect(realMaterials.blocks.filter((block) => blockDescriptionLang(block.id) === 'en')).toHaveLength(23);
+    const added = ['topic-conditionals', 'topic-small-talk', 'topic-interview-english'];
+    const released = realMaterials.blocks.filter((block) => !added.includes(block.id));
+    expect(released).toHaveLength(39);
+    expect(released.filter((block) => blockDescriptionLang(block.id) === 'en')).toHaveLength(23);
+    expect(added.map(blockDescriptionLang)).toEqual(['en', 'en', 'en']);
     expect(blockDescriptionLang('irregular-verbs-100')).toBe('en');
     expect(blockDescriptionLang('start-answer')).toBe('uk');
   });

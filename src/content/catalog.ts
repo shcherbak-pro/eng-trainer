@@ -2,6 +2,7 @@ import { uniqueSorted } from '../shared/text';
 import { createSearch } from './search';
 import type {
   IrregularVerb,
+  LearningTopic,
   Materials,
   MaterialsMeta,
   Pattern,
@@ -39,6 +40,8 @@ export interface ContentCatalog {
   readonly patterns: Pattern[];
   readonly answers: ReadyAnswer[];
   readonly drills: string[];
+  /** Learning topics (ENG-V2-03), in pack order. Empty when the content has none. */
+  readonly topics: LearningTopic[];
   readonly phraseCategories: string[];
   readonly wordCategories: string[];
   /** Irregular-verb sets that have at least one verb, in dataset order. */
@@ -82,7 +85,8 @@ export function createCatalog(source: Materials): ContentCatalog {
     answers: list(source.answers),
     drills: list(source.drills),
     wordIndex: list(source.wordIndex),
-    irregularVerbs: list(source.irregularVerbs)
+    irregularVerbs: list(source.irregularVerbs),
+    topics: list(source.topics)
   };
 
   const blocks = data.blocks
@@ -110,6 +114,7 @@ export function createCatalog(source: Materials): ContentCatalog {
     patterns: data.patterns,
     answers: data.answers,
     drills: data.drills,
+    topics: data.topics ?? [],
     phraseCategories: uniqueSorted(data.phrases.map((item) => item.category)),
     wordCategories: uniqueSorted(data.wordIndex.map((item) => item.category)),
     verbSets,

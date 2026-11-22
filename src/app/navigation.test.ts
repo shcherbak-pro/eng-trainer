@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { availablePagesFor, DESTINATIONS, destinationOf, destinationPages, PAGE_LABELS } from './navigation';
-import type { TrainingBlock } from '../content/types';
+import { availablePagesFor, DESTINATIONS, destinationOf, destinationPages, PAGE_LABELS, pageForBlock, pageTitle, topicIdOf, topicRoute } from './navigation';
+import type { LearningTopic, TrainingBlock } from '../content/types';
 
 /** Every hash route that ENG-V2-02B published. Saved "last page" values use the same ids. */
 const RELEASED_ROUTES = ['index', 'phrases', 'wordIndex', 'flashcards', 'reverse', 'irregularVerbs', 'patterns', 'answers', 'practice', 'favorites', 'collections'];
@@ -32,5 +32,32 @@ describe('route mapping to the five destinations', () => {
     expect(pages).toEqual(['index', 'irregularVerbs', 'favorites', 'collections', 'settings']);
     expect(destinationPages(DESTINATIONS[1], pages)).toEqual(['irregularVerbs']);
     expect(destinationPages(DESTINATIONS[2], pages)).toEqual([]);
+  });
+});
+
+describe('learning topic addresses (ENG-V2-03)', () => {
+  const topic = { id: 'small-talk', title: 'Small Talk', blockId: 'topic-small-talk', description: '', sections: [] } as LearningTopic;
+  const topicBlock: TrainingBlock = { id: 'topic-small-talk', title: 'Small Talk', type: 'phraseCategory', category: 'Small Talk', description: '' };
+
+  it('uses #topic/<id>, which cannot collide with a released page id', () => {
+    expect(topicRoute('small-talk')).toBe('topic/small-talk');
+    expect(topicIdOf('topic/small-talk')).toBe('small-talk');
+    for (const page of RELEASED_ROUTES) expect(topicIdOf(page)).toBeNull();
+    expect(Object.keys(PAGE_LABELS).some((page) => page.includes('/'))).toBe(false);
+  });
+
+  it('places topic screens in the Library and titles them by the topic, without a new destination', () => {
+    expect(destinationOf('topic/small-talk').id).toBe('library');
+    expect(pageTitle('topic/small-talk', [topic])).toBe('Small Talk');
+    expect(pageTitle('phrases', [topic])).toBe('Phrases');
+    expect(DESTINATIONS).toHaveLength(5);
+  });
+
+  it('offers a topic screen only when the active Learn Pass contains its block, and opens it from that block', () => {
+    expect(availablePagesFor([topicBlock], [topic])).toEqual(['index', 'phrases', 'flashcards', 'topic/small-talk', 'favorites', 'collections', 'settings']);
+    expect(availablePagesFor([block('phraseCategory')], [topic])).not.toContain('topic/small-talk');
+    expect(pageForBlock(topicBlock, [topic])).toBe('topic/small-talk');
+    expect(pageForBlock(topicBlock)).toBe('phrases');
+    expect(pageForBlock(block('phraseCategory'), [topic])).toBe('phrases');
   });
 });

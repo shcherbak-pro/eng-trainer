@@ -10,6 +10,8 @@
   import HideButton from './HideButton.svelte';
 
   export let phrase: Phrase;
+  /** Heading level of the phrase text, to fit the surrounding outline. */
+  export let headingLevel: 'h3' | 'h4' = 'h3';
 
   function getExamples(item: Phrase): WordExample[] {
     if (item.examples?.length) return item.examples.slice(0, 2);
@@ -26,7 +28,7 @@
 <article class:hidden class:learned class="entry phrase-card">
   <SpeakButton text={phrase.phrase} />
   <div class="entry__body">
-    <h3 class="entry__term" lang="en" translate="no">{phrase.phrase}</h3>
+    <svelte:element this={headingLevel} class="entry__term" lang="en" translate="no">{phrase.phrase}</svelte:element>
     <p class="entry__translation" {lang}>{phrase.translation}</p>
     {#if phrase.transcription}<p class="entry__ipa ipa" translate="no">{phrase.transcription}</p>{/if}
     <p class="entry__meta">

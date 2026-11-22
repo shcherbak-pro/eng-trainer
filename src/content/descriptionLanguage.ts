@@ -46,7 +46,11 @@ const BLOCK_DESCRIPTION_LANGUAGE: Readonly<Record<string, 'en' | 'uk'>> = {
   'ready-answers': 'uk',
   'practice-mode': 'en',
   'ai-certification-vocabulary': 'en',
-  'ai-certification-verbs-contextual': 'en'
+  'ai-certification-verbs-contextual': 'en',
+  // ENG-V2-03 learning topics: English descriptions.
+  'topic-conditionals': 'en',
+  'topic-small-talk': 'en',
+  'topic-interview-english': 'en'
 };
 
 /** The `lang` value for a block description: 'en', 'uk', or '' (unknown) for a block not classified here. */

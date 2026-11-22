@@ -17,6 +17,10 @@ export type ViewState = {
   wordPage: number;
   irregularPage: number;
   currentPrompt: string;
+  /** Search text of each learning topic screen, by topic id (ENG-V2-03). */
+  topicQueries: Record<string, string>;
+  /** Selected subsection chip of each learning topic, by topic id; "" means all. */
+  topicSections: Record<string, string>;
 };
 
 export type ListId = 'index' | 'phrase' | 'word' | 'irregular';
@@ -30,7 +34,9 @@ const defaultState: ViewState = {
   phrasePage: 1,
   wordPage: 1,
   irregularPage: 1,
-  currentPrompt: ''
+  currentPrompt: '',
+  topicQueries: {},
+  topicSections: {}
 };
 
 function positivePage(value: number): number {
@@ -53,6 +59,10 @@ function createViewState() {
     /** A changed filter or page size always shows the first page of its list. */
     resetPage: (list: ListId) => update((state) => ({ ...state, [`${list}Page`]: 1 })),
     setCurrentPrompt: (currentPrompt: string) => update((state) => ({ ...state, currentPrompt })),
+    setTopicQuery: (topicId: string, query: string) =>
+      update((state) => ({ ...state, topicQueries: { ...state.topicQueries, [topicId]: query } })),
+    setTopicSection: (topicId: string, sectionId: string) =>
+      update((state) => ({ ...state, topicSections: { ...state.topicSections, [topicId]: sectionId } })),
     reset: () => set(defaultState)
   };
 }
