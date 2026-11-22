@@ -6,34 +6,24 @@
   export let answers: ReadyAnswer[];
 </script>
 
-<section class="section-stack">
-  <div class="toolbar-card">
-    <div>
-      <h2>Ready-Made Answers</h2>
-      <p>Assessment-style answers with translation, transcription and optional alternatives.</p>
-    </div>
-  </div>
-
-  <div class="cards-list">
+<div class="page-stack">
+  <p class="muted">Assessment-style answers with translation, transcription and alternatives.</p>
+  <ul class="reading-list">
     {#each answers as item}
       {@const alternatives = splitAlternatives(item.commonAlternatives)}
-      <article class="card">
-        <p class="tag-row">
+      <li class="reading-card">
+        <p class="entry__meta">
           <span>{item.topic}</span>
-          {#if item.level}<span>{item.level}</span>{/if}
+          {#if item.level}<span class="badge">{item.level}</span>{/if}
           {#if item.tag}<span>{item.tag}</span>{/if}
         </p>
-        <h3>{item.question}</h3>
-        {#if item.transcription}
-          <p class="meta-line"><strong>Transcription:</strong> <span>{item.transcription}</span></p>
-        {/if}
-        {#if alternatives.length}
-          <p class="meta-line common-alternatives"><strong>Common alternatives:</strong> <em>{alternatives.join('; ')}</em></p>
-        {/if}
-        <p class="example">{item.answer}</p>
-        <p class="translation">{item.translation}</p>
-        <SpeakButton text={item.answer} label="Speak answer" />
-      </article>
+        <h2 lang="en" translate="no">{item.question}</h2>
+        {#if item.transcription}<p class="entry__ipa ipa" translate="no">{item.transcription}</p>{/if}
+        <p class="reading-card__english" lang="en" translate="no">{item.answer}</p>
+        <p class="reading-card__translation" lang="uk">{item.translation}</p>
+        {#if alternatives.length}<p class="alternatives">Also said: <span lang="en" translate="no">{alternatives.join('; ')}</span></p>{/if}
+        <div><SpeakButton text={item.answer} label="Listen to the answer" withText /></div>
+      </li>
     {/each}
-  </div>
-</section>
+  </ul>
+</div>

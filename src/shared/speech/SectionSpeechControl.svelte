@@ -1,53 +1,42 @@
 <script lang="ts">
-  import IconButton from '../ui/IconButton.svelte';
+  import Button from '../ui/Button.svelte';
   import { settings } from '../../state/settings';
   import { sectionSpeech, speakSection, stopSectionSpeech, type SectionSpeechItem, type SpeechRepeatCount } from './sectionSpeech';
 
   export let controlId: string;
-  export let label = 'Read aloud';
+  /** Visible button text, for example "Listen to this page". */
+  export let label = 'Listen to this page';
   export let items: SectionSpeechItem[] = [];
-  export let help = 'Reads visible materials in this section.';
+  /** Describes what is read aloud (button description for assistive technology). */
+  export let help = 'Reads the items shown on this page.';
 
   const options: SpeechRepeatCount[] = [10, 20, 50];
+  const describedBy = `${controlId}-help`;
 
   $: isActive = $sectionSpeech.activeControlId === controlId && $sectionSpeech.isSpeaking;
   $: isBusy = Boolean($sectionSpeech.activeControlId) && $sectionSpeech.isSpeaking;
   $: repeatCount = $settings.speechRepeatCount;
   $: status = isActive
-    ? `Repeat ${$sectionSpeech.currentRepeat}/${$sectionSpeech.repeats} · Item ${$sectionSpeech.currentItem}/${$sectionSpeech.totalItems}`
-    : `${items.length} item${items.length === 1 ? '' : 's'}`;
+    ? `Reading item ${$sectionSpeech.currentItem} of ${$sectionSpeech.totalItems}, repeat ${$sectionSpeech.currentRepeat} of ${$sectionSpeech.repeats}.`
+    : '';
 
   function onRepeatChange(event: Event): void {
     settings.setSpeechRepeatCount(Number((event.target as HTMLSelectElement).value) as SpeechRepeatCount);
   }
-
-  function onStart(): void {
-    speakSection(controlId, items, repeatCount);
-  }
 </script>
 
-<div class="listen-control" aria-live="polite">
-  <div class="listen-control__meta">
-    <strong>{label}</strong>
-    <small>{isActive ? $sectionSpeech.currentLabel : help}</small>
-  </div>
-
-  <div class="listen-control__actions">
-    <label class="listen-control__select">
-      Repeats
-      <select value={repeatCount} on:change={onRepeatChange} disabled={isBusy}>
-        {#each options as option}
-          <option value={option}>{option}x</option>
-        {/each}
-      </select>
-    </label>
-
-    {#if isActive}
-      <IconButton icon="stop_circle" label="Stop reading" variant="danger" onClick={stopSectionSpeech} />
-    {:else}
-      <IconButton icon="record_voice_over" label={`Read ${label.toLowerCase()}`} variant="primary" disabled={!items.length || isBusy} onClick={onStart} />
-    {/if}
-  </div>
-
-  <p class="listen-control__status">{status}</p>
+<div class="listen-control">
+  {#if isActive}
+    <Button variant="primary" size="sm" icon="stop" onClick={stopSectionSpeech}>Stop reading</Button>
+  {:else}
+    <Button variant="secondary" size="sm" icon="listen" disabled={!items.length || isBusy} describedby={describedBy} onClick={() => speakSection(controlId, items, repeatCount)}>{label}</Button>
+  {/if}
+  <label>
+    <span class="visually-hidden">Repeats</span>
+    <select value={repeatCount} on:change={onRepeatChange} disabled={isBusy}>
+      {#each options as option}<option value={option}>{option}×</option>{/each}
+    </select>
+  </label>
+  <span id={describedBy} class="visually-hidden">{help}</span>
+  <p class="listen-control__status" aria-live="polite">{status}</p>
 </div>

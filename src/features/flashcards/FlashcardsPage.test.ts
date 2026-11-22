@@ -522,8 +522,36 @@ describe('Flashcards page', () => {
       expect(stats(page)).toBe('4 remaining 0 learned Card 1 of 4');
     });
 
+    it('offers Undo after "Learn again", which restores only that card\'s learned flag', async () => {
+      const page = await openPage();
+      click(page, 'I know it');
+      finishAnswer(page);
+      click(page, 'Review learned vocabulary');
+      await page.saved();
+      const before = page.state();
+      expect(before.learnedPhrases).toEqual(['p1']);
+
+      click(page, 'Learn again');
+      expect(page.state().learnedPhrases).toEqual([]);
+      const { toast } = await import('../../shared/ui/toast');
+      const message = get(toast)!;
+      expect(message.message).toBe('“Good morning” is back in the deck.');
+      expect(message.actionLabel).toBe('Undo');
+
+      message.onAction!();
+      page.flush();
+      await page.saved();
+      // The card is learned again; deck orders, positions, Focus and hidden items were never touched.
+      expect(page.state()).toEqual(before);
+      expect(page.root.querySelectorAll('.flashcards-review__list li')).toHaveLength(1);
+
+      // A second Undo, or one after the card was learned again some other way, changes nothing.
+      message.onAction!();
+      page.flush();
+      expect(page.state()).toEqual(before);
+    });
+
     it('resets the progress of the selected topic only after confirmation', async () => {
-      const confirm = vi.spyOn(window, 'confirm').mockReturnValue(false);
       const page = await openPage();
 
       // Learn "dig into" (Work) and "See you later" (Greetings).
@@ -537,13 +565,15 @@ describe('Flashcards page', () => {
       finishAnswer(page);
       expect(page.state().learnedPhrases).toEqual(['p3', 'p2']);
 
+      // The deck reset is offered next to the learned cards and asks for confirmation.
+      click(page, 'Review learned vocabulary');
       click(page, 'Reset progress for Greetings');
-      expect(confirm).toHaveBeenCalledTimes(1);
-      expect(confirm.mock.calls[0][0]).toContain('Greetings');
+      expect(text(page, 'dialog')).toContain('Reset progress for “Greetings”?');
+      click(page, 'Cancel');
       expect(page.state().learnedPhrases).toEqual(['p3', 'p2']);
 
-      confirm.mockReturnValue(true);
       click(page, 'Reset progress for Greetings');
+      click(page, 'Reset this deck');
 
       expect(page.state().learnedPhrases).toEqual(['p3']);
       expect(stats(page)).toBe('2 remaining 0 learned Card 1 of 2');

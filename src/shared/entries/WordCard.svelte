@@ -1,41 +1,39 @@
 <script lang="ts">
   import type { WordIndexItem } from '../../content/types';
-  import { splitAlternatives } from '../text';
+  import { progress } from '../../state/progress';
+  import { splitAlternatives, translationLang } from '../text';
   import SpeakButton from '../speech/SpeakButton.svelte';
+  import EntryExamples from './EntryExamples.svelte';
   import FocusButton from './FocusButton.svelte';
   import HideButton from './HideButton.svelte';
 
   export let item: WordIndexItem;
 
+  const letters = (value: string) => value.replace(/[^\p{L}]/gu, '').toLowerCase();
+
+  // Some built-in entries store the plain English text as "pronunciation"; show only a real transcription.
   $: transcription = item.transcription ?? item.pronunciation;
+  $: showTranscription = Boolean(transcription) && letters(transcription ?? '') !== letters(item.term);
   $: alternatives = splitAlternatives(item.commonAlternatives);
+  $: hidden = $progress.hiddenWords.includes(item.id);
+  $: lang = translationLang(item);
 </script>
 
-<article class="card word-card">
-  <div class="card__header">
-    <div>
-      <p class="tag-row"><span>{item.category}</span>{#if item.level}<span>{item.level}</span>{/if}{#if item.tag}<span>{item.tag}</span>{/if}</p>
-      <h3>{item.term}</h3>
-      {#if transcription}<p class="meta-line"><strong>Transcription:</strong> <span>{transcription}</span></p>{/if}
-      {#if alternatives.length}
-        <p class="meta-line common-alternatives"><strong>Common alternatives:</strong> <em>{alternatives.join('; ')}</em></p>
-      {/if}
+<article class="entry word-card" class:hidden>
+  <SpeakButton text={item.term} />
+  <div class="entry__body">
+    <h3 class="entry__term" lang="en" translate="no">{item.term}</h3>
+    <p class="entry__translation" {lang}>{item.meaning}</p>
+    {#if showTranscription}<p class="entry__ipa ipa" translate="no">{transcription}</p>{/if}
+    <p class="entry__meta">
+      {#if item.level}<span class="badge">{item.level}</span>{/if}
+      <span>{item.category}</span>
+      {#if hidden}<span class="state">Hidden</span>{/if}
+    </p>
+    <EntryExamples examples={item.examples.slice(0, 2)} {alternatives} {lang} />
+    <div class="entry__actions">
+      <FocusButton kind="word" id={item.id} />
+      <HideButton kind="word" id={item.id} name={item.term} />
     </div>
-  </div>
-  <p class="translation"><strong>Meaning:</strong> {item.meaning}</p>
-  <div class="examples">
-    {#each item.examples.slice(0, 2) as example, index}
-      <div class="example-box">
-        <strong>Example {index + 1}</strong>
-        <p>{example.en}</p>
-        {#if example.ua}<p class="translation">{example.ua}</p>{/if}
-        <SpeakButton text={example.en} label="Speak example" icon="record_voice_over" />
-      </div>
-    {/each}
-  </div>
-  <div class="card__actions">
-    <SpeakButton text={item.term} />
-    <FocusButton kind="word" id={item.id} />
-    <HideButton kind="word" id={item.id} />
   </div>
 </article>

@@ -1,0 +1,155 @@
+/* Base element styles. Tokens: tokens.css. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--color-page);
+  /* Keep focused elements clear of the fixed tab bar on small screens (see app.css). */
+  scroll-padding-bottom: var(--obscured-bottom, 0px);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-page);
+  color: var(--color-text);
+  font: var(--text-body);
+  -webkit-tap-highlight-color: rgba(44, 91, 214, 0.16);
+}
+
+/*
+ * Theme changes are animated only after start-up. During start-up the saved
+ * theme can replace the system theme; that switch must be instant, not a fade.
+ */
+:root[data-theme-ready] body {
+  transition: background-color var(--dur-base) var(--ease-standard), color var(--dur-base) var(--ease-standard);
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-weight: 650;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-text);
+  text-underline-offset: 0.18em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* One focus indicator everywhere: a 2 px ring with an offset (≥ 3:1 against page and surfaces). */
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+[tabindex='-1']:focus:not(:focus-visible) {
+  outline: none;
+}
+
+code,
+kbd,
+pre {
+  font-family: ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', Menlo, Consolas, monospace;
+  font-size: 0.875em;
+}
+
+code {
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-sunk);
+  overflow-wrap: anywhere;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0 5px;
+  border: 1px solid var(--color-divider);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-family: var(--font-ui);
+  font-weight: 650;
+  text-align: center;
+}
+
+/* Ukrainian text and IPA use the interface face; English study text uses Literata. */
+[lang='uk'],
+.ipa {
+  font-family: var(--font-ui);
+}
+
+.study-text {
+  font-family: var(--font-line);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skip-link {
+  position: fixed;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 100;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-inverse);
+  color: var(--color-on-inverse);
+  font-weight: 650;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible,
+.skip-link:focus {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

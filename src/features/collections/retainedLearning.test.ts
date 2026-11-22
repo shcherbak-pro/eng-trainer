@@ -122,8 +122,10 @@ describe('retained collection learning state', () => {
     let session = get(app.progress).flashcardSessions.all;
     expect(session.order[1]).toBe(id(1)); expect(session.order[3]).toBe(id(2));
     expect(session.order.filter((value) => !value.startsWith('user:')).sort()).toEqual(['a', 'b', 'word']);
-    vi.spyOn(window, 'confirm').mockReturnValue(true);
+    // The deck reset lives in the review view and needs an explicit confirmation.
+    await page.click('Review learned vocabulary');
     await page.click('Reset progress for All Vocabulary');
+    await page.click('Reset this deck');
     session = get(app.progress).flashcardSessions.all;
     expect(session).toEqual({ order: ['a', id(1), 'b', id(2), 'c', 'word'], index: 0 });
     expect(get(app.progress).learnedPhrases).toEqual([]);
@@ -143,7 +145,11 @@ describe('retained collection learning state', () => {
     const before = await readDatabase();
     await app.removeCollection(collection.id);
     let page = app.mount(view);
+    // "Unhide all" asks for confirmation; the dialog's own button carries a different label.
+    const confirmLabel = label.replace('Unhide all', 'Show all hidden');
     await page.click(label);
+    expect(get(app.progress)[list]).toEqual([removedId, removedId2, builtId, otherId]);
+    await page.click(confirmLabel);
     expect(page.button(label)).toBeUndefined();
     expect(get(app.progress)[list]).toEqual([removedId, removedId2]);
     await page.close();
@@ -161,6 +167,7 @@ describe('retained collection learning state', () => {
     expect((await readDatabase()).userEntries).toEqual(before.userEntries);
     expect((await readDatabase()).userCollections?.[other.collection.id]).toEqual(before.userCollections?.[other.collection.id]);
     await page.click(label);
+    await page.click(confirmLabel);
     expect((await readDatabase()).progress?.[list]).toEqual([]);
   });
 });

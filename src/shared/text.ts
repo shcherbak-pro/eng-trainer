@@ -17,3 +17,12 @@ export function splitAlternatives(value?: string[] | string): string[] {
   if (!value) return [];
   return Array.isArray(value) ? value.filter(Boolean) : value.split(';').map((item) => item.trim()).filter(Boolean);
 }
+
+/**
+ * Language of an entry's translation and example translations. Built-in material
+ * is translated into Ukrainian. Imported collections may use any language, so
+ * their translations are marked as unknown ("") instead of assuming Ukrainian.
+ */
+export function translationLang(item: { collectionId?: string }): 'uk' | '' {
+  return item.collectionId ? '' : 'uk';
+}

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import MaterialIcon from '../shared/ui/MaterialIcon.svelte';
+  import Icon from '../shared/ui/Icon.svelte';
+  import type { IconName } from '../shared/ui/icons';
   import { settings, type ThemePreference } from '../state/settings';
 
   const sequence: ThemePreference[] = ['system', 'light', 'dark'];
@@ -10,10 +11,10 @@
     dark: 'Dark'
   };
 
-  const icons: Record<ThemePreference, string> = {
+  const icons: Record<ThemePreference, IconName> = {
     system: 'contrast',
-    light: 'light_mode',
-    dark: 'dark_mode'
+    light: 'sun',
+    dark: 'moon'
   };
 
   function nextPreference(current: ThemePreference): ThemePreference {
@@ -27,10 +28,11 @@
 
 <button
   type="button"
-  class="theme-toggle btn--icon-only"
+  class="theme-toggle"
   on:click={() => settings.setTheme(next)}
   aria-label={`Theme: ${labels[theme]}. Switch to ${labels[next]}.`}
   title={`Theme: ${labels[theme]}. Click to switch to ${labels[next]}.`}
 >
-  <MaterialIcon name={icons[theme]} />
+  <Icon name={icons[theme]} />
+  <span>Theme: {labels[theme]}</span>
 </button>

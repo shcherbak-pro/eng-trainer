@@ -1,5 +1,5 @@
 <script lang="ts">
-  import IconButton from '../../shared/ui/IconButton.svelte';
+  import Button from '../../shared/ui/Button.svelte';
   import { viewState } from '../../state/viewState';
 
   export let drills: string[];
@@ -10,23 +10,24 @@
   }
 </script>
 
-<section class="section-stack">
-  <div class="toolbar-card">
-    <div>
-      <h2>Practice Mode</h2>
-      <p>Random prompts for active recall and 60–90 second speaking practice.</p>
+<div class="page-stack">
+  <article class="prompt-card">
+    <!-- The live region stays in place; only a prompt (study text) is protected from translation, not the hint. -->
+    <div aria-live="polite">
+      {#if $viewState.currentPrompt}
+        <p class="prompt-card__text" lang="en" translate="no">{$viewState.currentPrompt}</p>
+      {:else}
+        <p class="prompt-card__text">Choose “Random prompt” to get a speaking task.</p>
+      {/if}
     </div>
-    <IconButton icon="shuffle" label="Generate random prompt" variant="primary" onClick={randomPrompt} />
-  </div>
-
-  <article class="card practice-card">
-    <h3>{$viewState.currentPrompt || 'Click “Random prompt” to start.'}</h3>
-    <p class="muted">Suggested flow: think for 10 seconds → speak for 60 seconds → repeat with better structure.</p>
+    <p class="muted">Suggested flow: think for 10 seconds, speak for 60 seconds, then repeat with a better structure.</p>
+    <div><Button variant="primary" icon="shuffle" onClick={randomPrompt}>Random prompt</Button></div>
   </article>
 
-  <div class="cards-list compact">
-    {#each drills as drill}
-      <article class="card compact-card">{drill}</article>
-    {/each}
-  </div>
-</section>
+  <section class="entry-group">
+    <h2>All prompts</h2>
+    <ul class="drill-list">
+      {#each drills as drill}<li lang="en" translate="no">{drill}</li>{/each}
+    </ul>
+  </section>
+</div>

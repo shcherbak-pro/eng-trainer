@@ -1,6 +1,6 @@
 <script lang="ts">
   import { progress, type FocusKind } from '../../state/progress';
-  import IconButton from '../ui/IconButton.svelte';
+  import Button from '../ui/Button.svelte';
 
   export let kind: FocusKind;
   export let id: string;
@@ -9,10 +9,12 @@
   $: active = list.includes(id);
 </script>
 
-<IconButton
-  icon={active ? 'remove' : 'add'}
-  label={active ? 'Remove from Focus List' : 'Add to Focus List'}
+<!-- The name changes with the state; the visible word "Focus" is part of both names. -->
+<Button
   variant="focus"
-  {active}
+  size="sm"
+  icon="star"
+  class={active ? 'is-active' : ''}
+  label={active ? 'Remove from Focus List' : 'Add to Focus List'}
   onClick={() => progress.toggleFavorite(kind, id)}
-/>
+>Focus</Button>

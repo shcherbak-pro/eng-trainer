@@ -69,9 +69,10 @@ const defaultState: SettingsState = {
   flashcardTopic: ''
 };
 
-type SettingKey = keyof SettingsState;
+export type SettingKey = keyof SettingsState;
 
-const SETTING_KEYS = Object.keys(defaultState) as SettingKey[];
+/** Every stored preference, in a stable order. */
+export const SETTING_KEYS = Object.keys(defaultState) as SettingKey[];
 
 function isString(value: unknown): boolean {
   return typeof value === 'string';

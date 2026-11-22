@@ -16,7 +16,7 @@ function applyTheme(preference: ThemePreference): void {
 
   const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
   if (themeColor) {
-    themeColor.content = resolved === 'dark' ? '#111820' : '#263238';
+    themeColor.content = resolved === 'dark' ? '#0d1322' : '#f5f6f9';
   }
 }
 

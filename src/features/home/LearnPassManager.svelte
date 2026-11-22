@@ -3,7 +3,10 @@
   import { DEFAULT_LEARN_PASS_ID, progress, type LearnPass } from '../../state/progress';
   import { viewState } from '../../state/viewState';
   import { matchesQuery } from '../../shared/text';
+  import Button from '../../shared/ui/Button.svelte';
+  import ConfirmDialog from '../../shared/ui/ConfirmDialog.svelte';
   import IconButton from '../../shared/ui/IconButton.svelte';
+  import SearchField from '../../shared/ui/SearchField.svelte';
 
   export let catalog: ContentCatalog;
 
@@ -13,6 +16,23 @@
   let draftDescription = '';
   let draftBlockIds: string[] = [];
   let materialQuery = '';
+  let pendingDelete: LearnPass | null = null;
+  let deletedPosition = -1;
+  let createButton: HTMLButtonElement | undefined;
+
+  /** The Delete buttons of the passes shown, in order. */
+  function deleteButtons(): HTMLButtonElement[] {
+    return [...document.querySelectorAll<HTMLButtonElement>('.learn-pass-list [data-pass-delete]')];
+  }
+
+  /**
+   * The deleted pass took its Delete button with it. Focus goes to the pass that took its place,
+   * else the one before it; with no pass left in the list, to "Create a Learn Pass".
+   */
+  function afterDeleteFocus(): HTMLElement | null {
+    const buttons = deleteButtons();
+    return buttons[Math.min(deletedPosition, buttons.length - 1)] ?? createButton ?? null;
+  }
 
   $: selectedPass = $progress.learnPasses.find((pass) => pass.id === $progress.selectedLearnPassId) ?? null;
   $: filteredPasses = $progress.learnPasses.filter((pass) => matchesQuery($viewState.learnPassSearch, pass.name, pass.description, pass.blockIds.join(' ')));
@@ -75,9 +95,11 @@
     resetDraft();
   }
 
-  function deletePass(pass: LearnPass): void {
-    const confirmed = typeof window === 'undefined' || window.confirm(`Delete learn pass "${pass.name}"?`);
-    if (!confirmed) return;
+  function confirmDelete(): void {
+    const pass = pendingDelete;
+    if (pass) deletedPosition = deleteButtons().findIndex((button) => button.dataset.passDelete === pass.id);
+    pendingDelete = null;
+    if (!pass) return;
     progress.deleteLearnPass(pass.id);
     if (editingId === pass.id) {
       cancelBuilder();
@@ -85,112 +107,108 @@
   }
 </script>
 
-<div class="learn-pass-panel card">
+<div class="learn-pass-panel">
   <div class="learn-pass-panel__main">
-    <div>
-      <p class="eyebrow local">Learn Pass</p>
-      <h2>Choose your learning track</h2>
-      <p class="muted">Default shows all available materials. Custom passes keep only selected blocks on the Index page and in navigation.</p>
-    </div>
-
-    <div class="learn-pass-selectors">
-      <label>
-        Active pass
-        <select value={$progress.selectedLearnPassId} on:change={onPassChange}>
-          <option value={DEFAULT_LEARN_PASS_ID}>Default — all materials</option>
-          {#each $progress.learnPasses as pass}
-            <option value={pass.id}>{pass.name}</option>
-          {/each}
-        </select>
-      </label>
-      <p class="learn-pass-summary">{selectedBlockCount} block{selectedBlockCount === 1 ? '' : 's'} visible</p>
-    </div>
-  </div>
-
-  <div class="learn-pass-panel__actions" aria-label="Learn Pass actions">
-    <IconButton icon="add_circle" label="Create new Learn Pass" variant="primary" onClick={startCreate} />
-    <IconButton icon="edit" label="Edit selected Learn Pass" variant="secondary" disabled={!selectedPass} onClick={() => selectedPass && startEdit(selectedPass)} />
-  </div>
-
-  <div class="learn-pass-manager">
-    <label>
-      Search learn passes
-      <input
-        value={$viewState.learnPassSearch}
-        on:input={(event) => viewState.setLearnPassSearch((event.target as HTMLInputElement).value)}
-        placeholder="verbs, meetings, assessment…"
-      />
-    </label>
-
-    {#if filteredPasses.length}
-      <div class="learn-pass-list">
-        {#each filteredPasses as pass}
-          <article class="learn-pass-row" class:active={$progress.selectedLearnPassId === pass.id}>
-            <button class="learn-pass-row__body" type="button" on:click={() => progress.setSelectedLearnPass(pass.id)}>
-              <strong>{pass.name}</strong>
-              <small>{pass.blockIds.length} block{pass.blockIds.length === 1 ? '' : 's'}{pass.description ? ` · ${pass.description}` : ''}</small>
-            </button>
-            <div class="learn-pass-row__actions" aria-label={`${pass.name} actions`}>
-              <IconButton icon="edit" label={`Edit ${pass.name}`} variant="secondary" onClick={() => startEdit(pass)} />
-              <IconButton icon="delete" label={`Delete ${pass.name}`} variant="danger" onClick={() => deletePass(pass)} />
-            </div>
-          </article>
+    <p class="muted">The default pass shows all material. A custom pass keeps only the blocks you choose on Home and in the navigation.</p>
+    <label class="field">
+      <span class="field__label">Active pass</span>
+      <select value={$progress.selectedLearnPassId} on:change={onPassChange}>
+        <option value={DEFAULT_LEARN_PASS_ID}>Default: all materials</option>
+        {#each $progress.learnPasses as pass}
+          <option value={pass.id}>{pass.name}</option>
         {/each}
-      </div>
-    {:else if $progress.learnPasses.length}
-      <p class="muted">No learn passes match your search.</p>
-    {:else}
-      <p class="muted">No custom learn passes yet. Create one to focus on selected materials.</p>
-    {/if}
+      </select>
+    </label>
+    <p class="learn-pass-summary">{selectedBlockCount} {selectedBlockCount === 1 ? 'block' : 'blocks'} visible</p>
   </div>
+
+  <div class="learn-pass-panel__actions">
+    <Button variant="secondary" size="sm" icon="plus" bind:element={createButton} onClick={startCreate}>Create a Learn Pass</Button>
+    <Button variant="quiet" size="sm" icon="edit" disabled={!selectedPass} onClick={() => selectedPass && startEdit(selectedPass)}>Edit the selected pass</Button>
+  </div>
+
+  {#if $progress.learnPasses.length}
+    <SearchField label="Search Learn Passes" value={$viewState.learnPassSearch} placeholder="verbs, meetings, assessment…" onInput={(value) => viewState.setLearnPassSearch(value)} />
+    {#if filteredPasses.length}
+      <ul class="learn-pass-list">
+        {#each filteredPasses as pass (pass.id)}
+          <li class="learn-pass-row" class:active={$progress.selectedLearnPassId === pass.id}>
+            <button class="learn-pass-row__body" type="button" aria-pressed={$progress.selectedLearnPassId === pass.id} on:click={() => progress.setSelectedLearnPass(pass.id)}>
+              <strong>{pass.name}</strong>
+              <small>{pass.blockIds.length} {pass.blockIds.length === 1 ? 'block' : 'blocks'}{pass.description ? `. ${pass.description}` : ''}</small>
+            </button>
+            <div class="learn-pass-row__actions">
+              <IconButton icon="edit" label={`Edit ${pass.name}`} onClick={() => startEdit(pass)} />
+              <IconButton icon="trash" label={`Delete ${pass.name}`} data-pass-delete={pass.id} onClick={() => (pendingDelete = pass)} />
+            </div>
+          </li>
+        {/each}
+      </ul>
+    {:else}
+      <p class="muted">No Learn Passes match your search.</p>
+    {/if}
+  {:else}
+    <p class="muted">No custom Learn Passes yet. Create one to focus on selected materials.</p>
+  {/if}
 
   {#if builderOpen}
     <form class="learn-pass-builder" on:submit|preventDefault={savePass}>
       <div class="learn-pass-builder__header">
         <div>
-          <h3>{editingId ? 'Edit Learn Pass' : 'Create Learn Pass'}</h3>
-          <p class="muted">Select the blocks that should stay visible when this pass is active.</p>
+          <h3>{editingId ? 'Edit Learn Pass' : 'Create a Learn Pass'}</h3>
+          <p class="muted">Select the blocks that stay visible while this pass is active.</p>
         </div>
-        <IconButton icon="close" label="Close Learn Pass builder" variant="secondary" onClick={cancelBuilder} />
+        <IconButton icon="close" label="Close the Learn Pass editor" onClick={cancelBuilder} />
       </div>
 
       <div class="learn-pass-builder__fields">
-        <label>
-          Name
-          <input bind:value={draftName} required maxlength="60" placeholder="Example: Irregular verbs focus" />
+        <label class="field">
+          <span class="field__label">Name</span>
+          <input bind:value={draftName} required maxlength="60" autocomplete="off" placeholder="For example, irregular verbs…" />
         </label>
-        <label>
-          Description
-          <input bind:value={draftDescription} maxlength="120" placeholder="Optional short note" />
+        <label class="field">
+          <span class="field__label">Description (optional)</span>
+          <input bind:value={draftDescription} maxlength="120" autocomplete="off" placeholder="A short note…" />
         </label>
-        <label>
-          Search materials
-          <input bind:value={materialQuery} placeholder="verbs, phrases, patterns…" />
+        <label class="field">
+          <span class="field__label">Search materials</span>
+          <input type="search" bind:value={materialQuery} autocomplete="off" placeholder="verbs, phrases, patterns…" />
         </label>
       </div>
 
       <div class="learn-pass-builder__tools">
         <span class="muted">{draftBlockIds.length} selected</span>
-        <IconButton icon="select_check_box" label="Select visible materials" variant="secondary" onClick={selectVisibleBlocks} />
-        <IconButton icon="backspace" label="Clear selected materials" variant="danger" onClick={clearBlocks} />
+        <Button variant="quiet" size="sm" icon="select-all" onClick={selectVisibleBlocks}>Select all shown</Button>
+        <Button variant="quiet" size="sm" icon="close" onClick={clearBlocks}>Clear selection</Button>
       </div>
 
       <div class="learn-pass-blocks">
-        {#each filteredBlocks as block}
+        {#each filteredBlocks as block (block.id)}
           <label class="learn-pass-block" class:active={draftBlockIds.includes(block.id)}>
             <input type="checkbox" checked={draftBlockIds.includes(block.id)} on:change={() => toggleBlock(block.id)} />
             <span>
               <strong>{block.title}</strong>
-              <small>{block.tag ?? block.type}{block.itemsCount ? ` · ${block.itemsCount} items` : ''}</small>
+              <small>{block.tag ?? block.type}{block.itemsCount ? `, ${block.itemsCount} items` : ''}</small>
             </span>
           </label>
         {/each}
       </div>
 
       <div class="learn-pass-builder__footer">
-        <IconButton icon="save" label="Save Learn Pass" variant="primary" type="submit" disabled={!draftName.trim() || !draftBlockIds.length} />
-        <IconButton icon="cancel" label="Cancel Learn Pass changes" variant="secondary" onClick={cancelBuilder} />
+        <Button variant="primary" type="submit" icon="check" disabled={!draftName.trim() || !draftBlockIds.length}>Save Learn Pass</Button>
+        <Button variant="secondary" onClick={cancelBuilder}>Cancel</Button>
       </div>
     </form>
   {/if}
 </div>
+
+<ConfirmDialog
+  open={pendingDelete !== null}
+  title={`Delete the Learn Pass “${pendingDelete?.name ?? ''}”?`}
+  confirmLabel="Delete Learn Pass"
+  onConfirm={confirmDelete}
+  onCancel={() => (pendingDelete = null)}
+  returnFocus={afterDeleteFocus}
+>
+  <p>The pass is removed. Your learning progress, Focus list and vocabulary are not changed.</p>
+</ConfirmDialog>

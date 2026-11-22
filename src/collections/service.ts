@@ -1,7 +1,40 @@
 import { get, writable } from 'svelte/store';
 import type { ContentCatalog } from '../content/catalog';
-import type { AppStorage, StoredRecords, WriteOp } from '../storage/database';
+import { StorageError, type AppStorage, type StoredRecords, type WriteOp } from '../storage/database';
 import { check, collectionInfo, MAX_ENTRIES, serializeCollection, validateEntry, validateLinks, withinSize, type CollectionInfo, type ImportIssue, type ParsedImport, type VocabularyEntry } from './format';
+
+/**
+ * Why a collection operation failed. The interface words its advice per kind:
+ * - `conflict`: another tab changed the saved collection first (reload, then retry);
+ * - `stale`: this tab's preview or collection list is out of date;
+ * - `quota`: the browser refused to store more data for this site;
+ * - `storage`: any other failed transaction (nothing was saved);
+ * - `unavailable`: the app runs without saving;
+ * - `busy`: another collection change is still being saved;
+ * - `validation`: the proposal or the new name is not acceptable.
+ */
+export type CollectionErrorKind = 'conflict' | 'stale' | 'quota' | 'storage' | 'unavailable' | 'busy' | 'validation';
+
+export class CollectionError extends Error {
+  readonly kind: CollectionErrorKind;
+  constructor(kind: CollectionErrorKind, message: string) {
+    super(message);
+    this.name = 'CollectionError';
+    this.kind = kind;
+  }
+}
+
+function ensure(condition: unknown, kind: CollectionErrorKind, message: string): asserts condition {
+  if (!condition) throw new CollectionError(kind, message);
+}
+
+function validated<T>(run: () => T): T {
+  try {
+    return run();
+  } catch (error) {
+    throw error instanceof CollectionError ? error : new CollectionError('validation', error instanceof Error ? error.message : String(error));
+  }
+}
 
 export type UserCollection = CollectionInfo & {
   version: 1; createdAt: string; updatedAt: string; revision: number;
@@ -94,26 +127,34 @@ export function prepareImport(parsed: ParsedImport, catalog: ContentCatalog): Im
 }
 
 async function write(ops: WriteOp[], previous: UserCollection | undefined, id: string): Promise<void> {
-  check(storage, 'Saving is unavailable. Reopen the app with browser storage enabled before managing collections.');
-  check(!writing, 'A collection change is already being saved. Please wait.');
+  ensure(storage, 'unavailable', 'Saving is unavailable. Reopen the app with browser storage enabled before managing collections.');
+  ensure(!writing, 'busy', 'A collection change is already being saved. Please wait.');
   writing = true;
   try {
     await storage.write(ops, [{ store: 'userCollections', key: id, expected: previous }]);
   } catch (error) {
-    throw new Error(`Collection change was not saved. No partial import or deletion was kept. ${error instanceof Error ? error.message : String(error)} Check available browser storage and try again.`);
+    const kind = error instanceof StorageError ? error.kind : 'failure';
+    const detail = error instanceof Error ? error.message : String(error);
+    if (kind === 'conflict') {
+      throw new CollectionError('conflict', 'Collection change was not saved: the saved collection changed in another session. No partial import or deletion was kept.');
+    }
+    if (kind === 'quota') {
+      throw new CollectionError('quota', `Collection change was not saved. No partial import or deletion was kept. ${detail} Check available browser storage and try again.`);
+    }
+    throw new CollectionError('storage', `Collection change was not saved. No partial import or deletion was kept. ${detail}`);
   } finally { writing = false; }
 }
 
 export async function acceptImport(plan: ImportPlan, allowDuplicates = false): Promise<{ added: number; skipped: number }> {
-  check(plan.issues.length === 0, 'Fix all invalid entries and ID conflicts before importing.');
-  check(!plan.duplicates.length || allowDuplicates, 'Review and acknowledge possible duplicates before importing.');
-  check(storage, 'Saving is unavailable. No collection was imported.');
+  ensure(plan.issues.length === 0, 'validation', 'Fix all invalid entries and ID conflicts before importing.');
+  ensure(!plan.duplicates.length || allowDuplicates, 'validation', 'Review and acknowledge possible duplicates before importing.');
+  ensure(storage, 'unavailable', 'Saving is unavailable. No collection was imported.');
   if (!plan.additions.length) {
     await write([], plan.existing, plan.target.id);
     return { added: 0, skipped: plan.skipped };
   }
   const current = get(store);
-  check(JSON.stringify(current.collections.find((collection) => collection.id === plan.target.id)) === JSON.stringify(plan.existing), 'This collection changed. Select the file again to refresh the preview.');
+  ensure(JSON.stringify(current.collections.find((collection) => collection.id === plan.target.id)) === JSON.stringify(plan.existing), 'stale', 'This collection changed. Select the file again to refresh the preview.');
   const now = new Date().toISOString();
   const collection: UserCollection = {
     ...collectionInfo(plan.target), version: 1, createdAt: plan.existing?.createdAt ?? now, updatedAt: now,
@@ -134,9 +175,9 @@ export async function acceptImport(plan: ImportPlan, allowDuplicates = false): P
 
 export async function renameCollection(id: string, name: string): Promise<void> {
   const previous = get(store).collections.find((item) => item.id === id);
-  check(previous, 'Collection no longer exists. Reload the app.');
-  const collection = { ...previous, ...collectionInfo({ ...info(previous), name }), updatedAt: new Date().toISOString(), revision: previous.revision + 1 };
-  withinSize(serializeCollection(info(collection), get(store).entries.filter((entry) => entry.collectionId === id).map(plain)));
+  ensure(previous, 'stale', 'Collection no longer exists. Reload the app.');
+  const collection = validated(() => ({ ...previous, ...collectionInfo({ ...info(previous), name }), updatedAt: new Date().toISOString(), revision: previous.revision + 1 }));
+  validated(() => withinSize(serializeCollection(info(collection), get(store).entries.filter((entry) => entry.collectionId === id).map(plain))));
   await write([{ type: 'put', store: 'userCollections', key: id, value: collection }], previous, id);
   store.update((state) => ({ ...state, collections: state.collections.map((item) => item.id === id ? collection : item) }));
 }
@@ -144,7 +185,7 @@ export async function renameCollection(id: string, name: string): Promise<void> 
 export async function removeCollection(id: string): Promise<void> {
   const current = get(store);
   const previous = current.collections.find((item) => item.id === id);
-  check(previous, 'Collection no longer exists. Reload the app.');
+  ensure(previous, 'stale', 'Collection no longer exists. Reload the app.');
   await write([
     { type: 'delete', store: 'userCollections', key: id },
     ...current.entries.filter((entry) => entry.collectionId === id).map((entry): WriteOp => ({ type: 'delete', store: 'userEntries', key: entry.id }))
@@ -154,6 +195,6 @@ export async function removeCollection(id: string): Promise<void> {
 export function exportCollection(id: string): string {
   const current = get(store);
   const collection = current.collections.find((item) => item.id === id);
-  check(collection, 'Collection no longer exists.');
+  ensure(collection, 'stale', 'Collection no longer exists.');
   return serializeCollection(info(collection), current.entries.filter((entry) => entry.collectionId === id).map(plain));
 }
