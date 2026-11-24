@@ -113,6 +113,8 @@ Use the npm scripts: generation is an npm lifecycle hook before `dev`, `check`, 
 
 `loadBuiltInCatalog()` fetches the manifest under the app's Vite base URL, then every pack concurrently with `cache: 'no-store'`. It checks schemas, pack metadata/counts, aggregate counts, IDs and references before creating the unchanged `ContentCatalog`. It accepts only generated relative pack URLs. The structural build check also verifies pack byte hashes. Runtime schema/count validation is not a cryptographic integrity check.
 
+Since ENG-V3-01 the generator takes an optional product name. Without one it is the stable product and behaves exactly as described above. For the experimental product it writes a separate staged public folder and applies `content/v3/overlay.json`, which must be empty for now, so both products publish the same catalog. The two products never share a generated folder. See [Products and routes](PRODUCTS-AND-ROUTES.md#content).
+
 No partial catalog is returned. A missing or malformed pack uses the existing startup error screen, and **Try again** reloads the manifest and every pack. Hash filenames prevent a changed pack from reusing a prior URL; unavailable deployment assets produce a visible error. There is no offline cache, lazy loading, or new search engine.
 
 ## Compatibility and verification

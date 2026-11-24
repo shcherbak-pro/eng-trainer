@@ -1,5 +1,42 @@
 # Changelog
 
+## Unreleased — ENG-V3-01-RC2 (2026-11-24)
+
+Correction from Astra's independent review of ENG-V3-01-RC1. Nothing changes for users: the application code is untouched, and the published site stays byte-identical to the ENG-V2-03 release.
+
+- **F1-RC1:** A Rollup output option can no longer make a build delete sources.
+  - Vite empties every folder that `build.rollupOptions.output` names with `dir`, in place of `build.outDir`. The build check of RC1 looked at `outDir` only.
+  - A build now accepts no Rollup output option at all, as an object or as a list. The builds of this repository need none.
+  - The check covers every set of build options that Vite holds, for the configuration file, the JavaScript API and the command line.
+  - A build also refuses `emptyOutDir: false`, so its output folder is always emptied before a file is written to it.
+- New tests run real Vite builds in disposable copies of the application and compare every file before and after. `npm run check:negative` has one more case (16 in all).
+- The check was read and tested against Vite 6.4.3 with Rollup 4.63.1. A test pins both versions, so an update of either has to repeat that reading.
+
+## Unreleased — ENG-V3-01-RC1 (2026-11-23)
+
+Correction from Astra's independent review of ENG-V3-01. Nothing changes for users: the application code is untouched, and the published site stays byte-identical to the ENG-V2-03 release.
+
+- **F1:** A folder name in `site.config.json` can no longer make a script or a build delete sources.
+  - Every product folder is now fixed in code. The file must state exactly that folder; any other value is an error, also another spelling of the same folder (`SRC`, `Dist`) and a file name (`index.html`).
+  - One shared guard, `scripts/generated-dirs.mjs`, lists the folders that scripts generate. It runs immediately before every removal: content staging, both assemblies and the work areas of the checks. It refuses a folder that is not on the list, and a listed folder that is a file, a link or another spelling on disk.
+  - Vite empties its output folder itself. The build configuration now checks that folder first, for every build and also for `--outDir`.
+  - A refusal removes nothing and repairs nothing.
+- New tests run each case in a disposable copy of the repository and compare every file before and after. `npm run check:negative` has two more cases (15 in all).
+
+## Unreleased — ENG-V3-01 (2026-11-23)
+
+Dual-product foundation. Nothing changes for users of v2 or v1: the published site stays byte-identical to the ENG-V2-03 release.
+
+- The source tree now builds two products, chosen at build time: `stable-v2` (the released v2, still the default) and `experimental-v3`. `site.config.json` names the products, their routes and a committed `publish` flag per route. A validated reader fails closed on unknown products, colliding routes, unsafe or overlapping folders and inconsistent publication settings.
+- `experimental-v3` is built and tested but **not published**. Only a reviewed change of the committed `publish` flag can add it to the site: no command-line argument, environment variable or workflow input can.
+- `experimental-v3` has its own database, `eng-trainer-v3`, a new lineage at version 1 with the six shared stores plus `meta`. It never opens `eng-trainer-v2` and never touches `localStorage`. There is no migration, copy or backup yet.
+- The two links to v1 now start at the base path of the whole site, so they are correct from a product published under a sub-path. Content and the brand link keep using the product's own base path.
+- Content is generated per product into separate folders. The experimental overlay (`content/v3/overlay.json`) must be empty, so both products publish the released catalog.
+- A new gate, `npm run check:products`, runs as the last step before the Pages upload. It compares the assembled site with the 33 released files (path, size and SHA-256), and checks the chunk inventory, forbidden tokens, the released catalog and that nothing of an unpublished product is in the site. `npm run check:negative` proves on deliberately broken copies that each gate fails.
+- `npm run assemble:test` builds a local three-product site for browser checks, and `npm run rehearse:promotion` rehearses a route swap and its rollback. Neither publishes anything.
+- The experimental product has one placeholder screen, **Pronunciation**, loaded as a separate chunk. It records, recognizes and downloads nothing. The stable build contains neither the screen nor a request for it.
+- No dependency was added or changed.
+
 ## Unreleased — ENG-V2-UX-01B-RC1 (2026-11-22)
 
 Corrections from Astra's independent review of ENG-V2-UX-01B:

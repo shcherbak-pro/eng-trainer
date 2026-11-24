@@ -36,7 +36,11 @@ describe('built-in pack loading', () => {
     expect(catalog.irregularVerbs).toEqual(realMaterials.irregularVerbs);
     const last = realMaterials.irregularVerbs[realMaterials.irregularVerbs.length - 1];
     expect(catalog.searchVerbs(last.base).map((entry) => entry.id)).toContain(last.id);
-    for (const [url] of vi.mocked(fetch).mock.calls) expect(String(url)).toMatch(/^\/eng-trainer\/data\/(manifest\.json|packs\/)/);
+    // Every request stays inside this product's own data folder.
+    for (const [url] of vi.mocked(fetch).mock.calls) {
+      expect(String(url).startsWith(contentBase)).toBe(true);
+      expect(String(url).slice(contentBase.length)).toMatch(/^(manifest\.json|packs\/)/);
+    }
   });
 
   it.each(['http', 'json', 'metadata', 'counts', 'duplicate', 'reference', 'schema'])(

@@ -86,6 +86,8 @@ The theme is saved in IndexedDB like the other preferences, so it is applied onc
 
 The two versions are separate applications. They do not share code, data files, or progress. v2 starts with empty progress and does not read v1 data. v2 links to v1 from the side navigation on wide screens, from **More** on phones, and from **Settings**.
 
+An experimental third version, v3, is built from the same source tree as v2. It is **not published**. It has its own database (`eng-trainer-v3`) and, so far, no feature of its own. See [Products and routes](#products-and-routes).
+
 ## Fonts and icons
 
 v2 serves its own fonts; it makes no requests to Google Fonts or any other font service. English study text uses **Literata**. The interface, Ukrainian text and transcriptions use **Eng Trainer Sans**, which covers every IPA symbol in the material. Eng Trainer Sans is the Source Sans 3 design under its own name: Source Sans 3 reserves the name “Source”, and web subsets count as modified versions, so only the font names were changed (glyphs, metrics and shaping are identical). Both typefaces are published under the SIL Open Font License 1.1; the licences and the derivative's FONTLOG are served at `/eng-trainer/fonts/`. The font files are split by script (`unicode-range`), so a page loads only the subsets it uses, and text appears at once in a system font if a font is slow or missing. Provenance and checksums are in [`src/assets/fonts/README.md`](src/assets/fonts/README.md); the renamed files are prepared by [`scripts/fonts/derive_eng_trainer_sans.py`](scripts/fonts/derive_eng_trainer_sans.py), which the build does not run.
@@ -117,6 +119,35 @@ To look at the assembled site locally: `npx vite preview --outDir site-dist`, th
 
 The link from v2 to v1 works in the assembled site. In the v2 dev server it leads to a missing page, because v1 runs in its own dev server.
 
+### Products and routes
+
+The source tree in the repository root builds two products. The product is chosen when the application is built, never by the address it runs at.
+
+| Product | Published at | Database | Notes |
+|---|---|---|---|
+| `stable-v2` | `/eng-trainer/` | `eng-trainer-v2` | The released v2. Every command above builds and tests this product. |
+| `experimental-v3` | not published (`/eng-trainer/v3/` in local test builds) | `eng-trainer-v3` | Same code and content, its own database, and one placeholder screen. No recording, speech recognition or model. |
+| `legacy-v1` | `/eng-trainer/v1/` | `localStorage` | The frozen project in `v1/`. |
+
+```bash
+npm run dev:v3              # experimental dev server: http://localhost:5173/eng-trainer/v3/
+npm run test:v3             # the shared suite as the experimental product
+npm run build:v3            # experimental-v3 -> dist-v3/
+
+npm run check:products      # the released-site lock and the product gates (after build:site and build:v3)
+npm run check:negative      # proves that those gates fail on deliberate faults
+npm run assemble:test       # all three products -> .site-test/, for local checks only
+npm run rehearse:promotion  # local rehearsal of a route swap and of its rollback
+```
+
+Run the two test suites one after the other, not at the same time.
+
+- [`site.config.json`](site.config.json) names the products and their routes. Whether a product is part of the published site is the committed `publish` flag of its route. Nothing else can publish it: no command-line argument, environment variable or workflow input.
+- The stable build must stay **byte-identical** to the released site. `npm run check:products` compares `site-dist/` with the list of the 33 released files and fails on any extra, missing or changed file. That list is never updated to make a change pass.
+- A checkout with CRLF line endings fails that comparison for eight files, by carriage returns only. CI builds from LF files.
+
+See [Products and routes](docs/architecture/PRODUCTS-AND-ROUTES.md) for the configuration rules, the compile-time constants and the gates.
+
 ### Structure of v2
 
 ```text
@@ -132,10 +163,15 @@ src/
   assets/      Self-hosted font files and their provenance
   test/        Test setup (in-memory IndexedDB) and database helpers
 content/       Authored built-in content: course descriptor and thematic JSON packs
+content/v3/    Content overlay of the experimental product (empty)
 public/data/   Generated manifest and content-addressed packs (ignored by Git)
-scripts/       Content generation/validation, site assembly and artifact checks
+scripts/       Content generation/validation, product configuration, site assembly and artifact checks
+scripts/locks/ The list of released files that the stable build must reproduce exactly
+site.config.json  Products, routes and publish flags
 v1/            The preserved v1 application (independent project)
 ```
+
+`src/features/pronunciation/` belongs to the experimental product only. Shared code reaches it through one guarded dynamic import, so the stable build does not contain it.
 
 IndexedDB is used through [`idb`](https://github.com/jakearchibald/idb), a small promise wrapper. Only `src/storage/database.ts` imports it.
 
@@ -151,7 +187,9 @@ See [the pack format and authoring rules](docs/architecture/BUILT-IN-CONTENT.md)
 
 ### Deployment
 
-`.github/workflows/deploy.yml` builds both applications, assembles `site-dist/`, and is the only GitHub Pages publisher. Pull requests to `main` run the checks and builds without publishing. Pushes to `main` publish the assembled site.
+`.github/workflows/deploy.yml` builds the applications, assembles `site-dist/`, and is the only GitHub Pages publisher. Pull requests to `main` run the checks and builds without publishing. Pushes to `main` publish the assembled site.
+
+The workflow also tests and builds the experimental product, but copies it into the site only if its route is committed as published. It is not. The last step before the upload is `npm run check:products`: a site that is not exactly the released one stops the job there.
 
 ## Live app
 

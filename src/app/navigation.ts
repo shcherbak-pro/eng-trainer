@@ -44,6 +44,15 @@ export const DESTINATIONS: Destination[] = [
 ];
 
 /**
+ * The experimental product has one more screen (ENG-V3-01). The condition is a compile-time
+ * constant, so the stable build contains neither this block nor the screen's name.
+ */
+if (__ENG_PRONUNCIATION__) {
+  PAGE_LABELS.pronunciation = 'Pronunciation';
+  DESTINATIONS[2].pages.push('pronunciation');
+}
+
+/**
  * Learning topics (ENG-V2-03) have one shared screen with the address #topic/<topic id>.
  * Topic ids are slugs, so the address needs no escaping. Released page ids never contain
  * a slash, so the two kinds of address cannot collide.
@@ -122,6 +131,7 @@ export function availablePagesFor(blocks: TrainingBlock[], topics: LearningTopic
   const blockIds = new Set(blocks.map((block) => block.id));
   for (const topic of topics) if (blockIds.has(topic.blockId)) pages.push(topicRoute(topic.id));
 
+  if (__ENG_PRONUNCIATION__) pages.push('pronunciation');
   pages.push('favorites', 'collections', 'settings');
   return pages;
 }

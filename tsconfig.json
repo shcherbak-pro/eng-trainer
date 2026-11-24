@@ -6,7 +6,10 @@
     "noEmit": true,
     "isolatedModules": true,
     "moduleResolution": "bundler",
-    "types": ["svelte"]
+    "types": ["svelte"],
+    "paths": {
+      "$product-public/*": ["./public/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
   "exclude": ["node_modules", "dist", "site-dist", "v1"]

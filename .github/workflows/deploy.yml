@@ -1,11 +1,22 @@
 name: Build and deploy to GitHub Pages
 
-# One workflow builds both applications (v2 in the repository root, v1 in ./v1),
-# assembles them into one site and is the only publisher of GitHub Pages.
+# One workflow builds the applications (v2 and the experimental v3 in the repository
+# root, v1 in ./v1), assembles the published ones into one site and is the only
+# publisher of GitHub Pages.
 #
-# - Pull requests to main: checks, both builds and the assembly. Nothing is published.
+# - Pull requests to main: checks, all builds and the assembly. Nothing is published.
 # - Pushes to main: the same, then one upload and one deployment of the whole site.
 # - Manual runs: publish only when started from main.
+#
+# Which products are part of the site is decided by the committed route list in
+# site.config.json alone. This workflow has no inputs and passes no product or
+# publication setting. The experimental product is always tested and built, so it
+# cannot damage the stable one unnoticed, but it is copied into the site only when its
+# route is committed as published. The product gates run before the upload: a site
+# that is not exactly the released one stops the job there.
+#
+# All steps run one after another in one job. The test suites must not share a machine
+# at the same time.
 
 on:
   pull_request:
@@ -56,6 +67,9 @@ jobs:
       - name: Test v2
         run: npm test
 
+      - name: Test v3 (experimental, not published)
+        run: npm run test:v3
+
       - name: Check v1
         run: npm run check
         working-directory: v1
@@ -67,6 +81,9 @@ jobs:
       - name: Build v2
         run: npm run build
 
+      - name: Build v3 (experimental, not published)
+        run: npm run build:v3
+
       - name: Build v1
         run: npm run build
         working-directory: v1
@@ -76,6 +93,17 @@ jobs:
 
       - name: Check the assembled site
         run: npm run check:site
+
+      - name: Prove that the product gates fail on deliberate faults
+        run: npm run check:negative
+
+      - name: Rehearse route promotion and rollback (local build only)
+        run: npm run rehearse:promotion
+
+      # The last step before the upload. It fails unless site-dist/ is exactly the released
+      # site (path, size and SHA-256 of every file) and holds nothing of an unpublished product.
+      - name: Check the products and the released-site lock
+        run: npm run check:products
 
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

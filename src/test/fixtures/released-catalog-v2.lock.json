@@ -1,0 +1,115 @@
+{
+  "description": "Released built-in catalog of stable v2 (ENG-V2-03): the manifest and the 14 content-addressed packs, in manifest order. The stable product must generate exactly this catalog, and so must the experimental product while its overlay is empty.",
+  "commit": "498705a075e6f71b04e22e4437c50ec587de38dd",
+  "manifestSha256": "db99f2172b7c30c9ada8299ab2c3f463c4fe600b39878b150e321b3e5e57776b",
+  "manifestBytes": 21096,
+  "counts": {
+    "phrases": 638,
+    "wordIndex": 566,
+    "irregularVerbs": 339,
+    "patterns": 7,
+    "answers": 12,
+    "drills": 15,
+    "topics": 3
+  },
+  "packs": [
+    {
+      "id": "speaking-foundations",
+      "order": 10,
+      "url": "packs/speaking-foundations.378bea01a015d76e.json",
+      "bytes": 111770,
+      "sha256": "378bea01a015d76e04dc2f667d433d18b22e085e51fc7486ca46a1b0faf2241e"
+    },
+    {
+      "id": "presentations",
+      "order": 20,
+      "url": "packs/presentations.2cd234cc3c91ce8d.json",
+      "bytes": 179620,
+      "sha256": "2cd234cc3c91ce8d4e22197b2d794a5b1e4002a4e64f46c1eb39dc07defa83a7"
+    },
+    {
+      "id": "agent-framework",
+      "order": 30,
+      "url": "packs/agent-framework.30b26432f0ecf993.json",
+      "bytes": 133718,
+      "sha256": "30b26432f0ecf9931c00d21d645ad6982416b1362eda8d10f18751eb138f90b6"
+    },
+    {
+      "id": "hedging-and-linking",
+      "order": 40,
+      "url": "packs/hedging-and-linking.06c92cc29e38d601.json",
+      "bytes": 32554,
+      "sha256": "06c92cc29e38d6019e72d83966919b9685e3a5fe4d111bed802ac42128528be3"
+    },
+    {
+      "id": "personal-topics",
+      "order": 50,
+      "url": "packs/personal-topics.03c1443a2cc176cf.json",
+      "bytes": 145090,
+      "sha256": "03c1443a2cc176cfce5e592545794a329978d18e19de0dffbfe65f667d46f500"
+    },
+    {
+      "id": "workplace-topics",
+      "order": 60,
+      "url": "packs/workplace-topics.dad3daa8ab78823e.json",
+      "bytes": 367402,
+      "sha256": "dad3daa8ab78823e504d439e5fcd28f80204f057a6fb3f85c1db856eec0522b4"
+    },
+    {
+      "id": "ai-certification",
+      "order": 70,
+      "url": "packs/ai-certification.a743e81dde1bc943.json",
+      "bytes": 294755,
+      "sha256": "a743e81dde1bc94329d2262a5e3f850e15e8d99ae2808a3f678148549ff95b75"
+    },
+    {
+      "id": "speaking-practice",
+      "order": 80,
+      "url": "packs/speaking-practice.30d81bc404256cb8.json",
+      "bytes": 16057,
+      "sha256": "30d81bc404256cb8cde74d234c09c592154a1ee3ed09d00066d7e25236cf3448"
+    },
+    {
+      "id": "essential-100",
+      "order": 90,
+      "url": "packs/essential-100.3a71b8e1e38939e1.json",
+      "bytes": 93477,
+      "sha256": "3a71b8e1e38939e1e26c3f82c6ffe84e9194becff9445970727acbec4846708b"
+    },
+    {
+      "id": "logical-200",
+      "order": 100,
+      "url": "packs/logical-200.7dea9a714b2c308b.json",
+      "bytes": 181013,
+      "sha256": "7dea9a714b2c308b482ddd838e2eb41360516b2ab02ca96b9282c15ad1b36837"
+    },
+    {
+      "id": "ai-certification-verbs-contextual",
+      "order": 110,
+      "url": "packs/ai-certification-verbs-contextual.c200753be907b6fe.json",
+      "bytes": 36070,
+      "sha256": "c200753be907b6fe3c7192e235ade6d4b8b4ab8888fe6f20fc102acf8178e355"
+    },
+    {
+      "id": "conditionals",
+      "order": 120,
+      "url": "packs/conditionals.1c6e8e33d50795c2.json",
+      "bytes": 10626,
+      "sha256": "1c6e8e33d50795c2119dfea8880ecd9c8403b388d6630c0d3cb59d41fd8b7aba"
+    },
+    {
+      "id": "small-talk",
+      "order": 130,
+      "url": "packs/small-talk.9223c920eb6387cd.json",
+      "bytes": 14153,
+      "sha256": "9223c920eb6387cd0de76b09f144f4e62543b42327abbf776e1720dc4dc19bbf"
+    },
+    {
+      "id": "interview-english",
+      "order": 140,
+      "url": "packs/interview-english.b1b80134e0f24ef7.json",
+      "bytes": 19624,
+      "sha256": "b1b80134e0f24ef7af11d67166a8c085f14fe9e1ebc9a18ada214b3f69fa7fae"
+    }
+  ]
+}

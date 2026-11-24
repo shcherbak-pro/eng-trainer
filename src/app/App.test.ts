@@ -2,7 +2,8 @@ import { openDB } from 'idb';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DATABASE_NAME, STATE_STORE_NAMES } from '../storage/database';
 import { collection, native } from '../test/collections';
-import { createContentFetch, manifest, realMaterials } from '../test/content';
+import { contentBase, createContentFetch, manifest, realMaterials } from '../test/content';
+import { describeStableLineage, v1Url } from '../test/product';
 import type { Materials } from '../content/types';
 import { PAGE_LABELS } from './navigation';
 import {
@@ -168,7 +169,10 @@ beforeEach(() => {
   );
 });
 
-afterEach(() => {
+afterEach(async () => {
+  // A lazily loaded screen (experimental product) may still be importing when a test ends.
+  // Let it finish inside this test, before the next one resets the module registry.
+  await vi.dynamicImportSettled();
   cleanups.forEach((undo) => undo());
   cleanups = [];
   running.forEach((app) => app.close());
@@ -225,10 +229,10 @@ describe('application shell', () => {
 
     await ready(app);
 
-    expect(fetch).toHaveBeenCalledWith('/eng-trainer/data/manifest.json', { cache: 'no-store' });
+    expect(fetch).toHaveBeenCalledWith(`${contentBase}manifest.json`, { cache: 'no-store' });
     expect(fetch).toHaveBeenCalledTimes(manifest.packs.length + 1);
     for (const pack of manifest.packs) {
-      expect(fetch).toHaveBeenCalledWith(`/eng-trainer/data/${pack.url}`, { cache: 'no-store' });
+      expect(fetch).toHaveBeenCalledWith(`${contentBase}${pack.url}`, { cache: 'no-store' });
     }
     expect(text(app.root)).toContain('Learning blocks');
     expect(app.root.querySelector('.storage-notice')).toBeNull();
@@ -240,8 +244,9 @@ describe('application shell', () => {
     const app = await startApp();
     await ready(app);
 
-    const link = app.root.querySelector<HTMLAnchorElement>('a[href="/eng-trainer/v1/"]')!;
-    expect(link.getAttribute('href')).toBe('/eng-trainer/v1/');
+    // v1 lives at the base path of the site, not below this product's own path.
+    const link = app.root.querySelector<HTMLAnchorElement>(`a[href="${v1Url}"]`)!;
+    expect(link.getAttribute('href')).toBe(v1Url);
     expect(text(link)).toContain('v1');
   });
 
@@ -507,7 +512,7 @@ describe('loading and storage errors', () => {
 
     expect(text(app.root)).toContain('The study material could not be loaded');
     expect(text(app.root)).not.toContain('npm run');
-    expect(text(app.root)).toContain('/eng-trainer/data/manifest.json');
+    expect(text(app.root)).toContain(`${contentBase}manifest.json`);
 
     vi.stubGlobal(
       'fetch',
@@ -577,7 +582,7 @@ function holdLegacyConnection() {
   return openDB(DATABASE_NAME, 1, { upgrade(db) { STATE_STORE_NAMES.forEach((name) => db.createObjectStore(name)); } });
 }
 
-describe('blocked database upgrade at start-up (F4)', () => {
+describeStableLineage('blocked database upgrade at start-up (F4)', () => {
   it('keeps the waiting guidance on "Check again" and continues by itself when the other tab closes', async () => {
     const legacy = await holdLegacyConnection();
     const app = await startApp();
@@ -756,7 +761,7 @@ describe('navigation', () => {
     app.flush();
     expect(more.getAttribute('aria-expanded')).toBe('true');
     const sheet = app.root.querySelector('#more-sheet')!;
-    expect([...sheet.querySelectorAll('a')].map((link) => link.getAttribute('href'))).toEqual(['#collections', '#settings', '/eng-trainer/v1/']);
+    expect([...sheet.querySelectorAll('a')].map((link) => link.getAttribute('href'))).toEqual(['#collections', '#settings', v1Url]);
 
     sheet.querySelector<HTMLAnchorElement>('a[href="#settings"]')!.click();
     app.flush();

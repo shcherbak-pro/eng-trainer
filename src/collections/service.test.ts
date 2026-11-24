@@ -8,6 +8,7 @@ import { DATABASE_NAME, openStorage, STATE_STORE_NAMES, STORE_NAMES, type AppSto
 import { collection, entry, id, native } from '../test/collections';
 import { realMaterials } from '../test/content';
 import { readDatabase, resetDatabase, watchUnhandledRejections } from '../test/database';
+import { itStableLineage } from '../test/product';
 import { parseImport } from './format';
 import { acceptImport, connectCollections, disableCollections, exportCollection, prepareImport, readCollections, removeCollection, renameCollection, userVocabulary } from './service';
 
@@ -144,7 +145,7 @@ describe('collection persistence and catalog', () => {
 });
 
 describe('transaction and migration guarantees', () => {
-  it('reports a blocked upgrade and safely retries after the old connection closes', async () => {
+  itStableLineage('reports a blocked upgrade and safely retries after the old connection closes', async () => {
     storage.close(); resetDatabase();
     const legacy = await openDB(DATABASE_NAME, 1, { upgrade(db) { STATE_STORE_NAMES.forEach((name) => db.createObjectStore(name)); } });
     await expect(openStorage()).rejects.toThrow(/Close other eng-trainer tabs/);
@@ -152,7 +153,7 @@ describe('transaction and migration guarantees', () => {
     await connect();
     expect(get(userVocabulary).available).toBe(true);
   });
-  it('rolls back a failed schema upgrade without losing version-1 records', async () => {
+  itStableLineage('rolls back a failed schema upgrade without losing version-1 records', async () => {
     storage.close(); resetDatabase();
     const legacy = await openDB(DATABASE_NAME, 1, { upgrade(db) { STATE_STORE_NAMES.forEach((name) => db.createObjectStore(name)); } });
     await legacy.put('progress', ['phrase-001'], 'learnedPhrases'); legacy.close();
@@ -170,7 +171,7 @@ describe('transaction and migration guarantees', () => {
     expect(await unchanged.get('progress', 'learnedPhrases')).toEqual(['phrase-001']);
     unchanged.close(); await connect();
   });
-  it('upgrades a real version-1 schema, preserving every existing record without startup writes', async () => {
+  itStableLineage('upgrades a real version-1 schema, preserving every existing record without startup writes', async () => {
     storage.close(); resetDatabase();
     const legacy = await openDB(DATABASE_NAME, 1, { upgrade(db) { STATE_STORE_NAMES.forEach((name) => db.createObjectStore(name)); } });
     const expected = { progress: { learnedPhrases: ['phrase-005'], unknownFutureRecord: { exact: true } }, settings: { theme: 'dark' }, learnPasses: { pass: { raw: ['unchanged'] } }, flashcardSessions: { all: { order: ['phrase-001'], index: 0 } } };
