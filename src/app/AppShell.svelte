@@ -25,8 +25,11 @@
     onNavigate(page);
   }
 
-  /** The preserved v1 application is published next to this one. */
-  const v1Url = `${import.meta.env.BASE_URL}v1/`;
+  /**
+   * The preserved v1 application is published at the site base, next to every product.
+   * This product's own base path can be a sub-path of the site, so it is not used here.
+   */
+  const v1Url = `${__SITE_BASE__}v1/`;
 
   let heading: HTMLHeadingElement | undefined;
   let main: HTMLElement | undefined;

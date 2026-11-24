@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { collection, native } from '../test/collections';
 import { createContentFetch, realMaterials } from '../test/content';
 import { readDatabase, resetDatabase, seedDatabase } from '../test/database';
+import { productBase } from '../test/product';
 import { PAGE_LABELS } from './navigation';
 
 /**
@@ -125,7 +126,10 @@ beforeEach(() => {
   vi.stubGlobal('fetch', vi.fn(createContentFetch()));
 });
 
-afterEach(() => {
+afterEach(async () => {
+  // A lazily loaded screen (experimental product) may still be importing when a test ends.
+  // Let it finish inside this test, before the next one resets the module registry.
+  await vi.dynamicImportSettled();
   running.forEach((app) => app.close());
   running = [];
   vi.unstubAllGlobals();
@@ -147,7 +151,7 @@ describe('shared header (ENG-V2-03)', () => {
       expect(app.root.querySelector('main h1'), page).not.toBeNull();
     }
     const brand = app.root.querySelector<HTMLAnchorElement>('.app-header a')!;
-    expect(brand.getAttribute('href')).toBe('/eng-trainer/#index');
+    expect(brand.getAttribute('href')).toBe(`${productBase}#index`);
     // The skip link still comes first, before the header.
     expect(app.root.querySelector('.app-shell')!.firstElementChild!.classList.contains('skip-link')).toBe(true);
     brand.click();

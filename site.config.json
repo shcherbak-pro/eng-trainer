@@ -1,0 +1,25 @@
+{
+  "base": "/eng-trainer/",
+  "products": {
+    "stable-v2": {
+      "database": "eng-trainer-v2",
+      "pronunciation": false,
+      "publicDir": "public",
+      "outDir": "dist"
+    },
+    "legacy-v1": {
+      "outDir": "v1/dist"
+    },
+    "experimental-v3": {
+      "database": "eng-trainer-v3",
+      "pronunciation": true,
+      "publicDir": ".variant/experimental-v3/public",
+      "outDir": "dist-v3"
+    }
+  },
+  "routes": [
+    { "path": "", "product": "stable-v2", "publish": true },
+    { "path": "v1/", "product": "legacy-v1", "publish": true },
+    { "path": "v3/", "product": "experimental-v3", "publish": false }
+  ]
+}

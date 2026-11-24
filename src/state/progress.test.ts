@@ -235,14 +235,15 @@ describe('learning state in IndexedDB', () => {
 });
 
 describe('storage boundaries', () => {
-  it('uses the dedicated v2 database', async () => {
+  it('uses only the dedicated database of its product', async () => {
     const { DATABASE_NAME } = await import('../storage/database');
     const app = await loadState();
     app.progress.toggleLearnedPhrase('phrase-001');
     await app.saved();
 
-    expect(DATABASE_NAME).toBe('eng-trainer-v2');
-    expect((await indexedDB.databases()).map((db) => db.name)).toEqual(['eng-trainer-v2']);
+    // The names themselves are pinned as literals in src/product.contract.test.ts.
+    expect(DATABASE_NAME).toBe(__ENG_DATABASE__);
+    expect((await indexedDB.databases()).map((db) => db.name)).toEqual([__ENG_DATABASE__]);
   });
 
   it('never reads or writes localStorage, so v1 data is neither used nor changed', async () => {

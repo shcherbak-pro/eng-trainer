@@ -1,6 +1,7 @@
 import { openDB } from 'idb';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { resetDatabase } from '../test/database';
+import { describeStableLineage } from '../test/product';
 import { DATABASE_NAME, openStorage, STATE_STORE_NAMES, StorageAbortError } from './database';
 
 /** Another tab that still runs a build with database version 1 and does not close for upgrades. */
@@ -15,7 +16,7 @@ beforeEach(() => {
   vi.restoreAllMocks();
 });
 
-describe('blocked database upgrade (F4)', () => {
+describeStableLineage('blocked database upgrade (F4)', () => {
   it('keeps waiting with guidance and continues by itself when the other tab closes', async () => {
     const legacy = await holdLegacyConnection();
     const onBlocked = vi.fn();

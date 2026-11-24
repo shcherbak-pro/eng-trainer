@@ -1,6 +1,6 @@
 import { IDBFactory } from 'fake-indexeddb';
 import { openDB } from 'idb';
-import { DATABASE_NAME, DATABASE_VERSION, STORE_NAMES, type StoreName } from '../storage/database';
+import { DATABASE_NAME, DATABASE_VERSION, META_STORE_NAME, STORE_NAMES, type StoreName } from '../storage/database';
 
 export type SavedRecords = Partial<Record<StoreName, Record<string, unknown>>>;
 
@@ -21,6 +21,11 @@ async function open() {
     upgrade(db) {
       for (const name of STORE_NAMES) {
         if (!db.objectStoreNames.contains(name)) db.createObjectStore(name);
+      }
+      // The experimental database has one more store (ENG-V3-01). A database seeded here must
+      // have the product's complete schema, because the application will not upgrade it.
+      if (__ENG_PRODUCT__ === 'experimental-v3' && !db.objectStoreNames.contains(META_STORE_NAME)) {
+        db.createObjectStore(META_STORE_NAME);
       }
     }
   });

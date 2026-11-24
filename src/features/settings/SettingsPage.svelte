@@ -6,7 +6,8 @@
   import Icon from '../../shared/ui/Icon.svelte';
   import { showToast } from '../../shared/ui/toast';
 
-  const v1Url = `${import.meta.env.BASE_URL}v1/`;
+  /** v1 is published at the site base, whichever path this product is published at. */
+  const v1Url = `${__SITE_BASE__}v1/`;
   const themes: { value: ThemePreference; label: string; hint: string }[] = [
     { value: 'system', label: 'System', hint: 'Follow the device setting' },
     { value: 'light', label: 'Light', hint: '' },

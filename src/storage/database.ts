@@ -1,20 +1,39 @@
 import { openDB, type IDBPDatabase, type IDBPTransaction } from 'idb';
 
 /**
- * IndexedDB access for the v2 application.
+ * IndexedDB access for the application.
  *
  * This is the only module that touches IndexedDB. It knows the database name,
  * the object stores and how to run transactions. It does not know what the
  * stored values mean: the state services own and validate them.
+ *
+ * Each product has its own database (ENG-V3-01). The product is fixed when the
+ * application is built (see src/product.d.ts), never by the address it runs at:
+ *
+ * - stable-v2:       `eng-trainer-v2`, version 2, the six stores below;
+ * - experimental-v3: `eng-trainer-v3`, a new lineage that starts at version 1 with
+ *                    the same six stores plus `meta`.
+ *
+ * A build opens only its own database. Two names on one origin separate the data
+ * logically; they are not a security boundary and give no separate durability.
  */
 
-export const DATABASE_NAME = 'eng-trainer-v2';
-export const DATABASE_VERSION = 2;
+export const DATABASE_NAME = __ENG_DATABASE__;
+export const DATABASE_VERSION = __ENG_PRODUCT__ === 'experimental-v3' ? 1 : 2;
 
 /** Every store uses explicit string keys (`put(value, key)`). */
 export const STATE_STORE_NAMES = ['progress', 'learnPasses', 'flashcardSessions', 'settings'] as const;
 export const STORE_NAMES = [...STATE_STORE_NAMES, 'userCollections', 'userEntries'] as const;
 export type StoreName = (typeof STORE_NAMES)[number];
+
+/**
+ * The extra store of the experimental database. It holds facts about the database
+ * itself, not learning state, so `readAll()` and the state services never see it.
+ */
+export const META_STORE_NAME = 'meta';
+/** Keys written once, when the experimental database is created. */
+export const META_SCHEMA_KEY = 'schema';
+export const META_CREATED_AT_KEY = 'createdAt';
 
 /** Optimistic concurrency checks, read inside the same transaction as the writes. */
 export type WriteCondition = { store: StoreName; key: string; expected: unknown };
@@ -230,6 +249,21 @@ function settle(waiter: ConnectionWaiter, run: () => void): void {
   run();
 }
 
+/**
+ * Version 1 of the experimental database: the six shared stores and `meta`, created in
+ * one step. The two meta records are written in the same upgrade transaction, so the
+ * database either exists completely or not at all. A failed write aborts that
+ * transaction and is reported by the open request; the handlers only keep the same
+ * failure from also surfacing as an unhandled rejection.
+ */
+function createExperimentalSchema(database: IDBPDatabase, transaction: IDBPTransaction<unknown, string[], 'versionchange'>): void {
+  for (const name of STORE_NAMES) database.createObjectStore(name);
+  database.createObjectStore(META_STORE_NAME);
+  const meta = transaction.objectStore(META_STORE_NAME);
+  meta.put(DATABASE_VERSION, META_SCHEMA_KEY).catch(() => undefined);
+  meta.put(new Date().toISOString(), META_CREATED_AT_KEY).catch(() => undefined);
+}
+
 function beginOpen(): PendingOpen {
   const pending: PendingOpen = { blocked: false, waiters: [] };
   let upgradeFailure: unknown;
@@ -238,6 +272,19 @@ function beginOpen(): PendingOpen {
       // The open request reports a failed migration; also observe idb's
       // wrapped upgrade-transaction promise so its abort is not detached.
       void transaction.done.catch(() => undefined);
+      // The experimental database is a separate lineage. It never runs the stable
+      // migrations below, and the stable build does not contain this branch. The
+      // condition stays outside the `try` block: the bundler keeps everything inside
+      // a `try` block, also code that a compile-time constant has switched off.
+      if (__ENG_PRODUCT__ === 'experimental-v3') {
+        try {
+          createExperimentalSchema(database, transaction);
+        } catch (error) {
+          upgradeFailure = error;
+          transaction.abort();
+        }
+        return;
+      }
       try {
         if (oldVersion < 1) {
           for (const name of STATE_STORE_NAMES) database.createObjectStore(name);
@@ -305,7 +352,7 @@ function requestConnection({ onBlocked, signal }: OpenStorageOptions): Promise<I
   });
 }
 
-/** Opens the v2 database, creating it on the first run. */
+/** Opens this product's database, creating it on the first run. */
 export async function openStorage(options: OpenStorageOptions = {}): Promise<AppStorage> {
   try {
     if (typeof indexedDB === 'undefined') {

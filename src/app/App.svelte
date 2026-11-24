@@ -156,6 +156,11 @@
     navigate('index');
   }
 
+  // The last branch of the screen list below belongs to the experimental product only (ENG-V3-01).
+  // It must stay last, hold no comment or text of its own, and start its condition with the bare
+  // compile-time constant: the stable build then drops the branch together with the import, and
+  // its compiled output stays byte-identical to the released one. The released-site lock checks it.
+
   onMount(() => {
     mounted = true;
     window.addEventListener('hashchange', syncPageFromHash);
@@ -271,6 +276,10 @@
       <SettingsPage />
     {:else if activeTopic}
       <TopicPage {catalog} topic={activeTopic} onNavigate={navigate} />
+    {:else if __ENG_PRONUNCIATION__ && activePage === 'pronunciation'}
+      {#await import('../features/pronunciation/PronunciationPlaceholder.svelte') then feature}
+        <svelte:component this={feature.default} />
+      {/await}
     {/if}
   </AppShell>
 {/if}

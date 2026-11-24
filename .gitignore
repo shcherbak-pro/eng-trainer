@@ -9,3 +9,13 @@ site-dist/
 # Generated from content/ by npm run content:generate (also run before build/dev/check/test).
 /public/data/manifest.json
 /public/data/packs/
+
+# ENG-V3-01: products built from this source tree (see site.config.json).
+# Build output and staged public folder of the experimental product.
+dist-v3/
+.variant/
+# Test-only assembly of all products, and the promotion and rollback rehearsal. Never published.
+.site-test/
+.rehearsal/
+# Raw local evidence: browser profiles, downloaded artifacts, logs and disposable build copies.
+.local/
