@@ -124,36 +124,52 @@ export async function removeGeneratedDir(root, dir, uses) {
   return path;
 }
 
+/** The folder of a build, relative to `root`, with "/": the text that the list of generated folders is compared with. */
+const buildDir = (root, outDir) => relative(resolve(root), resolve(root, outDir)).split(sep).join('/');
+
 /**
  * Vite empties its output folder before it writes a build. `outDir` is the value Vite
  * resolved, whether it came from vite.config.ts, an inline option or the command line.
  * It is accepted only when it is a product build folder or lies in a work area.
  */
 export function assertBuildOutDir(root, outDir) {
-  const dir = relative(resolve(root), resolve(root, outDir)).split(sep).join('/');
-  return assertGeneratedDir(root, dir, ['build', 'work']);
+  return assertGeneratedDir(root, buildDir(root, outDir), ['build', 'work']);
 }
+
+/** Below its output folder, a build writes scripts, stylesheets and fonts here and nowhere else. */
+export const BUILD_ASSETS_DIR = 'assets';
+
+/** Vite keeps an entry with this name when it empties an output folder (prepareOutDir, Vite 6.4.3). */
+const KEPT_BY_VITE = '.git';
 
 /**
  * A build of this repository has one destination: the folder `build.outDir`, emptied
- * before anything is written to it (ENG-V3-01-RC2). `config` is the configuration Vite
- * resolved from every source: vite.config.ts, an inline option of the JavaScript API and
- * the command line.
+ * before anything is written to it (ENG-V3-01-RC2, RC3). `config` is the configuration
+ * Vite resolved from every source: vite.config.ts, an inline option of the JavaScript API
+ * and the command line.
  *
  * Vite builds from `config.environments[name].build`. `config.build` is the set of
  * options that plugins and older code read. Every one of these sets is checked:
  *
- *   - `outDir` must be a product build folder or lie in a work area (see above).
  *   - `rollupOptions.output` must be absent. Vite empties every folder that an output
  *     names with `dir`, as an object or as a list, in place of `outDir`. These builds
  *     need no Rollup output option, so none is accepted: not `dir`, not `file`, and not
  *     a list in which one entry is harmless.
  *   - `emptyOutDir` must not be false. Vite then removes whatever lies inside the
  *     folder, a link included, before it writes a file there.
+ *   - `assetsDir` must be "assets", and `manifest` and `ssrManifest` must be false. So no
+ *     option names a place for a generated file: assets go to "assets", and no manifest
+ *     is written.
+ *   - `outDir` must be a product build folder or lie in a work area (see above).
+ *   - The output folder must hold no entry named ".git". That is the one entry Vite does
+ *     not remove when it empties the folder. A build could write into it, and through it
+ *     if it is a link. With no such entry, the folder is empty when the build starts to
+ *     write, so every path below it is one the build creates itself.
  *
- * Throws at the first set that fails. It reads the disk and changes nothing. This was
- * read against Vite 6.4.3 (getResolvedOutDirs and prepareOutDir); a Vite update has to
- * repeat that reading, and scripts/build-destinations.test.mjs fails until it is done.
+ * Throws at the first set that fails. It reads the disk and changes nothing: an entry or
+ * a link it refuses is left exactly as it is. This was read against Vite 6.4.3
+ * (getResolvedOutDirs, prepareOutDir, emptyDir); a Vite update has to repeat that
+ * reading, and scripts/build-destinations.test.mjs fails until it is done.
  */
 export function assertBuildDestinations(config) {
   const sets = [['build', config.build], ...Object.entries(config.environments).map(([name, environment]) => [`environments.${name}.build`, environment.build])];
@@ -165,6 +181,18 @@ export function assertBuildDestinations(config) {
     if (build.emptyOutDir === false) {
       throw new Error(`"${name}.emptyOutDir" is false. A build of this repository always empties its output folder first, so that nothing left inside it, a link included, is written through. ${stopped}`);
     }
-    assertBuildOutDir(config.root, build.outDir);
+    if (build.assetsDir !== BUILD_ASSETS_DIR) {
+      throw new Error(`"${name}.assetsDir" is ${JSON.stringify(build.assetsDir) ?? String(build.assetsDir)}. A build of this repository writes its assets to "${BUILD_ASSETS_DIR}" below its output folder and nowhere else. ${stopped}`);
+    }
+    for (const option of ['manifest', 'ssrManifest']) {
+      if (build[option] !== false) {
+        throw new Error(`"${name}.${option}" is set. A build of this repository writes no manifest, so no option may name a file for one. ${stopped}`);
+      }
+    }
+    const { path, exists } = assertBuildOutDir(config.root, build.outDir);
+    const kept = exists ? readdirSync(path).filter((entry) => entry.toLowerCase() === KEPT_BY_VITE) : [];
+    if (kept.length) {
+      throw new Error(`The output folder "${buildDir(config.root, build.outDir)}" holds an entry named "${kept[0]}". No output folder of this repository may hold a Git entry: Vite does not remove "${KEPT_BY_VITE}" when it empties the folder, so a build could write into it, or through it if it is a link. Nothing was removed or changed. Look at it by hand: the scripts never repair this.`);
+    }
   }
 }

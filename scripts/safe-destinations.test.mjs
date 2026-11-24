@@ -4,8 +4,7 @@
 //
 // Every test goes through entry points that existed before the correction: the
 // configuration validator, the content command, the staging function and the assembly.
-// So the same assertions fail on the reviewed code and pass on the corrected code
-// (docs/evidence/eng-v3-01-rc1/ holds both runs).
+// So the same assertions fail on the reviewed code and pass on the corrected code.
 //
 // Nothing here can touch the real repository. Each filesystem case builds a disposable
 // copy ("fixture") in the system's temporary folder: the scripts next to this file, the

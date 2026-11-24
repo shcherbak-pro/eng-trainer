@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — ENG-V3-01-RC3 (2026-11-24)
+
+Correction from Astra's independent review of ENG-V3-01-RC2. Nothing changes for users: the application code is untouched, and the published site stays byte-identical to the ENG-V2-03 release.
+
+- **F1-RC2:** A build can no longer write through a `.git` entry in its output folder.
+  - Vite keeps an entry named `.git` when it empties an output folder. With a link at that place, `--manifest .git/main.ts` or `--assetsDir .git` wrote into the folder that the link leads to.
+  - A build now refuses an output folder that holds an entry named `.git`, whatever that entry is, and leaves the entry as it is.
+  - A build accepts no other place for a generated file: `assetsDir` must be `assets`, and no manifest is written.
+- New tests with real builds cover the three reproductions of the review. One more test pins that Rollup judges a file name by its text only.
+- The implementation handoff of ENG-V3-01 is a local record and no longer part of the repository. `docs/architecture/PRODUCTS-AND-ROUTES.md` now lists the open gates for later milestones itself.
 ## Unreleased — ENG-V3-01-RC2 (2026-11-24)
 
 Correction from Astra's independent review of ENG-V3-01-RC1. Nothing changes for users: the application code is untouched, and the published site stays byte-identical to the ENG-V2-03 release.

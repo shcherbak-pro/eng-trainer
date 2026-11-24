@@ -1,6 +1,10 @@
-// Regressions for review finding F1-RC1 (ENG-V3-01-RC2): a build option must never make
-// Vite empty or overwrite a source folder. Vite empties every folder that a Rollup output
-// option names with "dir", so a valid "build.outDir" alone did not protect the sources.
+// Regressions for the review findings F1-RC1 (ENG-V3-01-RC2) and F1-RC2 (ENG-V3-01-RC3): a
+// build option must never make Vite empty or overwrite a source folder.
+//
+//   F1-RC1  Vite empties every folder that a Rollup output option names with "dir", so a
+//           valid "build.outDir" alone did not protect the sources.
+//   F1-RC2  Vite keeps an entry named ".git" when it empties an output folder, and a
+//           manifest or assets option could write into it, and through it if it is a link.
 //
 // Every case is a real build: the command line ("vite build") or the JavaScript API
 // ("build()", "createBuilder()"), each in its own process. A refused build must exit with
@@ -161,12 +165,15 @@ function replaceOnce(text, from, to) {
 
 const NO_OUTPUT_OPTION = /rollupOptions\.output" is set\. A build of this repository accepts no Rollup output option/;
 const NOT_GENERATED = /is not a generated folder of this repository, so no script may empty or delete it/;
+const NO_MANIFEST = /manifest" is set\. A build of this repository writes no manifest, so no option may name a file for one/;
+const ONLY_ASSETS = /assetsDir" is ".*"\. A build of this repository writes its assets to "assets" below its output folder and nowhere else/;
 const output = (value) => ({ build: { rollupOptions: { output: value } } });
 
 test('the build check was read against the installed Vite and Rollup', () => {
   // scripts/generated-dirs.mjs relies on how this Vite version finds the folders it empties
-  // (getResolvedOutDirs, prepareOutDir) and on Rollup refusing file names that leave the
-  // output folder. After an update, read both again, run this file, then change the numbers.
+  // and what it keeps in them (getResolvedOutDirs, prepareOutDir, emptyDir), and on Rollup
+  // refusing file names that leave the output folder. After an update, read both again,
+  // run this file, then change the numbers.
   assert.equal(installed('vite'), '6.4.3');
   assert.equal(installed('rollup'), '4.63.1');
 });
@@ -268,22 +275,66 @@ test('ENG-V3-01-RC1 stays in force: the configured folder and --outDir are check
   mustRefuse(base, 'the same, for the stable product, whose folder is fine', () => cli(root, [], STABLE_PRODUCT), /"dist-v3" is a symbolic link or a junction, not a real folder/);
 });
 
-test('a file name that would leave the output folder is refused by Rollup, and nothing outside that folder changes', (t) => {
+test('F1-RC2: assets go to "assets" and no manifest is written, so no option names another place for a generated file', (t) => {
   const { base, root } = fixture(t);
-  const cases = {
-    '--manifest with a path that leads to a source file': ['--manifest', 'a/../../src/main.ts'],
-    '--assetsDir with a path that leads to the source folder': ['--assetsDir', 'a/../../src']
-  };
-  for (const [label, args] of Object.entries(cases)) {
-    const before = snapshot(base);
-    const result = cli(root, args);
-    assert.notEqual(result.exit, 0, `${label}\n${result.output}`);
-    assert.equal(result.built, false, label);
-    // The check accepted these options: the product's own folder is the only one Vite emptied.
-    assert.deepEqual(differenceOutside(before, snapshot(base), 'dist-v3'), [], label);
-  }
+  mustRefuse(base, 'command line: --manifest with a file name', () => cli(root, ['--manifest', '.git/main.ts']), NO_MANIFEST);
+  mustRefuse(base, 'command line: --manifest with a path that leads to a source file', () => cli(root, ['--manifest', 'a/../../src/main.ts']), NO_MANIFEST);
+  mustRefuse(base, 'command line: --manifest alone', () => cli(root, ['--manifest']), NO_MANIFEST);
+  mustRefuse(base, 'JavaScript API: ssrManifest', () => api(root, { build: { ssrManifest: 'a/../../src/main.ts' } }), /ssrManifest" is set\. A build of this repository writes no manifest/);
+  mustRefuse(base, 'command line: --assetsDir .git', () => cli(root, ['--assetsDir', '.git']), ONLY_ASSETS);
+  mustRefuse(base, 'command line: --assetsDir with a path that leads to the source folder', () => cli(root, ['--assetsDir', 'a/../../src']), ONLY_ASSETS);
+  mustRefuse(base, 'client environment: another assets folder', () => api(root, { environments: { client: { build: { assetsDir: 'static' } } } }), ONLY_ASSETS);
+  mustRefuse(base, 'the stable product', () => cli(root, ['--manifest', '.git/main.ts'], STABLE_PRODUCT), NO_MANIFEST);
 });
 
+test('F1-RC2: an output folder that holds a ".git" entry is refused: Vite would keep that entry and write through it', (t) => {
+  const { base, root } = fixture(t);
+  const kept = (dir) => new RegExp(`The output folder "${dir.replaceAll('.', '\\.')}" holds an entry named "\\.git"\\. No output folder of this repository may hold a Git entry`);
+  // The arrangement of the review: a real output folder, and inside it ".git" as a link.
+  mkdirSync(join(root, 'dist-v3'));
+  link(join(root, 'src'), join(root, 'dist-v3', '.git'));
+  mkdirSync(join(root, 'dist'));
+  link(join(base, 'outside'), join(root, 'dist', '.git'));
+
+  // The three builds that the review reproduced. Each one is refused for its option already.
+  mustRefuse(base, 'command line: --manifest .git/main.ts over a link to the source folder', () => cli(root, ['--manifest', '.git/main.ts']), NO_MANIFEST);
+  mustRefuse(base, 'JavaScript API: manifest ".git/main.ts" over the same link', () => api(root, { build: { manifest: '.git/main.ts' } }), NO_MANIFEST);
+  mustRefuse(base, 'command line: --assetsDir .git over a link to a folder outside', () => cli(root, ['--assetsDir', '.git'], STABLE_PRODUCT), ONLY_ASSETS);
+
+  // Without any option, the entry alone stops the build: nothing may be written into it by any other way.
+  mustRefuse(base, 'a plain build of the experimental product', () => cli(root), kept('dist-v3'));
+  mustRefuse(base, 'a plain build of the stable product', () => cli(root, [], STABLE_PRODUCT), kept('dist'));
+  mustRefuse(base, 'JavaScript API, no option', () => api(root, {}), kept('dist-v3'));
+  mustRefuse(base, 'builder API with a shared configuration', () => builder(root, { builder: { sharedConfigBuild: true } }), kept('dist-v3'));
+
+  // A real folder and a file with that name are refused as well, also in a work area.
+  mkdirSync(join(root, '.rehearsal', 'kept-folder', '.git'), { recursive: true });
+  writeFileSync(join(root, '.rehearsal', 'kept-folder', '.git', 'config'), 'not ours\n');
+  mkdirSync(join(root, '.local', 'negative', 'kept-file'), { recursive: true });
+  writeFileSync(join(root, '.local', 'negative', 'kept-file', '.git'), 'gitdir: elsewhere\n');
+  mustRefuse(base, 'a real folder named ".git" in the output folder', () => api(root, { build: { outDir: '.rehearsal/kept-folder', emptyOutDir: true } }), kept('.rehearsal/kept-folder'));
+  mustRefuse(base, 'a file named ".git" in the output folder', () => api(root, { build: { outDir: '.local/negative/kept-file', emptyOutDir: true } }), kept('.local/negative/kept-file'));
+
+  // Every refusal above left both links and what they lead to exactly as they were.
+  assert.equal(realpathSync.native(join(root, 'dist-v3', '.git')), join(root, 'src'));
+  assert.equal(realpathSync.native(join(root, 'dist', '.git')), join(base, 'outside'));
+});
+
+test('Rollup refuses a file name that leaves the output folder, but it judges the text of the name only', async (t) => {
+  // This is the part of the boundary that the repository leaves to Rollup, and the reason
+  // for the two tests above: a name such as ".git/main.js" is inside the folder as text,
+  // whatever lies on disk at that place. Nothing is written here: the bundle is only generated.
+  const { rollup } = await import('rollup');
+  const bundle = await rollup({
+    input: 'entry',
+    plugins: [{ name: 'entry', resolveId: (id) => (id === 'entry' ? id : null), load: (id) => (id === 'entry' ? 'export default 1;' : null) }]
+  });
+  t.after(() => bundle.close());
+  await assert.rejects(bundle.generate({ dir: 'dist', entryFileNames: 'a/../../escape.js' }), { code: 'FILE_NAME_OUTSIDE_OUTPUT_DIRECTORY' });
+  await assert.rejects(bundle.generate({ dir: 'dist', entryFileNames: '../escape.js' }));
+  const { output: [chunk] } = await bundle.generate({ dir: 'dist', entryFileNames: '.git/main.js' });
+  assert.equal(chunk.fileName, '.git/main.js');
+});
 test('both products build into their own folders: a stale file goes, and nothing else changes', (t) => {
   const { base, root } = fixture(t);
   mustBuild(base, 'stable product, command line', () => cli(root, [], STABLE_PRODUCT), 'dist');

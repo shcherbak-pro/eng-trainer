@@ -2,7 +2,7 @@
 
 One source tree builds two applications, and the site still contains the frozen v1. This document describes how a build learns which product it is, where each product is published, and which gates keep the released site unchanged.
 
-It describes what ENG-V3-01 implemented. The design and its reasons are in the ENG-V3-00 architecture plan and its two reviews; the [ENG-V3-01 handoff](../handoffs/ENG-V3-01.md#1-decisions-and-reviewed-design) says where those documents are and records the implementation.
+It describes what ENG-V3-01 implemented. The design and its reasons are in the ENG-V3-00 architecture plan and its two reviews. Those documents, and the implementation handoff of ENG-V3-01 with its evidence, are local records of the owner and are not part of this repository.
 
 ## Two separate ideas
 
@@ -90,7 +90,7 @@ The two links to v1 used the product base before ENG-V3-01. From a product below
 - `meta` holds two records written once, in the transaction that creates the database: `schema` (1) and `createdAt`. It is not learning state. `readAll()` and the state services never see it.
 - A build opens only its own database. `experimental-v3` never opens, creates, reads, writes or upgrades `eng-trainer-v2`, and it never touches `localStorage`.
 
-Two database names on one origin separate the data logically. They are not a security boundary, and they give no separate durability: browser storage of one origin shares one quota and one eviction exposure. ENG-V3-01 makes no backup or durability claim. See the [open gates](../handoffs/ENG-V3-01.md#10-future-gates-that-are-not-part-of-this-milestone).
+Two database names on one origin separate the data logically. They are not a security boundary, and they give no separate durability: browser storage of one origin shares one quota and one eviction exposure. ENG-V3-01 makes no backup or durability claim. See the [open gates](#open-gates-for-later-milestones).
 
 ## Content
 
@@ -167,7 +167,10 @@ Limits of this rule:
 
 A build has one destination: the folder `build.outDir`, emptied before anything is written to it.
 
-Checking `outDir` alone was not enough. Vite also empties every folder that a Rollup output option names with `dir`, in place of `outDir`. ENG-V3-01-RC2 closed that with rules 2 and 3 below.
+Checking `outDir` alone was not enough, for two reasons:
+
+- Vite also empties every folder that a Rollup output option names with `dir`, in place of `outDir`. ENG-V3-01-RC2 closed that with rules 2 and 3 below.
+- Vite keeps an entry named `.git` when it empties an output folder. A manifest or assets option could write into that entry, and through it if it is a link. ENG-V3-01-RC3 closed that with rules 4 to 6.
 
 The check is `assertBuildDestinations` in [`scripts/generated-dirs.mjs`](../../scripts/generated-dirs.mjs). A build-only plugin in `vite.config.ts` calls it when Vite has resolved its configuration (`configResolved`). At that moment the options from every source are merged: `vite.config.ts`, an inline option of the JavaScript API and the command line. Vite has not yet emptied or written an output folder.
 
@@ -176,13 +179,18 @@ It checks every set of build options that Vite holds: `build`, and `environments
 1. `outDir` must be a build folder or a work-area folder from the list, and real on disk (both halves above).
 2. `rollupOptions.output` must be absent. No Rollup output option is accepted: not `dir`, not `file`, not a list in which one entry is harmless, and not an option that looks unrelated. The builds of this repository need none. If one is needed later, extend the check on purpose with a list of accepted keys.
 3. `emptyOutDir` must not be `false`. Vite then removes whatever lies in the folder, a link included, before it writes a file there.
+4. `assetsDir` must be `assets`. The scripts, stylesheets and fonts of a build go to `assets/` below its output folder and nowhere else.
+5. `manifest` and `ssrManifest` must be `false`. A build writes no manifest, so no option names a file for one.
+6. The output folder must hold no entry named `.git`: no folder, no file and no link, in any letter case. It is the one entry that Vite does not remove. The refusal leaves the entry, and whatever a link leads to, exactly as it is.
+
+Rules 3 and 6 together mean that the output folder is empty when the build starts to write. Every path below it is then one that the build creates itself, so a name that lies inside the folder as text lies inside it on disk too.
 
 Other Rollup options, such as `rollupOptions.treeshake` or `rollupOptions.external`, are not restricted.
 
 What this covers, and what it does not:
 
-- It was read and tested against **Vite 6.4.3** with **Rollup 4.63.1**, the versions in `package-lock.json`. A test pins both numbers. After an update, read `getResolvedOutDirs` and `prepareOutDir` in Vite again, run the tests, then change the numbers.
-- File names inside a build (`build.assetsDir`, `build.manifest`, a name pattern) are not checked here. Rollup 4.63.1 refuses a name that leads out of the output folder, and a test pins that.
+- It was read and tested against **Vite 6.4.3** with **Rollup 4.63.1**, the versions in `package-lock.json`. A test pins both numbers. After an update, read `getResolvedOutDirs`, `prepareOutDir` and `emptyDir` in Vite again, run the tests, then change the numbers.
+- Other file names inside a build, for example the name of a chunk, come from Rollup and are not checked here. Rollup 4.63.1 refuses a name that leads out of the output folder. It judges the text of the name only, which is enough once the folder is empty (rules 3 and 6). A test pins this behaviour.
 - Folder names are resolved from Vite's `root`, as Vite resolves them. The products and the checks build with the repository as `root`.
 - Vite loads `vite.config.ts` before the check can run. For that it writes a temporary module into `node_modules/.vite-temp/` and removes it. The check does not prevent that write, or a write that a plugin makes by itself.
 - A plugin or a program that changes the resolved options after the check, or a build that does not use this `vite.config.ts`, is not covered.
@@ -230,7 +238,7 @@ npm run test:v3     experimental-v3
 - Shared tests take addresses and the database name from the product under test ([`src/test/product.ts`](../../src/test/product.ts)).
 - The exact values of each product are pinned as literals in [`src/product.contract.test.ts`](../../src/product.contract.test.ts).
 - Tests of the stable upgrade path (database version 1 to 2, and a tab that still holds version 1) run for `stable-v2` only. The experimental database starts at version 1 and has no older version.
-- The script tests run with `npm test`. Those for generated folders ([`scripts/safe-destinations.test.mjs`](../../scripts/safe-destinations.test.mjs), [`scripts/generated-dirs.test.mjs`](../../scripts/generated-dirs.test.mjs)) work in disposable copies in the system's temporary folder and never touch the repository. [`scripts/build-destinations.test.mjs`](../../scripts/build-destinations.test.mjs) runs real Vite builds, so its copies are complete copies of the application under `.local/`, where Node finds the installed packages. It takes about a minute.
+- The script tests run with `npm test`. Those for generated folders ([`scripts/safe-destinations.test.mjs`](../../scripts/safe-destinations.test.mjs), [`scripts/generated-dirs.test.mjs`](../../scripts/generated-dirs.test.mjs)) work in disposable copies in the system's temporary folder and never touch the repository. [`scripts/build-destinations.test.mjs`](../../scripts/build-destinations.test.mjs) runs real Vite builds, so its copies are complete copies of the application under `.local/`, where Node finds the installed packages. It takes between one and two minutes.
 - Some tests are close to their time limit. Two suites on one machine at the same time can fail them.
 
 ## Promotion
@@ -249,3 +257,15 @@ promoted:  experimental-v3 at ""    legacy-v1 at "v1/"   stable-v2 at "v2/"
 - A route change never moves data. Both databases stay where they are.
 
 Open for the real promotion, a later milestone: an approved archive lock for v2 under `v2/`, what happens to old `/eng-trainer/v3/` addresses, and whether the promoted product keeps `noindex`.
+
+## Open gates for later milestones
+
+ENG-V3-01 contains no recording, speech dependency, model, cache, Worker, history, migration, ledger or backup, and it claims nothing about them. Three controls stay open:
+
+- **R1: durability for the whole origin.** Browser storage of one origin shares one quota and one eviction exposure, so a separate database name protects nothing. Before any large model cache is used on a real profile, there must be a validated full backup, a recovery path that the user can actually use for v1, v2 and v3, and safe handling of capacity, eviction and downloads.
+- **R2: network boundary.** A tested Worker bootstrap and dependency loader on hosting without policy headers, recognition that stays in the browser, and no cloud fallback.
+- **R3: revisions of spoken targets.** The contract for the effective revision of a spoken target, before any transcript feedback, attempt history or content patch that affects an exercise target.
+
+Before stage B of V3-02, the first memory and latency checks on real devices must pass on disposable profiles. An agreed device list alone is not enough.
+
+Publishing `/v3/` remains a separate decision of the owner and a separate, reviewed change.

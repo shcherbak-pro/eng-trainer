@@ -9,7 +9,7 @@ import { dirname, join } from 'node:path';
 import { test } from 'node:test';
 import {
   EXPERIMENTAL_BUILD_DIR, EXPERIMENTAL_PUBLIC_DIR, GENERATED_DIRS, NEGATIVE_WORK_DIR, PRODUCTION_SITE_DIR, REHEARSAL_WORK_DIR, STABLE_BUILD_DIR, TEST_SITE_DIR, WORK_AREAS,
-  assertBuildDestinations, assertBuildOutDir, assertGeneratedDir, generatedDirUse, removeGeneratedDir
+  BUILD_ASSETS_DIR, assertBuildDestinations, assertBuildOutDir, assertGeneratedDir, generatedDirUse, removeGeneratedDir
 } from './generated-dirs.mjs';
 import { EXPERIMENTAL_PRODUCT, LEGACY_PRODUCT, STABLE_PRODUCT, loadSiteConfig, repoRoot } from './site-config.mjs';
 
@@ -215,7 +215,7 @@ test('a build may write to a product build folder or a work area, and to nothing
 test('a build has one destination: no Rollup output option and no skipped emptying, in any set of build options', async (t) => {
   const root = await tempRepo(t, { 'dist-v3/index.html': 'build' });
   // The shape Vite 6 resolves: the top-level options, and one set for each environment.
-  const options = (extra = {}) => ({ outDir: 'dist-v3', emptyOutDir: null, rollupOptions: {}, ...extra });
+  const options = (extra = {}) => ({ outDir: 'dist-v3', emptyOutDir: null, assetsDir: 'assets', manifest: false, ssrManifest: false, rollupOptions: {}, ...extra });
   const config = ({ top = {}, client = {}, ssr } = {}) => ({ root, build: options(top), environments: { client: { build: options(client) }, ...(ssr ? { ssr: { build: options(ssr) } } : {}) } });
   const before = tree(dirname(root));
 
@@ -243,6 +243,76 @@ test('a build has one destination: no Rollup output option and no skipped emptyi
   assert.throws(() => assertBuildDestinations({ root, build: options() }));
   assert.throws(() => assertBuildDestinations({ root, build: options(), environments: { client: {} } }));
   assert.deepEqual(tree(dirname(root)), before);
+});
+
+test('a build writes its assets to "assets" and no manifest: no option names another place for a generated file', async (t) => {
+  const root = await tempRepo(t, { 'dist-v3/index.html': 'build' });
+  const options = (extra = {}) => ({ outDir: 'dist-v3', emptyOutDir: null, assetsDir: 'assets', manifest: false, ssrManifest: false, rollupOptions: {}, ...extra });
+  const inEachSet = (extra) => [
+    ['build', { root, build: options(extra), environments: { client: { build: options() } } }],
+    ['environments.client.build', { root, build: options(), environments: { client: { build: options(extra) } } }],
+    ['environments.ssr.build', { root, build: options(), environments: { client: { build: options() }, ssr: { build: options(extra) } } }]
+  ];
+  const before = tree(dirname(root));
+  assert.equal(BUILD_ASSETS_DIR, 'assets');
+
+  for (const assetsDir of ['.git', 'static', '', '.', 'assets/', './assets', 'Assets', 'assets/..', '../src', 'a/../../src', join(root, 'src'), undefined, null, false]) {
+    for (const [set, config] of inEachSet({ assetsDir })) {
+      assert.throws(() => assertBuildDestinations(config), new RegExp(`^Error: "${set.replaceAll('.', '\\.')}\\.assetsDir" is .*\\. A build of this repository writes its assets to "assets" below its output folder and nowhere else\\. The build stopped before any folder was emptied\\.$`), `${set} ${JSON.stringify(assetsDir)}`);
+    }
+  }
+  for (const option of ['manifest', 'ssrManifest']) {
+    for (const value of [true, '.git/main.ts', 'manifest.json', 'a/../../src/main.ts', join(root, 'src', 'main.ts'), '', undefined, null, 0]) {
+      for (const [set, config] of inEachSet({ [option]: value })) {
+        assert.throws(() => assertBuildDestinations(config), new RegExp(`^Error: "${set.replaceAll('.', '\\.')}\\.${option}" is set\\. A build of this repository writes no manifest, so no option may name a file for one\\. The build stopped before any folder was emptied\\.$`), `${set} ${option} ${JSON.stringify(value)}`);
+      }
+    }
+  }
+  assert.deepEqual(tree(dirname(root)), before);
+});
+
+test('an output folder that holds a ".git" entry is refused, whatever the entry is, and the entry stays as it is', async (t) => {
+  const options = (outDir) => ({ outDir, emptyOutDir: null, assetsDir: 'assets', manifest: false, ssrManifest: false, rollupOptions: {} });
+  const config = (root, outDir = 'dist-v3') => ({ root, build: options(outDir), environments: { client: { build: options(outDir) } } });
+  const refusal = (dir, name = '\\.git') => new RegExp(`^Error: The output folder "${dir}" holds an entry named "${name}"\\. No output folder of this repository may hold a Git entry: Vite does not remove "\\.git" when it empties the folder, so a build could write into it, or through it if it is a link\\. Nothing was removed or changed\\. Look at it by hand: the scripts never repair this\\.$`);
+
+  const cases = {
+    'a link to the source folder': [(root) => link(join(root, 'src'), join(root, 'dist-v3', '.git')), 'dist-v3'],
+    'a link to a folder outside the repository': [(root) => link(join(root, '..', 'outside'), join(root, 'dist-v3', '.git')), 'dist-v3'],
+    'a link that leads nowhere': [(root) => link(join(root, 'missing'), join(root, 'dist-v3', '.git')), 'dist-v3'],
+    'a real folder': [(root) => write(root, { 'dist-v3/.git/config': 'not ours' }), 'dist-v3'],
+    'a file': [(root) => write(root, { 'dist-v3/.git': 'gitdir: elsewhere' }), 'dist-v3'],
+    'in the stable build folder': [(root) => link(join(root, 'src'), join(root, 'dist', '.git')), 'dist'],
+    'in a work-area folder': [(root) => write(root, { '.rehearsal/promotion/build/stable-v2/.git/config': 'not ours' }), '.rehearsal/promotion/build/stable-v2']
+  };
+  for (const [label, [arrange, dir]] of Object.entries(cases)) {
+    const root = await tempRepo(t, { 'dist-v3/index.html': 'build', 'dist/index.html': 'build' });
+    await arrange(root);
+    const before = tree(dirname(root));
+    assert.throws(() => assertBuildDestinations(config(root, dir)), refusal(dir.replaceAll('.', '\\.')), label);
+    // The folder as Vite resolves it from other spellings is the same folder.
+    assert.throws(() => assertBuildDestinations(config(root, `./${dir}`)), refusal(dir.replaceAll('.', '\\.')), label);
+    assert.deepEqual(tree(dirname(root)), before, label);
+    assert.equal(await readFile(join(root, 'src', 'main.ts'), 'utf8'), 'source', label);
+    assert.equal(await readFile(join(root, '..', 'outside', 'keep.txt'), 'utf8'), 'outside', label);
+  }
+
+  // Another spelling of the name is refused as well, wherever the disk can hold it.
+  {
+    const root = await tempRepo(t, { 'dist-v3/.GIT/config': 'not ours' });
+    assert.throws(() => assertBuildDestinations(config(root)), refusal('dist-v3', '\\.GIT'));
+  }
+  // A ".git" deeper inside the folder is not kept by Vite: the folder is emptied with it. The same holds for other names.
+  {
+    const root = await tempRepo(t, { 'dist-v3/assets/.git/config': 'stale', 'dist-v3/.gitignore': 'stale', 'dist-v3/git/x': 'stale' });
+    await link(join(root, 'src'), join(root, 'dist-v3', 'data'));
+    assert.equal(assertBuildDestinations(config(root)), undefined);
+  }
+  // A folder that does not exist yet holds nothing.
+  {
+    const root = await tempRepo(t);
+    assert.equal(assertBuildDestinations(config(root)), undefined);
+  }
 });
 
 test('the reader of the configuration checks the product folders on disk', async () => {
@@ -276,5 +346,5 @@ test('every recursive removal of the scripts goes through the guard, and every b
   const config = await readFile(join(repoRoot, 'vite.config.ts'), 'utf8');
   assert.match(config, /apply: 'build',\s+configResolved\(config\) \{\s+assertBuildDestinations\(config\);/);
   assert.match(config, /plugins: \[svelte\(\), ownedOutputFolder\(\), /);
-  assert.match(guard, /for \(const \[name, build\] of sets\) \{[^]*?assertBuildOutDir\(config\.root, build\.outDir\);\s+\}\s+\}/);
+  assert.match(guard, /for \(const \[name, build\] of sets\) \{[^]*?const \{ path, exists \} = assertBuildOutDir\(config\.root, build\.outDir\);\s+const kept = exists \? readdirSync\(path\)/);
 });

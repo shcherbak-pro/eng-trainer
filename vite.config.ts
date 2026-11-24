@@ -41,9 +41,11 @@ function experimentalEntryPage(): Plugin {
  * folder is one this repository generates (scripts/generated-dirs.mjs): a product build
  * folder or a work area of the checks, and on disk a real folder, not a file, a link or
  * another spelling of a source folder. A Rollup output option would give Vite further
- * folders to empty, so none is accepted. The check sees the options from every source
- * (this file, the JavaScript API, the command line), runs before Vite empties or writes
- * an output folder and adds nothing to the build output.
+ * folders to empty, so none is accepted. Assets go to "assets", no manifest is written,
+ * and the folder may hold no ".git" entry, which Vite would keep and could write through.
+ * The check sees the options from every source (this file, the JavaScript API, the
+ * command line), runs before Vite empties or writes an output folder and adds nothing to
+ * the build output.
  */
 function ownedOutputFolder(): Plugin {
   return {
