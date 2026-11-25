@@ -1,8 +1,8 @@
-# Products and routes (ENG-V3-01)
+# Products and routes (ENG-V3-01, ENG-V3-02 stage A)
 
 One source tree builds two applications, and the site still contains the frozen v1. This document describes how a build learns which product it is, where each product is published, and which gates keep the released site unchanged.
 
-It describes what ENG-V3-01 implemented. The design and its reasons are in the ENG-V3-00 architecture plan and its two reviews. Those documents, and the implementation handoff of ENG-V3-01 with its evidence, are local records of the owner and are not part of this repository.
+It describes what ENG-V3-01 implemented, and what ENG-V3-02 stage A changed in the builds and gates. The speech feature itself is described in [Pronunciation prototype](PRONUNCIATION-PROTOTYPE.md). The design and its reasons are in the ENG-V3-00 architecture plan and its two reviews. Those documents, and the implementation handoff of ENG-V3-01 with its evidence, are local records of the owner and are not part of this repository.
 
 ## Two separate ideas
 
@@ -13,11 +13,11 @@ It describes what ENG-V3-01 implemented. The design and its reasons are in the E
 |---|---|---|---|---|---|
 | `stable-v2` | `src/` | `/eng-trainer/` | yes | IndexedDB `eng-trainer-v2`, version 2, six stores | off |
 | `legacy-v1` | `v1/` (frozen project) | `/eng-trainer/v1/` | yes | `localStorage`, two records | — |
-| `experimental-v3` | `src/` | `/eng-trainer/v3/` | **no** | IndexedDB `eng-trainer-v3`, version 1, the same six stores plus `meta` | on, as a build capability only |
+| `experimental-v3` | `src/` | `/eng-trainer/v3/` | **no** | IndexedDB `eng-trainer-v3`, version 1, the same six stores plus `meta`; a model cache `eng-trainer-v3-models` only after a download on the local prototype server | on: a prototype screen |
 
 Product identity, database name and content never depend on `location.pathname`. Moving a product to another route changes addresses and nothing else.
 
-`experimental-v3` contains no recording, speech recognition, model, Worker, cache, migration, backup or content change. Its one difference from `stable-v2` on screen is a placeholder screen, **Pronunciation**, which says so.
+`experimental-v3` differs from `stable-v2` on screen in one place, the **Pronunciation** screen: a prototype that records a phrase and shows what a speech recognizer in the browser heard ([Pronunciation prototype](PRONUNCIATION-PROTOTYPE.md)). No build contains a speech model. The product contains no scoring, migration, backup or content change.
 
 ## Configuration
 
@@ -55,11 +55,11 @@ The product reaches the code as compile-time constants ([`src/product.d.ts`](../
 |---|---|---|---|
 | `__ENG_PRODUCT__` | `"stable-v2"` | `"experimental-v3"` | the database schema |
 | `__ENG_DATABASE__` | `"eng-trainer-v2"` | `"eng-trainer-v3"` | the database name |
-| `__ENG_PRONUNCIATION__` | `false` | `true` | the navigation and the one lazy screen |
+| `__ENG_PRONUNCIATION__` | `false` | `true` | the navigation and the one lazily loaded screen |
 | `__SITE_BASE__` | `"/eng-trainer/"` | `"/eng-trainer/"` | links to v1 |
-| `__ENG_VERSION_LINKS__` | other published routes | other published routes | the placeholder screen only |
+| `__ENG_VERSION_LINKS__` | other published routes | other published routes | the Pronunciation screen only |
 
-Vite replaces each name with its value. Code behind a constant that is `false` is removed from that product's build, together with everything only it reaches. That is how the stable build stays free of experimental code: it does not contain the placeholder screen, a request for it, or the name `eng-trainer-v3`.
+Vite replaces each name with its value. Code behind a constant that is `false` is removed from that product's build, together with everything only it reaches. That is how the stable build stays free of experimental code: it does not contain the Pronunciation screen, a request for it, or the name `eng-trainer-v3`.
 
 ### Rules for a condition on a constant
 
@@ -70,6 +70,14 @@ The stable build must stay byte-identical to the released one. Three rules keep 
 3. **In a Svelte template, add the experimental branch last** in its `{#if}` chain, with no comment or text of its own. A branch in the middle renumbers the released branches.
 
 A test also checks rules 2 and 3 in the sources, and that shared code reaches the experimental-only folder `src/features/pronunciation/` through exactly one guarded dynamic import.
+
+### Experimental-only sources
+
+The constant removes the feature's code from the stable build. It does not stop the bundler from reading the guarded module first, and a module can emit files while it is read: the recognizer's Worker, the recording worklet and the WebAssembly runtime. Such files would land in the stable build folder although nothing refers to them.
+
+A build of any product but `experimental-v3` therefore gets an empty module in place of every import that leads into `src/features/pronunciation/` (the plugin `eng-trainer:without-experimental-sources` in `vite.config.ts`). It applies to builds only: tests import the feature's modules directly, for either product.
+
+Both controls are checked from the outside. The released-site lock fails on any extra file, and `check:negative` builds the stable product without the guard, without the exclusion, and without both.
 
 ## Addresses
 
@@ -207,9 +215,9 @@ What this covers, and what it does not:
 | Stable tokens | No speech, model, Worker or remote-runtime token, and no trace of the experimental product. |
 | Stable content | The released manifest and all 14 packs. |
 | Experimental content | The same, while the overlay is empty. |
-| Experimental build | Its own database and base path, a lazy placeholder chunk, `noindex`, and no speech, model or Worker token. |
+| Experimental build | Its own database and base path, and `noindex`. The entry script holds no speech, model or Worker code: the feature is in lazily loaded files. The page declares exactly the committed Content-Security-Policy, once, before its first script. One file starts a Worker, and nothing names a service worker. The microphone is asked for in the Pronunciation screen only. No file names a model hub, a public script host or any host that was not looked at. The WebAssembly runtime is the pinned file, once. No model file is in the build. |
 
-[`scripts/check-negative.mjs`](../../scripts/check-negative.mjs) proves that the gates can fail. It breaks disposable copies on purpose: one changed byte, an extra file, a hidden file, a missing file, the unpublished product copied into the site, colliding routes, a product folder that is not the product's own, a build into a folder that the repository does not generate, a build with a Rollup output option, and two stable builds in which the experimental screen is reachable. Each case passes only when the right gate refuses it.
+[`scripts/check-negative.mjs`](../../scripts/check-negative.mjs) proves that the gates can fail. It breaks disposable copies on purpose: one changed byte, an extra file, a hidden file, a missing file, the unpublished product copied into the site, colliding routes, a product folder that is not the product's own, a build into a folder that the repository does not generate, a build with a Rollup output option, four stable builds in which the experimental screen or its files are reachable, and fourteen faults in a copy of the experimental build: a missing or weakened page policy, a changed inline script, a model file, a changed or second runtime binary, another host, a service worker, a second place that starts a Worker, and speech code outside the lazy screen. Each case passes only when the right gate refuses it.
 
 ### The released-site lock
 
@@ -260,11 +268,11 @@ Open for the real promotion, a later milestone: an approved archive lock for v2 
 
 ## Open gates for later milestones
 
-ENG-V3-01 contains no recording, speech dependency, model, cache, Worker, history, migration, ledger or backup, and it claims nothing about them. Three controls stay open:
+ENG-V3-02 stage A is a prototype for disposable browser profiles with made-up data. It contains no backup, no capacity check, no feedback, no history, no migration and no ledger. Three controls were named before it started:
 
-- **R1: durability for the whole origin.** Browser storage of one origin shares one quota and one eviction exposure, so a separate database name protects nothing. Before any large model cache is used on a real profile, there must be a validated full backup, a recovery path that the user can actually use for v1, v2 and v3, and safe handling of capacity, eviction and downloads.
-- **R2: network boundary.** A tested Worker bootstrap and dependency loader on hosting without policy headers, recognition that stays in the browser, and no cloud fallback.
-- **R3: revisions of spoken targets.** The contract for the effective revision of a spoken target, before any transcript feedback, attempt history or content patch that affects an exercise target.
+- **R1: durability for the whole origin. Open.** Browser storage of one origin shares one quota and one eviction exposure, so a separate database name protects nothing. Before any large model cache is used on a real profile, there must be a validated full backup, a recovery path that the user can actually use for v1, v2 and v3, and safe handling of capacity, eviction and downloads. Stage A has the atomic installer that this gate builds on, and keeps the model away from real profiles.
+- **R2: network boundary. Implemented for stage A, for Chromium and Firefox.** The Worker bootstrap, the page policy and the installer are tested on hosting without policy headers ([Pronunciation prototype](PRONUNCIATION-PROTOTYPE.md#network-boundary)). Recognition stays in the browser, and there is no cloud fallback. Safari and phones are not shown.
+- **R3: revisions of spoken targets. The contract is implemented** (`src/features/pronunciation/spokenTarget.js`, with its regression cases). Nothing uses a revision yet: there is no feedback, no attempt history and no content patch.
 
 Before stage B of V3-02, the first memory and latency checks on real devices must pass on disposable profiles. An agreed device list alone is not enough.
 

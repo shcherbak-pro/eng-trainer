@@ -277,8 +277,8 @@
     {:else if activeTopic}
       <TopicPage {catalog} topic={activeTopic} onNavigate={navigate} />
     {:else if __ENG_PRONUNCIATION__ && activePage === 'pronunciation'}
-      {#await import('../features/pronunciation/PronunciationPlaceholder.svelte') then feature}
-        <svelte:component this={feature.default} />
+      {#await import('../features/pronunciation/PronunciationPage.svelte') then feature}
+        <svelte:component this={feature.default} {catalog} />
       {/await}
     {/if}
   </AppShell>

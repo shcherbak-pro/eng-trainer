@@ -16,7 +16,7 @@
     "precheck": "npm run content:generate",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "pretest": "npm run content:generate",
-    "test": "node --test scripts/content-build.test.mjs scripts/site-config.test.mjs scripts/generated-dirs.test.mjs scripts/safe-destinations.test.mjs scripts/build-destinations.test.mjs scripts/product-content.test.mjs scripts/product-gates.test.mjs && vitest run",
+    "test": "node --test scripts/content-build.test.mjs scripts/site-config.test.mjs scripts/generated-dirs.test.mjs scripts/safe-destinations.test.mjs scripts/build-destinations.test.mjs scripts/product-content.test.mjs scripts/product-gates.test.mjs scripts/pronunciation-policy.test.mjs scripts/prototype/prototype.test.mjs && vitest run",
     "test:v3": "node scripts/product-run.mjs experimental-v3 test",
     "verify:content": "node scripts/verify-content-migration.mjs",
     "install:v1": "npm --prefix v1 ci",
@@ -30,6 +30,9 @@
     "check:negative": "node scripts/check-negative.mjs",
     "assemble:test": "node scripts/assemble-test-site.mjs && node scripts/check-site.mjs --test",
     "rehearse:promotion": "node scripts/rehearse-promotion.mjs",
+    "prototype:model": "node scripts/prototype/fetch-model.mjs",
+    "prototype:build": "npm run build:site && npm run build:v3 && npm run assemble:test",
+    "prototype:serve": "node scripts/prototype/server.mjs",
     "build:site": "npm run build && npm run build:v1 && npm run assemble && npm run check:site"
   },
   "devDependencies": {
@@ -43,6 +46,7 @@
     "vitest": "^3.2.7"
   },
   "dependencies": {
-    "idb": "^8.0.4"
+    "idb": "^8.0.4",
+    "onnxruntime-web": "1.31.1"
   }
 }

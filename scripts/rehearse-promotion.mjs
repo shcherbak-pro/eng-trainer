@@ -22,6 +22,7 @@ import { REHEARSAL_WORK_DIR, removeGeneratedDir } from './generated-dirs.mjs';
 import { assembleRoutes } from './site-assembly.mjs';
 import { checkAssembledSite, entryAssetUrls } from './site-checks.mjs';
 import { EXPERIMENTAL_MARKER, EXPERIMENTAL_TOKENS, FEATURE_TOKENS, compareInventory, inventory, readLocks, reportGates, runProductGates } from './product-gates.mjs';
+import { declaredPolicy, inlineScriptHashes, pagePolicy } from './pronunciation-policy.mjs';
 import {
   EXPERIMENTAL_PRODUCT, LEGACY_PRODUCT, STABLE_PRODUCT,
   appProducts, loadSiteConfig, productBuild, publishedRoutes, repoRoot, routeOf, routeUrl, validateSiteConfig
@@ -152,14 +153,18 @@ const catalog = [
   const lazy = code.filter((file) => file.path.endsWith('.js') && !entryScripts.includes(file.path));
   check(containing(code, 'eng-trainer-v3').length > 0 && containing(code, 'eng-trainer-v2').length === 0, 'experimental-v3 at the root: still uses the database eng-trainer-v3 and never names eng-trainer-v2');
   check(html.includes(`<meta name="eng-trainer-product" content="${EXPERIMENTAL_PRODUCT}">`), 'experimental-v3 at the root: the entry page still names its product');
-  check(lazy.some((file) => file.text.includes(EXPERIMENTAL_MARKER)), 'experimental-v3 at the root: the placeholder screen is still a lazy chunk');
+  check(lazy.some((file) => file.text.includes(EXPERIMENTAL_MARKER)), 'experimental-v3 at the root: the Pronunciation screen is still a lazily loaded file');
   check(compareInventory(files.filter((file) => file.path.startsWith('data/')), catalog).length === 0, 'experimental-v3 at the root: the released manifest and all 14 packs');
   check(containing(code, `"${v1Url}"`).length > 0, `experimental-v3 at the root: links to v1 at ${v1Url}`);
   check(containing(code, `${siteBase}#index`).length > 0 && containing(code, `${siteBase}v3/`).length === 0, `experimental-v3 at the root: the brand link is ${siteBase}#index and nothing points to ${siteBase}v3/`);
   const stableLink = `href:"${siteBase}v2/"`;
   check(lazy.some((file) => file.text.includes(stableLink)), `experimental-v3 at the root: its link to the stable version follows the route list (${siteBase}v2/)`);
-  const tokens = FEATURE_TOKENS.filter((token) => containing(code, token).length);
-  check(tokens.length === 0, `experimental-v3 at the root: no speech, model or Worker token${tokens.length ? ` (found ${tokens.join(', ')})` : ''}`);
+  const entryCode = code.filter((file) => entryScripts.includes(file.path));
+  const tokens = FEATURE_TOKENS.filter((token) => containing(entryCode, token).length);
+  check(entryCode.length > 0 && tokens.length === 0, `experimental-v3 at the root: its entry script holds no speech, model or Worker code${tokens.length ? ` (found ${tokens.join(', ')})` : ''}`);
+  check(declaredPolicy(html) === pagePolicy(inlineScriptHashes(html)), 'experimental-v3 at the root: the page still declares the committed Content-Security-Policy');
+  // At the site root a service worker would also control v1/ and v2/.
+  check(containing(code, 'serviceWorker').length === 0, 'experimental-v3 at the root: nothing names a service worker');
   report.promoted[EXPERIMENTAL_PRODUCT] = { path: '', script: entryScripts[0], lazy: lazy.map((file) => file.path), files: files.length };
 }
 

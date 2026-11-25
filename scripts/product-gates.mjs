@@ -11,6 +11,8 @@
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { declaredPolicy, inlineScriptHashes, pagePolicy } from './pronunciation-policy.mjs';
+import { readPinned } from './prototype/model-files.mjs';
 import { listFiles } from './site-assembly.mjs';
 import { entryAssetUrls } from './site-checks.mjs';
 import { EXPERIMENTAL_PRODUCT, LEGACY_PRODUCT, STABLE_PRODUCT, repoRoot, routeOf, routeUrl } from './site-config.mjs';
@@ -23,8 +25,8 @@ export const EXPERIMENTAL_MARKER = 'data-experimental-feature';
 
 /**
  * Speech, model, Worker and remote-runtime tokens. The released stable output contains
- * none of them. ENG-V3-01 implements no speech feature, so the experimental output
- * must not contain them either.
+ * none of them. In the experimental output the entry script contains none either: the
+ * speech feature (ENG-V3-02, stage A) lives in lazily loaded files only.
  */
 export const FEATURE_TOKENS = [
   'getUserMedia', 'mediaDevices', 'AudioWorklet', 'AudioContext', 'MediaRecorder', 'SpeechRecognition',
@@ -33,7 +35,21 @@ export const FEATURE_TOKENS = [
 ];
 
 /** Traces of the experimental product, and of a build that lost its compile-time constants. */
-export const EXPERIMENTAL_TOKENS = ['eng-trainer-v3', 'experimental-v3', '/v3/', EXPERIMENTAL_MARKER, 'PronunciationPlaceholder', '__ENG_', '__SITE_BASE__'];
+export const EXPERIMENTAL_TOKENS = ['eng-trainer-v3', 'experimental-v3', '/v3/', EXPERIMENTAL_MARKER, 'PronunciationPage', '__ENG_', '__SITE_BASE__'];
+
+/** Names of model hubs and public script hosts. No file of the experimental build may name one. */
+export const REMOTE_HOST_TOKENS = ['huggingface', 'jsdelivr', 'unpkg', 'cdnjs', 'googleapis', 'gstatic'];
+
+/**
+ * Hosts that the experimental build's code may spell out, each for a reason that is not a
+ * request: XML namespace names, and links inside error messages of Svelte and of the
+ * WebAssembly runtime. A new host fails the gate until it has been looked at.
+ */
+export const KNOWN_TEXT_HOSTS = ['www.w3.org', 'svelte.dev', 'web.dev'];
+
+/** The build's own files of the speech feature, by the names the bundler gives them. */
+const WORKER_FILE = /^assets\/recognizer\.worker-[\w-]+\.js$/;
+const WORKLET_FILE = /^assets\/pcm-collector\.worklet-[\w-]+\.js$/;
 
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const isCode = (path) => /\.(?:html|js|mjs|css)$/.test(path);
@@ -155,8 +171,12 @@ function contentProblems(files, dir, catalogLock) {
   return compareInventory(files.filter((file) => file.path.startsWith('data/')), expected, dir);
 }
 
-/** Gate 7. The experimental build is its own product, and ENG-V3-01 gives it no speech feature. */
-function gateExperimentalBuild({ site, experimentalDir, experimentalFiles }) {
+/**
+ * Gate 7. The experimental build is its own product. Its speech feature (ENG-V3-02, stage A)
+ * is loaded lazily, runs under the page policy, brings the pinned runtime and no model
+ * file, and names no other host.
+ */
+function gateExperimentalBuild({ site, experimentalDir, experimentalFiles, pinned }) {
   const problems = [];
   const indexPath = join(experimentalDir, 'index.html');
   if (!existsSync(indexPath)) return ['index.html is missing'];
@@ -181,7 +201,55 @@ function gateExperimentalBuild({ site, experimentalDir, experimentalFiles }) {
   for (const file of scripts.filter((item) => entryScripts.includes(item.path))) {
     if (text(file).includes(EXPERIMENTAL_MARKER)) problems.push(`${file.path}: the entry script contains the experimental screen; it must be loaded lazily`);
   }
-  problems.push(...scanTokens(experimentalDir, experimentalFiles, FEATURE_TOKENS));
+  // The entry script has no speech, model or Worker code: the other screens never load it.
+  problems.push(...scanTokens(experimentalDir, experimentalFiles.filter((file) => entryScripts.includes(file.path)), FEATURE_TOKENS));
+
+  // Page policy: exactly the committed text, with the hash of the page's inline script,
+  // declared once and before the first script, so it governs every script of the page.
+  const expectedPolicy = pagePolicy(inlineScriptHashes(html));
+  const declared = declaredPolicy(html);
+  if (declared === null) problems.push('index.html declares no Content-Security-Policy');
+  else if (declared !== expectedPolicy) problems.push(`index.html declares another Content-Security-Policy than scripts/pronunciation-policy.mjs. Found: ${declared}`);
+  if ((html.match(/http-equiv="Content-Security-Policy"/g) ?? []).length > 1) problems.push('index.html declares more than one Content-Security-Policy');
+  if (declared !== null && html.indexOf('http-equiv="Content-Security-Policy"') > html.indexOf('<script')) problems.push('index.html: the Content-Security-Policy must come before the first script');
+
+  // Workers: one file starts one, through a blob: address (bootstrap.ts). The Worker and the
+  // worklet are single files. Nothing registers a service worker.
+  const workers = scripts.filter((file) => WORKER_FILE.test(file.path));
+  const worklets = scripts.filter((file) => WORKLET_FILE.test(file.path));
+  if (workers.length !== 1) problems.push(`expected exactly one recognizer Worker file, found ${workers.length}`);
+  if (worklets.length !== 1) problems.push(`expected exactly one recording worklet file, found ${worklets.length}`);
+  const starters = scripts.filter((file) => !WORKER_FILE.test(file.path) && text(file).includes('new Worker'));
+  if (starters.length !== 1 || text(starters[0]).split('new Worker').length !== 2) problems.push(`expected exactly one place that starts a Worker, outside the Worker itself. Found: ${starters.map((file) => file.path).join(', ') || 'none'}`);
+  for (const file of code) if (text(file).includes('serviceWorker')) problems.push(`${file.path} names a service worker. This product registers none.`);
+
+  // The microphone is asked for in the lazy screen only.
+  for (const file of scripts.filter((item) => text(item).includes('getUserMedia'))) {
+    if (!text(file).includes(EXPERIMENTAL_MARKER)) problems.push(`${file.path} asks for the microphone outside the experimental screen`);
+  }
+
+  // No other host: no model hub, no public script host, and no host name that has not been looked at.
+  problems.push(...scanTokens(experimentalDir, experimentalFiles, REMOTE_HOST_TOKENS));
+  for (const file of code) {
+    for (const match of text(file).matchAll(/https?:\/\/([A-Za-z0-9.-]+)/g)) {
+      if (!KNOWN_TEXT_HOSTS.includes(match[1])) problems.push(`${file.path} names the host "${match[1]}"`);
+    }
+  }
+
+  // The WebAssembly runtime is the pinned file, once. No model file is part of a build:
+  // the model exists only on the local prototype server (scripts/prototype/).
+  const binaries = experimentalFiles.filter((file) => file.path.endsWith('.wasm'));
+  const runtime = pinned.runtime.file;
+  if (binaries.length !== 1) problems.push(`expected exactly one WebAssembly file, found ${binaries.length}`);
+  for (const file of binaries) {
+    if (file.bytes !== runtime.bytes || file.sha256 !== runtime.sha256) problems.push(`${file.path} is not the pinned runtime ${pinned.runtime.package} ${pinned.runtime.version} (${runtime.path})`);
+  }
+  const modelHashes = new Set(pinned.model.files.map((file) => file.sha256));
+  for (const file of experimentalFiles) {
+    if (modelHashes.has(file.sha256) || /\.onnx$/.test(file.path) || /(?:^|\/)models\//.test(file.path) || /(?:^|\/)tokenizer\.json$/.test(file.path)) {
+      problems.push(`${file.path} is a model file. A build must not contain one.`);
+    }
+  }
   return problems;
 }
 
@@ -191,6 +259,8 @@ function gateExperimentalBuild({ site, experimentalDir, experimentalFiles }) {
  */
 export async function runProductGates({ site, siteDir, experimentalDir, locks, root = repoRoot }) {
   const { siteLock, catalogLock } = locks;
+  // The pinned list of the checked-out sources, also when the builds lie in another folder.
+  const pinned = readPinned();
   const sitePath = join(root, siteDir);
   const experimentalPath = join(root, experimentalDir);
   const missing = [sitePath, experimentalPath].filter((path) => !existsSync(join(path, 'index.html')));
@@ -225,8 +295,8 @@ export async function runProductGates({ site, siteDir, experimentalDir, locks, r
     },
     {
       id: 'experimental-build',
-      title: 'Experimental product: own database and base path, lazy placeholder chunk, noindex, no speech feature',
-      problems: gateExperimentalBuild({ site, experimentalDir: experimentalPath, experimentalFiles })
+      title: 'Experimental product: own database and base path, noindex, page policy, lazy speech feature, pinned runtime, no model file, no other host',
+      problems: gateExperimentalBuild({ site, experimentalDir: experimentalPath, experimentalFiles, pinned })
     }
   ];
 }

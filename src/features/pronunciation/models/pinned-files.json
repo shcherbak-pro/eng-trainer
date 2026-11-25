@@ -1,0 +1,23 @@
+{
+  "version": "moonshine-tiny-q8-a6da1241cd30-ort-1.31.1",
+  "model": {
+    "id": "moonshine-tiny-q8-a6da1241cd30",
+    "name": "Moonshine tiny, 8-bit quantized",
+    "repository": "onnx-community/moonshine-tiny-ONNX",
+    "revision": "a6da1241cd305dcd64eab1edbd615f2bb9aabb95",
+    "licence": "MIT",
+    "files": [
+      { "path": "config.json", "bytes": 921, "sha256": "558e1e02069137c796ace1e50c48d8fe451f04a295929138e6bea885517f0edb" },
+      { "path": "preprocessor_config.json", "bytes": 128, "sha256": "fa43a7017ef85cd1d0fba0d9aae77c8adb16990ae6f11115631f41ec5d8aa679" },
+      { "path": "tokenizer.json", "bytes": 3761754, "sha256": "7b913404bdd039af4756783218af4440bc07fb7d6d8258d677e34f95b3ec416f" },
+      { "path": "onnx/encoder_model_quantized.onnx", "bytes": 7937661, "sha256": "c6fc4b7bc5af75c0591fd157a1f3829b533d18e9769a888fd95a62e470dd4f4a" },
+      { "path": "onnx/decoder_model_merged_quantized.onnx", "bytes": 20243286, "sha256": "eed87831c3a6103534aae7d47a5d485025c659a1323901513961c39fe8a1a367" }
+    ]
+  },
+  "runtime": {
+    "package": "onnxruntime-web",
+    "version": "1.31.1",
+    "licence": "MIT",
+    "file": { "path": "ort-wasm-simd-threaded.wasm", "bytes": 14848852, "sha256": "4b884c203b0fa48d057be3332c65513ff85aa3c5bddd6946acc0fab7ecda001d" }
+  }
+}
