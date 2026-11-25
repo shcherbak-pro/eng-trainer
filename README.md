@@ -86,7 +86,7 @@ The theme is saved in IndexedDB like the other preferences, so it is applied onc
 
 The two versions are separate applications. They do not share code, data files, or progress. v2 starts with empty progress and does not read v1 data. v2 links to v1 from the side navigation on wide screens, from **More** on phones, and from **Settings**.
 
-An experimental third version, v3, is built from the same source tree as v2. It is **not published**. It has its own database (`eng-trainer-v3`) and, so far, no feature of its own. See [Products and routes](#products-and-routes).
+An experimental third version, v3, is built from the same source tree as v2. It is **not published**. It has its own database (`eng-trainer-v3`) and one feature of its own: a prototype of pronunciation practice, for local testing in disposable browser profiles. See [Products and routes](#products-and-routes).
 
 ## Fonts and icons
 
@@ -126,7 +126,7 @@ The source tree in the repository root builds two products. The product is chose
 | Product | Published at | Database | Notes |
 |---|---|---|---|
 | `stable-v2` | `/eng-trainer/` | `eng-trainer-v2` | The released v2. Every command above builds and tests this product. |
-| `experimental-v3` | not published (`/eng-trainer/v3/` in local test builds) | `eng-trainer-v3` | Same code and content, its own database, and one placeholder screen. No recording, speech recognition or model. |
+| `experimental-v3` | not published (`/eng-trainer/v3/` in local test builds) | `eng-trainer-v3` | Same code and content, its own database, and a Pronunciation prototype: it records a phrase and shows what a speech recognizer in the browser heard. No scoring. No build contains a speech model. |
 | `legacy-v1` | `/eng-trainer/v1/` | `localStorage` | The frozen project in `v1/`. |
 
 ```bash
@@ -139,6 +139,16 @@ npm run check:negative      # proves that those gates fail on deliberate faults
 npm run assemble:test       # all three products -> .site-test/, for local checks only
 npm run rehearse:promotion  # local rehearsal of a route swap and of its rollback
 ```
+
+The pronunciation prototype runs from a local server, in a new and empty browser profile with made-up data only:
+
+```bash
+npm run prototype:build     # all three products -> .site-test/
+npm run prototype:model     # once: the pinned speech model (31.9 MB) -> .local/models/, from the Hugging Face Hub
+npm run prototype:serve     # http://127.0.0.1:4173/eng-trainer/v3/#pronunciation, for this computer only
+```
+
+Recognition runs on the device. Nothing is scored, stored or sent. How it works, its network boundary and what is still open are in [Pronunciation prototype](docs/architecture/PRONUNCIATION-PROTOTYPE.md).
 
 Run the two test suites one after the other, not at the same time.
 
@@ -171,7 +181,9 @@ site.config.json  Products, routes and publish flags
 v1/            The preserved v1 application (independent project)
 ```
 
-`src/features/pronunciation/` belongs to the experimental product only. Shared code reaches it through one guarded dynamic import, so the stable build does not contain it.
+`src/features/pronunciation/` belongs to the experimental product only. Shared code reaches it through one guarded dynamic import, and a stable build reads none of its files, so the stable build does not contain it.
+
+The experimental product has one more runtime dependency, [`onnxruntime-web`](https://www.npmjs.com/package/onnxruntime-web) at an exact version: the WebAssembly runtime of the speech recognizer. The stable build does not contain it.
 
 IndexedDB is used through [`idb`](https://github.com/jakearchibald/idb), a small promise wrapper. Only `src/storage/database.ts` imports it.
 

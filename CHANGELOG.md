@@ -1,5 +1,39 @@
 # Changelog
 
+## Unreleased — ENG-V3-02A-RC1 (2026-11-25)
+
+Corrections from Astra's independent review of ENG-V3-02 stage A. Nothing changes for users: the experimental product is not published, and the published site stays byte-identical to the ENG-V2-03 release.
+
+- **F1:** Cancel and a hidden page now release the microphone also while the recorder is still starting.
+  - The recorder waits for the permission and then for the audio device. Either wait can stay pending. A microphone that the browser had already handed over stayed live until the audio device answered.
+  - The session now ends a start that is in progress. The recorder stops an acquired microphone at once, and one that arrives later as it arrives.
+- **F2:** Cancel and leaving the screen during the preparation now release what was prepared.
+  - An audio context whose script was still loading was not closed when the screen was left, and stayed open afterwards.
+  - Cancel during that step let the preparation finish: the screen became ready with the model loaded. It now ends at once, releases the model and the audio context, and offers loading again.
+- **F3:** A Worker that fails after the model was loaded no longer leaves a recognition waiting for ever.
+  - Its error and message-error events are handled for as long as it lives. The Worker is ended, what waits is refused with the reason, and the screen offers to load the model again.
+  - A Worker that does not answer a recording within 120 seconds counts as failed.
+  - The recognizer tells the screen at once, so a recording in progress is ended and the microphone is released.
+- 47 new tests cover the three cases, with the real recorder, session and recognizer and only the browser faked. The browser acceptance test has 11 more checks, in Chromium and Firefox.
+
+## Unreleased — ENG-V3-02 stage A (2026-11-24)
+
+A first pronunciation prototype in the experimental product. Nothing changes for users: the experimental product is not published, and the published site stays byte-identical to the ENG-V2-03 release.
+
+- **Pronunciation screen (experimental product only).** Pick a phrase, record it, and read what a speech recognizer heard. Record again as often as wanted.
+  - Recognition runs in the browser, in a Worker, with a pinned model (Moonshine tiny) on ONNX Runtime Web. Audio is not stored and not sent.
+  - The result is the recognizer's text. There is no score, no comparison and no history, and nothing is marked as learned.
+  - The microphone is asked for only by the click on Record, and released on stop, cancel, a hidden page and when the screen is left.
+- **For disposable browser profiles only.** No build contains a speech model. A local server (`npm run prototype:serve`) offers the pinned files, and the screen offers the download on a loopback address only.
+- **Model files.** Pinned by size and SHA-256. A file is checked before it is stored and again before it is used. An installation is usable only when it is complete; a failed, cancelled or interrupted one leaves nothing behind.
+- **Network boundary.** The experimental page declares a Content-Security-Policy. The recognizer's Worker is started from a `blob:` address and inherits it, also on hosting that sends no policy header. Shown for Chromium and Firefox.
+- **Spoken targets.** The rules that turn an entry into what the learner says, and the revision of that text, are implemented with their regression cases. Nothing uses a revision yet.
+- **Builds and gates.**
+  - A stable build no longer reads the experimental-only sources at all. Without that, files of the speech feature would have been written into the stable build folder.
+  - The gate on the experimental build now checks its page policy, its pinned runtime, and that it holds no model file and names no other host. `npm run check:negative` has 34 cases.
+  - One runtime dependency was added at an exact version: `onnxruntime-web` 1.31.1.
+- Not included: backup and capacity checks (the Data Safety Gate), feedback, attempt history, phones and Safari. See `docs/architecture/PRONUNCIATION-PROTOTYPE.md`.
+
 ## Unreleased — ENG-V3-01-RC3 (2026-11-24)
 
 Correction from Astra's independent review of ENG-V3-01-RC2. Nothing changes for users: the application code is untouched, and the published site stays byte-identical to the ENG-V2-03 release.

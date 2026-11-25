@@ -7,7 +7,7 @@ import { describeExperimental, describeStable, productBase, v1Url } from '../tes
 
 /**
  * What differs between the products at the level of the whole application (ENG-V3-01):
- * addresses, the experimental placeholder screen and the separation of saved data.
+ * addresses, the experimental Pronunciation screen and the separation of saved data.
  * Smoke tests in jsdom with synthetic data. They do not replace the browser checks.
  */
 type RunningApp = { root: HTMLElement; flush: () => void; saved: () => Promise<void>; close: () => void };
@@ -64,7 +64,14 @@ function open(app: RunningApp, page: string): void {
 }
 
 const heading = (app: RunningApp): string => text(app.root.querySelector('main h1')!);
+/** The experimental-only screen, when it is shown. */
 const placeholder = (app: RunningApp): HTMLElement | null => app.root.querySelector<HTMLElement>('[data-experimental-feature]');
+/** The screen once it has read the state of its speech model. */
+const settled = (app: RunningApp): boolean => {
+  app.flush();
+  const phase = placeholder(app)?.getAttribute('data-phase');
+  return phase !== undefined && phase !== null && phase !== 'checking';
+};
 
 const V2_NAME = 'eng-trainer-v2';
 const V1_STATE = ['englishAssessmentTrainer.svelteState.v1', '{"learnedPhrases":["phrase-001"],"hiddenPhrases":["phrase-002"]}'] as const;
@@ -143,7 +150,7 @@ describeStable('stable-v2 has no experimental screen', () => {
   });
 });
 
-describeExperimental('experimental-v3: the placeholder screen', () => {
+describeExperimental('experimental-v3: the Pronunciation screen', () => {
   it('lists Pronunciation last in Practice and loads the screen only when it is opened', async () => {
     const app = await startApp();
     const practice = [...app.root.querySelectorAll<HTMLAnchorElement>('.side-nav nav a')].map((link) => link.getAttribute('href'));
@@ -151,20 +158,23 @@ describeExperimental('experimental-v3: the placeholder screen', () => {
     expect(placeholder(app)).toBeNull();
 
     open(app, 'pronunciation');
-    await waitFor(() => placeholder(app) !== null, 'the placeholder screen');
-    app.flush();
+    await waitFor(() => settled(app), 'the Pronunciation screen');
     expect(heading(app)).toBe('Pronunciation');
-    expect(placeholder(app)!.getAttribute('data-experimental-feature')).toBe('pronunciation-placeholder');
-    expect(text(placeholder(app)!)).toContain('Pronunciation practice is not part of this build. Nothing is recorded, recognized or downloaded here.');
+    expect(placeholder(app)!.getAttribute('data-experimental-feature')).toBe('pronunciation-prototype');
+    expect(text(placeholder(app)!)).toContain('Prototype: use a disposable browser profile');
+    expect(text(placeholder(app)!)).toContain('It is not a score of your pronunciation.');
     expect(navLink(app, 'pronunciation')!.getAttribute('aria-current')).toBe('page');
-    // The screen has no control at all: nothing to record, download or grant.
-    expect(placeholder(app)!.querySelectorAll('button, input, select, audio, video')).toHaveLength(0);
+    // The test environment has no microphone, no Worker and no Cache Storage. The screen says
+    // so and offers nothing to download, load or record.
+    expect(placeholder(app)!.getAttribute('data-phase')).toBe('unsupported');
+    expect(text(placeholder(app)!)).toContain('Recording is not available here.');
+    expect(placeholder(app)!.querySelectorAll('[data-action], audio, video')).toHaveLength(0);
   });
 
   it('names its product and database, and links to the other versions from the route list', async () => {
     window.location.hash = 'pronunciation';
     const app = await startApp();
-    await waitFor(() => placeholder(app) !== null, 'the placeholder screen');
+    await waitFor(() => placeholder(app) !== null, 'the Pronunciation screen');
     app.flush();
     const screen = placeholder(app)!;
 
@@ -180,7 +190,7 @@ describeExperimental('experimental-v3: the placeholder screen', () => {
   it('keeps the screen as the saved last page, in its own database, and reopens it after a reload', async () => {
     const app = await startApp();
     open(app, 'pronunciation');
-    await waitFor(() => placeholder(app) !== null, 'the placeholder screen');
+    await waitFor(() => placeholder(app) !== null, 'the Pronunciation screen');
     await app.saved();
     expect((await readDatabase()).settings.activePage).toBe('pronunciation');
 
@@ -188,17 +198,18 @@ describeExperimental('experimental-v3: the placeholder screen', () => {
     running = [];
     window.location.hash = '';
     const reloaded = await startApp();
-    await waitFor(() => placeholder(reloaded) !== null, 'the placeholder screen after a reload');
+    await waitFor(() => placeholder(reloaded) !== null, 'the Pronunciation screen after a reload');
     expect(heading(reloaded)).toBe('Pronunciation');
   });
 
-  it('makes no request beyond the built-in content, and none at all when the placeholder opens', async () => {
+  it('makes no request beyond the built-in content, and none at all when the screen opens', async () => {
     const app = await startApp();
     const before = vi.mocked(fetch).mock.calls.length;
     expect(before).toBe(manifest.packs.length + 1);
 
     open(app, 'pronunciation');
-    await waitFor(() => placeholder(app) !== null, 'the placeholder screen');
+    await waitFor(() => settled(app), 'the Pronunciation screen');
+    // Opening the screen downloads nothing: a model is fetched only after an explicit click.
     expect(vi.mocked(fetch).mock.calls.length).toBe(before);
   });
 });
@@ -242,7 +253,7 @@ describeExperimental('experimental-v3: saved data stays apart from stable v2 and
     light.dispatchEvent(new Event('change', { bubbles: true }));
     app.flush();
     open(app, 'pronunciation');
-    await waitFor(() => placeholder(app) !== null, 'the placeholder screen');
+    await waitFor(() => placeholder(app) !== null, 'the Pronunciation screen');
     open(app, 'index');
     await app.saved();
 

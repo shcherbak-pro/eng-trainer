@@ -1,4 +1,4 @@
-// Controlled negative tests of the product gates (ENG-V3-01).
+// Controlled negative tests of the product gates (ENG-V3-01; ENG-V3-02, stage A).
 //
 // Each case breaks a disposable copy on purpose and passes only when the gate that
 // should notice does fail. A gate that cannot fail protects nothing.
@@ -6,7 +6,7 @@
 //   npm run build:site && npm run build:v3 && npm run check:negative
 //
 // Nothing here touches the real builds, the real site or a tracked file. The copies
-// and the two deliberately wrong stable builds live in .local/negative/, which Git
+// and the deliberately wrong stable builds live in .local/negative/, which Git
 // ignores. The source changes for those builds are made in memory only.
 import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { existsSync, readFileSync, realpathSync } from 'node:fs';
@@ -32,14 +32,14 @@ const record = (name, ok, detail) => {
 };
 
 /** Runs the gates on a site folder and reports which gates failed, with their first messages. */
-async function failingGates(siteDir) {
-  const gates = await runProductGates({ site, siteDir, experimentalDir, locks });
+async function failingGates(siteDir, experimental = experimentalDir) {
+  const gates = await runProductGates({ site, siteDir, experimentalDir: experimental, locks });
   return new Map(gates.filter((gate) => gate.problems.length).map((gate) => [gate.id, gate.problems]));
 }
 
 /** A case passes when every expected gate failed and one of its messages matches. */
-async function expectGateFailures(name, siteDir, expected) {
-  const failed = await failingGates(siteDir);
+async function expectGateFailures(name, siteDir, expected, experimental = experimentalDir) {
+  const failed = await failingGates(siteDir, experimental);
   const missing = Object.entries(expected).filter(([id, pattern]) => !failed.get(id)?.some((problem) => pattern.test(problem)));
   const seen = [...failed.entries()].map(([id, problems]) => `${id}: ${problems[0]}`).join(' | ') || 'no gate failed';
   record(name, missing.length === 0, missing.length ? `expected ${missing.map(([id]) => id).join(', ')} to fail; ${seen}` : seen);
@@ -49,6 +49,28 @@ async function copyOfSite(name) {
   const dir = `${WORK}/${name}`;
   await cp(join(repoRoot, PRODUCTION_SITE_DIR), join(repoRoot, dir), { recursive: true });
   return dir;
+}
+
+/** A copy of the experimental build, to break on purpose. */
+async function copyOfExperimental(name) {
+  const dir = `${WORK}/${name}`;
+  await cp(join(repoRoot, experimentalDir), join(repoRoot, dir), { recursive: true });
+  return dir;
+}
+
+/** The one file of a build copy whose path matches, relative to the copy. */
+async function fileOf(dir, pattern) {
+  const found = (await listFiles(join(repoRoot, dir))).filter((path) => pattern.test(path));
+  if (found.length !== 1) throw new Error(`${dir}: expected one file matching ${pattern}, found ${found.length}`);
+  return found[0];
+}
+
+/** Changes the text of one file of a build copy. The change must change something. */
+async function rewrite(dir, path, change) {
+  const before = await readFile(join(repoRoot, dir, path), 'utf8');
+  const after = change(before);
+  if (after === before) throw new Error(`${dir}/${path}: the deliberate fault changed nothing`);
+  await writeFile(join(repoRoot, dir, path), after);
 }
 
 async function expectThrow(name, pattern, action) {
@@ -64,9 +86,10 @@ async function expectThrow(name, pattern, action) {
  * Builds the stable product from sources changed in memory, then assembles it like the
  * real site. `mutate` receives the text of App.svelte and must change it.
  */
-async function leakingStableBuild(name, mutate) {
+async function leakingStableBuild(name, mutate, { withoutExclusion = false } = {}) {
   const mutated = mutate(await readFile(join(repoRoot, 'src', 'app', 'App.svelte'), 'utf8'));
   let applied = false;
+  let exclusionOff = false;
 
   const outDir = `${WORK}/${name}/dist`;
   delete process.env.ENG_PRODUCT;
@@ -78,6 +101,17 @@ async function leakingStableBuild(name, mutate) {
     plugins: [{
       name: 'eng-trainer:negative-probe',
       enforce: 'pre',
+      // Simulates a stable build that lost the plugin which keeps the experimental-only
+      // sources out (vite.config.ts): that plugin's hooks are taken away before the build starts.
+      config(config) {
+        if (!withoutExclusion) return;
+        for (const plugin of (config.plugins ?? []).flat(Infinity)) {
+          if (plugin?.name !== 'eng-trainer:without-experimental-sources') continue;
+          delete plugin.resolveId;
+          delete plugin.load;
+          exclusionOff = true;
+        }
+      },
       load(id) {
         if (!id.replaceAll('\\', '/').endsWith('/src/app/App.svelte')) return null;
         applied = true;
@@ -86,6 +120,7 @@ async function leakingStableBuild(name, mutate) {
     }]
   });
   if (!applied) throw new Error(`${name}: the changed source was not used by the build`);
+  if (withoutExclusion && !exclusionOff) throw new Error(`${name}: the exclusion plugin was not found, so this case would prove nothing`);
   const siteDir = `${WORK}/${name}/site`;
   await assembleRoutes({ site, routes: publishedRoutes(site), target: siteDir, buildDirs: { [STABLE_PRODUCT]: outDir } });
   return siteDir;
@@ -98,8 +133,8 @@ const replaceOnce = (text, from, to) => {
 };
 const GUARD = "{:else if __ENG_PRONUNCIATION__ && activePage === 'pronunciation'}";
 const LAZY_BLOCK = `${GUARD}
-      {#await import('../features/pronunciation/PronunciationPlaceholder.svelte') then feature}
-        <svelte:component this={feature.default} />
+      {#await import('../features/pronunciation/PronunciationPage.svelte') then feature}
+        <svelte:component this={feature.default} {catalog} />
       {/await}`;
 
 // The work area is deleted and created again. Other folders in .local/ are never touched.
@@ -207,24 +242,107 @@ await expectThrow('configuration: a product folder that is not the product\'s ow
 }
 
 // Cross-variant imports: the stable product built with the experimental screen reachable.
+//
+// Two things keep the speech feature out of the stable build: the compile-time guard in
+// App.svelte, and the build plugin that gives the stable build an empty module in place of
+// the experimental-only sources (vite.config.ts). Each case takes away one or both.
+const unguarded = (source) => replaceOnce(source, GUARD, "{:else if activePage === 'pronunciation'}");
+const staticImport = (source) => replaceOnce(
+  replaceOnce(source, "  import Icon from '../shared/ui/Icon.svelte';", "  import Icon from '../shared/ui/Icon.svelte';\n  import Leaked from '../features/pronunciation/PronunciationPage.svelte';"),
+  LAZY_BLOCK,
+  "{:else if activePage === 'pronunciation'}\n      <Leaked {catalog} />"
+);
 {
-  const siteDir = await leakingStableBuild('leak-guard-removed', (source) => replaceOnce(source, GUARD, "{:else if activePage === 'pronunciation'}"));
-  await expectGateFailures('stable build with the compile-time guard removed (lazy import leaks)', siteDir, {
+  // The guard is gone, the exclusion holds: no feature code can enter, but the build is not the release.
+  const siteDir = await leakingStableBuild('leak-guard-removed', unguarded);
+  await expectGateFailures('stable build with the compile-time guard removed: no feature code enters, and the build is still refused', siteDir, {
     'stable-chunks': /expected exactly one script, found 2/,
-    'stable-tokens': /contains "data-experimental-feature"/,
-    'released-site-lock': /^extra file: assets\/PronunciationPlaceholder-/
+    'released-site-lock': /^extra file: assets\//
+  });
+  const failed = await failingGates(siteDir);
+  const leaked = [...failed.values()].flat().filter((problem) => /getUserMedia|new Worker|onnx|\.wasm|recognizer\.worker|pcm-collector/.test(problem));
+  record('  with the exclusion in place, that build holds no speech code and no speech file', leaked.length === 0, leaked[0] ?? 'no speech token and no speech file in the stable output');
+}
+{
+  const siteDir = await leakingStableBuild('leak-static-import', staticImport);
+  await expectGateFailures('stable build with a static import of the experimental screen: refused', siteDir, {
+    'released-site-lock': /^changed file: index\.html|^extra file: assets\/index-/
   });
 }
 {
-  const siteDir = await leakingStableBuild('leak-static-import', (source) => replaceOnce(
-    replaceOnce(source, "  import Icon from '../shared/ui/Icon.svelte';", "  import Icon from '../shared/ui/Icon.svelte';\n  import Leaked from '../features/pronunciation/PronunciationPlaceholder.svelte';"),
-    LAZY_BLOCK,
-    "{:else if activePage === 'pronunciation'}\n      <Leaked />"
-  ));
-  await expectGateFailures('stable build with a static import of the experimental screen', siteDir, {
-    'stable-tokens': /contains "data-experimental-feature"/,
-    'released-site-lock': /^changed file: index\.html|^extra file: assets\/index-/
+  // The exclusion is gone, the guard holds. The feature's code is still dropped, but the files
+  // that its modules emit while they are read would be published. This is the leak that the
+  // exclusion prevents; the gates catch it on their own.
+  const siteDir = await leakingStableBuild('leak-exclusion-removed', (source) => source.replace(GUARD, GUARD), { withoutExclusion: true });
+  await expectGateFailures('stable build without the exclusion of experimental-only sources (Worker, worklet and runtime are emitted)', siteDir, {
+    'released-site-lock': /^extra file: assets\/(?:ort-wasm-simd-threaded|recognizer\.worker|pcm-collector\.worklet)-/,
+    'stable-chunks': /expected exactly one script, found 3/,
+    'stable-tokens': /recognizer\.worker-[\w-]+\.js contains "(?:onnx|wasm|WebAssembly|new Worker)"/
   });
+}
+{
+  // Both are gone: the whole feature is in the stable build.
+  const siteDir = await leakingStableBuild('leak-both-removed', unguarded, { withoutExclusion: true });
+  await expectGateFailures('stable build without the guard and without the exclusion (the speech feature leaks)', siteDir, {
+    'stable-tokens': /contains "(?:data-experimental-feature|getUserMedia)"/,
+    'stable-chunks': /expected exactly one script, found \d+/,
+    'released-site-lock': /^extra file: assets\/PronunciationPage-/
+  });
+}
+
+// The experimental build (ENG-V3-02, stage A): each deliberate fault in a copy of it must fail its gate.
+{
+  const GATE = 'experimental-build';
+  const site0 = PRODUCTION_SITE_DIR;
+  const experimentalCase = async (name, title, pattern, fault) => {
+    const dir = await copyOfExperimental(name);
+    await fault(dir);
+    await expectGateFailures(title, site0, { [GATE]: pattern }, dir);
+  };
+  {
+    const failed = await failingGates(site0, await copyOfExperimental('experimental-control'));
+    record('control: an untouched copy of the experimental build passes every gate', failed.size === 0, failed.size ? [...failed.keys()].join(', ') : 'all gates pass');
+  }
+  const policyMeta = /\s*<meta http-equiv="Content-Security-Policy"[^>]*>/;
+  await experimentalCase('policy-removed', 'experimental page without its Content-Security-Policy', /declares no Content-Security-Policy/,
+    (dir) => rewrite(dir, 'index.html', (html) => html.replace(policyMeta, '')));
+  await experimentalCase('policy-other-host', 'experimental page whose policy allows another host', /declares another Content-Security-Policy/,
+    (dir) => rewrite(dir, 'index.html', (html) => html.replace("connect-src 'self'", "connect-src 'self' https://models.example.net")));
+  await experimentalCase('policy-url-worker', 'experimental page whose policy allows a Worker loaded from an address', /declares another Content-Security-Policy/,
+    (dir) => rewrite(dir, 'index.html', (html) => html.replace('worker-src blob:', "worker-src 'self' blob:")));
+  await experimentalCase('policy-inline-script', 'experimental page with a changed inline script (its hash no longer matches)', /declares another Content-Security-Policy/,
+    (dir) => rewrite(dir, 'index.html', (html) => html.replace("document.documentElement.dataset.theme = resolved;", "document.documentElement.dataset.theme = resolved; fetch('/x');")));
+  await experimentalCase('policy-after-script', 'experimental page that declares its policy after a script', /must come before the first script/,
+    async (dir) => rewrite(dir, 'index.html', (html) => {
+      const meta = policyMeta.exec(html)[0];
+      return html.replace(meta, '').replace('</head>', `${meta}\n  </head>`);
+    }));
+  await experimentalCase('model-file', 'a model file inside the experimental build', /models\/moonshine\/onnx\/encoder_model_quantized\.onnx is a model file/,
+    async (dir) => {
+      await mkdir(join(repoRoot, dir, 'models', 'moonshine', 'onnx'), { recursive: true });
+      await writeFile(join(repoRoot, dir, 'models', 'moonshine', 'onnx', 'encoder_model_quantized.onnx'), 'not a model');
+    });
+  await experimentalCase('runtime-changed', 'one changed byte in the WebAssembly runtime', /is not the pinned runtime onnxruntime-web/,
+    async (dir) => {
+      const path = join(repoRoot, dir, await fileOf(dir, /\.wasm$/));
+      const bytes = readFileSync(path);
+      bytes[bytes.length - 3] ^= 1;
+      await writeFile(path, bytes);
+    });
+  await experimentalCase('second-runtime', 'a second WebAssembly file in the experimental build', /expected exactly one WebAssembly file, found 2/,
+    (dir) => writeFile(join(repoRoot, dir, 'assets', 'other.wasm'), 'not a runtime'));
+  await experimentalCase('other-host', 'a script of the experimental build that names another host', /names the host "cdn\.example\.net"/,
+    async (dir) => rewrite(dir, await fileOf(dir, /^assets\/PronunciationPage-[\w-]+\.js$/), (code) => `${code}\nconst other="https://cdn.example.net/model.onnx";`));
+  await experimentalCase('model-hub', 'a script of the experimental build that names a model hub', /contains "huggingface"/,
+    async (dir) => rewrite(dir, await fileOf(dir, /^assets\/recognizer\.worker-[\w-]+\.js$/), (code) => `${code}\nconst hub="huggingface";`));
+  await experimentalCase('service-worker', 'a script of the experimental build that names a service worker', /names a service worker/,
+    async (dir) => rewrite(dir, await fileOf(dir, /^assets\/PronunciationPage-[\w-]+\.js$/), (code) => `${code}\nnavigator.serviceWorker;`));
+  await experimentalCase('second-worker-start', 'a second place that starts a Worker', /expected exactly one place that starts a Worker/,
+    async (dir) => rewrite(dir, await fileOf(dir, /^assets\/PronunciationPage-[\w-]+\.js$/), (code) => `${code}\nnew Worker("/eng-trainer/v3/assets/x.js");`));
+  await experimentalCase('entry-speech-code', 'speech code in the entry script of the experimental build', /assets\/index-[\w-]+\.js contains "getUserMedia"/,
+    async (dir) => rewrite(dir, await fileOf(dir, /^assets\/index-[\w-]+\.js$/), (code) => `${code}\nnavigator.mediaDevices.getUserMedia;`));
+  await experimentalCase('microphone-elsewhere', 'a microphone request outside the experimental screen', /asks for the microphone outside the experimental screen/,
+    (dir) => writeFile(join(repoRoot, dir, 'assets', 'extra-chunk.js'), 'navigator.mediaDevices.getUserMedia({audio:true});'));
 }
 
 const failed = results.filter((result) => !result.ok);
