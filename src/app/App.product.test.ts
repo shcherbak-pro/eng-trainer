@@ -12,6 +12,12 @@ import { describeExperimental, describeStable, productBase, v1Url } from '../tes
  */
 type RunningApp = { root: HTMLElement; flush: () => void; saved: () => Promise<void>; close: () => void };
 
+// A backup file is handed to the browser as a download, which jsdom cannot do. The file is kept here instead.
+const downloads: { name: string; text: string }[] = [];
+vi.mock('../shared/download', () => ({
+  downloadFile: (name: string, parts: BlobPart[]) => downloads.push({ name, text: String(parts[0]) })
+}));
+
 // Every test here mounts the whole application, and the first one also pays for compiling it
 // (about 3 seconds). An explicit limit keeps these new tests away from the default of 5 seconds.
 vi.setConfig({ testTimeout: 15_000 });
@@ -66,6 +72,8 @@ function open(app: RunningApp, page: string): void {
 const heading = (app: RunningApp): string => text(app.root.querySelector('main h1')!);
 /** The experimental-only screen, when it is shown. */
 const placeholder = (app: RunningApp): HTMLElement | null => app.root.querySelector<HTMLElement>('[data-experimental-feature]');
+/** The Backup screen of the experimental product (ENG-V3-R1A), when it is shown. */
+const backupScreen = (app: RunningApp): HTMLElement | null => app.root.querySelector<HTMLElement>('[data-experimental-feature="backup-recovery"]');
 /** The screen once it has read the state of its speech model. */
 const settled = (app: RunningApp): boolean => {
   app.flush();
@@ -94,6 +102,7 @@ beforeEach(() => {
   resetDatabase();
   window.localStorage.clear();
   window.location.hash = '';
+  downloads.length = 0;
   vi.stubGlobal('fetch', vi.fn(createContentFetch()));
 });
 
@@ -136,6 +145,23 @@ describeStable('stable-v2 has no experimental screen', () => {
     expect(text(app.root)).not.toContain('Pronunciation');
     expect(placeholder(app)).toBeNull();
     expect(app.root.querySelector('a[href="#pronunciation"]')).toBeNull();
+    // Backup and recovery (ENG-V3-R1A) are not part of the stable product either.
+    expect(navLink(app, 'backup')).toBeNull();
+    expect(app.root.querySelector('a[href="#backup"]')).toBeNull();
+    expect(text(app.root)).not.toContain('Backup');
+  });
+
+  it('treats #backup like any unknown address, and never reads the first version\'s records', async () => {
+    window.localStorage.setItem(...V1_STATE);
+    const getItem = vi.spyOn(Storage.prototype, 'getItem');
+    window.location.hash = 'backup';
+    const app = await startApp();
+
+    expect(heading(app)).toBe('Home');
+    expect(placeholder(app)).toBeNull();
+    await app.saved();
+    expect((await readDatabase()).settings.activePage).toBeUndefined();
+    expect(getItem).not.toHaveBeenCalled();
   });
 
   it('treats #pronunciation like any unknown address: Home is shown and nothing is saved for it', async () => {
@@ -237,6 +263,7 @@ describeExperimental('experimental-v3: saved data stays apart from stable v2 and
     await seedOtherVersions();
     const stableBefore = await snapshot(V2_NAME);
     const open2 = vi.spyOn(indexedDB, 'open');
+    const readV1 = vi.spyOn(Storage.prototype, 'getItem');
 
     const app = await startApp();
     // The experimental profile is empty: nothing of the stable version is shown as learned.
@@ -254,11 +281,16 @@ describeExperimental('experimental-v3: saved data stays apart from stable v2 and
     app.flush();
     open(app, 'pronunciation');
     await waitFor(() => placeholder(app) !== null, 'the Pronunciation screen');
+    // Opening the Backup screen is ordinary use too: nothing is read until a backup is asked for.
+    open(app, 'backup');
+    await waitFor(() => backupScreen(app) !== null, 'the Backup screen');
     open(app, 'index');
     await app.saved();
 
     expect(open2.mock.calls.map(([name]) => name)).toEqual(['eng-trainer-v3']);
     open2.mockRestore();
+    expect(readV1).not.toHaveBeenCalled();
+    readV1.mockRestore();
     // The experimental database holds exactly what was done here, and nothing of the stable one.
     const own = await readDatabase();
     expect(own.progress.learnedPhrases).toEqual([realMaterials.phrases[0].id]);
@@ -282,5 +314,151 @@ describeExperimental('experimental-v3: saved data stays apart from stable v2 and
 
     expect((await indexedDB.databases()).map((db) => db.name)).toEqual(['eng-trainer-v3']);
     expect(window.localStorage.length).toBe(0);
+  });
+});
+
+describeExperimental('experimental-v3: the Backup screen (ENG-V3-R1A)', () => {
+  /** Made-up data of the other two products, in the forms those products save. */
+  async function seedOtherVersions(): Promise<void> {
+    const db = await openDB(V2_NAME, 2, {
+      upgrade(database) {
+        for (const name of STORE_NAMES) database.createObjectStore(name);
+      }
+    });
+    await db.put('progress', [realMaterials.phrases[3].id, realMaterials.phrases[4].id], 'learnedPhrases');
+    await db.put('settings', 'dark', 'theme');
+    db.close();
+    window.localStorage.setItem(...V1_STATE);
+    window.localStorage.setItem(...V1_THEME);
+  }
+
+  it('lists Backup last under More and loads the screen only when it is opened', async () => {
+    const app = await startApp();
+    const links = [...app.root.querySelectorAll<HTMLAnchorElement>('.side-nav nav a')].map((link) => link.getAttribute('href'));
+    expect(links.slice(links.indexOf('#collections'))).toEqual(['#collections', '#settings', '#backup']);
+    expect(backupScreen(app)).toBeNull();
+
+    open(app, 'backup');
+    await waitFor(() => backupScreen(app) !== null, 'the Backup screen');
+    app.flush();
+    expect(heading(app)).toBe('Backup');
+    expect(navLink(app, 'backup')!.getAttribute('aria-current')).toBe('page');
+    expect(text(backupScreen(app)!)).toContain('Make a backup file');
+    expect(text(backupScreen(app)!)).toContain('Recover from a backup file');
+  });
+
+  it('is reachable by its address on a profile that holds nothing, and offers the recovery there', async () => {
+    window.location.hash = 'backup';
+    const app = await startApp();
+    await waitFor(() => backupScreen(app) !== null, 'the Backup screen');
+    app.flush();
+    expect(heading(app)).toBe('Backup');
+    expect(text(backupScreen(app)!)).toContain('This version holds no learning data in this browser.');
+    expect(backupScreen(app)!.querySelector('#backup-file')).not.toBeNull();
+  });
+
+  it('reads the other versions only when a backup is asked for, and changes neither of them', async () => {
+    await seedOtherVersions();
+    const stableBefore = await snapshot(V2_NAME);
+    const app = await startApp();
+    open(app, 'phrases');
+    app.root.querySelector<HTMLButtonElement>('.phrase-card button[aria-label="Mark as learned"]')!.click();
+    app.flush();
+    open(app, 'backup');
+    await waitFor(() => backupScreen(app) !== null, 'the Backup screen');
+    await app.saved();
+
+    const opened = vi.spyOn(indexedDB, 'open');
+    const modes = vi.spyOn(IDBDatabase.prototype, 'transaction');
+    const getItem = vi.spyOn(Storage.prototype, 'getItem');
+    const setItem = vi.spyOn(Storage.prototype, 'setItem');
+    const removeItem = vi.spyOn(Storage.prototype, 'removeItem');
+    backupScreen(app)!.querySelector<HTMLButtonElement>('[data-backup-action="make"]')!.click();
+    await waitFor(() => { app.flush(); return backupScreen(app)!.dataset.exportPhase === 'done'; }, 'the backup file');
+
+    // The explicit request read this product's database and the stable one, each without a version and read-only.
+    expect(opened.mock.calls).toEqual([['eng-trainer-v3'], [V2_NAME]]);
+    expect(modes.mock.calls.map(([, mode]) => mode)).toEqual(['readonly', 'readonly']);
+    expect(getItem.mock.calls.map(([key]) => key)).toEqual([V1_STATE[0], V1_THEME[0]]);
+    expect(setItem).not.toHaveBeenCalled();
+    expect(removeItem).not.toHaveBeenCalled();
+    vi.restoreAllMocks();
+
+    expect(downloads).toHaveLength(1);
+    const file = JSON.parse(downloads[0].text);
+    expect(Object.keys(file.sections)).toEqual(['experimental-v3', 'stable-v2', 'legacy-v1']);
+    expect(file.sections['experimental-v3'].stores.progress).toEqual([['learnedPhrases', [realMaterials.phrases[0].id]]]);
+    expect(file.sections['stable-v2'].stores.progress).toEqual([['learnedPhrases', [realMaterials.phrases[3].id, realMaterials.phrases[4].id]]]);
+    expect(file.sections['legacy-v1'].records).toEqual({ [V1_STATE[0]]: V1_STATE[1], [V1_THEME[0]]: V1_THEME[1] });
+
+    expect(await snapshot(V2_NAME)).toEqual(stableBefore);
+    expect(window.localStorage.length).toBe(2);
+    expect(window.localStorage.getItem(V1_STATE[0])).toBe(V1_STATE[1]);
+    expect((await indexedDB.databases()).map((db) => db.name).sort()).toEqual([V2_NAME, 'eng-trainer-v3']);
+  });
+});
+
+describeExperimental('experimental-v3: the open screen stays while a recovery holds the changes (ENG-V3-R1A-RC3)', () => {
+  const settle = (): Promise<void> => new Promise((resolve) => setTimeout(resolve, 30));
+
+  it('puts the address back and keeps the Backup screen, whatever asks for another one, and navigates again after the hold', async () => {
+    window.location.hash = 'backup';
+    const app = await startApp();
+    await waitFor(() => backupScreen(app) !== null, 'the Backup screen');
+    await app.saved();
+    const state = await import('../state');
+    expect((await readDatabase()).settings.activePage).toBe('backup');
+    const entries = window.history.length;
+
+    // What a recovery does at the moment it starts to write.
+    expect(state.holdState()).toBe('held');
+
+    // The Back button, or an address typed by hand.
+    window.location.hash = 'phrases';
+    await waitFor(() => window.location.hash === '#backup', 'the address to be put back');
+    app.flush();
+    expect(backupScreen(app)).not.toBeNull();
+    expect(heading(app)).toBe('Backup');
+
+    // A link of the application itself.
+    navLink(app, 'phrases')!.click();
+    await settle();
+    app.flush();
+    expect(window.location.hash).toBe('#backup');
+    expect(backupScreen(app)).not.toBeNull();
+    expect(navLink(app, 'backup')!.getAttribute('aria-current')).toBe('page');
+
+    // Nothing was accepted on the way: the saved last page is still this one.
+    await app.saved();
+    expect((await readDatabase()).settings.activePage).toBe('backup');
+    expect(state.stateHeld()).toBe(true);
+    // Putting the address back replaces an entry. It does not add one.
+    expect(window.history.length).toBeLessThanOrEqual(entries + 2);
+
+    state.releaseState();
+    open(app, 'phrases');
+    await app.saved();
+    expect(heading(app)).toBe('Phrases');
+    expect(backupScreen(app)).toBeNull();
+    expect((await readDatabase()).settings.activePage).toBe('phrases');
+  });
+});
+
+describeStable('stable-v2 has no hold on changes', () => {
+  it('navigates and saves as always, also when the hold was asked for: no part of the application looks at it', async () => {
+    const app = await startApp();
+    const state = await import('../state');
+    expect(state.holdState()).toBe('held');
+
+    open(app, 'phrases');
+    app.root.querySelector<HTMLButtonElement>('.phrase-card button[aria-label="Mark as learned"]')!.click();
+    app.flush();
+    await app.saved();
+
+    expect(heading(app)).toBe('Phrases');
+    const saved = await readDatabase();
+    expect(saved.settings.activePage).toBe('phrases');
+    expect(saved.progress.learnedPhrases).toEqual([realMaterials.phrases[0].id]);
+    state.releaseState();
   });
 });

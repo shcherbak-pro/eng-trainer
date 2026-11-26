@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 import type { StoredRecords, WriteOp } from '../storage/database';
-import { persist } from './persistence';
+import { changesHeld, persist } from './persistence';
 import { viewState } from './viewState';
 
 /**
@@ -270,6 +270,8 @@ function createProgressStore() {
 
   /** Applies a change in memory and queues the records that changed. */
   function update(change: (current: ProgressState) => ProgressState): void {
+    // A recovery from a backup is replacing the saved state (experimental product only): no change is accepted.
+    if (__ENG_BACKUP__ && changesHeld()) return;
     const next = change(state);
     const ops = changedRecords(state, next);
     if (!ops.length) return;

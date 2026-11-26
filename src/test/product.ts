@@ -18,6 +18,8 @@ export const v1Url = `${__SITE_BASE__}v1/`;
 
 /** Screens that only the experimental product has, in navigation order. */
 export const EXPERIMENTAL_PAGES: string[] = isExperimental ? ['pronunciation'] : [];
+/** The screen that only the experimental product has under "More", after Settings (ENG-V3-R1A). */
+export const EXPERIMENTAL_MORE_PAGES: string[] = isExperimental ? ['backup'] : [];
 
 /**
  * Tests of the stable database lineage: the upgrade from version 1 to version 2 and a

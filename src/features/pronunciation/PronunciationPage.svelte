@@ -226,7 +226,7 @@
 
   <section class="panel" aria-labelledby="experimental-build">
     <h2 id="experimental-build" class="panel__title">About this build</h2>
-    <p>This is the experimental version of the trainer. It keeps its learning data in its own browser database and does not read or change the data of the other versions.</p>
+    <p>This is the experimental version of the trainer. It keeps its learning data in its own browser database. It reads the data of the other versions only on the Backup screen, and it writes that data only when you recover it there from a backup file and confirm.</p>
     <dl class="facts">
       <dt>Product</dt>
       <dd data-build-fact="product">{__ENG_PRODUCT__}</dd>

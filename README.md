@@ -126,7 +126,7 @@ The source tree in the repository root builds two products. The product is chose
 | Product | Published at | Database | Notes |
 |---|---|---|---|
 | `stable-v2` | `/eng-trainer/` | `eng-trainer-v2` | The released v2. Every command above builds and tests this product. |
-| `experimental-v3` | not published (`/eng-trainer/v3/` in local test builds) | `eng-trainer-v3` | Same code and content, its own database, and a Pronunciation prototype: it records a phrase and shows what a speech recognizer in the browser heard. No scoring. No build contains a speech model. |
+| `experimental-v3` | not published (`/eng-trainer/v3/` in local test builds) | `eng-trainer-v3` | Same code and content, its own database, and two screens of its own. **Pronunciation** is a prototype: it records a phrase and shows what a speech recognizer in the browser heard. No scoring. No build contains a speech model. **Backup** makes one backup file with the saved data of all three versions, and recovers each version from such a file. |
 | `legacy-v1` | `/eng-trainer/v1/` | `localStorage` | The frozen project in `v1/`. |
 
 ```bash
@@ -149,6 +149,13 @@ npm run prototype:serve     # http://127.0.0.1:4173/eng-trainer/v3/#pronunciatio
 ```
 
 Recognition runs on the device. Nothing is scored, stored or sent. How it works, its network boundary and what is still open are in [Pronunciation prototype](docs/architecture/PRONUNCIATION-PROTOTYPE.md).
+
+The Backup screen is at `#backup`, under **More**. Making a backup reads the saved data of the three versions and changes nothing. A recovery writes one version at a time, after a confirmation, and only where that version holds no learning data. The stable version must have been opened once in the browser before it can be recovered: only it creates its own storage. The file format, the checks and the limits are in [Backup and recovery](docs/architecture/BACKUP-AND-RECOVERY.md). Its browser test needs an installed Playwright:
+
+```bash
+npm run prototype:build                       # all three products -> .site-test/
+node scripts/acceptance/backup.mjs chromium   # also: firefox. New browser profiles and made-up data only
+```
 
 Run the two test suites one after the other, not at the same time.
 
@@ -181,7 +188,7 @@ site.config.json  Products, routes and publish flags
 v1/            The preserved v1 application (independent project)
 ```
 
-`src/features/pronunciation/` belongs to the experimental product only. Shared code reaches it through one guarded dynamic import, and a stable build reads none of its files, so the stable build does not contain it.
+`src/features/pronunciation/` and `src/features/backup/` belong to the experimental product only. Shared code reaches each through one guarded dynamic import, and a stable build reads none of their files, so the stable build contains neither.
 
 The experimental product has one more runtime dependency, [`onnxruntime-web`](https://www.npmjs.com/package/onnxruntime-web) at an exact version: the WebAssembly runtime of the speech recognizer. The stable build does not contain it.
 

@@ -38,6 +38,8 @@ test('stable defaults are explicit: the released database, folders and no pronun
     __ENG_PRODUCT__: '"stable-v2"',
     __ENG_DATABASE__: '"eng-trainer-v2"',
     __ENG_PRONUNCIATION__: 'false',
+    // Backup and recovery (ENG-V3-R1A) exist in the experimental product only.
+    __ENG_BACKUP__: 'false',
     __ENG_VERSION_LINKS__: '[{"product":"legacy-v1","href":"/eng-trainer/v1/"}]'
   });
 });
@@ -60,6 +62,7 @@ test('the experimental product has its own database, folders and base path, and 
   assert.equal(experimental.define.__ENG_DATABASE__, '"eng-trainer-v3"');
   assert.equal(experimental.define.__ENG_PRODUCT__, '"experimental-v3"');
   assert.equal(experimental.define.__ENG_PRONUNCIATION__, 'true');
+  assert.equal(experimental.define.__ENG_BACKUP__, 'true');
   assert.equal(experimental.define.__SITE_BASE__, '"/eng-trainer/"');
   assert.deepEqual(versionLinks(site, EXPERIMENTAL_PRODUCT), [
     { product: STABLE_PRODUCT, href: '/eng-trainer/' },
@@ -86,7 +89,7 @@ test('product identity survives a route swap: only addresses change', () => {
   assert.equal(after.stable.base, '/eng-trainer/v2/');
   assert.equal(after.experimental.base, '/eng-trainer/');
   for (const name of ['stable', 'experimental']) {
-    for (const key of ['__ENG_PRODUCT__', '__ENG_DATABASE__', '__ENG_PRONUNCIATION__', '__SITE_BASE__']) {
+    for (const key of ['__ENG_PRODUCT__', '__ENG_DATABASE__', '__ENG_PRONUNCIATION__', '__ENG_BACKUP__', '__SITE_BASE__']) {
       assert.equal(after[name].define[key], before[name].define[key], `${name} ${key}`);
     }
     assert.equal(after[name].outDir, before[name].outDir);

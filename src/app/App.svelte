@@ -7,7 +7,7 @@
   import { StorageAbortError } from '../storage/database';
   import CollectionsPage from '../features/collections/CollectionsPage.svelte';
   import type { TrainingBlock } from '../content/types';
-  import { initState, initStateWithoutStorage, progress, settings } from '../state';
+  import { initState, initStateWithoutStorage, progress, settings, stateHeld } from '../state';
   import { availablePagesFor, blocksForLearnPass, pageForBlock, pageFromHash, topicIdOf, topicRoute } from './navigation';
   import AppHeader from './AppHeader.svelte';
   import AppShell from './AppShell.svelte';
@@ -130,12 +130,19 @@
 
   function syncPageFromHash(): void {
     if (phase !== 'ready') return;
+    // A recovery from a backup is being written (experimental product only, ENG-V3-R1A-RC3). Until
+    // it has finished, the open screen stays open: the address is put back, and nothing else happens.
+    if (__ENG_BACKUP__ && stateHeld()) {
+      if (pageFromHash() !== activePage) history.replaceState(history.state, '', `#${activePage}`);
+      return;
+    }
     const next = pageFromHash() || $settings.activePage;
     activePage = availablePages.includes(next) ? next : 'index';
     settings.setActivePage(activePage);
   }
 
   function navigate(page: string): void {
+    if (__ENG_BACKUP__ && stateHeld()) return;
     window.location.hash = page;
     activePage = page;
     settings.setActivePage(page);
@@ -156,10 +163,10 @@
     navigate('index');
   }
 
-  // The last branch of the screen list below belongs to the experimental product only (ENG-V3-01).
-  // It must stay last, hold no comment or text of its own, and start its condition with the bare
-  // compile-time constant: the stable build then drops the branch together with the import, and
-  // its compiled output stays byte-identical to the released one. The released-site lock checks it.
+  // The last branches of the screen list below belong to the experimental product only (ENG-V3-01,
+  // ENG-V3-R1A). They must stay last, hold no comment or text of their own, and start their condition
+  // with a bare compile-time constant: the stable build then drops each branch together with its import,
+  // and its compiled output stays byte-identical to the released one. The released-site lock checks it.
 
   onMount(() => {
     mounted = true;
@@ -279,6 +286,10 @@
     {:else if __ENG_PRONUNCIATION__ && activePage === 'pronunciation'}
       {#await import('../features/pronunciation/PronunciationPage.svelte') then feature}
         <svelte:component this={feature.default} {catalog} />
+      {/await}
+    {:else if __ENG_BACKUP__ && activePage === 'backup'}
+      {#await import('../features/backup/BackupPage.svelte') then feature}
+        <svelte:component this={feature.default} />
       {/await}
     {/if}
   </AppShell>

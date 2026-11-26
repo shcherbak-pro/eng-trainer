@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 import type { StoredRecords, WriteOp } from '../storage/database';
-import { persist } from './persistence';
+import { changesHeld, persist } from './persistence';
 import { viewState } from './viewState';
 
 /**
@@ -138,6 +138,8 @@ function createSettingsStore() {
   const store = writable<SettingsState>(state);
 
   function update(patch: Partial<SettingsState> | ((current: SettingsState) => Partial<SettingsState>)): void {
+    // A recovery from a backup is replacing the saved state (experimental product only): no change is accepted.
+    if (__ENG_BACKUP__ && changesHeld()) return;
     const next = { ...state, ...(typeof patch === 'function' ? patch(state) : patch) };
     const ops = changedRecords(state, next);
     if (!ops.length) return;

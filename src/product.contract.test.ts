@@ -3,7 +3,7 @@ import { beforeEach, expect, it } from 'vitest';
 import { DATABASE_NAME, DATABASE_VERSION, META_STORE_NAME, STATE_STORE_NAMES, STORE_NAMES, openStorage } from './storage/database';
 import { contentBase } from './test/content';
 import { resetDatabase } from './test/database';
-import { EXPERIMENTAL_PAGES, describeExperimental, describeStable, productBase, v1Url } from './test/product';
+import { EXPERIMENTAL_MORE_PAGES, EXPERIMENTAL_PAGES, describeExperimental, describeStable, productBase, v1Url } from './test/product';
 
 /**
  * The literal contract of each product (ENG-V3-01).
@@ -26,9 +26,11 @@ async function schemaOf(name: string): Promise<{ version: number; stores: string
 }
 
 describeStable('stable-v2: the released contract, as literals', () => {
-  it('is the stable product at the site root, without the pronunciation capability', () => {
+  it('is the stable product at the site root, without the pronunciation capability and without the Backup screen', () => {
     expect(__ENG_PRODUCT__).toBe('stable-v2');
     expect(__ENG_PRONUNCIATION__).toBe(false);
+    expect(__ENG_BACKUP__).toBe(false);
+    expect(EXPERIMENTAL_MORE_PAGES).toEqual([]);
     expect(__SITE_BASE__).toBe('/eng-trainer/');
     expect(import.meta.env.BASE_URL).toBe('/eng-trainer/');
     expect(productBase).toBe('/eng-trainer/');
@@ -56,9 +58,11 @@ describeStable('stable-v2: the released contract, as literals', () => {
 });
 
 describeExperimental('experimental-v3: its own contract, as literals', () => {
-  it('is the experimental product, built with the pronunciation capability', () => {
+  it('is the experimental product, built with the pronunciation capability and the Backup screen', () => {
     expect(__ENG_PRODUCT__).toBe('experimental-v3');
     expect(__ENG_PRONUNCIATION__).toBe(true);
+    expect(__ENG_BACKUP__).toBe(true);
+    expect(EXPERIMENTAL_MORE_PAGES).toEqual(['backup']);
     expect(EXPERIMENTAL_PAGES).toEqual(['pronunciation']);
   });
 
