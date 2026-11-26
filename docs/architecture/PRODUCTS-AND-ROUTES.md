@@ -1,23 +1,28 @@
-# Products and routes (ENG-V3-01, ENG-V3-02 stage A)
+# Products and routes (ENG-V3-01, ENG-V3-02 stage A, ENG-V3-R1A)
 
 One source tree builds two applications, and the site still contains the frozen v1. This document describes how a build learns which product it is, where each product is published, and which gates keep the released site unchanged.
 
-It describes what ENG-V3-01 implemented, and what ENG-V3-02 stage A changed in the builds and gates. The speech feature itself is described in [Pronunciation prototype](PRONUNCIATION-PROTOTYPE.md). The design and its reasons are in the ENG-V3-00 architecture plan and its two reviews. Those documents, and the implementation handoff of ENG-V3-01 with its evidence, are local records of the owner and are not part of this repository.
+It describes what ENG-V3-01 implemented, and what ENG-V3-02 stage A and ENG-V3-R1A changed in the builds and gates. The speech feature itself is described in [Pronunciation prototype](PRONUNCIATION-PROTOTYPE.md), and backup and recovery in [Backup and recovery](BACKUP-AND-RECOVERY.md). The design and its reasons are in the ENG-V3-00 architecture plan and its two reviews. Those documents, and the implementation handoff of ENG-V3-01 with its evidence, are local records of the owner and are not part of this repository.
 
 ## Two separate ideas
 
 - A **product** is what an application is: its database, its features and its content.
 - A **route** is where a product is published inside the GitHub Pages site.
 
-| Product | Built from | Route today | Published | Browser storage | Pronunciation capability |
-|---|---|---|---|---|---|
-| `stable-v2` | `src/` | `/eng-trainer/` | yes | IndexedDB `eng-trainer-v2`, version 2, six stores | off |
-| `legacy-v1` | `v1/` (frozen project) | `/eng-trainer/v1/` | yes | `localStorage`, two records | — |
-| `experimental-v3` | `src/` | `/eng-trainer/v3/` | **no** | IndexedDB `eng-trainer-v3`, version 1, the same six stores plus `meta`; a model cache `eng-trainer-v3-models` only after a download on the local prototype server | on: a prototype screen |
+| Product | Built from | Route today | Published | Browser storage | Pronunciation capability | Backup screen |
+|---|---|---|---|---|---|---|
+| `stable-v2` | `src/` | `/eng-trainer/` | yes | IndexedDB `eng-trainer-v2`, version 2, six stores | off | no |
+| `legacy-v1` | `v1/` (frozen project) | `/eng-trainer/v1/` | yes | `localStorage`, two records | — | — |
+| `experimental-v3` | `src/` | `/eng-trainer/v3/` | **no** | IndexedDB `eng-trainer-v3`, version 1, the same six stores plus `meta`; a model cache `eng-trainer-v3-models` only after a download on the local prototype server | on: a prototype screen | yes |
 
 Product identity, database name and content never depend on `location.pathname`. Moving a product to another route changes addresses and nothing else.
 
-`experimental-v3` differs from `stable-v2` on screen in one place, the **Pronunciation** screen: a prototype that records a phrase and shows what a speech recognizer in the browser heard ([Pronunciation prototype](PRONUNCIATION-PROTOTYPE.md)). No build contains a speech model. The product contains no scoring, migration, backup or content change.
+`experimental-v3` differs from `stable-v2` on screen in two places:
+
+- the **Pronunciation** screen: a prototype that records a phrase and shows what a speech recognizer in the browser heard ([Pronunciation prototype](PRONUNCIATION-PROTOTYPE.md)). No build contains a speech model.
+- the **Backup** screen: one backup file with the saved data of all three products, and the recovery of each product from such a file ([Backup and recovery](BACKUP-AND-RECOVERY.md)).
+
+The product contains no scoring, migration or content change.
 
 ## Configuration
 
@@ -55,29 +60,31 @@ The product reaches the code as compile-time constants ([`src/product.d.ts`](../
 |---|---|---|---|
 | `__ENG_PRODUCT__` | `"stable-v2"` | `"experimental-v3"` | the database schema |
 | `__ENG_DATABASE__` | `"eng-trainer-v2"` | `"eng-trainer-v3"` | the database name |
-| `__ENG_PRONUNCIATION__` | `false` | `true` | the navigation and the one lazily loaded screen |
+| `__ENG_PRONUNCIATION__` | `false` | `true` | the navigation and the lazily loaded Pronunciation screen |
+| `__ENG_BACKUP__` | `false` | `true` | the navigation and the lazily loaded Backup screen, and the hold on changes that a recovery takes in the state services, the collections and the shell ([Backup and recovery](BACKUP-AND-RECOVERY.md#the-handover)). It follows from the product and is not in `site.config.json` |
 | `__SITE_BASE__` | `"/eng-trainer/"` | `"/eng-trainer/"` | links to v1 |
 | `__ENG_VERSION_LINKS__` | other published routes | other published routes | the Pronunciation screen only |
 
-Vite replaces each name with its value. Code behind a constant that is `false` is removed from that product's build, together with everything only it reaches. That is how the stable build stays free of experimental code: it does not contain the Pronunciation screen, a request for it, or the name `eng-trainer-v3`.
+Vite replaces each name with its value. Code behind a constant that is `false` is removed from that product's build, together with everything only it reaches. That is how the stable build stays free of experimental code: it does not contain the Pronunciation screen or the Backup screen, a request for either, or the name `eng-trainer-v3`.
 
 ### Rules for a condition on a constant
 
-The stable build must stay byte-identical to the released one. Three rules keep it so, and the released-site lock fails when one is broken:
+The stable build must stay byte-identical to the released one. Four rules keep it so, and the released-site lock fails when one is broken:
 
-1. **Use the bare constant** in the condition, for example `if (__ENG_PRONUNCIATION__)`. Do not copy it into a variable or an object first.
+1. **Use the bare constant** in the condition, for example `if (__ENG_PRONUNCIATION__)`. Do not copy it into a variable or an object first. Give the condition a statement of its own: `if (__ENG_BACKUP__ && held) return;`, not one more operand in a condition that the stable product uses.
 2. **Never put the condition inside a `try` block.** The bundler keeps everything inside a `try` block, also a branch that can never run. The experimental database schema is selected just before the `try` block of the upgrade handler for this reason.
 3. **In a Svelte template, add the experimental branch last** in its `{#if}` chain, with no comment or text of its own. A branch in the middle renumbers the released branches.
+4. **Add no import between shared modules for experimental code.** The bundler orders the modules of a build by their imports, also by an import of which the stable build uses nothing. One new import from the collections to the state services moved a whole module in the stable build (ENG-V3-R1A-RC3). More names on an import that exists are safe.
 
-A test also checks rules 2 and 3 in the sources, and that shared code reaches the experimental-only folder `src/features/pronunciation/` through exactly one guarded dynamic import.
+A test also checks rules 2 and 3 in the sources, that shared code reaches each experimental-only folder, `src/features/pronunciation/` and `src/features/backup/`, through exactly one guarded dynamic import, and for the hold on changes rules 1 and 4.
 
 ### Experimental-only sources
 
 The constant removes the feature's code from the stable build. It does not stop the bundler from reading the guarded module first, and a module can emit files while it is read: the recognizer's Worker, the recording worklet and the WebAssembly runtime. Such files would land in the stable build folder although nothing refers to them.
 
-A build of any product but `experimental-v3` therefore gets an empty module in place of every import that leads into `src/features/pronunciation/` (the plugin `eng-trainer:without-experimental-sources` in `vite.config.ts`). It applies to builds only: tests import the feature's modules directly, for either product.
+A build of any product but `experimental-v3` therefore gets an empty module in place of every import that leads into `src/features/pronunciation/` or `src/features/backup/` (the plugin `eng-trainer:without-experimental-sources` in `vite.config.ts`). It applies to builds only: tests import the feature's modules directly, for either product.
 
-Both controls are checked from the outside. The released-site lock fails on any extra file, and `check:negative` builds the stable product without the guard, without the exclusion, and without both.
+Both controls are checked from the outside. The released-site lock fails on any extra file, and `check:negative` builds the stable product without the guard, without the exclusion, and without both, for each of the two screens.
 
 ## Addresses
 
@@ -96,9 +103,10 @@ The two links to v1 used the product base before ENG-V3-01. From a product below
 - `stable-v2` keeps `eng-trainer-v2`, version 2, with exactly its six stores and the released migrations.
 - `experimental-v3` creates `eng-trainer-v3`, a new lineage at version 1: the six shared stores and `meta`. The six stores have the same record contracts, so the shared state services work unchanged.
 - `meta` holds two records written once, in the transaction that creates the database: `schema` (1) and `createdAt`. It is not learning state. `readAll()` and the state services never see it.
-- A build opens only its own database. `experimental-v3` never opens, creates, reads, writes or upgrades `eng-trainer-v2`, and it never touches `localStorage`.
+- At start-up and while learning, a build opens only its own database. `stable-v2` never reaches `localStorage`.
+- `experimental-v3` reaches the other two products on its Backup screen only (ENG-V3-R1A). It reads `eng-trainer-v2` and the two `localStorage` records of v1 when the learner asks for a backup file, and for the preview of a recovery. It writes them in one case: the learner selected a backup file, saw the preview and confirmed the recovery of that product, and the product holds no learning data. It never creates, upgrades or deletes that database, and never removes or clears a `localStorage` record. See [Backup and recovery](BACKUP-AND-RECOVERY.md#product-boundaries).
 
-Two database names on one origin separate the data logically. They are not a security boundary, and they give no separate durability: browser storage of one origin shares one quota and one eviction exposure. ENG-V3-01 makes no backup or durability claim. See the [open gates](#open-gates-for-later-milestones).
+Two database names on one origin separate the data logically. They are not a security boundary, and they give no separate durability: browser storage of one origin shares one quota and one eviction exposure. A backup file is the only copy outside the browser. See the [open gates](#open-gates-for-later-milestones).
 
 ## Content
 
@@ -212,12 +220,13 @@ What this covers, and what it does not:
 | Released-site lock | `site-dist/` is exactly the 33 released files: same paths, sizes and SHA-256. Nothing extra, nothing missing, nothing changed, hidden files included. |
 | Unpublished routes | No file exists at the path of a route with `"publish": false`. |
 | Stable chunks | Exactly one script and one stylesheet, and the entry page names exactly those. |
-| Stable tokens | No speech, model, Worker or remote-runtime token, and no trace of the experimental product. |
+| Stable tokens | No speech, model, Worker or remote-runtime token, no key-value storage (`localStorage`, `sessionStorage`, the names of v1's records), and no trace of the experimental product. |
 | Stable content | The released manifest and all 14 packs. |
 | Experimental content | The same, while the overlay is empty. |
 | Experimental build | Its own database and base path, and `noindex`. The entry script holds no speech, model or Worker code: the feature is in lazily loaded files. The page declares exactly the committed Content-Security-Policy, once, before its first script. One file starts a Worker, and nothing names a service worker. The microphone is asked for in the Pronunciation screen only. No file names a model hub, a public script host or any host that was not looked at. The WebAssembly runtime is the pinned file, once. No model file is in the build. |
+| Experimental backup | The Backup screen is one lazily loaded file, and the recovery writer is one more, which only the first names and loads. Only those two name the stable database, v1's records or `localStorage`, and each reaches `localStorage` in one place. The Backup screen's file holds no call that writes a key-value record, creates no object store, opens a database without a version and starts exactly one read-write transaction. The writer holds exactly one call that writes a key-value record and one read-write transaction, requests no database itself and creates no object store. No file of the build removes a key-value record or deletes a database. Neither of the two files makes a request or holds speech, model or Worker code. |
 
-[`scripts/check-negative.mjs`](../../scripts/check-negative.mjs) proves that the gates can fail. It breaks disposable copies on purpose: one changed byte, an extra file, a hidden file, a missing file, the unpublished product copied into the site, colliding routes, a product folder that is not the product's own, a build into a folder that the repository does not generate, a build with a Rollup output option, four stable builds in which the experimental screen or its files are reachable, and fourteen faults in a copy of the experimental build: a missing or weakened page policy, a changed inline script, a model file, a changed or second runtime binary, another host, a service worker, a second place that starts a Worker, and speech code outside the lazy screen. Each case passes only when the right gate refuses it.
+[`scripts/check-negative.mjs`](../../scripts/check-negative.mjs) proves that the gates can fail. It breaks disposable copies on purpose: one changed byte, an extra file, a hidden file, a missing file, the unpublished product copied into the site, colliding routes, a product folder that is not the product's own, a build into a folder that the repository does not generate, a build with a Rollup output option, six stable builds in which an experimental screen or its files are reachable, fourteen faults in a copy of the experimental build (a missing or weakened page policy, a changed inline script, a model file, a changed or second runtime binary, another host, a service worker, a second place that starts a Worker, and speech code outside the lazy screen), and thirty-two faults of the backup gate: the stable database or v1's records named outside the Backup screen and its recovery writer, a key-value write outside the writer or a second one inside it, a removal, a second access to the key-value storage, a database deletion, a created object store, a database opened with a version, a second read-write transaction, a request, a second dynamic import, the Backup screen in the entry script, a missing or second writer, a writer that another file or the entry page loads, and a Backup screen that is missing or no longer reads the stable database. Each case passes only when the right gate refuses it.
 
 ### The released-site lock
 
@@ -268,9 +277,11 @@ Open for the real promotion, a later milestone: an approved archive lock for v2 
 
 ## Open gates for later milestones
 
-ENG-V3-02 stage A is a prototype for disposable browser profiles with made-up data. It contains no backup, no capacity check, no feedback, no history, no migration and no ledger. Three controls were named before it started:
+ENG-V3-02 stage A is a prototype for disposable browser profiles with made-up data. It contains no capacity check, no feedback, no history, no migration and no ledger. Three controls were named before it started:
 
-- **R1: durability for the whole origin. Open.** Browser storage of one origin shares one quota and one eviction exposure, so a separate database name protects nothing. Before any large model cache is used on a real profile, there must be a validated full backup, a recovery path that the user can actually use for v1, v2 and v3, and safe handling of capacity, eviction and downloads. Stage A has the atomic installer that this gate builds on, and keeps the model away from real profiles.
+- **R1: durability for the whole origin (the Data Safety Gate). Open.** Browser storage of one origin shares one quota and one eviction exposure, so a separate database name protects nothing. Before any large model cache is used on a real profile, there must be a validated full backup, a recovery path that the user can actually use for v1, v2 and v3, and safe handling of capacity, eviction and downloads. Stage A has the atomic installer that this gate builds on, and keeps the model away from real profiles.
+  - **R1-A, backup and recovery: implemented** ([Backup and recovery](BACKUP-AND-RECOVERY.md)). A validated backup of all three products exists, and each product can be recovered from it into its own storage, where that holds no learning data.
+  - **R1-B, capacity, the model cache and persistence: not started.**
 - **R2: network boundary. Implemented for stage A, for Chromium and Firefox.** The Worker bootstrap, the page policy and the installer are tested on hosting without policy headers ([Pronunciation prototype](PRONUNCIATION-PROTOTYPE.md#network-boundary)). Recognition stays in the browser, and there is no cloud fallback. Safari and phones are not shown.
 - **R3: revisions of spoken targets. The contract is implemented** (`src/features/pronunciation/spokenTarget.js`, with its regression cases). Nothing uses a revision yet: there is no feedback, no attempt history and no content patch.
 

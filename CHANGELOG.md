@@ -1,5 +1,31 @@
 # Changelog
 
+## Unreleased — ENG-V3-R1A (2026-11-25)
+
+Full backup and recovery in the experimental product: the first half of the Data Safety Gate. Nothing changes for users: the experimental product is not published, and the published site stays byte-identical to the ENG-V2-03 release.
+
+- **Backup screen (experimental product only), at `#backup` under More.**
+  - **Make a backup file** writes one JSON file with the saved data of all three versions: the experimental database, the stable database and the two records of v1. Progress, the Focus list, Learn passes, flashcard places, preferences and imported collections keep their original identities.
+  - **Recover from a backup file** checks and shows a file and says where each part can go. Each part is recovered on its own, into the version it belongs to, after a confirmation that names that version, and only where that version holds no learning data. It never overwrites and never merges.
+  - The stable version is recovered into its own database. That database is never created, upgraded or deleted from here: where it does not exist yet, the screen asks the learner to open the stable version once.
+  - v1 is recovered into its two records. A browser cannot write two records in one step. A recovery that stops after the first is reported as not complete, never as a success, and can be completed later as long as the recovered data was not changed.
+- **The file.** Format `eng-trainer-backup`, version 1. Each part names its product, storage and schema version and has a SHA-256 digest. It holds no speech model, cache entry or recording.
+- **Validation is strict.** A file is accepted or refused as a whole, from the file alone. Unknown or missing members, another format or schema version, a part that does not match its digest, and any record that the application would repair or skip are refused, with the reason.
+- **The other versions are reached on the Backup screen only.** They are read when the learner asks for a backup, and for the preview of a part that a selected file holds. They are written by one recovery writer, a file of its own that is loaded after the learner confirmed a recovery, and at no other time. The stable database is always opened without a version. No record of v1 is ever removed.
+- **A recovery of a database is one transaction.** The destination is judged again inside it. After the write the database is read back and compared with the file's digest, and only then is the result reported.
+  - A guard makes the transaction commit only when every write was issued. Without it, Firefox committed half a recovery when the tab was closed during the writes. The browser test found that, and now closes the page at four points of the write, for both databases.
+  - The guard's record is an empty list of learned phrases, which both versions write themselves. A stop between the guard's own two requests therefore leaves nothing invalid.
+- **A recovery has three results.** Rolled back: nothing was changed. Recovered: written, read back and equal to the file. Written, but not checked: the transaction completed, and the read-back or the comparison failed. The third is never reported as "nothing was recovered".
+  - A destination that holds exactly the data of the file is shown as "nothing to recover", never as data to be reset.
+- **The running application hands over to a recovery of its own database in one step.**
+  - Until then a change is accepted and saved as always. The recovery waits for the save that is running and for what is queued behind it, and judges the destination with all of it in place. A change that could not be saved stops the recovery, and stays on screen with its way to try again.
+  - Then changes are held: the state services and the collections accept none, nothing of the tab is written, and the Backup screen stays open, whatever the Back button or the address asks for. A change is either saved before the recovery or not accepted. None is accepted and then lost.
+  - A refused or rolled-back recovery leaves the tab as it was: nothing is loaded again or switched off. Once the recovery is written, the tab is detached from its storage, and saving comes back only when the recovered state was loaded from the database. Otherwise the tab says that saving is off and asks for a reload.
+  - The hold is in shared code, behind the compile-time constant of the Backup screen. The stable build contains none of it.
+- A new gate keeps the reads of other versions in the Backup screen's file and the writes in the recovery writer, which only that file loads. It allows one call that writes a key-value record, in the writer, and no removal, database deletion, store creation or request. Thirty-two deliberate faults prove that it can fail.
+- 304 new tests: 297 of the feature, 5 of the hold on changes and 2 of the shell under it. A browser acceptance test with 188 checks in Chromium and in Firefox.
+- No dependency was added or changed.
+
 ## Unreleased — ENG-V3-02A-RC1 (2026-11-25)
 
 Corrections from Astra's independent review of ENG-V3-02 stage A. Nothing changes for users: the experimental product is not published, and the published site stays byte-identical to the ENG-V2-03 release.

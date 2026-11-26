@@ -1,9 +1,9 @@
 import { openStorage, StorageAbortError, type OpenStorageOptions } from '../storage/database';
-import { connectStorage, disablePersistence } from './persistence';
+import { changesHeld, connectStorage, disablePersistence, holdChanges, releaseChanges, type ChangeHold } from './persistence';
 import { progress, PROGRESS_KEYS, type ProgressState } from './progress';
 import { settings, SETTING_KEYS, type SettingKey } from './settings';
 import { viewState } from './viewState';
-import { connectCollections, disableCollections, readCollections } from '../collections/service';
+import { connectCollections, disableCollections, holdCollections, readCollections } from '../collections/service';
 
 /**
  * Opens the database and loads the saved state.
@@ -40,6 +40,30 @@ export async function initState(options: OpenStorageOptions = {}): Promise<void>
 export function initStateWithoutStorage(): void {
   disablePersistence();
   disableCollections();
+}
+
+/**
+ * The hold on changes for a recovery from a backup (ENG-V3-R1A-RC3, experimental product only;
+ * the contract is at `holdChanges` in ./persistence.ts). It covers both ways in which this
+ * application writes its database: the state services, and the collections.
+ *
+ * `holdState` answers `held` only when nothing was waiting to be saved. From then until
+ * `releaseState` no change of progress, preferences or collections is accepted, and nothing
+ * is written. `stateHeld` is what the shell asks before it changes the screen.
+ */
+export function holdState(): ChangeHold {
+  const hold = holdChanges();
+  if (hold === 'held') holdCollections(true);
+  return hold;
+}
+
+export function releaseState(): void {
+  holdCollections(false);
+  releaseChanges();
+}
+
+export function stateHeld(): boolean {
+  return changesHeld();
 }
 
 /**

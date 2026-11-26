@@ -21,7 +21,7 @@ import { build } from 'vite';
 import { REHEARSAL_WORK_DIR, removeGeneratedDir } from './generated-dirs.mjs';
 import { assembleRoutes } from './site-assembly.mjs';
 import { checkAssembledSite, entryAssetUrls } from './site-checks.mjs';
-import { EXPERIMENTAL_MARKER, EXPERIMENTAL_TOKENS, FEATURE_TOKENS, compareInventory, inventory, readLocks, reportGates, runProductGates } from './product-gates.mjs';
+import { BACKUP_SCREEN, EXPERIMENTAL_TOKENS, FEATURE_TOKENS, OTHER_STORAGE_TOKENS, RECOVERY_WRITER_FILE, SPEECH_SCREEN, compareInventory, inventory, readLocks, reportGates, runProductGates } from './product-gates.mjs';
 import { declaredPolicy, inlineScriptHashes, pagePolicy } from './pronunciation-policy.mjs';
 import {
   EXPERIMENTAL_PRODUCT, LEGACY_PRODUCT, STABLE_PRODUCT,
@@ -151,9 +151,17 @@ const catalog = [
   const html = readFileSync(join(dir, 'index.html'), 'utf8');
   const entryScripts = entryAssetUrls(html).filter((url) => url.endsWith('.js')).map((url) => url.slice(siteBase.length));
   const lazy = code.filter((file) => file.path.endsWith('.js') && !entryScripts.includes(file.path));
-  check(containing(code, 'eng-trainer-v3').length > 0 && containing(code, 'eng-trainer-v2').length === 0, 'experimental-v3 at the root: still uses the database eng-trainer-v3 and never names eng-trainer-v2');
+  // The other products' storage is reached for a backup and for a confirmed recovery (ENG-V3-R1A,
+  // ENG-V3-R1A-RC1): in the Backup screen's lazily loaded file and in the recovery writer that it
+  // loads, and nowhere else. A route change moves no data and changes no database name.
+  const backupFiles = lazy.filter((file) => file.text.includes(BACKUP_SCREEN));
+  const writerFiles = lazy.filter((file) => RECOVERY_WRITER_FILE.test(file.path));
+  const namingOtherStorage = OTHER_STORAGE_TOKENS.flatMap((token) => containing(code, token)).filter((path) => ![...backupFiles, ...writerFiles].some((file) => file.path === path));
+  check(containing(code, 'eng-trainer-v3').length > 0 && backupFiles.length === 1 && writerFiles.length === 1 && namingOtherStorage.length === 0,
+    `experimental-v3 at the root: still uses the database eng-trainer-v3, and reaches the stable database and v1's records in the Backup screen's file and its recovery writer only${namingOtherStorage.length ? ` (also in ${[...new Set(namingOtherStorage)].join(', ')})` : ''}`);
   check(html.includes(`<meta name="eng-trainer-product" content="${EXPERIMENTAL_PRODUCT}">`), 'experimental-v3 at the root: the entry page still names its product');
-  check(lazy.some((file) => file.text.includes(EXPERIMENTAL_MARKER)), 'experimental-v3 at the root: the Pronunciation screen is still a lazily loaded file');
+  check(lazy.filter((file) => file.text.includes(SPEECH_SCREEN)).length === 1, 'experimental-v3 at the root: the Pronunciation screen is still a lazily loaded file');
+  check(backupFiles.length === 1 && containing(backupFiles, 'eng-trainer-v2').length === 1, 'experimental-v3 at the root: the Backup screen is still a lazily loaded file, and still reads the stable database by its name');
   check(compareInventory(files.filter((file) => file.path.startsWith('data/')), catalog).length === 0, 'experimental-v3 at the root: the released manifest and all 14 packs');
   check(containing(code, `"${v1Url}"`).length > 0, `experimental-v3 at the root: links to v1 at ${v1Url}`);
   check(containing(code, `${siteBase}#index`).length > 0 && containing(code, `${siteBase}v3/`).length === 0, `experimental-v3 at the root: the brand link is ${siteBase}#index and nothing points to ${siteBase}v3/`);

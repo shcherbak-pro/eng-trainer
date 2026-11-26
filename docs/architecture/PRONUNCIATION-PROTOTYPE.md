@@ -38,7 +38,7 @@ firefox -profile <a new, empty folder> -no-remote http://127.0.0.1:4173/eng-trai
 
 ## Why real profiles are excluded
 
-Browser storage of one origin shares one quota and one eviction exposure. A model cache of 47 MB can put the learning data of v1, v2 and v3 at risk, and no backup exists yet. Until the Data Safety Gate has passed, a model may be cached only where no real data lives. Three things keep it that way:
+Browser storage of one origin shares one quota and one eviction exposure. A model cache of 47 MB can put the learning data of v1, v2 and v3 at risk. A backup file can be made since ENG-V3-R1A, and each product can be recovered from it ([Backup and recovery](BACKUP-AND-RECOVERY.md)), but capacity is not checked. Until the Data Safety Gate has passed, a model may be cached only where no real data lives. Three things keep it that way:
 
 1. **The product is not published.** Its route has `"publish": false`, and the gates refuse a site that contains it.
 2. **No build contains a model file.** A gate fails on one. Only the local prototype server adds the model, below `/eng-trainer/v3/models/`.

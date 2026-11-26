@@ -242,7 +242,7 @@
         {#each destinationPages(DESTINATIONS[4], availablePages) as page (page)}
           <li>
             <a class="sheet__link" href={`#${page}`} aria-current={activePage === page ? 'page' : undefined} on:click={(event) => { closeMore(); go(event, page); }}>
-              <Icon name={page === 'collections' ? 'folder' : 'settings'} />{PAGE_LABELS[page]}
+              <Icon name={page === 'collections' ? 'folder' : __ENG_BACKUP__ && page === 'backup' ? 'download' : 'settings'} />{PAGE_LABELS[page]}
             </a>
           </li>
         {/each}

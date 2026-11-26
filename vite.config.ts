@@ -68,8 +68,11 @@ function experimentalPagePolicy(): Plugin {
   };
 }
 
-/** Source folders that only the experimental product is built from. */
-const EXPERIMENTAL_ONLY_SOURCES = ['src/features/pronunciation'];
+/**
+ * Source folders that only the experimental product is built from: the speech feature
+ * (ENG-V3-02, stage A), and backup and recovery (ENG-V3-R1A).
+ */
+const EXPERIMENTAL_ONLY_SOURCES = ['src/features/pronunciation', 'src/features/backup'];
 
 /**
  * Builds a product that is not the experimental one without the experimental-only

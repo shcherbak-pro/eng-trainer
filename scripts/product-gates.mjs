@@ -35,7 +35,13 @@ export const FEATURE_TOKENS = [
 ];
 
 /** Traces of the experimental product, and of a build that lost its compile-time constants. */
-export const EXPERIMENTAL_TOKENS = ['eng-trainer-v3', 'experimental-v3', '/v3/', EXPERIMENTAL_MARKER, 'PronunciationPage', '__ENG_', '__SITE_BASE__'];
+export const EXPERIMENTAL_TOKENS = ['eng-trainer-v3', 'experimental-v3', '/v3/', EXPERIMENTAL_MARKER, 'PronunciationPage', 'BackupPage', 'recoveryWriter', 'eng-trainer-backup', '__ENG_', '__SITE_BASE__'];
+
+/**
+ * Tokens of the browser's key-value storage and of the first version's records. The released
+ * stable output holds none: the stable product keeps everything in its own database.
+ */
+export const STABLE_STORAGE_TOKENS = ['localStorage', 'sessionStorage', 'englishAssessmentTrainer'];
 
 /** Names of model hubs and public script hosts. No file of the experimental build may name one. */
 export const REMOTE_HOST_TOKENS = ['huggingface', 'jsdelivr', 'unpkg', 'cdnjs', 'googleapis', 'gstatic'];
@@ -50,6 +56,48 @@ export const KNOWN_TEXT_HOSTS = ['www.w3.org', 'svelte.dev', 'web.dev'];
 /** The build's own files of the speech feature, by the names the bundler gives them. */
 const WORKER_FILE = /^assets\/recognizer\.worker-[\w-]+\.js$/;
 const WORKLET_FILE = /^assets\/pcm-collector\.worklet-[\w-]+\.js$/;
+
+/**
+ * The recovery writer for the other two products (ENG-V3-R1A-RC1), by the name the bundler
+ * gives it. It is one lazily loaded file, and only the Backup screen's file loads it.
+ */
+export const RECOVERY_WRITER_FILE = /^assets\/recoveryWriter-[\w-]+\.js$/;
+/** How any file would name the writer in order to load it. */
+export const RECOVERY_WRITER_NAME = 'recoveryWriter-';
+
+/** The two experimental screens, by the value of their marker attribute. Each is one lazily loaded file. */
+export const SPEECH_SCREEN = `${EXPERIMENTAL_MARKER}="pronunciation-prototype"`;
+export const BACKUP_SCREEN = `${EXPERIMENTAL_MARKER}="backup-recovery"`;
+
+/** The name of the stable product's database, and the prefix of the two records of the first version. */
+const STABLE_DATABASE = 'eng-trainer-v2';
+const LEGACY_RECORD_PREFIX = 'englishAssessmentTrainer';
+
+/**
+ * Tokens of the other products' storage (ENG-V3-R1A). The experimental product reaches that
+ * storage in two files and nowhere else: the Backup screen's file reads it, and the
+ * recovery writer writes it (ENG-V3-R1A-RC1).
+ */
+export const OTHER_STORAGE_TOKENS = [STABLE_DATABASE, LEGACY_RECORD_PREFIX, 'localStorage'];
+
+/**
+ * The call that writes a record of the browser's key-value storage. Exactly one file of the
+ * experimental build holds it, once: the recovery writer.
+ */
+export const KEY_VALUE_WRITE_TOKEN = 'setItem';
+
+/**
+ * Tokens that no file of the experimental build may hold: the call that removes a record of
+ * the browser's key-value storage, another key-value storage, cookies, and the call that
+ * deletes a database. A recovery writes into an empty destination. It removes nothing.
+ */
+export const FORBIDDEN_STORAGE_TOKENS = ['removeItem', 'sessionStorage', 'document.cookie', 'deleteDatabase'];
+
+/** Network interfaces. Neither the Backup screen's file nor the recovery writer uses one: a backup is made, read and recovered in the browser. */
+export const NETWORK_TOKENS = ['fetch(', 'XMLHttpRequest', 'WebSocket', 'EventSource', 'sendBeacon'];
+
+/** A request for another file of the build. The Backup screen's file holds one, for the recovery writer. The writer holds none. */
+export const DYNAMIC_IMPORT_TOKEN = 'import(';
 
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const isCode = (path) => /\.(?:html|js|mjs|css)$/.test(path);
@@ -191,15 +239,14 @@ function gateExperimentalBuild({ site, experimentalDir, experimentalFiles, pinne
   const code = experimentalFiles.filter((file) => isCode(file.path));
   const text = (file) => readFileSync(join(experimentalDir, file.path), 'utf8');
   if (!code.some((file) => text(file).includes('eng-trainer-v3'))) problems.push('the build does not use the database eng-trainer-v3');
-  for (const file of code) if (text(file).includes('eng-trainer-v2')) problems.push(`${file.path} names the stable database eng-trainer-v2`);
 
-  // The experimental screen is a lazy chunk of its own: the entry script must not contain it.
+  // Each experimental screen is a lazy chunk of its own: the entry script must not contain one.
   const entryScripts = entryUrls.filter((url) => url.endsWith('.js')).map((url) => `assets/${url.slice(prefix.length)}`);
   const scripts = code.filter((file) => file.path.endsWith('.js'));
   const lazy = scripts.filter((file) => !entryScripts.includes(file.path));
-  if (!lazy.some((file) => text(file).includes(EXPERIMENTAL_MARKER))) problems.push('no lazy chunk holds the experimental screen');
+  if (lazy.filter((file) => text(file).includes(SPEECH_SCREEN)).length !== 1) problems.push('expected exactly one lazy chunk that holds the Pronunciation screen');
   for (const file of scripts.filter((item) => entryScripts.includes(item.path))) {
-    if (text(file).includes(EXPERIMENTAL_MARKER)) problems.push(`${file.path}: the entry script contains the experimental screen; it must be loaded lazily`);
+    if (text(file).includes(EXPERIMENTAL_MARKER)) problems.push(`${file.path}: the entry script contains an experimental screen; it must be loaded lazily`);
   }
   // The entry script has no speech, model or Worker code: the other screens never load it.
   problems.push(...scanTokens(experimentalDir, experimentalFiles.filter((file) => entryScripts.includes(file.path)), FEATURE_TOKENS));
@@ -223,9 +270,9 @@ function gateExperimentalBuild({ site, experimentalDir, experimentalFiles, pinne
   if (starters.length !== 1 || text(starters[0]).split('new Worker').length !== 2) problems.push(`expected exactly one place that starts a Worker, outside the Worker itself. Found: ${starters.map((file) => file.path).join(', ') || 'none'}`);
   for (const file of code) if (text(file).includes('serviceWorker')) problems.push(`${file.path} names a service worker. This product registers none.`);
 
-  // The microphone is asked for in the lazy screen only.
+  // The microphone is asked for in the lazy Pronunciation screen only.
   for (const file of scripts.filter((item) => text(item).includes('getUserMedia'))) {
-    if (!text(file).includes(EXPERIMENTAL_MARKER)) problems.push(`${file.path} asks for the microphone outside the experimental screen`);
+    if (!text(file).includes(SPEECH_SCREEN)) problems.push(`${file.path} asks for the microphone outside the experimental screen`);
   }
 
   // No other host: no model hub, no public script host, and no host name that has not been looked at.
@@ -250,6 +297,94 @@ function gateExperimentalBuild({ site, experimentalDir, experimentalFiles, pinne
       problems.push(`${file.path} is a model file. A build must not contain one.`);
     }
   }
+  return problems;
+}
+
+/**
+ * Gate 8. Backup and recovery of the experimental build (ENG-V3-R1A, ENG-V3-R1A-RC1).
+ *
+ * The experimental product reads the stable database and the two records of the first
+ * version for a backup and for the preview of a recovery. After the learner confirmed, it
+ * writes them through one recovery writer. This gate keeps both in their files:
+ *
+ * - one file holds the Backup screen, and it is not an entry script;
+ * - one more file is the recovery writer. Only the Backup screen's file names it, and that
+ *   file holds exactly one request for another file: the one for the writer;
+ * - only those two files name the stable database, the records of the first version or the
+ *   browser's key-value storage, and each reaches that storage in one place;
+ * - the Backup screen's file cannot write another product: it holds no call that writes a
+ *   key-value record, creates no object store, opens a database without a version, and
+ *   starts exactly one read-write transaction (the recovery into this product's own database);
+ * - the writer holds exactly one call that writes a key-value record and one read-write
+ *   transaction. It requests no database itself and creates no object store: it opens the
+ *   stable database through the reader's request, which names no version, so it can neither
+ *   create nor upgrade a database;
+ * - no file of the build removes a key-value record or deletes a database;
+ * - neither file makes a request or holds speech, model or Worker code.
+ *
+ * A gate on built files cannot see which database a transaction belongs to, or which key a
+ * record is written under. The tests of the feature and the browser acceptance test show
+ * that: they compare every product's storage before and after.
+ */
+function gateExperimentalBackup({ site, experimentalDir, experimentalFiles }) {
+  const problems = [];
+  const indexPath = join(experimentalDir, 'index.html');
+  if (!existsSync(indexPath)) return ['index.html is missing'];
+  const prefix = `${routeUrl(site, routeOf(site, EXPERIMENTAL_PRODUCT))}assets/`;
+  const entryScripts = entryAssetUrls(readFileSync(indexPath, 'utf8')).filter((url) => url.endsWith('.js')).map((url) => `assets/${url.slice(prefix.length)}`);
+  const code = experimentalFiles.filter((file) => isCode(file.path));
+  const text = (file) => readFileSync(join(experimentalDir, file.path), 'utf8');
+  const occurrences = (file, token) => text(file).split(token).length - 1;
+
+  const screens = code.filter((file) => text(file).includes(BACKUP_SCREEN));
+  if (screens.length !== 1) problems.push(`expected exactly one file that holds the Backup screen, found ${screens.length}`);
+  for (const file of screens) if (entryScripts.includes(file.path)) problems.push(`${file.path}: the entry script contains the Backup screen; it must be loaded lazily`);
+
+  const writers = code.filter((file) => RECOVERY_WRITER_FILE.test(file.path));
+  if (writers.length !== 1) problems.push(`expected exactly one recovery writer file, found ${writers.length}`);
+  const reaching = [...screens, ...writers];
+
+  for (const file of code.filter((item) => !reaching.includes(item))) {
+    for (const token of OTHER_STORAGE_TOKENS) {
+      if (text(file).includes(token)) problems.push(`${file.path} names "${token}" outside the Backup screen and its recovery writer. Only they may reach another product's storage.`);
+    }
+    if (text(file).includes(RECOVERY_WRITER_NAME)) problems.push(`${file.path} names the recovery writer. Only the Backup screen's file loads it, after a confirmation.`);
+  }
+  for (const file of code) {
+    for (const token of FORBIDDEN_STORAGE_TOKENS) {
+      if (text(file).includes(token)) problems.push(`${file.path} contains "${token}". No file of this product removes a key-value record, uses another key-value storage or deletes a database.`);
+    }
+  }
+  for (const file of code.filter((item) => !writers.includes(item))) {
+    if (text(file).includes(KEY_VALUE_WRITE_TOKEN)) problems.push(`${file.path} contains "${KEY_VALUE_WRITE_TOKEN}". Only the recovery writer writes a key-value record.`);
+  }
+
+  for (const file of screens) {
+    if (!text(file).includes(STABLE_DATABASE)) problems.push(`${file.path} does not name the stable database, so a backup would not hold the stable product's data`);
+    if (!text(file).includes(LEGACY_RECORD_PREFIX)) problems.push(`${file.path} does not name the records of the first version, so a backup would not hold them`);
+    if (occurrences(file, '.localStorage') !== 1) problems.push(`${file.path}: expected exactly one place that reaches the browser's key-value storage, found ${occurrences(file, '.localStorage')}`);
+    if (occurrences(file, '"readwrite"') !== 1) problems.push(`${file.path}: expected exactly one read-write transaction (the recovery into this product's own database), found ${occurrences(file, '"readwrite"')}`);
+    if (text(file).includes('createObjectStore')) problems.push(`${file.path} creates an object store. The Backup screen's file creates no database: only the recovery writer may.`);
+    // One argument: the database is opened at the version it has, so this file can neither create nor upgrade one.
+    const opens = [...text(file).matchAll(/indexedDB\.open\(([^()]*)\)/g)].map((match) => match[1]);
+    if (occurrences(file, 'indexedDB.open(') !== 1 || opens.length !== 1 || opens[0].includes(',')) problems.push(`${file.path}: expected exactly one request that opens a database, without a version. Found: ${opens.join(' | ') || 'none'}`);
+    // The only other file this one asks for is the recovery writer.
+    const requested = [...text(file).matchAll(/import\("\.\/([^"]+)"\)/g)].map((match) => `assets/${match[1]}`);
+    if (occurrences(file, DYNAMIC_IMPORT_TOKEN) !== 1 || requested.length !== 1 || !writers.some((writer) => writer.path === requested[0])) {
+      problems.push(`${file.path}: expected exactly one dynamic import, of the recovery writer. Found ${occurrences(file, DYNAMIC_IMPORT_TOKEN)}: ${requested.join(', ') || 'none that names a file of this build'}`);
+    }
+  }
+  for (const file of writers) {
+    if (entryScripts.includes(file.path)) problems.push(`${file.path}: the recovery writer is an entry script; it must be loaded after a confirmation`);
+    if (text(file).includes(EXPERIMENTAL_MARKER)) problems.push(`${file.path}: the recovery writer holds an experimental screen. It is a writer and nothing else.`);
+    if (occurrences(file, KEY_VALUE_WRITE_TOKEN) !== 1 || occurrences(file, '.setItem(') !== 1) problems.push(`${file.path}: expected exactly one call that writes a key-value record, found ${occurrences(file, KEY_VALUE_WRITE_TOKEN)}`);
+    if (occurrences(file, '.localStorage') !== 1) problems.push(`${file.path}: expected exactly one place that reaches the browser's key-value storage, found ${occurrences(file, '.localStorage')}`);
+    if (occurrences(file, '"readwrite"') !== 1) problems.push(`${file.path}: expected exactly one read-write transaction (the recovery into the stable database), found ${occurrences(file, '"readwrite"')}`);
+    if (text(file).includes('indexedDB')) problems.push(`${file.path}: the recovery writer requests a database itself. It may only use the reader's request, which names no version, so that it can neither create nor upgrade a database.`);
+    if (text(file).includes('createObjectStore')) problems.push(`${file.path} creates an object store. The recovery writer creates no database: only the product that owns it does.`);
+  }
+  problems.push(...scanTokens(experimentalDir, screens, [...NETWORK_TOKENS, ...FEATURE_TOKENS]));
+  problems.push(...scanTokens(experimentalDir, writers, [...NETWORK_TOKENS, DYNAMIC_IMPORT_TOKEN, ...FEATURE_TOKENS]));
   return problems;
 }
 
@@ -284,8 +419,8 @@ export async function runProductGates({ site, siteDir, experimentalDir, locks, r
     { id: 'stable-chunks', title: 'Stable product: exactly one script and one stylesheet, no lazy chunk', problems: gateStableChunks({ stableDir, stableFiles }) },
     {
       id: 'stable-tokens',
-      title: 'Stable product: no speech, model, Worker, remote-runtime or experimental-product token',
-      problems: scanTokens(stableDir, stableFiles, [...FEATURE_TOKENS, ...EXPERIMENTAL_TOKENS])
+      title: 'Stable product: no speech, model, Worker, remote-runtime, key-value storage or experimental-product token',
+      problems: scanTokens(stableDir, stableFiles, [...FEATURE_TOKENS, ...EXPERIMENTAL_TOKENS, ...STABLE_STORAGE_TOKENS])
     },
     { id: 'stable-content', title: `Stable product: released manifest and all ${catalogLock.packs.length} packs`, problems: contentProblems(stableFiles, stableDir, catalogLock) },
     {
@@ -297,6 +432,11 @@ export async function runProductGates({ site, siteDir, experimentalDir, locks, r
       id: 'experimental-build',
       title: 'Experimental product: own database and base path, noindex, page policy, lazy speech feature, pinned runtime, no model file, no other host',
       problems: gateExperimentalBuild({ site, experimentalDir: experimentalPath, experimentalFiles, pinned })
+    },
+    {
+      id: 'experimental-backup',
+      title: 'Experimental product: backup in one lazy file, one recovery writer loaded by it alone, other products\' storage named in those two only, one key-value write, no removal, no database deletion, no request',
+      problems: gateExperimentalBackup({ site, experimentalDir: experimentalPath, experimentalFiles })
     }
   ];
 }

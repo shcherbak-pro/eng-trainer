@@ -266,6 +266,9 @@ export function productBuild(site, productId) {
       __ENG_PRODUCT__: JSON.stringify(productId),
       __ENG_DATABASE__: JSON.stringify(product.database),
       __ENG_PRONUNCIATION__: JSON.stringify(product.pronunciation),
+      // Backup and recovery (ENG-V3-R1A) belong to the experimental product. The file cannot
+      // switch them on for the stable product: the value follows from the product alone.
+      __ENG_BACKUP__: JSON.stringify(productId === EXPERIMENTAL_PRODUCT),
       __ENG_VERSION_LINKS__: JSON.stringify(versionLinks(site, productId))
     }
   };

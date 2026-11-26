@@ -88,6 +88,14 @@ export function readCollections(records: StoredRecords): UserVocabulary {
 }
 export function connectCollections(next: AppStorage, vocabulary: UserVocabulary): void { storage = next; store.set(vocabulary); }
 export function disableCollections(): void { storage = null; store.set(empty()); }
+/**
+ * The collections' part of the hold on changes (ENG-V3-R1A-RC3, experimental product only; see
+ * `holdChanges` in src/state/persistence.ts). While it is set, no collection change is started.
+ * A change that is already being saved has its transaction, and finishes. Only `holdState` and
+ * `releaseState` of src/state call this, so both parts of the hold begin and end together.
+ */
+let held = false;
+export function holdCollections(hold: boolean): void { held = hold; }
 
 export type ImportPlan = {
   parsed: ParsedImport; target: CollectionInfo; existing?: UserCollection; additions: VocabularyEntry[];
@@ -129,6 +137,7 @@ export function prepareImport(parsed: ParsedImport, catalog: ContentCatalog): Im
 async function write(ops: WriteOp[], previous: UserCollection | undefined, id: string): Promise<void> {
   ensure(storage, 'unavailable', 'Saving is unavailable. Reopen the app with browser storage enabled before managing collections.');
   ensure(!writing, 'busy', 'A collection change is already being saved. Please wait.');
+  if (__ENG_BACKUP__ && held) throw new CollectionError('busy', 'A recovery from a backup file is running in this tab, so nothing was changed. Try again when it has finished.');
   writing = true;
   try {
     await storage.write(ops, [{ store: 'userCollections', key: id, expected: previous }]);

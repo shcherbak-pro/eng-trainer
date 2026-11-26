@@ -53,6 +53,15 @@ if (__ENG_PRONUNCIATION__) {
 }
 
 /**
+ * The experimental product also has the Backup screen (ENG-V3-R1A), last under "More".
+ * It is always available: a recovery must be reachable from a profile that holds nothing.
+ */
+if (__ENG_BACKUP__) {
+  PAGE_LABELS.backup = 'Backup';
+  DESTINATIONS[4].pages.push('backup');
+}
+
+/**
  * Learning topics (ENG-V2-03) have one shared screen with the address #topic/<topic id>.
  * Topic ids are slugs, so the address needs no escaping. Released page ids never contain
  * a slash, so the two kinds of address cannot collide.
@@ -133,6 +142,7 @@ export function availablePagesFor(blocks: TrainingBlock[], topics: LearningTopic
 
   if (__ENG_PRONUNCIATION__) pages.push('pronunciation');
   pages.push('favorites', 'collections', 'settings');
+  if (__ENG_BACKUP__) pages.push('backup');
   return pages;
 }
 

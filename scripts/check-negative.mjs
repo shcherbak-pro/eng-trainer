@@ -1,4 +1,4 @@
-// Controlled negative tests of the product gates (ENG-V3-01; ENG-V3-02, stage A).
+// Controlled negative tests of the product gates (ENG-V3-01; ENG-V3-02, stage A; ENG-V3-R1A; ENG-V3-R1A-RC1).
 //
 // Each case breaks a disposable copy on purpose and passes only when the gate that
 // should notice does fail. A gate that cannot fail protects nothing.
@@ -136,6 +136,8 @@ const LAZY_BLOCK = `${GUARD}
       {#await import('../features/pronunciation/PronunciationPage.svelte') then feature}
         <svelte:component this={feature.default} {catalog} />
       {/await}`;
+/** The guard of the Backup screen (ENG-V3-R1A), the second experimental-only screen. */
+const BACKUP_GUARD = "{:else if __ENG_BACKUP__ && activePage === 'backup'}";
 
 // The work area is deleted and created again. Other folders in .local/ are never touched.
 await removeGeneratedDir(repoRoot, WORK, ['work']);
@@ -290,6 +292,27 @@ const staticImport = (source) => replaceOnce(
   });
 }
 
+// The Backup screen (ENG-V3-R1A) is kept out of the stable build by the same two controls.
+const backupUnguarded = (source) => replaceOnce(source, BACKUP_GUARD, "{:else if activePage === 'backup'}");
+{
+  const siteDir = await leakingStableBuild('leak-backup-guard-removed', backupUnguarded);
+  await expectGateFailures('stable build with the guard of the Backup screen removed: no backup code enters, and the build is still refused', siteDir, {
+    'stable-chunks': /expected exactly one script, found 2/,
+    'released-site-lock': /^extra file: assets\//
+  });
+  const failed = await failingGates(siteDir);
+  const leaked = [...failed.values()].flat().filter((problem) => /localStorage|englishAssessmentTrainer|eng-trainer-backup|BackupPage/.test(problem));
+  record('  with the exclusion in place, that build holds no backup code and reads no other storage', leaked.length === 0, leaked[0] ?? 'no backup token and no key-value storage token in the stable output');
+}
+{
+  const siteDir = await leakingStableBuild('leak-backup-both-removed', backupUnguarded, { withoutExclusion: true });
+  await expectGateFailures('stable build without the guard of the Backup screen and without the exclusion (the backup feature leaks)', siteDir, {
+    'stable-tokens': /contains "(?:localStorage|englishAssessmentTrainer|eng-trainer-backup)"/,
+    'stable-chunks': /expected exactly one script, found \d+/,
+    'released-site-lock': /^extra file: assets\/BackupPage-/
+  });
+}
+
 // The experimental build (ENG-V3-02, stage A): each deliberate fault in a copy of it must fail its gate.
 {
   const GATE = 'experimental-build';
@@ -343,6 +366,100 @@ const staticImport = (source) => replaceOnce(
     async (dir) => rewrite(dir, await fileOf(dir, /^assets\/index-[\w-]+\.js$/), (code) => `${code}\nnavigator.mediaDevices.getUserMedia;`));
   await experimentalCase('microphone-elsewhere', 'a microphone request outside the experimental screen', /asks for the microphone outside the experimental screen/,
     (dir) => writeFile(join(repoRoot, dir, 'assets', 'extra-chunk.js'), 'navigator.mediaDevices.getUserMedia({audio:true});'));
+}
+
+// Backup and recovery in the experimental build (ENG-V3-R1A, ENG-V3-R1A-RC1): another product's storage is
+// read in the Backup screen's file, written by the one recovery writer, and reached by no other file.
+{
+  const GATE = 'experimental-backup';
+  const backupCase = async (name, title, pattern, fault) => {
+    const dir = await copyOfExperimental(name);
+    await fault(dir);
+    await expectGateFailures(title, PRODUCTION_SITE_DIR, { [GATE]: pattern }, dir);
+  };
+  const ENTRY = /^assets\/index-[\w-]+\.js$/;
+  const BACKUP = /^assets\/BackupPage-[\w-]+\.js$/;
+  const SPEECH = /^assets\/PronunciationPage-[\w-]+\.js$/;
+  const append = (file, code) => async (dir) => rewrite(dir, await fileOf(dir, file), (text) => `${text}\n${code}`);
+
+  await backupCase('backup-entry-names-stable', 'the entry script of the experimental build names the stable database', /assets\/index-[\w-]+\.js names "eng-trainer-v2" outside the Backup screen/,
+    append(ENTRY, 'indexedDB.open("eng-trainer-v2");'));
+  await backupCase('backup-speech-reads-v1', 'another screen of the experimental build reads a record of the first version', /assets\/PronunciationPage-[\w-]+\.js names "(?:englishAssessmentTrainer|localStorage)" outside the Backup screen/,
+    append(SPEECH, 'globalThis.localStorage.getItem("englishAssessmentTrainer.theme.v1");'));
+  await backupCase('backup-worker-reads-stable', 'the recognizer\'s Worker names the stable database', /assets\/recognizer\.worker-[\w-]+\.js names "eng-trainer-v2" outside the Backup screen/,
+    append(/^assets\/recognizer\.worker-[\w-]+\.js$/, 'const other="eng-trainer-v2";'));
+  await backupCase('backup-writes-key-value', 'the Backup screen writes a key-value record', /contains "setItem"/,
+    append(BACKUP, 'globalThis.localStorage.setItem("englishAssessmentTrainer.theme.v1","dark");'));
+  await backupCase('backup-removes-key-value', 'the Backup screen removes a key-value record', /contains "removeItem"/,
+    append(BACKUP, 'globalThis.localStorage.removeItem("englishAssessmentTrainer.theme.v1");'));
+  await backupCase('backup-second-storage-access', 'the Backup screen reaches the key-value storage in a second place', /expected exactly one place that reaches the browser's key-value storage, found 2/,
+    append(BACKUP, 'const again=globalThis.localStorage;'));
+  await backupCase('backup-deletes-database', 'a file of the experimental build deletes a database', /contains "deleteDatabase"/,
+    append(ENTRY, 'indexedDB.deleteDatabase("eng-trainer-v3");'));
+  await backupCase('backup-second-write-transaction', 'the Backup screen starts a second read-write transaction', /expected exactly one read-write transaction .* found 2/,
+    append(BACKUP, 'const again=(d)=>d.transaction(["progress"],"readwrite");'));
+  await backupCase('backup-request', 'the Backup screen makes a request', /assets\/BackupPage-[\w-]+\.js contains "fetch\("/,
+    append(BACKUP, 'fetch("/eng-trainer/v3/upload",{method:"POST"});'));
+  await backupCase('backup-in-entry', 'the Backup screen inside the entry script', /the entry script contains the Backup screen; it must be loaded lazily/,
+    append(ENTRY, 'const screen=\'<div data-experimental-feature="backup-recovery"></div>\';'));
+  await backupCase('backup-screen-missing', 'an experimental build without the Backup screen', /expected exactly one file that holds the Backup screen, found 0/,
+    async (dir) => rewrite(dir, await fileOf(dir, BACKUP), (text) => text.replace('data-experimental-feature="backup-recovery"', 'data-experimental-feature="other"')));
+  await backupCase('backup-without-stable', 'a Backup screen that no longer reads the stable database', /does not name the stable database/,
+    async (dir) => rewrite(dir, await fileOf(dir, BACKUP), (text) => text.split('eng-trainer-v2').join('eng-trainer-v0')));
+
+  // The recovery writer (ENG-V3-R1A-RC1): one file, loaded by the Backup screen's file alone, with one
+  // key-value write and one read-write transaction. It requests no database and creates no store, so it
+  // can neither create nor upgrade one. The Backup screen's file itself still cannot write another product.
+  const WRITER = /^assets\/recoveryWriter-[\w-]+\.js$/;
+  await backupCase('backup-creates-store', 'the Backup screen creates an object store', /assets\/BackupPage-[\w-]+\.js creates an object store/,
+    append(BACKUP, 'const make=(d)=>d.createObjectStore("progress");'));
+  await backupCase('backup-versioned-open', 'the Backup screen opens a database with a version', /assets\/BackupPage-[\w-]+\.js: expected exactly one request that opens a database, without a version/,
+    async (dir) => rewrite(dir, await fileOf(dir, BACKUP), (text) => text.replace(/indexedDB\.open\((\w+)\)/, 'indexedDB.open($1,2)')));
+  await backupCase('backup-second-open', 'the Backup screen opens a database in a second place', /assets\/BackupPage-[\w-]+\.js: expected exactly one request that opens a database, without a version/,
+    append(BACKUP, 'const other=(n)=>indexedDB.open(n);'));
+  await backupCase('backup-second-import', 'the Backup screen loads a second file', /expected exactly one dynamic import, of the recovery writer\. Found 2/,
+    append(BACKUP, 'const more=()=>import("./extra-00000000.js");'));
+  await backupCase('backup-imports-another-file', 'the Backup screen loads another file in place of the recovery writer', /expected exactly one dynamic import, of the recovery writer\. Found 1/,
+    async (dir) => rewrite(dir, await fileOf(dir, BACKUP), (text) => text.replace(/import\("\.\/recoveryWriter-[\w-]+\.js"\)/, 'import("./extra-00000000.js")')));
+  await backupCase('writer-missing', 'an experimental build without the recovery writer', /expected exactly one recovery writer file, found 0/,
+    async (dir) => rm(join(repoRoot, dir, await fileOf(dir, WRITER))));
+  await backupCase('writer-twice', 'an experimental build with a second recovery writer', /expected exactly one recovery writer file, found 2/,
+    async (dir) => cp(join(repoRoot, dir, await fileOf(dir, WRITER)), join(repoRoot, dir, 'assets', 'recoveryWriter-00000000.js')));
+  await backupCase('writer-second-key-value-write', 'the recovery writer writes a key-value record in a second place', /assets\/recoveryWriter-[\w-]+\.js: expected exactly one call that writes a key-value record, found 2/,
+    append(WRITER, 'const more=(s)=>s.setItem("another.application","x");'));
+  await backupCase('writer-removes-key-value', 'the recovery writer removes a key-value record', /assets\/recoveryWriter-[\w-]+\.js contains "removeItem"/,
+    append(WRITER, 'const drop=(s)=>s.removeItem("englishAssessmentTrainer.theme.v1");'));
+  await backupCase('writer-second-storage-access', 'the recovery writer reaches the key-value storage in a second place', /assets\/recoveryWriter-[\w-]+\.js: expected exactly one place that reaches the browser's key-value storage, found 2/,
+    append(WRITER, 'const again=globalThis.localStorage;'));
+  await backupCase('writer-deletes-database', 'the recovery writer deletes a database', /assets\/recoveryWriter-[\w-]+\.js contains "deleteDatabase"/,
+    append(WRITER, 'const drop=()=>indexedDB.deleteDatabase("eng-trainer-v2");'));
+  await backupCase('writer-second-write-transaction', 'the recovery writer starts a second read-write transaction', /assets\/recoveryWriter-[\w-]+\.js: expected exactly one read-write transaction .* found 2/,
+    append(WRITER, 'const again=(d)=>d.transaction(["progress"],"readwrite");'));
+  await backupCase('writer-opens-database', 'the recovery writer requests a database itself, with a version', /assets\/recoveryWriter-[\w-]+\.js: the recovery writer requests a database itself/,
+    append(WRITER, 'const other=()=>indexedDB.open("eng-trainer-v2",2);'));
+  await backupCase('writer-creates-store', 'the recovery writer creates an object store', /assets\/recoveryWriter-[\w-]+\.js creates an object store/,
+    append(WRITER, 'const make=(d)=>d.createObjectStore("progress");'));
+  await backupCase('writer-request', 'the recovery writer makes a request', /assets\/recoveryWriter-[\w-]+\.js contains "fetch\("/,
+    append(WRITER, 'fetch("/eng-trainer/v3/upload",{method:"POST"});'));
+  await backupCase('writer-loads-a-file', 'the recovery writer loads another file', /assets\/recoveryWriter-[\w-]+\.js contains "import\("/,
+    append(WRITER, 'const more=()=>import("./extra-00000000.js");'));
+  await backupCase('writer-holds-screen', 'the recovery writer holds a screen', /the recovery writer holds an experimental screen/,
+    append(WRITER, 'const screen=\'<div data-experimental-feature="other"></div>\';'));
+  await backupCase('writer-loaded-by-entry', 'the entry script loads the recovery writer, without a confirmation', /assets\/index-[\w-]+\.js names the recovery writer/,
+    async (dir) => {
+      const writer = (await fileOf(dir, WRITER)).split('/').pop();
+      await rewrite(dir, await fileOf(dir, ENTRY), (text) => `${text}\nconst early=()=>import("./${writer}");`);
+    });
+  await backupCase('writer-loaded-by-speech', 'another screen loads the recovery writer', /assets\/PronunciationPage-[\w-]+\.js names the recovery writer/,
+    async (dir) => {
+      const writer = (await fileOf(dir, WRITER)).split('/').pop();
+      await rewrite(dir, await fileOf(dir, SPEECH), (text) => `${text}\nconst early=()=>import("./${writer}");`);
+    });
+  await backupCase('writer-preloaded-by-page', 'the entry page preloads the recovery writer', /index\.html names the recovery writer/,
+    async (dir) => {
+      const writer = (await fileOf(dir, WRITER)).split('/').pop();
+      await rewrite(dir, 'index.html', (text) => text.replace('</head>', `<link rel="modulepreload" href="/eng-trainer/v3/assets/${writer}"></head>`));
+    });
 }
 
 const failed = results.filter((result) => !result.ok);

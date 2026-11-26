@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DATABASE_NAME, STATE_STORE_NAMES } from '../storage/database';
 import { collection, native } from '../test/collections';
 import { contentBase, createContentFetch, manifest, realMaterials } from '../test/content';
-import { describeStableLineage, v1Url } from '../test/product';
+import { EXPERIMENTAL_MORE_PAGES, describeStableLineage, v1Url } from '../test/product';
 import type { Materials } from '../content/types';
 import { PAGE_LABELS } from './navigation';
 import {
@@ -761,7 +761,8 @@ describe('navigation', () => {
     app.flush();
     expect(more.getAttribute('aria-expanded')).toBe('true');
     const sheet = app.root.querySelector('#more-sheet')!;
-    expect([...sheet.querySelectorAll('a')].map((link) => link.getAttribute('href'))).toEqual(['#collections', '#settings', v1Url]);
+    // The experimental product has one more screen here, Backup (ENG-V3-R1A). The list is empty for the stable product.
+    expect([...sheet.querySelectorAll('a')].map((link) => link.getAttribute('href'))).toEqual(['#collections', '#settings', ...EXPERIMENTAL_MORE_PAGES.map((page) => `#${page}`), v1Url]);
 
     sheet.querySelector<HTMLAnchorElement>('a[href="#settings"]')!.click();
     app.flush();
