@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { test } from 'node:test';
 import { sha256 } from './content-build.mjs';
-import { BACKUP_SCREEN, DYNAMIC_IMPORT_TOKEN, EXPERIMENTAL_MARKER, EXPERIMENTAL_TOKENS, FEATURE_TOKENS, FORBIDDEN_STORAGE_TOKENS, KEY_VALUE_WRITE_TOKEN, NETWORK_TOKENS, OTHER_STORAGE_TOKENS, RECOVERY_WRITER_FILE, RECOVERY_WRITER_NAME, SPEECH_SCREEN, compareInventory, inventory, readLocks, runProductGates } from './product-gates.mjs';
+import { BACKUP_SCREEN, CONFIRMED_DOWNLOAD_TOKEN, DYNAMIC_IMPORT_TOKEN, EXPERIMENTAL_MARKER, EXPERIMENTAL_TOKENS, FEATURE_TOKENS, FORBIDDEN_STORAGE_TOKENS, KEY_VALUE_WRITE_TOKEN, LOCK_REQUEST_TOKEN, MODEL_CACHE_TOKEN, MODEL_STORAGE_TOKENS, NETWORK_TOKENS, OTHER_SITE_STORAGE_TOKENS, OTHER_STORAGE_TOKENS, RECOVERY_WRITER_FILE, RECOVERY_WRITER_NAME, SPEECH_SCREEN, STORAGE_MANAGER_CALLS, compareInventory, inventory, readLocks, runProductGates } from './product-gates.mjs';
 import { PRODUCTION_SITE_DIR, TEST_SITE_DIR, assembleRoutes, listFiles } from './site-assembly.mjs';
 import { EXPERIMENTAL_PRODUCT, LEGACY_PRODUCT, STABLE_PRODUCT, loadSiteConfig, publishedRoutes, repoRoot } from './site-config.mjs';
 
@@ -348,7 +348,10 @@ test('ENG-V3-02 stage A: the experimental-only folder is the speech feature, fil
     'capture/capture.ts',
     'capture/levels.ts',
     'capture/pcm-collector.worklet.js',
+    'models/capacity.ts',
+    'models/exclusive.ts',
     'models/install.ts',
+    'models/management.ts',
     'models/pinned.ts',
     'models/store.ts',
     'models/verify.ts',
@@ -404,6 +407,241 @@ test('ENG-V3-02 stage A: each sensitive browser interface is used in one place o
   // No browser recognizer, so no recognition service of a browser vendor, and no host name at all.
   assert.deepEqual(filesWith(/SpeechRecognition/), []);
   assert.deepEqual(filesWith(/https?:\/\//), []);
+});
+
+// ---- Model storage (ENG-V3-R1B): the source-level boundary --------------------------------
+
+/** The speech feature's application code, without comments, by its path inside the folder. */
+async function speechCode() {
+  const code = new Map();
+  for (const path of featureSources) code.set(path.slice(SPEECH_DIR.length), withoutComments(await sourceText(path)));
+  return code;
+}
+
+test('ENG-V3-R1B: one module asks the browser\'s storage manager, and the request to keep data starts at one button', async () => {
+  const code = await speechCode();
+  const filesWith = (pattern) => [...code.entries()].filter(([, source]) => pattern.test(source)).map(([path]) => path);
+
+  // One module reaches the storage manager, and it asks three things of it, once each.
+  assert.deepEqual(filesWith(/navigator\??\.storage\b|\.estimate\(|\.persisted\(|\.persist\(/), ['models/capacity.ts']);
+  const capacity = code.get('models/capacity.ts');
+  assert.equal(capacity.match(/navigator\?\.storage\b/g).length, 1);
+  for (const call of ['manager.estimate()', 'manager.persisted()', 'manager.persist()']) assert.equal(capacity.split(call).length - 1, 1, call);
+  // These are the calls that the gate on built files counts.
+  assert.deepEqual(STORAGE_MANAGER_CALLS, ['.estimate(', '.persisted(', '.persist(']);
+  assert.deepEqual(MODEL_STORAGE_TOKENS, [...STORAGE_MANAGER_CALLS, LOCK_REQUEST_TOKEN]);
+  // Nothing else of the site's storage: no private file system, no storage bucket.
+  assert.deepEqual(filesWith(new RegExp(OTHER_SITE_STORAGE_TOKENS.join('|'))), []);
+
+  // The request to keep the data: one function makes it, and it is reached from one click.
+  assert.match(capacity, /export async function askForPersistence\(manager: [^\n]*\): Promise<PersistenceAnswer> \{\s*if \(!manager \|\| typeof manager\.persist !== 'function'\) return 'unsupported';\s*try \{\s*return \(await manager\.persist\(\)\) === true \? 'granted' : 'declined';/);
+  assert.deepEqual(filesWith(/\baskForPersistence\(/), ['PronunciationPage.svelte', 'models/capacity.ts', 'models/management.ts', 'session.ts']);
+  assert.equal(code.get('models/management.ts').match(/=> askForPersistence\(deps\.manager\(\)\)/g).length, 1);
+  assert.equal(code.get('models/management.ts').match(/\baskForPersistence\(/g).length, 2, 'the member of the type, and that one call');
+  assert.equal(code.get('session.ts').match(/modelStorage\.askForPersistence\(\)/g).length, 1);
+  const page = code.get('PronunciationPage.svelte');
+  assert.match(page, /function askForPersistence\(\): void \{\s*void session\.askForPersistence\(\);\s*\}/);
+  assert.match(page, /onClick=\{askForPersistence\} data-action="ask-persistence"/);
+  assert.equal(page.match(/\baskForPersistence\b/g).length, 3, 'the function, its one call of the session, and the one button');
+  // Opening the screen asks nothing: the session reads the state, it does not request.
+  const session = code.get('session.ts');
+  const init = session.slice(session.indexOf('async init()'), session.indexOf('async prepare('));
+  assert.doesNotMatch(init, /askForPersistence|verify\(/);
+});
+
+test('ENG-V3-R1B: a download is confirmed in one place, after room was found, and the installer asks for room before each request', async () => {
+  const code = await speechCode();
+  const filesWith = (pattern) => [...code.entries()].filter(([, source]) => pattern.test(source)).map(([path]) => path);
+
+  // The session (ENG-V3-R1B-RC1): loading and installing are two requests.
+  const session = code.get('session.ts');
+  // Loading: the look at the phase and the call that loads. No storage question, no confirmation, no installation.
+  assert.match(session, /async prepare\(\) \{\s*if \(state\.phase !== 'no-model'\) return;\s*await bring\(null\);\s*\},/);
+  // Installing: offered, coordination, room by the estimate, then the confirmation. In that order, before the screen changes.
+  const asked = session.slice(session.indexOf('async install(options = {}) {'), session.indexOf('cancelPrepare() {'));
+  assert.match(asked, /^async install\(options = \{\}\) \{\s*if \(state\.phase !== 'no-model'\) return;\s*if \(!deps\.downloadOffered\) \{[\s\S]*?return;\s*\}\s*const storage = await readStorage\(\);\s*if \(disposed \|\| state\.phase !== 'no-model'\) return;\s*if \(storage\.storage && !storage\.storage\.canCoordinate\) \{[\s\S]*?return;\s*\}\s*if \(storage\.storage\?\.capacity\.state !== 'sufficient'\) \{[\s\S]*?return;\s*\}\s*if \(options\.confirmed !== true\) \{[\s\S]*?return;\s*\}\s*set\(storage\);\s*await bring\(storage\.installed \? null : \{ confirmed: options\.confirmed \}\);\s*\},/);
+  // A download is handed to "bring" in that one place. The other caller loads.
+  assert.deepEqual([...session.matchAll(/\bbring\(([^)]*)\)/g)].map((match) => match[1]).filter((argument) => !argument.startsWith('download:')), ['null', 'storage.installed ? null : { confirmed: options.confirmed }']);
+  // In "bring": the recognizer installs only when a download was handed over, with the confirmation as it came. Loading is its own call.
+  const bring = session.slice(session.indexOf('async function bring('), session.indexOf('async function finish('));
+  assert.match(bring, /if \(download\) \{\s*await deps\.recognizer\.install\(\{\s*confirmed: download\.confirmed,/);
+  assert.equal(session.match(/deps\.recognizer\.install\(/g).length, 1);
+  assert.equal(session.match(/deps\.recognizer\.prepare\(/g).length, 1);
+  assert.match(bring, /await deps\.recognizer\.prepare\(\{ signal: controller\.signal \}\);/);
+  // The screen changes in the same step as the look at its state, so of two requests at once only one gets further.
+  assert.ok(bring.slice(0, bring.indexOf('await')).includes("set({ phase: download ? 'installing' : 'loading'"));
+  // What can be loaded is taken from the cache each time it is read, in one place. It is never set from the recognizer's state.
+  assert.match(session, /return \{ installed: installation\?\.state === 'installed', installation, storage:/);
+  assert.doesNotMatch(session, /installed: true|installed: recognizer/);
+
+  // The screen: the confirmation is given by one handler, of one button, and only with the learner's own statement.
+  const page = code.get('PronunciationPage.svelte');
+  assert.equal(page.match(/confirmed: true/g).length, 1);
+  assert.match(page, /function confirmInstall\(\): void \{\s*if \(!acknowledged \|\| state\.storage\?\.capacity\.state !== 'sufficient'\) return;\s*closeInstall\(\);\s*void session\.install\(\{ confirmed: true \}\);\s*\}/);
+  assert.equal(page.match(/\bconfirmInstall\b/g).length, 2);
+  assert.match(page, /disabled=\{!acknowledged \|\| capacity\?\.state !== 'sufficient'\} on:click=\{confirmInstall\} data-action="confirm-install"/);
+  // The statement starts unset each time the question opens, and nothing but the checkbox sets it.
+  assert.deepEqual([...page.matchAll(/\backnowledged = (\w+)/g)].map((match) => match[1]), ['false', 'false', 'false']);
+  assert.match(page, /<input type="checkbox" bind:checked=\{acknowledged\} data-control="backup-acknowledged" \/>/);
+  // "Load" asks to load and passes nothing. The confirmation goes to "install", from that one handler.
+  assert.deepEqual([...page.matchAll(/session\.prepare\(([^)]*)\)/g)].map((match) => match[1]), ['']);
+  assert.deepEqual([...page.matchAll(/session\.install\(([^)]*)\)/g)].map((match) => match[1]), ['{ confirmed: true }']);
+  // The confirmation as the bundler writes it, for the gate on built files.
+  assert.equal(CONFIRMED_DOWNLOAD_TOKEN, 'confirmed:!0');
+
+  // The installer: room is asked for at the top of the loop, before the request of each file.
+  const install = code.get('models/install.ts');
+  assert.match(install, /for \(const \[index, file\] of files\.entries\(\)\) \{\s*await requireRoom\(files\.slice\(index\), options\);\s*if \(signal\.aborted\)[^\n]*\n\s*if \(index === 0\)[^\n]*\n\s*const bytes = await download\(/);
+  assert.equal(install.match(/await requireRoom\(/g).length, 1);
+  assert.equal(install.match(/await download\(/g).length, 1);
+  assert.equal(install.match(/fetchFile\(/g).length, 1);
+  assert.match(install, /const capacity = judgeCapacity\(estimate, needFor\(remaining, options\.reserve\)\);\s*if \(capacity\.state !== 'sufficient'\) throw new InstallError\('capacity', describeCapacity\(capacity\), capacity\);/);
+  // An estimate that could not be read is never taken for room.
+  assert.match(install, /\} catch \(error\) \{\s*estimate = \{ known: false, reason:/);
+  // The verdict has one source: free room against need. Unknown is never "sufficient".
+  const capacity = code.get('models/capacity.ts');
+  assert.match(capacity, /if \(!estimate\.known\) return \{ state: 'unknown', reason: estimate\.reason, need \};\s*const free = Math\.max\(0, estimate\.quota - estimate\.usage\);\s*if \(free >= need\.total\) return \{ state: 'sufficient',/);
+  assert.equal(capacity.match(/state: 'sufficient'/g).length, 2, 'the type and the one place that says it');
+  assert.deepEqual(filesWith(/state: 'sufficient'/), ['models/capacity.ts']);
+  // The application installs with the reserve of capacity.ts: nothing passes a smaller one.
+  assert.match(capacity, /export const LEARNING_RESERVE_BYTES = 64_000_000;/);
+  assert.deepEqual(filesWith(/\breserve\??:/), ['models/capacity.ts', 'models/install.ts']);
+  assert.doesNotMatch(code.get('recognition/localMl.ts'), /reserve/);
+});
+
+test('ENG-V3-R1B: every cache call names the model cache, a change holds its lock, and removal is asked for by a button', async () => {
+  const code = await speechCode();
+  const filesWith = (pattern) => [...code.entries()].filter(([, source]) => pattern.test(source)).map(([path]) => path);
+
+  // The cache storage is reached through one function of the store, and every call on it names the one cache.
+  const store = code.get('models/store.ts');
+  assert.match(store, new RegExp(`export const MODEL_CACHE_NAME = '${MODEL_CACHE_TOKEN}';`));
+  assert.match(store, /export type CacheStorageLike = Pick<CacheStorage, 'open' \| 'has' \| 'delete'>;/);
+  assert.equal(store.match(/\bcaches\b/g).length, 2, 'the check that it exists, and the one function that hands it out');
+  assert.match(store, /const storage = \(\): CacheStorageLike => options\.storage \?\? caches;/);
+  const calls = [...store.matchAll(/storage\(\)\.(\w+)\(([^)]*)\)/g)].map((match) => `${match[1]} ${match[2]}`);
+  assert.ok(calls.length >= 10, `${calls.length} calls`);
+  for (const call of calls) assert.match(call, /^(?:open|has|delete) MODEL_CACHE_NAME$/);
+  // No other use of the cache storage: it is never listed, and never handed to anything.
+  assert.equal(store.match(/\bstorage\(\)/g).length, calls.length);
+  assert.doesNotMatch(store, /caches\s*\.|storage\(\)\.keys/);
+  // The cache itself is deleted in one place: "remove".
+  assert.equal(calls.filter((call) => call.startsWith('delete ')).length, 1);
+  assert.match(store, /async function remove\(\): Promise<void> \{\s*await deleteWhere\(\(\) => false\);\s*await storage\(\)\.delete\(MODEL_CACHE_NAME\);\s*\}/);
+  // Entries are deleted in one place, markers first: an interrupted deletion leaves no marker that promises files.
+  assert.equal(store.match(/cache\.delete\(/g).length, 1);
+  assert.match(store, /for \(const request of \[\.\.\.doomed\.filter\(\(item\) => isMarker\(item\.url\)\), \.\.\.doomed\.filter\(\(item\) => !isMarker\(item\.url\)\)\]\) await cache\.delete\(request\);/);
+  // Looking never creates the cache: both ways of looking ask whether it exists first.
+  for (const name of ['inspect', 'verify', 'read']) {
+    assert.match(store, new RegExp(`async function ${name}\\([^)]*\\): Promise<[^{]+> \\{\\s*if \\(!\\(await storage\\(\\)\\.has\\(MODEL_CACHE_NAME\\)\\)\\)`), name);
+  }
+
+  // The lock: one module reaches the lock manager and makes the one request, under the cache's name.
+  assert.deepEqual(filesWith(/navigator\??\.locks\b|\.request\(/), ['models/exclusive.ts']);
+  const exclusive = code.get('models/exclusive.ts');
+  assert.match(exclusive, new RegExp(`export const MODEL_LOCK_NAME = '${MODEL_CACHE_TOKEN}';`));
+  // ENG-V3-R1B-RC1: no lock manager, no change. No path runs a change without the lock.
+  assert.match(exclusive, /export async function exclusively<T>\(change: \(\) => Promise<T>, locks: LockManagerLike \| null = browserLocks\(\)\): Promise<T> \{\s*if \(!locks\) throw new NoCoordinationError\('it has no Web Locks'\);/);
+  assert.equal(exclusive.match(/\bchange\(\)/g).length, 1, 'the one call of the change, inside the callback that got the lock');
+  // A held lock is answered with a value inside the browser's callback, and refused after it returned.
+  assert.match(exclusive, /async \(lock\) => \{\s*if \(!lock\) return HELD_ELSEWHERE;\s*started = true;\s*return change\(\);\s*\}\);/);
+  assert.match(exclusive, /if \(outcome === HELD_ELSEWHERE\) throw new ModelBusyError\(\);\s*return outcome;/);
+  // A lock that the browser did not give at all is a refusal. A failure of the change itself passes through.
+  assert.match(exclusive, /\} catch \(error\) \{\s*if \(started\) throw error;[\s\S]*?throw new NoCoordinationError\(/);
+  assert.equal(LOCK_REQUEST_TOKEN, 'ifAvailable');
+  // Both changes of the cache run under it: the whole installation, and the removal.
+  assert.deepEqual(filesWith(/\bexclusively\(/), ['models/install.ts', 'recognition/localMl.ts']);
+  const install = code.get('models/install.ts');
+  // ENG-V3-R1B-RC1: the entry point of every download refuses without the learner's confirmation, before it asks for the lock.
+  assert.match(install, /export async function installModel\(options: InstallOptions\): Promise<void> \{\s*if \(options\.confirmed !== true\) throw new InstallError\('not-confirmed', [^\n]*\n\s*try \{\s*await exclusively\(\(\) => install\(options\), options\.locks\);/);
+  // Under the lock, and before anything is removed or requested: a complete installation is left alone.
+  assert.match(install, /async function install\(options: InstallOptions\): Promise<void> \{\s*const \{ store, signal \} = options;\s*if \(await store\.isInstalled\(\)\) return;\s*try \{/);
+  assert.equal(install.match(/\binstall\(options\)/g).length, 1);
+  const recognizer = code.get('recognition/localMl.ts');
+  assert.match(recognizer, /await exclusively\(\(\) => deps\.store\.remove\(\), deps\.locks\);/);
+
+  // What the installer may remove: files of this version before and after its own attempt, and an
+  // older version after a completed installation. It never removes the cache.
+  assert.doesNotMatch(install, /\.remove\(|deleteWhere|MODEL_CACHE_NAME/);
+  assert.equal(install.match(/store\.discardStaged\(\)/g).length, 2);
+  assert.equal(install.match(/store\.pruneOtherVersions\(\)/g).length, 1);
+  assert.ok(install.indexOf('await store.complete();') < install.indexOf('store.pruneOtherVersions()'));
+
+  // Removal: the store's "remove" is called by the recognizer alone, the recognizer's by the
+  // session's "removeModel" alone, and that by two buttons of the screen.
+  assert.deepEqual(filesWith(/store\.remove\(\)/), ['recognition/localMl.ts']);
+  assert.equal(recognizer.match(/store\.remove\(\)/g).length, 1);
+  const session = code.get('session.ts');
+  assert.equal(session.match(/recognizer\.remove\(\)/g).length, 1);
+  assert.ok(session.indexOf('async removeModel()') < session.indexOf('recognizer.remove()') && session.indexOf('recognizer.remove()') < session.indexOf('async refreshStorage()'));
+  const page = code.get('PronunciationPage.svelte');
+  assert.deepEqual([...page.matchAll(/onClick=\{\(\) => void session\.removeModel\(\)\} data-action="([\w-]+)"/g)].map((match) => match[1]), ['delete-model', 'remove-model-files']);
+  assert.equal(page.match(/removeModel/g).length, 2);
+});
+
+test('ENG-V3-R1B: the screen never advises clearing the site\'s data, and never calls the browser\'s answer a backup', async () => {
+  const code = await speechCode();
+  const warning = 'Do not clear the data of this site to make room: that would remove your learning data too.';
+  let warnings = 0;
+  for (const [file, source] of code) {
+    warnings += source.split(warning).length - 1;
+    const rest = source.split(warning).join('');
+    assert.doesNotMatch(rest, /\bclear(?:ing)?\b.{0,60}\b(?:site|browser|browsing|storage|cookies)\b/i, file);
+    assert.doesNotMatch(rest, /\b(?:free up|delete (?:other|some|your)|remove (?:other|some) (?:data|sites))\b/i, file);
+  }
+  assert.equal(warnings, 2, 'the session\'s sentence and the screen\'s');
+
+  const page = code.get('PronunciationPage.svelte');
+  // Whatever the browser answers, the screen says next to it that it is not a backup.
+  assert.match(page, /<p role="status" data-persistence-answer="granted">The browser agreed to keep this site's data\. That is not a backup\.<\/p>/);
+  assert.match(page, /<p data-not-a-backup>None of this is a backup\./);
+  // The paragraph is inside the panel without a condition of its own: it shows in every state of the panel.
+  const panel = page.slice(page.indexOf('data-storage-panel'), page.indexOf('{#if modelLoaded && item && group}'));
+  const before = panel.slice(0, panel.indexOf('<p data-not-a-backup>'));
+  assert.equal((before.match(/\{#if/g) ?? []).length, (before.match(/\{\/if\}/g) ?? []).length);
+  for (const [file, source] of code) {
+    assert.doesNotMatch(source, /(?:data|progress) (?:is|are) (?:safe|secure|protected|guaranteed)|cannot be lost|will not be lost|safely stored|permanent(?:ly)? (?:stored|kept|saved)/i, file);
+  }
+});
+
+test('ENG-V3-R1B-RC1: loading never reaches the installer, and the installer is reached in one place', async () => {
+  const code = await speechCode();
+  const filesWith = (pattern) => [...code.entries()].filter(([, source]) => pattern.test(source)).map(([path]) => path);
+  const recognizer = code.get('recognition/localMl.ts');
+
+  // One call of the installer in the whole feature: inside the recognizer's install(), with the confirmation handed on.
+  assert.equal(recognizer.match(/\(deps\.install \?\? installModel\)\(/g).length, 1);
+  const installing = recognizer.slice(recognizer.indexOf('async install({ confirmed, signal, onProgress })'), recognizer.indexOf('async prepare({ signal })'));
+  assert.match(installing, /^async install\(\{ confirmed, signal, onProgress \}\): Promise<void> \{\s*if \(!deps\.mayDownload\(\)\) throw new DownloadNotOffered\(\);\s*await \(deps\.install \?\? installModel\)\(\{ confirmed, store: deps\.store,/);
+  assert.deepEqual(filesWith(/\binstallModel\b/), ['models/install.ts', 'recognition/localMl.ts']);
+
+  // prepare(): a look at the cache, a refusal without the files, then the Worker. No installer and no download question.
+  const loading = recognizer.slice(recognizer.indexOf('async prepare({ signal })'), recognizer.indexOf('begin(capture: LiveCapture'));
+  assert.match(loading, /^async prepare\(\{ signal \}\): Promise<void> \{\s*if \(ready\) return;\s*if \(!\(await deps\.store\.isInstalled\(\)\)\) throw new ModelFilesError\('not-installed', [^\n]*\n\s*if \(signal\.aborted\)[^\n]*\n\s*await load\(signal\);\s*\},/);
+  assert.doesNotMatch(loading, /installModel|deps\.install|mayDownload|onProgress/);
+
+  // The interface says the same: two operations, and only install takes a confirmation.
+  const types = code.get('recognition/types.ts');
+  assert.match(types, /install\(options: \{ confirmed: boolean; signal: AbortSignal; onProgress: \(loaded: number, total: number\) => void \}\): Promise<void>;/);
+  assert.match(types, /prepare\(options: \{ signal: AbortSignal \}\): Promise<void>;/);
+
+  // The screen follows the cache: a download or a removal is offered only where the tabs can be coordinated.
+  const page = code.get('PronunciationPage.svelte');
+  assert.match(page, /\$: coordinated = storage\?\.canCoordinate !== false;/);
+  assert.match(page, /\{:else if canOffer && coordinated && capacity\?\.state === 'sufficient'\}\s*<Button variant="primary" icon="download" onClick=\{\(\) => void askToInstall\(\)\} data-action="install-model">/);
+  assert.match(page, /\{#if settled && coordinated && state\.installed && !filesDamaged\}\s*<Button .*data-action="delete-model">/);
+  assert.match(page, /\{:else if settled && coordinated && leftovers\}\s*<Button .*data-action="remove-model-files">/);
+});
+
+test('ENG-V3-R1B-RC1: the headroom is described as an estimate, never as room that is kept or reserved', async () => {
+  const code = await speechCode();
+  for (const [file, source] of code) assert.doesNotMatch(source, /stays? free|kept free|keeps? free|guarantee/i, file);
+  const page = code.get('PronunciationPage.svelte');
+  assert.match(page, /<p data-estimate-limits>These numbers are the browser's estimate\. They are approximate, and the trainer cannot reserve storage\. A download that succeeds does not mean that \{size\(capacity\.need\.reserve\)\} are left afterwards\./);
+  assert.match(page, /and \{size\(capacity\.need\.reserve\)\} of headroom for learning data<\/dd>/);
+  // The paragraph stands wherever the numbers stand: it needs nothing but the verdict.
+  assert.match(page, /\{#if capacity\}\s*<p data-estimate-limits>/);
+  assert.match(code.get('models/capacity.ts'), /MB of them as headroom for learning data\./);
 });
 
 test('ENG-V3-02 stage A: the Worker locks its network down before the runtime library is loaded', async () => {

@@ -1,15 +1,18 @@
 import type { CaptureEnvironment } from './capture/capture';
-import type { PinnedFile, PinnedSet } from './models/pinned';
-import type { CacheStorageLike } from './models/store';
+import { judgeCapacity, needFor, type Estimate, type Persistence, type PersistenceAnswer, type StorageManagerLike } from './models/capacity';
+import type { LockManagerLike } from './models/exclusive';
+import type { ModelStorage, StorageFacts } from './models/management';
+import { PINNED_FILES, type PinnedFile, type PinnedSet } from './models/pinned';
+import type { CacheStorageLike, Installation } from './models/store';
 import { sha256Hex } from './models/verify';
 import type { RecognizerWorker } from './recognition/bootstrap';
 import type { FromWorker, ToWorker } from './recognition/protocol';
 
 /**
- * Test helpers of the pronunciation feature: an in-memory Cache Storage, small pinned
- * files with real hashes, server answers shaped like a browser's, a fake microphone with
- * a fake audio context, and a fake Worker. Synthetic data only. Nothing here is used by
- * the application.
+ * Test helpers of the pronunciation feature: an in-memory Cache Storage, a storage manager
+ * and locks under the test's control, small pinned files with real hashes, server answers
+ * shaped like a browser's, a fake microphone with a fake audio context, and a fake Worker.
+ * Synthetic data only. Nothing here is used by the application.
  */
 export type FakeCacheStorage = CacheStorageLike & {
   /** Names of the caches that exist. */
@@ -20,19 +23,29 @@ export type FakeCacheStorage = CacheStorageLike & {
   puts: string[];
   /** Set it to make a `put` for a matching address fail like a full disk. */
   failPut: ((url: string) => boolean) | null;
-  /** Replaces the stored bytes of an entry, as a damaged cache would. */
+  /** The name of that failure. Browsers differ: see models/install.ts. */
+  failName: string;
+  /** Set it to make the deletion of a matching entry fail. */
+  failDelete: ((url: string) => boolean) | null;
+  /** Replaces the stored bytes of an entry, as a damaged disk would: what was stored with the entry, its length too, stays as it was. */
   corrupt(name: string, url: string, bytes: Uint8Array): void;
+  /** The addresses of the entries whose bodies were read, in order. Looking at an entry reads nothing. */
+  bodiesRead: string[];
 };
 
 const urlOf = (key: RequestInfo | URL): string => (typeof key === 'string' ? key : key instanceof URL ? key.href : key.url);
 
 export function fakeCacheStorage(): FakeCacheStorage {
-  const cachesByName = new Map<string, Map<string, { bytes: Uint8Array; type: string }>>();
+  const cachesByName = new Map<string, Map<string, { bytes: Uint8Array; type: string; length: string | null }>>();
   const puts: string[] = [];
+  const bodiesRead: string[] = [];
 
   const storage: FakeCacheStorage = {
     puts,
+    bodiesRead,
     failPut: null,
+    failName: 'QuotaExceededError',
+    failDelete: null,
     names: () => [...cachesByName.keys()],
     entries: (name) => [...(cachesByName.get(name)?.keys() ?? [])],
     corrupt(name, url, bytes) {
@@ -47,16 +60,31 @@ export function fakeCacheStorage(): FakeCacheStorage {
       const entries = cachesByName.get(name)!;
       const cache = {
         async match(key: RequestInfo | URL) {
-          const entry = entries.get(urlOf(key));
-          return entry ? new Response(entry.bytes.slice(), { headers: { 'Content-Type': entry.type } }) : undefined;
+          const url = urlOf(key);
+          const entry = entries.get(url);
+          if (!entry) return undefined;
+          const bytes = entry.bytes.slice();
+          // The body is handed out when it is asked for, so a test can tell a look from a read.
+          const body = new ReadableStream<Uint8Array>(
+            {
+              pull(controller) {
+                bodiesRead.push(url);
+                controller.enqueue(bytes);
+                controller.close();
+              }
+            },
+            { highWaterMark: 0 }
+          );
+          return new Response(body, { headers: { 'Content-Type': entry.type, ...(entry.length === null ? {} : { 'Content-Length': entry.length }) } });
         },
         async put(key: RequestInfo | URL, response: Response) {
           const url = urlOf(key);
-          if (storage.failPut?.(url)) throw new DOMException('The quota has been exceeded.', 'QuotaExceededError');
-          entries.set(url, { bytes: new Uint8Array(await response.arrayBuffer()), type: response.headers.get('Content-Type') ?? '' });
+          if (storage.failPut?.(url)) throw new DOMException(storage.failName === 'QuotaExceededError' ? 'The quota has been exceeded.' : '', storage.failName);
+          entries.set(url, { bytes: new Uint8Array(await response.arrayBuffer()), type: response.headers.get('Content-Type') ?? '', length: response.headers.get('Content-Length') });
           puts.push(`${name} ${url}`);
         },
         async delete(key: RequestInfo | URL) {
+          if (storage.failDelete?.(urlOf(key))) throw new DOMException('The entry could not be deleted.', 'UnknownError');
           return entries.delete(urlOf(key));
         },
         async keys() {
@@ -67,6 +95,125 @@ export function fakeCacheStorage(): FakeCacheStorage {
     }
   };
   return storage;
+}
+
+/**
+ * A storage manager under the test's control. `usage` and `quota` are what the next
+ * estimate says. Each member can be taken away, as in a browser that does not have it.
+ */
+export function fakeStorageManager(start: { usage?: number; quota?: number; persisted?: boolean; grant?: boolean } = {}) {
+  const calls: string[] = [];
+  const manager = {
+    calls,
+    usage: start.usage ?? 1_000_000,
+    quota: start.quota ?? 10_000_000_000,
+    persisted: start.persisted ?? false,
+    /** What the browser answers to a request to keep the data. */
+    grant: start.grant ?? false,
+    /** Set it to make the next answers fail. */
+    fail: null as Error | null,
+    /** Set it to hold an answer back, as a browser that asks the learner. */
+    wait: null as Gate | null,
+    async estimate(): Promise<{ usage?: number; quota?: number }> {
+      calls.push('estimate');
+      if (manager.fail) throw manager.fail;
+      return { usage: manager.usage, quota: manager.quota };
+    },
+    async persistedNow(): Promise<boolean> {
+      calls.push('persisted');
+      if (manager.fail) throw manager.fail;
+      return manager.persisted;
+    },
+    async persist(): Promise<boolean> {
+      calls.push('persist');
+      if (manager.wait) await manager.wait.promise;
+      if (manager.fail) throw manager.fail;
+      if (manager.grant) manager.persisted = true;
+      return manager.grant;
+    }
+  };
+  /** The manager as the application sees it. */
+  const like: StorageManagerLike = { estimate: () => manager.estimate(), persisted: () => manager.persistedNow(), persist: () => manager.persist() };
+  return Object.assign(manager, { like });
+}
+
+/** An estimate with far more room than any test file needs. */
+export const roomy = async (): Promise<Estimate> => ({ known: true, usage: 1_000_000, quota: 10_000_000_000 });
+
+/** What `facts()` says for an estimate: for the application's own pinned files, unless `files` says otherwise. */
+export function factsFor(estimate: Estimate, options: { files?: readonly Pick<PinnedFile, 'bytes'>[]; reserve?: number; persistence?: Persistence; canAskForPersistence?: boolean; canCoordinate?: boolean } = {}): StorageFacts {
+  return {
+    estimate,
+    capacity: judgeCapacity(estimate, needFor(options.files ?? PINNED_FILES, options.reserve)),
+    persistence: options.persistence ?? 'best-effort',
+    canAskForPersistence: options.canAskForPersistence ?? true,
+    canCoordinate: options.canCoordinate ?? true
+  };
+}
+
+/**
+ * The model's storage as a session sees it, under the test's control: what the cache
+ * holds, what the browser says, and what a check of the files and a request to keep the
+ * data answer. `fail` makes every answer fail; `wait` holds the browser's answer back.
+ */
+export function fakeModelStorage(start: { installation?: Installation; facts?: StorageFacts } = {}) {
+  const calls: string[] = [];
+  const storage = {
+    calls,
+    installation: start.installation ?? ({ state: 'absent', bytes: 0, otherBytes: 0 } as Installation),
+    facts: start.facts ?? factsFor({ known: true, usage: 1_000_000, quota: 10_000_000_000 }),
+    problems: [] as string[],
+    answer: 'declined' as PersistenceAnswer,
+    fail: null as Error | null,
+    wait: null as Gate | null
+  };
+  const answer = async <T>(name: string, value: () => T): Promise<T> => {
+    calls.push(name);
+    if (storage.fail) throw storage.fail;
+    return value();
+  };
+  const like: ModelStorage = {
+    totalBytes: PINNED_FILES.reduce((sum, file) => sum + file.bytes, 0),
+    facts: () => answer('facts', () => storage.facts),
+    inspect: () => answer('inspect', () => storage.installation),
+    verify: () => answer('verify', () => storage.problems),
+    async askForPersistence() {
+      calls.push('askForPersistence');
+      if (storage.wait) await storage.wait.promise;
+      if (storage.fail) throw storage.fail;
+      if (storage.answer === 'granted') storage.facts = { ...storage.facts, persistence: 'persistent' };
+      return storage.answer;
+    }
+  };
+  return Object.assign(storage, { like });
+}
+
+/**
+ * The browser's locks, for one name at a time: a second request with `ifAvailable` gets
+ * no lock while the first one runs. `heldElsewhere` stands for another tab that holds it.
+ */
+export function fakeLocks() {
+  const held = new Set<string>();
+  const requests: string[] = [];
+  const locks: LockManagerLike & { heldElsewhere: boolean; refuse: Error | null; requests: string[]; held(): string[] } = {
+    heldElsewhere: false,
+    /** Set it to make the browser give no lock at all: the request fails before anything runs. */
+    refuse: null,
+    requests,
+    held: () => [...held],
+    async request<T>(name: string, _options: { ifAvailable: true }, run: (lock: unknown) => Promise<T>): Promise<T> {
+      requests.push(name);
+      if (locks.refuse) throw locks.refuse;
+      if (locks.heldElsewhere || held.has(name)) return run(null);
+      held.add(name);
+      try {
+        return await run({ name });
+      } finally {
+        held.delete(name);
+      }
+    }
+  };
+  return locks;
 }
 
 /** The last item of a list. */

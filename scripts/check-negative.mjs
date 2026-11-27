@@ -462,6 +462,53 @@ const backupUnguarded = (source) => replaceOnce(source, BACKUP_GUARD, "{:else if
     });
 }
 
+// Model storage in the experimental build (ENG-V3-R1B): the browser's storage manager, the lock of the
+// model cache and the confirmation of a download are in the Pronunciation screen's file alone, the model
+// cache is named there and in the Worker only, and no file calls the cache storage by its global name.
+{
+  const GATE = 'experimental-model-storage';
+  const storageCase = async (name, title, pattern, fault) => {
+    const dir = await copyOfExperimental(name);
+    await fault(dir);
+    await expectGateFailures(title, PRODUCTION_SITE_DIR, { [GATE]: pattern }, dir);
+  };
+  const ENTRY = /^assets\/index-[\w-]+\.js$/;
+  const BACKUP = /^assets\/BackupPage-[\w-]+\.js$/;
+  const SPEECH = /^assets\/PronunciationPage-[\w-]+\.js$/;
+  const WORKER = /^assets\/recognizer\.worker-[\w-]+\.js$/;
+  const WRITER = /^assets\/recoveryWriter-[\w-]+\.js$/;
+  const append = (file, code) => async (dir) => rewrite(dir, await fileOf(dir, file), (text) => `${text}\n${code}`);
+
+  await storageCase('storage-entry-asks-to-keep', 'the entry script asks the browser to keep the site\'s data, without a click', /assets\/index-[\w-]+\.js contains "\.persist\("/,
+    append(ENTRY, 'navigator.storage.persist();'));
+  await storageCase('storage-backup-reads-estimate', 'the Backup screen asks for the storage estimate', /assets\/BackupPage-[\w-]+\.js contains "\.estimate\("/,
+    append(BACKUP, 'const room=()=>navigator.storage.estimate();'));
+  await storageCase('storage-worker-reaches-manager', 'the recognizer\'s Worker reaches the storage manager', /assets\/recognizer\.worker-[\w-]+\.js reaches the browser's storage manager or lock manager/,
+    append(WORKER, 'const manager=navigator.storage;'));
+  await storageCase('storage-writer-takes-lock', 'the recovery writer requests a browser lock', /assets\/recoveryWriter-[\w-]+\.js contains "ifAvailable"/,
+    append(WRITER, 'const lock=(l)=>l.request("x",{ifAvailable:!0},()=>{});'));
+  await storageCase('storage-second-request-to-keep', 'the Pronunciation screen asks the browser to keep the data in a second place', /assets\/PronunciationPage-[\w-]+\.js: expected exactly one "\.persist\(", found 2/,
+    append(SPEECH, 'const again=(m)=>m.persist();'));
+  await storageCase('storage-second-manager', 'the Pronunciation screen reaches the storage manager in a second place', /expected exactly one place that reaches the browser's storage manager, found 2/,
+    append(SPEECH, 'const other=navigator.storage;'));
+  await storageCase('storage-second-lock', 'the Pronunciation screen requests a second lock', /expected exactly one request for a browser lock, found 2/,
+    append(SPEECH, 'const lock=(l)=>l.request("other",{ifAvailable:!0},()=>{});'));
+  await storageCase('storage-estimate-removed', 'a Pronunciation screen that no longer asks for the estimate', /expected exactly one "\.estimate\(", found 0/,
+    async (dir) => rewrite(dir, await fileOf(dir, SPEECH), (text) => text.split('.estimate(').join('.guess(')));
+  await storageCase('storage-second-confirmation', 'a second place that confirms a download', /expected exactly one place that confirms a download, found 2/,
+    append(SPEECH, 'const quick=(s)=>s.install({confirmed:!0});'));
+  await storageCase('storage-lists-caches', 'a file that lists the caches of the site', /assets\/PronunciationPage-[\w-]+\.js calls the browser's cache storage by its global name/,
+    append(SPEECH, 'const all=()=>caches.keys();'));
+  await storageCase('storage-deletes-another-cache', 'the entry script deletes a cache', /assets\/index-[\w-]+\.js (?:names the browser's cache storage|calls the browser's cache storage by its global name)/,
+    append(ENTRY, 'caches.delete("another-cache");'));
+  await storageCase('storage-backup-names-model-cache', 'the Backup screen names the model cache', /assets\/BackupPage-[\w-]+\.js names the model cache/,
+    append(BACKUP, 'const cache="eng-trainer-v3-models";'));
+  await storageCase('storage-worker-other-cache', 'a Worker that uses another cache than the model cache', /assets\/recognizer\.worker-[\w-]+\.js does not name the model cache/,
+    async (dir) => rewrite(dir, await fileOf(dir, WORKER), (text) => text.split('eng-trainer-v3-models').join('eng-trainer-v3-other')));
+  await storageCase('storage-private-file-system', 'a file that uses the site\'s private file system', /contains "getDirectory"/,
+    append(WORKER, 'const root=(m)=>m.getDirectory();'));
+}
+
 const failed = results.filter((result) => !result.ok);
 if (failed.length) {
   console.error(`\n${failed.length} of ${results.length} negative cases did not fail as required.`);
