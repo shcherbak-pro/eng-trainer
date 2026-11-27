@@ -17,7 +17,7 @@ export type RecognizerDescriptor = {
 export type RecognizerState =
   /** The model is loaded: recording can start. */
   | { status: 'ready' }
-  /** The model is on this device and has to be loaded into memory. No network is needed. */
+  /** The model is on this device and has to be loaded into memory. No network is needed, and none is used. */
   | { status: 'installed' }
   /** The model has to be downloaded first. `bytes` is the exact size. */
   | { status: 'needs-download'; bytes: number }
@@ -55,8 +55,17 @@ export class RecognitionCancelled extends Error {
 export interface SpeechRecognizer {
   readonly descriptor: RecognizerDescriptor;
   state(): Promise<RecognizerState>;
-  /** Downloads and installs after consent when needed, then loads. All network use ends here. */
-  prepare(options: { signal: AbortSignal; onProgress: (loaded: number, total: number) => void }): Promise<void>;
+  /**
+   * Downloads, verifies and stores the model's files. It loads nothing. This is the only
+   * operation of a recognizer that may use the network, and it starts only with
+   * `confirmed: true`: the learner confirmed this download on the screen.
+   */
+  install(options: { confirmed: boolean; signal: AbortSignal; onProgress: (loaded: number, total: number) => void }): Promise<void>;
+  /**
+   * Loads the installed model into memory. It never downloads. When the files are not on
+   * this device it refuses, and the screen has to ask for a download again.
+   */
+  prepare(options: { signal: AbortSignal }): Promise<void>;
   /** Starts before the learner speaks. Refused unless the state is "ready". */
   begin(capture: LiveCapture, options: { signal: AbortSignal }): RecognitionRun;
   /** Frees the model's memory. The installed files stay. */

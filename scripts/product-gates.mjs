@@ -99,6 +99,23 @@ export const NETWORK_TOKENS = ['fetch(', 'XMLHttpRequest', 'WebSocket', 'EventSo
 /** A request for another file of the build. The Backup screen's file holds one, for the recovery writer. The writer holds none. */
 export const DYNAMIC_IMPORT_TOKEN = 'import(';
 
+/**
+ * The three questions to the browser's storage manager (ENG-V3-R1B): its estimate of the
+ * site's storage, whether it keeps the site's data, and the request to keep it. In the
+ * experimental build one file holds each of them, once: the lazily loaded Pronunciation
+ * screen. The released stable output holds none.
+ */
+export const STORAGE_MANAGER_CALLS = ['.estimate(', '.persisted(', '.persist('];
+/** The option of the one request for a browser lock: the lock of the model cache is taken at once or not at all. */
+export const LOCK_REQUEST_TOKEN = 'ifAvailable';
+export const MODEL_STORAGE_TOKENS = [...STORAGE_MANAGER_CALLS, LOCK_REQUEST_TOKEN];
+/** The name of the model cache, and of the lock that guards a change of it. */
+export const MODEL_CACHE_TOKEN = 'eng-trainer-v3-models';
+/** The confirmation of a download, as the bundler writes it. One place of the build gives it. */
+export const CONFIRMED_DOWNLOAD_TOKEN = 'confirmed:!0';
+/** Other storage of a site that no file of the experimental build uses: its private file system and storage buckets. */
+export const OTHER_SITE_STORAGE_TOKENS = ['getDirectory', 'storageBuckets'];
+
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const isCode = (path) => /\.(?:html|js|mjs|css)$/.test(path);
 
@@ -389,6 +406,72 @@ function gateExperimentalBackup({ site, experimentalDir, experimentalFiles }) {
 }
 
 /**
+ * Gate 9. Model storage of the experimental build (ENG-V3-R1B).
+ *
+ * The speech model shares the browser's storage for this site with the learning data of
+ * every version. This gate keeps what touches that storage in its files:
+ *
+ * - one file asks the browser's storage manager, and it is the Pronunciation screen's
+ *   file: one estimate, one question whether the data is kept, and one request to keep it;
+ * - the same file holds the one request for a browser lock and the one place that
+ *   confirms a download;
+ * - the model cache is named in that file and in the recognizer's Worker, and nowhere
+ *   else, and no other file names the browser's cache storage at all;
+ * - no file calls the cache storage by its global name: every use goes through the model
+ *   store, which names the one model cache, so no file lists the site's caches, and none
+ *   opens or deletes another one;
+ * - no file uses the site's private file system or a storage bucket.
+ *
+ * A gate on built files cannot see which entry a call removes, or whether a number was
+ * compared before a download. The tests of the feature and the browser acceptance test
+ * show that: they compare the whole storage of the site before and after.
+ */
+function gateModelStorage({ experimentalDir, experimentalFiles }) {
+  const problems = [];
+  const code = experimentalFiles.filter((file) => isCode(file.path));
+  const text = (file) => readFileSync(join(experimentalDir, file.path), 'utf8');
+  const occurrences = (file, token) => text(file).split(token).length - 1;
+  const matches = (file, pattern) => (text(file).match(pattern) ?? []).length;
+
+  const screens = code.filter((file) => text(file).includes(SPEECH_SCREEN));
+  if (screens.length !== 1) problems.push(`expected exactly one file that holds the Pronunciation screen, found ${screens.length}`);
+  const workers = code.filter((file) => WORKER_FILE.test(file.path));
+
+  for (const file of code.filter((item) => !screens.includes(item))) {
+    for (const token of MODEL_STORAGE_TOKENS) {
+      if (text(file).includes(token)) problems.push(`${file.path} contains "${token}". Only the Pronunciation screen's file asks the browser about this site's storage and takes the lock of the model cache.`);
+    }
+    if (/navigator\??\.(?:storage|locks)\b/.test(text(file))) problems.push(`${file.path} reaches the browser's storage manager or lock manager. Only the Pronunciation screen's file does.`);
+  }
+  for (const file of screens) {
+    for (const token of STORAGE_MANAGER_CALLS) {
+      if (occurrences(file, token) !== 1) problems.push(`${file.path}: expected exactly one "${token}", found ${occurrences(file, token)}`);
+    }
+    const managers = matches(file, /navigator\??\.storage\b/g);
+    if (managers !== 1) problems.push(`${file.path}: expected exactly one place that reaches the browser's storage manager, found ${managers}`);
+    const lockManagers = matches(file, /navigator\??\.locks\b/g);
+    if (lockManagers !== 1) problems.push(`${file.path}: expected exactly one place that reaches the browser's lock manager, found ${lockManagers}`);
+    if (occurrences(file, LOCK_REQUEST_TOKEN) !== 1) problems.push(`${file.path}: expected exactly one request for a browser lock, found ${occurrences(file, LOCK_REQUEST_TOKEN)}`);
+    if (occurrences(file, CONFIRMED_DOWNLOAD_TOKEN) !== 1) problems.push(`${file.path}: expected exactly one place that confirms a download, found ${occurrences(file, CONFIRMED_DOWNLOAD_TOKEN)}`);
+  }
+
+  for (const file of code.filter((item) => !screens.includes(item) && !workers.includes(item))) {
+    if (text(file).includes(MODEL_CACHE_TOKEN)) problems.push(`${file.path} names the model cache. Only the Pronunciation screen's file and the recognizer's Worker do.`);
+    if (/\bcaches\b/.test(text(file))) problems.push(`${file.path} names the browser's cache storage. Only the Pronunciation screen's file and the recognizer's Worker use it, for the model cache.`);
+  }
+  for (const file of [...screens, ...workers]) {
+    if (!text(file).includes(MODEL_CACHE_TOKEN)) problems.push(`${file.path} does not name the model cache, so it would use another one`);
+  }
+  for (const file of code) {
+    if (/\bcaches\s*\.\s*[A-Za-z_$]/.test(text(file))) problems.push(`${file.path} calls the browser's cache storage by its global name. Every use goes through the model store, which names the one model cache: no file lists, opens or deletes a cache directly.`);
+    for (const token of OTHER_SITE_STORAGE_TOKENS) {
+      if (text(file).includes(token)) problems.push(`${file.path} contains "${token}". This product keeps nothing in the site's private file system or in a storage bucket.`);
+    }
+  }
+  return problems;
+}
+
+/**
  * Runs every gate. `siteDir` is the assembled site and `experimentalDir` the build of
  * the experimental product; both are relative to `root`.
  */
@@ -419,8 +502,8 @@ export async function runProductGates({ site, siteDir, experimentalDir, locks, r
     { id: 'stable-chunks', title: 'Stable product: exactly one script and one stylesheet, no lazy chunk', problems: gateStableChunks({ stableDir, stableFiles }) },
     {
       id: 'stable-tokens',
-      title: 'Stable product: no speech, model, Worker, remote-runtime, key-value storage or experimental-product token',
-      problems: scanTokens(stableDir, stableFiles, [...FEATURE_TOKENS, ...EXPERIMENTAL_TOKENS, ...STABLE_STORAGE_TOKENS])
+      title: 'Stable product: no speech, model, Worker, remote-runtime, key-value storage, storage-manager, lock or experimental-product token',
+      problems: scanTokens(stableDir, stableFiles, [...FEATURE_TOKENS, ...EXPERIMENTAL_TOKENS, ...STABLE_STORAGE_TOKENS, ...MODEL_STORAGE_TOKENS])
     },
     { id: 'stable-content', title: `Stable product: released manifest and all ${catalogLock.packs.length} packs`, problems: contentProblems(stableFiles, stableDir, catalogLock) },
     {
@@ -437,6 +520,11 @@ export async function runProductGates({ site, siteDir, experimentalDir, locks, r
       id: 'experimental-backup',
       title: 'Experimental product: backup in one lazy file, one recovery writer loaded by it alone, other products\' storage named in those two only, one key-value write, no removal, no database deletion, no request',
       problems: gateExperimentalBackup({ site, experimentalDir: experimentalPath, experimentalFiles })
+    },
+    {
+      id: 'experimental-model-storage',
+      title: 'Experimental product: storage manager, lock and download confirmation in the Pronunciation screen\'s file alone, the model cache named there and in the Worker only, no direct call on the cache storage',
+      problems: gateModelStorage({ experimentalDir: experimentalPath, experimentalFiles })
     }
   ];
 }

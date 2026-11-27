@@ -1,5 +1,38 @@
 # Changelog
 
+## Unreleased — ENG-V3-R1B (2026-11-26, corrected 2026-11-27)
+
+Safe storage of the speech model in the experimental product: the second half of the Data Safety Gate. Nothing changes for users: the experimental product is not published, no build contains a model, and the published site stays byte-identical to the ENG-V2-03 release.
+
+- **The model shares the browser's storage with the learning data of every version.** The Pronunciation screen now says so, and shows the browser's own estimate for the site, what a download asks for, what the model cache holds, and what the browser says about keeping the data.
+- **Room before a download.** A download starts only when the estimate shows room for every file, for one more copy of the largest one, and for 64 MB of headroom for learning data: 131 MB for the whole model.
+  - No estimate, an estimate that fails or does not come, and numbers that make no sense all mean: no download.
+  - Room is asked for again before each file. A storage that fills up during a download ends it before the next request.
+  - A write can fail after a good estimate. The installer then removes the files of its attempt and says that the storage is full and that the learning data was not changed.
+  - The application never makes room and never advises clearing the site's data.
+  - **The headroom is judged by an estimate. It is not a reservation.** The estimate is approximate, and the application cannot reserve storage. A download that succeeds does not mean that 64 MB are left. A later save of learning data, or a recovery, can still be refused for lack of room. The screen says so next to the numbers.
+- **A download is asked for, then confirmed.** The click opens a question with the numbers, with what a browser may do with a site's data, a link to the Backup screen, and a statement that the learner makes: a backup file exists, or the profile holds nothing to keep. The session refuses a download without room or without the confirmation.
+- **Loading and installing are two operations.** "Load" brings a model that is in the browser into memory and never requests a model file. The installer is the entry point of every download, and it refuses a download that was not confirmed, whoever calls it.
+  - When "Load" finds that the files are gone, for example removed in another tab, nothing is downloaded. The screen says so and offers the download again, with its question.
+  - What the screen offers follows the model cache each time the storage is read, so **Read again** is enough after a change in another tab.
+  - A model that is loaded stays usable in its tab after its files were removed. The screen shows both facts.
+  - A complete installation that another tab finished is loaded. It is not downloaded again.
+- **What the model cache holds is said as it is:** nothing, an installation, the files of a download that did not finish, or a damaged installation. Only a complete installation can be loaded.
+  - A look at the cache reads the entries and the length that was stored with each file. It reads no file. It takes no lock, so it describes a moment and can be out of date when it is shown.
+  - **Check the installed files** compares every file with its pinned SHA-256. A file that the recognizer's Worker refuses is named, nothing becomes ready, and the screen offers to remove the files.
+  - The marker of an installation is written last and deleted first, so an interrupted installation and an interrupted deletion both leave files that are never used.
+- **Removing the model removes the model cache and nothing else.** The browser test compares every database, every key-value record and every other cache entry before and after.
+- **One change at a time, or none.** An installation and a removal hold a browser lock (Web Locks). A second tab is refused at once and changes nothing. In a browser without that lock, or one that does not give it, the model is not downloaded, replaced or removed, and the screen says why.
+- **The browser is asked to keep the site's data only on request.** Its answer is shown as the browser's statement, and the screen says next to it that this is not a backup.
+- **No way to install a model in an ordinary profile is added.** A browser may remove a site's data whatever the application does, and the application cannot see whether a backup file exists. The download is still offered on a loopback address only. Offering it elsewhere needs an owner decision. See `docs/architecture/MODEL-STORAGE-SAFETY.md`.
+- Browser differences that the tests found: Chromium enforced a limit for the site that its estimate did not show. Firefox reports a refused cache write as `NS_ERROR_FILE_NO_DEVICE_SPACE`. Both keep a usage figure for a while after a deletion. Safari and phones were not tested.
+- A new gate keeps the questions to the storage manager, the lock and the confirmation of a download in the Pronunciation screen's file, and the model cache in that file and the Worker. Fourteen deliberate faults prove that it can fail.
+- 115 new tests of the feature and 6 new source rules. A browser acceptance test with 131 checks in Chromium and 129 in Firefox, with two tabs that are not reopened, a browser without locks (injected), and an installation under a limit that the estimate does not show.
+- The recognizer's Worker, its protocol, the decoding, the recorder, the pinned files and the page policy are unchanged. No shared file changed. No dependency was added or changed.
+- The recognizer's interface has two operations where it had one: `install` and `prepare`. Recording and recognition are as they were.
+- **Corrected after an independent review (ENG-V3-R1B-RC1).** The first candidate could download a model from "Load" without the question, changed the model cache without coordination in a browser without Web Locks, and described the 64 MB as room that stays free. The entries above describe the corrected behaviour.
+- **Open observation.** In Chromium, a recording made after a reload a few times gave no words during the verification. The cause is not known. The acceptance test of the prototype now records which build and which Worker file ran, and keeps the samples of a recording that gives other words. See `docs/architecture/MODEL-STORAGE-SAFETY.md`.
+
 ## Unreleased — ENG-V3-R1A (2026-11-25)
 
 Full backup and recovery in the experimental product: the first half of the Data Safety Gate. Nothing changes for users: the experimental product is not published, and the published site stays byte-identical to the ENG-V2-03 release.

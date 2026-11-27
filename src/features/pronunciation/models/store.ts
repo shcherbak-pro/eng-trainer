@@ -2,7 +2,7 @@ import { PINNED, type PinnedFile, type PinnedSet } from './pinned';
 import { assertPinned } from './verify';
 
 /**
- * The model cache of the experimental product (ENG-V3-02, stage A).
+ * The model cache of the experimental product (ENG-V3-02 stage A, ENG-V3-R1B).
  *
  * One Cache Storage cache, named for this product, holds the installed files. Rules:
  *
@@ -10,9 +10,24 @@ import { assertPinned } from './verify';
  *   calls `stage` after `assertPinned`), and it is checked again each time it is read.
  * - An installation is usable only when its marker exists. The marker is written last
  *   and repeats the pinned list, so a partial or older installation is "not installed".
- * - A missing entry means "not installed". Nothing here fetches from the network.
- * - Deletion touches entries of this cache only: never another cache, a database or
- *   localStorage.
+ * - A missing entry, or one of another length than pinned, means "not installed". Nothing
+ *   here fetches from the network.
+ * - What the cache holds is said as it is (`inspect`): nothing, a complete installation,
+ *   the files of an installation that did not finish, or a damaged one. Looking reads no
+ *   file.
+ * - **A look is not a snapshot.** Reading takes no lock, so it can run while another tab
+ *   installs or removes. It then describes a moment in between: for example files without
+ *   a marker while an installation runs. A look does not open a cache that is not there.
+ *   But the browser has no way to open a cache only if it exists, so one schedule is left:
+ *   a cache that another tab deletes between the question "is it there" and the opening
+ *   comes back empty. It holds nothing, is reported as "absent", and goes with the next
+ *   removal or is filled by the next installation. Nothing is fetched or removed because
+ *   of it.
+ * - The marker is written last and deleted first, so an interrupted installation and an
+ *   interrupted deletion both leave files without a marker: "incomplete", never usable.
+ * - Deletion touches entries of this cache only. Every call names this one cache. The
+ *   caches of the site are never listed, and no other cache, database or key-value record
+ *   is opened, changed or removed, also not to make room.
  *
  * The page (installer, state) and the Worker (loading) both use this module. Keys are
  * absolute addresses below the site's base path, the same at whatever route the product
@@ -36,6 +51,23 @@ export function hasCacheStorage(): boolean {
 }
 
 type Marker = { version: string; files: { id: string; bytes: number; sha256: string }[] };
+
+/**
+ * What the model cache holds, for the version of the model that this build uses.
+ *
+ * `bytes` is what the entries of this version take. `otherBytes` is what everything else
+ * in this cache takes: an older or newer version, which this build does not use. Both are
+ * this module's own count of stored bytes, not an estimate of the browser.
+ */
+export type Installation =
+  /** No entry of this version. */
+  | { state: 'absent'; bytes: 0; otherBytes: number }
+  /** The marker, and every pinned file with its pinned length. */
+  | { state: 'installed'; bytes: number; otherBytes: number }
+  /** Files without the marker: an installation that did not finish. Never usable. */
+  | { state: 'incomplete'; bytes: number; files: number; otherBytes: number }
+  /** The marker, but a pinned file is missing or has another length. Never usable. */
+  | { state: 'damaged'; bytes: number; problems: string[]; otherBytes: number };
 
 export type ModelStore = ReturnType<typeof createModelStore>;
 
@@ -62,13 +94,80 @@ export function createModelStore(options: { keyBase: string; storage?: CacheStor
     }
   }
 
-  /** True when the marker is valid and every pinned file has an entry. Never creates the cache. */
-  async function isInstalled(): Promise<boolean> {
-    if (!(await storage().has(MODEL_CACHE_NAME))) return false;
+  /**
+   * The length of an entry, as it was stored. `stage` writes the length with each file, and
+   * it is read from there: a look at the cache reads no file. Reading 47 MB to count them
+   * would be slow, and it would run just before a recording starts. An entry that carries
+   * no length is measured: the marker, and an entry that this module did not write.
+   */
+  async function storedBytes(cache: Cache, url: string): Promise<number | null> {
+    const response = await cache.match(url);
+    if (!response) return null;
+    const stored = response.headers.get('Content-Length');
+    if (stored !== null && /^\d+$/.test(stored)) return Number(stored);
+    return (await response.blob()).size;
+  }
+
+  /**
+   * What the cache holds. It looks at the entries and at the lengths that were stored with
+   * them, not at contents: that is quick, and a file is checked by size and SHA-256 each
+   * time it is read anyway (`read`, `verify`). It does not open a cache that is not there.
+   * It is not a snapshot: see the top of this file.
+   */
+  async function inspect(): Promise<Installation> {
+    if (!(await storage().has(MODEL_CACHE_NAME))) return { state: 'absent', bytes: 0, otherBytes: 0 };
     const cache = await storage().open(MODEL_CACHE_NAME);
-    if (!(await hasMarker(cache))) return false;
-    for (const file of pinned.files) if (!(await cache.match(fileKey(file)))) return false;
-    return true;
+    let bytes = 0;
+    let otherBytes = 0;
+    let entries = 0;
+    for (const request of await cache.keys()) {
+      const size = (await storedBytes(cache, request.url)) ?? 0;
+      if (request.url.startsWith(versionPrefix)) {
+        bytes += size;
+        entries += 1;
+      } else {
+        otherBytes += size;
+      }
+    }
+    if (!entries) return { state: 'absent', bytes: 0, otherBytes };
+    if (!(await hasMarker(cache))) return { state: 'incomplete', bytes, files: entries, otherBytes };
+    const problems: string[] = [];
+    for (const file of pinned.files) {
+      const size = await storedBytes(cache, fileKey(file));
+      if (size === null) problems.push(`${file.id} is missing`);
+      else if (size !== file.bytes) problems.push(`${file.id} has ${size} bytes, not ${file.bytes}`);
+    }
+    return problems.length ? { state: 'damaged', bytes, problems, otherBytes } : { state: 'installed', bytes, otherBytes };
+  }
+
+  /** True when the marker is valid and every pinned file is there with its pinned length. */
+  async function isInstalled(): Promise<boolean> {
+    return (await inspect()).state === 'installed';
+  }
+
+  /**
+   * Reads every pinned file and compares it with the pinned list, by size and SHA-256.
+   * Returns what is wrong, one line per file. An empty list means that the installation
+   * is exactly the pinned one. This reads the whole model, so it runs on request only.
+   */
+  async function verify(): Promise<string[]> {
+    if (!(await storage().has(MODEL_CACHE_NAME))) return ['no model cache'];
+    const cache = await storage().open(MODEL_CACHE_NAME);
+    if (!(await hasMarker(cache))) return ['the installation is not complete'];
+    const problems: string[] = [];
+    for (const file of pinned.files) {
+      const response = await cache.match(fileKey(file));
+      if (!response) {
+        problems.push(`${file.id} is missing`);
+        continue;
+      }
+      try {
+        await assertPinned(file, await response.arrayBuffer());
+      } catch (error) {
+        problems.push(error instanceof Error ? error.message : String(error));
+      }
+    }
+    return problems;
   }
 
   /** The verified bytes of an installed file. Throws when it is missing or is not the pinned file. */
@@ -96,10 +195,18 @@ export function createModelStore(options: { keyBase: string; storage?: CacheStor
     await cache.put(markerKey, new Response(JSON.stringify(expectedMarker()), { headers: { 'Content-Type': 'application/json' } }));
   }
 
+  /** The marker of an installation, of whatever version. */
+  const isMarker = (url: string): boolean => url.endsWith('/complete.json');
+
+  /**
+   * Deletes the entries that `keep` does not keep. Markers go first: whatever interrupts a
+   * deletion leaves files without a marker, never a marker that promises files.
+   */
   async function deleteWhere(keep: (url: string) => boolean): Promise<void> {
     if (!(await storage().has(MODEL_CACHE_NAME))) return;
     const cache = await storage().open(MODEL_CACHE_NAME);
-    for (const request of await cache.keys()) if (!keep(request.url)) await cache.delete(request);
+    const doomed = (await cache.keys()).filter((request) => !keep(request.url));
+    for (const request of [...doomed.filter((item) => isMarker(item.url)), ...doomed.filter((item) => !isMarker(item.url))]) await cache.delete(request);
   }
 
   /** Removes the files of an unfinished installation of this version. Other versions stay. */
@@ -112,11 +219,14 @@ export function createModelStore(options: { keyBase: string; storage?: CacheStor
     await deleteWhere((url) => url.startsWith(versionPrefix));
   }
 
-  /** "Delete downloaded model": this cache and nothing else. */
+  /**
+   * "Delete downloaded model", and the removal of leftover or damaged files: this cache
+   * and nothing else. Every version in it goes, because no build uses another version.
+   */
   async function remove(): Promise<void> {
     await deleteWhere(() => false);
     await storage().delete(MODEL_CACHE_NAME);
   }
 
-  return { pinned, isInstalled, read, stage, complete, discardStaged, pruneOtherVersions, remove, markerKey, fileKey };
+  return { pinned, inspect, isInstalled, verify, read, stage, complete, discardStaged, pruneOtherVersions, remove, markerKey, fileKey };
 }

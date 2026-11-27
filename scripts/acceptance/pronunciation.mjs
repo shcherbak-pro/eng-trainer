@@ -25,12 +25,14 @@
 // It exits with 1 when a check fails. It changes no tracked file and no build.
 import { createHash } from 'node:crypto';
 import { createServer } from 'node:http';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
-import { basename, resolve } from 'node:path';
+import { basename, dirname, join, resolve } from 'node:path';
+import { TEST_SITE_DIR } from '../generated-dirs.mjs';
 import { declaredPolicy, inlineScriptHashes, pagePolicy } from '../pronunciation-policy.mjs';
 import { readPinned } from '../prototype/model-files.mjs';
 import { HOST, createPrototypeHandler, missingInputs, verifyLocalModel } from '../prototype/server.mjs';
+import { repoRoot } from '../site-config.mjs';
 
 // ---- Arguments -----------------------------------------------------------------------
 
@@ -54,6 +56,37 @@ const pinned = readPinned();
 const clip = readFileSync(resolve(audioFile));
 const clipSeconds = (clip.length - 44) / 2 / 16000;
 const words = (text) => text.toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').trim().split(/\s+/).join(' ');
+
+// ---- Which build runs ------------------------------------------------------------------
+//
+// A recording that gives other words than expected is only worth something later when it
+// is known which files produced it. So the result names the experimental build that is
+// served, and the Worker file in it, by their SHA-256.
+
+const sha256Of = (bytes) => createHash('sha256').update(bytes).digest('hex');
+function servedBuild() {
+  const dir = join(repoRoot, ...TEST_SITE_DIR.split('/'), 'v3');
+  const list = (folder, prefix = '') => readdirSync(folder, { withFileTypes: true }).flatMap((entry) => (entry.isDirectory() ? list(join(folder, entry.name), `${prefix}${entry.name}/`) : [`${prefix}${entry.name}`])).sort();
+  const files = list(dir).map((name) => {
+    const bytes = readFileSync(join(dir, name));
+    return { path: name, bytes: bytes.length, sha256: sha256Of(bytes) };
+  });
+  const one = (pattern) => files.find((file) => pattern.test(file.path)) ?? null;
+  const worker = one(/^assets\/recognizer\.worker-[\w-]+\.js$/);
+  const screen = one(/^assets\/PronunciationPage-[\w-]+\.js$/);
+  return {
+    folder: `${TEST_SITE_DIR}/v3`,
+    files: files.length,
+    bytes: files.reduce((sum, file) => sum + file.bytes, 0),
+    // The same digest as the evidence of a milestone records for dist-v3: the SHA-256 of the list of paths, sizes and hashes.
+    digest: sha256Of(JSON.stringify(files)),
+    worker: worker && { file: worker.path, sha256: worker.sha256 },
+    screen: screen && { file: screen.path, sha256: screen.sha256 }
+  };
+}
+const build = servedBuild();
+/** Recordings that gave other words than expected, each with what is needed to look at it again. */
+const recordingFailures = [];
 
 // ---- Results --------------------------------------------------------------------------
 
@@ -238,6 +271,27 @@ const instrumentation = `(() => {
       return super.resume();
     }
   };
+  // What the page hands to the recognizer's Worker: how long it is and where its loud part begins and
+  // ends. It is read only when a recording gives other words than expected, to say why.
+  window.__handedOver = [];
+  const postToWorker = Worker.prototype.postMessage;
+  Worker.prototype.postMessage = function (message, transfer) {
+    if (message && message.type === 'transcribe' && message.samples) {
+      const samples = message.samples;
+      let peak = 0, squares = 0, first = -1, last = -1;
+      for (let index = 0; index < samples.length; index += 1) {
+        const level = Math.abs(samples[index]);
+        squares += level * level;
+        if (level > peak) peak = level;
+        if (level > 0.02) { if (first < 0) first = index; last = index; }
+      }
+      const round = (value) => Math.round(value * 1000) / 1000;
+      // Kept until the next recording, so that the test can save the samples of one that went wrong.
+      window.__lastSamples = samples.slice();
+      window.__handedOver.push({ seconds: round(samples.length / 16000), rms: round(Math.sqrt(squares / Math.max(1, samples.length))), peak: round(peak), loudFrom: first < 0 ? null : round(first / 16000), loudTo: last < 0 ? null : round(last / 16000) });
+    }
+    return postToWorker.call(this, message, transfer);
+  };
   window.__violations = [];
   document.addEventListener('securitypolicyviolation', (event) => window.__violations.push({ directive: event.effectiveDirective, blocked: event.blockedURI }));
 })();`;
@@ -297,8 +351,19 @@ async function openScreen(page) {
   await page.waitForSelector(`${SCREEN}:not([data-phase="checking"])`, { timeout: 30000 });
 }
 
-async function install(page) {
+/**
+ * Starts a download as a learner does since ENG-V3-R1B: the click opens a question, and
+ * the download starts after the learner's own statement about a backup and the confirmation.
+ */
+async function startDownload(page) {
   await page.click('[data-action="install-model"]');
+  await page.waitForSelector('dialog[data-install-confirm="open"]', { timeout: 15000 });
+  await page.check('[data-control="backup-acknowledged"]');
+  await page.click('[data-action="confirm-install"]');
+}
+
+async function install(page) {
+  await startDownload(page);
   await waitPhase(page, 'ready', 180000);
 }
 
@@ -329,14 +394,53 @@ const snapshotDatabase = (page, name) => page.evaluate(async (databaseName) => {
 const localStorageState = (page) => page.evaluate(() => JSON.stringify(Object.entries(localStorage).sort()));
 const digest = (text) => (text === null ? 'absent' : createHash('sha256').update(text).digest('hex').slice(0, 16));
 
-/** Records for `seconds`, stops, and returns the outcome. */
-async function recordOnce(page, seconds) {
+/**
+ * Records for `seconds`, stops, and returns the outcome. `hearsTheClip` is false where the
+ * microphone gives something else than the speech clip: Firefox's built-in test tone.
+ */
+async function recordOnce(page, seconds, hearsTheClip = true) {
   await page.click('[data-action="record"]');
   await waitPhase(page, 'recording', 20000);
   await page.waitForTimeout(seconds * 1000);
   await page.click('[data-action="stop"]');
   await waitPhase(page, 'ready', 60000);
-  return { kind: await page.getAttribute('[data-outcome]', 'data-outcome'), text: await textOf(page, '[data-heard-text]'), reason: await textOf(page, '[data-unable-reason]') };
+  const handedOver = await page.evaluate(() => JSON.stringify(window.__handedOver[window.__handedOver.length - 1] ?? null));
+  const outcome = { kind: await page.getAttribute('[data-outcome]', 'data-outcome'), text: await textOf(page, '[data-heard-text]'), reason: `${await textOf(page, '[data-unable-reason]')} (handed to the recognizer: ${handedOver})` };
+  // A recording of the speech clip that gives other words is kept as evidence. A recording of a tone is not one.
+  if (hearsTheClip && !(outcome.kind === 'heard' && words(outcome.text) === words(expectedWords))) await keepRecordingFailure(page, outcome, handedOver);
+  return outcome;
+}
+
+/**
+ * Saves what the recognizer was handed for a recording that gave other words: the samples as
+ * 32-bit floats (little-endian, 16 kHz, mono) next to the result file, and a record that names
+ * the build and the Worker file. Nothing here can make a check pass or fail.
+ */
+async function keepRecordingFailure(page, outcome, handedOver) {
+  const record = { atUtc: new Date().toISOString(), engine, heard: outcome.kind === 'heard' ? outcome.text : null, kind: outcome.kind, handedToTheRecognizer: JSON.parse(handedOver), build: { digest: build.digest, worker: build.worker }, samplesFile: null, samplesSha256: null };
+  try {
+    const base64 = await page.evaluate(() => {
+      const samples = window.__lastSamples;
+      if (!samples) return null;
+      const bytes = new Uint8Array(samples.buffer);
+      let binary = '';
+      for (let offset = 0; offset < bytes.length; offset += 32768) binary += String.fromCharCode(...bytes.subarray(offset, offset + 32768));
+      return btoa(binary);
+    });
+    if (base64) {
+      const bytes = Buffer.from(base64, 'base64');
+      record.samplesSha256 = sha256Of(bytes);
+      if (outFile) {
+        const name = `${basename(outFile).replace(/\.json$/, '')}.recording-${recordingFailures.length + 1}.f32le`;
+        writeFileSync(join(dirname(resolve(outFile)), name), bytes);
+        record.samplesFile = name;
+      }
+    }
+  } catch (error) {
+    record.samplesNotKept = String(error?.message ?? error).split('\n')[0];
+  }
+  recordingFailures.push(record);
+  console.log(`note  a recording gave other words than expected. Kept: ${JSON.stringify(record)}`);
 }
 const recordSeconds = Math.min(18, Math.ceil(clipSeconds) + 1);
 const released = (page) => page.evaluate(() => ({ tracks: window.__tracks.map((track) => track.readyState), contexts: window.__contexts.map((context) => context.state), requests: window.__microphoneRequests }));
@@ -435,7 +539,7 @@ async function partFaults() {
       const forbiddenBefore = forbiddenLog.length;
       fault = injected;
       await openScreen(page);
-      await page.click('[data-action="install-model"]');
+      await startDownload(page);
       await page.waitForSelector(`${SCREEN}[data-phase="no-model"] .notice--error`, { timeout: 60000 }).catch(() => undefined);
       const shown = await textOf(page, '.notice--error');
       const state = await notInstalled(page);
@@ -461,7 +565,7 @@ async function partFaults() {
       const { context, page } = await newProfile(browser);
       fault = { file: 'onnx/decoder_model_merged_quantized.onnx', kind: 'stall' };
       await openScreen(page);
-      await page.click('[data-action="install-model"]');
+      await startDownload(page);
       await page.waitForFunction((mount) => performance.getEntriesByType('resource').some((entry) => entry.name.includes(`${mount}onnx/encoder_model_quantized.onnx`)), MODEL_MOUNT, { timeout: 60000 });
       await page.waitForTimeout(500);
       const during = await cacheState(page);
@@ -472,7 +576,7 @@ async function partFaults() {
       check('B5', 'Cancelled during the download: nothing is installed, and the files stored so far are removed', state.ok && staged > 0 && (await page.$('.notice--error')) === null, `${state.detail}; stored before the cancel: ${staged}`);
 
       // A restart while files are stored but the installation is not complete.
-      await page.click('[data-action="install-model"]');
+      await startDownload(page);
       let partial = [];
       for (let waited = 0; waited < 60000 && partial.length < 4; waited += 250) {
         await page.waitForTimeout(250);
@@ -828,7 +932,8 @@ async function partPendingAndFailure() {
 
     await page.click('[data-action="load-model"]');
     await waitPhase(page, 'ready', 120000);
-    const again = await recordOnce(page, recordSeconds);
+    // This profile was started without speech: Chromium still plays the clip, Firefox gives its test tone.
+    const again = await recordOnce(page, recordSeconds, engine === 'chromium');
     const expected = engine === 'chromium' ? again.kind === 'heard' && words(again.text) === words(expectedWords) : again.kind === 'heard';
     check('F11', 'Loading again starts a new Worker, and the next recording gives the recognizer\'s text', expected && page.workers().length === 1, `${again.kind}: "${again.text}" ${again.reason}; Workers ${page.workers().length}`);
   } finally {
@@ -846,7 +951,8 @@ try {
   const probe = await launch();
   notes.browser = { engine, version: probe.browser.version() };
   await probe.browser.close();
-  console.log(`\n${engine} ${notes.browser.version}, clip ${basename(audioFile)} (${clipSeconds.toFixed(2)} s)\n`);
+  console.log(`\n${engine} ${notes.browser.version}, clip ${basename(audioFile)} (${clipSeconds.toFixed(2)} s)`);
+  console.log(`build ${build.digest}, Worker ${build.worker?.sha256 ?? 'not found'}\n`);
   console.log('A  Network boundary of the page and of the recognizer\'s Worker');
   notes.boundary = await partBoundary();
   console.log('\nB  The installer under injected faults');
@@ -877,6 +983,9 @@ const result = {
   model: { id: pinned.model.id, repository: pinned.model.repository, revision: pinned.model.revision, runtime: `${pinned.runtime.package} ${pinned.runtime.version}` },
   clip: { file: basename(audioFile), bytes: clip.length, sha256: createHash('sha256').update(clip).digest('hex'), seconds: Number(clipSeconds.toFixed(2)), expected: expectedWords, microphone: notes.flow?.injectedSpeech ? 'the clip played into a stream by the test (the real request is used in part D)' : 'the browser\'s test device plays the clip' },
   transcripts: notes.flow?.transcripts ?? [],
+  // Which files ran, and every recording that gave other words than expected (ENG-V3-R1B-RC1).
+  build,
+  recordingFailures,
   checks,
   notRun,
   stopped: failure,

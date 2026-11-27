@@ -1,6 +1,6 @@
 import { beforeEach, expect, it, vi } from 'vitest';
 import { describeExperimental } from '../../../test/product';
-import { fakeCacheStorage, inPieces, last, pinnedSet, served, syntheticBytes, type FakeCacheStorage } from '../testing';
+import { fakeCacheStorage, fakeLocks, inPieces, last, pinnedSet, roomy, served, syntheticBytes, type FakeCacheStorage } from '../testing';
 import { InstallError, installModel, type InstallFailure } from './install';
 import { MODEL, MODEL_VERSION, PINNED, PINNED_FILES, RUNTIME, TOTAL_BYTES, pinnedFile, type PinnedFile, type PinnedSet } from './pinned';
 import { MODEL_CACHE_NAME, NotInstalledError, createModelStore } from './store';
@@ -87,7 +87,7 @@ describeExperimental('model cache and installer', () => {
   }
 
   async function install(fetchFile: typeof fetch, options: { signal?: AbortSignal; set?: PinnedSet; onProgress?: (loaded: number, total: number) => void } = {}): Promise<void> {
-    await installModel({ store: store(options.set), sourceUrl, signal: options.signal ?? new AbortController().signal, onProgress: options.onProgress ?? (() => undefined), fetchFile });
+    await installModel({ store: store(options.set), sourceUrl, signal: options.signal ?? new AbortController().signal, onProgress: options.onProgress ?? (() => undefined), readEstimate: roomy, confirmed: true, locks: fakeLocks(), fetchFile });
   }
 
   async function failure(run: Promise<void>): Promise<InstallFailure> {

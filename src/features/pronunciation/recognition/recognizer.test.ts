@@ -1,11 +1,12 @@
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import { describeExperimental } from '../../../test/product';
-import { FakeRecognizerWorker as FakeWorker, last } from '../testing';
-import { InstallError } from '../models/install';
+import { FakeRecognizerWorker as FakeWorker, fakeLocks, gate, last, roomy } from '../testing';
+import { MODEL_LOCK_NAME, ModelBusyError, NoCoordinationError } from '../models/exclusive';
+import { InstallError, type InstallOptions } from '../models/install';
 import { MODEL, TOTAL_BYTES } from '../models/pinned';
 import type { ModelStore } from '../models/store';
 import { bootstrapSource, startRecognizerWorker, type RecognizerWorker } from './bootstrap';
-import { DownloadNotOffered, createLocalMlRecognizer, type LocalMlDependencies } from './localMl';
+import { DownloadNotOffered, ModelFilesError, createLocalMlRecognizer, type LocalMlDependencies } from './localMl';
 import { BLOCKED_INTERFACES, lockDownNetwork } from './lockdown';
 import { RecognitionCancelled, type LiveCapture } from './types';
 
@@ -111,9 +112,12 @@ describeExperimental('local-ml recognizer', () => {
   const signal = (): AbortSignal => new AbortController().signal;
   const capture = (samples: Float32Array): LiveCapture => ({ track: {} as MediaStreamTrack, pcm: async () => samples });
 
-  /** Prepares the recognizer with a Worker that starts and loads at once. */
+  const progress = { signal: signal(), onProgress: (): void => undefined };
+
+  /** Loads the model, which is on the device, with a Worker that starts and loads at once. */
   async function ready(recognizer = createLocalMlRecognizer(deps)) {
-    const preparing = recognizer.prepare({ signal: signal(), onProgress: () => undefined });
+    installed = true;
+    const preparing = recognizer.prepare({ signal: signal() });
     await tick();
     last(workers).emit({ type: 'ready' });
     last(workers).emit({ type: 'loaded', loadMs: 5 });
@@ -136,6 +140,8 @@ describeExperimental('local-ml recognizer', () => {
       } as unknown as ModelStore,
       sourceUrl: (file) => `http://localhost:3000/eng-trainer/v3/models/${file.id}`,
       keyBase: 'http://localhost:3000/eng-trainer/v3/model-cache/',
+      readEstimate: roomy,
+      locks: fakeLocks(),
       startWorker: () => {
         const worker = new FakeWorker();
         workers.push(worker);
@@ -167,27 +173,64 @@ describeExperimental('local-ml recognizer', () => {
     expect(await createLocalMlRecognizer(deps).state()).toEqual({ status: 'unsupported', reason: 'This browser has no Workers.' });
   });
 
-  it('prepares in order: install when needed, then start the Worker and have it load from the cache', async () => {
-    const recognizer = await ready();
+  it('installs on request and loads as a separate step: installing starts no Worker', async () => {
+    const recognizer = createLocalMlRecognizer(deps);
+    await recognizer.install({ confirmed: true, ...progress });
+    expect(installs).toBe(1);
+    expect(workers).toHaveLength(0);
+    expect(await recognizer.state()).toEqual({ status: 'installed' });
+
+    await ready(recognizer);
     expect(installs).toBe(1);
     expect(workers).toHaveLength(1);
     expect(workers[0].sent.map((item) => item.message)).toEqual([{ type: 'load', keyBase: 'http://localhost:3000/eng-trainer/v3/model-cache/' }]);
 
-    // Already installed: no second download. Already ready: nothing at all.
-    await recognizer.prepare({ signal: signal(), onProgress: () => undefined });
+    // Already ready: nothing at all.
+    await recognizer.prepare({ signal: signal() });
     expect(installs).toBe(1);
     expect(workers).toHaveLength(1);
+  });
+
+  it('loading never installs: without the files it refuses, calls no installer and starts no Worker', async () => {
+    // A page that may download, and no model on the device.
+    const recognizer = createLocalMlRecognizer(deps);
+    const refused = await recognizer.prepare({ signal: signal() }).then(() => null, (reason: unknown) => reason);
+    expect(refused).toBeInstanceOf(ModelFilesError);
+    expect((refused as ModelFilesError).reason).toBe('not-installed');
+    expect((refused as ModelFilesError).message).toBe('The speech model is not installed in this browser.');
+    expect(installs).toBe(0);
+    expect(workers).toHaveLength(0);
+    expect(await recognizer.state()).toEqual({ status: 'needs-download', bytes: TOTAL_BYTES });
+
+    // The files were there, the model was loaded and released, and then another tab removed them.
+    await ready(recognizer);
+    await recognizer.release();
+    installed = false;
+    await expect(recognizer.prepare({ signal: signal() })).rejects.toBeInstanceOf(ModelFilesError);
+    expect(installs).toBe(0);
+    expect(workers).toHaveLength(1);
+  });
+
+  it('a loaded model stays loaded when its files are removed elsewhere, and cannot be loaded again without them', async () => {
+    const recognizer = await ready();
+    // Another tab removes the files. Removing files does not reach into this Worker's memory.
+    installed = false;
+    expect(await recognizer.state()).toEqual({ status: 'ready' });
+    expect(() => recognizer.begin(capture(new Float32Array(16000)), { signal: signal() })).not.toThrow();
+    await recognizer.release();
+    expect(await recognizer.state()).toEqual({ status: 'needs-download', bytes: TOTAL_BYTES });
+    await expect(recognizer.prepare({ signal: signal() })).rejects.toBeInstanceOf(ModelFilesError);
+    expect(installs).toBe(0);
   });
 
   it('downloads nothing where a download is not offered, and starts no Worker', async () => {
     deps.mayDownload = () => false;
     const recognizer = createLocalMlRecognizer(deps);
-    await expect(recognizer.prepare({ signal: signal(), onProgress: () => undefined })).rejects.toThrow(DownloadNotOffered);
+    await expect(recognizer.install({ confirmed: true, ...progress })).rejects.toThrow(DownloadNotOffered);
     expect(installs).toBe(0);
     expect(workers).toHaveLength(0);
 
     // A model that is already there can still be loaded: that needs no download.
-    installed = true;
     await ready(recognizer);
     expect(installs).toBe(0);
   });
@@ -197,7 +240,7 @@ describeExperimental('local-ml recognizer', () => {
       throw new InstallError('integrity', 'model/tokenizer.json does not have the pinned SHA-256');
     };
     const recognizer = createLocalMlRecognizer(deps);
-    await expect(recognizer.prepare({ signal: signal(), onProgress: () => undefined })).rejects.toThrow('does not have the pinned SHA-256');
+    await expect(recognizer.install({ confirmed: true, ...progress })).rejects.toThrow('does not have the pinned SHA-256');
     expect(workers).toHaveLength(0);
     expect(await recognizer.state()).toEqual({ status: 'needs-download', bytes: TOTAL_BYTES });
   });
@@ -211,7 +254,7 @@ describeExperimental('local-ml recognizer', () => {
       [(worker: FakeWorker) => { worker.emit({ type: 'ready' }); worker.emit({ type: 'load-failed', reason: 'integrity', message: 'model/tokenizer.json: does not have the pinned SHA-256' }); }, 'does not have the pinned SHA-256']
     ] as const) {
       const recognizer = createLocalMlRecognizer(deps);
-      const preparing = recognizer.prepare({ signal: signal(), onProgress: () => undefined });
+      const preparing = recognizer.prepare({ signal: signal() });
       await tick();
       fault(last(workers));
       await expect(preparing).rejects.toThrow(message);
@@ -220,11 +263,137 @@ describeExperimental('local-ml recognizer', () => {
     }
   });
 
+  it('files that the Worker refuses are told apart from every other failure of the loading', async () => {
+    installed = true;
+    const refused = async (emit: (worker: FakeWorker) => void): Promise<unknown> => {
+      const recognizer = createLocalMlRecognizer(deps);
+      const preparing = recognizer.prepare({ signal: signal() });
+      await tick();
+      emit(last(workers));
+      const error = await preparing.then(() => null, (reason: unknown) => reason);
+      // Whatever the reason, nothing is ready and no recording is accepted.
+      expect(await recognizer.state()).toEqual({ status: 'installed' });
+      expect(() => recognizer.begin(capture(new Float32Array(16000)), { signal: signal() })).toThrow('The recognizer is not ready.');
+      return error;
+    };
+
+    for (const reason of ['not-installed', 'integrity'] as const) {
+      const error = await refused((worker) => {
+        worker.emit({ type: 'ready' });
+        worker.emit({ type: 'load-failed', reason, message: 'model/tokenizer.json: does not have the pinned SHA-256' });
+      });
+      expect(error).toBeInstanceOf(ModelFilesError);
+      expect((error as ModelFilesError).reason).toBe(reason);
+      expect((error as ModelFilesError).message).toBe('model/tokenizer.json: does not have the pinned SHA-256');
+    }
+
+    const runtime = await refused((worker) => {
+      worker.emit({ type: 'ready' });
+      worker.emit({ type: 'load-failed', reason: 'runtime', message: 'out of memory' });
+    });
+    expect(runtime).not.toBeInstanceOf(ModelFilesError);
+    expect((runtime as Error).message).toBe('The speech model could not be loaded: out of memory');
+    expect(await refused((worker) => worker.fail())).not.toBeInstanceOf(ModelFilesError);
+  });
+
+  it('gives the installer the browser\'s estimate and its locks, and nothing that would let it skip them', async () => {
+    const locks = fakeLocks();
+    let given: InstallOptions | null = null;
+    deps.locks = locks;
+    deps.install = async (options) => {
+      given = options;
+      installed = true;
+    };
+    const recognizer = createLocalMlRecognizer(deps);
+    await recognizer.install({ confirmed: true, ...progress });
+    expect(given!.readEstimate).toBe(deps.readEstimate);
+    expect(given!.locks).toBe(locks);
+    expect(given!.store).toBe(deps.store);
+    expect(given!.reserve).toBeUndefined();
+    expect(given!.confirmed).toBe(true);
+    expect(Object.keys(given!).sort()).toEqual(['confirmed', 'locks', 'onProgress', 'readEstimate', 'signal', 'sourceUrl', 'store']);
+
+    // The confirmation is handed on as it came: the installer is the one that judges it.
+    installed = false;
+    await recognizer.install({ confirmed: false, ...progress });
+    expect(given!.confirmed).toBe(false);
+  });
+
+  it('the installer is reached from install() alone: no other operation of the recognizer calls it', async () => {
+    const recognizer = createLocalMlRecognizer(deps);
+    await recognizer.state();
+    await recognizer.prepare({ signal: signal() }).catch(() => undefined);
+    await recognizer.release();
+    await recognizer.remove();
+    expect(installs).toBe(0);
+    await recognizer.install({ confirmed: true, ...progress });
+    expect(installs).toBe(1);
+  });
+
+  it('an installation that is refused for lack of room, or because the cache is busy, starts no Worker', async () => {
+    for (const reason of ['capacity', 'busy', 'storage', 'uncoordinated', 'not-confirmed'] as const) {
+      deps.install = async () => {
+        throw new InstallError(reason, `refused: ${reason}`);
+      };
+      const recognizer = createLocalMlRecognizer(deps);
+      await expect(recognizer.install({ confirmed: true, ...progress })).rejects.toMatchObject({ reason });
+      expect(workers).toHaveLength(0);
+      expect(await recognizer.state()).toEqual({ status: 'needs-download', bytes: TOTAL_BYTES });
+    }
+  });
+
+  it('removes under the lock of the model cache, and not at all while another change holds it', async () => {
+    const locks = fakeLocks();
+    deps.locks = locks;
+    installed = true;
+    const during: string[][] = [];
+    const slow = gate();
+    (deps.store as { remove: () => Promise<void> }).remove = async () => {
+      during.push(locks.held());
+      await slow.promise;
+      removed += 1;
+      installed = false;
+    };
+    const recognizer = createLocalMlRecognizer(deps);
+    const removing = recognizer.remove();
+    await tick();
+    expect(during).toEqual([[MODEL_LOCK_NAME]]);
+    // A second removal while the first one runs is refused and does nothing.
+    await expect(createLocalMlRecognizer(deps).remove()).rejects.toThrow(ModelBusyError);
+    expect(during).toHaveLength(1);
+    slow.open();
+    await removing;
+    expect(removed).toBe(1);
+    expect(locks.held()).toEqual([]);
+
+    // Another tab installs: the files stay, and the caller is told.
+    installed = true;
+    locks.heldElsewhere = true;
+    await expect(recognizer.remove()).rejects.toThrow('This request changed nothing.');
+    expect(removed).toBe(1);
+    expect(installed).toBe(true);
+  });
+
+  it('removes nothing in a browser that cannot coordinate the tabs', async () => {
+    installed = true;
+    deps.locks = null;
+    await expect(createLocalMlRecognizer(deps).remove()).rejects.toBeInstanceOf(NoCoordinationError);
+    expect(removed).toBe(0);
+    expect(installed).toBe(true);
+
+    // A lock manager that gives no lock at all is the same refusal.
+    const locks = fakeLocks();
+    locks.refuse = new DOMException('The operation is insecure.', 'SecurityError');
+    deps.locks = locks;
+    await expect(createLocalMlRecognizer(deps).remove()).rejects.toThrow('the browser gave no lock: The operation is insecure.');
+    expect(removed).toBe(0);
+  });
+
   it('cancelling the loading terminates the Worker', async () => {
     installed = true;
     const controller = new AbortController();
     const recognizer = createLocalMlRecognizer(deps);
-    const preparing = recognizer.prepare({ signal: controller.signal, onProgress: () => undefined });
+    const preparing = recognizer.prepare({ signal: controller.signal });
     await tick();
     workers[0].emit({ type: 'ready' });
     controller.abort();

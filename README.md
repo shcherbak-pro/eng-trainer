@@ -150,6 +150,22 @@ npm run prototype:serve     # http://127.0.0.1:4173/eng-trainer/v3/#pronunciatio
 
 Recognition runs on the device. Nothing is scored, stored or sent. How it works, its network boundary and what is still open are in [Pronunciation prototype](docs/architecture/PRONUNCIATION-PROTOTYPE.md).
 
+The model shares the browser's storage with the learning data of every version. The screen shows the browser's estimate of that storage and what the model cache holds.
+
+- A download starts only when that estimate shows room for the model and 64 MB of headroom for learning data, and after a confirmation that points to the Backup screen.
+- The estimate is approximate, and the trainer cannot reserve storage. A download that succeeds does not mean that the headroom is left. A later save of learning data, or a recovery, can still be refused for lack of room.
+- Loading a model that is in the browser never downloads anything. A model that is gone is downloaded only after a new confirmation.
+- The model cache is changed only under a browser lock (Web Locks). A browser without it gets no download and no removal.
+- Removing the model removes nothing else.
+- The browser's agreement to keep the site's data is not a backup.
+
+The rules, and what a browser cannot guarantee, are in [Model storage safety](docs/architecture/MODEL-STORAGE-SAFETY.md). Its browser test needs an installed Playwright and the local model:
+
+```bash
+npm run prototype:build                              # all three products -> .site-test/
+node scripts/acceptance/model-storage.mjs chromium   # also: firefox. New browser profiles and made-up data only
+```
+
 The Backup screen is at `#backup`, under **More**. Making a backup reads the saved data of the three versions and changes nothing. A recovery writes one version at a time, after a confirmation, and only where that version holds no learning data. The stable version must have been opened once in the browser before it can be recovered: only it creates its own storage. The file format, the checks and the limits are in [Backup and recovery](docs/architecture/BACKUP-AND-RECOVERY.md). Its browser test needs an installed Playwright:
 
 ```bash

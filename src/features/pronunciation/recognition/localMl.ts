@@ -1,5 +1,8 @@
 import { canRecord } from '../capture/capture';
+import { browserStorageManager, readEstimate, type Estimate } from '../models/capacity';
+import { browserLocks, exclusively, type LockManagerLike } from '../models/exclusive';
 import { InstallError, installModel } from '../models/install';
+import { createModelStorage, type ModelStorage } from '../models/management';
 import { MODEL, RUNTIME, TOTAL_BYTES, type PinnedFile } from '../models/pinned';
 import { createModelStore, hasCacheStorage, type ModelStore } from '../models/store';
 import { canStartWorker, startRecognizerWorker, type RecognizerWorker } from './bootstrap';
@@ -12,10 +15,22 @@ import { RecognitionCancelled, type LiveCapture, type Recognition, type Recognit
  *
  * Order of things, and it is enforced here:
  *
- *   prepare()  download and verify if needed, then load. All network use ends here.
+ *   install()  download and verify, after the learner's confirmation. All network use is here.
+ *   prepare()  load the installed files. It never downloads: without the files it refuses.
  *   begin()    refused unless the model is loaded. From here to the result nothing is requested.
  *
  * The page sends samples to the Worker by message and gets text back by message.
+ *
+ * Storage (ENG-V3-R1B): a download starts only when the browser's estimate leaves room
+ * for the model and for its headroom (models/capacity.ts, models/install.ts). The files that
+ * a Worker loads are the installed ones or none: files that are missing or are not the
+ * pinned ones end the loading with a `ModelFilesError`, and nothing is recognized.
+ *
+ * Loading and installing are two operations (ENG-V3-R1B-RC1). What the screen believed
+ * about the cache does not matter: `prepare` looks at the cache itself and fetches nothing,
+ * and `install` hands the learner's confirmation to the installer, which checks it. A model
+ * that is loaded stays in this Worker's memory when its files are removed, here or in
+ * another tab: removing files does not reach into memory.
  *
  * A Worker can fail at any time, not only while it loads: it can throw, a message can be
  * lost, or it can stop answering. For as long as a Worker lives, each of these ends it:
@@ -31,6 +46,10 @@ export type LocalMlDependencies = {
   keyBase: string;
   /** Whether this page may download a model at all (see prototypeHost.ts). */
   mayDownload: () => boolean;
+  /** The browser's estimate of this site's storage. The installer asks before the first file and before each further one. */
+  readEstimate: () => Promise<Estimate>;
+  /** The browser's lock manager, or null. Left out, the browser's own is used. */
+  locks?: LockManagerLike | null;
   /** Null when the browser has what the recognizer needs, or the missing thing. */
   unsupported: () => string | null;
   install?: typeof installModel;
@@ -41,6 +60,20 @@ export class DownloadNotOffered extends Error {
   constructor() {
     super('This page does not offer a model download.');
     this.name = 'DownloadNotOffered';
+  }
+}
+
+/**
+ * The installed files could not be used: one is missing, or one is not the pinned file.
+ * Nothing was loaded. The files have to be removed and downloaded again.
+ */
+export class ModelFilesError extends Error {
+  constructor(
+    readonly reason: 'not-installed' | 'integrity',
+    message: string
+  ) {
+    super(message);
+    this.name = 'ModelFilesError';
   }
 }
 
@@ -130,7 +163,7 @@ export function createLocalMlRecognizer(deps: LocalMlDependencies): SpeechRecogn
         const message = (event as MessageEvent<FromWorker>).data;
         if (message.type === 'ready') started.postMessage({ type: 'load', keyBase: deps.keyBase } satisfies ToWorker);
         else if (message.type === 'loaded') finish();
-        else if (message.type === 'load-failed') finish(new Error(message.reason === 'runtime' ? `The speech model could not be loaded: ${message.message}` : message.message));
+        else if (message.type === 'load-failed') finish(message.reason === 'runtime' ? new Error(`The speech model could not be loaded: ${message.message}`) : new ModelFilesError(message.reason, message.message));
         else if (message.type === 'bootstrap-failed') finish(new Error(`The recognizer could not be started: ${message.message}`));
       };
       const onError = (): void => finish(new Error('The recognizer could not be started.'));
@@ -160,13 +193,17 @@ export function createLocalMlRecognizer(deps: LocalMlDependencies): SpeechRecogn
       return { status: 'needs-download', bytes: TOTAL_BYTES };
     },
 
-    async prepare({ signal, onProgress }): Promise<void> {
+    async install({ confirmed, signal, onProgress }): Promise<void> {
+      if (!deps.mayDownload()) throw new DownloadNotOffered();
+      // The installer checks the confirmation itself, takes the lock, and leaves a complete installation alone.
+      await (deps.install ?? installModel)({ confirmed, store: deps.store, sourceUrl: deps.sourceUrl, signal, onProgress, readEstimate: deps.readEstimate, locks: deps.locks });
+    },
+
+    async prepare({ signal }): Promise<void> {
       if (ready) return;
-      if (!(await deps.store.isInstalled())) {
-        if (!deps.mayDownload()) throw new DownloadNotOffered();
-        await (deps.install ?? installModel)({ store: deps.store, sourceUrl: deps.sourceUrl, signal, onProgress });
-      }
-      if (signal.aborted) throw new InstallError('cancelled', 'The download was cancelled.');
+      // Loading fetches nothing. Files that are not there, or no longer there, are a refusal.
+      if (!(await deps.store.isInstalled())) throw new ModelFilesError('not-installed', 'The speech model is not installed in this browser.');
+      if (signal.aborted) throw new InstallError('cancelled', 'The loading was cancelled.');
       await load(signal);
     },
 
@@ -213,7 +250,9 @@ export function createLocalMlRecognizer(deps: LocalMlDependencies): SpeechRecogn
 
     async remove(): Promise<void> {
       stopWorker('The speech model was deleted.');
-      await deps.store.remove();
+      // Not while another tab installs: its files would be removed under it. And not at all in a
+      // browser that cannot coordinate the tabs: then this refuses and the files stay.
+      await exclusively(() => deps.store.remove(), deps.locks);
     },
 
     onFailure(listener): () => void {
@@ -223,15 +262,27 @@ export function createLocalMlRecognizer(deps: LocalMlDependencies): SpeechRecogn
   };
 }
 
-/** The recognizer of the running application, with the real Worker, cache and addresses. */
-export function createBrowserRecognizer(options: { runtimeWasmUrl: string; workerModuleUrl: string; mayDownload: () => boolean }): SpeechRecognizer {
-  const base = new URL(import.meta.env.BASE_URL, globalThis.location.href).href;
+/** The model cache of the running application: its store, and how its entries are named. */
+function browserStore(): { store: ModelStore; keyBase: string } {
   // Entries are named below the site's base path, not below the product's route: a product
   // that moves to another route keeps its installed model.
   const keyBase = `${new URL(__SITE_BASE__, globalThis.location.href).href}model-cache/`;
+  return { store: createModelStore({ keyBase }), keyBase };
+}
+
+/** The storage facts and the model cache of the running application (models/management.ts). */
+export function createBrowserModelStorage(): ModelStorage {
+  return createModelStorage({ store: browserStore().store, manager: browserStorageManager, locks: browserLocks });
+}
+
+/** The recognizer of the running application, with the real Worker, cache and addresses. */
+export function createBrowserRecognizer(options: { runtimeWasmUrl: string; workerModuleUrl: string; mayDownload: () => boolean }): SpeechRecognizer {
+  const base = new URL(import.meta.env.BASE_URL, globalThis.location.href).href;
+  const { store, keyBase } = browserStore();
   return createLocalMlRecognizer({
-    store: createModelStore({ keyBase }),
+    store,
     keyBase,
+    readEstimate: () => readEstimate(),
     sourceUrl: (file) => (file.kind === 'runtime' ? new URL(options.runtimeWasmUrl, globalThis.location.href).href : `${base}models/${MODEL.id}/${file.path}`),
     startWorker: () => startRecognizerWorker(options.workerModuleUrl),
     mayDownload: options.mayDownload,

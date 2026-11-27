@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import { describeExperimental } from '../../../test/product';
 import type { ModelStore } from '../models/store';
-import { FakeRecognizerWorker, last } from '../testing';
+import { FakeRecognizerWorker, fakeLocks, last, roomy } from '../testing';
 import { RECOGNITION_TIMEOUT_MS, createLocalMlRecognizer, type LocalMlDependencies } from './localMl';
 import { RecognitionCancelled, type LiveCapture, type SpeechRecognizer } from './types';
 
@@ -23,7 +23,7 @@ describeExperimental('local-ml recognizer: a Worker that fails after loading (F3
 
   /** A recognizer whose model is loaded. */
   async function loaded(recognizer: SpeechRecognizer = createLocalMlRecognizer(deps)): Promise<SpeechRecognizer> {
-    const preparing = recognizer.prepare({ signal: signal(), onProgress: () => undefined });
+    const preparing = recognizer.prepare({ signal: signal() });
     await flush();
     last(workers).load();
     await preparing;
@@ -51,6 +51,8 @@ describeExperimental('local-ml recognizer: a Worker that fails after loading (F3
         return worker;
       },
       mayDownload: () => false,
+      readEstimate: roomy,
+      locks: fakeLocks(),
       unsupported: () => null
     };
   });
@@ -227,7 +229,7 @@ describeExperimental('local-ml recognizer: a Worker that fails after loading (F3
     const forget = recognizer.onFailure!((reason) => told.push(reason));
 
     // A loading that fails is reported by `prepare`, not here.
-    const failing = recognizer.prepare({ signal: signal(), onProgress: () => undefined });
+    const failing = recognizer.prepare({ signal: signal() });
     await flush();
     workers[0].fail('error');
     await expect(failing).rejects.toThrow('The recognizer could not be started.');
@@ -252,7 +254,7 @@ describeExperimental('local-ml recognizer: a Worker that fails after loading (F3
 
   it('a message that cannot be read while the model loads fails the loading', async () => {
     const recognizer = createLocalMlRecognizer(deps);
-    const preparing = recognizer.prepare({ signal: signal(), onProgress: () => undefined });
+    const preparing = recognizer.prepare({ signal: signal() });
     await flush();
     workers[0].emit({ type: 'ready' });
     workers[0].fail('messageerror');

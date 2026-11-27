@@ -2,10 +2,10 @@ import { beforeEach, expect, it } from 'vitest';
 import { describeExperimental } from '../../test/product';
 import { CaptureCancelled, createRecorder, type Recorder } from './capture/capture';
 import { SAMPLE_RATE } from './capture/levels';
-import type { ModelStore } from './models/store';
+import type { Installation, ModelStore } from './models/store';
 import { createLocalMlRecognizer } from './recognition/localMl';
 import { createPracticeSession, type PracticeSession, type PracticeState } from './session';
-import { FakeRecognizerWorker, fakeAudio, gate, last } from './testing';
+import { FakeRecognizerWorker, fakeAudio, fakeLocks, fakeModelStorage, gate, last, roomy } from './testing';
 
 /**
  * The session, the recorder and the recognizer together (ENG-V3-02A-RC1): the three
@@ -18,6 +18,8 @@ import { FakeRecognizerWorker, fakeAudio, gate, last } from './testing';
  */
 const turn = (): Promise<void> => new Promise((resolve) => setTimeout(resolve, 0));
 const speech = (seconds: number): Float32Array => Float32Array.from({ length: Math.round(seconds * SAMPLE_RATE) }, (_, index) => Math.sin(index / 5) * 0.2);
+/** What the model cache holds in these tests: a complete installation. */
+const INSTALLED: Installation = { state: 'installed', bytes: 46_792_602, otherBytes: 0 };
 
 describeExperimental('lifecycle: session, recorder and recognizer together', () => {
   let audio: ReturnType<typeof fakeAudio>;
@@ -68,9 +70,11 @@ describeExperimental('lifecycle: session, recorder and recognizer together', () 
         return worker;
       },
       mayDownload: () => false,
+      readEstimate: roomy,
+      locks: fakeLocks(),
       unsupported: () => null
     });
-    session = createPracticeSession({ recognizer, recorder, downloadOffered: false });
+    session = createPracticeSession({ recognizer, modelStorage: fakeModelStorage({ installation: INSTALLED }).like, recorder, downloadOffered: false });
     session.subscribe((next) => {
       state = next;
     });
@@ -270,9 +274,11 @@ describeExperimental('lifecycle: session, recorder and recognizer together', () 
         return worker;
       },
       mayDownload: () => false,
+      readEstimate: roomy,
+      locks: fakeLocks(),
       unsupported: () => null
     });
-    session = createPracticeSession({ recognizer, recorder: stubborn, downloadOffered: false });
+    session = createPracticeSession({ recognizer, modelStorage: fakeModelStorage({ installation: INSTALLED }).like, recorder: stubborn, downloadOffered: false });
     session.subscribe((next) => {
       state = next;
     });

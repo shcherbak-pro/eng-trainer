@@ -2,7 +2,7 @@
 
 The experimental product has a first Pronunciation screen: the learner picks a phrase, records it, and reads what a speech recognizer heard. The recognizer is a downloaded model that runs in the browser.
 
-This is a prototype for **disposable browser profiles with made-up learning data**. It is not published, no build contains a speech model, and the stable product is unchanged. How products, routes and the released-site gates work is in [Products and routes](PRODUCTS-AND-ROUTES.md).
+This is a prototype for **disposable browser profiles with made-up learning data**. It is not published, no build contains a speech model, and the stable product is unchanged. How products, routes and the released-site gates work is in [Products and routes](PRODUCTS-AND-ROUTES.md). How the model's place in the browser's storage is managed (ENG-V3-R1B) is in [Model storage safety](MODEL-STORAGE-SAFETY.md).
 
 ## What it does, and what it does not
 
@@ -11,8 +11,8 @@ This is a prototype for **disposable browser profiles with made-up learning data
 | Record one phrase from the microphone, after a click | Score, grade or judge pronunciation |
 | Recognize the recording on this device | Send audio or text to any server |
 | Show the recognizer's text, and offer to record again | Compare the text with the phrase |
-| Download the model from the local prototype server, after a click | Use a browser's own recognizer or any cloud service |
-| Delete the downloaded model on request | Store a recording, a result or a history |
+| Download the model from the local prototype server, after a click and a confirmation, and only with room for it | Use a browser's own recognizer or any cloud service |
+| Delete the downloaded model on request, and nothing else | Store a recording, a result or a history |
 | | Mark anything as learned |
 
 The result reads "The recognizer heard: …". A recognizer can mishear correct speech and can turn a mispronounced word into the expected one, and the screen says so.
@@ -38,7 +38,12 @@ firefox -profile <a new, empty folder> -no-remote http://127.0.0.1:4173/eng-trai
 
 ## Why real profiles are excluded
 
-Browser storage of one origin shares one quota and one eviction exposure. A model cache of 47 MB can put the learning data of v1, v2 and v3 at risk. A backup file can be made since ENG-V3-R1A, and each product can be recovered from it ([Backup and recovery](BACKUP-AND-RECOVERY.md)), but capacity is not checked. Until the Data Safety Gate has passed, a model may be cached only where no real data lives. Three things keep it that way:
+Browser storage of one origin shares one quota and one eviction exposure. A model cache of 47 MB can put the learning data of v1, v2 and v3 at risk.
+
+- Since ENG-V3-R1A a backup file can be made, and each product can be recovered from it ([Backup and recovery](BACKUP-AND-RECOVERY.md)).
+- Since ENG-V3-R1B a download starts only when the browser's estimate shows room for the model and headroom for learning data, and after a confirmation ([Model storage safety](MODEL-STORAGE-SAFETY.md)). The estimate is approximate and nothing is reserved, so a later save can still be refused for lack of room.
+
+Neither stops a browser from removing a site's data, and the application cannot see whether a backup file exists. So a model may still be cached only where no real data lives, until the owner decides otherwise. Three things keep it that way:
 
 1. **The product is not published.** Its route has `"publish": false`, and the gates refuse a site that contains it.
 2. **No build contains a model file.** A gate fails on one. Only the local prototype server adds the model, below `/eng-trainer/v3/models/`.
@@ -56,13 +61,15 @@ Everything is in `src/features/pronunciation/`, which only the experimental prod
 | Spoken targets | `spokenTarget.js` | What an entry asks the learner to say, and the revision of that |
 | Recording | `capture/capture.ts`, `capture/levels.ts`, `capture/pcm-collector.worklet.js` | Microphone, 16 kHz mono samples, level checks, release |
 | Model files | `models/pinned-files.json`, `models/pinned.ts`, `models/verify.ts`, `models/store.ts`, `models/install.ts` | Pinned list, SHA-256 check, model cache, installer |
+| Model storage | `models/capacity.ts`, `models/exclusive.ts`, `models/management.ts` | The browser's storage estimate, room for a model, the request to keep data, one change of the cache at a time |
 | Recognizer | `recognition/types.ts`, `recognition/localMl.ts`, `recognition/bootstrap.ts`, `recognition/recognizer.worker.ts`, `recognition/lockdown.ts`, `recognition/moonshine.ts`, `recognition/tokenDecoder.ts` | Provider interface, Worker start, the Worker, decoding |
 
 ### Order of things
 
 ```text
-open the screen          nothing is downloaded, nothing is asked
-click "Download"         pinned files -> size and SHA-256 checked -> model cache -> marker
+open the screen          nothing is downloaded, nothing is asked. The storage estimate and the model cache are read
+click "Download"         the estimate is read again -> a question: the numbers, the backup, a confirmation
+confirm                  room is asked for before each file -> pinned files -> size and SHA-256 checked -> model cache -> marker
                          Worker started -> files read from the cache and checked again -> model loaded
                          recorder script loaded
                          (all network use ends here)
@@ -115,7 +122,9 @@ The recognizer's Worker can fail at any time after loading: it can throw, a mess
 - "Delete downloaded model" removes this cache and nothing else.
 - Each file is checked again when the Worker reads it.
 
-Not part of stage A: the capacity and persistence checks, and everything else of the Data Safety Gate.
+Since ENG-V3-R1B the installer also asks for room before each file, handles a write that the browser refuses, and holds a lock while it changes the cache. The screen shows what the cache holds and never loads an unfinished or damaged installation.
+
+Loading and installing are two operations of the recognizer: `prepare` loads what the cache holds and never requests a model file, and `install` is the only way to the installer. The installer refuses a download that was not confirmed, and it changes nothing in a browser that has no Web Locks. See [Model storage safety](MODEL-STORAGE-SAFETY.md).
 
 ## Network boundary
 
@@ -142,12 +151,13 @@ The policy is written into the built page only. The development server needs inl
 
 | Check | Command | Runs in CI |
 |---|---|---|
-| Unit and integration tests of the feature, 174 | `npm run test:v3` | yes |
+| Unit and integration tests of the feature, 258 | `npm run test:v3` | yes |
 | Source rules: each sensitive interface in one file, the Worker's first import, the pinned runtime | `npm test` | yes |
 | Page policy and the prototype tools | `npm test` | yes |
 | Gates on both builds | `npm run check:products` | yes |
-| Deliberate faults against the gates, 34 | `npm run check:negative` | yes |
+| Deliberate faults against the gates, 83 | `npm run check:negative` | yes |
 | Browser acceptance test, 78 checks | `scripts/acceptance/pronunciation.mjs` | no |
+| Browser acceptance test of model storage | `scripts/acceptance/model-storage.mjs`, see [Model storage safety](MODEL-STORAGE-SAFETY.md#checks) | no |
 
 The browser acceptance test needs an installed Playwright, the local model and a synthetic speech clip:
 
@@ -168,7 +178,9 @@ It checks, in new browser profiles: the boundary on the page and inside the real
 
 | Topic | Needed before |
 |---|---|
-| Data Safety Gate: backup, recovery, capacity and persistence checks | Any profile with real data |
+| The owner's decision on installing a model in an ordinary profile: how strong the backup step must be, whether the browser must have agreed to keep the data, whether headroom judged by an estimate is enough ([Model storage safety](MODEL-STORAGE-SAFETY.md#backup-installation-and-eviction)) | Any profile with real data |
+| Why a recording after a reload sometimes gave no words in Chromium: unresolved ([Model storage safety](MODEL-STORAGE-SAFETY.md#open-observation-a-recording-after-a-reload)) | Any profile with real data, or an explicit acceptance of the risk |
+| Storage limits, eviction and the browser's answers on phones and on Safari | Offering the feature there |
 | Memory and speed on phones and on Safari; the boundary in Safari | Stage B |
 | Whether a `blob:` Worker inherits the policy in other browsers | Offering the feature there |
 | Reference playback of the phrase, and which speech-synthesis voices stay on the device | The practice screen of stage B |

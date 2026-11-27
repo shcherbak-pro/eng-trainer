@@ -1,10 +1,11 @@
 import { beforeEach, expect, it } from 'vitest';
 import { describeExperimental } from '../../test/product';
-import { last } from './testing';
+import { fakeModelStorage, last } from './testing';
 import { CaptureError, type Capture, type CaptureOptions, type Recorder } from './capture/capture';
 import { LEVEL_MESSAGES, MAX_SECONDS, SAMPLE_RATE } from './capture/levels';
 import { InstallError } from './models/install';
-import { DownloadNotOffered } from './recognition/localMl';
+import type { Installation } from './models/store';
+import { DownloadNotOffered, ModelFilesError } from './recognition/localMl';
 import { RecognitionCancelled, type LiveCapture, type Recognition, type RecognizerState, type SpeechRecognizer } from './recognition/types';
 import { createPracticeSession, type PracticeSession, type PracticeState } from './session';
 
@@ -14,13 +15,20 @@ import { createPracticeSession, type PracticeSession, type PracticeState } from 
  */
 const speech = (seconds: number, level = 0.2): Float32Array => Float32Array.from({ length: Math.round(seconds * SAMPLE_RATE) }, (_, index) => Math.sin(index / 5) * level);
 const tick = (): Promise<void> => new Promise((resolve) => setTimeout(resolve, 0));
+const ABSENT: Installation = { state: 'absent', bytes: 0, otherBytes: 0 };
+const INSTALLED: Installation = { state: 'installed', bytes: 46_792_602, otherBytes: 0 };
 
 function fakes() {
   const log: string[] = [];
   let recognizerState: RecognizerState = { status: 'needs-download', bytes: 46_792_602 };
-  let prepare: (options: { signal: AbortSignal; onProgress: (loaded: number, total: number) => void }) => Promise<void> = async ({ onProgress }) => {
+  let install: (options: { confirmed: boolean; signal: AbortSignal; onProgress: (loaded: number, total: number) => void }) => Promise<void> = async ({ onProgress }) => {
     onProgress(10, 100);
     onProgress(100, 100);
+    recognizerState = { status: 'installed' };
+  };
+  /** Loading: it downloads nothing, and refuses when there is nothing to load. */
+  let prepare: (options: { signal: AbortSignal }) => Promise<void> = async () => {
+    if (recognizerState.status === 'needs-download') throw new ModelFilesError('not-installed', 'The speech model is not installed in this browser.');
     recognizerState = { status: 'ready' };
   };
   /** Runs that wait for the fake recognizer's answer. */
@@ -33,6 +41,10 @@ function fakes() {
   const recognizer: SpeechRecognizer = {
     descriptor: { provider: 'local-ml', model: 'test', revision: 'abc', runtime: 'test' },
     state: async () => recognizerState,
+    install: (options) => {
+      log.push('recognizer.install');
+      return install(options);
+    },
     prepare: (options) => {
       log.push('recognizer.prepare');
       return prepare(options);
@@ -99,6 +111,8 @@ function fakes() {
   return {
     recognizer, recorder, log, runs, captures,
     setState: (next: RecognizerState) => { recognizerState = next; },
+    status: (): RecognizerState['status'] => recognizerState.status,
+    setInstall: (next: typeof install) => { install = next; },
     setPrepare: (next: typeof prepare) => { prepare = next; },
     setRecorderPrepare: (next: typeof recorderPrepare) => { recorderPrepare = next; },
     setStartCapture: (next: typeof startCapture) => { startCapture = next; },
@@ -108,13 +122,17 @@ function fakes() {
 
 describeExperimental('practice session', () => {
   let fake: ReturnType<typeof fakes>;
+  let storage: ReturnType<typeof fakeModelStorage>;
   let session: PracticeSession;
   let state: PracticeState;
   let history: PracticeState['phase'][];
   let playbackStopped: number;
 
   function create(downloadOffered = true): void {
-    session = createPracticeSession({ recognizer: fake.recognizer, recorder: fake.recorder, downloadOffered, stopPlayback: () => { playbackStopped += 1; } });
+    storage = fakeModelStorage();
+    // What the cache holds follows the fake recognizer: the session takes "installed" from the cache.
+    storage.like.inspect = async () => (fake.status() === 'needs-download' || fake.status() === 'unsupported' ? ABSENT : INSTALLED);
+    session = createPracticeSession({ recognizer: fake.recognizer, modelStorage: storage.like, recorder: fake.recorder, downloadOffered, stopPlayback: () => { playbackStopped += 1; } });
     history = [];
     session.subscribe((next) => {
       state = next;
@@ -125,7 +143,7 @@ describeExperimental('practice session', () => {
   /** A session whose model is loaded. */
   async function ready(): Promise<void> {
     await session.init();
-    await session.prepare();
+    await session.install({ confirmed: true });
     expect(state.phase).toBe('ready');
     history.length = 0;
   }
@@ -172,11 +190,11 @@ describeExperimental('practice session', () => {
     expect(fake.log).toEqual([]);
     const progress: (PracticeState['progress'])[] = [];
     session.subscribe((next) => progress.push(next.progress));
-    await session.prepare();
+    await session.install({ confirmed: true });
 
     expect(history).toEqual(['checking', 'no-model', 'installing', 'loading', 'ready']);
     expect(progress).toContainEqual({ loaded: 10, total: 100 });
-    expect(fake.log).toEqual(['recognizer.prepare', 'recorder.prepare']);
+    expect(fake.log).toEqual(['recognizer.install', 'recognizer.prepare', 'recorder.prepare']);
     expect(state).toMatchObject({ phase: 'ready', installed: true, progress: null, notice: null });
   });
 
@@ -185,6 +203,7 @@ describeExperimental('practice session', () => {
     await session.init();
     fake.setPrepare(async () => fake.makeReady());
     await session.prepare();
+    expect(fake.log).toEqual(['recognizer.prepare', 'recorder.prepare']);
     expect(history).toEqual(['checking', 'no-model', 'loading', 'ready']);
   });
 
@@ -202,8 +221,8 @@ describeExperimental('practice session', () => {
       fake = fakes();
       create();
       await session.init();
-      fake.setPrepare(async () => { throw error; });
-      await session.prepare();
+      fake.setInstall(async () => { throw error; });
+      await session.install({ confirmed: true });
       expect(state.phase).toBe('no-model');
       expect(state.notice).toContain(notice);
       expect(fake.log).not.toContain('recorder.prepare');
@@ -212,8 +231,8 @@ describeExperimental('practice session', () => {
 
   it('a cancelled preparation is not an error', async () => {
     await session.init();
-    fake.setPrepare(({ signal }) => new Promise((_, reject) => signal.addEventListener('abort', () => reject(new InstallError('cancelled', 'The download was cancelled.')))));
-    const preparing = session.prepare();
+    fake.setInstall(({ signal }) => new Promise((_, reject) => signal.addEventListener('abort', () => reject(new InstallError('cancelled', 'The download was cancelled.')))));
+    const preparing = session.install({ confirmed: true });
     await tick();
     expect(state.phase).toBe('installing');
     session.cancelPrepare();
@@ -224,8 +243,8 @@ describeExperimental('practice session', () => {
   it('a recorder that cannot be prepared releases the model again and says why', async () => {
     await session.init();
     fake.setRecorderPrepare(async () => { throw new CaptureError('This browser cannot record at 16000 Hz.'); });
-    await session.prepare();
-    expect(fake.log).toEqual(['recognizer.prepare', 'recorder.prepare', 'recorder.close', 'recognizer.release']);
+    await session.install({ confirmed: true });
+    expect(fake.log).toEqual(['recognizer.install', 'recognizer.prepare', 'recorder.prepare', 'recorder.close', 'recognizer.release']);
     expect(state).toMatchObject({ phase: 'no-model', installed: true, notice: 'This browser cannot record at 16000 Hz.' });
   });
 
